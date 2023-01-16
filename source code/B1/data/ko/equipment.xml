@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="2870987530" name="무딘 칼"/>
+  <item id="3692624796" name="햇병아리 칼"/>
+  <item id="1158785574" name="견습생의 칼"/>
+  <item id="3722088875" name="휘파람새 칼"/>
+  <item id="1154727953" name="굉장한 칼"/>
+  <item id="1136526344" name="묘도 적야옹"/>
+  <item id="3669448114" name="어머니의 식칼"/>
+  <item id="2866651453" name="도깨비 방망이"/>
+  <item id="884552862" name="위험한 망치"/>
+  <item id="3751555058" name="까마귀 칼"/>
+  <item id="1184202312" name="검객의 칼"/>
+  <item id="1061799660" name="래빗 샷"/>
+  <item id="3639733227" name="묘도 적야옹X"/>
+  <item id="2952190845" name="달인의 식칼"/>
+  <item id="922716871" name="도깨비 방망이・청"/>
+  <item id="2828738404" name="도깨비 방망이・적"/>
+  <item id="1106819665" name="해골 망치"/>
+  <item id="3730720197" name="공작 칼"/>
+  <item id="1196889215" name="요마도"/>
+  <item id="2922688842" name="스타라이트 샷"/>
+  <item id="3644031452" name="왕도깨비 방망이・흑"/>
+  <item id="1049341147" name="고독의 칼"/>
+  <item id="2841212243" name="왕도깨비 방망이・적"/>
+  <item id="926802160" name="왕도깨비 방망이・청"/>
+  <item id="1077596262" name="지옥의 망치"/>
+  <item id="2887148502" name="눈보라도"/>
+  <item id="846394997" name="투신도"/>
+  <item id="1108869882" name="뇌절도"/>
+  <item id="3675345728" name="멸살도"/>
+  <item id="1165346531" name="도깨비 방망이・염"/>
+  <item id="3699152729" name="산산조각"/>
+  <item id="2877007823" name="도깨비 방망이・해"/>
+  <item id="1002748510" name="가시지옥"/>
+  <item id="1287883464" name="파괴의 망치"/>
+  <item id="738460461" name="절망의 망치"/>
+  <item id="1526936507" name="도깨비 방망이・지"/>
+  <item id="3255460353" name="도깨비 방망이・멸"/>
+  <item id="3037549207" name="도깨비 방망이・천"/>
+  <item id="329493615" name="지저분한 팔찌"/>
+  <item id="1688509689" name="싸구려 팔찌"/>
+  <item id="4256025923" name="낡은 팔찌"/>
+  <item id="308397656" name="화려한 팔찌"/>
+  <item id="1701246670" name="산뜻한 팔찌"/>
+  <item id="4235175796" name="줄무늬 팔찌"/>
+  <item id="2349159419" name="회심의 팔찌"/>
+  <item id="2386816418" name="멋쟁이 팔찌"/>
+  <item id="1730168983" name="기발한 팔찌"/>
+  <item id="4264106285" name="파란 팔찌"/>
+  <item id="4182039860" name="집중의 팔찌"/>
+  <item id="1615694990" name="역전의 팔찌"/>
+  <item id="271022081" name="강철 수갑"/>
+  <item id="1636820665" name="별빛 팔찌"/>
+  <item id="1726096032" name="청순한 팔찌"/>
+  <item id="4293620506" name="몽환의 팔찌"/>
+  <item id="378066479" name="대역전의 팔찌"/>
+  <item id="4169578243" name="마시멜로 팔찌"/>
+  <item id="2251803582" name="무쌍의 팔찌"/>
+  <item id="300225078" name="룬 수갑"/>
+  <item id="2407630741" name="하이테크 암"/>
+  <item id="346686643" name="냉기의 팔찌"/>
+  <item id="2328793360" name="전설의 팔찌"/>
+  <item id="4205077919" name="해신의 팔찌"/>
+  <item id="1672295461" name="악마의 팔찌"/>
+  <item id="4257849734" name="대지의 수갑"/>
+  <item id="1690366012" name="악마의 수갑"/>
+  <item id="331858090" name="파멸의 수갑"/>
+  <item id="3820967134" name="폭풍의 팔찌"/>
+  <item id="2058749284" name="마왕의 팔찌"/>
+  <item id="229717490" name="구름의 팔찌"/>
+  <item id="2205736251" name="폭열 암"/>
+  <item id="4102024621" name="초전자 암"/>
+  <item id="2495112264" name="강력 암"/>
+  <item id="18219905" name="우울우울 지팡이"/>
+  <item id="1980838679" name="심플한 스틱"/>
+  <item id="4011352749" name="구부러진 지팡이"/>
+  <item id="3921136771" name="어질어질 지팡이"/>
+  <item id="2010339616" name="세련된 스틱"/>
+  <item id="4007266458" name="요력의 지팡이"/>
+  <item id="1891540281" name="스페셜 로드"/>
+  <item id="2662398997" name="견장 백멍멍"/>
+  <item id="13920694" name="삼두 지팡이"/>
+  <item id="1928864608" name="으슬으슬 지팡이"/>
+  <item id="1972758393" name="화려한 지팡이"/>
+  <item id="3969693379" name="혼돈의 지팡이"/>
+  <item id="100602870" name="미라클 로드"/>
+  <item id="2504003175" name="멍이형제 보자기"/>
+  <item id="3958469338" name="견장 백멍멍X"/>
+  <item id="2633384524" name="삼안 지팡이"/>
+  <item id="43177967" name="세쌍둥이 지팡이"/>
+  <item id="1951894862" name="천사의 스틱"/>
+  <item id="3982417140" name="사념의 지팡이"/>
+  <item id="71137729" name="워매~ 보자기"/>
+  <item id="3929217261" name="우파우파의 지팡이"/>
+  <item id="2491573328" name="풍술부채"/>
+  <item id="55623128" name="삼두룡의 지팡이"/>
+  <item id="2637441147" name="지옥눈알 지팡이"/>
+  <item id="1933199703" name="심판의 지팡이"/>
+  <item id="102738781" name="빙정의 스틱"/>
+  <item id="2558213886" name="운명의 스틱"/>
+  <item id="3893480049" name="해일의 지팡이"/>
+  <item id="1897438155" name="마신의 지팡이"/>
+  <item id="4017884776" name="열기눈알 지팡이"/>
+  <item id="1987403730" name="반사눈알 지팡이"/>
+  <item id="24276804" name="대지의 눈빛"/>
+  <item id="2446160597" name="살의의 눈빛"/>
+  <item id="3872014915" name="신풍의 지팡이"/>
+  <item id="2249051046" name="사욕의 지팡이"/>
+  <item id="4044028720" name="뇌신의 지팡이"/>
+  <item id="1745070730" name="천계의 지팡이"/>
+  <item id="520395292" name="창조주의 지팡이"/>
+  <item id="3467465842" name="촌스러운 반지"/>
+  <item id="1470367176" name="녹슨 반지"/>
+  <item id="3114951908" name="연골 반지"/>
+  <item id="3480174149" name="화려한 반지"/>
+  <item id="1449553919" name="아침의 반지"/>
+  <item id="1359719398" name="다알견의 반지"/>
+  <item id="3093827283" name="투박한 뼈 반지"/>
+  <item id="638360432" name="도금 링"/>
+  <item id="3393471493" name="지성의 반지"/>
+  <item id="3442049052" name="서약의 반지"/>
+  <item id="1411436966" name="꿈빛 반지"/>
+  <item id="3175314579" name="개안의 반지"/>
+  <item id="771516674" name="역전의 반지"/>
+  <item id="1397560767" name="찬란한 반지"/>
+  <item id="3123622026" name="통뼈 반지"/>
+  <item id="608838953" name="메탈 링"/>
+  <item id="3414568498" name="신비한 반지"/>
+  <item id="3438012971" name="파동의 반지"/>
+  <item id="1440922513" name="달의 반지"/>
+  <item id="3162578596" name="대역전의 반지"/>
+  <item id="742261557" name="무쌍의 반지"/>
+  <item id="3152861885" name="두개골 반지"/>
+  <item id="629690142" name="골든 링"/>
+  <item id="1385136008" name="크리스탈 링"/>
+  <item id="3198405688" name="만년빙 반지"/>
+  <item id="549935515" name="전설의 반지"/>
+  <item id="1353559316" name="풍신의 반지"/>
+  <item id="3383033006" name="악마의 반지"/>
+  <item id="1472227597" name="화장의 반지"/>
+  <item id="3469293751" name="윤회의 반지"/>
+  <item id="3117287457" name="성인의 반지"/>
+  <item id="695276976" name="썬더 하트"/>
+  <item id="1584801062" name="핑크 하트"/>
+  <item id="1051831491" name="골든 하트"/>
+  <item id="1236704341" name="푸른 반지"/>
+  <item id="3502231023" name="드라큘라 링"/>
+  <item id="2813918585" name="다이아몬드 링"/>
+  <item id="1400532171" name="나무 방패"/>
+  <item id="3396550001" name="둥근 방패"/>
+  <item id="612195421" name="온천 바가지"/>
+  <item id="3151733705" name="쓰레기통 뚜껑"/>
+  <item id="1387792124" name="강철 방패"/>
+  <item id="3417397062" name="튼튼한 방패"/>
+  <item id="3437007711" name="화려한 방패"/>
+  <item id="633288298" name="도니맨 바가지"/>
+  <item id="1358870693" name="은 방패"/>
+  <item id="3388467487" name="합금 방패"/>
+  <item id="1469283516" name="보석 방패"/>
+  <item id="546589738" name="포스 실드"/>
+  <item id="3114081680" name="흑도니맨 바가지"/>
+  <item id="670664755" name="도니맨 고급 바가지"/>
+  <item id="3466210566" name="가마가마 뚜껑"/>
+  <item id="1362940562" name="성기사의 방패"/>
+  <item id="3358950184" name="원진의 방패"/>
+  <item id="559293981" name="포스 실드EX"/>
+  <item id="2984852364" name="무념무상 방패"/>
+  <item id="641458692" name="도니맨 황금 바가지"/>
+  <item id="3478669105" name="재앙의 뚜껑"/>
+  <item id="1448154763" name="우산「삼파전」"/>
+  <item id="3093264295" name="흑도니맨 악 바가지"/>
+  <item id="594867329" name="얼음무늬 방패"/>
+  <item id="3171967266" name="전설의 방패"/>
+  <item id="3447362989" name="소용돌이 방패"/>
+  <item id="1416872983" name="각오의 방패"/>
+  <item id="3390525876" name="도니맨 작열 바가지"/>
+  <item id="1394475022" name="도니맨 유혹 바가지"/>
+  <item id="605630616" name="흑도니맨 돌 바가지"/>
+  <item id="3030789385" name="흑도니맨 불 바가지"/>
+  <item id="3282115999" name="절연의 뚜껑"/>
+  <item id="2741408890" name="암흑의 뚜껑"/>
+  <item id="3563169004" name="우산「버들 바람」"/>
+  <item id="1298724182" name="우산「파사의 각인」"/>
+  <item id="980403648" name="우산「벚꽃비」"/>
+  <item id="3955624878" name="조잡한 호신부"/>
+  <item id="1926191636" name="노년의 호신부"/>
+  <item id="1952511034" name="소박한 펜던트"/>
+  <item id="3926155673" name="향기나는 호신부"/>
+  <item id="1930244131" name="포근한 호신부"/>
+  <item id="3983123840" name="기합의 호신부"/>
+  <item id="2634240271" name="할멈의 주머니"/>
+  <item id="57132204" name="튼튼한 주머니"/>
+  <item id="1982220899" name="용기의 펜던트"/>
+  <item id="3896696768" name="행운의 호신부"/>
+  <item id="1900777082" name="원기의 호신부"/>
+  <item id="4012841945" name="투지의 호신부"/>
+  <item id="2552769359" name="역전의 호신부"/>
+  <item id="2672160598" name="복숭아색 주머니"/>
+  <item id="18971381" name="핑크 주머니"/>
+  <item id="4008538606" name="열혈 펜던트"/>
+  <item id="3917526519" name="고귀한 호신부"/>
+  <item id="1888085069" name="맥박의 호신부"/>
+  <item id="2582266232" name="대역전의 호신부"/>
+  <item id="156589289" name="클로버 호신부"/>
+  <item id="2659681633" name="할멈의 주머니L"/>
+  <item id="14880962" name="마이티 주머니"/>
+  <item id="2011439188" name="아미타 호신부"/>
+  <item id="2613613540" name="번개의 호신부"/>
+  <item id="95159879" name="전설의 호신부"/>
+  <item id="1975972552" name="화산의 호신부"/>
+  <item id="3973030770" name="악마 호신부"/>
+  <item id="1923823313" name="할멈의 화장 파우치"/>
+  <item id="3953289067" name="할멈의 수영 가방"/>
+  <item id="2628081661" name="할멈의 말 주머니"/>
+  <item id="203049580" name="설국의 주머니"/>
+  <item id="2065529594" name="파마의 주머니"/>
+  <item id="467333919" name="제령의 주머니"/>
+  <item id="1826472841" name="순풍의 호신부"/>
+  <item id="4124348979" name="광명의 호신부"/>
+  <item id="2194907813" name="인도의 호신부"/>
+  <item id="2390004950" name="지저분한 벨트"/>
+  <item id="4185105472" name="수수한 허리띠"/>
+  <item id="1618671098" name="노멀 벨트"/>
+  <item id="299002690" name="깔끔한 벨트"/>
+  <item id="4172402295" name="고급 허리띠"/>
+  <item id="1639489485" name="서클 벨트"/>
+  <item id="1725258708" name="원한의 허리띠"/>
+  <item id="2411134689" name="두꺼운 허리띠"/>
+  <item id="1687414157" name="로맨틱한 벨트"/>
+  <item id="4210520110" name="은신의 허리띠"/>
+  <item id="1677599124" name="시크한 벨트"/>
+  <item id="4254774327" name="주온의 허리띠"/>
+  <item id="2325578913" name="전통 허리띠"/>
+  <item id="328520987" name="의식의 허리띠"/>
+  <item id="2381332664" name="먹보의 허리띠"/>
+  <item id="4233682432" name="팬시 벨트"/>
+  <item id="4214561305" name="검객의 허리띠"/>
+  <item id="1648118691" name="승리의 벨트"/>
+  <item id="2338320022" name="국보급 허리띠"/>
+  <item id="1699844026" name="회장의 허리띠"/>
+  <item id="467727111" name="깜찍한 벨트"/>
+  <item id="2352097935" name="폭식의 허리띠"/>
+  <item id="307674924" name="생명의 허리띠"/>
+  <item id="2306685962" name="설산의 허리띠"/>
+  <item id="387557801" name="전설의 허리띠"/>
+  <item id="1735613734" name="스플래쉬 벨트"/>
+  <item id="4269411484" name="파이널 벨트"/>
+  <item id="1612618047" name="불타는 허리띠"/>
+  <item id="4179085445" name="번개의 허리띠"/>
+  <item id="2383476755" name="꿀꺽 허리띠"/>
+  <item id="514844034" name="지진의 허리띠"/>
+  <item id="1772672276" name="진혼의 허리띠"/>
+  <item id="158293233" name="고결한 허리띠"/>
+  <item id="2120772711" name="명주바람 허리띠"/>
+  <item id="3881909725" name="백야의 허리띠"/>
+  <item id="2422607179" name="지배자의 허리띠"/>
+  <item id="1104134949" name="검은꽃 스트랩"/>
+  <item id="3636892319" name="소박한 액막이"/>
+  <item id="2829870608" name="너덜한 방울"/>
+  <item id="919139251" name="메기 스트랩"/>
+  <item id="1074637074" name="꽃 스트랩"/>
+  <item id="3640981672" name="세련된 액막이"/>
+  <item id="2842561575" name="고양이 방울"/>
+  <item id="3731438769" name="안띄림자 액막이"/>
+  <item id="923441540" name="흰 메기 스트랩"/>
+  <item id="1112217419" name="오로라 스트랩"/>
+  <item id="3678553841" name="사연 있는 액막이"/>
+  <item id="1160172370" name="못채림자 액막이"/>
+  <item id="841081796" name="음양염주"/>
+  <item id="2871571070" name="황금 메기 스트랩"/>
+  <item id="894183389" name="큰 메기 스트랩"/>
+  <item id="3694101224" name="발바닥 방울"/>
+  <item id="1133084028" name="제비꽃 스트랩"/>
+  <item id="3665833158" name="밤하늘 액막이"/>
+  <item id="2740753506" name="대역전의 곡옥"/>
+  <item id="3562775796" name="흡혼화의 스트랩"/>
+  <item id="870550003" name="냥더풀 방울"/>
+  <item id="881741290" name="연못 주인 스트랩"/>
+  <item id="2867517513" name="늪 주인 스트랩"/>
+  <item id="3723356383" name="백멍멍 스트랩"/>
+  <item id="1155840357" name="적야옹 스트랩"/>
+  <item id="834755439" name="플라즈마 스트랩"/>
+  <item id="2946879180" name="레전드 스트랩"/>
+  <item id="3754900035" name="산신의 액막이"/>
+  <item id="1187408889" name="파괴의 액막이"/>
+  <item id="3634560602" name="풍어 기원 스트랩"/>
+  <item id="1101770720" name="삼도천 스트랩"/>
+  <item id="917282678" name="항마의 스트랩"/>
+  <item id="2786296551" name="빙하의 스트랩"/>
+  <item id="3507794545" name="황천의 스트랩"/>
+  <item id="2983410580" name="저승의 스트랩"/>
+  <item id="3335785218" name="백사자의 스트랩"/>
+  <item id="1608342200" name="흰 재앙의 스트랩"/>
+  <item id="685402670" name="태고의 마견 스트랩"/>
+  <item id="3065970573" name="적마묘의 스트랩"/>
+  <item id="3250179867" name="붉은 재앙의 스트랩"/>
+  <item id="1487969953" name="요마의 귀묘 스트랩"/>
+  <item id="3817166022" name="Captain Launcher"/>
+  <item id="1233951821" name="Kingly Great Sword"/>
+  <item id="2170556351" name="Grenade Thunder"/>
+  <item id="4133961513" name="Ultimate Beam"/>
+  <item id="728352564" name="Water Dragonblade"/>
+  <item id="1550776226" name="Oni Warlord Sword"/>
+  <item id="3982810348" name="B Rabbit Launcher"/>
+  <item id="1138387149" name="Moonbeam"/>
+  <item id="3671275895" name="Moon Shadow"/>
+  <item id="4046519080" name="Awoken Bracelet"/>
+  <item id="2480250961" name="Eden Bracelet"/>
+  <item id="3839004871" name="Sun God Bracelet"/>
+  <item id="2111553917" name="Valiant Bracelet"/>
+  <item id="182252011" name="Gentle Bracelet"/>
+  <item id="2590239866" name="Virtuous Bracelet"/>
+  <item id="3922960454" name="Lunar Wand"/>
+  <item id="1893396988" name="Moon God Wand"/>
+  <item id="1530475427" name="Zazel's Ruby Ring"/>
+  <item id="970746074" name="Zazel's Agate Ring"/>
+  <item id="1322997836" name="Zazelmare's Ring"/>
+  <item id="3337489178" name="Dark Matter Shield"/>
+  <item id="2752204899" name="Antigravity Shield"/>
+  <item id="3540803829" name="Quantum Shield"/>
+  <item id="3434676122" name="White Lunar Shield"/>
+  <item id="1437707808" name="Gold Lunar Shield"/>
+  <item id="2119330943" name="Golden Swirl Charm"/>
+  <item id="481769222" name="Tranquil Charm"/>
+  <item id="1806698384" name="Royal Swirl Charm"/>
+  <item id="1827128209" name="Golden Claws Cloth"/>
+  <item id="235051240" name="Living World Cloth"/>
+  <item id="2030413950" name="Royal Claws Cloth"/>
+  <item id="3725414516" name="Moonlit Dog Bauble"/>
+  <item id="1191444942" name="Moonlit Cat Bauble"/>
+  <item id="941221292" name="Invader Chip"/>
+</items>

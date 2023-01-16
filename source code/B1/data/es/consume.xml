@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="367732779" name="Moneda roja"/>
+  <item id="2363652497" name="Moneda amarilla"/>
+  <item id="4226107655" name="Moneda naranja"/>
+  <item id="1703009444" name="Moneda rosa"/>
+  <item id="310832178" name="Moneda verde"/>
+  <item id="2341453192" name="Moneda azul"/>
+  <item id="4236807454" name="Moneda morada"/>
+  <item id="1815580815" name="Moneda añil"/>
+  <item id="456171545" name="Moneda 5 estrellas"/>
+  <item id="2079795708" name="Moneda especial"/>
+  <item id="217061738" name="Moneda fortuna"/>
+  <item id="2516142288" name="Moneda 1 estrella"/>
+  <item id="3808327750" name="Moneda (flor)"/>
+  <item id="2090528229" name="Moneda (ave)"/>
+  <item id="194895219" name="Moneda (viento)"/>
+  <item id="2459208905" name="Moneda (luna)"/>
+  <item id="3851664479" name="Moneda (Yo)"/>
+  <item id="1965859278" name="Moneda (Kai)"/>
+  <item id="36409688" name="Moneda (Oni)"/>
+  <item id="668813993" name="Moneda (norte)"/>
+  <item id="3201571603" name="Moneda (noreste)"/>
+  <item id="3386059653" name="Moneda (este)"/>
+  <item id="1471659558" name="Moneda (centro)"/>
+  <item id="548441776" name="Moneda (oeste)"/>
+  <item id="3115966218" name="Moneda (montaña)"/>
+  <item id="3468619676" name="Moneda (sur)"/>
+  <item id="1577185805" name="Moneda (m. oeste)"/>
+  <item id="688308891" name="Moneda (isla)"/>
+  <item id="1237404542" name="Moneda vórtice"/>
+  <item id="4123676849" name="Moneda Luna Llena"/>
+  <item id="2194497575" name="Moneda de fuerza"/>
+  <item id="3792366018" name="Moneda vip"/>
+  <item id="2908180302" name="Moneda roja G"/>
+  <item id="878583540" name="Moneda amarilla G"/>
+  <item id="1129918050" name="Moneda naranja G"/>
+  <item id="3711810497" name="Moneda rosa G"/>
+  <item id="2855963479" name="Moneda verde G"/>
+  <item id="859036397" name="Moneda azul G"/>
+  <item id="1144318587" name="Moneda morada G"/>
+  <item id="3565942762" name="Moneda añil G"/>
+  <item id="508211046" name="Moneda Sinnareno"/>
+  <item id="1766694896" name="Moneda Katakroken"/>
+  <item id="3523142007" name="Mon. Samulimpio"/>
+  <item id="2801390049" name="Moneda León Alfa"/>
+  <item id="562459907" name="Moneda Sacoco"/>
+  <item id="652980506" name="Moneda Juntollero"/>
+  <item id="2973329554" name="Mon. Capi-Cachas"/>
+  <item id="1374454156" name="Moneda Flamileón"/>
+  <item id="4031041098" name="Moneda Ludorái"/>
+  <item id="3219316896" name="Moneda Dortre"/>
+  <item id="3096388793" name="Moneda B3-NK1"/>
+  <item id="1224192205" name="Mon. Gén. Ultra N"/>
+  <item id="3325974532" name="Mon. Hovernyan"/>
+  <item id="1072726107" name="Moneda Tigrenyan"/>
+  <item id="3481801775" name="Mon. Chafarabajo"/>
+  <item id="1451312533" name="Mon. Shogunyan"/>
+  <item id="1675289358" name="Moneda Tomoko"/>
+  <item id="3599967598" name="Moneda Cotilleja"/>
+  <item id="4208177844" name="Moneda Nébula"/>
+  <item id="4257117869" name="Mon. Estatinarca"/>
+  <item id="2269380316" name="Moneda Don Kaldo"/>
+  <item id="2710836728" name="Moneda Telespejo"/>
+  <item id="402449229" name="Moneda Trielespejo"/>
+  <item id="350081944" name="Moneda Ambrosio"/>
+  <item id="3743770949" name="Moneda Tengu"/>
+  <item id="949830722" name="Moneda Kyubi"/>
+  <item id="1335522516" name="Mon. Nievacolas"/>
+  <item id="2379514402" name="Moneda Kimera"/>
+  <item id="2327397947" name="Moneda Kimerreal"/>
+  <item id="2820823507" name="Moneda Komasura"/>
+  <item id="3612430169" name="Moneda Malpejismo"/>
+  <item id="330307457" name="Moneda Nihablar"/>
+  <item id="231138009" name="Mon. Rebelcebú"/>
+  <item id="3836037100" name="Moneda Mimoniquí"/>
+  <item id="178988736" name="Mon. Mamuguanto"/>
+  <item id="2476898170" name="Moneda Cazarayos"/>
+  <item id="1627116507" name="Mon. Montaña Loca"/>
+  <item id="4094179974" name="Moneda Castelius I"/>
+  <item id="3374823937" name="Mon. Pegarabajo"/>
+  <item id="1689724695" name="Mon. Enormarabajo"/>
+  <item id="3821569013" name="Moneda Robonyan"/>
+  <item id="2496639843" name="Mon. Aureonyan"/>
+  <item id="2198800912" name="Moneda Pom"/>
+  <item id="2108429910" name="Mon. Eleganfibio"/>
+  <item id="3977448391" name="Moneda Frikigarto"/>
+  <item id="2059522639" name="Moneda Dorantúo"/>
+  <item id="2690023375" name="Moneda Guardacaos"/>
+  <item id="3683526052" name="Moneda Ningarra"/>
+  <item id="3189803671" name="Moneda Cantigarra"/>
+  <item id="2723323136" name="Moneda Lavadenco"/>
+  <item id="1116173342" name="Moneda Jibanyan"/>
+  <item id="897598600" name="Moneda Espinyan"/>
+  <item id="2883899691" name="Mon. Pelochnyan"/>
+  <item id="3046253683" name="Moneda Buchinyan"/>
+  <item id="3264550117" name="Moneda Sailornyan"/>
+  <item id="3705921981" name="Mon. Kappandante"/>
+  <item id="657054509" name="Moneda Kapparfista"/>
+  <item id="1173008391" name="Moneda Komasan"/>
+  <item id="854425745" name="Moneda Komajiro"/>
+  <item id="1536968031" name="Moneda Jibakoma"/>
+  <item id="1345252283" name="Moneda Rapidizo"/>
+  <item id="3460988440" name="Moneda Pufilindo"/>
+  <item id="3108851342" name="Moneda Pufimaloso"/>
+  <item id="2585017169" name="Moneda Granizia"/>
+  <item id="2894665010" name="Moneda Dámona"/>
+  <item id="748385737" name="Moneda Kappafalso"/>
+  <item id="3579162006" name="Moneda Chafarina"/>
+  <item id="962539125" name="Moneda Malicia"/>
+  <item id="1559331142" name="Moneda Cimbrón"/>
+  <item id="541335348" name="Mon. Algacabana"/>
+  <item id="3003113578" name="Moneda Abuzampa"/>
+  <item id="129377802" name="Moneda Níscala"/>
+  <item id="1890653852" name="Mon. Curaníscala"/>
+  <item id="3921168166" name="Moneda Arenito"/>
+  <item id="2580722601" name="Mon. Sombrillogro"/>
+  <item id="2010960517" name="Moneda Paupermán"/>
+  <item id="4006970175" name="Moneda Gran Nomi"/>
+  <item id="3321417980" name="Moneda Vivariposa"/>
+  <item id="737587664" name="Moneda Felisonte"/>
+  <item id="1464020898" name="Moneda Tricotom"/>
+  <item id="3427704023" name="Moneda Papá Rayo"/>
+  <item id="3142167617" name="Moneda Mamá Aura"/>
+  <item id="14410259" name="Moneda Kyryn"/>
+  <item id="2422538114" name="Moneda Unikyryn"/>
+  <item id="2663348144" name="Moneda Abuflorido"/>
+  <item id="1314397923" name="Moneda Reversada"/>
+  <item id="3739681650" name="Moneda Reversa"/>
+  <item id="2850042852" name="Moneda Alga Senséi"/>
+  <item id="3355193907" name="Moneda Machaka"/>
+  <item id="3882077972" name="Moneda Enciélago"/>
+  <item id="2969240229" name="Moneda Záppingla"/>
+  <item id="2160689896" name="Mon. Dracunyan"/>
+  <item id="1858593732" name="Moneda Usapyon"/>
+  <item id="2275690225" name="Mon. Osademonio"/>
+  <item id="4037244519" name="Mon. Conde Caries"/>
+  <item id="514660171" name="Moneda Ojezno"/>
+  <item id="1772759005" name="Moneda Diablés"/>
+  <item id="4157518462" name="Moneda Repeloso"/>
+  <item id="4212250755" name="Moneda Injustio"/>
+  <item id="2350311445" name="Moneda Morenaso"/>
+  <item id="354400687" name="Moneda Avarq."/>
+  <item id="432067410" name="Moneda Cantonio"/>
+  <item id="3493628736" name="Moneda No-No"/>
+  <item id="2000382632" name="Moneda Negatalia"/>
+  <item id="3955262" name="Moneda Cuesco"/>
+  <item id="2805709782" name="Moneda Péditum"/>
+  <item id="2306854595" name="Moneda Belladona"/>
+  <item id="4269342293" name="Moneda Eterna"/>
+  <item id="2570390404" name="Moneda Aracnio"/>
+  <item id="122789415" name="Moneda Aracne"/>
+  <item id="3996269330" name="Mon. Dandiniche"/>
+  <item id="1645775161" name="Moneda Tristeresa"/>
+  <item id="4235992218" name="Moneda Inaguan."/>
+  <item id="2340105228" name="Moneda Lena"/>
+  <item id="309493174" name="Moneda Alarción"/>
+  <item id="1884729009" name="Moneda de Noko"/>
+  <item id="3915382539" name="Mon.a Lord Dragón"/>
+  <item id="1847614441" name="Moneda Sirenia"/>
+  <item id="4146661971" name="Moneda Oceánida"/>
+  <item id="422013823" name="Moneda Cisnia"/>
+  <item id="1043524204" name="Moneda Pellurón"/>
+  <item id="2656620445" name="Moneda Charlatón"/>
+  <item id="1228266234" name="Mon. Tochaplátano"/>
+  <item id="250073612" name="Moneda Venocto"/>
+  <item id="2044781210" name="Moneda Umbro"/>
+  <item id="2150513349" name="Moneda Octosierpe"/>
+  <item id="1702186272" name="Moneda Agorerana"/>
+  <item id="123635653" name="Tajo Legendario"/>
+  <item id="2656556671" name="Tajo Demoníaco"/>
+  <item id="3914393321" name="Tajo Sagrado"/>
+  <item id="1999926090" name="Alma de general"/>
+  <item id="3359708" name="Potenciador amor"/>
+  <item id="2570719846" name="Orbe eléctrico"/>
+  <item id="3996984048" name="Horquilla glacial"/>
+  <item id="2122465121" name="Alma invencible"/>
+  <item id="159715319" name="Capa de ventisca"/>
+  <item id="1765967378" name="Cetro del amor"/>
+  <item id="507885188" name="Pesas pesadas"/>
+  <item id="2269964094" name="Lingote de platino"/>
+  <item id="4031502248" name="Polvos antiedad"/>
+  <item id="1848590859" name="Esquirla del mal"/>
+  <item id="422081181" name="Orbe del dragón"/>
+  <item id="2149655335" name="Espada iracunda"/>
+  <item id="4146467761" name="Traje caqui"/>
+  <item id="1738083872" name="Agua sobrenatural"/>
+  <item id="278806198" name="Diario maldito"/>
+  <item id="1114625489" name="Bocina"/>
+  <item id="896066887" name="Aspiramemorias"/>
+  <item id="2892084477" name="Perla de sirena"/>
+  <item id="3680928875" name="Oso tallado"/>
+  <item id="1157763528" name="Farolillo de pez"/>
+  <item id="839197022" name="Farolillo maestro"/>
+  <item id="2869719268" name="Emblema dorado"/>
+  <item id="3691724914" name="Plancha takoyaki"/>
+  <item id="1286888931" name="Arena de duna"/>
+  <item id="1001614709" name="Sombrero oriental"/>
+  <item id="1534387344" name="Figura de terracota"/>
+  <item id="745788422" name="Hibisco rojo"/>
+  <item id="3044705724" name="Arroz del amor"/>
+  <item id="3263018282" name="Esencia del mal"/>
+  <item id="1545150601" name="Alma arremolinada"/>
+  <item id="723390495" name="Piedra angular"/>
+  <item id="2987868581" name="Armario cómodo"/>
+  <item id="813725687" name="Tarjeta musical"/>
+  <item id="2844337741" name="Huevo de oro"/>
+  <item id="573954073" name="U. orbe Gargantúo"/>
+  <item id="3141306787" name="U. o. Cazamentires"/>
+  <item id="3426466101" name="U. o. Demoniorco"/>
+  <item id="1381969046" name="U. orbe Termascino"/>
+  <item id="626531328" name="U. o. Babamandra"/>
+  <item id="3159444922" name="U. orbe Bergantín"/>
+  <item id="3411442988" name="U. o. Tripasqueleto"/>
+  <item id="1542021309" name="Ultraorbe Rúbeo J"/>
+  <item id="753815595" name="U. o. Gran Sabueso"/>
+  <item id="1277811150" name="U. orbe Cremaligno"/>
+  <item id="992930136" name="U. o. Devoramonios"/>
+  <item id="2720512226" name="Ultraorbe McKraken"/>
+  <item id="3575679092" name="U. o. Lady Desdicha"/>
+  <item id="1262755287" name="Ultraorbe Caldewok"/>
+  <item id="1011035457" name="Ultraorbe Jabalupo"/>
+  <item id="2773122299" name="U. orbe Ojimandra"/>
+  <item id="3528281197" name="U. orbe Estigio VI"/>
+  <item id="1123176956" name="U. o. Aureosqueleto"/>
+  <item id="905273706" name="U. o. Diamanqueleto"/>
+  <item id="1728350733" name="U. orbe Devoralmas"/>
+  <item id="268679835" name="U. orbe Intelecto"/>
+  <item id="2299194145" name="U. orbe Kabukio"/>
+  <item id="4262321079" name="U. orbe Kali Mera"/>
+  <item id="1617514004" name="U. o. Murmullamasa"/>
+  <item id="393117314" name="U. orbe Cotiterror"/>
+  <item id="2389126968" name="U. o. Robonyan 28"/>
+  <item id="4183826350" name="U. orbe Vueltomai"/>
+  <item id="1776222783" name="U. orbe Zarparroja"/>
+  <item id="517485225" name="Ultraorbe Zazel"/>
+  <item id="2116008780" name="U. o. Capitán Rayo"/>
+  <item id="152603610" name="U. o. Shogún Real"/>
+  <item id="2417089120" name="U. o. Intelecto Ilum."/>
+  <item id="3877038838" name="U. o. Robonyan 3000"/>
+  <item id="2037546837" name="U. o. Zarpadorada"/>
+  <item id="242569155" name="U. o. Vueltodorado"/>
+  <item id="3733853915" name="Orbe dorado"/>
+  <item id="938324974" name="Grabación aleatoria"/>
+  <item id="1089110904" name="Ticket F. Oni Hierro"/>
+  <item id="2934235732" name="Ticket Shogún Real"/>
+</items>

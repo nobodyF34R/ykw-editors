@@ -1,0 +1,981 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="4015396270" name="100캐럿냥 젤리 펀치"/>
+  <item id="392124380" name="3시간 수면 준비"/>
+  <item id="1797004116" name="999 칼"/>
+  <item id="3473029345" name="Attack (10)"/>
+  <item id="3652691242" name="Body Blow (4)"/>
+  <item id="2764350322" name="Body Blow (5)"/>
+  <item id="2035448567" name="Body Blow (6)"/>
+  <item id="3741449603" name="Body Press (1)"/>
+  <item id="2932586452" name="Break (4)"/>
+  <item id="258689432" name="Break (5)"/>
+  <item id="2549475254" name="Center Move (1)"/>
+  <item id="92054238" name="Elite Summon (1)"/>
+  <item id="1227206650" name="Employee Beam (4)"/>
+  <item id="59552779" name="Employee Beam (5)"/>
+  <item id="1527528796" name="Employee Beam (6)"/>
+  <item id="3450270639" name="Employee Saber (3)"/>
+  <item id="2830851587" name="Employee Saber (4)"/>
+  <item id="707857166" name="Fire Move (1)"/>
+  <item id="2843533688" name="Fishy Fishy Heal (1)"/>
+  <item id="1021454123" name="I will not be back"/>
+  <item id="2887417787" name="Jailhouse Jab (1)"/>
+  <item id="2850215712" name="Oscar Summon (1)"/>
+  <item id="1658855193" name="Prisoners Perk"/>
+  <item id="3626306940" name="Random Link (1)"/>
+  <item id="3194948160" name="Robo Fist (1)"/>
+  <item id="3284081393" name="Robonyan Summon (1)"/>
+  <item id="2989342463" name="Summon Komane (1)"/>
+  <item id="3068329113" name="U-1 그랑프리"/>
+  <item id="1775908422" name="Water Beam (1)"/>
+  <item id="106571024" name="Yo-kai Summon (5)"/>
+  <item id="1767001389" name="Yo-kai Summon (6)"/>
+  <item id="4032502935" name="Yo-kai Summon (7)"/>
+  <item id="2270964737" name="Yo-kai Summon (8)"/>
+  <item id="3420586676" name="가드"/>
+  <item id="4057594259" name="가마 박치기"/>
+  <item id="2098141023" name="가마솥 강력폭탄 (1)"/>
+  <item id="2119801867" name="가마솥 강력폭탄 (2)"/>
+  <item id="2911723406" name="가마솥 강력폭탄 (3)"/>
+  <item id="60486652" name="가마솥 강력폭탄 (4)"/>
+  <item id="3889762062" name="갑옷 분쇄"/>
+  <item id="4207816777" name="갓 지은 밥 임팩트"/>
+  <item id="1908685463" name="강철갑옷"/>
+  <item id="1256794387" name="거울아 거울아"/>
+  <item id="1040258703" name="거친 강물"/>
+  <item id="3574799970" name="검은 이르다 권법"/>
+  <item id="837183760" name="게걸 게걸 크레이지"/>
+  <item id="3211357939" name="격류일섬"/>
+  <item id="2298155161" name="결단의 Enter키"/>
+  <item id="1617325679" name="경단 베기"/>
+  <item id="218774966" name="고고☆러브냥"/>
+  <item id="3257623636" name="고급 백금 가드"/>
+  <item id="341390745" name="고릴라 스트레이트"/>
+  <item id="1076633610" name="고집 가드"/>
+  <item id="1648788707" name="골든 캡슐!"/>
+  <item id="3822986883" name="골든냥"/>
+  <item id="3348238141" name="공격 (1)"/>
+  <item id="3733536380" name="공격 (2)"/>
+  <item id="4121193919" name="공격 (3)"/>
+  <item id="3971964158" name="공격 (4)"/>
+  <item id="2751384121" name="공격 (5)"/>
+  <item id="1928887416" name="공격 (6)"/>
+  <item id="1516726045" name="공격 (7)"/>
+  <item id="2088676438" name="공격 (8)"/>
+  <item id="177726339" name="공격 봉인"/>
+  <item id="1180385819" name="공격 자세"/>
+  <item id="2169493659" name="공격다운"/>
+  <item id="3234788809" name="공격력업"/>
+  <item id="3350075897" name="공복 임팩트"/>
+  <item id="3031513379" name="공포의 대회전 (1)"/>
+  <item id="3234487385" name="공포의 대회전 (2)"/>
+  <item id="1287005426" name="공포의 주름"/>
+  <item id="2182836374" name="공포의 째려보기"/>
+  <item id="2299599484" name="공포의 황당술"/>
+  <item id="807996131" name="관둬 관둬 파"/>
+  <item id="3446345952" name="광기어택"/>
+  <item id="679895051" name="괴팍해양!"/>
+  <item id="2509653710" name="그린냥 젤리 펀치"/>
+  <item id="2357600404" name="그림자 달리기"/>
+  <item id="1841587895" name="극락술"/>
+  <item id="280240364" name="근성 냥이 젤리 펀치"/>
+  <item id="2027631442" name="근질근질 지옥"/>
+  <item id="3906111766" name="기가 오징어 빔"/>
+  <item id="1240097613" name="기합의 일격 (1)"/>
+  <item id="1357992460" name="기합의 일격 (2)"/>
+  <item id="2765707128" name="긴코 충격"/>
+  <item id="3336941579" name="깨물기"/>
+  <item id="847848866" name="깽깽회오리 (1)"/>
+  <item id="1648669713" name="깽깽회오리 (2)"/>
+  <item id="1962056633" name="꼬리 드릴"/>
+  <item id="86770955" name="꼬맹이의 반란"/>
+  <item id="3885257382" name="꾀어내기"/>
+  <item id="3334865329" name="꾸벅꾸벅 가스"/>
+  <item id="2131248037" name="꿀꿀 대공격"/>
+  <item id="3604687211" name="끈적끈적 벽"/>
+  <item id="1290210754" name="끝나지 않은 밤"/>
+  <item id="3098028497" name="나 으뜸 춤"/>
+  <item id="1345419328" name="나락으로 GO!"/>
+  <item id="4027267408" name="나쁜 애들은 어디있냐"/>
+  <item id="4119737453" name="나의 염불"/>
+  <item id="1913392542" name="나의 하트 천국"/>
+  <item id="2461209634" name="낙천적 히어로 등장"/>
+  <item id="248997891" name="낙하몽"/>
+  <item id="1112270727" name="낙하산"/>
+  <item id="912837239" name="낚싯줄 휘두르기"/>
+  <item id="3535136953" name="낚아올리기"/>
+  <item id="3864734654" name="난공불락 무리성"/>
+  <item id="416351924" name="날라박치기"/>
+  <item id="559692401" name="날름날름 핥기 (1)"/>
+  <item id="1905372098" name="날름날름 핥기 (2)"/>
+  <item id="612257015" name="날파람 천둥 (1)"/>
+  <item id="57744703" name="날파람 천둥 (2)"/>
+  <item id="1859782796" name="내가 짱이쥐"/>
+  <item id="2725251090" name="냥이 소드"/>
+  <item id="4127075260" name="냥이 파이어 스톰"/>
+  <item id="1263949105" name="넘쳐나는 스태미너"/>
+  <item id="3301004619" name="넘흙착한 흙"/>
+  <item id="2083923495" name="넘흙착해 사원입니다."/>
+  <item id="2687779341" name="네개눈 명줄읽기"/>
+  <item id="3821801814" name="네거티브균"/>
+  <item id="3586423304" name="노 땡큐~"/>
+  <item id="3066243928" name="논을 돌려줘~ (1)"/>
+  <item id="3859725035" name="논을 돌려줘~ (2)"/>
+  <item id="1059721250" name="뇨로롱롱 (1)"/>
+  <item id="1877442961" name="뇨로롱롱 (2)"/>
+  <item id="3715512378" name="눈샤벳"/>
+  <item id="814432518" name="눈알 빔"/>
+  <item id="858722995" name="눈알 소환 (1)"/>
+  <item id="1127846771" name="눈알 소환 (2)"/>
+  <item id="3157803653" name="눈알 소환 (3)"/>
+  <item id="2921094753" name="늘씬한 다리"/>
+  <item id="3609360564" name="능력 또 빼앗기다용~"/>
+  <item id="2051773861" name="능력 빼앗기다용~ (1)"/>
+  <item id="2509042713" name="능력 빼앗기다용~ (2)"/>
+  <item id="210085283" name="능력 빼앗기다용~ (3)"/>
+  <item id="2072155445" name="능력 빼앗기다용~ (4)"/>
+  <item id="3857055894" name="능력 빼앗기다용~ (5)"/>
+  <item id="2464231424" name="능력 빼앗기다용~ (6)"/>
+  <item id="222896979" name="다 관둬 관둬 파"/>
+  <item id="426670742" name="다 불만이양!"/>
+  <item id="676398177" name="다랑어포 베기"/>
+  <item id="500681559" name="다리후리기"/>
+  <item id="126626378" name="다시마 맘보"/>
+  <item id="1183116671" name="다음 생에 만나장"/>
+  <item id="1933307546" name="다이아☆몬드!"/>
+  <item id="4182055333" name="다크 냐이트 크로우"/>
+  <item id="1077811167" name="다크호스"/>
+  <item id="3530892027" name="달웅이 특산 펀치"/>
+  <item id="3851623607" name="대음량 따귀!"/>
+  <item id="1737762937" name="대절단"/>
+  <item id="71572803" name="대지 가르기"/>
+  <item id="1942216144" name="대지술"/>
+  <item id="2542149173" name="대폭발술"/>
+  <item id="1226907162" name="대폭포 떨구기"/>
+  <item id="970554680" name="대폭포술 (1)"/>
+  <item id="3336972501" name="대폭포술 (2)"/>
+  <item id="1779671472" name="대폭포술 (3)"/>
+  <item id="2540788387" name="대폭포술 (4)"/>
+  <item id="463426096" name="대폭포술 (5)"/>
+  <item id="2152533340" name="더부룩한 세계로…"/>
+  <item id="1752389606" name="데빌카타브라"/>
+  <item id="3755349883" name="도깨비 굽기"/>
+  <item id="3888666509" name="도깨비 내려찍기 (1)"/>
+  <item id="2126579255" name="도깨비 내려찍기 (2)"/>
+  <item id="3164639686" name="도깨비 내려찍기 (3)"/>
+  <item id="3272305401" name="도깨비 내려찍기 (4)"/>
+  <item id="2917006271" name="도깨비 내려찍기 (5)"/>
+  <item id="2274681542" name="도깨비 내려찍기 (6)"/>
+  <item id="338042967" name="도깨비 내려찍기 (7)"/>
+  <item id="2267754949" name="도깨비 베기"/>
+  <item id="2685870419" name="도깨비 비눗방울 (1)"/>
+  <item id="958296297" name="도깨비 비눗방울 (2)"/>
+  <item id="2409105386" name="도깨비 비눗방울 폭탄 (1)"/>
+  <item id="378623568" name="도깨비 비눗방울 폭탄 (2)"/>
+  <item id="149288073" name="도깨비 소환 페로몬"/>
+  <item id="3964150863" name="도깨비 시한폭탄 (1)"/>
+  <item id="2614556351" name="도깨비 시한폭탄 (2)"/>
+  <item id="7584464" name="도깨비 시한폭탄 (3)"/>
+  <item id="1713730369" name="도깨비 폭격"/>
+  <item id="421422407" name="도깨비불 난무 (1)"/>
+  <item id="1041314959" name="도깨비불 난무 (2)"/>
+  <item id="34154359" name="도깨비불 버스트"/>
+  <item id="3523087127" name="도깨비불 축제・그림자"/>
+  <item id="3969786535" name="도깨비불 축제・환상 (1)"/>
+  <item id="865812806" name="도깨비불 축제・환상 (2)"/>
+  <item id="1871787744" name="도니 바가지"/>
+  <item id="2240360222" name="도니! 열탕 끓이기!"/>
+  <item id="3931818149" name="도니맨 파이어 (1)"/>
+  <item id="1934858527" name="도니맨 파이어 (2)"/>
+  <item id="4152975511" name="도박승부"/>
+  <item id="2369337286" name="도발"/>
+  <item id="209334871" name="도식귀 내려찍기 (1)"/>
+  <item id="4051402331" name="도식귀 내려찍기 (2)"/>
+  <item id="868425729" name="도식귀 내려찍기 (3)"/>
+  <item id="3665974525" name="도식귀 내려찍기 (4)"/>
+  <item id="2772452049" name="독 빙의"/>
+  <item id="44981452" name="돈지갑 브레이커"/>
+  <item id="1706391112" name="돌격 러시"/>
+  <item id="3102422836" name="돌격 박살내기"/>
+  <item id="3678077454" name="돌담 떨구기"/>
+  <item id="1792601233" name="돌맹이술"/>
+  <item id="4154826323" name="돌파구 뚫기"/>
+  <item id="2909999827" name="두근두근 러브"/>
+  <item id="2627405902" name="두근두근 하트!"/>
+  <item id="1180768830" name="두근두근☆백귀야행"/>
+  <item id="2206546517" name="드래고닉 번"/>
+  <item id="2704678507" name="드러눕기 (1)"/>
+  <item id="1758578653" name="드러눕기 (2)"/>
+  <item id="3037404241" name="따끈따끈 어묵"/>
+  <item id="719527157" name="따끈따끈 할머니"/>
+  <item id="3178117641" name="따끔 냥이 젤리 펀치"/>
+  <item id="1645290820" name="따끔따끔 이쑤시개"/>
+  <item id="2989375021" name="따끔따끔 폭탄"/>
+  <item id="420237970" name="따따부따 마우스"/>
+  <item id="3497170721" name="딸기 화이어냥"/>
+  <item id="399645813" name="땅거미 록"/>
+  <item id="3828113557" name="땡큐~"/>
+  <item id="2522743127" name="떡실신 펀치"/>
+  <item id="2536904991" name="럭키 스마일"/>
+  <item id="30164622" name="런처 충전"/>
+  <item id="1653648209" name="레드 쇼크"/>
+  <item id="2485734012" name="레드 캣 B런처"/>
+  <item id="2834722686" name="레드냥 젤리 펀치"/>
+  <item id="3686620939" name="레어 캡슐 뽑기 춤"/>
+  <item id="1176634587" name="로보거북 블레이드"/>
+  <item id="2993496264" name="로보스마일"/>
+  <item id="3277192733" name="로켓펀치"/>
+  <item id="4182605285" name="마괴다용~"/>
+  <item id="3958888048" name="마구 때리기"/>
+  <item id="371577907" name="마구 할퀴기"/>
+  <item id="2735121536" name="마비술"/>
+  <item id="654522256" name="마음대로 채널 변경"/>
+  <item id="2211231552" name="마이티 임팩트"/>
+  <item id="3672038229" name="마이티 펀치"/>
+  <item id="458242900" name="마이티 훅"/>
+  <item id="580128120" name="마주본 거울의 건너편"/>
+  <item id="4084229273" name="마지막『J』ANG NAN"/>
+  <item id="3676911067" name="매서운 눈초리"/>
+  <item id="535171869" name="매혹의 해초카니발"/>
+  <item id="3585369561" name="맴맴 베기"/>
+  <item id="3764825000" name="맹독 브레스"/>
+  <item id="3160109968" name="맹독 빙의"/>
+  <item id="3771017416" name="맹독의 진"/>
+  <item id="3511371641" name="맹렬 삼두격 (1)"/>
+  <item id="2357772852" name="맹렬 삼두격 (2)"/>
+  <item id="2483339372" name="맹렬 삼두격 (3)"/>
+  <item id="2844981557" name="맹렬 삼두격 (4)"/>
+  <item id="1139042195" name="맹렬한 전투심"/>
+  <item id="860095386" name="먹물 뿜기 (1)"/>
+  <item id="1708177260" name="먹물 뿜기 (2)"/>
+  <item id="3792782704" name="멋쟁이☆비"/>
+  <item id="2759732419" name="멍때렸습니다."/>
+  <item id="1368290546" name="멍멍냥냥 펀치"/>
+  <item id="4160323398" name="멍키 작렬 펀치"/>
+  <item id="1286677891" name="메~롱"/>
+  <item id="4031260597" name="메가 근성!"/>
+  <item id="784025070" name="메가 기가 충전"/>
+  <item id="636629473" name="메론 젤리 펀치"/>
+  <item id="1375628067" name="명검 베기"/>
+  <item id="988546042" name="명물 미역춤"/>
+  <item id="3371994809" name="모두 강화 빙의"/>
+  <item id="3281859222" name="모두 멸망하라"/>
+  <item id="2306712555" name="모두 약화 빙의"/>
+  <item id="1946298703" name="목 삐끗 샤워"/>
+  <item id="3525577675" name="목숨 빼앗기"/>
+  <item id="3546162262" name="목숨을 받겠습니다 (1)"/>
+  <item id="3468333513" name="목숨을 받겠습니다 (2)"/>
+  <item id="3680704193" name="목숨을 받겠습니다 (3)"/>
+  <item id="3905321916" name="몰래 한대"/>
+  <item id="3618844963" name="못 가 블록"/>
+  <item id="512625493" name="무난한 한방"/>
+  <item id="3939702931" name="무쇠 따귀"/>
+  <item id="1315518827" name="무신 자세"/>
+  <item id="2462769812" name="무신의 진"/>
+  <item id="3796497363" name="무적"/>
+  <item id="2887453339" name="무적의 백광선"/>
+  <item id="1834033504" name="무조건 초대박!"/>
+  <item id="2769695883" name="무한의 호스파워"/>
+  <item id="1113287457" name="문어귀신 찌르기"/>
+  <item id="459877996" name="문어빵 찌르기"/>
+  <item id="1437861357" name="물고 노래하기"/>
+  <item id="3466799081" name="물어뜯기 맥스・트윈"/>
+  <item id="1989796358" name="뭉게뭉게 브레스 (1)"/>
+  <item id="4019237820" name="뭉게뭉게 브레스 (2)"/>
+  <item id="365711796" name="뭉게뭉게 브레스 (3)"/>
+  <item id="2361720846" name="뭉게뭉게 브레스 (4)"/>
+  <item id="4223807640" name="뭉게뭉게 브레스 (5)"/>
+  <item id="1705420091" name="뭉게뭉게 브레스 (6)"/>
+  <item id="2604338908" name="뭐가 나올까? (1)"/>
+  <item id="3376454404" name="뭐가 나올까? (2)"/>
+  <item id="724397286" name="뭐가 나올까? (3)"/>
+  <item id="2577368929" name="뭐가 나올까? (4)"/>
+  <item id="3833381052" name="미끌미끌 비누"/>
+  <item id="911751596" name="미니마시 어택 (1)"/>
+  <item id="3245261724" name="미니마시 어택 (2)"/>
+  <item id="2407143705" name="미사일킥G"/>
+  <item id="2103328367" name="민폐가수스 쇼크"/>
+  <item id="3488692575" name="바가지 투척"/>
+  <item id="2579070664" name="바나바나 펀치"/>
+  <item id="2984642852" name="바람 일으키기"/>
+  <item id="3139633213" name="바보월드"/>
+  <item id="3457175302" name="바위 떨구기 (1)"/>
+  <item id="1236943053" name="바위 떨구기 (2)"/>
+  <item id="1384091802" name="반격"/>
+  <item id="3001767417" name="반사 가드"/>
+  <item id="2063676302" name="반짝반짝 눈화장"/>
+  <item id="4098542660" name="발구르기"/>
+  <item id="1878068769" name="발끈지옥"/>
+  <item id="3518830066" name="밥은 아직인감 대포"/>
+  <item id="3648997393" name="밧줄 묶기"/>
+  <item id="302397560" name="방귀해저드"/>
+  <item id="2857775279" name="방긋 판다"/>
+  <item id="2522771911" name="방랑세계"/>
+  <item id="3493949376" name="방망이 토네이도"/>
+  <item id="698524426" name="방망이 휘두르기 (1)"/>
+  <item id="2964058800" name="방망이 휘두르기 (2)"/>
+  <item id="1924294437" name="방망이 휘두르기 (3)"/>
+  <item id="1909332683" name="방망이 휘두르기 (4)"/>
+  <item id="3761975315" name="방수술"/>
+  <item id="2080975565" name="방어 자세"/>
+  <item id="3139285069" name="방어다운"/>
+  <item id="4204567839" name="방어력업"/>
+  <item id="3736997683" name="방어모드 냥"/>
+  <item id="3027317708" name="배꼽 빼기"/>
+  <item id="3412407345" name="배드 버스터"/>
+  <item id="3910872986" name="백골촙"/>
+  <item id="1597116945" name="백만배 냥이 젤리 펀치"/>
+  <item id="4000354141" name="백사자포"/>
+  <item id="2122596019" name="백일몽"/>
+  <item id="3976130873" name="백화요란 빗발치기 (1)"/>
+  <item id="1979162755" name="백화요란 빗발치기 (2)"/>
+  <item id="49319957" name="백화요란 빗발치기 (3)"/>
+  <item id="3013755707" name="뱃사공의 갈고리"/>
+  <item id="2805545753" name="버블 샷"/>
+  <item id="2229470924" name="번개 떨구기"/>
+  <item id="2985574129" name="번개아빠 로큰롤"/>
+  <item id="3992337135" name="벚꽃만개"/>
+  <item id="1105288293" name="벚꽃잎 허리케인"/>
+  <item id="184818023" name="보노보노 필드 (1)"/>
+  <item id="2326100189" name="보노보노 필드 (2)"/>
+  <item id="1073427910" name="복대 미사일"/>
+  <item id="3900222942" name="볼 어택"/>
+  <item id="56704831" name="부기부기파! (1)"/>
+  <item id="1403825804" name="부기부기파! (2)"/>
+  <item id="3408276180" name="부들부들 따귀"/>
+  <item id="1785987868" name="부러버 핸드"/>
+  <item id="3878892534" name="부럽쌀 돌격"/>
+  <item id="3372803652" name="분노 충전"/>
+  <item id="754913265" name="분노를 받아랏 (1)"/>
+  <item id="2976148529" name="분노를 받아랏 (2)"/>
+  <item id="2830434571" name="분노의 꼬리치기!"/>
+  <item id="2071308993" name="분노의 돌진 (1)"/>
+  <item id="3799841659" name="분노의 돌진 (2)"/>
+  <item id="4012375494" name="분노의 돌진 (3)"/>
+  <item id="1982770300" name="분노의 돌진 (4)"/>
+  <item id="19504362" name="분노의 돌진 (5)"/>
+  <item id="3054881644" name="분노의 문양"/>
+  <item id="1559897368" name="분노의 한방!"/>
+  <item id="1116475211" name="분통베기"/>
+  <item id="3875409895" name="불꽃술"/>
+  <item id="1835435151" name="불뿜기 (1)"/>
+  <item id="4076998956" name="불뿜기 (2)"/>
+  <item id="463724078" name="불뿜기 (3)"/>
+  <item id="4072700699" name="불뿜기 (4)"/>
+  <item id="518834347" name="불뿜기 (5)"/>
+  <item id="1777072189" name="불뿜기 (6)"/>
+  <item id="3806571583" name="불뿜기 (7)"/>
+  <item id="2514787497" name="불뿜기 (8)"/>
+  <item id="192940298" name="불뿜기 (9)"/>
+  <item id="3886856890" name="불뿜기 (10)"/>
+  <item id="2427161132" name="불뿜기 (11)"/>
+  <item id="248455055" name="불뿜기 (12)"/>
+  <item id="3728863160" name="불뿜기 (13)"/>
+  <item id="2839994158" name="불뿜기 (14)"/>
+  <item id="924994189" name="불뿜기 (15)"/>
+  <item id="3670840074" name="불뿜기 (16)"/>
+  <item id="2915804060" name="불뿜기 (17)"/>
+  <item id="867120703" name="불뿜기 (18)"/>
+  <item id="1818309544" name="불뿜기 (19)"/>
+  <item id="459670334" name="불뿜기 (20)"/>
+  <item id="2231539357" name="불뿜기 (21)"/>
+  <item id="1839421855" name="불뿜기 (22)"/>
+  <item id="446982409" name="불뿜기 (23)"/>
+  <item id="2227240106" name="불뿜기 (24)"/>
+  <item id="3465029604" name="불뿜기 (25)"/>
+  <item id="1357689415" name="불뿜기 (26)"/>
+  <item id="3389348694" name="불뿜기 (27)"/>
+  <item id="3171052480" name="불뿜기 (28)"/>
+  <item id="3092086085" name="불뿜기 (29)"/>
+  <item id="1362024560" name="불뿜기 (30)"/>
+  <item id="724914159" name="불뿜기 (31)"/>
+  <item id="1546813305" name="불뿜기 (32)"/>
+  <item id="3260476122" name="불뿜기 (33)"/>
+  <item id="779770218" name="불뿜기 (34)"/>
+  <item id="1501391356" name="불뿜기 (35)"/>
+  <item id="3340368991" name="불뿜기 (36)"/>
+  <item id="2780287096" name="불뿜기 (37)"/>
+  <item id="3534807278" name="불뿜기 (38)"/>
+  <item id="1288992077" name="불뿜기 (39)"/>
+  <item id="2759178831" name="불뿜기 (40)"/>
+  <item id="3547499225" name="불뿜기 (41)"/>
+  <item id="1293295482" name="불뿜기 (42)"/>
+  <item id="395775080" name="불뿜기 (43)"/>
+  <item id="1620065534" name="불뿜기 (44)"/>
+  <item id="4277447005" name="불뿜기 (45)"/>
+  <item id="320499930" name="불뿜기 (46)"/>
+  <item id="1679638604" name="불뿜기 (47)"/>
+  <item id="4202288623" name="불뿜기 (48)"/>
+  <item id="4280435232" name="불뿜기 (49)"/>
+  <item id="3617654518" name="불사불사 드레인"/>
+  <item id="1212745298" name="불어닥치는 북풍"/>
+  <item id="388091184" name="불운의 따귀"/>
+  <item id="131019951" name="불쾌한 키스"/>
+  <item id="2443393529" name="불타는 빨간 캡슐 (1)"/>
+  <item id="3869509999" name="불타는 빨간 캡슐 (2)"/>
+  <item id="2142066901" name="불타는 빨간 캡슐 (3)"/>
+  <item id="2000440525" name="불합리한 따귀"/>
+  <item id="3665096672" name="붉은 악몽"/>
+  <item id="3938529094" name="뷰티 빔"/>
+  <item id="618215244" name="블랙 이무기 머플러"/>
+  <item id="492047241" name="블루 키스"/>
+  <item id="3526769694" name="블루냥 젤리 펀치"/>
+  <item id="1461603545" name="비상금"/>
+  <item id="3069106868" name="비장의 나이프 (1)"/>
+  <item id="1026072423" name="비장의 나이프 (2)"/>
+  <item id="2170211590" name="비트 캠프"/>
+  <item id="1349654069" name="빅 웨이브"/>
+  <item id="1082874801" name="빅토리안~!"/>
+  <item id="4049837215" name="빔 샷"/>
+  <item id="1100236275" name="빙결술"/>
+  <item id="2210800816" name="빙결지옥"/>
+  <item id="487725099" name="빙그르르르르"/>
+  <item id="3963181340" name="빙글 토네이도 (1)"/>
+  <item id="3170158767" name="빙글 토네이도 (2)"/>
+  <item id="2003889239" name="빙하 소환"/>
+  <item id="1070495100" name="빚 지옥"/>
+  <item id="792148216" name="뺀질 춤"/>
+  <item id="2407883851" name="뼈다귀 공격"/>
+  <item id="1967608077" name="뽑기 성공"/>
+  <item id="1881354151" name="뽑기 실패"/>
+  <item id="1907631430" name="뿅한 설렘"/>
+  <item id="3306047016" name="삐치삐치 소울"/>
+  <item id="1364791448" name="사랑비 쏟기"/>
+  <item id="3564832298" name="사랑의 따귀"/>
+  <item id="2033600285" name="사랑의 따귀G! (1)"/>
+  <item id="2167270637" name="사랑의 따귀G! (2)"/>
+  <item id="644558808" name="사십견 어깨 굳히기"/>
+  <item id="1450980068" name="사이보그 머신건"/>
+  <item id="2040601807" name="사자발도술"/>
+  <item id="2954746507" name="산산조각 휘두르기"/>
+  <item id="1373003745" name="삼단 공격 (1)"/>
+  <item id="1221422752" name="삼단 공격 (2)"/>
+  <item id="1675640163" name="삼단 공격 (3)"/>
+  <item id="2063272994" name="삼단 공격 (4)"/>
+  <item id="901421797" name="삼단 공격 (5)"/>
+  <item id="1530618426" name="삼자택일 선물"/>
+  <item id="4108725285" name="상어가죽 가드"/>
+  <item id="998513586" name="새우 떨구기"/>
+  <item id="1246646952" name="생각이 안나요!"/>
+  <item id="1717259146" name="선물 보따리"/>
+  <item id="3026387993" name="설산 발구르기"/>
+  <item id="1668894108" name="섬광 드래곤 러시"/>
+  <item id="908537394" name="성가신 저주"/>
+  <item id="3754172590" name="성스러운 뿔"/>
+  <item id="2639555517" name="세개눈 독심술"/>
+  <item id="3875295237" name="세균제거술"/>
+  <item id="4260041269" name="소나기 퍼붓기"/>
+  <item id="2499685910" name="소독하기"/>
+  <item id="2118742928" name="소용돌이"/>
+  <item id="641337064" name="소음 대폭주"/>
+  <item id="3818731622" name="소음 페스티벌"/>
+  <item id="3945321661" name="소환"/>
+  <item id="241694792" name="속도 자세"/>
+  <item id="3379782344" name="속도다운"/>
+  <item id="2297581466" name="속도업"/>
+  <item id="2211760043" name="속박의 실"/>
+  <item id="377192576" name="손짓하기"/>
+  <item id="4156746553" name="손톱 자국"/>
+  <item id="1597137537" name="솜털 방어막"/>
+  <item id="536316934" name="송곳 바위 소환 (1)"/>
+  <item id="3546123416" name="송곳 바위 소환 (2)"/>
+  <item id="1941139900" name="수고했다동"/>
+  <item id="2384859093" name="수라불꽃"/>
+  <item id="4179624274" name="수류술"/>
+  <item id="3456392274" name="수리수리쫄았수리"/>
+  <item id="3977428625" name="수박씨 대포"/>
+  <item id="3682082027" name="수북털 액땜 (1)"/>
+  <item id="2343931224" name="수북털 액땜 (2)"/>
+  <item id="443623925" name="수호신 흉내"/>
+  <item id="2289631796" name="순진무구 (1)"/>
+  <item id="3635712903" name="순진무구 (2)"/>
+  <item id="3189901912" name="스패너 어택"/>
+  <item id="1822311059" name="신검 베기"/>
+  <item id="3306043064" name="신룡의 암석"/>
+  <item id="2281461167" name="신바람 댄스"/>
+  <item id="4194082609" name="신속 어택"/>
+  <item id="964671710" name="실드"/>
+  <item id="3838085871" name="실뜨기 권법"/>
+  <item id="1668889868" name="싫어싫어 충전"/>
+  <item id="1116504027" name="심술가스"/>
+  <item id="3172869592" name="심심풀이 베기"/>
+  <item id="412227665" name="싱싱한 비타민 C"/>
+  <item id="3320549870" name="썰렁하징? (1)"/>
+  <item id="1222065332" name="썰렁하징? (2)"/>
+  <item id="29429886" name="쑥대러쉬"/>
+  <item id="2114089961" name="아메리칸 태클 U"/>
+  <item id="1243681919" name="아수라장 돌려차기"/>
+  <item id="3257603268" name="아싸 미라클"/>
+  <item id="1930732377" name="아이디어 폭발 (1)"/>
+  <item id="68391887" name="아이디어 폭발 (2)"/>
+  <item id="1154679466" name="아이엠 짚신"/>
+  <item id="2542887588" name="아저씨 물어뜯기 맥스"/>
+  <item id="3366781752" name="아펠리칸!"/>
+  <item id="366299279" name="악령풀기!"/>
+  <item id="3143638744" name="악몽을 꾸어랏 (1)"/>
+  <item id="4065209846" name="악몽을 꾸어랏 (2)"/>
+  <item id="1504898533" name="악몽을 꾸어랏 (3)"/>
+  <item id="1972227684" name="악몽의 돌진 (1)"/>
+  <item id="3968114654" name="악몽의 돌진 (2)"/>
+  <item id="2440766251" name="안광빔"/>
+  <item id="2240487044" name="안녕 대금성"/>
+  <item id="716322245" name="암석 떨구기"/>
+  <item id="3799219427" name="암전의 검정 캡슐 (1)"/>
+  <item id="2071604569" name="암전의 검정 캡슐 (2)"/>
+  <item id="209526223" name="암전의 검정 캡슐 (3)"/>
+  <item id="2451146860" name="암전의 검정 캡슐 (4)"/>
+  <item id="3506841543" name="암흑술"/>
+  <item id="2005467299" name="암흑월드"/>
+  <item id="1427340886" name="암흑의 충치균"/>
+  <item id="1661969162" name="앨커트래즈 대폭주"/>
+  <item id="2568881523" name="어 그게 그러니까"/>
+  <item id="274941062" name="어, 그래!"/>
+  <item id="297431186" name="어깨 개틀링포"/>
+  <item id="2149327980" name="어깨 결림권"/>
+  <item id="1475366898" name="어려운 저주"/>
+  <item id="394474821" name="어머니의 사랑"/>
+  <item id="3210561736" name="어부의 주먹 (1)"/>
+  <item id="643045746" name="어부의 주먹 (2)"/>
+  <item id="1622215173" name="얼굴 뒤집기"/>
+  <item id="1266757979" name="얼짱의 미소"/>
+  <item id="763507430" name="엉덩이 찍기 (1)"/>
+  <item id="3029033820" name="엉덩이 찍기 (2)"/>
+  <item id="326899685" name="엎드려 빌기"/>
+  <item id="105073081" name="에취 스파이크"/>
+  <item id="62282581" name="엑스냥리버"/>
+  <item id="885268374" name="여관 틀어박혀 블루스"/>
+  <item id="2192456952" name="역전의 독니"/>
+  <item id="2610334987" name="연속 대흥행 빔 (1)"/>
+  <item id="156573683" name="연속 대흥행 빔 (2)"/>
+  <item id="2421968457" name="연속 대흥행 빔 (3)"/>
+  <item id="3881533151" name="연속 대흥행 빔 (4)"/>
+  <item id="2034232188" name="연속 대흥행 빔 (5)"/>
+  <item id="238607338" name="연속 대흥행 빔 (6)"/>
+  <item id="2536606288" name="연속 대흥행 빔 (7)"/>
+  <item id="1408843737" name="연속 쑤시기"/>
+  <item id="3281293943" name="연옥술 (1)"/>
+  <item id="1520288717" name="연옥술 (2)"/>
+  <item id="3120401042" name="연옥술 (3)"/>
+  <item id="243340378" name="열기 후끈파"/>
+  <item id="2059292588" name="열불돼지 난무"/>
+  <item id="2702651012" name="열탕 데우기"/>
+  <item id="203504411" name="영원한 어둠의 저주"/>
+  <item id="2741247599" name="영차영차 풍어가 (1)"/>
+  <item id="980242389" name="영차영차 풍어가 (2)"/>
+  <item id="4062400118" name="영혼 흡수다용~"/>
+  <item id="2463249959" name="예리한 발톱"/>
+  <item id="174850351" name="오늘도 고기파티"/>
+  <item id="2509649502" name="오들오들 고드름"/>
+  <item id="870399466" name="오들오들 대한파"/>
+  <item id="450278254" name="오렌지냥 젤리 펀치"/>
+  <item id="966920505" name="오션 다이버 U"/>
+  <item id="2690752399" name="오징어 빔"/>
+  <item id="3089523601" name="오징어 화염술"/>
+  <item id="1172401292" name="오징어탄"/>
+  <item id="478183076" name="온천 파이어!"/>
+  <item id="1966807095" name="올 나잇 게임"/>
+  <item id="2593467551" name="완벽한 접대"/>
+  <item id="4263716156" name="완전 무표정"/>
+  <item id="2026439815" name="완전 잘부탁해!"/>
+  <item id="3036796775" name="완전무결 배리어"/>
+  <item id="4236446333" name="왕가위"/>
+  <item id="826348203" name="왕고약 저주"/>
+  <item id="299645092" name="왕대쪽 크래시"/>
+  <item id="1481911944" name="왕두꺼비 둔갑술"/>
+  <item id="795218376" name="왕방귀 가스"/>
+  <item id="750522644" name="왕허세 봄버"/>
+  <item id="216099614" name="요괴 출현"/>
+  <item id="384511245" name="요괴실격"/>
+  <item id="147598958" name="요도 베기 (1)"/>
+  <item id="506331161" name="요도 베기 (2)"/>
+  <item id="2476651065" name="요술 봉인"/>
+  <item id="453707368" name="요통 버스터"/>
+  <item id="601928762" name="용오름술"/>
+  <item id="11077686" name="용용이 스톤"/>
+  <item id="562781723" name="우~화!"/>
+  <item id="3486203809" name="우르릉 쾅쾅!"/>
+  <item id="3704177688" name="우리들은 판다!"/>
+  <item id="4131783524" name="우물쭈물 따귀"/>
+  <item id="1485796530" name="우박술"/>
+  <item id="3230350213" name="우박유성탄"/>
+  <item id="1306410170" name="우산 바리케이드"/>
+  <item id="3670618938" name="우산 풍차 돌리기"/>
+  <item id="2030462836" name="우아한☆우산찌르기"/>
+  <item id="2263110198" name="우왕좌왕 헤매기"/>
+  <item id="3154518593" name="우주 최강 빔(뻥)"/>
+  <item id="3493306446" name="우파우파 빔"/>
+  <item id="720658487" name="우파우파 지팡이"/>
+  <item id="4249643406" name="우하하 필드"/>
+  <item id="3224125502" name="우헤헤 존"/>
+  <item id="1345390800" name="운명의 주사위 놀이"/>
+  <item id="845038024" name="울지 않는 꿩의 춤"/>
+  <item id="1130519129" name="울트라빔"/>
+  <item id="2009734726" name="워매~빔"/>
+  <item id="1563772651" name="워매냥 도깨비불"/>
+  <item id="3552463117" name="원념 융단 폭격"/>
+  <item id="1385244561" name="원망어택"/>
+  <item id="1401495560" name="원조 야옹 젤리 펀치"/>
+  <item id="3116243912" name="원진방어술"/>
+  <item id="3877366265" name="위스마시 내려찍기 (1)"/>
+  <item id="2339910264" name="위스마시 내려찍기 (2)"/>
+  <item id="50630080" name="위스마시 내려찍기 (3)"/>
+  <item id="471546701" name="위험한 캡슐"/>
+  <item id="3927831267" name="육손신권"/>
+  <item id="3584446988" name="은근슬쩍 일격"/>
+  <item id="3900884221" name="은둔술"/>
+  <item id="3422750888" name="은둔의 노래"/>
+  <item id="4283125220" name="은이등 가드"/>
+  <item id="2654676751" name="음침한 바람"/>
+  <item id="2417179491" name="음흉 러브"/>
+  <item id="944516283" name="의심의 눈초리"/>
+  <item id="1817867640" name="이걸로 끝이징포"/>
+  <item id="431562492" name="이무기 머플러"/>
+  <item id="4014219899" name="이상한 얼굴 찍기"/>
+  <item id="1951596671" name="이쪽이야 이쪽"/>
+  <item id="731460456" name="일단 모면하기"/>
+  <item id="2573015958" name="일단 브레스"/>
+  <item id="378203020" name="자폭 (1)"/>
+  <item id="1584808927" name="자폭 (2)"/>
+  <item id="337259388" name="자폭해서 죄송합니다"/>
+  <item id="1649297057" name="잘~ 먹겠습니다 (1)"/>
+  <item id="215265154" name="잘~ 먹겠습니다 (2)"/>
+  <item id="1435296215" name="잘~ 먹겠습니다 (3)"/>
+  <item id="237470098" name="잘~ 먹겠습니다 (4)"/>
+  <item id="132514015" name="잘~ 먹겠습니다 (5)"/>
+  <item id="3978387077" name="잘잘못을 따져볼까!"/>
+  <item id="3103326433" name="잠 못자는 밤"/>
+  <item id="2171878436" name="장수 술법"/>
+  <item id="3403289056" name="재앙의 눈빛"/>
+  <item id="611089186" name="재잘재잘 마우스"/>
+  <item id="3147189331" name="저돌적 진격"/>
+  <item id="2721257207" name="저승보내기"/>
+  <item id="2740653759" name="저승폭풍"/>
+  <item id="2980386753" name="저주의 러브레터"/>
+  <item id="2407780125" name="저주의 숨결"/>
+  <item id="3981676097" name="저주의 진"/>
+  <item id="2302686028" name="저주할거야!"/>
+  <item id="2649952262" name="저쪽이다 대포"/>
+  <item id="4194262033" name="전동 냥펀치"/>
+  <item id="1275386674" name="전류술"/>
+  <item id="1026376920" name="전부 까발리기"/>
+  <item id="2949856658" name="전부 다 줘잉!"/>
+  <item id="2252548493" name="전부 홀라당"/>
+  <item id="3692961906" name="전설의 도깨비 방망이"/>
+  <item id="333147230" name="전파신 썬더"/>
+  <item id="1683758960" name="절교 오라"/>
+  <item id="79831177" name="절대 방위선 U"/>
+  <item id="1773941781" name="절대인내의 벽"/>
+  <item id="691608617" name="점핑 버스터"/>
+  <item id="958674163" name="정권버닝"/>
+  <item id="4098846002" name="정리하기 (1)"/>
+  <item id="3282995873" name="정리하기 (2)"/>
+  <item id="1076646042" name="정열의 미역뿌리 삼바!"/>
+  <item id="645735384" name="정화"/>
+  <item id="2650857215" name="젤라틴 펀치 (1)"/>
+  <item id="1622720939" name="젤라틴 펀치 (2)"/>
+  <item id="2963023545" name="조급해 펀치"/>
+  <item id="2241407313" name="졸려졸려 드림"/>
+  <item id="1139021571" name="졸음연기"/>
+  <item id="3295043168" name="종말의 서곡"/>
+  <item id="1049433248" name="주먹밥술"/>
+  <item id="1969893639" name="주절주절 브레스"/>
+  <item id="450472114" name="죽음의 대회전"/>
+  <item id="501303271" name="지갑몽땅 털기"/>
+  <item id="1679753621" name="지겨운 지식지옥"/>
+  <item id="1962671849" name="지뢰"/>
+  <item id="1525940681" name="지옥가위"/>
+  <item id="2716427963" name="지옥의 방망이"/>
+  <item id="1729795830" name="지옥의 원념포 (1)"/>
+  <item id="3557652220" name="지옥의 원념포 (2)"/>
+  <item id="3217954120" name="지휘!"/>
+  <item id="1320251400" name="질척샤워"/>
+  <item id="1332487214" name="질투 파이어"/>
+  <item id="2872977639" name="질투 펀치"/>
+  <item id="1922282251" name="질풍 스텝"/>
+  <item id="3661704595" name="집중 소독하기"/>
+  <item id="1555643389" name="징벌태풍"/>
+  <item id="1023990135" name="짜릿할거다용~ (1)"/>
+  <item id="129396217" name="짜릿할거다용~ (2)"/>
+  <item id="540287545" name="쭈쭈 드레인"/>
+  <item id="3047974890" name="찌릿찌릿 쇼크"/>
+  <item id="1943099832" name="차가운 한숨"/>
+  <item id="1866818728" name="차지 공격 (1)"/>
+  <item id="1985893865" name="차지 공격 (2)"/>
+  <item id="4046349840" name="차지 샷"/>
+  <item id="2510951981" name="찰싹찰싹 오징어 다리"/>
+  <item id="4215426399" name="창공의 젤리 펀치"/>
+  <item id="557236387" name="처형의 폭탄 (1)"/>
+  <item id="1374721924" name="처형의 폭탄 (2)"/>
+  <item id="3112382332" name="천둥 회오리"/>
+  <item id="1428154995" name="천둥술"/>
+  <item id="1890329311" name="천벌 내리기"/>
+  <item id="1942187629" name="천지붕괴"/>
+  <item id="3054784306" name="천하장사 신권"/>
+  <item id="3802401054" name="천하태평의 울림"/>
+  <item id="3539547125" name="철벽 가드"/>
+  <item id="3935307382" name="철저한 흡혈"/>
+  <item id="2324169797" name="철퇴를 받아랏 (1)"/>
+  <item id="3812261349" name="철퇴를 받아랏 (2)"/>
+  <item id="4167966472" name="청룡의 폭포"/>
+  <item id="3841656063" name="청소진형"/>
+  <item id="4274142799" name="초・갑옷 분쇄"/>
+  <item id="2555701722" name="초・공격다운"/>
+  <item id="3654665352" name="초・공격력업"/>
+  <item id="2718335244" name="초・방어다운"/>
+  <item id="3817319518" name="초・방어력업"/>
+  <item id="3496498057" name="초・속도다운"/>
+  <item id="2447998683" name="초・속도업"/>
+  <item id="543459743" name="초・실드"/>
+  <item id="3297793689" name="초・칼 사냥"/>
+  <item id="957104443" name="초・회복 빙의"/>
+  <item id="3122501057" name="초강력 마비술"/>
+  <item id="1665837322" name="초강력 삼두격 (1)"/>
+  <item id="980177405" name="초강력 삼두격 (2)"/>
+  <item id="275325661" name="초강력 삼두격 (3)"/>
+  <item id="2981984016" name="초괭속 섬머솔트"/>
+  <item id="2358515521" name="초절정 뒤엎기"/>
+  <item id="303304621" name="초절정 뿔 크래시"/>
+  <item id="1497118400" name="초절정 헤븐"/>
+  <item id="395379344" name="촌스러운 스타일"/>
+  <item id="4283121012" name="최고야~ 피버"/>
+  <item id="1855526505" name="최고의 돌격"/>
+  <item id="553180760" name="추적 불덩이 (1)"/>
+  <item id="3119615970" name="추적 불덩이 (2)"/>
+  <item id="3472277364" name="추적 불덩이 (3)"/>
+  <item id="3042752157" name="충격 스탬프"/>
+  <item id="3081450256" name="치유 키스"/>
+  <item id="1538802313" name="치유의 초록 캡슐"/>
+  <item id="1536956801" name="칙칙포"/>
+  <item id="3716900824" name="칼 사냥"/>
+  <item id="2404259741" name="칼칼한 공격"/>
+  <item id="517939813" name="코털 나온 거 아니야~"/>
+  <item id="879829864" name="코피봄버"/>
+  <item id="992174089" name="콧물따귀"/>
+  <item id="3113293993" name="쾌청 쾌청 파이어"/>
+  <item id="3206115618" name="쿨~ 쿨~"/>
+  <item id="2026468375" name="크레이지 썬더"/>
+  <item id="303333181" name="큰뱀독무"/>
+  <item id="2877109762" name="타이거 크로스냥"/>
+  <item id="2212138747" name="타일 폭발 (1)"/>
+  <item id="3493909887" name="타일 폭발 (2)"/>
+  <item id="3381003669" name="탐욕스런 죠스"/>
+  <item id="1017199054" name="털레털레 베기"/>
+  <item id="1094989890" name="토기 브레이크"/>
+  <item id="3997044198" name="통째로 삼키기 (1)"/>
+  <item id="321669196" name="통째로 삼키기 (2)"/>
+  <item id="451791105" name="통째로 삼키기 (3)"/>
+  <item id="2320809054" name="통째로 삼키기 (4)"/>
+  <item id="339084947" name="퇴마 주먹"/>
+  <item id="2931500506" name="투구쓰기"/>
+  <item id="4203556524" name="트라우마 청소기"/>
+  <item id="769602409" name="트리플 오징어 드릴"/>
+  <item id="3098583872" name="트리플 오징어 빔 (1)"/>
+  <item id="565834490" name="트리플 오징어 빔 (2)"/>
+  <item id="1455342188" name="트리플 오징어 빔 (3)"/>
+  <item id="3369752527" name="트리플 오징어 빔 (4)"/>
+  <item id="3218958169" name="트리플 오징어 빔 (5)"/>
+  <item id="651441891" name="트리플 오징어 빔 (6)"/>
+  <item id="1228089807" name="특별한 차별 핸드"/>
+  <item id="161756710" name="틀어박혀 발라드"/>
+  <item id="3489596286" name="파괴 광선"/>
+  <item id="4052173894" name="파괴의 일격"/>
+  <item id="1829912453" name="파도 몰아치기"/>
+  <item id="2181646147" name="파도타기 일섬"/>
+  <item id="1446980609" name="파이널 근성!"/>
+  <item id="1649560369" name="포도송이 보디"/>
+  <item id="4066798557" name="포효"/>
+  <item id="504566515" name="폭격 개시 (1)"/>
+  <item id="3827052432" name="폭격 개시 (2)"/>
+  <item id="2468028166" name="폭격 개시 (3)"/>
+  <item id="513555584" name="폭렬 뿔 파이널"/>
+  <item id="2392665972" name="폭발술"/>
+  <item id="1758735453" name="폭소 항아리"/>
+  <item id="1987909428" name="폭주 드릴이징"/>
+  <item id="603723056" name="폭주 뿔 브레이크"/>
+  <item id="4146993964" name="폭주 스타트"/>
+  <item id="2882626391" name="폭탄 강속구"/>
+  <item id="3595366585" name="폭탄 던지기"/>
+  <item id="3090169829" name="폭탄 흘리기"/>
+  <item id="417553727" name="폭탄의 비"/>
+  <item id="3953735438" name="풍년을 부르는 춤"/>
+  <item id="454635965" name="필살 냥이 젤리 펀치 (1)"/>
+  <item id="1008099445" name="필살 냥이 젤리 펀치 (2)"/>
+  <item id="1460939436" name="필살 주워먹기 신권"/>
+  <item id="1697908536" name="필살・도마뱀 둔갑술"/>
+  <item id="247597759" name="하이컬러 웨이브 (1)"/>
+  <item id="1578081036" name="하이컬러 웨이브 (2)"/>
+  <item id="3748752576" name="하이컬러☆파라솔"/>
+  <item id="3662597980" name="하트 샷"/>
+  <item id="343117738" name="할멈 퀘이크 (1)"/>
+  <item id="3251552992" name="할멈 퀘이크 (2)"/>
+  <item id="4164362914" name="할멈 해머"/>
+  <item id="1843191073" name="할멈촙"/>
+  <item id="876669517" name="해골 폭탄의 저주"/>
+  <item id="1319323613" name="해류가드"/>
+  <item id="2813729738" name="해이촙 공격"/>
+  <item id="2799567746" name="해피 스마일"/>
+  <item id="1843449768" name="핵지뢰술"/>
+  <item id="2570695530" name="허풍선이 숨결"/>
+  <item id="3261598241" name="혀팔사 마구 물기!"/>
+  <item id="2316803957" name="호출 (1)"/>
+  <item id="1952493390" name="호출 (2)"/>
+  <item id="822689653" name="호출 (3)"/>
+  <item id="2818600655" name="호출 (4)"/>
+  <item id="3741802073" name="호출 (5)"/>
+  <item id="3304226078" name="호출 (6)"/>
+  <item id="2713206555" name="호쾌한 수비"/>
+  <item id="1058858371" name="혼신의 일격"/>
+  <item id="3198553344" name="홍련지옥"/>
+  <item id="2298686889" name="화산 발구르기"/>
+  <item id="4293213862" name="화염술"/>
+  <item id="2780909793" name="화이트 도그 B런처"/>
+  <item id="141252053" name="환각의 눈동자"/>
+  <item id="2673033031" name="환마참 (1)"/>
+  <item id="1178778072" name="환마참 (2)"/>
+  <item id="616748332" name="황금 잉어 장송곡 (1)"/>
+  <item id="3184231574" name="황금 잉어 장송곡 (2)"/>
+  <item id="4089646681" name="황천강 돌팔매질"/>
+  <item id="538407034" name="회복 빙의"/>
+  <item id="1960794102" name="회복술"/>
+  <item id="329533060" name="회복의 진"/>
+  <item id="772671872" name="회복의 징조 (1)"/>
+  <item id="2126747699" name="회복의 징조 (2)"/>
+  <item id="1641615949" name="회오리 부채"/>
+  <item id="2381199580" name="회오리바람"/>
+  <item id="406206695" name="회오리바람J"/>
+  <item id="989562235" name="회오리술"/>
+  <item id="3333564659" name="회피"/>
+  <item id="2476216975" name="후비후비 후비적"/>
+  <item id="720448288" name="훌쩍 포"/>
+  <item id="1172976594" name="휘감기"/>
+  <item id="1470708186" name="휘젓기"/>
+  <item id="665151088" name="휴식"/>
+  <item id="1169890018" name="흑네거티브 웨이브"/>
+  <item id="2028610211" name="흑도니 바가지"/>
+  <item id="936120608" name="흑도니맨 파이어 (1)"/>
+  <item id="2932162714" name="흑도니맨 파이어 (2)"/>
+  <item id="971023553" name="흙탕물 뿜기 (1)"/>
+  <item id="3258191775" name="흙탕물 뿜기 (2)"/>
+  <item id="3357349510" name="흡수술"/>
+  <item id="3544978307" name="힘 빼앗기"/>
+  <item id="546527618" name="힘 훔치기"/>
+  <item id="2841334809" name="Alien Encounter"/>
+  <item id="815668391" name="Ancient Zazel Shot"/>
+  <item id="4251379360" name="Awakened Hand"/>
+  <item id="3890501532" name="Axe Slash"/>
+  <item id="586292122" name="Barrage Carnival"/>
+  <item id="2386671797" name="Bazooka Swing"/>
+  <item id="3493420792" name="Belly Blasters (2)"/>
+  <item id="1298968097" name="Blades of Regret (1)"/>
+  <item id="3235471778" name="Blades of Regret (2)"/>
+  <item id="1199549153" name="Blades of Regret (3)"/>
+  <item id="3985272922" name="Blades of Regret (4)"/>
+  <item id="1620229055" name="Blessed Golden Bite"/>
+  <item id="296494965" name="Bloom Barrage (1)"/>
+  <item id="574843154" name="Boing Blaster"/>
+  <item id="3109509109" name="Brilliant Barrage"/>
+  <item id="2843848125" name="Captain Punch"/>
+  <item id="1559889358" name="Cat Slash (1)"/>
+  <item id="1368213547" name="Cat Slash (2)"/>
+  <item id="2337926699" name="Cat Slash (3)"/>
+  <item id="485092306" name="Cat Slash (4)"/>
+  <item id="934962013" name="Compact Break"/>
+  <item id="406020924" name="Crackling Thunder"/>
+  <item id="4047701541" name="Crank-a-kai Move"/>
+  <item id="2777999056" name="Curse of the Fallen"/>
+  <item id="1770522826" name="Dangerous Cannon"/>
+  <item id="4057037261" name="Dark Bombing Rain (1)"/>
+  <item id="199115950" name="Dark Bombing Rain (2)"/>
+  <item id="2094625848" name="Dark Bombing Rain (3)"/>
+  <item id="1568548852" name="Dark Top"/>
+  <item id="4269284268" name="Dark Vulcan Gun"/>
+  <item id="68823126" name="Destruction Spheres (1)"/>
+  <item id="109717787" name="Destruction Spheres (2)"/>
+  <item id="586109871" name="Destruction Spheres (3)"/>
+  <item id="3496078750" name="Destruction Spheres (4)"/>
+  <item id="2277748198" name="Destruction Spheres (5)"/>
+  <item id="2561517195" name="Double Revolution (1)"/>
+  <item id="3068372023" name="Double Revolution (2)"/>
+  <item id="520842696" name="Double Revolution G (1)"/>
+  <item id="826634100" name="Double Revolution G (2)"/>
+  <item id="871122077" name="Emergency Meeting (1)"/>
+  <item id="3954846928" name="Emergency Meeting (2)"/>
+  <item id="3730540948" name="Emergency Meeting (3)"/>
+  <item id="1196611630" name="Emergency Meeting (4)"/>
+  <item id="810936504" name="Emergency Meeting (5)"/>
+  <item id="1697361187" name="Emperor Punch"/>
+  <item id="3534843707" name="Emperor Rush"/>
+  <item id="3743948876" name="Emperor Shot 360"/>
+  <item id="2588051099" name="Emperor Shot No. 3"/>
+  <item id="3833728134" name="Emperor Shot No. 9"/>
+  <item id="2774819825" name="Emperor’s Playtime"/>
+  <item id="1053050160" name="Empty Demon Fist"/>
+  <item id="522192700" name="Enma Orb"/>
+  <item id="254566317" name="Explosive Strike (1)"/>
+  <item id="3719730789" name="Fear Stance"/>
+  <item id="3746698145" name="Fiend Skill"/>
+  <item id="3591130369" name="First-Aid Kit"/>
+  <item id="3465230271" name="Godly Glacier (2)"/>
+  <item id="1647158102" name="Gold Coinferno"/>
+  <item id="1838948085" name="Golden Cat Nap (1)"/>
+  <item id="4124976811" name="Golden Cat Nap (2)"/>
+  <item id="3478763459" name="Golden Catfall"/>
+  <item id="1948024433" name="Golden Dream"/>
+  <item id="4057870958" name="Golden Paws of Awe"/>
+  <item id="3320655044" name="Golden Spirit Crusher"/>
+  <item id="3868685517" name="Gratitude Beam (1)"/>
+  <item id="2141070711" name="Gratitude Beam (2)"/>
+  <item id="144250337" name="Gratitude Beam (3)"/>
+  <item id="2533195842" name="Gratitude Beam (4)"/>
+  <item id="3791302868" name="Gratitude Beam (5)"/>
+  <item id="2029248878" name="Gratitude Beam (6)"/>
+  <item id="1615954933" name="Gravity Slash"/>
+  <item id="4220131544" name="Hellish Pressure"/>
+  <item id="4189711294" name="Here Golden Kitty"/>
+  <item id="1685042970" name="Hinozall Heart &amp;amp; Soul (1)"/>
+  <item id="325617548" name="Hinozall Heart &amp;amp; Soul (2)"/>
+  <item id="1544485452" name="Holy Golden Howl"/>
+  <item id="1561620490" name="Infernal Blast (1)"/>
+  <item id="1226056532" name="Invader Rush"/>
+  <item id="3398132003" name="Jackpot Jive (1)"/>
+  <item id="1232457561" name="Keyboard Crash"/>
+  <item id="3199998830" name="Kicking Up Hell"/>
+  <item id="2656226410" name="Laser Beam (2)"/>
+  <item id="2722496565" name="Lightning Beam"/>
+  <item id="1887127221" name="Mediocre Boy's Aura"/>
+  <item id="366643021" name="Moon Slash (1)"/>
+  <item id="416431253" name="Moon Slash (2)"/>
+  <item id="2897553758" name="Moon Slash (3)"/>
+  <item id="4161088964" name="Moon Slash (4)"/>
+  <item id="488223549" name="Moon Slash (5)"/>
+  <item id="1522777177" name="Mysterious Barrier"/>
+  <item id="1052848030" name="Operation Ω"/>
+  <item id="870733528" name="Platinum Silver Gun"/>
+  <item id="3402206809" name="Power Blink"/>
+  <item id="2357705898" name="Premium Stun Ball"/>
+  <item id="3864773918" name="Rocket Punch (2)"/>
+  <item id="710161084" name="Sacred Golden Slash"/>
+  <item id="3092814631" name="Shadow Drill"/>
+  <item id="894786703" name="Shadow Straight"/>
+  <item id="388165829" name="Shock Sphere"/>
+  <item id="31967988" name="Shot No. 3"/>
+  <item id="1725168548" name="Shot No. 360"/>
+  <item id="2133278953" name="Shot No. 9"/>
+  <item id="3566822306" name="Sparking Shock"/>
+  <item id="2906106067" name="Spiral Slash (1)"/>
+  <item id="3331433540" name="Spiral Slash (2)"/>
+  <item id="2139843560" name="Straight Zazel Bullet"/>
+  <item id="4217600958" name="Sucking Void"/>
+  <item id="1828481687" name="Super Gloomy Story"/>
+  <item id="3051124795" name="Supreme Enma Blast"/>
+  <item id="3084594369" name="Toadal Waterfall"/>
+  <item id="1100176424" name="Top-Secret Orders!"/>
+  <item id="1140595683" name="Waterfall Slash"/>
+  <item id="971197530" name="Wide Thunder Beam"/>
+  <item id="196392928" name="Zazel Blast Drop"/>
+  <item id="1474447260" name="Zazel Mystery Leap"/>
+  <item id="3969907068" name="Zazel Nail (1)"/>
+  <item id="3653790684" name="Zazel Nail (2)"/>
+  <item id="1153419231" name="Zazel Tentacle Whip"/>
+</items>

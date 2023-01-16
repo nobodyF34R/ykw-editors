@@ -1,0 +1,487 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="1178824207" name="Âme Ogralos"/>
+  <item id="2938161978" name="Âme Triptyk"/>
+  <item id="826564249" name="Âme Orqanos"/>
+  <item id="3515987847" name="Âme Styx VI"/>
+  <item id="3150863230" name="Âme Scatcheur"/>
+  <item id="676361786" name="Âme Bandinyan"/>
+  <item id="885381504" name="Âme Wakapoeira"/>
+  <item id="2919891138" name="Âme Frérosse"/>
+  <item id="2366712203" name="Âme Dracounet"/>
+  <item id="2909367425" name="Âme Mélobê"/>
+  <item id="878722363" name="Âme Geigneau"/>
+  <item id="631951069" name="Âme Scarmouche"/>
+  <item id="1387134539" name="Âme Scarnage"/>
+  <item id="497955866" name="Âme Sire Dragon"/>
+  <item id="1789461644" name="Âme Dragô"/>
+  <item id="4077561967" name="Âme Popcorne"/>
+  <item id="1428724637" name="Âme Suprarachnus"/>
+  <item id="3410759230" name="Âme Zazel"/>
+  <item id="535333443" name="Âme Komajiro"/>
+  <item id="3861271068" name="Âme Komistigri"/>
+  <item id="1136847126" name="Âme Salsalga"/>
+  <item id="1599555244" name="Âme Robonyan"/>
+  <item id="136852272" name="Âme Komajiro S"/>
+  <item id="2759509009" name="Âme Noripop"/>
+  <item id="697441293" name="Âme Suspicioni"/>
+  <item id="3106734492" name="Âme Timidémon"/>
+  <item id="337147953" name="Âme Noko"/>
+  <item id="4195752221" name="Âme Nénunoko"/>
+  <item id="1539200731" name="Âme Algacarena"/>
+  <item id="2404882386" name="Âme Komasan"/>
+  <item id="2133787558" name="Âme Komaous"/>
+  <item id="1760541397" name="Âme Komasan S"/>
+  <item id="531289813" name="Âme Buchinyan"/>
+  <item id="610837738" name="Âme Granpapéti"/>
+  <item id="3395732934" name="Âme Puissanfon"/>
+  <item id="3610312779" name="Âme Pikor"/>
+  <item id="2473057491" name="Âme Croquin"/>
+  <item id="218319216" name="Âme Inisquale"/>
+  <item id="1658659472" name="Âme Herbert"/>
+  <item id="1056391621" name="Âme Sirénée"/>
+  <item id="1240494419" name="Âme Sinisrénée"/>
+  <item id="1141557684" name="Âme Samuren"/>
+  <item id="3568686117" name="Âme Barrakéda"/>
+  <item id="341451943" name="Âme Kyubi"/>
+  <item id="4252753156" name="Âme Vénaldo"/>
+  <item id="2323443090" name="Âme Maltesse"/>
+  <item id="2564125239" name="Âme Sirènité"/>
+  <item id="2788981320" name="Âme Bouh"/>
+  <item id="3581394450" name="Âme Métaureaulog"/>
+  <item id="2725285508" name="Âme Métaréaulog"/>
+  <item id="2177778550" name="Âme Raltesse"/>
+  <item id="914581465" name="Âme Mabouhl"/>
+  <item id="3144400837" name="Âme Tauracle"/>
+  <item id="1245116843" name="Âme Orqanos"/>
+  <item id="2434884234" name="Âme Bababou"/>
+  <item id="256243497" name="Âme Tourneboul"/>
+  <item id="402178202" name="Âme Chionyan"/>
+  <item id="421742760" name="Âme Usapyon"/>
+  <item id="1847883838" name="Âme Usapyon"/>
+  <item id="249819611" name="Âme Usapyon"/>
+  <item id="2045034829" name="Âme Usapyon"/>
+  <item id="3773665527" name="Âme Usapyon"/>
+  <item id="1915880300" name="Âme Paradoxa"/>
+  <item id="87372794" name="Âme Potaumorose"/>
+  <item id="814296396" name="Âme Lulugubre"/>
+  <item id="3207023369" name="Âme Cabotin"/>
+  <item id="724769401" name="Âme Crapop"/>
+  <item id="3458871562" name="Âme Contrarioni"/>
+  <item id="2042818846" name="Âme Humainequin"/>
+  <item id="1919967226" name="Âme Adolfo Jeton"/>
+  <item id="927010286" name="Âme Draconfus"/>
+  <item id="1778645461" name="Âme Extrabuki"/>
+  <item id="3626498988" name="Âme Hydreux"/>
+  <item id="3271180821" name="Âme 3000"/>
+  <item id="2621203008" name="Âme Ratatam"/>
+  <item id="3946533590" name="Âme Supernoël"/>
+  <item id="2658851865" name="Âme Brumette"/>
+  <item id="2362655676" name="Âme Amédélègue"/>
+  <item id="4054104057" name="Âme Robonyan F"/>
+  <item id="1026672957" name="Âme Robocap"/>
+  <item id="1576419544" name="Âme Robokoma"/>
+  <item id="720465998" name="Âme Robopapéti"/>
+  <item id="3019383284" name="Âme Robocorniot"/>
+  <item id="3305050466" name="Âme Robonoko"/>
+  <item id="1520141505" name="Âme Robodracou"/>
+  <item id="3641520212" name="Âme Nimpégase"/>
+  <item id="3656026233" name="Âme Nihilo"/>
+  <item id="2687906013" name="Âme Chauvekipeut"/>
+  <item id="3237067064" name="Âme Chauv'coucou"/>
+  <item id="3086387630" name="Âme Vampiloc"/>
+  <item id="476864045" name="Âme Comte Zapzap"/>
+  <item id="3091894032" name="Âme Octorgombre"/>
+  <item id="1756227139" name="Âme Darknyan"/>
+  <item id="2591780257" name="Âme Extrabuki"/>
+  <item id="502032524" name="Âme Hibourling"/>
+  <item id="1060449266" name="Âme Sale de bain"/>
+  <item id="1211243364" name="Âme Gale de bain"/>
+  <item id="2871097986" name="Âme Égare-dare"/>
+  <item id="893775649" name="Âme Charivari"/>
+  <item id="2038476168" name="Âme Orox"/>
+  <item id="3440050655" name="Âme Tengu"/>
+  <item id="3121361225" name="Âme Tengurou"/>
+  <item id="3102698411" name="Âme Diamanyan"/>
+  <item id="288555633" name="Âme Saphinyan"/>
+  <item id="1714696935" name="Âme Émeranyan"/>
+  <item id="4282213213" name="Âme Rubinyan"/>
+  <item id="2285523915" name="Âme Topanyan"/>
+  <item id="841493304" name="Âme Antonnerre"/>
+  <item id="1837538307" name="Âme Dynamo"/>
+  <item id="457426594" name="Âme Omnitonton"/>
+  <item id="1022599946" name="Âme Parantonn"/>
+  <item id="3260071756" name="Âme Sabruine"/>
+  <item id="3685496352" name="Âme Faux Kappa"/>
+  <item id="899831564" name="Âme Fou Kappa"/>
+  <item id="1499270201" name="Âme Maudieuse"/>
+  <item id="31204237" name="Âme Jérémya"/>
+  <item id="1599627086" name="Âme Grolos"/>
+  <item id="918633295" name="Âme Malmidal"/>
+  <item id="3334057787" name="Âme Boulapic"/>
+  <item id="1490893464" name="Âme Bouldacier"/>
+  <item id="3917343887" name="Âme Trodésolé"/>
+  <item id="1768918132" name="Âme Pardomino"/>
+  <item id="827017083" name="Âme Ressak"/>
+  <item id="735355476" name="Âme Scarasol"/>
+  <item id="3416567793" name="Âme Benkei"/>
+  <item id="3164839783" name="Âme B3-NK1"/>
+  <item id="1274319772" name="Âme Carnanova"/>
+  <item id="750347853" name="Âme Sabrille"/>
+  <item id="1528541792" name="Âme Fouétar"/>
+  <item id="2911818924" name="Âme Gargaros"/>
+  <item id="2308724025" name="Âme Rouminet"/>
+  <item id="486852931" name="Âme Jiganyan"/>
+  <item id="1447358012" name="Âme Vipérâle"/>
+  <item id="2890710683" name="Âme Millyeux"/>
+  <item id="2344519589" name="Âme Couchtar"/>
+  <item id="3852633714" name="Âme Noctambill"/>
+  <item id="3722715171" name="Âme Narinos"/>
+  <item id="3071357315" name="Âme Insomnelle"/>
+  <item id="3222667541" name="Âme Morféa"/>
+  <item id="3679161869" name="Âme Précyeux"/>
+  <item id="1198106103" name="Âme Chiperpiou"/>
+  <item id="1200496090" name="Âme Amoiz"/>
+  <item id="2047113702" name="Âme Claquille"/>
+  <item id="3809290332" name="Âme Cocpille"/>
+  <item id="545371293" name="Âme Rapiaf"/>
+  <item id="3387036072" name="Âme Arachnia"/>
+  <item id="2679682606" name="Âme Slurpent"/>
+  <item id="3131692530" name="Âme Momonyan"/>
+  <item id="945352683" name="Âme Roupilion"/>
+  <item id="1331683197" name="Âme Samoussrai"/>
+  <item id="1099192143" name="Âme Coach Antonic"/>
+  <item id="1270271754" name="Âme Gagalurin"/>
+  <item id="3535773360" name="Âme Marra"/>
+  <item id="91713388" name="Âme Ornella"/>
+  <item id="1185664960" name="Âme Barakabo"/>
+  <item id="506126452" name="Âme Sumochi"/>
+  <item id="1764610274" name="Âme Mochimacho"/>
+  <item id="1365997235" name="Âme Coléroptère"/>
+  <item id="644630053" name="Âme Rhinolimit"/>
+  <item id="3626558030" name="Âme Corniaque"/>
+  <item id="4240029491" name="Âme Gastong"/>
+  <item id="1627385868" name="Âme Chimpanyan"/>
+  <item id="2271341912" name="Âme Chymère"/>
+  <item id="4033273294" name="Âme Chyper"/>
+  <item id="677343192" name="Âme Blingos"/>
+  <item id="791849921" name="Âme Komak"/>
+  <item id="2975219298" name="Âme McKraken"/>
+  <item id="69203970" name="Âme Pattes Rouges"/>
+  <item id="2493572499" name="Âme Omai Tourb."/>
+  <item id="3057384059" name="Âme Bogos"/>
+  <item id="4103065017" name="Âme Hiblusion"/>
+  <item id="1179416557" name="Âme Cigalopin"/>
+  <item id="3606276732" name="Âme Cigaillard"/>
+  <item id="2717145834" name="Âme Cigazouille"/>
+  <item id="1480229557" name="Âme Jibanyan"/>
+  <item id="362303120" name="Âme Onisoi"/>
+  <item id="1353260164" name="Âme Marcognito"/>
+  <item id="665725970" name="Âme Ninjamévu"/>
+  <item id="3042414554" name="Âme Vito"/>
+  <item id="4140397536" name="Âme Apélicain"/>
+  <item id="3328055062" name="Âme Jibanyan S"/>
+  <item id="1361652261" name="Âme Shogunyan"/>
+  <item id="1132508544" name="Âme Ultramax N"/>
+  <item id="881296662" name="Âme Ultramax K"/>
+  <item id="3139893937" name="Âme Scintinoko"/>
+  <item id="2794882833" name="Âme Carpitaine"/>
+  <item id="3587332777" name="Âme Espi"/>
+  <item id="2731895359" name="Âme Étassivilia"/>
+  <item id="812553569" name="Âme Pioubidou"/>
+  <item id="3595996871" name="Âme Trépigno"/>
+  <item id="4225004330" name="Âme Hâtila"/>
+  <item id="2512941821" name="Âme Pépésbrouf"/>
+  <item id="2867007669" name="Âme Boucanyan"/>
+  <item id="1249158461" name="Âme Hyprapillon"/>
+  <item id="3548247175" name="Âme Vitapillon"/>
+  <item id="209944529" name="Âme Tata Câlin"/>
+  <item id="1662994599" name="Âme Pandanoko"/>
+  <item id="2736193544" name="Âme Papiltation"/>
+  <item id="1030985131" name="Âme Papiltension"/>
+  <item id="1969211253" name="Âme Pitou"/>
+  <item id="39385059" name="Âme Choubidou"/>
+  <item id="2605819481" name="Âme Satandre"/>
+  <item id="1118136218" name="Âme Maître Nyada"/>
+  <item id="2013305641" name="Âme Fielippine"/>
+  <item id="2215483641" name="Âme Bison Antonic"/>
+  <item id="1004288901" name="Âme Morvobec"/>
+  <item id="1052056915" name="Âme Cenridion"/>
+  <item id="3348921633" name="Âme Tengubre"/>
+  <item id="2962967991" name="Âme Bibliotengu"/>
+  <item id="195880798" name="Âme Snobéa"/>
+  <item id="777665711" name="Âme Crampaud"/>
+  <item id="1584567478" name="Âme Jouvencia"/>
+  <item id="669806724" name="Âme Sornella"/>
+  <item id="3904865976" name="Âme Injustin"/>
+  <item id="3241986797" name="Âme Lady Perpétua"/>
+  <item id="4278126954" name="Âme Woko"/>
+  <item id="2314746364" name="Âme Pagno"/>
+  <item id="2430798013" name="Âme Bonneto"/>
+  <item id="587555059" name="Âme Dédé"/>
+  <item id="1409437797" name="Âme Dédestin"/>
+  <item id="1532620534" name="Âme Yokœil"/>
+  <item id="396143711" name="Âme Alfoncéo"/>
+  <item id="243768606" name="Âme Sabri"/>
+  <item id="3510323934" name="Âme Hovernyan"/>
+  <item id="3819427077" name="Âme Usapyon B"/>
+  <item id="1835941324" name="Âme Odyssényan"/>
+  <item id="443092314" name="Âme Kintaronyan"/>
+  <item id="284256326" name="Âme Whisper"/>
+  <item id="1744197840" name="Âme Whispocrates"/>
+  <item id="3159047848" name="Âme Tonnerre"/>
+  <item id="625110802" name="Âme Roi Shogun"/>
+  <item id="2949147381" name="Âme Écchinose"/>
+  <item id="2185926424" name="Âme Tortico"/>
+  <item id="4115507086" name="Âme Tendino"/>
+  <item id="1797861933" name="Âme Contracto"/>
+  <item id="2694042726" name="Âme Scoltine"/>
+  <item id="2521605779" name="Âme Cho-cho"/>
+  <item id="326482984" name="Âme Belzel"/>
+  <item id="1486841358" name="Âme Gorgouille"/>
+  <item id="1078345080" name="Âme Scolérique"/>
+  <item id="252160959" name="Âme Cyrustre"/>
+  <item id="3965097679" name="Âme Jojojoyeux"/>
+  <item id="2072268615" name="Âme Tata Aura"/>
+  <item id="4144699863" name="Âme Maître Oden"/>
+  <item id="744414816" name="Âme Gambeth"/>
+  <item id="2258863983" name="Âme Valetino"/>
+  <item id="4100418678" name="Âme MoiYihin"/>
+  <item id="2635508152" name="Âme Tata la Terreur"/>
+  <item id="3985964280" name="Âme Toutouïe"/>
+  <item id="1945135451" name="Âme Mémétal"/>
+  <item id="83319245" name="Âme Babalance"/>
+  <item id="1509484674" name="Âme Noproblemo"/>
+  <item id="3266774881" name="Âme Lulutin"/>
+  <item id="3048224759" name="Âme Fatalutin"/>
+  <item id="1561458933" name="Âme Lacanne"/>
+  <item id="3450791268" name="Âme Canastelle"/>
+  <item id="640555699" name="Âme Luminoct"/>
+  <item id="1557369538" name="Âme Grégrigry"/>
+  <item id="472777403" name="Âme Similistik"/>
+  <item id="2233946881" name="Âme Émousstik"/>
+  <item id="4062208919" name="Âme Grattoptère"/>
+  <item id="1088674243" name="Âme Hémorhino"/>
+  <item id="1941059021" name="Âme Vipètesec"/>
+  <item id="2091636680" name="Âme Dracunyan"/>
+  <item id="3767139378" name="Âme Padelou"/>
+  <item id="1667044401" name="Âme Damona"/>
+  <item id="1793808410" name="Âme Hibrouille"/>
+  <item id="3177313616" name="Âme Corniot"/>
+  <item id="769583297" name="Âme Bicorniot"/>
+  <item id="125013411" name="Âme Pleurapluie"/>
+  <item id="1524226135" name="Âme Cerbébert"/>
+  <item id="1620810953" name="Âme Papa Ress"/>
+  <item id="4187147635" name="Âme Ralbouc"/>
+  <item id="2392194533" name="Âme Bastata"/>
+  <item id="2780343846" name="Âme Violette"/>
+  <item id="788518932" name="Âme Nomoné"/>
+  <item id="695575584" name="Âme Éterna"/>
+  <item id="3429666643" name="Âme Ivanupieds"/>
+  <item id="2960979354" name="Âme Pégaz"/>
+  <item id="3346777356" name="Âme Méphito"/>
+  <item id="175017321" name="Âme Murhaine"/>
+  <item id="2104081919" name="Âme Saumhonni"/>
+  <item id="3994036374" name="Âme Démophage"/>
+  <item id="1886698805" name="Âme Vampéric"/>
+  <item id="112322452" name="Âme Savantard"/>
+  <item id="975065522" name="Âme Anghihihille"/>
+  <item id="1293508900" name="Âme Méroubadour"/>
+  <item id="3557830814" name="Âme Urnaconda"/>
+  <item id="4193690038" name="Âme Faisanyan"/>
+  <item id="314037791" name="Âme Kyryn"/>
+  <item id="1706092169" name="Âme Kyrycorne"/>
+  <item id="1629203048" name="Âme Sailornyan"/>
+  <item id="3067304884" name="Âme Lama Laya"/>
+  <item id="3251923746" name="Âme Etna Magma"/>
+  <item id="78972251" name="Âme Bananar"/>
+  <item id="3805233771" name="Âme Non-non"/>
+  <item id="1130827181" name="Âme Bon-huiii"/>
+  <item id="2990164931" name="Âme Geeko"/>
+  <item id="3708000270" name="Âme Verrascible"/>
+  <item id="2650671223" name="Âme Baku"/>
+  <item id="773349433" name="Âme Flopito"/>
+  <item id="635998795" name="Âme Bakuku"/>
+  <item id="833421142" name="Âme Obskyurbi"/>
+  <item id="1586834587" name="Âme Ragioni"/>
+  <item id="1874862682" name="Âme Maudicko"/>
+  <item id="2542718116" name="Âme Heaumer"/>
+  <item id="802818574" name="Âme Hauber"/>
+  <item id="120705333" name="Âme Bushidos"/>
+  <item id="1882644899" name="Âme Âmiral"/>
+  <item id="2460333796" name="Âme Potofeu"/>
+  <item id="419789051" name="Âme Brumella"/>
+  <item id="2148280641" name="Âme Fumella"/>
+  <item id="1318958410" name="Âme Yvantouse"/>
+  <item id="1994068763" name="Âme Ed Mémoire"/>
+  <item id="1685228734" name="Âme Dente"/>
+  <item id="4023534241" name="Âme Sireine-mère"/>
+  <item id="765244503" name="Âme Melonyan"/>
+  <item id="3029722605" name="Âme Oranyan"/>
+  <item id="3281180027" name="Âme Kiwinyan"/>
+  <item id="1395509482" name="Âme Vigninyan"/>
+  <item id="606795900" name="Âme Maranyan"/>
+  <item id="3664665623" name="Âme Pastènyan"/>
+  <item id="4271596975" name="Âme Maginyan"/>
+  <item id="1998158124" name="Âme Ronimpec"/>
+  <item id="870990095" name="Âme Jetnyan"/>
+  <item id="2204130528" name="Âme Seign. Enma"/>
+  <item id="3637467747" name="Âme Squarlett"/>
+  <item id="1215318002" name="Âme Margoth"/>
+  <item id="1064793956" name="Âme Squelèbelle"/>
+  <item id="3505987817" name="Âme Mlle Coucou"/>
+  <item id="2818445439" name="Âme Mlle Courroux"/>
+  <item id="3477979014" name="Âme Octorgone"/>
+  <item id="1357594642" name="Âme Arachnus"/>
+  <item id="1907808002" name="Âme Déballerine"/>
+  <item id="3309140821" name="Âme Ovide"/>
+  <item id="213984071" name="Âme Poilux"/>
+  <item id="2076578769" name="Âme Poulux"/>
+  <item id="3112756519" name="Âme Poil-Émile"/>
+  <item id="1479908183" name="Âme Filomène"/>
+  <item id="583469764" name="Âme Feulion"/>
+  <item id="4206683204" name="Âme Grolos"/>
+  <item id="573549323" name="Âme Komak"/>
+  <item id="57818139" name="Âme Marmonneur"/>
+  <item id="1380278148" name="Âme Domni. 2.0"/>
+  <item id="1956490562" name="Âme Cupistol"/>
+  <item id="60464596" name="Âme Donjouant"/>
+  <item id="3005192665" name="Âme Pfffuji"/>
+  <item id="3357571999" name="Âme Komashura"/>
+  <item id="1156411801" name="Âme Jibakoma"/>
+  <item id="706136163" name="Âme Krakatouaaah"/>
+  <item id="3424766503" name="Âme Trempetta"/>
+  <item id="375309928" name="Âme Kappacap"/>
+  <item id="2934814959" name="Âme Humidon"/>
+  <item id="1633285886" name="Âme Appak"/>
+  <item id="4166035268" name="Âme Kappaloha"/>
+  <item id="3733408864" name="Âme Délujien"/>
+  <item id="3616859376" name="Âme Carpitaine"/>
+  <item id="2051417456" name="Âme Padrézo"/>
+  <item id="1816458804" name="Âme Tontonerre"/>
+  <item id="1624883295" name="Âme Potache"/>
+  <item id="222369254" name="Âme Émettor"/>
+  <item id="1438661202" name="Âme Vibrilion"/>
+  <item id="2829430508" name="Âme Darabajoie"/>
+  <item id="3751976570" name="Âme Darumastar"/>
+  <item id="2822903489" name="Âme Misterre"/>
+  <item id="1170776963" name="Âme Felipaix"/>
+  <item id="3027393984" name="Âme Avallée"/>
+  <item id="3000890350" name="Âme M. Felipaix"/>
+  <item id="763038842" name="Âme Mont merci"/>
+  <item id="2229614902" name="Âme Angélik"/>
+  <item id="2017642431" name="Âme Chihuaglagla"/>
+  <item id="937748821" name="Âme Fryzeur"/>
+  <item id="4091677088" name="Âme Blizzaria"/>
+  <item id="3779827205" name="Âme Froahuahua"/>
+  <item id="2843770102" name="Âme Kongel"/>
+  <item id="1289423635" name="Âme Matchou"/>
+  <item id="3241399055" name="Âme Flamente"/>
+  <item id="3056919449" name="Âme Volibrius"/>
+  <item id="852464405" name="Âme Pariasolal"/>
+  <item id="792572451" name="Âme Volatriste"/>
+  <item id="2939146968" name="Âme Castelius I"/>
+  <item id="1092727796" name="Âme Castelius II"/>
+  <item id="908493666" name="Âme Castelius III"/>
+  <item id="3745850967" name="Âme Castelius Max"/>
+  <item id="2548736097" name="Âme Blizzie"/>
+  <item id="3942201569" name="Âme Tapur"/>
+  <item id="1399821436" name="Âme Grainpère"/>
+  <item id="400486601" name="Âme Jalouseriz"/>
+  <item id="1111678903" name="Âme Fanfanfaron"/>
+  <item id="3703697977" name="Âme Papilla"/>
+  <item id="3319448440" name="Âme Mme Papilla"/>
+  <item id="3202687294" name="Âme Timours"/>
+  <item id="798512792" name="Âme Camaïeul"/>
+  <item id="1953827981" name="Âme Vampéric"/>
+  <item id="2842150107" name="Âme Blablara"/>
+  <item id="3730895949" name="Âme Umilie"/>
+  <item id="3693496852" name="Âme Chip-Chope"/>
+  <item id="366612998" name="Âme Gloups"/>
+  <item id="2852432024" name="Âme Petit panja"/>
+  <item id="856553762" name="Âme Panja-san"/>
+  <item id="2896889526" name="Âme Kappadissi"/>
+  <item id="415699660" name="Âme Ronéan"/>
+  <item id="3666469946" name="Âme Ogralos"/>
+  <item id="3435752424" name="Âme Siro"/>
+  <item id="1103498201" name="Âme Goruma"/>
+  <item id="1074029038" name="Âme Loubarbare"/>
+  <item id="3831557189" name="Âme Vexturgeon"/>
+  <item id="740066038" name="Âme Zerberker"/>
+  <item id="922964344" name="Âme Racaïd"/>
+  <item id="2706488913" name="Âme Agonigiri"/>
+  <item id="2568427520" name="Âme Onigirix"/>
+  <item id="1018298268" name="Âme Chaipô"/>
+  <item id="2593377390" name="Âme Nonjuan"/>
+  <item id="1654619654" name="Âme Égaroni"/>
+  <item id="2483689674" name="Âme Jacquasseur"/>
+  <item id="247841160" name="Âme Mythovni"/>
+  <item id="1845643373" name="Âme Mémogre"/>
+  <item id="1391436509" name="Âme Traviolette"/>
+  <item id="3488111421" name="Âme Oronyan"/>
+  <item id="1236413893" name="Âme Hennimi"/>
+  <item id="370973438" name="Âme Maskonyan"/>
+  <item id="1737634837" name="Âme Sire Nyancelot"/>
+  <item id="1605435009" name="Âme Nanpart"/>
+  <item id="683134487" name="Âme Passpa"/>
+  <item id="2982059949" name="Âme Granpart"/>
+  <item id="558096042" name="Âme Vipairflay"/>
+  <item id="1518091500" name="Âme Sumodon"/>
+  <item id="3289950543" name="Âme Soupotori"/>
+  <item id="1931004052" name="Âme Chantiwhisp"/>
+  <item id="1984954" name="Âme Rugis"/>
+  <item id="3465532849" name="Âme Babarouf"/>
+  <item id="966428124" name="Âme Zikafon"/>
+  <item id="3927021870" name="Âme Robonyan 28"/>
+  <item id="1160715182" name="Âme Suinthan"/>
+  <item id="2881929903" name="Âme Parasolal"/>
+  <item id="3984350519" name="Âme Démophage"/>
+  <item id="1802202811" name="Âme Triptyk"/>
+  <item id="1468433419" name="Âme Crocho"/>
+  <item id="3327201012" name="Âme Potofeu"/>
+  <item id="1107329825" name="Âme Kapunki"/>
+  <item id="116636418" name="Âme Pachycoul"/>
+  <item id="1911851924" name="Âme Persévéfant"/>
+  <item id="1495224495" name="Âme Misterbide"/>
+  <item id="1546922735" name="Âme Pachypipi"/>
+  <item id="2377897170" name="Âme Alga Sensei"/>
+  <item id="166353159" name="Âme Toumou"/>
+  <item id="2129488273" name="Âme Lamlam'mou"/>
+  <item id="3890493483" name="Âme Samoumouraï"/>
+  <item id="444705941" name="Âme Télémir"/>
+  <item id="2206793007" name="Âme Nuiroir"/>
+  <item id="2975410048" name="Âme Épinyan"/>
+  <item id="510180578" name="Âme Triptic-tac"/>
+  <item id="2746410163" name="Âme Poulpatouch"/>
+  <item id="3279252822" name="Âme Poulpater"/>
+  <item id="889697207" name="Âme Sushiyama"/>
+  <item id="2398196000" name="Âme Jibanyan B"/>
+  <item id="278201475" name="Âme Komasan B"/>
+  <item id="3364521670" name="Âme Domniscian"/>
+  <item id="3213735504" name="Âme Jiganyan"/>
+  <item id="3746185141" name="Âme Gargaros"/>
+  <item id="908696192" name="Âme Porcinator"/>
+  <item id="1093577238" name="Âme Crocho"/>
+  <item id="3577412454" name="Âme Or Tourb."/>
+  <item id="3053286019" name="Âme Griffes Dorées"/>
+  <item id="3456077915" name="Âme malveillante"/>
+  <item id="1425457633" name="Âme sereine"/>
+  <item id="603058551" name="Âme lisse"/>
+  <item id="3180684500" name="Âme sournoise"/>
+  <item id="3398587458" name="Âme survivante"/>
+  <item id="1402668536" name="Âme maladive"/>
+  <item id="614217070" name="Âme compétente"/>
+  <item id="3022203135" name="Âme intense"/>
+  <item id="3273922665" name="Âme trempée"/>
+  <item id="2749600140" name="Âme tempête"/>
+  <item id="3571753242" name="Âme bourgeon"/>
+  <item id="1307439264" name="Âme de neige"/>
+  <item id="988463158" name="Âme de rafale"/>
+  <item id="3548996867" name="Âme irrépressible"/>
+  <item id="1249916089" name="Âme d'acier"/>
+  <item id="1032258607" name="Âme déterminée"/>
+  <item id="2906134974" name="Âme têtue"/>
+  <item id="3661572392" name="Âme d'invocateur"/>
+  <item id="2295251535" name="Âme altruiste"/>
+  <item id="4291424985" name="Âme de superstar"/>
+</items>

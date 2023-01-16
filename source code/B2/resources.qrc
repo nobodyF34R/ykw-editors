@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/appInfo">
+        <file>AUTHORS.txt</file>
+        <file>small_icon.png</file>
+    </qresource>
+    <qresource prefix="/data">
+        <file>data/consume.xml</file>
+        <file>data/hackslash_battle.xml</file>
+        <file>data/hackslash_baura.xml</file>
+        <file>data/hackslash_consume.xml</file>
+        <file>data/hackslash_equipment.xml</file>
+        <file>data/hackslash_important.xml</file>
+        <file>data/hackslash_ogreball.xml</file>
+        <file>data/hackslash_technic.xml</file>
+        <file>data/hackslash_treasure_jewel.xml</file>
+        <file>data/hidden_treasure.xml</file>
+        <file>data/youkai.xml</file>
+        <file>data/youkaiNum.xml</file>
+        <file>data/technic.json</file>
+        <file>data/equipment_skill.xml</file>
+        <file>data/trophy.json</file>
+    </qresource>
+    <qresource prefix="/translations">
+        <file>translations/app_ja.qm</file>
+        <file>translations/app_en.qm</file>
+        <file alias="translations/app.qm">translations/app_en.qm</file>
+    </qresource>
+</RCC>

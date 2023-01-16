@@ -1,0 +1,475 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="2046011958" index="1" name="Pandle"/>
+  <item id="1799751128" index="2" name="Undy"/>
+  <item id="1918710937" index="3" name="Tanbo"/>
+  <item id="3827602063" index="4" name="Cutta-nah"/>
+  <item id="1553528298" index="5" name="Cutta-nah-nah"/>
+  <item id="1166263467" index="6" name="Slacka-slash"/>
+  <item id="2859601318" index="7" name="Brushido"/>
+  <item id="2104724135" index="8" name="Washogun"/>
+  <item id="3100090952" index="9" name="Lie-in"/>
+  <item id="2992314685" index="10" name="Lie-in Heart"/>
+  <item id="315517635" index="11" name="Hissfit"/>
+  <item id="1643699290" index="12" name="Zerberker"/>
+  <item id="2028203291" index="13" name="Snartle"/>
+  <item id="4136713569" index="14" name="Mochismo"/>
+  <item id="4018801696" index="15" name="Minochi"/>
+  <item id="933573919" index="16" name="Tublappa"/>
+  <item id="2400801402" index="17" name="Slicenrice (Rijstkracht)"/>
+  <item id="4067337791" index="17" name="Slicenrice (Rijstbal)"/>
+  <item id="182943320" index="18" name="Flamurice (Rijstkracht)"/>
+  <item id="2005961245" index="18" name="Flamurice (Vuurmuur)"/>
+  <item id="1150518150" index="19" name="Helmsman"/>
+  <item id="1445342312" index="20" name="Reuknight"/>
+  <item id="1329405225" index="21" name="Corptain"/>
+  <item id="2645360020" index="22" name="Mudmunch"/>
+  <item id="3318738370" index="23" name="Sgt. Burly"/>
+  <item id="4003089165" index="24" name="Blazion"/>
+  <item id="4152457804" index="25" name="Quaken"/>
+  <item id="3702270351" index="26" name="Siro"/>
+  <item id="83617212" index="27" name="Chansin"/>
+  <item id="3158803161" index="28" name="Sheen"/>
+  <item id="4230997219" index="29" name="Snee"/>
+  <item id="2774315928" index="30" name="Gleam"/>
+  <item id="3645160255" index="31" name="Benkei"/>
+  <item id="3227486846" index="32" name="B3-NK1"/>
+  <item id="294016696" index="33" name="Sushiyama"/>
+  <item id="144533497" index="34" name="Kapunki"/>
+  <item id="1934455732" index="35" name="Beetler (Te serieus)"/>
+  <item id="238716913" index="35" name="Beetler (Eenzame soldaat)"/>
+  <item id="3421574353" index="36" name="Beetall (Intimidatie)"/>
+  <item id="3062292628" index="36" name="Beetall (Eenzame soldaat)"/>
+  <item id="3538560400" index="37" name="Cruncha"/>
+  <item id="408080822" index="38" name="Demuncher"/>
+  <item id="21618935" index="39" name="Devourer"/>
+  <item id="2699998931" index="40" name="Brokenbrella"/>
+  <item id="4067932905" index="41" name="Pittapatt"/>
+  <item id="966511628" index="42" name="Snotsolong"/>
+  <item id="545324365" index="43" name="Duchoo"/>
+  <item id="3556401853" index="44" name="D'wanna"/>
+  <item id="1311595012" index="45" name="N'more"/>
+  <item id="1463184197" index="46" name="Q'wit"/>
+  <item id="3146751539" index="47" name="Wazzat"/>
+  <item id="2012164562" index="48" name="Houzzat"/>
+  <item id="2727653234" index="49" name="Dummkap"/>
+  <item id="1431073508" index="50" name="Faysoff"/>
+  <item id="53737814" index="51" name="Lafalotta"/>
+  <item id="438880279" index="52" name="Blips"/>
+  <item id="2354146817" index="53" name="Tattletell"/>
+  <item id="2665791983" index="54" name="Tattlecast"/>
+  <item id="2504679232" index="55" name="Skranny"/>
+  <item id="2839163357" index="56" name="Cupistol"/>
+  <item id="887949668" index="57" name="Casanuva"/>
+  <item id="771110949" index="58" name="Casanono"/>
+  <item id="2240145679" index="59" name="So-Sorree"/>
+  <item id="931616744" index="60" name="Bowminos"/>
+  <item id="1027182186" index="61" name="Smogling"/>
+  <item id="3478345399" index="62" name="Smogmella"/>
+  <item id="2117842652" index="63" name="Signibble"/>
+  <item id="3330789817" index="64" name="Signiton"/>
+  <item id="3751600376" index="65" name="Statiking"/>
+  <item id="2403020941" index="66" name="Master Oden"/>
+  <item id="797712772" index="67" name="Failian"/>
+  <item id="3250302461" index="68" name="Apelican"/>
+  <item id="2263857027" index="69" name="Mirapo"/>
+  <item id="624097286" index="70" name="Miradox"/>
+  <item id="2683602626" index="71" name="Mircle"/>
+  <item id="1045680358" index="72" name="Illoo"/>
+  <item id="659087783" index="73" name="Elloo"/>
+  <item id="207991396" index="74" name="Alloo"/>
+  <item id="2166860649" index="75" name="Espy"/>
+  <item id="2554108456" index="76" name="Infour"/>
+  <item id="4133838287" index="77" name="Verygoodsir"/>
+  <item id="1801742127" index="78" name="Tengu"/>
+  <item id="1920947822" index="79" name="Flengu"/>
+  <item id="160243924" index="80" name="Kyubi"/>
+  <item id="278270357" index="81" name="Frostail"/>
+  <item id="2643369827" index="82" name="Chymera"/>
+  <item id="2224401954" index="83" name="Kingmera"/>
+  <item id="5875674" index="84" name="Terrorpotta"/>
+  <item id="2972796849" index="85" name="Dulluma"/>
+  <item id="2743396447" index="86" name="Darumacho"/>
+  <item id="3131037982" index="87" name="Goruma"/>
+  <item id="3102064831" index="88" name="Wotchagot"/>
+  <item id="3365620317" index="89" name="Pride Shrimp"/>
+  <item id="1250891874" index="90" name="No-Go Kart"/>
+  <item id="1881615672" index="91" name="Mistank"/>
+  <item id="886008723" index="92" name="Noway (Blokker)"/>
+  <item id="1236836310" index="92" name="Noway (Weerstand)"/>
+  <item id="2356350198" index="93" name="Impass (Blokker)"/>
+  <item id="4043634867" index="93" name="Impass (Rotsterrein)"/>
+  <item id="2506636727" index="94" name="Walldin"/>
+  <item id="2352466200" index="95" name="Roughraff"/>
+  <item id="3428822818" index="96" name="Badude"/>
+  <item id="4268346784" index="97" name="Bruff"/>
+  <item id="645579901" index="98" name="Armsman"/>
+  <item id="2536523489" index="99" name="Mimikin"/>
+  <item id="2663818008" index="100" name="Blowkade"/>
+  <item id="2279445081" index="101" name="Ledballoon"/>
+  <item id="3245191076" index="102" name="Fidgephant"/>
+  <item id="3631652581" index="103" name="Touphant"/>
+  <item id="4282759791" index="104" name="Enduriphant"/>
+  <item id="317458484" index="105" name="Zappary"/>
+  <item id="1207557386" index="106" name="Frazzel"/>
+  <item id="2857398097" index="107" name="Swelton"/>
+  <item id="3148741828" index="108" name="Mad Mountain"/>
+  <item id="2729889157" index="109" name="Lava Lord"/>
+  <item id="2953011819" index="110" name="Castelius III"/>
+  <item id="2603495848" index="111" name="Castelius II"/>
+  <item id="2836943658" index="112" name="Castelius I"/>
+  <item id="2184511721" index="113" name="Castelius Max"/>
+  <item id="51485601" index="114" name="Rhinoggin (Blokbreker)"/>
+  <item id="2120642532" index="114" name="Rhinoggin (Eenzame soldaat)"/>
+  <item id="295973967" index="115" name="Rhinormous (Blokbreker)"/>
+  <item id="1825816586" index="115" name="Rhinormous (Eenzame soldaat)"/>
+  <item id="146736398" index="116" name="Hornaplenty"/>
+  <item id="1047638545" index="117" name="Robonyan"/>
+  <item id="661291856" index="118" name="Goldenyan"/>
+  <item id="4051387260" index="119" name="Dromp"/>
+  <item id="3898634813" index="120" name="Swosh"/>
+  <item id="3991934337" index="121" name="Toadal Dude"/>
+  <item id="4109051072" index="122" name="Uber Geeko"/>
+  <item id="3046311383" index="123" name="Leggly"/>
+  <item id="1130078060" index="124" name="Dazzabel"/>
+  <item id="4226283529" index="125" name="Rattelle"/>
+  <item id="3808217416" index="126" name="Skelebella"/>
+  <item id="1237787673" index="127" name="Cadin"/>
+  <item id="162480675" index="128" name="Cadable"/>
+  <item id="280261474" index="129" name="Singcada"/>
+  <item id="3825660024" index="130" name="Pupsicle (Indringend)"/>
+  <item id="2574320701" index="130" name="Pupsicle (IJstand)"/>
+  <item id="1555732253" index="131" name="Chilhuahua (Indringend)"/>
+  <item id="567108440" index="131" name="Chilhuahua (IJsblok)"/>
+  <item id="1168221788" index="132" name="Swelterrier"/>
+  <item id="1609739110" index="133" name="Jumbelina"/>
+  <item id="221209266" index="134" name="Boyclops"/>
+  <item id="2745600680" index="135" name="Jibanyan"/>
+  <item id="454749645" index="136" name="Thornyan"/>
+  <item id="2261636468" index="137" name="Baddinyan"/>
+  <item id="1806853494" index="138" name="Buchinyan"/>
+  <item id="2490923674" index="139" name="Walkappa (Treuzeltruc)"/>
+  <item id="3910110943" index="139" name="Walkappa (Waterspel)"/>
+  <item id="3424348876" index="140" name="Appak (Indringend)"/>
+  <item id="2976685705" index="140" name="Appak (Kappakom)"/>
+  <item id="3573570445" index="141" name="Supyo"/>
+  <item id="1957105065" index="142" name="Komasan"/>
+  <item id="1309620467" index="143" name="Komane"/>
+  <item id="1841052904" index="144" name="Komajiro (Omega)"/>
+  <item id="164690412" index="144" name="Komajiro (Dondervuist)"/>
+  <item id="2084133489" index="145" name="Komiger (Omega)"/>
+  <item id="863554742" index="145" name="Komiger (Dondervuist)"/>
+  <item id="643344010" index="146" name="Baku"/>
+  <item id="3880700931" index="147" name="Bakulia"/>
+  <item id="1061394379" index="148" name="Whapir (Voorspoed)"/>
+  <item id="1529828047" index="148" name="Whapir (Perfecte droom)"/>
+  <item id="1296499848" index="149" name="Drizzelda"/>
+  <item id="4126893037" index="150" name="Nekidspeed"/>
+  <item id="1152508273" index="151" name="Shmoopie"/>
+  <item id="1443122847" index="152" name="Pinkipoo"/>
+  <item id="1327464414" index="153" name="Pookivil"/>
+  <item id="1048957631" index="154" name="Harry Barry"/>
+  <item id="753303304" index="155" name="Frostina"/>
+  <item id="2488932461" index="156" name="Blizzaria"/>
+  <item id="2369857836" index="157" name="Damona"/>
+  <item id="2056910010" index="158" name="Faux Kappa"/>
+  <item id="1669514747" index="159" name="Tigappa"/>
+  <item id="3257242591" index="160" name="Master Nyada"/>
+  <item id="3989993334" index="161" name="Wantston"/>
+  <item id="4106831415" index="162" name="Grubsnitch"/>
+  <item id="4228744724" index="163" name="Wiglin"/>
+  <item id="1696488402" index="164" name="Kelpacabana"/>
+  <item id="3843471189" index="165" name="Steppa"/>
+  <item id="3460031638" index="166" name="Rhyth"/>
+  <item id="3554148426" index="167" name="Hungramps (Hongersnood)"/>
+  <item id="2930766863" index="167" name="Hungramps (Rijstbal)"/>
+  <item id="2344292380" index="168" name="Hungorge (Hongersnood)"/>
+  <item id="4140622937" index="168" name="Hungorge (Rijstbal)"/>
+  <item id="3401789707" index="169" name="Grainpa"/>
+  <item id="3499113521" index="170" name="Tongus"/>
+  <item id="4173947755" index="171" name="Nurse Tongus"/>
+  <item id="810502914" index="172" name="Sandmeh (Stilzand)"/>
+  <item id="1295564615" index="172" name="Sandmeh (Zandlichaam)"/>
+  <item id="1081410574" index="173" name="Mr. Sandmeh (Stilzand)"/>
+  <item id="1023602763" index="173" name="Mr. Sandmeh (Zandlichaam)"/>
+  <item id="1747737428" index="174" name="Pallysol"/>
+  <item id="1388358624" index="175" name="Scarasol"/>
+  <item id="1879396303" index="176" name="Lodo"/>
+  <item id="2988432595" index="177" name="Supoor Hero"/>
+  <item id="1763606158" index="178" name="Chippa"/>
+  <item id="3474428761" index="179" name="Gnomey"/>
+  <item id="3934047365" index="180" name="High Gnomey"/>
+  <item id="3647396296" index="181" name="Enerfly"/>
+  <item id="3229477001" index="182" name="Enefly"/>
+  <item id="1641725613" index="183" name="Betterfly"/>
+  <item id="2025951212" index="184" name="Peppillon"/>
+  <item id="2007757884" index="185" name="Predictabull"/>
+  <item id="178502582" index="186" name="Smashibull"/>
+  <item id="2297637991" index="187" name="Donchan"/>
+  <item id="3718397111" index="188" name="Ray O'Light"/>
+  <item id="4005046778" index="189" name="Happierre"/>
+  <item id="3067820460" index="190" name="Reversa"/>
+  <item id="2948597997" index="191" name="Reversette"/>
+  <item id="241655497" index="192" name="Ol' Saint Trick"/>
+  <item id="394030984" index="193" name="Ol' Fortune"/>
+  <item id="2043791553" index="194" name="Rollen"/>
+  <item id="1623914880" index="195" name="Dubbles"/>
+  <item id="1233379831" index="196" name="Papa Bolt"/>
+  <item id="1352192182" index="197" name="Uncle Infinite"/>
+  <item id="4047472274" index="198" name="Mama Aura"/>
+  <item id="3894720467" index="199" name="Auntie Heart"/>
+  <item id="1254874508" index="200" name="Kyryn"/>
+  <item id="1406201037" index="201" name="Unikirin"/>
+  <item id="3562330446" index="202" name="Leadoni"/>
+  <item id="3444566031" index="203" name="Mynimo"/>
+  <item id="1530285593" index="204" name="Ake"/>
+  <item id="3817482620" index="205" name="Payn"/>
+  <item id="4203812925" index="206" name="Agon"/>
+  <item id="3770815751" index="207" name="Wydeawake"/>
+  <item id="876284733" index="208" name="Allnyta"/>
+  <item id="3316206299" index="209" name="Herbiboy"/>
+  <item id="3660506547" index="210" name="Carniboy"/>
+  <item id="2120028613" index="211" name="Negatibuzz"/>
+  <item id="3336664736" index="212" name="Moskevil"/>
+  <item id="3757721569" index="213" name="Scritchy"/>
+  <item id="1367906203" index="214" name="Dimmy (Geheimhouding)"/>
+  <item id="754934750" index="214" name="Dimmy (Kronkellichaam)"/>
+  <item id="166430669" index="215" name="Blandon (Geheimhouding)"/>
+  <item id="1956410248" index="215" name="Blandon (Kronkellichaam)"/>
+  <item id="284210828" index="216" name="Nul"/>
+  <item id="3658254148" index="217" name="Suspicioni (Wantrouwen)"/>
+  <item id="2809885441" index="217" name="Suspicioni (Scherp zicht)"/>
+  <item id="3273111045" index="218" name="Tantroni"/>
+  <item id="3896174022" index="219" name="Contrarioni"/>
+  <item id="1433276435" index="220" name="Hidabat"/>
+  <item id="3367577770" index="221" name="Abodabat"/>
+  <item id="3517061611" index="222" name="Belfree"/>
+  <item id="1484681826" index="223" name="Yoink"/>
+  <item id="4063461127" index="224" name="Gimme"/>
+  <item id="2098539966" index="225" name="K'mon-K'mon"/>
+  <item id="1872790096" index="226" name="Yoodooit"/>
+  <item id="3608995125" index="227" name="Count Zapaway"/>
+  <item id="2030553752" index="228" name="Tyrat"/>
+  <item id="1655758881" index="229" name="Tengloom"/>
+  <item id="2074857824" index="230" name="Nird"/>
+  <item id="935563782" index="231" name="Snobetty"/>
+  <item id="2407527779" index="232" name="Slimamander"/>
+  <item id="2357685336" index="233" name="Dracunyan"/>
+  <item id="1961084999" index="234" name="Negasus"/>
+  <item id="1845033222" index="235" name="Neighfarious"/>
+  <item id="2188351250" index="236" name="Timidevil"/>
+  <item id="986968183" index="237" name="Beelzebold"/>
+  <item id="600359222" index="238" name="Count Cavity"/>
+  <item id="1653768918" index="239" name="Eyesoar"/>
+  <item id="2072621975" index="240" name="Eyellure"/>
+  <item id="2059114061" index="241" name="Greesel"/>
+  <item id="1671472908" index="242" name="Awevil"/>
+  <item id="646882515" index="243" name="Wobblewok"/>
+  <item id="456691514" index="244" name="Coughkoff"/>
+  <item id="35896955" index="245" name="Hurchin"/>
+  <item id="2975326376" index="246" name="Droplette"/>
+  <item id="1205583869" index="247" name="Drizzle"/>
+  <item id="2823606761" index="248" name="Slush"/>
+  <item id="1589677756" index="249" name="Alhail"/>
+  <item id="2204205610" index="250" name="Gush"/>
+  <item id="1827192363" index="251" name="Peckpocket"/>
+  <item id="1228096695" index="252" name="Robbinyu"/>
+  <item id="1978896234" index="253" name="Rockabelly (Glimmende huid)"/>
+  <item id="295651950" index="253" name="Rockabelly (Volhoudend)"/>
+  <item id="741375313" index="254" name="Squeeky"/>
+  <item id="2984723944" index="255" name="Rawry"/>
+  <item id="2970821958" index="256" name="Buhu"/>
+  <item id="2819101703" index="257" name="Flumpy"/>
+  <item id="2200258500" index="258" name="Skreek"/>
+  <item id="856127353" index="259" name="Manjimutt"/>
+  <item id="1936658755" index="260" name="Multimutt"/>
+  <item id="1785995266" index="261" name="Sir Berus"/>
+  <item id="2654127030" index="262" name="Furgus"/>
+  <item id="156967565" index="263" name="Furdinand"/>
+  <item id="65403663" index="264" name="Nosirs"/>
+  <item id="4284995736" index="265" name="Dismarelda"/>
+  <item id="881569405" index="266" name="Chatalie"/>
+  <item id="764452668" index="267" name="Nagatha (Treuzeltruc)"/>
+  <item id="1241274936" index="267" name="Nagatha (Te serieus)"/>
+  <item id="3143212138" index="268" name="Papa Windbag"/>
+  <item id="290477281" index="269" name="Ben Tover"/>
+  <item id="1128085621" index="270" name="Cheeksqueek"/>
+  <item id="1512442164" index="271" name="Cuttincheez"/>
+  <item id="2850829188" index="272" name="Toiletta"/>
+  <item id="468618595" index="273" name="Foiletta"/>
+  <item id="4052689874" index="274" name="Sproink"/>
+  <item id="4219559696" index="275" name="Compunzer"/>
+  <item id="3801771601" index="276" name="Lamedian"/>
+  <item id="1716938665" index="277" name="Grumples"/>
+  <item id="3739877580" index="278" name="Everfore"/>
+  <item id="3354472845" index="279" name="Eterna"/>
+  <item id="3912560894" index="280" name="Insomni"/>
+  <item id="4029661631" index="281" name="Sandi"/>
+  <item id="2740120070" index="282" name="Arachnus"/>
+  <item id="3125402439" index="283" name="Arachnia"/>
+  <item id="2251929050" index="284" name="Cricky"/>
+  <item id="3255300392" index="285" name="Noko"/>
+  <item id="3501350598" index="286" name="Bloominoko"/>
+  <item id="3676094569" index="287" name="Pandanoko"/>
+  <item id="2492209716" index="288" name="Snaggly"/>
+  <item id="3542900964" index="289" name="Whinona"/>
+  <item id="3419633190" index="290" name="Heheheel"/>
+  <item id="3536340839" index="291" name="Croonger"/>
+  <item id="4192539812" index="292" name="Urnaconda"/>
+  <item id="1298491007" index="293" name="Fishpicable"/>
+  <item id="1607518609" index="294" name="Rageon"/>
+  <item id="1187772624" index="295" name="Tunatic"/>
+  <item id="1951624455" index="296" name="Flushback"/>
+  <item id="3248082698" index="297" name="Vacuumory"/>
+  <item id="4131864376" index="298" name="Irewig"/>
+  <item id="2032511087" index="299" name="Firewig"/>
+  <item id="1745762723" index="300" name="Draggie"/>
+  <item id="4124639514" index="301" name="Dragon Lord"/>
+  <item id="3972149339" index="302" name="Azure Dragon"/>
+  <item id="1325095005" index="303" name="Mermaidyn"/>
+  <item id="1804601217" index="304" name="Mermadonna"/>
+  <item id="1921726144" index="305" name="Mermother"/>
+  <item id="1548679091" index="306" name="Lady Longnek"/>
+  <item id="4138950550" index="307" name="Daiz"/>
+  <item id="4020793047" index="308" name="Confuze"/>
+  <item id="3882659572" index="309" name="Chummer"/>
+  <item id="4269252533" index="310" name="Shrook"/>
+  <item id="3205480098" index="311" name="Spenp"/>
+  <item id="2786365411" index="312" name="Almi"/>
+  <item id="129227207" index="313" name="Babblong"/>
+  <item id="514386054" index="314" name="Bananose"/>
+  <item id="3841102038" index="315" name="Draaagin"/>
+  <item id="3438217826" index="316" name="SV Snaggerjag"/>
+  <item id="1025240221" index="317" name="Copperled"/>
+  <item id="254643743" index="318" name="Cynake"/>
+  <item id="604036572" index="319" name="Slitheref"/>
+  <item id="2242350072" index="320" name="Venoct"/>
+  <item id="2629614265" index="321" name="Shad. Venoct"/>
+  <item id="2534548502" index="322" name="Shogunyan"/>
+  <item id="799949683" index="323" name="Komashura"/>
+  <item id="410039105" index="324" name="Gilgaros"/>
+  <item id="2337239218" index="325" name="Spoilerina"/>
+  <item id="180690095" index="326" name="Elder Bloom"/>
+  <item id="3408336520" index="327" name="Poofessor"/>
+  <item id="2994305994" index="328" name="Dandoodle"/>
+  <item id="1939567085" index="329" name="Slurpent"/>
+  <item id="903818430" index="330" name="Sapphinyan"/>
+  <item id="519208829" index="331" name="Emenyan"/>
+  <item id="132730428" index="332" name="Rubinyan"/>
+  <item id="1219025147" index="333" name="Topanyan"/>
+  <item id="751050239" index="334" name="Dianyan"/>
+  <item id="1510509852" index="335" name="Melonyan"/>
+  <item id="1125366877" index="336" name="Oranyan"/>
+  <item id="1748955038" index="337" name="Kiwinyan"/>
+  <item id="1898307295" index="338" name="Grapenyan"/>
+  <item id="1046759448" index="339" name="Strawbnyan"/>
+  <item id="662665561" index="340" name="Watermelnyan"/>
+  <item id="1467893876" index="341" name="Robokapp"/>
+  <item id="1842773294" index="342" name="Robokoma"/>
+  <item id="3580500555" index="343" name="Robogramps"/>
+  <item id="3353327013" index="344" name="Robomutt"/>
+  <item id="2137248448" index="345" name="Robonoko"/>
+  <item id="3803507321" index="346" name="Robodraggie"/>
+  <item id="1147659048" index="347" name="Wondernyan"/>
+  <item id="1322859178" index="348" name="Robonyan F"/>
+  <item id="1550619972" index="349" name="Sailornyan"/>
+  <item id="3838898721" index="350" name="Machonyan"/>
+  <item id="621845233" index="351" name="Hovernyan"/>
+  <item id="3540910611" index="352" name="Darknyan"/>
+  <item id="3165905527" index="353" name="Jibakoma"/>
+  <item id="68125970" index="354" name="Jetnyan"/>
+  <item id="4244235962" index="355" name="Unfairy"/>
+  <item id="3997976916" index="356" name="Unkaind"/>
+  <item id="1458581041" index="357" name="Untidy"/>
+  <item id="244530791" index="358" name="Unpleasant"/>
+  <item id="3056556290" index="359" name="Unkeen"/>
+  <item id="829356020" index="360" name="Grublappa"/>
+  <item id="2607234943" index="361" name="Madmunch"/>
+  <item id="3382219868" index="362" name="Badsmella"/>
+  <item id="2085762641" index="363" name="Mad Kappa"/>
+  <item id="1860671935" index="364" name="Shamasol"/>
+  <item id="3386659250" index="365" name="Gnomine"/>
+  <item id="1902130903" index="366" name="Defectabull"/>
+  <item id="2566455645" index="367" name="Feargus"/>
+  <item id="1211144886" index="368" name="Scaremaiden"/>
+  <item id="1518679384" index="369" name="Wrongnek"/>
+  <item id="2947172651" index="370" name="Grumpus Khan"/>
+  <item id="3172984517" index="371" name="Groupus Khan"/>
+  <item id="94601632" index="372" name="Slumberhog"/>
+  <item id="2557786393" index="373" name="Snortlehog"/>
+  <item id="550035068" index="374" name="Panja Pupil"/>
+  <item id="847081874" index="375" name="Panja Pro"/>
+  <item id="2327910135" index="376" name="Samureel"/>
+  <item id="3533833889" index="377" name="Time Keeler"/>
+  <item id="1780376004" index="378" name="Takoyakid"/>
+  <item id="712378366" index="379" name="Takoyaking"/>
+  <item id="2462736539" index="380" name="Danke Sand"/>
+  <item id="2155859829" index="381" name="No Sandkyu"/>
+  <item id="952346640" index="382" name="Sumodon"/>
+  <item id="2769588393" index="383" name="Yokozudon"/>
+  <item id="497612748" index="384" name="Whateverest"/>
+  <item id="253581346" index="385" name="Whatuption"/>
+  <item id="3080798023" index="386" name="Happycane"/>
+  <item id="4022480657" index="387" name="Starrycane"/>
+  <item id="2454454409" index="388" name="Gutsy Bones"/>
+  <item id="871569367" index="389" name="Meganyan"/>
+  <item id="1521258489" index="390" name="Cap'n Crash"/>
+  <item id="1741465161" index="391" name="Eyeclone"/>
+  <item id="3901510633" index="392" name="Kin"/>
+  <item id="4198104071" index="393" name="Gin"/>
+  <item id="2938906937" index="394" name="Dame Dedtime"/>
+  <item id="544005273" index="395" name="Dame Demona"/>
+  <item id="3750011266" index="396" name="Slimamander"/>
+  <item id="3332346051" index="397" name="Eyedra"/>
+  <item id="3806627890" index="398" name="Sproink"/>
+  <item id="4227840371" index="399" name="Hoggles"/>
+  <item id="2772759266" index="400" name="SV Snaggerjag"/>
+  <item id="3160392611" index="401" name="Styx Mk.VI"/>
+  <item id="2552552274" index="402" name="Massiface"/>
+  <item id="2168449555" index="403" name="Clipso"/>
+  <item id="704907074" index="404" name="Phantasmurai"/>
+  <item id="857683459" index="405" name="Spooklunk"/>
+  <item id="392441586" index="406" name="Tarantutor"/>
+  <item id="1355043874" index="407" name="Dr. Maddiman"/>
+  <item id="1239377251" index="408" name="Dr. Nogut"/>
+  <item id="1839496594" index="409" name="McKraken"/>
+  <item id="4025805379" index="410" name="McKraken"/>
+  <item id="4142914306" index="411" name="Squisker"/>
+  <item id="1494274860" index="412" name="Duwheel"/>
+  <item id="1685125788" index="413" name="Chirpster"/>
+  <item id="3532964851" index="414" name="Wobblewok"/>
+  <item id="3589044825" index="415" name="Hans Full"/>
+  <item id="2128058120" index="416" name="Eyephoon"/>
+  <item id="487388457" index="417" name="Mallice"/>
+  <item id="1136115384" index="418" name="Cap'n Rex"/>
+  <item id="4053230248" index="419" name="Flippa"/>
+  <item id="3810708806" index="420" name="Floppa"/>
+  <item id="3057064056" index="421" name="Dame Dredful"/>
+  <item id="2721860424" index="422" name="Kat Kraydel"/>
+  <item id="2337747400" index="423" name="Goldy Bones"/>
+  <item id="2692375051" index="424" name="Glitzy Bones"/>
+  <item id="3438758680" index="425" name="Hans Galore"/>
+  <item id="1442497739" index="426" name="Retinado"/>
+  <item id="349729319" index="427" name="Gargaros"/>
+  <item id="107863497" index="428" name="Ogralus"/>
+  <item id="3201415852" index="429" name="Orcanos"/>
+  <item id="1456622790" index="430" name="Snottle"/>
+  <item id="3406132351" index="431" name="Moximous N"/>
+  <item id="1941508890" index="432" name="Moximous K"/>
+  <item id="2893525287" index="433" name="Jibanyan S"/>
+  <item id="2071344678" index="434" name="Komasan S"/>
+  <item id="1651312487" index="435" name="Komajiro S"/>
+  <item id="1002127958" index="436" name="Darkyubi"/>
+  <item id="3079793018" index="437" name="Illuminoct"/>
+  <item id="63412728" index="438" name="Gargaros"/>
+  <item id="3145465501" index="439" name="Ogralus"/>
+  <item id="2848870771" index="440" name="Orcanos"/>
+  <item id="3370732257" index="441" name="Rubeus J"/>
+  <item id="4119421777" index="442" name="Hardy Hound"/>
+  <item id="2060031729" index="443" name="Hinozall"/>
+  <item id="1116052322" index="444" name="Bronzlow"/>
+  <item id="2403938353" index="445" name="Teastroyer"/>
+  <item id="2989037953" index="446" name="Infinipea"/>
+  <item id="1202306881" index="447" name="Headasteam"/>
+  <item id="640401" index="448" name="Kabuking"/>
+</items>

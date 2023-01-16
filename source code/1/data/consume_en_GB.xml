@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items>
+  <item id="1803927674" name="Plum Rice Ball"/>
+  <item id="4069298624" name="Leaf Rice Ball"/>
+  <item id="2240520534" name="Roe Rice Ball"/>
+  <item id="468661493" name="Shrimp Rice Ball"/>
+  <item id="1783081549" name="Sandwich"/>
+  <item id="4082039799" name="Custard Bread"/>
+  <item id="1831497300" name="Curry Bread"/>
+  <item id="2219428705" name="Baguette"/>
+  <item id="439180994" name="Blehgel"/>
+  <item id="1744901140" name="10p Gum"/>
+  <item id="4043851182" name="Gooey Candy"/>
+  <item id="2249159992" name="Giant Cracker"/>
+  <item id="409723035" name="Fruit Drops"/>
+  <item id="1869402125" name="Shaved Ice"/>
+  <item id="4133847479" name="Candy Apple"/>
+  <item id="1774419491" name="Milk"/>
+  <item id="4039782297" name="Coffee Milk"/>
+  <item id="2278366991" name="Fruit Milk"/>
+  <item id="430541484" name="Amazing Milk"/>
+  <item id="1821141158" name="Y-Cola"/>
+  <item id="4119148828" name="Soul Tea"/>
+  <item id="2189560202" name="Spiritizer Y"/>
+  <item id="484875305" name="VoltXtreme"/>
+  <item id="1833829009" name="Hamburger"/>
+  <item id="4098315051" name="Cheeseburger"/>
+  <item id="2202035133" name="Double Burger"/>
+  <item id="488961566" name="Nom Burger"/>
+  <item id="1858787071" name="Ramen Cup"/>
+  <item id="4156786501" name="Pork Ramen"/>
+  <item id="2160375763" name="Deluxe Ramen"/>
+  <item id="513811056" name="Everything Ramen"/>
+  <item id="1683291125" name="Pot Stickers"/>
+  <item id="4250774095" name="Liver &amp; Chives"/>
+  <item id="2321193689" name="Crab Omelet"/>
+  <item id="339611514" name="Chili Shrimp"/>
+  <item id="3539717416" name="Carrot"/>
+  <item id="1274190994" name="Cucumber"/>
+  <item id="1022733316" name="Bamboo Shoot"/>
+  <item id="2727426471" name="Matsutake"/>
+  <item id="3502076785" name="Chicken Thigh"/>
+  <item id="1236542155" name="Slab Bacon"/>
+  <item id="1051923037" name="Beef Tongue"/>
+  <item id="2698479614" name="Marbled Beef"/>
+  <item id="3514767686" name="Dried Mackerel"/>
+  <item id="1215711484" name="Yellowtail"/>
+  <item id="1064401002" name="Fresh Urchin"/>
+  <item id="2702568905" name="Choice Tuna"/>
+  <item id="320924352" name="Small Exporb"/>
+  <item id="2317990778" name="Medium Exporb"/>
+  <item id="4247686124" name="Large Exporb"/>
+  <item id="1665801807" name="Mega Exporb"/>
+  <item id="340602585" name="Holy Exporb"/>
+  <item id="397252210" name="Staminum"/>
+  <item id="2393163720" name="Staminum Alpha"/>
+  <item id="279199406" name="Hidden Hits"/>
+  <item id="2309844756" name="Top Techniques"/>
+  <item id="4272578434" name="Soul Secrets"/>
+  <item id="469268883" name="A Serious Life"/>
+  <item id="2196842537" name="Think Karate"/>
+  <item id="4126546111" name="Use Karate"/>
+  <item id="1804766492" name="Skill Compendium"/>
+  <item id="479575434" name="Skill Encycloped."/>
+  <item id="2241653808" name="Get Guarding"/>
+  <item id="4070300838" name="Guard Gloriously"/>
+  <item id="1646575927" name="Li'l Angel Heals"/>
+  <item id="354677153" name="Bye, Li'l Angel"/>
+  <item id="1977907268" name="The Pest's Quest"/>
+  <item id="48449746" name="The Perfect Pest"/>
+  <item id="2615810408" name="Support Life #7"/>
+  <item id="3974965758" name="Support Special"/>
+  <item id="367732779" name="Strength Talisman"/>
+  <item id="2363652497" name="Spirit Talisman"/>
+  <item id="4226107655" name="Defense Talisman"/>
+  <item id="1703009444" name="Speed Talisman"/>
+  <item id="338248220" name="Nasty Medicine"/>
+  <item id="2367689638" name="Bitter Medicine"/>
+  <item id="4196868912" name="Mighty Medicine"/>
+  <item id="376437829" name="Getaway Plush"/>
+  <item id="291919001" name="Bronze Doll"/>
+  <item id="2288977187" name="Silver Doll"/>
+  <item id="4285019573" name="Golden Doll"/>
+  <item id="2908180302" name="Fish Bait"/>
+  <item id="878583540" name="Black Syrup"/>
+  <item id="2592718716" name="Red Coin"/>
+  <item id="58781382" name="Yellow Coin"/>
+  <item id="1955061328" name="Orange Coin"/>
+  <item id="3940764659" name="Pink Coin"/>
+  <item id="2648996709" name="Green Coin"/>
+  <item id="82651871" name="Blue Coin"/>
+  <item id="1944721993" name="Purple Coin"/>
+  <item id="3814000600" name="Light-Blue Coin"/>
+  <item id="3141306787" name="Sapphire Coin"/>
+  <item id="3426466101" name="Emerald Coin"/>
+  <item id="1381969046" name="Ruby Coin"/>
+  <item id="626531328" name="Topaz Coin"/>
+  <item id="573954073" name="Diamond Coin"/>
+  <item id="3159444922" name="Excitement Coin"/>
+  <item id="3411442988" name="Five-Star Coin"/>
+  <item id="1542021309" name="Special Coin"/>
+  <item id="2895455609" name="Dancing Star"/>
+  <item id="440013732" name="Legendary Blade"/>
+  <item id="2201174558" name="Cursed Blade"/>
+  <item id="2220787207" name="Holy Blade"/>
+  <item id="4097077896" name="General's Soul"/>
+  <item id="1783686955" name="Love Buster"/>
+  <item id="492296125" name="GHz Orb"/>
+  <item id="1676061440" name="Unbeatable Soul"/>
+  <item id="2586342239" name="Platinum Bar"/>
+  <item id="350329750" name="Snowstorm Cloak"/>
+  <item id="1948652147" name="Love Scepter"/>
+  <item id="4082742929" name="Glacial Clip"/>
+  <item id="52503269" name="Buff Weight"/>
+  <item id="1934349930" name="Shard of Evil"/>
+  <item id="3979297737" name="Ageless Powder"/>
+  <item id="3742966091" name="Drop of Joy"/>
+  <item id="2638591814" name="Dragon Orb"/>
+  <item id="3930228688" name="Holy Water"/>
+  <item id="2063440449" name="Dingy Scale"/>
+  <item id="234531543" name="Venoct Aura"/>
+  <item id="1594573232" name="Tattered Gauntlet"/>
+  <item id="671904038" name="Cracked Crystal"/>
+  <item id="2969903260" name="Crystal Shard"/>
+  <item id="3322023946" name="Clenzall"/>
+  <item id="1483113897" name="Yellowed Sash"/>
+  <item id="794932543" name="Plain Ring"/>
+  <item id="3060327557" name="Blank Charm"/>
+  <item id="3245331475" name="Ruby"/>
+  <item id="1372637570" name="Aquamarine"/>
+  <item id="651688212" name="Topaz"/>
+  <item id="1175482609" name="Tourmaline"/>
+  <item id="823607399" name="Opal"/>
+  <item id="2820542941" name="Emerald"/>
+</items>

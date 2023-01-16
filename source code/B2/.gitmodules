@@ -1,0 +1,3 @@
+[submodule "src/QHexEdit"]
+	path = src/QHexEdit
+	url = https://github.com/Dax89/QHexEdit.git

@@ -1,0 +1,451 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item index="1" name="Pfannes"/>
+  <item index="2" name="Stocher"/>
+  <item index="3" name="Rambizambi"/>
+  <item index="4" name="Faulheld"/>
+  <item index="5" name="Maujor"/>
+  <item index="6" name="Gähneral"/>
+  <item index="7" name="Schwammurai"/>
+  <item index="8" name="Waschogun"/>
+  <item index="9" name="Leonidös"/>
+  <item index="10" name="Leonidas"/>
+  <item index="11" name="Kolliver"/>
+  <item index="12" name="Serberker"/>
+  <item index="13" name="Butzemon"/>
+  <item index="14" name="Mochismo"/>
+  <item index="15" name="Misskunz"/>
+  <item index="16" name="Zuberzunge"/>
+  <item index="17" name="Samureis"/>
+  <item index="18" name="Flammureis"/>
+  <item index="19" name="Helmchen"/>
+  <item index="20" name="Hybritter"/>
+  <item index="21" name="Corptain"/>
+  <item index="22" name="Schlammampf"/>
+  <item index="23" name="Schleifer"/>
+  <item index="24" name="Leodrio"/>
+  <item index="25" name="Seismo"/>
+  <item index="26" name="Stimmuleo"/>
+  <item index="27" name="Wettaran"/>
+  <item index="28" name="Schimma"/>
+  <item index="29" name="Fiesa"/>
+  <item index="30" name="Glitza"/>
+  <item index="31" name="Benkei"/>
+  <item index="32" name="B3-NK1"/>
+  <item index="33" name="Sushiyama"/>
+  <item index="34" name="Kapunki"/>
+  <item index="35" name="Hornboxa"/>
+  <item index="36" name="Kneiferer"/>
+  <item index="37" name="Zangenzar"/>
+  <item index="38" name="Verspeiser"/>
+  <item index="39" name="Verschlinger"/>
+  <item index="40" name="Gegenschirm"/>
+  <item index="41" name="Sohlitärna"/>
+  <item index="42" name="Drotzel"/>
+  <item index="43" name="Katarrnich"/>
+  <item index="44" name="Willnich"/>
+  <item index="45" name="Genuk"/>
+  <item index="46" name="Habssat"/>
+  <item index="47" name="Amnesimon"/>
+  <item index="48" name="Hausdemsin"/>
+  <item index="49" name="Doofkapp"/>
+  <item index="50" name="Untlitz"/>
+  <item index="51" name="Kicha"/>
+  <item index="52" name="Blabia"/>
+  <item index="53" name="Petzmeralda"/>
+  <item index="54" name="Stereoma"/>
+  <item index="55" name="Omakabra"/>
+  <item index="56" name="Pistoleros"/>
+  <item index="57" name="Casanovo"/>
+  <item index="58" name="Casalusa"/>
+  <item index="59" name="Tschulligung"/>
+  <item index="60" name="Sündenblock"/>
+  <item index="61" name="Smoggi"/>
+  <item index="62" name="Miasmia"/>
+  <item index="63" name="Spannsel"/>
+  <item index="64" name="Signalabim"/>
+  <item index="65" name="Dynamon"/>
+  <item index="66" name="Onkel Oden"/>
+  <item index="67" name="U. L. O."/>
+  <item index="68" name="Amilikan"/>
+  <item index="69" name="Portalex"/>
+  <item index="70" name="Temportalex"/>
+  <item index="71" name="Spekulump"/>
+  <item index="72" name="Eulusionist"/>
+  <item index="73" name="Uhudini"/>
+  <item index="74" name="Vagabuhu"/>
+  <item index="75" name="Dreiseha"/>
+  <item index="76" name="Vierseha"/>
+  <item index="77" name="James"/>
+  <item index="78" name="Tengu"/>
+  <item index="79" name="Sengu"/>
+  <item index="80" name="Kyubi"/>
+  <item index="81" name="Kryo"/>
+  <item index="82" name="Chymäre"/>
+  <item index="83" name="Prymäre"/>
+  <item index="84" name="Pochtopf"/>
+  <item index="85" name="Dösuma"/>
+  <item index="86" name="Darumacho"/>
+  <item index="87" name="Goruma"/>
+  <item index="88" name="Willichauch"/>
+  <item index="89" name="Galagarnele"/>
+  <item index="90" name="Wirrwagen"/>
+  <item index="91" name="Patzpanzer"/>
+  <item index="92" name="Nixda"/>
+  <item index="93" name="Sperrich"/>
+  <item index="94" name="Wallter"/>
+  <item index="95" name="Rebelzebub"/>
+  <item index="96" name="Bandido"/>
+  <item index="97" name="Grobro"/>
+  <item index="98" name="Panza"/>
+  <item index="99" name="Mimikini"/>
+  <item index="100" name="Barricardo"/>
+  <item index="101" name="Haltan"/>
+  <item index="102" name="Zappelfant"/>
+  <item index="103" name="Zitterfant"/>
+  <item index="104" name="Mammussnich"/>
+  <item index="105" name="Zackarias"/>
+  <item index="106" name="Frazzel"/>
+  <item index="107" name="Safto"/>
+  <item index="108" name="Der Brocken"/>
+  <item index="109" name="Der Vulkan"/>
+  <item index="110" name="Kastellan III"/>
+  <item index="111" name="Kastellan II"/>
+  <item index="112" name="Kastellan I"/>
+  <item index="113" name="Oberkastellan"/>
+  <item index="114" name="Rhinfanterist"/>
+  <item index="115" name="Rhinoberst"/>
+  <item index="116" name="Rhinozerboss"/>
+  <item index="117" name="Robonyan"/>
+  <item index="118" name="Goldinyan"/>
+  <item index="119" name="Schtompf"/>
+  <item index="120" name="Brausch"/>
+  <item index="121" name="Feschfrosch"/>
+  <item index="122" name="Meidechse"/>
+  <item index="123" name="Stolzstelz"/>
+  <item index="124" name="Glitzelle"/>
+  <item index="125" name="Klapperika"/>
+  <item index="126" name="Skelebelle"/>
+  <item index="127" name="Winzikado"/>
+  <item index="128" name="Ninzikado"/>
+  <item index="129" name="Singzikado"/>
+  <item index="130" name="Schlotterrier"/>
+  <item index="131" name="Kalteser"/>
+  <item index="132" name="Puhdel"/>
+  <item index="133" name="Vervisage"/>
+  <item index="134" name="Einaugust"/>
+  <item index="135" name="Jibanyan"/>
+  <item index="136" name="Dornyan"/>
+  <item index="137" name="Grobianyan"/>
+  <item index="138" name="Buchinyan"/>
+  <item index="139" name="Wandakappa"/>
+  <item index="140" name="Nomakappa"/>
+  <item index="141" name="Wassgeht"/>
+  <item index="142" name="Komasan"/>
+  <item index="143" name="Komähne"/>
+  <item index="144" name="Komajiro"/>
+  <item index="145" name="Komatigga"/>
+  <item index="146" name="Baku"/>
+  <item index="147" name="Bakulia"/>
+  <item index="148" name="Wapir"/>
+  <item index="149" name="Nieselse"/>
+  <item index="150" name="Renné"/>
+  <item index="151" name="Knuffiwuffi"/>
+  <item index="152" name="Schnuckiputz"/>
+  <item index="153" name="Schnuckiwatz"/>
+  <item index="154" name="Peter Petz"/>
+  <item index="155" name="Frostina"/>
+  <item index="156" name="Glazia"/>
+  <item index="157" name="Dämona"/>
+  <item index="158" name="Japakappa"/>
+  <item index="159" name="Tigappa"/>
+  <item index="160" name="Meister Nyada"/>
+  <item index="161" name="Sabba"/>
+  <item index="162" name="Nascha"/>
+  <item index="163" name="Walza"/>
+  <item index="164" name="Samba"/>
+  <item index="165" name="Plattla"/>
+  <item index="166" name="Tschatscha"/>
+  <item index="167" name="Opa Gusto"/>
+  <item index="168" name="Nimmersatt"/>
+  <item index="169" name="Reisgreis"/>
+  <item index="170" name="Zungus"/>
+  <item index="171" name="Zungustine"/>
+  <item index="172" name="Sanderl"/>
+  <item index="173" name="Herr Körner"/>
+  <item index="174" name="Schirmschelm"/>
+  <item index="175" name="Paragroll"/>
+  <item index="176" name="Blanko"/>
+  <item index="177" name="Blank-Man"/>
+  <item index="178" name="Heita"/>
+  <item index="179" name="Wichtel"/>
+  <item index="180" name="Oberwichtel"/>
+  <item index="181" name="Freundsfalta"/>
+  <item index="182" name="Freundspalta"/>
+  <item index="183" name="Besserling"/>
+  <item index="184" name="Feinschwing"/>
+  <item index="185" name="Kuhrigella"/>
+  <item index="186" name="Nostierdamus"/>
+  <item index="187" name="Donchan"/>
+  <item index="188" name="Strahlemann"/>
+  <item index="189" name="Frohland"/>
+  <item index="190" name="Labiliese"/>
+  <item index="191" name="Labilotte"/>
+  <item index="192" name="Trickolaus"/>
+  <item index="193" name="Wunderwilli"/>
+  <item index="194" name="Knobold"/>
+  <item index="195" name="Pascha"/>
+  <item index="196" name="Papa Blitzig"/>
+  <item index="197" name="Onkel Omni"/>
+  <item index="198" name="Mama Aura"/>
+  <item index="199" name="Tante Herzi"/>
+  <item index="200" name="Kyryn"/>
+  <item index="201" name="Feinhorn"/>
+  <item index="202" name="Wirreführer"/>
+  <item index="203" name="Schieba"/>
+  <item index="204" name="Autschi"/>
+  <item index="205" name="Peyn"/>
+  <item index="206" name="Agon"/>
+  <item index="207" name="Aufbleiba"/>
+  <item index="208" name="Durchmacha"/>
+  <item index="209" name="Farni"/>
+  <item index="210" name="Karni"/>
+  <item index="211" name="Miesmücke"/>
+  <item index="212" name="Schlimskito"/>
+  <item index="213" name="Juckmuck"/>
+  <item index="214" name="Simpel"/>
+  <item index="215" name="Huschemen"/>
+  <item index="216" name="Nihilo"/>
+  <item index="217" name="Argwoni"/>
+  <item index="218" name="Renitoni"/>
+  <item index="219" name="Onimich"/>
+  <item index="220" name="Fledalein"/>
+  <item index="221" name="Flederhaus"/>
+  <item index="222" name="Flederemit"/>
+  <item index="223" name="Schwupp"/>
+  <item index="224" name="Moppsa"/>
+  <item index="225" name="Wirzbald"/>
+  <item index="226" name="Fu Machdu"/>
+  <item index="227" name="Graf Zappula"/>
+  <item index="228" name="Rattus I."/>
+  <item index="229" name="Finstengu"/>
+  <item index="230" name="Schmöka"/>
+  <item index="231" name="Zickeria"/>
+  <item index="232" name="Glibbamanda"/>
+  <item index="233" name="Dracunyan"/>
+  <item index="234" name="Negasus"/>
+  <item index="235" name="Schandmähre"/>
+  <item index="236" name="Schämon"/>
+  <item index="237" name="Muzifer"/>
+  <item index="238" name="Graf Karies"/>
+  <item index="239" name="Barbargus"/>
+  <item index="240" name="Glitzglotz"/>
+  <item index="241" name="König Knausa"/>
+  <item index="242" name="Maximalefiz"/>
+  <item index="243" name="Awokalypso"/>
+  <item index="244" name="Hustanie"/>
+  <item index="245" name="Wehigel"/>
+  <item index="246" name="Tropfi"/>
+  <item index="247" name="Don Densato"/>
+  <item index="248" name="Zapfi"/>
+  <item index="249" name="Don Gelato"/>
+  <item index="250" name="Gusstav"/>
+  <item index="251" name="Stibitza"/>
+  <item index="252" name="Filzfink"/>
+  <item index="253" name="Wampsel"/>
+  <item index="254" name="Timmitus"/>
+  <item index="255" name="Krachmed"/>
+  <item index="256" name="Jammsel"/>
+  <item index="257" name="Schlabat"/>
+  <item index="258" name="Dunkelfeder"/>
+  <item index="259" name="Möter"/>
+  <item index="260" name="Dobbelmann"/>
+  <item index="261" name="Sir Berus"/>
+  <item index="262" name="Fellix"/>
+  <item index="263" name="Haartwig"/>
+  <item index="264" name="Nein-nein"/>
+  <item index="265" name="Tristine"/>
+  <item index="266" name="Schnattalie"/>
+  <item index="267" name="Nörgelika"/>
+  <item index="268" name="Eugen Lob"/>
+  <item index="269" name="Wim Wendig"/>
+  <item index="270" name="Pupsi"/>
+  <item index="271" name="Furzfürst"/>
+  <item index="272" name="Toilettina"/>
+  <item index="273" name="Maledixi"/>
+  <item index="274" name="Wabbelwutz"/>
+  <item index="275" name="Floppo"/>
+  <item index="276" name="Kalaua"/>
+  <item index="277" name="Dörrte"/>
+  <item index="278" name="Glamourella"/>
+  <item index="279" name="Eternia"/>
+  <item index="280" name="Insomnina"/>
+  <item index="281" name="Sandy"/>
+  <item index="282" name="Arachnius"/>
+  <item index="283" name="Arachnia"/>
+  <item index="284" name="Qnack"/>
+  <item index="285" name="Noko"/>
+  <item index="286" name="Florinoko"/>
+  <item index="287" name="Pandanoko"/>
+  <item index="288" name="Wirrma"/>
+  <item index="289" name="Jammalia"/>
+  <item index="290" name="Aalbernd"/>
+  <item index="291" name="Laalaalaal"/>
+  <item index="292" name="Urnakonda"/>
+  <item index="293" name="Ätzardine"/>
+  <item index="294" name="Makrekel"/>
+  <item index="295" name="Amokrele"/>
+  <item index="296" name="Pümpel"/>
+  <item index="297" name="Sankt Saugus"/>
+  <item index="298" name="Zornzwicker"/>
+  <item index="299" name="Furorwurm"/>
+  <item index="300" name="Dracki"/>
+  <item index="301" name="Drachenfürst"/>
+  <item index="302" name="Azurdrache"/>
+  <item index="303" name="Meermaid"/>
+  <item index="304" name="Meermadonna"/>
+  <item index="305" name="Meermutter"/>
+  <item index="306" name="Fr. Langhals"/>
+  <item index="307" name="Tranatol"/>
+  <item index="308" name="Wirrtropf"/>
+  <item index="309" name="Lungerhai"/>
+  <item index="310" name="Meermassler"/>
+  <item index="311" name="Prassa"/>
+  <item index="312" name="Zauster"/>
+  <item index="313" name="Labernase"/>
+  <item index="314" name="Bananase"/>
+  <item index="315" name="Zaudrak"/>
+  <item index="316" name="Kutterkahn"/>
+  <item index="317" name="Kobramotz"/>
+  <item index="318" name="Griesgramba"/>
+  <item index="319" name="Schiriviper"/>
+  <item index="320" name="Viptor"/>
+  <item index="321" name="Schattenato"/>
+  <item index="322" name="Shogunyan"/>
+  <item index="323" name="Komasura"/>
+  <item index="324" name="Gilgaros"/>
+  <item index="325" name="Spoilerina"/>
+  <item index="326" name="Vati Blum"/>
+  <item index="327" name="Schlaubärga"/>
+  <item index="328" name="Dandackel"/>
+  <item index="329" name="Polyglossa"/>
+  <item index="330" name="Saphinyan"/>
+  <item index="331" name="Smaranyan"/>
+  <item index="332" name="Rubinyan"/>
+  <item index="333" name="Topanyan"/>
+  <item index="334" name="Diamanyan"/>
+  <item index="335" name="Kantalupnyan"/>
+  <item index="336" name="Oranyan"/>
+  <item index="337" name="Kiwinyan"/>
+  <item index="338" name="Traubnyan"/>
+  <item index="339" name="Erdbeernyan"/>
+  <item index="340" name="Melonyan"/>
+  <item index="341" name="Robokapp"/>
+  <item index="342" name="Robokoma"/>
+  <item index="343" name="Robopa"/>
+  <item index="344" name="Roböter"/>
+  <item index="345" name="Robonoko"/>
+  <item index="346" name="Robodracki"/>
+  <item index="347" name="Aventurnyan"/>
+  <item index="348" name="Robonyan F"/>
+  <item index="349" name="Sailornyan"/>
+  <item index="350" name="Luchadonyan"/>
+  <item index="351" name="Hovernyan"/>
+  <item index="352" name="Darknyan"/>
+  <item index="353" name="Jibakoma"/>
+  <item index="354" name="Aeronyan"/>
+  <item index="355" name="Nervo"/>
+  <item index="356" name="Miserika"/>
+  <item index="357" name="Ganzo"/>
+  <item index="358" name="Konfusius"/>
+  <item index="359" name="Verheerbert"/>
+  <item index="360" name="Moderzunge"/>
+  <item index="361" name="Grapschmampf"/>
+  <item index="362" name="Miefasmia"/>
+  <item index="363" name="Killakappa"/>
+  <item index="364" name="Schirmschäm"/>
+  <item index="365" name="Pechtel"/>
+  <item index="366" name="Stunkrigella"/>
+  <item index="367" name="Filzix"/>
+  <item index="368" name="Unfairmaid"/>
+  <item index="369" name="Fr. Fanghals"/>
+  <item index="370" name="Motzääär"/>
+  <item index="371" name="Obermotzääär"/>
+  <item index="372" name="Dösbacke"/>
+  <item index="373" name="Wutwutz"/>
+  <item index="374" name="Panja"/>
+  <item index="375" name="Panja-Pro"/>
+  <item index="376" name="Samuraal"/>
+  <item index="377" name="Generaal"/>
+  <item index="378" name="Takoyakid"/>
+  <item index="379" name="Takoyaking"/>
+  <item index="380" name="Dankedün"/>
+  <item index="381" name="Needankedün"/>
+  <item index="382" name="Sumudon"/>
+  <item index="383" name="Yokozudon"/>
+  <item index="384" name="Egalaya"/>
+  <item index="385" name="Wissuv"/>
+  <item index="386" name="Süßspross"/>
+  <item index="387" name="Jubelstielchen"/>
+  <item index="388" name="Gierrippe"/>
+  <item index="389" name="Meganyan"/>
+  <item index="390" name="Käpt'n Kenter"/>
+  <item index="391" name="Gaffun"/>
+  <item index="392" name="Goldie"/>
+  <item index="393" name="Silvie"/>
+  <item index="394" name="Frau Fergällt"/>
+  <item index="395" name="Frau Fatal"/>
+  <item index="396" name="Glibbamanda"/>
+  <item index="397" name="Glotzmanda"/>
+  <item index="398" name="Wabbelwutz"/>
+  <item index="399" name="Dunkelwutz"/>
+  <item index="400" name="Kutterkahn"/>
+  <item index="401" name="Käpt’n Karon"/>
+  <item index="402" name="Harleking"/>
+  <item index="403" name="Eklipsopath"/>
+  <item index="404" name="Phantasmurai"/>
+  <item index="405" name="Shogunhold"/>
+  <item index="406" name="Tarantutor"/>
+  <item index="407" name="Dr. Kling"/>
+  <item index="408" name="Dr. Nogut"/>
+  <item index="409" name="McKraken"/>
+  <item index="410" name="McKraken"/>
+  <item index="411" name="Tintrigant"/>
+  <item index="412" name="Janusrad"/>
+  <item index="413" name="Flechtigall"/>
+  <item index="414" name="Awokalypso"/>
+  <item index="415" name="Armdran"/>
+  <item index="416" name="Augmentator"/>
+  <item index="417" name="Haudruff"/>
+  <item index="418" name="Käpt'n Leck"/>
+  <item index="419" name="Ebba"/>
+  <item index="420" name="Fluta"/>
+  <item index="421" name="Frau Furchtbar"/>
+  <item index="422" name="Garna"/>
+  <item index="423" name="Goldrippe"/>
+  <item index="424" name="Glitzerrippe"/>
+  <item index="425" name="Vielarmoniker"/>
+  <item index="426" name="Glotzblitzer"/>
+  <item index="427" name="Gargaros"/>
+  <item index="428" name="Ogralus"/>
+  <item index="429" name="Orcanos"/>
+  <item index="430" name="Bohris"/>
+  <item index="431" name="Maximumm N"/>
+  <item index="432" name="Maximumm K"/>
+  <item index="433" name="Jibanyan S"/>
+  <item index="434" name="Komasan S"/>
+  <item index="435" name="Komajiro S"/>
+  <item index="436" name="Finsterkyubi"/>
+  <item index="437" name="Vipolux"/>
+  <item index="438" name="Gargaros"/>
+  <item index="439" name="Ogralus"/>
+  <item index="440" name="Orcanos"/>
+  <item index="441" name="Jibalzebub"/>
+  <item index="442" name="Kolossokoma"/>
+  <item index="443" name="Hinovator"/>
+  <item index="444" name="Bronzo"/>
+  <item index="445" name="Mischmarder"/>
+  <item index="446" name="Augoboros"/>
+  <item index="447" name="Stresskessel"/>
+  <item index="448" name="Kabuking"/>
+</items>

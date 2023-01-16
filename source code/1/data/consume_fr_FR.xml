@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items>
+    <item id="1803927674" name="Riz à la prune" />
+    <item id="4069298624" name="Riz dans feuille" />
+    <item id="2240520534" name="Riz œufs saumon" />
+    <item id="468661493" name="Riz à la crevette" />
+    <item id="1783081549" name="Sandwich" />
+    <item id="4082039799" name="Patte d'ours" />
+    <item id="1831497300" name="Pain au curry" />
+    <item id="2219428705" name="Baguette" />
+    <item id="439180994" name="Blablagel" />
+    <item id="1744901140" name="Chewing-gum" />
+    <item id="4043851182" name="Bonb. poisseux" />
+    <item id="2249159992" name="Chips géante" />
+    <item id="409723035" name="Bonbons fruits" />
+    <item id="1869402125" name="Granité" />
+    <item id="4133847479" name="Pomme d'amour" />
+    <item id="1774419491" name="Lait" />
+    <item id="4039782297" name="Café au lait" />
+    <item id="2278366991" name="Lait aux fruits" />
+    <item id="430541484" name="Lait merveilleux" />
+    <item id="1821141158" name="Y-Cola" />
+    <item id="4119148828" name="Thé de l'âme" />
+    <item id="2189560202" name="Spiritizer Y" />
+    <item id="484875305" name="VoltXtrême" />
+    <item id="1833829009" name="Hamburger" />
+    <item id="4098315051" name="Cheeseburger" />
+    <item id="2202035133" name="Double burger" />
+    <item id="488961566" name="Burger Miam" />
+    <item id="1858787071" name="Ramen minute" />
+    <item id="4156786501" name="Ramen au poulet" />
+    <item id="2160375763" name="Ramen deluxe" />
+    <item id="513811056" name="Ramen complets" />
+    <item id="1683291125" name="Raviolis chinois" />
+    <item id="4250774095" name="Foie à l'oignon" />
+    <item id="2321193689" name="Omelette crabe" />
+    <item id="339611514" name="Crevette piment" />
+    <item id="3539717416" name="Carotte" />
+    <item id="1274190994" name="Concombre" />
+    <item id="1022733316" name="Pousse bambou" />
+    <item id="2727426471" name="Matsutake" />
+    <item id="3502076785" name="Cuisse de poulet" />
+    <item id="1236542155" name="Morceau de lard" />
+    <item id="1051923037" name="Langue de bœuf" />
+    <item id="2698479614" name="Bœuf persillé" />
+    <item id="3514767686" name="Maquereau séch." />
+    <item id="1215711484" name="Sériole" />
+    <item id="1064401002" name="Oursin cru" />
+    <item id="2702568905" name="Thon 1er choix" />
+    <item id="320924352" name="Petit EXPorbe" />
+    <item id="2317990778" name="EXPorbe moyen" />
+    <item id="4247686124" name="Grand EXPorbe" />
+    <item id="1665801807" name="Méga EXPorbe" />
+    <item id="340602585" name="EXPorbe sacré" />
+    <item id="397252210" name="Staminum" />
+    <item id="2393163720" name="Staminum Alpha" />
+    <item id="279199406" name="Coups secrets" />
+    <item id="2309844756" name="Tech. tip-top" />
+    <item id="4272578434" name="Secrets de l'âme" />
+    <item id="469268883" name="La vie en tête" />
+    <item id="2196842537" name="Pensez Karaté" />
+    <item id="4126546111" name="Vivez Karaté" />
+    <item id="1804766492" name="Dico-tech" />
+    <item id="479575434" name="Techni-clopédie" />
+    <item id="2241653808" name="La déf. de A à Z" />
+    <item id="4070300838" name="Tout sur la déf." />
+    <item id="1646575927" name="Docteur Tit'ange" />
+    <item id="354677153" name="Au rev., Tit'ange" />
+    <item id="1977907268" name="Petite teigne" />
+    <item id="48449746" name="Teigne parfaite" />
+    <item id="2615810408" name="Secours mag #7" />
+    <item id="3974965758" name="Sec. hors-série" />
+    <item id="367732779" name="Talisman force" />
+    <item id="2363652497" name="Talisman d'esprit" />
+    <item id="4226107655" name="Talisman de déf." />
+    <item id="1703009444" name="Talisman vitesse" />
+    <item id="338248220" name="Remède infect" />
+    <item id="2367689638" name="Remède amer" />
+    <item id="4196868912" name="Remède puiss." />
+    <item id="376437829" name="Poupée de fuite" />
+    <item id="291919001" name="Poupée bronze" />
+    <item id="2288977187" name="Poupée d'argent" />
+    <item id="4285019573" name="Poupée d'or" />
+    <item id="2908180302" name="Appât poissons" />
+    <item id="878583540" name="Mélasse" />
+    <item id="2592718716" name="Pièce rouge" />
+    <item id="58781382" name="Pièce jaune" />
+    <item id="1955061328" name="Pièce orange" />
+    <item id="3940764659" name="Pièce rose" />
+    <item id="2648996709" name="Pièce verte" />
+    <item id="82651871" name="Pièce bleue" />
+    <item id="1944721993" name="Pièce mauve" />
+    <item id="3814000600" name="Pièce bleu ciel" />
+    <item id="3141306787" name="Pièce saphir" />
+    <item id="3426466101" name="Pièce émeraude" />
+    <item id="1381969046" name="Pièce rubis" />
+    <item id="626531328" name="Pièce topaze" />
+    <item id="573954073" name="Pièce diamant" />
+    <item id="3159444922" name="Pièce d'euphorie" />
+    <item id="3411442988" name="Pièce 5 étoiles" />
+    <item id="1542021309" name="Pièce spéciale" />
+    <item id="2895455609" name="Étoile dansante" />
+    <item id="440013732" name="Épée légendaire" />
+    <item id="2201174558" name="Épée maudite" />
+    <item id="2220787207" name="Épée sacrée" />
+    <item id="4097077896" name="Âme du général" />
+    <item id="1783686955" name="Six-coups foudre" />
+    <item id="492296125" name="Orbe GHz" />
+    <item id="1676061440" name="Âme imbattable" />
+    <item id="2586342239" name="Lingot de platine" />
+    <item id="350329750" name="Cape de blizzard" />
+    <item id="1948652147" name="Sceptre d'amour" />
+    <item id="4082742929" name="Pince de glace" />
+    <item id="52503269" name="Poids" />
+    <item id="1934349930" name="Éclat démon." />
+    <item id="3979297737" name="Poudre jouvence" />
+    <item id="3742966091" name="Goutte de joie" />
+    <item id="2638591814" name="Orbe de dragon" />
+    <item id="3930228688" name="Eau sacrée" />
+    <item id="2063440449" name="Écaille cracra" />
+    <item id="234531543" name="Aura Octorgone" />
+    <item id="1594573232" name="Gantelet abîmé" />
+    <item id="671904038" name="Cristal fissuré" />
+    <item id="2969903260" name="Éclat de cristal" />
+    <item id="3322023946" name="Toupropre" />
+    <item id="1483113897" name="Écharpe jaunie" />
+    <item id="794932543" name="Bague normale" />
+    <item id="3060327557" name="Amulette vide" />
+    <item id="3245331475" name="Rubis" />
+    <item id="1372637570" name="Aigue-marine" />
+    <item id="651688212" name="Topaze" />
+    <item id="1175482609" name="Tourmaline" />
+    <item id="823607399" name="Opale" />
+    <item id="2820542941" name="Émeraude" />
+</items>

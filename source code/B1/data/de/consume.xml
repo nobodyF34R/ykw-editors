@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="367732779" name="Rote Münze"/>
+  <item id="2363652497" name="Gelbe Münze"/>
+  <item id="4226107655" name="Orange Münze"/>
+  <item id="1703009444" name="Rosa Münze"/>
+  <item id="310832178" name="Grüne Münze"/>
+  <item id="2341453192" name="Blaue Münze"/>
+  <item id="4236807454" name="Lila Münze"/>
+  <item id="1815580815" name="Hellblaue Münze"/>
+  <item id="456171545" name="5-Sterne-Münze"/>
+  <item id="2079795708" name="Spezialmünze"/>
+  <item id="217061738" name="Glücksmünze"/>
+  <item id="2516142288" name="1-Stern-Münze"/>
+  <item id="3808327750" name="Klopf-Mz. (Blume)"/>
+  <item id="2090528229" name="Klopf-Mz. (Vogel)"/>
+  <item id="194895219" name="Klopf-Mz. (Wind)"/>
+  <item id="2459208905" name="Klopf-Mz. (Mond)"/>
+  <item id="3851664479" name="Poch-Münze (Yo)"/>
+  <item id="1965859278" name="Poch-Münze (Kai)"/>
+  <item id="36409688" name="Poch-Münze (Oni)"/>
+  <item id="668813993" name="Mz. des Nordens"/>
+  <item id="3201571603" name="Mz. des N.-Ostens"/>
+  <item id="3386059653" name="Münze des Ostens"/>
+  <item id="1471659558" name="Mz. des Zentrums"/>
+  <item id="548441776" name="Mz. des Westens"/>
+  <item id="3115966218" name="Münze der Berge"/>
+  <item id="3468619676" name="Münze des Südens"/>
+  <item id="1577185805" name="Mittl. Westen-Mz."/>
+  <item id="688308891" name="Münze der Insel"/>
+  <item id="1237404542" name="Vortex-Münze"/>
+  <item id="4123676849" name="Voll-Mond-Münze"/>
+  <item id="2194497575" name="Stärke-Münze"/>
+  <item id="3792366018" name="VIP-Münze"/>
+  <item id="2908180302" name="Große Rote Münze"/>
+  <item id="878583540" name="Gr. Gelbe Münze"/>
+  <item id="1129918050" name="Gr. Orange Münze"/>
+  <item id="3711810497" name="Große Rosa Münze"/>
+  <item id="2855963479" name="Gr. Grüne Münze"/>
+  <item id="859036397" name="Gr. Blaue Münze"/>
+  <item id="1144318587" name="Große Lila Münze"/>
+  <item id="3565942762" name="Gr. Hellblaue Mz."/>
+  <item id="508211046" name="Rambizambi-Mz."/>
+  <item id="1766694896" name="Gähneral-Münze"/>
+  <item id="3523142007" name="Waschogun-Münze"/>
+  <item id="2801390049" name="Leonidas-Münze"/>
+  <item id="562459907" name="Butzemon-Münze"/>
+  <item id="652980506" name="Hybritter-Münze"/>
+  <item id="2973329554" name="Schleifer-Münze"/>
+  <item id="1374454156" name="Leodrio-Münze"/>
+  <item id="4031041098" name="Wettaran-Münze"/>
+  <item id="3219316896" name="Glitza-Münze"/>
+  <item id="3096388793" name="B3-NK1-Münze"/>
+  <item id="1224192205" name="Maximumm-N-Mz."/>
+  <item id="3325974532" name="Hovernyan-Münze"/>
+  <item id="1072726107" name="Luchadonyan-Mz."/>
+  <item id="3481801775" name="Zangenzar-Münze"/>
+  <item id="1451312533" name="Shogunyan-Münze"/>
+  <item id="1675289358" name="Bohris-Münze"/>
+  <item id="3599967598" name="Petzmeralda-Mz."/>
+  <item id="4208177844" name="Miasmia-Münze"/>
+  <item id="4257117869" name="Dynamon-Münze"/>
+  <item id="2269380316" name="Onkel-Oden-Mz."/>
+  <item id="2710836728" name="Portalex-Münze"/>
+  <item id="402449229" name="Temportalex-Mz."/>
+  <item id="350081944" name="James-Münze"/>
+  <item id="3743770949" name="Tengu-Münze"/>
+  <item id="949830722" name="Kyubi-Münze"/>
+  <item id="1335522516" name="Kryo-Münze"/>
+  <item id="2379514402" name="Chymäre-Münze"/>
+  <item id="2327397947" name="Prymäre-Münze"/>
+  <item id="2820823507" name="Komasura-Münze"/>
+  <item id="3612430169" name="Spekulump-Münze"/>
+  <item id="330307457" name="Nixda-Münze"/>
+  <item id="231138009" name="Rebelzebub-Mz."/>
+  <item id="3836037100" name="Mimikini-Münze"/>
+  <item id="178988736" name="Mammussnich-Mz."/>
+  <item id="2476898170" name="Frazzel-Münze"/>
+  <item id="1627116507" name="Der-Brocken-Mz."/>
+  <item id="4094179974" name="Kastellan-I-Münze"/>
+  <item id="3374823937" name="Rhinfanterist-Mz."/>
+  <item id="1689724695" name="Rhinoberst-Münze"/>
+  <item id="3821569013" name="Robonyan-Münze"/>
+  <item id="2496639843" name="Goldinyan-Münze"/>
+  <item id="2198800912" name="Schtompf-Münze"/>
+  <item id="2108429910" name="Feschfrosch-Mz."/>
+  <item id="3977448391" name="Meidechse-Münze"/>
+  <item id="2059522639" name="Gilgaros-Münze"/>
+  <item id="2690023375" name="Ganzo-Münze"/>
+  <item id="3683526052" name="Winzikado-Münze"/>
+  <item id="3189803671" name="Singzikado-Münze"/>
+  <item id="2723323136" name="Puhdel-Münze"/>
+  <item id="1116173342" name="Jibanyan-Münze"/>
+  <item id="897598600" name="Dornyan-Münze"/>
+  <item id="2883899691" name="Grobianyan-Münze"/>
+  <item id="3046253683" name="Buchinyan-Münze"/>
+  <item id="3264550117" name="Sailornyan-Münze"/>
+  <item id="3705921981" name="Wandakappa-Mz."/>
+  <item id="657054509" name="Wassgeht-Münze"/>
+  <item id="1173008391" name="Komasan-Münze"/>
+  <item id="854425745" name="Komajiro-Münze"/>
+  <item id="1536968031" name="Jibakoma-Münze"/>
+  <item id="1345252283" name="Renné-Münze"/>
+  <item id="3460988440" name="Schnuckiputz-Mz."/>
+  <item id="3108851342" name="Schnuckiwatz-Mz."/>
+  <item id="2585017169" name="Glazia-Münze"/>
+  <item id="2894665010" name="Dämona-Münze"/>
+  <item id="748385737" name="Japakappa-Münze"/>
+  <item id="3579162006" name="Spoilerina-Münze"/>
+  <item id="962539125" name="Miserika-Münze"/>
+  <item id="1559331142" name="Walza-Münze"/>
+  <item id="541335348" name="Samba-Münze"/>
+  <item id="3003113578" name="Opa-Gusto-Münze"/>
+  <item id="129377802" name="Zungus-Münze"/>
+  <item id="1890653852" name="Zungustine-Münze"/>
+  <item id="3921168166" name="Sanderl-Münze"/>
+  <item id="2580722601" name="Paragroll-Münze"/>
+  <item id="2010960517" name="Blank-Man-Münze"/>
+  <item id="4006970175" name="Oberwichtel-Mz."/>
+  <item id="3321417980" name="Feinschwing-Mz."/>
+  <item id="737587664" name="Frohland-Münze"/>
+  <item id="1464020898" name="Trickolaus-Münze"/>
+  <item id="3427704023" name="Papa-Blitzig-Münze"/>
+  <item id="3142167617" name="Mama-Aura-Münze"/>
+  <item id="14410259" name="Kyryn-Münze"/>
+  <item id="2422538114" name="Feinhorn-Münze"/>
+  <item id="2663348144" name="Vati-Blum-Münze"/>
+  <item id="1314397923" name="Labilotte-Münze"/>
+  <item id="3739681650" name="Labiliese-Münze"/>
+  <item id="2850042852" name="Seegras-Sens.-Mz."/>
+  <item id="3355193907" name="Agon-Münze"/>
+  <item id="3882077972" name="Fledalein-Münze"/>
+  <item id="2969240229" name="Graf-Zappula-Mz."/>
+  <item id="2160689896" name="Dracunyan-Münze"/>
+  <item id="1858593732" name="Usapyon-Münze"/>
+  <item id="2275690225" name="Muzifer-Münze"/>
+  <item id="4037244519" name="Graf-Karies-Münze"/>
+  <item id="514660171" name="Barbargus-Münze"/>
+  <item id="1772759005" name="Maximalefiz-Münze"/>
+  <item id="4157518462" name="Schlaubärga-Mz."/>
+  <item id="4212250755" name="Nervo-Münze"/>
+  <item id="2350311445" name="Karni-Münze"/>
+  <item id="354400687" name="König-Knausa-Mz."/>
+  <item id="432067410" name="Möter-Münze"/>
+  <item id="3493628736" name="Nein-nein-Münze"/>
+  <item id="2000382632" name="Tristine-Münze"/>
+  <item id="3955262" name="Pupsi-Münze"/>
+  <item id="2805709782" name="Furzfürst-Münze"/>
+  <item id="2306854595" name="Glamourella-Münze"/>
+  <item id="4269342293" name="Eternia-Münze"/>
+  <item id="2570390404" name="Arachnius-Münze"/>
+  <item id="122789415" name="Arachnia-Münze"/>
+  <item id="3996269330" name="Dandackel-Münze"/>
+  <item id="1645775161" name="Durchnässa-Münze"/>
+  <item id="4235992218" name="Konfusius-Münze"/>
+  <item id="2340105228" name="Toilettina-Münze"/>
+  <item id="309493174" name="Dunkelfeder-Mz."/>
+  <item id="1884729009" name="Noko-Münze"/>
+  <item id="3915382539" name="Drachenfürst-Mz."/>
+  <item id="1847614441" name="Meermadonna-Mz."/>
+  <item id="4146661971" name="Meermutter-Münze"/>
+  <item id="422013823" name="Fr.-Langhals-Mz."/>
+  <item id="1043524204" name="Lungerhai-Münze"/>
+  <item id="2656620445" name="Labernase-Münze"/>
+  <item id="1228266234" name="Bananase-Münze"/>
+  <item id="250073612" name="Viptor-Münze"/>
+  <item id="2044781210" name="Schattenato-Mz."/>
+  <item id="2150513349" name="Polyglossa-Münze"/>
+  <item id="1702186272" name="Jammalia-Münze"/>
+  <item id="123635653" name="Legendäre Klinge"/>
+  <item id="2656556671" name="Verfluchte Klinge"/>
+  <item id="3914393321" name="Heilige Klinge"/>
+  <item id="1999926090" name="General-Seele"/>
+  <item id="3359708" name="Liebesknaller"/>
+  <item id="2570719846" name="Elektrokugel"/>
+  <item id="3996984048" name="Gletscherklammer"/>
+  <item id="2122465121" name="Unbezwingb. Seele"/>
+  <item id="159715319" name="Schneesturm-Umh."/>
+  <item id="1765967378" name="Zepter der Liebe"/>
+  <item id="507885188" name="Trainingshanteln"/>
+  <item id="2269964094" name="Platinbarren"/>
+  <item id="4031502248" name="Jugendpuder"/>
+  <item id="1848590859" name="Splitter des Bösen"/>
+  <item id="422081181" name="Drachenkugel"/>
+  <item id="2149655335" name="Klinge des Zorns"/>
+  <item id="4146467761" name="Sandanzug"/>
+  <item id="1738083872" name="Wunderwasser"/>
+  <item id="278806198" name="Verflucht. Tagebuch"/>
+  <item id="1114625489" name="Hupe"/>
+  <item id="896066887" name="Gedächtnissauger"/>
+  <item id="2892084477" name="Meerjungfrau-Perle"/>
+  <item id="3680928875" name="Geschnitzter Bär"/>
+  <item id="1157763528" name="Goldfisch-Laterne"/>
+  <item id="839197022" name="Meister-Laterne"/>
+  <item id="2869719268" name="Goldenes Emblem"/>
+  <item id="3691724914" name="Takoyaki-Blech"/>
+  <item id="1286888931" name="Dünensand"/>
+  <item id="1001614709" name="Altmodisch. Schirm"/>
+  <item id="1534387344" name="Terrakotta-Figur"/>
+  <item id="745788422" name="Roter Hibiskus"/>
+  <item id="3044705724" name="Liebevoller Reisball"/>
+  <item id="3263018282" name="Essenz des Fiesen"/>
+  <item id="1545150601" name="Spiralenseele"/>
+  <item id="723390495" name="Grundpfeiler"/>
+  <item id="2987868581" name="Gemütlich. Schrank"/>
+  <item id="813725687" name="Musikkarte"/>
+  <item id="2844337741" name="Goldenes Ei"/>
+  <item id="573954073" name="Gargaros-U-Kugel"/>
+  <item id="3141306787" name="Ogralus-U-Kugel"/>
+  <item id="3426466101" name="Orcanos-U-Kugel"/>
+  <item id="1381969046" name="Wabbelw.-U-Kugel"/>
+  <item id="626531328" name="Glibbam.-U-Kugel"/>
+  <item id="3159444922" name="Kutterkahn-U-Kugel"/>
+  <item id="3411442988" name="Gierrippe-U-Kugel"/>
+  <item id="1542021309" name="Jibalzebub-U-Kugel"/>
+  <item id="753815595" name="Kolossok.-U-Kugel"/>
+  <item id="1277811150" name="Whispers.-U-Kugel"/>
+  <item id="992930136" name="Verspeiser-U-Kugel"/>
+  <item id="2720512226" name="McKraken-U-Kugel"/>
+  <item id="3575679092" name="Fr.-Fergällt-U-Kugel"/>
+  <item id="1262755287" name="Awokal.-U-Kugel"/>
+  <item id="1011035457" name="Dunkelw.-U-Kugel"/>
+  <item id="2773122299" name="Glotzm.-U-Kugel"/>
+  <item id="3528281197" name="Käpt’n-K.-U-Kugel"/>
+  <item id="1123176956" name="Goldrippe-U-Kugel"/>
+  <item id="905273706" name="Glitzerrip.-U-Kugel"/>
+  <item id="1728350733" name="Verschl.-U-Kugel"/>
+  <item id="268679835" name="Hinovator-U-Kugel"/>
+  <item id="2299194145" name="Kabuking-U-Kugel"/>
+  <item id="4262321079" name="Garna-U-Kugel"/>
+  <item id="1617514004" name="Massenm.-U-Kugel"/>
+  <item id="393117314" name="Blabberm.-U-Kugel"/>
+  <item id="2389126968" name="Robon.-28-U-Kugel"/>
+  <item id="4183826350" name="Spir.-Omai-U-Kugel"/>
+  <item id="1776222783" name="Rote-Pf.-U-Kugel"/>
+  <item id="517485225" name="Sasel-U-Kugel"/>
+  <item id="2116008780" name="Käpt‘n-D.-U-Kugel"/>
+  <item id="152603610" name="Shogun-K.-U-Kugel"/>
+  <item id="2417089120" name="W.-Hinov.-U-Kugel"/>
+  <item id="3877038838" name="Rob.-3000-U-Kugel"/>
+  <item id="2037546837" name="Gold.-Krall.-U-Kugel"/>
+  <item id="242569155" name="Spir.-Gold-U-Kugel"/>
+  <item id="3733853915" name="Goldener Ball"/>
+  <item id="938324974" name="Zufälliger Titel"/>
+  <item id="1089110904" name="Eiserne-Oni-Ticket"/>
+  <item id="2934235732" name="Sh.-König-Ticket"/>
+</items>

@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="367732779" name="Pièce rouge"/>
+  <item id="2363652497" name="Pièce jaune"/>
+  <item id="4226107655" name="Pièce orange"/>
+  <item id="1703009444" name="Pièce rose"/>
+  <item id="310832178" name="Pièce verte"/>
+  <item id="2341453192" name="Pièce bleue"/>
+  <item id="4236807454" name="Pièce mauve"/>
+  <item id="1815580815" name="Pièce azure"/>
+  <item id="456171545" name="Pièce 5 étoiles"/>
+  <item id="2079795708" name="Pièce spéciale"/>
+  <item id="217061738" name="Pièce B-k gagnant"/>
+  <item id="2516142288" name="Pièce 1 étoile"/>
+  <item id="3808327750" name="Pièce fleur"/>
+  <item id="2090528229" name="Pièce oiseau"/>
+  <item id="194895219" name="Pièce vent"/>
+  <item id="2459208905" name="Pièce lune"/>
+  <item id="3851664479" name="Pièce Yo"/>
+  <item id="1965859278" name="Pièce Kai"/>
+  <item id="36409688" name="Pièce oni"/>
+  <item id="668813993" name="Pièce nord"/>
+  <item id="3201571603" name="Pièce nord-est"/>
+  <item id="3386059653" name="Pièce est"/>
+  <item id="1471659558" name="Pièce centrale"/>
+  <item id="548441776" name="Pièce ouest"/>
+  <item id="3115966218" name="Pièce montagne"/>
+  <item id="3468619676" name="Pièce sud"/>
+  <item id="1577185805" name="Pièce centre-ouest"/>
+  <item id="688308891" name="Pièce île"/>
+  <item id="1237404542" name="Pièce vortex"/>
+  <item id="4123676849" name="Pièce pleine lune"/>
+  <item id="2194497575" name="Pièce de force"/>
+  <item id="3792366018" name="Pièce VIP"/>
+  <item id="2908180302" name="Grande pièce rouge"/>
+  <item id="878583540" name="Grande pièce jaune"/>
+  <item id="1129918050" name="Grande pièce orange"/>
+  <item id="3711810497" name="Grande pièce rose"/>
+  <item id="2855963479" name="Grande pièce verte"/>
+  <item id="859036397" name="Grande pièce bleue"/>
+  <item id="1144318587" name="Grande pièce mauve"/>
+  <item id="3565942762" name="Grande pièce azure"/>
+  <item id="508211046" name="Pièce Alfoncéo"/>
+  <item id="1766694896" name="Pièce Samoumouraï"/>
+  <item id="3523142007" name="Pièce Ronimpec"/>
+  <item id="2801390049" name="Pièce Rugis"/>
+  <item id="562459907" name="Pièce Fouétar"/>
+  <item id="652980506" name="Pièce Bushidos"/>
+  <item id="2973329554" name="Pièce Coach Antonic"/>
+  <item id="1374454156" name="Pièce Feulion"/>
+  <item id="4031041098" name="Pièce Bonneto"/>
+  <item id="3219316896" name="Pièce brillante"/>
+  <item id="3096388793" name="Pièce B3-NK1"/>
+  <item id="1224192205" name="Pièce Ultramax N"/>
+  <item id="3325974532" name="Pièce Hovernyan"/>
+  <item id="1072726107" name="Pièce Maskonyan"/>
+  <item id="3481801775" name="Pièce Scarnage"/>
+  <item id="1451312533" name="Pièce Shogunyan"/>
+  <item id="1675289358" name="Pièce Narinos"/>
+  <item id="3599967598" name="Pièce Toutouïe"/>
+  <item id="4208177844" name="Pièce Brumella"/>
+  <item id="4257117869" name="Pièce Dynamo"/>
+  <item id="2269380316" name="Pièce Maître Oden"/>
+  <item id="2710836728" name="Pièce Télémir"/>
+  <item id="402449229" name="Pièce Triptic-tac"/>
+  <item id="350081944" name="Pièce Valetino"/>
+  <item id="3743770949" name="Pièce Tengu"/>
+  <item id="949830722" name="Pièce Kyubi"/>
+  <item id="1335522516" name="Pièce Barakabo"/>
+  <item id="2379514402" name="Pièce Chymère"/>
+  <item id="2327397947" name="Pièce Chyper"/>
+  <item id="2820823507" name="Pièce Komashura"/>
+  <item id="3612430169" name="Pièce Nuiroir"/>
+  <item id="330307457" name="Pièce Nanpart"/>
+  <item id="231138009" name="Pièce Loubarbare"/>
+  <item id="3836037100" name="Pièce Humainequin"/>
+  <item id="178988736" name="Pièce Pachypipi"/>
+  <item id="2476898170" name="Pièce Parantonn"/>
+  <item id="1627116507" name="Pièce Lama Laya"/>
+  <item id="4094179974" name="Pièce Castelius I"/>
+  <item id="3374823937" name="Pièce Coléroptère"/>
+  <item id="1689724695" name="Pièce Rhinolimit"/>
+  <item id="3821569013" name="Pièce Robonyan"/>
+  <item id="2496639843" name="Pièce Oronyan"/>
+  <item id="2198800912" name="Pièce Misterre"/>
+  <item id="2108429910" name="Pièce Crapop"/>
+  <item id="3977448391" name="Pièce Geeko"/>
+  <item id="2059522639" name="Pièce Gorgouille"/>
+  <item id="2690023375" name="Pièce Cyrustre"/>
+  <item id="3683526052" name="Pièce Cigalopin"/>
+  <item id="3189803671" name="Pièce Cigazouille"/>
+  <item id="2723323136" name="Pièce Cho-cho"/>
+  <item id="1116173342" name="Pièce Jibanyan"/>
+  <item id="897598600" name="Pièce Épinyan"/>
+  <item id="2883899691" name="Pièce Bandinyan"/>
+  <item id="3046253683" name="Pièce Buchinyan"/>
+  <item id="3264550117" name="Pièce Sailornyan"/>
+  <item id="3705921981" name="Pièce Kappacap"/>
+  <item id="657054509" name="Pièce Kappaloha"/>
+  <item id="1173008391" name="Pièce Komasan"/>
+  <item id="854425745" name="Pièce Komajiro"/>
+  <item id="1536968031" name="Pièce Jibakoma"/>
+  <item id="1345252283" name="Pièce Vito"/>
+  <item id="3460988440" name="Pièce Choubidou"/>
+  <item id="3108851342" name="Pièce Satandre"/>
+  <item id="2585017169" name="Pièce Blizzaria"/>
+  <item id="2894665010" name="Pièce Damona"/>
+  <item id="748385737" name="Pièce Faux Kappa"/>
+  <item id="3579162006" name="Pièce Déballerine"/>
+  <item id="962539125" name="Pièce Fielippine"/>
+  <item id="1559331142" name="Pièce Noripop"/>
+  <item id="541335348" name="Pièce Algacarena"/>
+  <item id="3003113578" name="Pièce Granpapéti"/>
+  <item id="129377802" name="Pièce Papilla"/>
+  <item id="1890653852" name="Pièce Mme Papilla"/>
+  <item id="3921168166" name="Pièce Felipaix"/>
+  <item id="2580722601" name="Pièce Scarasol"/>
+  <item id="2010960517" name="Pièce Ivanupieds"/>
+  <item id="4006970175" name="Pièce Grégrigry"/>
+  <item id="3321417980" name="Pièce Vitapillon"/>
+  <item id="737587664" name="Pièce Jojojoyeux"/>
+  <item id="1464020898" name="Pièce Ratatam"/>
+  <item id="3427704023" name="Pièce Tontonerre"/>
+  <item id="3142167617" name="Pièce Tata Aura"/>
+  <item id="14410259" name="Pièce Kyryn"/>
+  <item id="2422538114" name="Pièce Kyrycorne"/>
+  <item id="2663348144" name="Pièce Camaïeul"/>
+  <item id="1314397923" name="Pièce Potaumorose"/>
+  <item id="3739681650" name="Pièce Paradoxa"/>
+  <item id="2850042852" name="Pièce Alga Sensei"/>
+  <item id="3355193907" name="Pièce Contracto"/>
+  <item id="3882077972" name="Pièce Chauvekipeut"/>
+  <item id="2969240229" name="Pièce Comte Zapzap"/>
+  <item id="2160689896" name="Pièce Dracunyan"/>
+  <item id="1858593732" name="Pièce Usapyon"/>
+  <item id="2275690225" name="Pièce Belzel"/>
+  <item id="4037244519" name="Pièce Dente"/>
+  <item id="514660171" name="Pièce Millyeux"/>
+  <item id="1772759005" name="Pièce Maltesse"/>
+  <item id="4157518462" name="Pièce Savantard"/>
+  <item id="4212250755" name="Pièce Injustin"/>
+  <item id="2350311445" name="Pièce Carnanova"/>
+  <item id="354400687" name="Pièce Vénaldo"/>
+  <item id="432067410" name="Pièce Corniot"/>
+  <item id="3493628736" name="Pièce Non-non"/>
+  <item id="2000382632" name="Pièce Lulugubre"/>
+  <item id="3955262" name="Pièce Pégaz"/>
+  <item id="2805709782" name="Pièce Méphito"/>
+  <item id="2306854595" name="Pièce Jouvencia"/>
+  <item id="4269342293" name="Pièce Éterna"/>
+  <item id="2570390404" name="Pièce Arachnus"/>
+  <item id="122789415" name="Pièce Arachnia"/>
+  <item id="3996269330" name="Pièce Cabotin"/>
+  <item id="1645775161" name="Pièce Trempetta"/>
+  <item id="4235992218" name="Pièce Maudicko"/>
+  <item id="2340105228" name="Pièce Ornella"/>
+  <item id="309493174" name="Pièce Volatriste"/>
+  <item id="1884729009" name="Pièce Noko"/>
+  <item id="3915382539" name="Pièce Sire Dragon"/>
+  <item id="1847614441" name="Pièce Sirènité"/>
+  <item id="4146661971" name="Pièce Sireine-mère"/>
+  <item id="422013823" name="Pièce Mlle Coucou"/>
+  <item id="1043524204" name="Pièce Croquin"/>
+  <item id="2656620445" name="Pièce Jacquasseur"/>
+  <item id="1228266234" name="Pièce Bananar"/>
+  <item id="250073612" name="Pièce Octorgone"/>
+  <item id="2044781210" name="Pièce Octorgombre"/>
+  <item id="2150513349" name="Pièce Slurpent"/>
+  <item id="1702186272" name="Pièce Jérémya"/>
+  <item id="123635653" name="Épée légendaire"/>
+  <item id="2656556671" name="Épée maudite"/>
+  <item id="3914393321" name="Épée sacrée"/>
+  <item id="1999926090" name="Âme du général"/>
+  <item id="3359708" name="Six-coups foudre"/>
+  <item id="2570719846" name="Orbe GHz"/>
+  <item id="3996984048" name="Pince de glace"/>
+  <item id="2122465121" name="Âme imbattable"/>
+  <item id="159715319" name="Cape de blizzard"/>
+  <item id="1765967378" name="Sceptre d'amour"/>
+  <item id="507885188" name="Poids"/>
+  <item id="2269964094" name="Lingot de platine"/>
+  <item id="4031502248" name="Poudre jouvence"/>
+  <item id="1848590859" name="Éclat démoniaque"/>
+  <item id="422081181" name="Orbe de dragon"/>
+  <item id="2149655335" name="Sabre déchaîné"/>
+  <item id="4146467761" name="Costume sable"/>
+  <item id="1738083872" name="Eau d'outre-monde"/>
+  <item id="278806198" name="Revue maudite"/>
+  <item id="1114625489" name="Assourdisseur"/>
+  <item id="896066887" name="Amnéspirateur"/>
+  <item id="2892084477" name="Perle de sirène"/>
+  <item id="3680928875" name="Sculpture d'ours"/>
+  <item id="1157763528" name="Lanterne carassin"/>
+  <item id="839197022" name="Lanterne du maître"/>
+  <item id="2869719268" name="Emblème d'or"/>
+  <item id="3691724914" name="Moule à takoyaki"/>
+  <item id="1286888931" name="Sable des dunes"/>
+  <item id="1001614709" name="Chapeau de paille"/>
+  <item id="1534387344" name="Statue en terre"/>
+  <item id="745788422" name="Hibiscus rouge"/>
+  <item id="3044705724" name="Riz plein d'amour"/>
+  <item id="3263018282" name="Essence maléfique"/>
+  <item id="1545150601" name="Âme tourbill."/>
+  <item id="723390495" name="Clé de voûte"/>
+  <item id="2987868581" name="Placard confortable"/>
+  <item id="813725687" name="Carte cadeau musique"/>
+  <item id="2844337741" name="Œuf d'or"/>
+  <item id="573954073" name="Orbe U Gargaros"/>
+  <item id="3141306787" name="Orbe U Ogralos"/>
+  <item id="3426466101" name="Orbe U Orqanos"/>
+  <item id="1381969046" name="Orbe U Crocho"/>
+  <item id="626531328" name="Orbe U Triptyk"/>
+  <item id="3159444922" name="Orbe U Carpitaine"/>
+  <item id="3411442988" name="Orbe U Grolos"/>
+  <item id="1542021309" name="Orbe U Jiganyan"/>
+  <item id="753815595" name="Orbe U Komak"/>
+  <item id="1277811150" name="Orbe U Chantiwhisp"/>
+  <item id="992930136" name="Orbe U Démophage"/>
+  <item id="2720512226" name="Orbe U McKraken"/>
+  <item id="3575679092" name="Orbe U Perpétua"/>
+  <item id="1262755287" name="Orbe U Potofeu"/>
+  <item id="1011035457" name="Orbe U Porcinator"/>
+  <item id="2773122299" name="Orbe U Hydreux"/>
+  <item id="3528281197" name="Orbe U Styx VI"/>
+  <item id="1123176956" name="Orbe U Blingos"/>
+  <item id="905273706" name="Orbe U Bogos"/>
+  <item id="1728350733" name="Orbe U Vampéric"/>
+  <item id="268679835" name="Orbe U Domniscian"/>
+  <item id="2299194145" name="Orbe U Extrabuki"/>
+  <item id="4262321079" name="Orbe U Filomène"/>
+  <item id="1617514004" name="Orbe U Marmonneur"/>
+  <item id="393117314" name="Orbe U Tata la Terreur"/>
+  <item id="2389126968" name="Orbe U Robonyan 28"/>
+  <item id="4183826350" name="Orbe U Omai Tourb."/>
+  <item id="1776222783" name="Orbe U Pattes Rouges"/>
+  <item id="517485225" name="Orbe U Zazel"/>
+  <item id="2116008780" name="Orbe U Capitaine T."/>
+  <item id="152603610" name="Orbe U Roi Shogun"/>
+  <item id="2417089120" name="Orbe U Domni. 2.0."/>
+  <item id="3877038838" name="Orbe U 3000"/>
+  <item id="2037546837" name="Orbe U Griffes Dorées"/>
+  <item id="242569155" name="Orbe U Or Tourb."/>
+  <item id="3733853915" name="Balle dorée"/>
+  <item id="938324974" name="Disque aléatoire"/>
+  <item id="1089110904" name="Ticket Armée de l'oni"/>
+  <item id="2934235732" name="Ticket Roi Shogun"/>
+</items>

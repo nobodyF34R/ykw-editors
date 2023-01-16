@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="2592718716" name="용맹한 조각"/>
+  <item id="1955061328" name="불가사의한 조각"/>
+  <item id="2648996709" name="호걸의 조각"/>
+  <item id="1944721993" name="프리티한 조각"/>
+  <item id="3814000600" name="따끈따끈한 조각"/>
+  <item id="3940764659" name="어스름한 조각"/>
+  <item id="82651871" name="불쾌한 조각"/>
+  <item id="58781382" name="뽀로롱한 조각"/>
+  <item id="2488416078" name="용맹한 정수"/>
+  <item id="2207419965" name="불가사의한 정수"/>
+  <item id="1839001361" name="호걸의 정수"/>
+  <item id="2231323172" name="프리티한 정수"/>
+  <item id="502668190" name="따끈따끈한 정수"/>
+  <item id="446422919" name="어스름한 정수"/>
+  <item id="4093147826" name="불쾌한 정수"/>
+  <item id="4103454379" name="뽀로롱한 정수"/>
+  <item id="1794190088" name="용맹한 결정"/>
+  <item id="2370373135" name="불가사의한 결정"/>
+  <item id="2831146494" name="호걸의 결정"/>
+  <item id="1186053330" name="프리티한 결정"/>
+  <item id="3637848433" name="따끈따끈한 결정"/>
+  <item id="3753438568" name="어스름한 결정"/>
+  <item id="834047044" name="불쾌한 결정"/>
+  <item id="4199429785" name="뽀로롱한 결정"/>
+  <item id="2949781991" name="용맹한 보옥"/>
+  <item id="1104967883" name="불가사의한 보옥"/>
+  <item id="2791593420" name="호걸의 보옥"/>
+  <item id="2980375743" name="프리티한 보옥"/>
+  <item id="682474757" name="따끈따끈한 보옥"/>
+  <item id="3512952154" name="어스름한 보옥"/>
+  <item id="3332627497" name="불쾌한 보옥"/>
+  <item id="920340573" name="뽀로롱한 보옥"/>
+  <item id="1605012883" name="도니맨 바가지"/>
+  <item id="3251509296" name="도니맨 밧줄"/>
+  <item id="3066636454" name="도니맨 수제 바가지"/>
+  <item id="801143068" name="도니맨 거친 밧줄"/>
+  <item id="1489455498" name="도니맨 철제 바가지"/>
+  <item id="3363329051" name="극상 도니맨 밧줄"/>
+  <item id="3212797069" name="뽑기해골의 골반"/>
+  <item id="2313308910" name="뽑기해골의 어금니"/>
+  <item id="4276451960" name="뽑기해골의 척추"/>
+  <item id="1743530946" name="뽑기해골의 늑골"/>
+  <item id="283843412" name="뽑기해골의 두개골"/>
+  <item id="2391772919" name="뽑기해골의 심장"/>
+  <item id="4186488417" name="나불할멈의 수건"/>
+  <item id="1619128283" name="나불할멈의 틀니"/>
+  <item id="394714957" name="나불할멈의 G수건"/>
+  <item id="2268709596" name="나불할멈의 고급 틀니"/>
+  <item id="4030657098" name="나불할멈의 투지 수건"/>
+  <item id="2432269231" name="나불할멈의 황금 틀니"/>
+  <item id="3892202297" name="낚신바늘"/>
+  <item id="2130123395" name="낚신의 낚신배"/>
+  <item id="166734357" name="대형 낚신바늘"/>
+  <item id="2543108022" name="낚신의 괴적선"/>
+  <item id="3767766816" name="낚신대"/>
+  <item id="2040192666" name="낚신의 보물선"/>
+  <item id="245231116" name="구렁이의 혀"/>
+  <item id="2653090717" name="구렁이의 눈알"/>
+  <item id="3911566091" name="구렁이의 고급 혀"/>
+  <item id="3151243372" name="구렁이의 왕눈알"/>
+  <item id="3436386554" name="극상 구렁이의 혀"/>
+  <item id="1440368960" name="구렁이의 검은 눈알"/>
+  <item id="584939990" name="빨간 도깨비뿔"/>
+  <item id="3166301301" name="빨간 방망이가시"/>
+  <item id="3418283235" name="뾰족한 빨간 도깨비뿔"/>
+  <item id="1387760985" name="대형 빨간 방망이가시"/>
+  <item id="632339919" name="극상 빨간 도깨비뿔"/>
+  <item id="3037700190" name="불꽃 빨간 방망이가시"/>
+  <item id="3255341256" name="뽑기해골G의 골반"/>
+  <item id="2731481389" name="뽑기해골G의 어금니"/>
+  <item id="3586664891" name="뽑기해골G의 척추"/>
+  <item id="1287747585" name="뽑기해골G의 늑골"/>
+  <item id="1002850455" name="뽑기해골G의 두개골"/>
+  <item id="2778914100" name="뽑기해골G의 심장"/>
+  <item id="3534089634" name="도식귀의 이빨"/>
+  <item id="1269611544" name="도식귀의 염주"/>
+  <item id="1017875598" name="도식귀의 튼튼한 이빨"/>
+  <item id="2887029023" name="도식귀의 푸른 염주"/>
+  <item id="3675496841" name="도식귀의 사랑니"/>
+  <item id="626460130" name="도식귀의 진주 염주"/>
+  <item id="1380988276" name="퍼렁 도깨비뿔"/>
+  <item id="3411633358" name="퍼렁 방망이가시"/>
+  <item id="3160298584" name="예리한 퍼렁 도깨비뿔"/>
+  <item id="574276091" name="강철 퍼렁 방망이가시"/>
+  <item id="1430122861" name="극상 퍼렁 도깨비뿔"/>
+  <item id="3426001111" name="얼음 퍼렁 방망이가시"/>
+  <item id="3140718657" name="죄수복 조각"/>
+  <item id="730631632" name="죄수의 쇠사슬"/>
+  <item id="1552661830" name="고급 죄수복 조각"/>
+  <item id="1011627171" name="튼튼한 죄수의 쇠사슬"/>
+  <item id="1263207477" name="극상 죄수복 조각"/>
+  <item id="3527562639" name="세련된 죄수의 쇠사슬"/>
+  <item id="2772788505" name="명식귀의 이빨"/>
+  <item id="992080058" name="명식귀의 염주"/>
+  <item id="1277607980" name="명식귀의 신비한 이빨"/>
+  <item id="3576664470" name="명식귀의 붉은 염주"/>
+  <item id="2720571648" name="명식귀의 사랑니"/>
+  <item id="848805009" name="명식귀의 사악한 염주"/>
+  <item id="1167100935" name="흑도니맨 바가지"/>
+  <item id="3964462557" name="흑도니맨 밧줄"/>
+  <item id="2605438283" name="흑도니맨 수제 바가지"/>
+  <item id="37913841" name="흑도니맨 거친 밧줄"/>
+  <item id="1967502439" name="흑도니맨 순금 바가지"/>
+  <item id="3944817092" name="흑도니맨 검은 밧줄"/>
+  <item id="2619740498" name="가마가마의 솥"/>
+  <item id="86982888" name="가마가마의 진액"/>
+  <item id="1915252862" name="가마가마의 검은 솥"/>
+  <item id="3801574895" name="저주의 가마가마 진액"/>
+  <item id="2509266297" name="가마가마의 순금 솥"/>
+  <item id="4116173980" name="축복의 가마가마 진액"/>
+  <item id="2186339338" name="망령 낚신바늘"/>
+  <item id="458864048" name="망령 낚신의 낚신배"/>
+  <item id="1818133798" name="대형 망령 낚신바늘"/>
+  <item id="4063891589" name="망령 낚신의 괴적선"/>
+  <item id="2235375635" name="대형 망령 낚신대"/>
+  <item id="473199017" name="망령 낚신의 전함"/>
+  <item id="1798521151" name="도롱뇽의 혀"/>
+  <item id="4220279982" name="도롱뇽의 눈알"/>
+  <item id="2357947448" name="도롱뇽의 고급 혀"/>
+  <item id="3732571999" name="도롱뇽의 왕눈알"/>
+  <item id="2843588553" name="극상 도롱뇽의 혀"/>
+  <item id="812967539" name="도롱뇽의 황금 눈알"/>
+  <item id="1198773989" name="마이티 도그 지갑"/>
+  <item id="3642180422" name="마이티 도그 폭탄"/>
+  <item id="2920313808" name="초 마이티 도그 지갑"/>
+  <item id="924394090" name="초 마이티 도그 폭탄"/>
+  <item id="1075712764" name="극 마이티 도그 지갑"/>
+  <item id="3500216173" name="극 마이티 도그 폭탄"/>
+  <item id="2812690427" name="레드 J 이빨"/>
+  <item id="3345069598" name="레드 J 방울"/>
+  <item id="2959509128" name="레드 J 단단한 이빨"/>
+  <item id="695195442" name="레드 J 고급 방울"/>
+  <item id="1583933348" name="레드 J 저주받은 이빨"/>
+  <item id="3222041095" name="레드 J 지옥 방울"/>
+  <item id="3070968465" name="모터 28호"/>
+  <item id="771887915" name="배터리 28호"/>
+  <item id="1493509053" name="강화 모터 28호"/>
+  <item id="3384426028" name="강화 배터리 28호"/>
+  <item id="3200061114" name="스페셜 모터 28호"/>
+  <item id="2283806937" name="스페셜 배터리 28호"/>
+  <item id="4280750159" name="실뜨귀신의 실"/>
+  <item id="1714307573" name="실뜨귀신의 보옥"/>
+  <item id="287928675" name="실뜨귀신의 거미줄"/>
+  <item id="2404246720" name="실뜨귀신의 푸른 보옥"/>
+  <item id="4165653590" name="실뜨귀신의 금빛 실"/>
+  <item id="1631815148" name="실뜨귀신의 붉은 보옥"/>
+  <item id="373601658" name="오징어 먹물"/>
+  <item id="2264639723" name="오징어 다리"/>
+  <item id="4059863165" name="고급 오징어 먹물"/>
+  <item id="2436567448" name="고급 오징어 다리"/>
+  <item id="3862700302" name="극상 오징어 먹물"/>
+  <item id="2134208692" name="극상 오징어 다리"/>
+  <item id="137510946" name="위스마시 덩어리"/>
+  <item id="2522273153" name="위스마시 오일"/>
+  <item id="3780240663" name="고급 위스마시 덩어리"/>
+  <item id="2019079341" name="고급 위스마시 오일"/>
+  <item id="257918011" name="특상 위스마시 덩어리"/>
+  <item id="2682296746" name="특상 위스마시 오일"/>
+  <item id="3907496252" name="로이드 가부 엽전"/>
+  <item id="3122020955" name="로이드 가부 등불"/>
+  <item id="3440472781" name="로이드 가부 금화"/>
+  <item id="1410868087" name="로이드 가부 큰 등불"/>
+  <item id="589239265" name="로이드 가부 주머니"/>
+  <item id="3178989122" name="로이드 가부 곰방대"/>
+  <item id="3397170900" name="다이아 해골의 골반"/>
+  <item id="1400235886" name="다이아 해골의 어금니"/>
+  <item id="611506168" name="다이아 해골의 척추"/>
+  <item id="3033385577" name="다이아 해골의 늑골"/>
+  <item id="3284859647" name="다이아 해골의 두개골"/>
+  <item id="2735567642" name="다이아 해골의 심장"/>
+  <item id="3557442444" name="증오의 우파우파 깃털"/>
+  <item id="1292046902" name="증오의 우파우파 정수"/>
+  <item id="973349536" name="슬픔의 우파우파 깃털"/>
+  <item id="2757801731" name="슬픔의 우파우파 정수"/>
+  <item id="3546777493" name="행운의 우파우파 깃털"/>
+  <item id="1248777775" name="추억의 우파우파 정수"/>
+  <item id="1030350521" name="껌정 도깨비뿔"/>
+  <item id="2916547368" name="껌정 방망이가시"/>
+  <item id="3671182270" name="뒤틀린 껌정 도깨비뿔"/>
+  <item id="613773269" name="강화 껌정 방망이가시"/>
+  <item id="1402101571" name="극상 껌정 도깨비뿔"/>
+  <item id="3399159545" name="심연 껌정 방망이가시"/>
+  <item id="3181133423" name="히노신의 기획서"/>
+  <item id="603499468" name="히노신의 사원"/>
+  <item id="1426037594" name="히노신의 비밀 기획서"/>
+  <item id="3455503072" name="히노신의 대리"/>
+  <item id="3136420470" name="히노신의 미래 기획서"/>
+  <item id="709814247" name="히노신의 부장"/>
+  <item id="1565120369" name="백사자의 발톱"/>
+  <item id="1032740500" name="백사자의 구슬"/>
+  <item id="1250520578" name="저주받은 백사자 장식"/>
+  <item id="3548397496" name="저주받은 백사자 구슬"/>
+  <item id="2760314670" name="백사자의 송곳니"/>
+  <item id="987994765" name="백사자의 황금 구슬"/>
+  <item id="1306831387" name="적마묘의 발톱"/>
+  <item id="3572366241" name="적마묘의 동전"/>
+  <item id="2750073655" name="재앙의 적마묘 장식"/>
+  <item id="861263526" name="적마묘의 은화"/>
+  <item id="1146283568" name="적마묘의 수염"/>
+  <item id="3993656196" name="적마묘의 금화"/>
+  <item id="2567793426" name="Zazelmare Claw"/>
+  <item id="277160" name="Zazelmare orb"/>
+  <item id="1996687934" name="S. Zazelmare Claw"/>
+  <item id="3915882397" name="S. Zazelmare Horn"/>
+  <item id="2657136395" name="U. Zazelmare Claw"/>
+  <item id="124386993" name="U. Zazelmare Horn"/>
+  <item id="1886309927" name="캡틴 헬멧"/>
+  <item id="3771847606" name="캡틴 로켓"/>
+  <item id="2547442464" name="Thunder Visor"/>
+  <item id="4145113797" name="다크 캡틴 로켓"/>
+  <item id="2148948563" name="강화 캡틴 헬멧"/>
+  <item id="421465065" name="강화 캡틴 로켓"/>
+  <item id="1847081855" name="King Bauble"/>
+  <item id="4034703068" name="King Gauntlets"/>
+  <item id="2273025610" name="S. King Bauble"/>
+  <item id="510840816" name="S. King Gauntlets"/>
+  <item id="1769340774" name="U. King Bauble"/>
+  <item id="4190823159" name="U. King Gauntlets"/>
+  <item id="326094650" name="King Moon Bauble"/>
+  <item id="2366331545" name="King Moon Gauntlet"/>
+  <item id="2395853409" name="Awoken Crown"/>
+  <item id="3694934278" name="Awoken Underling"/>
+  <item id="2872773008" name="S. Awoken Crown"/>
+  <item id="842160170" name="Awoken Sidekick"/>
+  <item id="1161128124" name="U. Awoken Crown"/>
+  <item id="3679583519" name="Awoken Dx Card"/>
+  <item id="2891369865" name="Robo 3000 Motor"/>
+  <item id="895458355" name="Robo 3000 Battery"/>
+  <item id="1113107621" name="Super Motor 3000"/>
+  <item id="3538399540" name="Super Battery 3000"/>
+  <item id="2782953890" name="Strong Horn"/>
+  <item id="3307669575" name="Tornado Spinner"/>
+  <item id="2988456145" name="Swirlious 18K Fang"/>
+  <item id="724134251" name="Swirlious Lucky Orb"/>
+  <item id="1546541565" name="Swirlious 24K Fang"/>
+  <item id="3259681886" name="Swirlious Holy Orb"/>
+  <item id="3041787080" name="Swirlious Gold Claw"/>
+  <item id="742698354" name="Swirlious Gold Orb"/>
+  <item id="1531157988" name="Golden Thick Rope"/>
+  <item id="3422322805" name="Golden Lucky Coin"/>
+  <item id="3170611427" name="Victory Rope"/>
+  <item id="2321981056" name="Gold Amulet Coin"/>
+  <item id="4251037206" name="Treasure Rope"/>
+  <item id="1684602796" name="Super Lucky Coin"/>
+  <item id="4195117583" name="Moonstone"/>
+</items>

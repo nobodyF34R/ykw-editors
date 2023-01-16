@@ -1,0 +1,475 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="2046011958" index="1" name="ぶようじん坊"/>
+  <item id="1799751128" index="2" name="がらあきん坊"/>
+  <item id="1918710937" index="3" name="さきがけの助"/>
+  <item id="3827602063" index="4" name="ダラケ刀"/>
+  <item id="1553528298" index="5" name="ザンバラ刀"/>
+  <item id="1166263467" index="6" name="ダララだんびら"/>
+  <item id="2859601318" index="7" name="かたづ家来"/>
+  <item id="2104724135" index="8" name="アライ魔将"/>
+  <item id="3100090952" index="9" name="獅子まる"/>
+  <item id="2992314685" index="10" name="万尾獅子"/>
+  <item id="315517635" index="11" name="おこ武者"/>
+  <item id="1643699290" index="12" name="くしゃ武者"/>
+  <item id="2028203291" index="13" name="なまはげ"/>
+  <item id="4136713569" index="14" name="ちからモチ"/>
+  <item id="4018801696" index="15" name="やきモチ"/>
+  <item id="933573919" index="16" name="あかなめ"/>
+  <item id="2400801402" index="17" name="おにぎり侍 (鬼斬り)"/>
+  <item id="4067337791" index="17" name="おにぎり侍 (おにぎり)"/>
+  <item id="182943320" index="18" name="焼きおに斬り (鬼斬り)"/>
+  <item id="2005961245" index="18" name="焼きおに斬り (防火壁)"/>
+  <item id="1150518150" index="19" name="カブトさん"/>
+  <item id="1445342312" index="20" name="ゲンマ将軍"/>
+  <item id="1329405225" index="21" name="黄泉ゲンスイ"/>
+  <item id="2645360020" index="22" name="泥田坊"/>
+  <item id="3318738370" index="23" name="ブリー隊長"/>
+  <item id="4003089165" index="24" name="メラメライオン"/>
+  <item id="4152457804" index="25" name="グラグライオン"/>
+  <item id="3702270351" index="26" name="とどろき獅子"/>
+  <item id="83617212" index="27" name="しょうブシ"/>
+  <item id="3158803161" index="28" name="まさむね"/>
+  <item id="4230997219" index="29" name="むらまさ"/>
+  <item id="2774315928" index="30" name="くさなぎ"/>
+  <item id="3645160255" index="31" name="ベンケイ"/>
+  <item id="3227486846" index="32" name="からくりベンケイ"/>
+  <item id="294016696" index="33" name="やまと"/>
+  <item id="144533497" index="34" name="カブキ猿"/>
+  <item id="1934455732" index="35" name="クワノ武士 (くそまじめ)"/>
+  <item id="238716913" index="35" name="クワノ武士 (闘将)"/>
+  <item id="3421574353" index="36" name="クワガ大将 (いあつかん)"/>
+  <item id="3062292628" index="36" name="クワガ大将 (闘将)"/>
+  <item id="3538560400" index="37" name="オオクワノ神"/>
+  <item id="408080822" index="38" name="鬼食い"/>
+  <item id="21618935" index="39" name="いのちとり"/>
+  <item id="2699998931" index="40" name="さかさっ傘"/>
+  <item id="4067932905" index="41" name="化け草履"/>
+  <item id="966511628" index="42" name="ズルズルづる"/>
+  <item id="545324365" index="43" name="かぜカモ"/>
+  <item id="3556401853" index="44" name="つづかな僧"/>
+  <item id="1311595012" index="45" name="やめたい師"/>
+  <item id="1463184197" index="46" name="もうせん和尚"/>
+  <item id="3146751539" index="47" name="わすれん帽"/>
+  <item id="2012164562" index="48" name="メゾン・ドワスレ"/>
+  <item id="2727653234" index="49" name="ばか頭巾"/>
+  <item id="1431073508" index="50" name="のっぺら坊"/>
+  <item id="53737814" index="51" name="わらえ姉"/>
+  <item id="438880279" index="52" name="青くちびる"/>
+  <item id="2354146817" index="53" name="バクロ婆"/>
+  <item id="2665791983" index="54" name="ババァーン"/>
+  <item id="2504679232" index="55" name="ドクロ婆"/>
+  <item id="2839163357" index="56" name="モテモ天"/>
+  <item id="887949668" index="57" name="モテマクール"/>
+  <item id="771110949" index="58" name="モテヌス"/>
+  <item id="2240145679" index="59" name="一旦ゴメン"/>
+  <item id="931616744" index="60" name="あやまり倒し"/>
+  <item id="1027182186" index="61" name="こえんら"/>
+  <item id="3478345399" index="62" name="えんらえんら"/>
+  <item id="2117842652" index="63" name="でんぱく小僧"/>
+  <item id="3330789817" index="64" name="でんじん"/>
+  <item id="3751600376" index="65" name="はつでんしん"/>
+  <item id="2403020941" index="66" name="おでんじん"/>
+  <item id="797712772" index="67" name="Ｕ．Ｓ．Ｏ．"/>
+  <item id="3250302461" index="68" name="アペリカン"/>
+  <item id="2263857027" index="69" name="うんがい鏡"/>
+  <item id="624097286" index="70" name="うんがい三面鏡"/>
+  <item id="2683602626" index="71" name="ヤミ鏡"/>
+  <item id="1045680358" index="72" name="まぼ老師"/>
+  <item id="659087783" index="73" name="かげ老師"/>
+  <item id="207991396" index="74" name="ほう老師"/>
+  <item id="2166860649" index="75" name="さとりちゃん"/>
+  <item id="2554108456" index="76" name="よつめ"/>
+  <item id="4133838287" index="77" name="セバスチャン"/>
+  <item id="1801742127" index="78" name="天狗"/>
+  <item id="1920947822" index="79" name="ほむら天狗"/>
+  <item id="160243924" index="80" name="キュウビ"/>
+  <item id="278270357" index="81" name="犬神"/>
+  <item id="2643369827" index="82" name="ぬえ"/>
+  <item id="2224401954" index="83" name="風魔猿"/>
+  <item id="5875674" index="84" name="ドキ土器"/>
+  <item id="2972796849" index="85" name="だるだるま"/>
+  <item id="2743396447" index="86" name="だるまっちょ"/>
+  <item id="3131037982" index="87" name="ゴリだるま"/>
+  <item id="3102064831" index="88" name="うらや飯"/>
+  <item id="3365620317" index="89" name="プライ丼"/>
+  <item id="1250891874" index="90" name="迷い車"/>
+  <item id="1881615672" index="91" name="だっせんしゃ"/>
+  <item id="886008723" index="92" name="ムリカベ (ブロッカー)"/>
+  <item id="1236836310" index="92" name="ムリカベ (がまん)"/>
+  <item id="2356350198" index="93" name="むりだ城 (ブロッカー)"/>
+  <item id="4043634867" index="93" name="むりだ城 (大地の壁)"/>
+  <item id="2506636727" index="94" name="シロカベ"/>
+  <item id="2352466200" index="95" name="グレるりん"/>
+  <item id="3428822818" index="96" name="ゴクドー"/>
+  <item id="4268346784" index="97" name="アニ鬼"/>
+  <item id="645579901" index="98" name="ヨロイさん"/>
+  <item id="2536523489" index="99" name="モノマネキン"/>
+  <item id="2663818008" index="100" name="トオセンボン"/>
+  <item id="2279445081" index="101" name="くろがねセンボン"/>
+  <item id="3245191076" index="102" name="モレゾウ"/>
+  <item id="3631652581" index="103" name="プルファント"/>
+  <item id="4282759791" index="104" name="ガマンモス"/>
+  <item id="317458484" index="105" name="雷蔵"/>
+  <item id="1207557386" index="106" name="ヒライ神"/>
+  <item id="2857398097" index="107" name="あせっか鬼"/>
+  <item id="3148741828" index="108" name="ふじのやま"/>
+  <item id="2729889157" index="109" name="さくらのじま"/>
+  <item id="2953011819" index="110" name="ドウカク"/>
+  <item id="2603495848" index="111" name="ギンカク"/>
+  <item id="2836943658" index="112" name="キンカク"/>
+  <item id="2184511721" index="113" name="プラチナカク"/>
+  <item id="51485601" index="114" name="武者かぶと (ガードくずし)"/>
+  <item id="2120642532" index="114" name="武者かぶと (闘将)"/>
+  <item id="295973967" index="115" name="かぶと無双 (ガードくずし)"/>
+  <item id="1825816586" index="115" name="かぶと無双 (闘将)"/>
+  <item id="146736398" index="116" name="オオツノノ神"/>
+  <item id="1047638545" index="117" name="ロボニャン"/>
+  <item id="661291856" index="118" name="ゴルニャン"/>
+  <item id="4051387260" index="119" name="だいだらぼっち"/>
+  <item id="3898634813" index="120" name="うみぼうず"/>
+  <item id="3991934337" index="121" name="大ガマ"/>
+  <item id="4109051072" index="122" name="大やもり"/>
+  <item id="3046311383" index="123" name="びきゃく"/>
+  <item id="1130078060" index="124" name="しゃれこ婦人"/>
+  <item id="4226283529" index="125" name="カラカラさん"/>
+  <item id="3808217416" index="126" name="ほね美人"/>
+  <item id="1237787673" index="127" name="セミまる"/>
+  <item id="162480675" index="128" name="カゲまる"/>
+  <item id="280261474" index="129" name="ヒグラシまる"/>
+  <item id="3825660024" index="130" name="さむガリ (かんつう)"/>
+  <item id="2574320701" index="130" name="さむガリ (氷の牙)"/>
+  <item id="1555732253" index="131" name="ガリ王子 (かんつう)"/>
+  <item id="567108440" index="131" name="ガリ王子 (アイスブロック)"/>
+  <item id="1168221788" index="132" name="あつガルル"/>
+  <item id="1609739110" index="133" name="つらがわり"/>
+  <item id="221209266" index="134" name="一つ目小僧"/>
+  <item id="2745600680" index="135" name="ジバニャン"/>
+  <item id="454749645" index="136" name="トゲニャン"/>
+  <item id="2261636468" index="137" name="ワルニャン"/>
+  <item id="1806853494" index="138" name="ブチニャン"/>
+  <item id="2490923674" index="139" name="ノガッパ (さぼりじょうず)"/>
+  <item id="3910110943" index="139" name="ノガッパ (水あそび)"/>
+  <item id="3424348876" index="140" name="たびガッパ (かんつう)"/>
+  <item id="2976685705" index="140" name="たびガッパ (かっぱのさら)"/>
+  <item id="3573570445" index="141" name="なみガッパ"/>
+  <item id="1957105065" index="142" name="コマさん"/>
+  <item id="1309620467" index="143" name="ししコマ"/>
+  <item id="1841052904" index="144" name="コマじろう (「うん」)"/>
+  <item id="164690412" index="144" name="コマじろう (雷の拳)"/>
+  <item id="2084133489" index="145" name="とらじろう (「うん」)"/>
+  <item id="863554742" index="145" name="とらじろう (雷の拳)"/>
+  <item id="643344010" index="146" name="バク"/>
+  <item id="3880700931" index="147" name="おバク様"/>
+  <item id="1061394379" index="148" name="ハク (こううん)"/>
+  <item id="1529828047" index="148" name="ハク (パーフェクトドリーム)"/>
+  <item id="1296499848" index="149" name="雨女"/>
+  <item id="4126893037" index="150" name="ばくそく"/>
+  <item id="1152508273" index="151" name="キュン太郎"/>
+  <item id="1443122847" index="152" name="ズキュキュン太"/>
+  <item id="1327464414" index="153" name="裏キュン太"/>
+  <item id="1048957631" index="154" name="ケマモン"/>
+  <item id="753303304" index="155" name="ゆきおんな"/>
+  <item id="2488932461" index="156" name="ふぶき姫"/>
+  <item id="2369857836" index="157" name="百鬼姫"/>
+  <item id="2056910010" index="158" name="河童"/>
+  <item id="1669514747" index="159" name="水虎"/>
+  <item id="3257242591" index="160" name="マスターニャーダ"/>
+  <item id="3989993334" index="161" name="うらやましろう"/>
+  <item id="4106831415" index="162" name="つまみぐいのすけ"/>
+  <item id="4228744724" index="163" name="ワカメくん"/>
+  <item id="1696488402" index="164" name="ワカメ☆スター"/>
+  <item id="3843471189" index="165" name="コンブさん"/>
+  <item id="3460031638" index="166" name="メカブちゃん"/>
+  <item id="3554148426" index="167" name="ひも爺 (ひもじすと)"/>
+  <item id="2930766863" index="167" name="ひも爺 (おにぎり)"/>
+  <item id="2344292380" index="168" name="くいい爺 (ひもじすと)"/>
+  <item id="4140622937" index="168" name="くいい爺 (おにぎり)"/>
+  <item id="3401789707" index="169" name="こめ爺"/>
+  <item id="3499113521" index="170" name="キズナメコ"/>
+  <item id="4173947755" index="171" name="キズナース"/>
+  <item id="810502914" index="172" name="砂夫 (すなお)"/>
+  <item id="1295564615" index="172" name="砂夫 (さらさらボディー)"/>
+  <item id="1081410574" index="173" name="大山砂夫 (すなお)"/>
+  <item id="1023602763" index="173" name="大山砂夫 (さらさらボディー)"/>
+  <item id="1747737428" index="174" name="から傘お化け"/>
+  <item id="1388358624" index="175" name="から傘魔人"/>
+  <item id="1879396303" index="176" name="びんボーイ"/>
+  <item id="2988432595" index="177" name="お金ナイダー"/>
+  <item id="1763606158" index="178" name="らくてん童"/>
+  <item id="3474428761" index="179" name="ざしきわらし"/>
+  <item id="3934047365" index="180" name="ざしきわら神"/>
+  <item id="3647396296" index="181" name="ぜっこう蝶"/>
+  <item id="3229477001" index="182" name="ゼッコウ蝶"/>
+  <item id="1641725613" index="183" name="サイコウ蝶"/>
+  <item id="2025951212" index="184" name="アゲアゲハ"/>
+  <item id="2007757884" index="185" name="くだん"/>
+  <item id="178502582" index="186" name="大くだん"/>
+  <item id="2297637991" index="187" name="どんちゃん"/>
+  <item id="3718397111" index="188" name="晴れ男"/>
+  <item id="4005046778" index="189" name="ホノボーノ"/>
+  <item id="3067820460" index="190" name="ヒョウヘンヌ"/>
+  <item id="2948597997" index="191" name="ヒョウヘンナ"/>
+  <item id="241655497" index="192" name="サンタク老師"/>
+  <item id="394030984" index="193" name="ふくろじじい"/>
+  <item id="2043791553" index="194" name="さいの目入道"/>
+  <item id="1623914880" index="195" name="ゾロ目大明神"/>
+  <item id="1233379831" index="196" name="雷オトン"/>
+  <item id="1352192182" index="197" name="絶オジイ"/>
+  <item id="4047472274" index="198" name="聖オカン"/>
+  <item id="3894720467" index="199" name="心オバア"/>
+  <item id="1254874508" index="200" name="麒麟"/>
+  <item id="1406201037" index="201" name="イッカク"/>
+  <item id="3562330446" index="202" name="みちび鬼"/>
+  <item id="3444566031" index="203" name="えこひい鬼"/>
+  <item id="1530285593" index="204" name="かたのり小僧"/>
+  <item id="3817482620" index="205" name="かたのり親方"/>
+  <item id="4203812925" index="206" name="ぎっくり男"/>
+  <item id="3770815751" index="207" name="ＴＥＴＳＵＹＡ"/>
+  <item id="876284733" index="208" name="ＫＡＮＴＥＴＳＵ"/>
+  <item id="3316206299" index="209" name="草くいおとこ"/>
+  <item id="3660506547" index="210" name="肉くいおとこ"/>
+  <item id="2120028613" index="211" name="ネガティブーン"/>
+  <item id="3336664736" index="212" name="ジャネガブーン"/>
+  <item id="3757721569" index="213" name="かゆかゆ"/>
+  <item id="1367906203" index="214" name="ジミー (おんみつ)"/>
+  <item id="754934750" index="214" name="ジミー (ひらひらボディー)"/>
+  <item id="166430669" index="215" name="カゲロー (おんみつ)"/>
+  <item id="1956410248" index="215" name="カゲロー (ひらひらボディー)"/>
+  <item id="284210828" index="216" name="カイム"/>
+  <item id="3658254148" index="217" name="ぎしんあん鬼 (うたがいのめ)"/>
+  <item id="2809885441" index="217" name="ぎしんあん鬼 (しりょくＡ)"/>
+  <item id="3273111045" index="218" name="ガ鬼"/>
+  <item id="3896174022" index="219" name="あまのじゃく"/>
+  <item id="1433276435" index="220" name="ヒキコウモリ"/>
+  <item id="3367577770" index="221" name="トジコウモリ"/>
+  <item id="3517061611" index="222" name="ヤドコウモリ"/>
+  <item id="1484681826" index="223" name="かりパックン"/>
+  <item id="4063461127" index="224" name="泥ボックン"/>
+  <item id="2098539966" index="225" name="まてんし"/>
+  <item id="1872790096" index="226" name="ひとまか仙人"/>
+  <item id="3608995125" index="227" name="りもこんかくし"/>
+  <item id="2030553752" index="228" name="ジコチュウ"/>
+  <item id="1655758881" index="229" name="ネクラマテング"/>
+  <item id="2074857824" index="230" name="ヨミテング"/>
+  <item id="935563782" index="231" name="リー夫人"/>
+  <item id="2407527779" index="232" name="ミツマタノヅチ"/>
+  <item id="2357685336" index="233" name="ガブニャン"/>
+  <item id="1961084999" index="234" name="魔ガサス"/>
+  <item id="1845033222" index="235" name="ウ魔"/>
+  <item id="2188351250" index="236" name="デビビル"/>
+  <item id="986968183" index="237" name="デビビラン"/>
+  <item id="600359222" index="238" name="虫歯伯爵"/>
+  <item id="1653768918" index="239" name="百々目鬼"/>
+  <item id="2072621975" index="240" name="きらめ鬼"/>
+  <item id="2059114061" index="241" name="ドケチング"/>
+  <item id="1671472908" index="242" name="ヤミまろ"/>
+  <item id="646882515" index="243" name="どんどろ"/>
+  <item id="456691514" index="244" name="イガイガグリ"/>
+  <item id="35896955" index="245" name="チクチクウニ"/>
+  <item id="2975326376" index="246" name="じめりんぼう"/>
+  <item id="1205583869" index="247" name="雨ふらし"/>
+  <item id="2823606761" index="248" name="こおりんぼう"/>
+  <item id="1589677756" index="249" name="化けあられ"/>
+  <item id="2204205610" index="250" name="たらりん"/>
+  <item id="1827192363" index="251" name="ヨコドリ"/>
+  <item id="1228096695" index="252" name="ぶんぶん鳥"/>
+  <item id="1978896234" index="253" name="はらおドリ (つやつやボディー)"/>
+  <item id="295651950" index="253" name="はらおドリ (ながもち)"/>
+  <item id="741375313" index="254" name="おともらし"/>
+  <item id="2984723944" index="255" name="爆音ならし"/>
+  <item id="2970821958" index="256" name="トホホギス"/>
+  <item id="2819101703" index="257" name="ブカッコウ"/>
+  <item id="2200258500" index="258" name="死神鳥"/>
+  <item id="856127353" index="259" name="じんめん犬"/>
+  <item id="1936658755" index="260" name="かおベロス"/>
+  <item id="1785995266" index="261" name="三途の犬"/>
+  <item id="2654127030" index="262" name="けうけげん"/>
+  <item id="156967565" index="263" name="ふさふさん"/>
+  <item id="65403663" index="264" name="認ＭＥＮ"/>
+  <item id="4284995736" index="265" name="ドンヨリーヌ"/>
+  <item id="881569405" index="266" name="口だけおんな"/>
+  <item id="764452668" index="267" name="おつぼね様 (さぼりじょうず)"/>
+  <item id="1241274936" index="267" name="おつぼね様 (くそまじめ)"/>
+  <item id="3143212138" index="268" name="じがじぃさん"/>
+  <item id="290477281" index="269" name="のらりくらり"/>
+  <item id="1128085621" index="270" name="おならず者"/>
+  <item id="1512442164" index="271" name="へこ鬼神"/>
+  <item id="2850829188" index="272" name="花子さん"/>
+  <item id="468618595" index="273" name="呪野花子"/>
+  <item id="4052689874" index="274" name="のぼせトンマン"/>
+  <item id="4219559696" index="275" name="おすべり様"/>
+  <item id="3801771601" index="276" name="おしっしょう"/>
+  <item id="1716938665" index="277" name="しわくちゃん"/>
+  <item id="3739877580" index="278" name="老いらん"/>
+  <item id="3354472845" index="279" name="ふじみ御前"/>
+  <item id="3912560894" index="280" name="フゥミン"/>
+  <item id="4029661631" index="281" name="おねむの精"/>
+  <item id="2740120070" index="282" name="土蜘蛛"/>
+  <item id="3125402439" index="283" name="女郎蜘蛛"/>
+  <item id="2251929050" index="284" name="ねちがえる"/>
+  <item id="3255300392" index="285" name="ツチノコ"/>
+  <item id="3501350598" index="286" name="フクリュウ"/>
+  <item id="3676094569" index="287" name="ツチノコパンダ"/>
+  <item id="2492209716" index="288" name="からみぞん"/>
+  <item id="3542900964" index="289" name="こんがらギャル"/>
+  <item id="3419633190" index="290" name="笑ウツボ"/>
+  <item id="3536340839" index="291" name="歌ウナギ"/>
+  <item id="4192539812" index="292" name="大蛇のツボ"/>
+  <item id="1298491007" index="293" name="キライギョ"/>
+  <item id="1607518609" index="294" name="ゾウオ"/>
+  <item id="1187772624" index="295" name="ギャクジョウオ"/>
+  <item id="1951624455" index="296" name="おもいだスッポン"/>
+  <item id="3248082698" index="297" name="おもいだ神"/>
+  <item id="4131864376" index="298" name="ムカムカデ"/>
+  <item id="2032511087" index="299" name="激ドラゴン"/>
+  <item id="1745762723" index="300" name="りゅーくん"/>
+  <item id="4124639514" index="301" name="龍神"/>
+  <item id="3972149339" index="302" name="青龍"/>
+  <item id="1325095005" index="303" name="にんぎょ"/>
+  <item id="1804601217" index="304" name="八百比丘尼"/>
+  <item id="1921726144" index="305" name="イザナミ"/>
+  <item id="1548679091" index="306" name="ろくろ首"/>
+  <item id="4138950550" index="307" name="ボー坊"/>
+  <item id="4020793047" index="308" name="しどろもどろ"/>
+  <item id="3882659572" index="309" name="ミチクサメ"/>
+  <item id="4269252533" index="310" name="トーシロザメ"/>
+  <item id="3205480098" index="311" name="ムダヅカイ"/>
+  <item id="2786365411" index="312" name="はらわシェル"/>
+  <item id="129227207" index="313" name="ナガバナ"/>
+  <item id="514386054" index="314" name="ナガバナナ"/>
+  <item id="3841102038" index="315" name="ホリュウ"/>
+  <item id="3438217826" index="316" name="つられたろう丸"/>
+  <item id="1025240221" index="317" name="しきるん蛇"/>
+  <item id="254643743" index="318" name="すねスネーク"/>
+  <item id="604036572" index="319" name="まむし行司"/>
+  <item id="2242350072" index="320" name="オロチ"/>
+  <item id="2629614265" index="321" name="影オロチ"/>
+  <item id="2534548502" index="322" name="ブシニャン"/>
+  <item id="799949683" index="323" name="しゅらコマ"/>
+  <item id="410039105" index="324" name="山吹鬼"/>
+  <item id="2337239218" index="325" name="ネタバレリーナ"/>
+  <item id="180690095" index="326" name="花さか爺"/>
+  <item id="3408336520" index="327" name="うんちく魔"/>
+  <item id="2994305994" index="328" name="イケメン犬"/>
+  <item id="1939567085" index="329" name="やまタン"/>
+  <item id="903818430" index="330" name="サファイニャン"/>
+  <item id="519208829" index="331" name="エメラルニャン"/>
+  <item id="132730428" index="332" name="ルビーニャン"/>
+  <item id="1219025147" index="333" name="トパニャン"/>
+  <item id="751050239" index="334" name="ダイヤニャン"/>
+  <item id="1510509852" index="335" name="メロンニャン"/>
+  <item id="1125366877" index="336" name="ミカンニャン"/>
+  <item id="1748955038" index="337" name="キウイニャン"/>
+  <item id="1898307295" index="338" name="ブドウニャン"/>
+  <item id="1046759448" index="339" name="イチゴニャン"/>
+  <item id="662665561" index="340" name="スイカニャン"/>
+  <item id="1467893876" index="341" name="ロボガッパ"/>
+  <item id="1842773294" index="342" name="ロボコマ"/>
+  <item id="3580500555" index="343" name="ロボＧ"/>
+  <item id="3353327013" index="344" name="ロボメン犬"/>
+  <item id="2137248448" index="345" name="ロボノコ"/>
+  <item id="3803507321" index="346" name="ロボりゅーくん"/>
+  <item id="1147659048" index="347" name="ワンダーニャン"/>
+  <item id="1322859178" index="348" name="ロボニャンＦ型"/>
+  <item id="1550619972" index="349" name="セーラーニャン"/>
+  <item id="3838898721" index="350" name="マスクドニャーン"/>
+  <item id="621845233" index="351" name="フユニャン"/>
+  <item id="3540910611" index="352" name="ダークニャン"/>
+  <item id="3165905527" index="353" name="ジバコマ"/>
+  <item id="68125970" index="354" name="ジェットニャン"/>
+  <item id="4244235962" index="355" name="厄怪"/>
+  <item id="3997976916" index="356" name="不怪"/>
+  <item id="1458581041" index="357" name="豪怪"/>
+  <item id="244530791" index="358" name="難怪"/>
+  <item id="3056556290" index="359" name="破怪"/>
+  <item id="829356020" index="360" name="あかなめ・怪"/>
+  <item id="2607234943" index="361" name="泥田坊・怪"/>
+  <item id="3382219868" index="362" name="えんらえんら・怪"/>
+  <item id="2085762641" index="363" name="河童・怪"/>
+  <item id="1860671935" index="364" name="から傘お化け・怪"/>
+  <item id="3386659250" index="365" name="ざしきわらし・怪"/>
+  <item id="1902130903" index="366" name="くだん・怪"/>
+  <item id="2566455645" index="367" name="けうけげん・怪"/>
+  <item id="1211144886" index="368" name="にんぎょ・怪"/>
+  <item id="1518679384" index="369" name="ろくろ首・怪"/>
+  <item id="2947172651" index="370" name="ジンギスギスカン"/>
+  <item id="3172984517" index="371" name="チンギスギスハン"/>
+  <item id="94601632" index="372" name="寝ブタ"/>
+  <item id="2557786393" index="373" name="ねぶた"/>
+  <item id="550035068" index="374" name="江戸っ子パンダ"/>
+  <item id="847081874" index="375" name="大江戸忍者パンダ"/>
+  <item id="2327910135" index="376" name="ひつま武士"/>
+  <item id="3533833889" index="377" name="ひまつ武士"/>
+  <item id="1780376004" index="378" name="たこやっ鬼"/>
+  <item id="712378366" index="379" name="たこや鬼神"/>
+  <item id="2462736539" index="380" name="砂ン丘入道"/>
+  <item id="2155859829" index="381" name="ノー砂ン丘入道"/>
+  <item id="952346640" index="382" name="すもうどん"/>
+  <item id="2769588393" index="383" name="横綱うどん"/>
+  <item id="497612748" index="384" name="あっそう山"/>
+  <item id="253581346" index="385" name="あそっ火山"/>
+  <item id="3080798023" index="386" name="ウキウキビ"/>
+  <item id="4022480657" index="387" name="トキメキビ"/>
+  <item id="2454454409" index="388" name="ガシャどくろ"/>
+  <item id="871569367" index="389" name="デカニャン"/>
+  <item id="1521258489" index="390" name="大後悔船長"/>
+  <item id="1741465161" index="391" name="台風の目"/>
+  <item id="3901510633" index="392" name="キン"/>
+  <item id="4198104071" index="393" name="ギン"/>
+  <item id="2938906937" index="394" name="トキヲ・ウバウネ"/>
+  <item id="544005273" index="395" name="スベテ・ウバウネ"/>
+  <item id="3750011266" index="396" name="ミツマタノヅチ"/>
+  <item id="3332346051" index="397" name="地獄大山椒"/>
+  <item id="3806627890" index="398" name="のぼせトンマン"/>
+  <item id="4227840371" index="399" name="おのぼり黒トン"/>
+  <item id="2772759266" index="400" name="つられたろう丸"/>
+  <item id="3160392611" index="401" name="第八三途丸"/>
+  <item id="2552552274" index="402" name="おぼろ入道"/>
+  <item id="2168449555" index="403" name="月影入道"/>
+  <item id="704907074" index="404" name="亡霊武者"/>
+  <item id="857683459" index="405" name="国宝・影正"/>
+  <item id="392441586" index="406" name="鬼くももん"/>
+  <item id="1355043874" index="407" name="やぶれかぶれ院長"/>
+  <item id="1239377251" index="408" name="キモナシ先生"/>
+  <item id="1839496594" index="409" name="イカカモネ議長"/>
+  <item id="4025805379" index="410" name="イカカモネ議長"/>
+  <item id="4142914306" index="411" name="ゲソヒゲール大臣"/>
+  <item id="1494274860" index="412" name="あおべえあかべえ"/>
+  <item id="1685125788" index="413" name="つづらチュン太夫"/>
+  <item id="3532964851" index="414" name="どんどろ"/>
+  <item id="3589044825" index="415" name="モテアマス"/>
+  <item id="2128058120" index="416" name="ゲートキーパー"/>
+  <item id="487388457" index="417" name="でるくいたたき"/>
+  <item id="1136115384" index="418" name="泥船ヨーソ郎"/>
+  <item id="4053230248" index="419" name="いくよね"/>
+  <item id="3810708806" index="420" name="くるよね"/>
+  <item id="3057064056" index="421" name="熟魔女ソラミ"/>
+  <item id="2721860424" index="422" name="あやとりさま"/>
+  <item id="2337747400" index="423" name="ガシャどくろＧ"/>
+  <item id="2692375051" index="424" name="ギヤマンどくろ"/>
+  <item id="3438758680" index="425" name="オモテナス"/>
+  <item id="1442497739" index="426" name="おびすさま"/>
+  <item id="349729319" index="427" name="赤鬼"/>
+  <item id="107863497" index="428" name="青鬼"/>
+  <item id="3201415852" index="429" name="黒鬼"/>
+  <item id="1456622790" index="430" name="ハナホ人"/>
+  <item id="3406132351" index="431" name="妖怪ガッツＫ"/>
+  <item id="1941508890" index="432" name="妖怪ガッツＦ"/>
+  <item id="2893525287" index="433" name="ジバニャンＳ"/>
+  <item id="2071344678" index="434" name="コマさんＳ"/>
+  <item id="1651312487" index="435" name="コマじろうＳ"/>
+  <item id="1002127958" index="436" name="ヤミキュウビ"/>
+  <item id="3079793018" index="437" name="ヒカリオロチ"/>
+  <item id="63412728" index="438" name="赤鬼"/>
+  <item id="3145465501" index="439" name="青鬼"/>
+  <item id="2848870771" index="440" name="黒鬼"/>
+  <item id="3370732257" index="441" name="レッドＪ"/>
+  <item id="4119421777" index="442" name="マイティードッグ"/>
+  <item id="2060031729" index="443" name="日ノ神"/>
+  <item id="1116052322" index="444" name="ドウ"/>
+  <item id="2403938353" index="445" name="ぶんぶく茶ヶ丸"/>
+  <item id="2989037953" index="446" name="枝魔目さま"/>
+  <item id="1202306881" index="447" name="暴走マッタナ氏"/>
+  <item id="640401" index="448" name="カブキロイド"/>
+</items>

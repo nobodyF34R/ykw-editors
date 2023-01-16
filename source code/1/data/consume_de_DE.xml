@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items>
+  <item id="1803927674" name="Pflaum.-Reisball"/>
+  <item id="4069298624" name="Senfbl.-Reisball"/>
+  <item id="2240520534" name="Rogen-Reisball"/>
+  <item id="468661493" name="Shrimp-Reisball"/>
+  <item id="1783081549" name="Sandwich"/>
+  <item id="4082039799" name="Creme-Brötchen"/>
+  <item id="1831497300" name="Curry-Brötchen"/>
+  <item id="2219428705" name="Baguette"/>
+  <item id="439180994" name="Bähgel"/>
+  <item id="1744901140" name="10 ct-Kaugummi"/>
+  <item id="4043851182" name="Zähes Bonbon"/>
+  <item id="2249159992" name="Rie.-Reiscracker"/>
+  <item id="409723035" name="Fruchtdrops"/>
+  <item id="1869402125" name="Rasureis"/>
+  <item id="4133847479" name="Kandierter Apfel"/>
+  <item id="1774419491" name="Milch"/>
+  <item id="4039782297" name="Kaffeemilch"/>
+  <item id="2278366991" name="Fruchtmilch"/>
+  <item id="430541484" name="Superfr. Milch"/>
+  <item id="1821141158" name="Y-Cola"/>
+  <item id="4119148828" name="Seelentee"/>
+  <item id="2189560202" name="Inspirator Y"/>
+  <item id="484875305" name="Volt eXtrem"/>
+  <item id="1833829009" name="Hamburger"/>
+  <item id="4098315051" name="Cheeseburger"/>
+  <item id="2202035133" name="Doppelburger"/>
+  <item id="488961566" name="Big Schmeck"/>
+  <item id="1858787071" name="Instant-Suppe"/>
+  <item id="4156786501" name="Nudeln in Brühe"/>
+  <item id="2160375763" name="Deluxe-Suppe"/>
+  <item id="513811056" name="Nudel-Allerlei"/>
+  <item id="1683291125" name="Gyoza"/>
+  <item id="4250774095" name="Leber mit Lauch"/>
+  <item id="2321193689" name="Krabben-Omelett"/>
+  <item id="339611514" name="Chili-Garnelen"/>
+  <item id="3539717416" name="Karotte"/>
+  <item id="1274190994" name="Gurke"/>
+  <item id="1022733316" name="Bambussprosse"/>
+  <item id="2727426471" name="Kiefernpilz"/>
+  <item id="3502076785" name="Hühnerkeule"/>
+  <item id="1236542155" name="Bauchspeck"/>
+  <item id="1051923037" name="Rinderzunge"/>
+  <item id="2698479614" name="Marmori. Fleisch"/>
+  <item id="3514767686" name="Getrock. Makrele"/>
+  <item id="1215711484" name="Glbschw.makrele"/>
+  <item id="1064401002" name="Frischer Seeigel"/>
+  <item id="2702568905" name="Feinst. Thunfisch"/>
+  <item id="320924352" name="Kleine Klugel"/>
+  <item id="2317990778" name="Mittlere Klugel"/>
+  <item id="4247686124" name="Große Klugel"/>
+  <item id="1665801807" name="Riesenklugel"/>
+  <item id="340602585" name="Heilige Klugel"/>
+  <item id="397252210" name="Maratonikum"/>
+  <item id="2393163720" name="Maratonikum+"/>
+  <item id="279199406" name="Angrf.almanach"/>
+  <item id="2309844756" name="Tolle Techniken"/>
+  <item id="4272578434" name="Spirit. Studien"/>
+  <item id="469268883" name="Ärmel hoch"/>
+  <item id="2196842537" name="Faust&amp;Fuß, Bd. 1"/>
+  <item id="4126546111" name="Faust&amp;Fuß, Bd. 2"/>
+  <item id="1804766492" name="Technik-Führer"/>
+  <item id="479575434" name="Technik-Lexikon"/>
+  <item id="2241653808" name="Besser blocken"/>
+  <item id="4070300838" name="Alles auf Abwehr"/>
+  <item id="1646575927" name="Heil mich, Eng."/>
+  <item id="354677153" name="Mach's gut, Eng."/>
+  <item id="1977907268" name="Der kl. Fiesling"/>
+  <item id="48449746" name="So richtig fies"/>
+  <item id="2615810408" name="Helfers Helfer #7"/>
+  <item id="3974965758" name="Helfers Helfer S"/>
+  <item id="367732779" name="Stärketalisman"/>
+  <item id="2363652497" name="Geistestalisman"/>
+  <item id="4226107655" name="Abwehrtalisman"/>
+  <item id="1703009444" name="Tempotalisman"/>
+  <item id="338248220" name="Fiese Medizin"/>
+  <item id="2367689638" name="Bittere Medizin"/>
+  <item id="4196868912" name="Mächtig. Medizin"/>
+  <item id="376437829" name="Fluchthelferlein"/>
+  <item id="291919001" name="Bronzepuppe"/>
+  <item id="2288977187" name="Silberpuppe"/>
+  <item id="4285019573" name="Goldpuppe"/>
+  <item id="2908180302" name="Fischköder"/>
+  <item id="878583540" name="Dunkler Sirup"/>
+  <item id="2592718716" name="Rote Münze"/>
+  <item id="58781382" name="Gelbe Münze"/>
+  <item id="1955061328" name="Orange Münze"/>
+  <item id="3940764659" name="Rosa Münze"/>
+  <item id="2648996709" name="Grüne Münze"/>
+  <item id="82651871" name="Blaue Münze"/>
+  <item id="1944721993" name="Lila Münze"/>
+  <item id="3814000600" name="Hellblaue Münze"/>
+  <item id="3141306787" name="Saphirmünze"/>
+  <item id="3426466101" name="Smaragdmünze"/>
+  <item id="1381969046" name="Rubinmünze"/>
+  <item id="626531328" name="Topasmünze"/>
+  <item id="573954073" name="Diamantmünze"/>
+  <item id="3159444922" name="Jubelmünze"/>
+  <item id="3411442988" name="5-Sterne-Münze"/>
+  <item id="1542021309" name="Spezialmünze"/>
+  <item id="2895455609" name="Tanzsternchen"/>
+  <item id="440013732" name="Legend. Klinge"/>
+  <item id="2201174558" name="Verfluchte Klinge"/>
+  <item id="2220787207" name="Heilige Klinge"/>
+  <item id="4097077896" name="Seele d. Gener."/>
+  <item id="1783686955" name="Liebesknaller"/>
+  <item id="492296125" name="Elektrokugel"/>
+  <item id="1676061440" name="Unbezw. Seele"/>
+  <item id="2586342239" name="Platinbarren"/>
+  <item id="350329750" name="Schneest.-Umhg"/>
+  <item id="1948652147" name="Zepter der Liebe"/>
+  <item id="4082742929" name="Gletsch.klammer"/>
+  <item id="52503269" name="Trainingshanteln"/>
+  <item id="1934349930" name="Splitter d. Bösen"/>
+  <item id="3979297737" name="Jugendpuder"/>
+  <item id="3742966091" name="Tropf. d. Freude"/>
+  <item id="2638591814" name="Drachenkugel"/>
+  <item id="3930228688" name="Weihwasser"/>
+  <item id="2063440449" name="Schäb. Schuppe"/>
+  <item id="234531543" name="Viptor-Aura"/>
+  <item id="1594573232" name="Abgen. Handsch."/>
+  <item id="671904038" name="Gespru. Kristall"/>
+  <item id="2969903260" name="Kristallsplitter"/>
+  <item id="3322023946" name="Sauberfix"/>
+  <item id="1483113897" name="Vergilb. Schärpe"/>
+  <item id="794932543" name="Schlichter Ring"/>
+  <item id="3060327557" name="Blanker Talisman"/>
+  <item id="3245331475" name="Rubin"/>
+  <item id="1372637570" name="Aquamarin"/>
+  <item id="651688212" name="Topas"/>
+  <item id="1175482609" name="Turmalin"/>
+  <item id="823607399" name="Opal"/>
+  <item id="2820542941" name="Smaragd"/>
+</items>

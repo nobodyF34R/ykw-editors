@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="2170728737" name="Chocoladereep"/>
+  <item id="1803927674" name="Pruimenrijstbal"/>
+  <item id="4069298624" name="Rijstbal in blad"/>
+  <item id="2240520534" name="Kuitrijstbal"/>
+  <item id="468661493" name="Garnalenrijstbal"/>
+  <item id="1783081549" name="Sandwich"/>
+  <item id="4082039799" name="Puddingbroodje"/>
+  <item id="1831497300" name="Currybroodje"/>
+  <item id="2219428705" name="Stokbrood"/>
+  <item id="439180994" name="Bah-bagel"/>
+  <item id="1744901140" name="Kauwgom"/>
+  <item id="4043851182" name="Kauwbonbon"/>
+  <item id="2249159992" name="Grote cracker"/>
+  <item id="409723035" name="Fruitsnoepjes"/>
+  <item id="1869402125" name="Geschaafd ijs"/>
+  <item id="4133847479" name="Karamelappel"/>
+  <item id="1774419491" name="Melk"/>
+  <item id="4039782297" name="Koffiemelk"/>
+  <item id="2278366991" name="Fruitmelk"/>
+  <item id="430541484" name="Verse melk"/>
+  <item id="1821141158" name="Y-Cola"/>
+  <item id="4119148828" name="Zielsthee"/>
+  <item id="2189560202" name="Inspirator Y"/>
+  <item id="484875305" name="VoltXtreem"/>
+  <item id="1833829009" name="Hamburger"/>
+  <item id="4098315051" name="Cheeseburger"/>
+  <item id="2202035133" name="Dubbele burger"/>
+  <item id="488961566" name="Mjamburger"/>
+  <item id="1858787071" name="Instant noedels"/>
+  <item id="4156786501" name="Noedels met vlees"/>
+  <item id="2160375763" name="Noedels speciaal"/>
+  <item id="513811056" name="Noedels compleet"/>
+  <item id="1704366530" name="Komkommerrol"/>
+  <item id="4238327928" name="Garnalensushi"/>
+  <item id="2342056174" name="Zalmeitjessushi"/>
+  <item id="368862541" name="Tonijnsushi"/>
+  <item id="1683291125" name="Dumplings"/>
+  <item id="4250774095" name="Lever met ui"/>
+  <item id="2321193689" name="Krabommelet"/>
+  <item id="339611514" name="Chiligarnalen"/>
+  <item id="1664696300" name="Mabu-tofu"/>
+  <item id="3539717416" name="Wortel"/>
+  <item id="1274190994" name="Komkommer"/>
+  <item id="1022733316" name="Bamboescheut"/>
+  <item id="2727426471" name="Matsutake"/>
+  <item id="3502076785" name="Kippendij"/>
+  <item id="1236542155" name="Spek"/>
+  <item id="1051923037" name="Rundertong"/>
+  <item id="2698479614" name="Sukadelapjes"/>
+  <item id="3514767686" name="Gedroogde vis"/>
+  <item id="1215711484" name="Geelvinmakreel"/>
+  <item id="1064401002" name="Verse zee-egel"/>
+  <item id="2702568905" name="Topkwaliteit tonijn"/>
+  <item id="3559919555" name="Kipcurry"/>
+  <item id="1295605369" name="Lamscurry"/>
+  <item id="977170159" name="Viscurry"/>
+  <item id="2757425996" name="Curry speciaal"/>
+  <item id="3546139610" name="Groentecurry"/>
+  <item id="3589432820" name="Kwarktaart"/>
+  <item id="1291531342" name="Aardbeientaart"/>
+  <item id="1006372056" name="Pannenkoeken"/>
+  <item id="2778239355" name="Jumboparfait"/>
+  <item id="3533677037" name="Zoete rijstcake"/>
+  <item id="1268183127" name="Spookdonut"/>
+  <item id="1016185025" name="Geestdonut"/>
+  <item id="3618954157" name="Gestoomde rettich"/>
+  <item id="1321044503" name="Gekookt ei"/>
+  <item id="968538753" name="Malse vleesspies"/>
+  <item id="2816356130" name="Topkwaliteit oden"/>
+  <item id="3598102938" name="Soba-noedels"/>
+  <item id="3710580391" name="Aardappelchips"/>
+  <item id="1143187229" name="Lekkere hapjes"/>
+  <item id="858036107" name="Tortillachips"/>
+  <item id="2906653224" name="Pepermuntjes"/>
+  <item id="2370076515" name="Minibal"/>
+  <item id="320924352" name="Kleine bal"/>
+  <item id="2317990778" name="Middelgrote bal"/>
+  <item id="4247686124" name="Grote bal"/>
+  <item id="1665801807" name="Megabal"/>
+  <item id="340602585" name="Heilige bal"/>
+  <item id="397252210" name="StimuXtract"/>
+  <item id="2393163720" name="StimuXtract Alfa"/>
+  <item id="279199406" name="Vechtgeheimen"/>
+  <item id="2309844756" name="Toptechnieken"/>
+  <item id="4272578434" name="Zielsgeheimen"/>
+  <item id="469268883" name="Serieus leven"/>
+  <item id="2196842537" name="Kopvoetkarate"/>
+  <item id="4126546111" name="Karatepraktijken"/>
+  <item id="1804766492" name="Techniboek"/>
+  <item id="479575434" name="Techniclopedie"/>
+  <item id="2241653808" name="Verdedigingsboek"/>
+  <item id="4070300838" name="Verdedigingsbijbel"/>
+  <item id="1646575927" name="Engeltjesboek"/>
+  <item id="354677153" name="Tederheidsboek"/>
+  <item id="1977907268" name="Vloekboek"/>
+  <item id="48449746" name="Topvloekboek"/>
+  <item id="2615810408" name="Hulpboek"/>
+  <item id="3974965758" name="Extrahulpboek"/>
+  <item id="367732779" name="Kra.-talisman"/>
+  <item id="2363652497" name="Gst.-talisman"/>
+  <item id="4226107655" name="Vdg.-talisman"/>
+  <item id="1703009444" name="Snd.-talisman"/>
+  <item id="338248220" name="Vies medicijn"/>
+  <item id="2367689638" name="Bitter medicijn"/>
+  <item id="4196868912" name="Machtig medicijn"/>
+  <item id="376437829" name="Ontsnappingspop"/>
+  <item id="1628217366" name="IJzeren pop"/>
+  <item id="291919001" name="Bronzen pop"/>
+  <item id="2288977187" name="Zilveren pop"/>
+  <item id="4285019573" name="Gouden pop"/>
+  <item id="369856640" name="Platina pop"/>
+  <item id="2908180302" name="Visaas"/>
+  <item id="878583540" name="Zwarte siroop"/>
+  <item id="2895455609" name="Dansende ster"/>
+  <item id="899445955" name="Lot"/>
+  <item id="1117471829" name="Muziekkaart"/>
+  <item id="1535145236" name="Bronzen label"/>
+  <item id="3320111287" name="Zilveren label"/>
+  <item id="3001274401" name="Gouden label"/>
+  <item id="747062658" name="Essence v.h. kwaad"/>
+  <item id="440013732" name="Epische kling"/>
+  <item id="2201174558" name="Vervloekte kling"/>
+  <item id="2220787207" name="Heilige kling"/>
+  <item id="4097077896" name="Generaalsziel"/>
+  <item id="1783686955" name="Knallende liefde"/>
+  <item id="492296125" name="Elektrobal"/>
+  <item id="1676061440" name="Onsterfelijke ziel"/>
+  <item id="2586342239" name="Platinabaar"/>
+  <item id="350329750" name="Sneeuwstormcape"/>
+  <item id="1948652147" name="Liefdesscepter"/>
+  <item id="4082742929" name="IJzige haarclip"/>
+  <item id="52503269" name="Halter"/>
+  <item id="1934349930" name="Scherf v.h. kwaad"/>
+  <item id="3979297737" name="Verjongingspoeder"/>
+  <item id="2638591814" name="Drakenbal"/>
+  <item id="1098757352" name="Grimmig zwaard"/>
+  <item id="913998974" name="Zandpak"/>
+  <item id="2943604164" name="Wonderwater"/>
+  <item id="3631539538" name="Vervloekt dagboek"/>
+  <item id="1221327043" name="Hoorn"/>
+  <item id="1070385237" name="Geheugenzuiger"/>
+  <item id="156362294" name="Zeemeerminparel"/>
+  <item id="1771466707" name="Liefdesrijstbal"/>
+  <item id="2119620256" name="Kapotte bel"/>
+  <item id="2033914553" name="Gehavend zwaard"/>
+  <item id="3761390339" name="Ruwe wetsteen"/>
+  <item id="2536862613" name="Sinistere wetsteen"/>
+  <item id="126512644" name="Sublieme wetsteen"/>
+  <item id="273340279" name="Houtsnijwerk beer"/>
+  <item id="1733158881" name="Goudvislantaarn"/>
+  <item id="4265915995" name="Meesterlantaarn"/>
+  <item id="2302904013" name="Gouden embleem"/>
+  <item id="388436846" name="Takoyaki-vorm"/>
+  <item id="1612719096" name="Duinzand"/>
+  <item id="4180243010" name="Klassieke parasol"/>
+  <item id="2385396436" name="Kleifiguur"/>
+  <item id="512843589" name="Rode hibiscus"/>
+  <item id="3881797402" name="Helend kruid"/>
+  <item id="2421733260" name="Stinkend kruid"/>
+  <item id="238821935" name="Bitter kruid"/>
+  <item id="2592718716" name="Rode munt"/>
+  <item id="58781382" name="Gele munt"/>
+  <item id="1955061328" name="Oranje munt"/>
+  <item id="3940764659" name="Roze munt"/>
+  <item id="2648996709" name="Groene munt"/>
+  <item id="82651871" name="Blauwe munt"/>
+  <item id="1944721993" name="Paarse munt"/>
+  <item id="3814000600" name="Lichtblauwe munt"/>
+  <item id="3411442988" name="Vijf-sterrenmunt"/>
+  <item id="1542021309" name="Speciale munt"/>
+  <item id="753815595" name="Munt (Yo)"/>
+  <item id="1277811150" name="Munt (Kai)"/>
+  <item id="992930136" name="Munt (Op)"/>
+  <item id="2720512226" name="Munt (Roep)"/>
+  <item id="905273706" name="Munt (Bloem)"/>
+  <item id="1728350733" name="Munt (Vogel)"/>
+  <item id="268679835" name="Munt (Wind)"/>
+  <item id="2299194145" name="Munt (Maan)"/>
+  <item id="4262321079" name="Glittermunt"/>
+  <item id="1617514004" name="Munt (Noord)"/>
+  <item id="393117314" name="Munt (Noordoost)"/>
+  <item id="2389126968" name="Munt (Oost)"/>
+  <item id="4183826350" name="Munt (Centraal)"/>
+  <item id="1776222783" name="Munt (West)"/>
+  <item id="517485225" name="Munt (Berg)"/>
+  <item id="2116008780" name="Munt (Zuid)"/>
+  <item id="152603610" name="Munt (M.westen)"/>
+  <item id="2417089120" name="Munt (Eiland)"/>
+  <item id="3877038838" name="Mysterieuze munt"/>
+  <item id="2037546837" name="Munt (Everzwijn)"/>
+  <item id="242569155" name="Munt (Hert)"/>
+  <item id="2541493881" name="Munt (Vlinder)"/>
+  <item id="3766169327" name="Opgewekte munt"/>
+  <item id="3707752950" name="Rood muntdeel"/>
+  <item id="2885214560" name="Geel muntdeel"/>
+  <item id="854700250" name="Oranje muntdeel"/>
+  <item id="1173782604" name="Roze muntdeel"/>
+  <item id="3578371549" name="Groen muntdeel"/>
+  <item id="2723065163" name="Blauw muntdeel"/>
+  <item id="3263767726" name="Paars muntdeel"/>
+  <item id="3045987384" name="Lichtbl. muntdeel"/>
+  <item id="1200047969" name="Rood kistje"/>
+  <item id="1178938710" name="Portaalbal"/>
+  <item id="2285637778" name="Noko-bal"/>
+  <item id="288702760" name="Kyubi-bal"/>
+</items>

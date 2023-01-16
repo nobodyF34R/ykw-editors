@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items>
+    <item id="1803927674" name="Arroz ciruelas" />
+    <item id="4069298624" name="Arroz en col" />
+    <item id="2240520534" name="Arroz huevas" />
+    <item id="468661493" name="Arroz gambas" />
+    <item id="1783081549" name="Sándwich" />
+    <item id="4082039799" name="Bollo con crema" />
+    <item id="1831497300" name="Pan de curry" />
+    <item id="2219428705" name="Baguette" />
+    <item id="439180994" name="Rosca lenguaraz" />
+    <item id="1744901140" name="Chicle de 10" />
+    <item id="4043851182" name="Caram. pegajoso" />
+    <item id="2249159992" name="Galleta gigante" />
+    <item id="409723035" name="Caram. de frutas" />
+    <item id="1869402125" name="Hela. granizado" />
+    <item id="4133847479" name="Manz. caramelo" />
+    <item id="1774419491" name="Leche" />
+    <item id="4039782297" name="Café con leche" />
+    <item id="2278366991" name="Leche de frutas" />
+    <item id="430541484" name="Leche fresca" />
+    <item id="1821141158" name="Y-Cola" />
+    <item id="4119148828" name="Té relajante" />
+    <item id="2189560202" name="Insomnia Y" />
+    <item id="484875305" name="Energicina" />
+    <item id="1833829009" name="Hamburguesa" />
+    <item id="4098315051" name="Hambur. queso" />
+    <item id="2202035133" name="Hambur. doble" />
+    <item id="488961566" name="Hambur. Ñam" />
+    <item id="1858787071" name="Vaso de ramen" />
+    <item id="4156786501" name="Ramen cerdo" />
+    <item id="2160375763" name="Ramen deluxe" />
+    <item id="513811056" name="Ramen completo" />
+    <item id="1683291125" name="Empanad. chinas" />
+    <item id="4250774095" name="Hígado cebollino" />
+    <item id="2321193689" name="Tortilla cangrejo" />
+    <item id="339611514" name="Gambas picantes" />
+    <item id="3539717416" name="Zanahoria" />
+    <item id="1274190994" name="Pepino" />
+    <item id="1022733316" name="Brote de bambú" />
+    <item id="2727426471" name="Seta japonesa" />
+    <item id="3502076785" name="Muslo de pollo" />
+    <item id="1236542155" name="Panceta" />
+    <item id="1051923037" name="Lengua de vaca" />
+    <item id="2698479614" name="Carne veteada" />
+    <item id="3514767686" name="Caballa salazón" />
+    <item id="1215711484" name="Jurel" />
+    <item id="1064401002" name="Erizo fresco" />
+    <item id="2702568905" name="Atún selecto" />
+    <item id="320924352" name="Exporbe S" />
+    <item id="2317990778" name="Exporbe M" />
+    <item id="4247686124" name="Exporbe L" />
+    <item id="1665801807" name="Exporbe XL" />
+    <item id="340602585" name="Exporbe sagrado" />
+    <item id="397252210" name="Resistina" />
+    <item id="2393163720" name="Resistina Alfa" />
+    <item id="279199406" name="Golpes secretos" />
+    <item id="2309844756" name="Técnicas a tope" />
+    <item id="4272578434" name="Secretos alma" />
+    <item id="469268883" name="Date vida" />
+    <item id="2196842537" name="Kárate va" />
+    <item id="4126546111" name="Kárate doy" />
+    <item id="1804766492" name="Tecnicedario" />
+    <item id="479575434" name="Tecnipedia" />
+    <item id="2241653808" name="En guardia" />
+    <item id="4070300838" name="Defensa gloriosa" />
+    <item id="1646575927" name="Ángel sanador" />
+    <item id="354677153" name="Adiós, angelito" />
+    <item id="1977907268" name="Cansino y paz" />
+    <item id="48449746" name="Código Cansino" />
+    <item id="2615810408" name="Coop. hoy n.º 7" />
+    <item id="3974965758" name="Esp. Cooperar" />
+    <item id="367732779" name="Talismán fuerza" />
+    <item id="2363652497" name="Talismán espíritu" />
+    <item id="4226107655" name="Talism. defensa" />
+    <item id="1703009444" name="Talismán veloz" />
+    <item id="338248220" name="Medi. asquerosa" />
+    <item id="2367689638" name="Medicina amarga" />
+    <item id="4196868912" name="Medic. increíble" />
+    <item id="376437829" name="Muñeco de trapo" />
+    <item id="291919001" name="Muñeco bronce" />
+    <item id="2288977187" name="Muñeco de plata" />
+    <item id="4285019573" name="Muñeco de oro" />
+    <item id="2908180302" name="Cebo para peces" />
+    <item id="878583540" name="Sirope negro" />
+    <item id="2592718716" name="Moneda roja" />
+    <item id="58781382" name="Moneda amarilla" />
+    <item id="1955061328" name="Moneda naranja" />
+    <item id="3940764659" name="Moneda rosa" />
+    <item id="2648996709" name="Moneda verde" />
+    <item id="82651871" name="Moneda azul" />
+    <item id="1944721993" name="Moneda morada" />
+    <item id="3814000600" name="Mon. turquesa" />
+    <item id="3141306787" name="Moneda zafiro" />
+    <item id="3426466101" name="Mon. esmeralda" />
+    <item id="1381969046" name="Moneda de rubí" />
+    <item id="626531328" name="Moneda topacio" />
+    <item id="573954073" name="Mon. diamante" />
+    <item id="3159444922" name="Moneda emoción" />
+    <item id="3411442988" name="Mon. 5 estrellas" />
+    <item id="1542021309" name="Moneda especial" />
+    <item id="2895455609" name="Estrella brillante" />
+    <item id="440013732" name="Esp. legendaria" />
+    <item id="2201174558" name="Espada maldita" />
+    <item id="2220787207" name="Espada sagrada" />
+    <item id="4097077896" name="Alma de general" />
+    <item id="1783686955" name="Poten. de amor" />
+    <item id="492296125" name="Orbe eléctrico" />
+    <item id="1676061440" name="Alma invencible" />
+    <item id="2586342239" name="Lingote platino" />
+    <item id="350329750" name="Capa de ventisca" />
+    <item id="1948652147" name="Cetro del amor" />
+    <item id="4082742929" name="Horquilla glacial" />
+    <item id="52503269" name="Pesas pesadas" />
+    <item id="1934349930" name="Esquirla del mal" />
+    <item id="3979297737" name="Polvos antiedad" />
+    <item id="3742966091" name="Rocío alegría" />
+    <item id="2638591814" name="Orbe del dragón" />
+    <item id="3930228688" name="Agua bendita" />
+    <item id="2063440449" name="Escama pringosa" />
+    <item id="234531543" name="Frasco de aura" />
+    <item id="1594573232" name="Guant. andrajoso" />
+    <item id="671904038" name="Bola cristal rota" />
+    <item id="2969903260" name="Esquirla cristal" />
+    <item id="3322023946" name="Arial" />
+    <item id="1483113897" name="Fajín amarillento" />
+    <item id="794932543" name="Anillo común" />
+    <item id="3060327557" name="Amuleto vacío" />
+    <item id="3245331475" name="Rubí" />
+    <item id="1372637570" name="Aguamarina" />
+    <item id="651688212" name="Topacio" />
+    <item id="1175482609" name="Turmalina" />
+    <item id="823607399" name="Ópalo" />
+    <item id="2820542941" name="Esmeralda" />
+</items>

@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="2592718716" name="Esquirla valiente"/>
+  <item id="1955061328" name="Esquirla misteriosa"/>
+  <item id="2648996709" name="Esquirla robusta"/>
+  <item id="1944721993" name="Esquirla guapa"/>
+  <item id="3814000600" name="Esquirla amable"/>
+  <item id="3940764659" name="Esquirla oscura"/>
+  <item id="82651871" name="Esquirla siniestra"/>
+  <item id="58781382" name="Esquirla escurridiza"/>
+  <item id="2488416078" name="Esencia valiente"/>
+  <item id="2207419965" name="Esencia misteriosa"/>
+  <item id="1839001361" name="Esencia robusta"/>
+  <item id="2231323172" name="Esencia guapa"/>
+  <item id="502668190" name="Esencia amable"/>
+  <item id="446422919" name="Esencia oscura"/>
+  <item id="4093147826" name="Esencia siniestra"/>
+  <item id="4103454379" name="Esencia escurridiza"/>
+  <item id="1794190088" name="Cristal valiente"/>
+  <item id="2370373135" name="Cristal misterioso"/>
+  <item id="2831146494" name="Cristal robusto"/>
+  <item id="1186053330" name="Cristal guapo"/>
+  <item id="3637848433" name="Cristal amable"/>
+  <item id="3753438568" name="Cristal oscuro"/>
+  <item id="834047044" name="Cristal siniestro"/>
+  <item id="4199429785" name="Cristal escurridizo"/>
+  <item id="2949781991" name="Orbe valiente"/>
+  <item id="1104967883" name="Orbe misterioso"/>
+  <item id="2791593420" name="Orbe robusto"/>
+  <item id="2980375743" name="Orbe guapo"/>
+  <item id="682474757" name="Orbe amable"/>
+  <item id="3512952154" name="Orbe oscuro"/>
+  <item id="3332627497" name="Orbe siniestro"/>
+  <item id="920340573" name="Orbe escurridizo"/>
+  <item id="1605012883" name="Barreño Termascino"/>
+  <item id="3251509296" name="Cuerda Termascino"/>
+  <item id="3066636454" name="Barreño artesanal"/>
+  <item id="801143068" name="Cuerda de paja"/>
+  <item id="1489455498" name="Barreño metálico"/>
+  <item id="3363329051" name="Supercuerda"/>
+  <item id="3212797069" name="Pelvis Tripasq."/>
+  <item id="2313308910" name="Diente Tripasq."/>
+  <item id="4276451960" name="Vértebras Tripasq."/>
+  <item id="1743530946" name="Costillas Tripasq."/>
+  <item id="283843412" name="Cráneo Tripasq."/>
+  <item id="2391772919" name="Corazón Tripasq."/>
+  <item id="4186488417" name="Toalla Cotiterror"/>
+  <item id="1619128283" name="Dentadura Cotiterror"/>
+  <item id="394714957" name="Toalla oro Cotiterror"/>
+  <item id="2268709596" name="Superdentadura"/>
+  <item id="4030657098" name="Turbotoalla"/>
+  <item id="2432269231" name="Dentadura dorada"/>
+  <item id="3892202297" name="Anzuelo Bergantín"/>
+  <item id="2130123395" name="Barco de Bergantín"/>
+  <item id="166734357" name="Gran anzuelo"/>
+  <item id="2543108022" name="Barco espectral"/>
+  <item id="3767766816" name="Caña de pescar"/>
+  <item id="2040192666" name="Barco tesoro"/>
+  <item id="245231116" name="Lengua Babamandra"/>
+  <item id="2653090717" name="Ojo Babamandra"/>
+  <item id="3911566091" name="Superlengua"/>
+  <item id="3151243372" name="Retina Babamandra"/>
+  <item id="3436386554" name="Lengua suprema"/>
+  <item id="1440368960" name="Ojo azabache"/>
+  <item id="584939990" name="Cuerno Gargantúo"/>
+  <item id="3166301301" name="Pincho Gargantúo"/>
+  <item id="3418283235" name="Cuerno afilado"/>
+  <item id="1387760985" name="Pincho grueso"/>
+  <item id="632339919" name="Cuerno definitivo"/>
+  <item id="3037700190" name="Pincho ígneo"/>
+  <item id="3255341256" name="Pelvis Aureosq."/>
+  <item id="2731481389" name="Diente Aureosq."/>
+  <item id="3586664891" name="Vértebras Aureosq."/>
+  <item id="1287747585" name="Costillas Aureosq."/>
+  <item id="1002850455" name="Cráneo Aureosq."/>
+  <item id="2778914100" name="Corazón Aureosq."/>
+  <item id="3534089634" name="Diente Devoram."/>
+  <item id="1269611544" name="Abalorios Devoram."/>
+  <item id="1017875598" name="Muela Devoram."/>
+  <item id="2887029023" name="Abalorios frívolos"/>
+  <item id="3675496841" name="Muela del juicio"/>
+  <item id="626460130" name="Perlas Devoram."/>
+  <item id="1380988276" name="Cuerno Cazam."/>
+  <item id="3411633358" name="Pincho Cazam."/>
+  <item id="3160298584" name="Cuerno puntiagudo"/>
+  <item id="574276091" name="Pincho de acero"/>
+  <item id="1430122861" name="Cuerno final"/>
+  <item id="3426001111" name="Pincho cristalino"/>
+  <item id="3140718657" name="Trapo Murmullamasa"/>
+  <item id="730631632" name="Cadena de preso"/>
+  <item id="1552661830" name="Trapo fino"/>
+  <item id="1011627171" name="Cadena fuerte"/>
+  <item id="1263207477" name="Trapo excelente"/>
+  <item id="3527562639" name="Cadena ostentosa"/>
+  <item id="2772788505" name="Diente Devoralmas"/>
+  <item id="992080058" name="Collar Devoralmas"/>
+  <item id="1277607980" name="Muela Devoralmas"/>
+  <item id="3576664470" name="Abalorios escarlata"/>
+  <item id="2720571648" name="Muela del juicio"/>
+  <item id="848805009" name="Abalorios malditos"/>
+  <item id="1167100935" name="Barreño Jabalupo"/>
+  <item id="3964462557" name="Cuerda Jabalupo"/>
+  <item id="2605438283" name="Barreño casero"/>
+  <item id="37913841" name="Cuerda de mimbre"/>
+  <item id="1967502439" name="Barreño lujoso"/>
+  <item id="3944817092" name="Cuerda negra"/>
+  <item id="2619740498" name="Olla Caldewok"/>
+  <item id="86982888" name="Mugre Caldewok"/>
+  <item id="1915252862" name="Olla azabache"/>
+  <item id="3801574895" name="Mugre maldita"/>
+  <item id="2509266297" name="Olla áurea"/>
+  <item id="4116173980" name="Mugre gloriosa"/>
+  <item id="2186339338" name="Anzuelo de Estigio"/>
+  <item id="458864048" name="Barco de Estigio"/>
+  <item id="1818133798" name="Anzuelo enorme"/>
+  <item id="4063891589" name="Barco fantasma"/>
+  <item id="2235375635" name="Caña de Estigio"/>
+  <item id="473199017" name="Barco de guerra"/>
+  <item id="1798521151" name="Lengua Ojimandra"/>
+  <item id="4220279982" name="Ojo de Ojimandra"/>
+  <item id="2357947448" name="Megalengua"/>
+  <item id="3732571999" name="Gran globo ocular"/>
+  <item id="2843588553" name="Lengua superior"/>
+  <item id="812967539" name="Ojo áureo"/>
+  <item id="1198773989" name="Mochila G. Sabueso"/>
+  <item id="3642180422" name="Bomba G. Sabueso"/>
+  <item id="2920313808" name="Bolsa G. Sabueso"/>
+  <item id="924394090" name="Bomba enorme"/>
+  <item id="1075712764" name="Mochila"/>
+  <item id="3500216173" name="Bomba-cráneo"/>
+  <item id="2812690427" name="Colmillo de Rúbeo J"/>
+  <item id="3345069598" name="Abalorio Rúbeo J"/>
+  <item id="2959509128" name="Colmillo imponente"/>
+  <item id="695195442" name="Abalorio brutal"/>
+  <item id="1583933348" name="Colmillo selecto"/>
+  <item id="3222041095" name="Abalorio bestial"/>
+  <item id="3070968465" name="Motor Robonyan 28"/>
+  <item id="771887915" name="Batería 28"/>
+  <item id="1493509053" name="Motor 28 2.0 II"/>
+  <item id="3384426028" name="Batería 28 2.0 II"/>
+  <item id="3200061114" name="Motor 28 3.0"/>
+  <item id="2283806937" name="Batería 28 3.0"/>
+  <item id="4280750159" name="Ovillo de Kali Mera"/>
+  <item id="1714307573" name="Gema de Kali Mera"/>
+  <item id="287928675" name="Ovillo de telaraña"/>
+  <item id="2404246720" name="Piedra preciosa"/>
+  <item id="4165653590" name="Ovillo de oro"/>
+  <item id="1631815148" name="Cristal carmesí"/>
+  <item id="373601658" name="Tinta de McKraken"/>
+  <item id="2264639723" name="Tentáculo McKraken"/>
+  <item id="4059863165" name="Tinta espesa"/>
+  <item id="2436567448" name="Tentáculo duro"/>
+  <item id="3862700302" name="Tinta superespesa"/>
+  <item id="2134208692" name="Tentáculo magnífico"/>
+  <item id="137510946" name="Suspiro Cremaligno"/>
+  <item id="2522273153" name="Cremalignoplasma"/>
+  <item id="3780240663" name="Suspiro selecto"/>
+  <item id="2019079341" name="Cremalignoplasma S"/>
+  <item id="257918011" name="Suspiro superior"/>
+  <item id="2682296746" name="Cremalignoplasma U"/>
+  <item id="3907496252" name="Máscara Kabukio"/>
+  <item id="3122020955" name="Farolillo Kabukio"/>
+  <item id="3440472781" name="Máscara grande"/>
+  <item id="1410868087" name="Farolillo grande"/>
+  <item id="589239265" name="Bolsa de Kabukio"/>
+  <item id="3178989122" name="Pipa de Kabukio"/>
+  <item id="3397170900" name="Pelvis Diamanq."/>
+  <item id="1400235886" name="Diente Diamanq."/>
+  <item id="611506168" name="Vértebras Diamanq."/>
+  <item id="3033385577" name="Costillas Diamanq."/>
+  <item id="3284859647" name="Cráneo Diamanq."/>
+  <item id="2735567642" name="Corazón Diamanq."/>
+  <item id="3557442444" name="Pluma funesta Lady"/>
+  <item id="1292046902" name="Corazón Lady"/>
+  <item id="973349536" name="Pluma Lady"/>
+  <item id="2757801731" name="Corazón lúgubre"/>
+  <item id="3546777493" name="Pluma encantadora"/>
+  <item id="1248777775" name="Corazón ingenuo"/>
+  <item id="1030350521" name="Cuerno Demoniorco"/>
+  <item id="2916547368" name="Pincho Demoniorco"/>
+  <item id="3671182270" name="Cuerno curvado"/>
+  <item id="613773269" name="Pincho duro"/>
+  <item id="1402101571" name="Asta Demoniorco"/>
+  <item id="3399159545" name="Pincho obsidio"/>
+  <item id="3181133423" name="Plan de Intelecto"/>
+  <item id="603499468" name="Secuaz de Intelecto"/>
+  <item id="1426037594" name="Plan secreto"/>
+  <item id="3455503072" name="Sirviente Intelecto"/>
+  <item id="3136420470" name="Plan maestro"/>
+  <item id="709814247" name="Acólito de Intelecto"/>
+  <item id="1565120369" name="Garra de Vueltomai"/>
+  <item id="1032740500" name="Orbe de Vueltomai"/>
+  <item id="1250520578" name="Collar de Vueltomai"/>
+  <item id="3548397496" name="Orbe siniestro"/>
+  <item id="2760314670" name="Colmillo Vueltomai"/>
+  <item id="987994765" name="Orbe áureo"/>
+  <item id="1306831387" name="Garra Zarparroja"/>
+  <item id="3572366241" name="Moneda de bronce"/>
+  <item id="2750073655" name="Collar Zarparroja"/>
+  <item id="861263526" name="Moneda de plata"/>
+  <item id="1146283568" name="Bigote Zarparroja"/>
+  <item id="3993656196" name="Moneda Zarparroja"/>
+  <item id="2567793426" name="Garra de Zazelirio"/>
+  <item id="277160" name="Cuerno Zazelirio"/>
+  <item id="1996687934" name="Garra Zazelirio"/>
+  <item id="3915882397" name="Cuerno maléfico"/>
+  <item id="2657136395" name="Garra calamidad"/>
+  <item id="124386993" name="Cuerno prisión"/>
+  <item id="1886309927" name="Casco Capitán Rayo"/>
+  <item id="3771847606" name="Cohete Rayo"/>
+  <item id="2547442464" name="Visera Rayo"/>
+  <item id="4145113797" name="Cohete estelar Rayo"/>
+  <item id="2148948563" name="Casco m. oscura"/>
+  <item id="421465065" name="Cohete gigante"/>
+  <item id="1847081855" name="Adorno lunar"/>
+  <item id="4034703068" name="Guantes reales"/>
+  <item id="2273025610" name="Adorno maligno"/>
+  <item id="510840816" name="Guantes malignos"/>
+  <item id="1769340774" name="Adorno definitivo"/>
+  <item id="4190823159" name="Guantes definitivos"/>
+  <item id="326094650" name="Adorno de sangre"/>
+  <item id="2366331545" name="Guantes de sangre"/>
+  <item id="2395853409" name="Corona iluminada"/>
+  <item id="3694934278" name="Subordinado ilum."/>
+  <item id="2872773008" name="Corona Emperador"/>
+  <item id="842160170" name="Secuaz iluminado"/>
+  <item id="1161128124" name="Corona suprema"/>
+  <item id="3679583519" name="Tarjeta iluminada"/>
+  <item id="2891369865" name="Motor 3000"/>
+  <item id="895458355" name="Batería 3000"/>
+  <item id="1113107621" name="Supermotor 3000"/>
+  <item id="3538399540" name="Superbatería 3000"/>
+  <item id="2782953890" name="Cuerno fuerte"/>
+  <item id="3307669575" name="Spinner Tornado"/>
+  <item id="2988456145" name="Colmillo 18kt"/>
+  <item id="724134251" name="Ultraorbe suerte"/>
+  <item id="1546541565" name="Colmillo 24kt"/>
+  <item id="3259681886" name="Orbe bendito"/>
+  <item id="3041787080" name="Garra destripadora"/>
+  <item id="742698354" name="Orbe ultramarino"/>
+  <item id="1531157988" name="Cuerda gruesa"/>
+  <item id="3422322805" name="Moneda suertuda"/>
+  <item id="3170611427" name="Cuerda victoriosa"/>
+  <item id="2321981056" name="Moneda amuleto"/>
+  <item id="4251037206" name="Cuerda tesoro"/>
+  <item id="1684602796" name="Moneda suertuda S"/>
+  <item id="4195117583" name="Piedra lunar"/>
+</items>

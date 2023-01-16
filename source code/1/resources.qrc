@@ -1,0 +1,58 @@
+<RCC>
+    <qresource prefix="/appInfo">
+        <file>AUTHORS.txt</file>
+        <file>small_icon.png</file>
+    </qresource>
+    <qresource prefix="/data">
+        <file>data/consume.xml</file>
+        <file>data/consume_de_DE.xml</file>
+        <file>data/consume_en_GB.xml</file>
+        <file>data/consume_en_US.xml</file>
+        <file>data/consume_es_ES.xml</file>
+        <file>data/consume_fr_FR.xml</file>
+        <file>data/consume_it_IT.xml</file>
+        <file>data/consume_ja_JP.xml</file>
+        <file>data/creature.xml</file>
+        <file>data/creature_de_DE.xml</file>
+        <file>data/creature_en_GB.xml</file>
+        <file>data/creature_en_US.xml</file>
+        <file>data/creature_es_ES.xml</file>
+        <file>data/creature_fr_FR.xml</file>
+        <file>data/creature_it_IT.xml</file>
+        <file>data/creature_ja_JP.xml</file>
+        <file>data/equipment.xml</file>
+        <file>data/equipment_de_DE.xml</file>
+        <file>data/equipment_en_GB.xml</file>
+        <file>data/equipment_en_US.xml</file>
+        <file>data/equipment_es_ES.xml</file>
+        <file>data/equipment_fr_FR.xml</file>
+        <file>data/equipment_it_IT.xml</file>
+        <file>data/equipment_ja_JP.xml</file>
+        <file>data/important.xml</file>
+        <file>data/important_de_DE.xml</file>
+        <file>data/important_en_GB.xml</file>
+        <file>data/important_en_US.xml</file>
+        <file>data/important_es_ES.xml</file>
+        <file>data/important_fr_FR.xml</file>
+        <file>data/important_it_IT.xml</file>
+        <file>data/important_ja_JP.xml</file>
+        <file>data/youkai.xml</file>
+        <file>data/youkai_de_DE.xml</file>
+        <file>data/youkai_en_GB.xml</file>
+        <file>data/youkai_en_US.xml</file>
+        <file>data/youkai_es_ES.xml</file>
+        <file>data/youkai_fr_FR.xml</file>
+        <file>data/youkai_it_IT.xml</file>
+        <file>data/youkai_ja_JP.xml</file>
+    </qresource>
+    <qresource prefix="/translations">
+        <file>translations/qt_de_DE.qm</file>
+        <file>translations/qt_it_IT.qm</file>
+        <file>translations/qt_zh_CN.qm</file>
+        <file>translations/qt_es_ES.qm</file>
+        <file>translations/qt_ja_JP.qm</file>
+        <file>translations/qt_zh_TW.qm</file>
+        <file>translations/qt_fr_FR.qm</file>
+        <file>translations/qt_pt_BR.qm</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,451 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item index="1" name="Вокитель"/>
+  <item index="2" name="Бесштанник"/>
+  <item index="3" name="Загарэмбо"/>
+  <item index="4" name="Зеворез"/>
+  <item index="5" name="Леносаблер"/>
+  <item index="6" name="Лютокатана"/>
+  <item index="7" name="Метломурай"/>
+  <item index="8" name="Сегучист"/>
+  <item index="9" name="Задремлев"/>
+  <item index="10" name="Стратеголев"/>
+  <item index="11" name="Шипяга"/>
+  <item index="12" name="Гневотырь"/>
+  <item index="13" name="Бабайрай"/>
+  <item index="14" name="Рисик"/>
+  <item index="15" name="Ревносуш"/>
+  <item index="16" name="Кадколиз"/>
+  <item index="17" name="Шинкорис"/>
+  <item index="18" name="Печенорис"/>
+  <item index="19" name="Шлемерал"/>
+  <item index="20" name="Полновождь"/>
+  <item index="21" name="Некроводец"/>
+  <item index="22" name="Грязежуй"/>
+  <item index="23" name="Мастер Качок"/>
+  <item index="24" name="Огнерев"/>
+  <item index="25" name="Трясолев"/>
+  <item index="26" name="Велигрив"/>
+  <item index="27" name="Игронин"/>
+  <item index="28" name="Мерцато"/>
+  <item index="29" name="Тенебой"/>
+  <item index="30" name="Златосвет"/>
+  <item index="31" name="Бенкей"/>
+  <item index="32" name="Б3-НК1"/>
+  <item index="33" name="Сушияма"/>
+  <item index="34" name="Кабурокер"/>
+  <item index="35" name="Боежук"/>
+  <item index="36" name="Зарогач"/>
+  <item index="37" name="Жукотаран"/>
+  <item index="38" name="Демоноглот"/>
+  <item index="39" name="Поглотитель"/>
+  <item index="40" name="Ломзонтух"/>
+  <item index="41" name="Шлепкошлеп"/>
+  <item index="42" name="Соплелет"/>
+  <item index="43" name="Чихутка"/>
+  <item index="44" name="Нехочуха"/>
+  <item index="45" name="Сменяхват"/>
+  <item index="46" name="Яспатель"/>
+  <item index="47" name="Забышляп"/>
+  <item index="48" name="Забызилла"/>
+  <item index="49" name="Глупошляп"/>
+  <item index="50" name="Постнолик"/>
+  <item index="51" name="Смехоедка"/>
+  <item index="52" name="Синегубка"/>
+  <item index="53" name="Разболтаишна"/>
+  <item index="54" name="Трезвонова"/>
+  <item index="55" name="Жутеешна"/>
+  <item index="56" name="Дон-Купидон"/>
+  <item index="57" name="Дон Сжуан"/>
+  <item index="58" name="Дон Ботан"/>
+  <item index="59" name="Извинято"/>
+  <item index="60" name="Челобой"/>
+  <item index="61" name="Дымовочка"/>
+  <item index="62" name="Дымушка"/>
+  <item index="63" name="Радиогрыз"/>
+  <item index="64" name="Сетерасширяк"/>
+  <item index="65" name="Энеркороль"/>
+  <item index="66" name="Суповар"/>
+  <item index="67" name="Липошелец"/>
+  <item index="68" name="Пеликамер"/>
+  <item index="69" name="Зеркалтал"/>
+  <item index="70" name="Зеркалдокс"/>
+  <item index="71" name="Темнозерк"/>
+  <item index="72" name="Иллюфлин"/>
+  <item index="73" name="Загафлин"/>
+  <item index="74" name="Турифлин"/>
+  <item index="75" name="Телепашка"/>
+  <item index="76" name="Четырейка"/>
+  <item index="77" name="Сиюминут"/>
+  <item index="78" name="Тенгу"/>
+  <item index="79" name="Пламенгу"/>
+  <item index="80" name="Киюби"/>
+  <item index="81" name="Хладохвост"/>
+  <item index="82" name="Химера"/>
+  <item index="83" name="Королемера"/>
+  <item index="84" name="Горшкожут"/>
+  <item index="85" name="Куклень"/>
+  <item index="86" name="Могукан"/>
+  <item index="87" name="Зверокан"/>
+  <item index="88" name="Плошкоглядка"/>
+  <item index="89" name="Гордоблюд"/>
+  <item index="90" name="Терятелег"/>
+  <item index="91" name="Бронеслужака"/>
+  <item index="92" name="Низашти"/>
+  <item index="93" name="Входанетто"/>
+  <item index="94" name="Замкович"/>
+  <item index="95" name="Бунтарио"/>
+  <item index="96" name="Бандолом"/>
+  <item index="97" name="Крутобрат"/>
+  <item index="98" name="Броняк"/>
+  <item index="99" name="Мимонекен"/>
+  <item index="100" name="Шарошип"/>
+  <item index="101" name="Меднотаз"/>
+  <item index="102" name="Нервослон"/>
+  <item index="103" name="Стойкослон"/>
+  <item index="104" name="Терпеслон"/>
+  <item index="105" name="Громыхар"/>
+  <item index="106" name="Помирюн"/>
+  <item index="107" name="Потун"/>
+  <item index="108" name="Бешегор"/>
+  <item index="109" name="Повелит. Лавы"/>
+  <item index="110" name="Форт. III"/>
+  <item index="111" name="Форт. II"/>
+  <item index="112" name="Форт. I"/>
+  <item index="113" name="Форт. Макс."/>
+  <item index="114" name="Войнорог"/>
+  <item index="115" name="Гиганторог"/>
+  <item index="116" name="Рогогуру"/>
+  <item index="117" name="Робоньян"/>
+  <item index="118" name="Златоньян"/>
+  <item index="119" name="Дромп"/>
+  <item index="120" name="Свашшш"/>
+  <item index="121" name="Стильножаб"/>
+  <item index="122" name="Домогик"/>
+  <item index="123" name="Ногато"/>
+  <item index="124" name="Дазабелла"/>
+  <item index="125" name="Дребезжалия"/>
+  <item index="126" name="Скелебелла"/>
+  <item index="127" name="Комариндзя"/>
+  <item index="128" name="Нинцикада"/>
+  <item index="129" name="Певцикада"/>
+  <item index="130" name="Ледянок"/>
+  <item index="131" name="Хладопес"/>
+  <item index="132" name="Жаропес"/>
+  <item index="133" name="Меноличка"/>
+  <item index="134" name="Циклопик"/>
+  <item index="135" name="Джибаньян"/>
+  <item index="136" name="Шипоньян"/>
+  <item index="137" name="Гангстаньян"/>
+  <item index="138" name="Бучиньян"/>
+  <item index="139" name="Гулекаппа"/>
+  <item index="140" name="Мечекаппа"/>
+  <item index="141" name="Крутокаппа"/>
+  <item index="142" name="Комасан"/>
+  <item index="143" name="Комагрив"/>
+  <item index="144" name="Комаджиро"/>
+  <item index="145" name="Коматигр"/>
+  <item index="146" name="Бакусон"/>
+  <item index="147" name="Баакулия"/>
+  <item index="148" name="Добросон"/>
+  <item index="149" name="Изморуся"/>
+  <item index="150" name="Накобег"/>
+  <item index="151" name="Масипуськин"/>
+  <item index="152" name="Милашкин"/>
+  <item index="153" name="Зломилашкин"/>
+  <item index="154" name="Гарри Барри"/>
+  <item index="155" name="Ледовласка"/>
+  <item index="156" name="Метелесса"/>
+  <item index="157" name="Демонесса"/>
+  <item index="158" name="Фальшкаппа"/>
+  <item index="159" name="Тигаппа"/>
+  <item index="160" name="Учитель Ньода"/>
+  <item index="161" name="Завидун"/>
+  <item index="162" name="Похватун"/>
+  <item index="163" name="Взмаханну"/>
+  <item index="164" name="Кельпакабана"/>
+  <item index="165" name="Поворотиш"/>
+  <item index="166" name="Поскакея"/>
+  <item index="167" name="Гладодед"/>
+  <item index="168" name="Дед Проглот"/>
+  <item index="169" name="Зернодед"/>
+  <item index="170" name="Лизакус"/>
+  <item index="171" name="Сестра Лиза"/>
+  <item index="172" name="Задремов"/>
+  <item index="173" name="Г-н Задремов"/>
+  <item index="174" name="Милозонт"/>
+  <item index="175" name="Шрамозонт"/>
+  <item index="176" name="Намелир"/>
+  <item index="177" name="Бедномен"/>
+  <item index="178" name="Дешеврак"/>
+  <item index="179" name="Домовуша"/>
+  <item index="180" name="Верхогном"/>
+  <item index="181" name="Силолек"/>
+  <item index="182" name="Враголек"/>
+  <item index="183" name="Благобабочка"/>
+  <item index="184" name="Бодробабочка"/>
+  <item index="185" name="Прогносбык"/>
+  <item index="186" name="Разгромбык"/>
+  <item index="187" name="Дон Чан"/>
+  <item index="188" name="Солнцеликов"/>
+  <item index="189" name="Благодушник"/>
+  <item index="190" name="Обратинка"/>
+  <item index="191" name="Менялкина"/>
+  <item index="192" name="Дед Замороз"/>
+  <item index="193" name="Дед Подаркин"/>
+  <item index="194" name="Костеброс"/>
+  <item index="195" name="Судьбоброс"/>
+  <item index="196" name="Папа Гром"/>
+  <item index="197" name="Дядя Могутов"/>
+  <item index="198" name="Мама Аура"/>
+  <item index="199" name="Обнимашкина"/>
+  <item index="200" name="Кирин"/>
+  <item index="201" name="Киринорог"/>
+  <item index="202" name="Заманук"/>
+  <item index="203" name="Эники Бен"/>
+  <item index="204" name="Боленок"/>
+  <item index="205" name="Боледав"/>
+  <item index="206" name="Суставолом"/>
+  <item index="207" name="Бессонник"/>
+  <item index="208" name="Ночегеймер"/>
+  <item index="209" name="Травопарень"/>
+  <item index="210" name="Плотопарень"/>
+  <item index="211" name="Депресос"/>
+  <item index="212" name="Злобосос"/>
+  <item index="213" name="Чешетар"/>
+  <item index="214" name="Впотьман"/>
+  <item index="215" name="Пустомест"/>
+  <item index="216" name="Агент 000"/>
+  <item index="217" name="Хитродемон"/>
+  <item index="218" name="Скандадемон"/>
+  <item index="219" name="Спородемон"/>
+  <item index="220" name="Необщишь"/>
+  <item index="221" name="Домолетышка"/>
+  <item index="222" name="Перелетыш"/>
+  <item index="223" name="Заигратель"/>
+  <item index="224" name="Стырь"/>
+  <item index="225" name="Скоскореев"/>
+  <item index="226" name="Дед Пособико"/>
+  <item index="227" name="Пультакула"/>
+  <item index="228" name="Крысоцарь"/>
+  <item index="229" name="Хмуротенгу"/>
+  <item index="230" name="Ботаптах"/>
+  <item index="231" name="Сноболеди"/>
+  <item index="232" name="Слиземандра"/>
+  <item index="233" name="Дракуньян"/>
+  <item index="234" name="Вредогас"/>
+  <item index="235" name="Скверноконь"/>
+  <item index="236" name="Робкобес"/>
+  <item index="237" name="Дерзобес"/>
+  <item index="238" name="Граф Кариес"/>
+  <item index="239" name="Фальшеглаз"/>
+  <item index="240" name="Чароглаз"/>
+  <item index="241" name="Сальноскряг"/>
+  <item index="242" name="Подлозол"/>
+  <item index="243" name="Котлоброд"/>
+  <item index="244" name="Кашлештан"/>
+  <item index="245" name="Горлодер"/>
+  <item index="246" name="Капляка"/>
+  <item index="247" name="Осадконос"/>
+  <item index="248" name="Слякотун"/>
+  <item index="249" name="Ледовик"/>
+  <item index="250" name="Носокров"/>
+  <item index="251" name="Завислюв"/>
+  <item index="252" name="Лассоптиц"/>
+  <item index="253" name="Пузоклюв"/>
+  <item index="254" name="Музофон"/>
+  <item index="255" name="Газун"/>
+  <item index="256" name="Нудногусь"/>
+  <item index="257" name="Стилеед"/>
+  <item index="258" name="Гнетогусь"/>
+  <item index="259" name="Шелупудель"/>
+  <item index="260" name="Двоерыл"/>
+  <item index="261" name="Полкан"/>
+  <item index="262" name="Шерстун"/>
+  <item index="263" name="Мехомакс"/>
+  <item index="264" name="Носеры"/>
+  <item index="265" name="Угрюмоташа"/>
+  <item index="266" name="Болтаннушка"/>
+  <item index="267" name="Ворчария"/>
+  <item index="268" name="Пустозвонов"/>
+  <item index="269" name="Сожалетто"/>
+  <item index="270" name="Пукодых"/>
+  <item index="271" name="Ядопук"/>
+  <item index="272" name="Туалетушка"/>
+  <item index="273" name="Хулиганнушка"/>
+  <item index="274" name="Банесвин"/>
+  <item index="275" name="Плоскошут"/>
+  <item index="276" name="Жалкомик"/>
+  <item index="277" name="Суховредина"/>
+  <item index="278" name="Красоедка"/>
+  <item index="279" name="Вечномладия"/>
+  <item index="280" name="Бессонечка"/>
+  <item index="281" name="Оля Лукойя"/>
+  <item index="282" name="Арахнус"/>
+  <item index="283" name="Арахния"/>
+  <item index="284" name="Шеехруст"/>
+  <item index="285" name="Ноко"/>
+  <item index="286" name="Бутоноко"/>
+  <item index="287" name="Панданоко"/>
+  <item index="288" name="Планосрывка"/>
+  <item index="289" name="Жаловочка"/>
+  <item index="290" name="Хохотугорь"/>
+  <item index="291" name="Певцугорь"/>
+  <item index="292" name="Урнаконда"/>
+  <item index="293" name="Подлорыб"/>
+  <item index="294" name="Яросетр"/>
+  <item index="295" name="Психотунец"/>
+  <item index="296" name="Памятечист"/>
+  <item index="297" name="Вспомисос"/>
+  <item index="298" name="Хмуровертка"/>
+  <item index="299" name="Яровертка"/>
+  <item index="300" name="Дракоша"/>
+  <item index="301" name="Дракон. пов."/>
+  <item index="302" name="Лазур. дракон"/>
+  <item index="303" name="Русалушка"/>
+  <item index="304" name="Русаледи"/>
+  <item index="305" name="Русаматушка"/>
+  <item index="306" name="Мадам Шеева"/>
+  <item index="307" name="Ух-ты-дух"/>
+  <item index="308" name="Скромнодух"/>
+  <item index="309" name="Другоглот"/>
+  <item index="310" name="Неумехлер"/>
+  <item index="311" name="Покупон"/>
+  <item index="312" name="Раздаритель"/>
+  <item index="313" name="Заболтанис"/>
+  <item index="314" name="Бананюх"/>
+  <item index="315" name="Отложезмей"/>
+  <item index="316" name="Безулов"/>
+  <item index="317" name="Командюка"/>
+  <item index="318" name="Хмуразмей"/>
+  <item index="319" name="Арбитробра"/>
+  <item index="320" name="Восьмияд"/>
+  <item index="321" name="С. Восьмияд"/>
+  <item index="322" name="Сегуньян"/>
+  <item index="323" name="Комасура"/>
+  <item index="324" name="Златолом"/>
+  <item index="325" name="Спойлерина"/>
+  <item index="326" name="Староцвет"/>
+  <item index="327" name="Треплофессор"/>
+  <item index="328" name="Красопудель"/>
+  <item index="329" name="Чавкозмей"/>
+  <item index="330" name="Сапфирньян"/>
+  <item index="331" name="Изумруньян"/>
+  <item index="332" name="Рубиньян"/>
+  <item index="333" name="Топазоньян"/>
+  <item index="334" name="Брюлиньян"/>
+  <item index="335" name="Дыненьян"/>
+  <item index="336" name="Апельньян"/>
+  <item index="337" name="Кивиньян"/>
+  <item index="338" name="Винограньян"/>
+  <item index="339" name="Клубниньян"/>
+  <item index="340" name="Арбузоньян"/>
+  <item index="341" name="Робокаппа"/>
+  <item index="342" name="Робокома"/>
+  <item index="343" name="Рободед"/>
+  <item index="344" name="Робопудель"/>
+  <item index="345" name="Робоноко"/>
+  <item index="346" name="Рободракоша"/>
+  <item index="347" name="Бродяньян"/>
+  <item index="348" name="Робоньян Ф"/>
+  <item index="349" name="Мореньян"/>
+  <item index="350" name="Мачоньян"/>
+  <item index="351" name="Ховерньян"/>
+  <item index="352" name="Темноньян"/>
+  <item index="353" name="Джибасан"/>
+  <item index="354" name="Летоньян"/>
+  <item index="355" name="Вредофей"/>
+  <item index="356" name="Злобия"/>
+  <item index="357" name="Бардакхан"/>
+  <item index="358" name="Неприятский"/>
+  <item index="359" name="Непонрав"/>
+  <item index="360" name="Грязелиз"/>
+  <item index="361" name="Бешегряз"/>
+  <item index="362" name="Провонюшка"/>
+  <item index="363" name="Бешекаппа"/>
+  <item index="364" name="Злобозонт"/>
+  <item index="365" name="Вредогном"/>
+  <item index="366" name="Гадкобык"/>
+  <item index="367" name="Шерстозол"/>
+  <item index="368" name="Ведьмалушка"/>
+  <item index="369" name="Взашеева"/>
+  <item index="370" name="Угрюм Хан"/>
+  <item index="371" name="Сваро Хан"/>
+  <item index="372" name="Дремохряк"/>
+  <item index="373" name="Свинофырк"/>
+  <item index="374" name="Ученик Панжа"/>
+  <item index="375" name="Мастер Панжа"/>
+  <item index="376" name="Самурабег"/>
+  <item index="377" name="Пронзачас"/>
+  <item index="378" name="Такоякер"/>
+  <item index="379" name="Царь Такояк"/>
+  <item index="380" name="Благодардюн"/>
+  <item index="381" name="Привередюн"/>
+  <item index="382" name="Сумосуп"/>
+  <item index="383" name="Екодзусуп"/>
+  <item index="384" name="Пофигугора"/>
+  <item index="385" name="Любознагора"/>
+  <item index="386" name="Сладкостник"/>
+  <item index="387" name="Звездостник"/>
+  <item index="388" name="Смелокост"/>
+  <item index="389" name="Меганьян"/>
+  <item index="390" name="Крушитель"/>
+  <item index="391" name="Циклоглаз"/>
+  <item index="392" name="Кин"/>
+  <item index="393" name="Джин"/>
+  <item index="394" name="Леди Жуть"/>
+  <item index="395" name="Леди Демония"/>
+  <item index="396" name="Слиземандра"/>
+  <item index="397" name="Глазогидра"/>
+  <item index="398" name="Банесвин"/>
+  <item index="399" name="Черносвин"/>
+  <item index="400" name="Безулов"/>
+  <item index="401" name="Стикс VI"/>
+  <item index="402" name="Рыжепасть"/>
+  <item index="403" name="Затмеватель"/>
+  <item index="404" name="Фантазмурай"/>
+  <item index="405" name="Страхоскреж"/>
+  <item index="406" name="Паук-наставук"/>
+  <item index="407" name="Д-р Безумнов"/>
+  <item index="408" name="Д-р Потрохов"/>
+  <item index="409" name="Осьминогус"/>
+  <item index="410" name="Осьминогусус"/>
+  <item index="411" name="Осьмибород"/>
+  <item index="412" name="Круголик"/>
+  <item index="413" name="Плутоптах"/>
+  <item index="414" name="Котлоброд"/>
+  <item index="415" name="Хваторук"/>
+  <item index="416" name="Глазофун"/>
+  <item index="417" name="Зломысел"/>
+  <item index="418" name="Кэп Тиранус"/>
+  <item index="419" name="Флиппа"/>
+  <item index="420" name="Флоппа"/>
+  <item index="421" name="Леди Страх"/>
+  <item index="422" name="Судьбокошка"/>
+  <item index="423" name="Златокост"/>
+  <item index="424" name="Сверкокост"/>
+  <item index="425" name="Рукощедр"/>
+  <item index="426" name="Захватитель"/>
+  <item index="427" name="Гаргарос"/>
+  <item index="428" name="Синебес"/>
+  <item index="429" name="Чернобес"/>
+  <item index="430" name="Козявкер"/>
+  <item index="431" name="Моксимус N"/>
+  <item index="432" name="Моксимус K"/>
+  <item index="433" name="Джибаньян S"/>
+  <item index="434" name="Комасан S"/>
+  <item index="435" name="Комаджиро S"/>
+  <item index="436" name="Темнокьюби"/>
+  <item index="437" name="Восьмисвет"/>
+  <item index="438" name="Гаргарос"/>
+  <item index="439" name="Синебес"/>
+  <item index="440" name="Чернобес"/>
+  <item index="441" name="Рубиус J"/>
+  <item index="442" name="Строгопес"/>
+  <item index="443" name="Бсизной"/>
+  <item index="444" name="Бронзамед"/>
+  <item index="445" name="Чаеглот"/>
+  <item index="446" name="Бесконешина"/>
+  <item index="447" name="Пароглав"/>
+  <item index="448" name="Кабукороль"/>
+</items>

@@ -1,0 +1,979 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="1797004116" name="999 Hojas"/>
+  <item id="1450980068" name="ARMA B3-NK1"/>
+  <item id="1641615949" name="Abanico Airado"/>
+  <item id="2210800816" name="Abismo Ártico"/>
+  <item id="3530892027" name="Abrazo de Oso"/>
+  <item id="4062400118" name="Absorbealmas"/>
+  <item id="366299279" name="Absorcismo"/>
+  <item id="3357349510" name="Absorción"/>
+  <item id="3927831267" name="Acción Ejecutiva"/>
+  <item id="3670618938" name="Actuación Explosiva"/>
+  <item id="1446980609" name="Agallas al Máximo"/>
+  <item id="1290210754" name="Agotamiento"/>
+  <item id="2702651012" name="Agua Caliente"/>
+  <item id="2118742928" name="Aguas Turbulentas"/>
+  <item id="184818023" name="Aire de Felicidad (1)"/>
+  <item id="2326100189" name="Aire de Felicidad (2)"/>
+  <item id="3295043168" name="Alfa Omega"/>
+  <item id="1835435151" name="Aliento Ardiente (1)"/>
+  <item id="4076998956" name="Aliento Ardiente (2)"/>
+  <item id="463724078" name="Aliento Ardiente (3)"/>
+  <item id="4072700699" name="Aliento Ardiente (4)"/>
+  <item id="518834347" name="Aliento Ardiente (5)"/>
+  <item id="1777072189" name="Aliento Ardiente (6)"/>
+  <item id="3806571583" name="Aliento Ardiente (7)"/>
+  <item id="2514787497" name="Aliento Ardiente (8)"/>
+  <item id="192940298" name="Aliento Ardiente (9)"/>
+  <item id="3886856890" name="Aliento Ardiente (10)"/>
+  <item id="2427161132" name="Aliento Ardiente (11)"/>
+  <item id="248455055" name="Aliento Ardiente (12)"/>
+  <item id="3728863160" name="Aliento Ardiente (13)"/>
+  <item id="2839994158" name="Aliento Ardiente (14)"/>
+  <item id="924994189" name="Aliento Ardiente (15)"/>
+  <item id="3670840074" name="Aliento Ardiente (16)"/>
+  <item id="2915804060" name="Aliento Ardiente (17)"/>
+  <item id="867120703" name="Aliento Ardiente (18)"/>
+  <item id="1818309544" name="Aliento Ardiente (19)"/>
+  <item id="459670334" name="Aliento Ardiente (20)"/>
+  <item id="2231539357" name="Aliento Ardiente (21)"/>
+  <item id="1839421855" name="Aliento Ardiente (22)"/>
+  <item id="446982409" name="Aliento Ardiente (23)"/>
+  <item id="2227240106" name="Aliento Ardiente (24)"/>
+  <item id="3465029604" name="Aliento Ardiente (25)"/>
+  <item id="1357689415" name="Aliento Ardiente (26)"/>
+  <item id="3389348694" name="Aliento Ardiente (27)"/>
+  <item id="3171052480" name="Aliento Ardiente (28)"/>
+  <item id="3092086085" name="Aliento Ardiente (29)"/>
+  <item id="1362024560" name="Aliento Ardiente (30)"/>
+  <item id="724914159" name="Aliento Ardiente (31)"/>
+  <item id="1546813305" name="Aliento Ardiente (32)"/>
+  <item id="3260476122" name="Aliento Ardiente (33)"/>
+  <item id="779770218" name="Aliento Ardiente (34)"/>
+  <item id="1501391356" name="Aliento Ardiente (35)"/>
+  <item id="3340368991" name="Aliento Ardiente (36)"/>
+  <item id="2780287096" name="Aliento Ardiente (37)"/>
+  <item id="3534807278" name="Aliento Ardiente (38)"/>
+  <item id="1288992077" name="Aliento Ardiente (39)"/>
+  <item id="2759178831" name="Aliento Ardiente (40)"/>
+  <item id="3547499225" name="Aliento Ardiente (41)"/>
+  <item id="1293295482" name="Aliento Ardiente (42)"/>
+  <item id="395775080" name="Aliento Ardiente (43)"/>
+  <item id="1620065534" name="Aliento Ardiente (44)"/>
+  <item id="4277447005" name="Aliento Ardiente (45)"/>
+  <item id="320499930" name="Aliento Ardiente (46)"/>
+  <item id="1679638604" name="Aliento Ardiente (47)"/>
+  <item id="4202288623" name="Aliento Ardiente (48)"/>
+  <item id="1989796358" name="Aliento Cremoso (1)"/>
+  <item id="4019237820" name="Aliento Cremoso (2)"/>
+  <item id="365711796" name="Aliento Cremoso (3)"/>
+  <item id="2361720846" name="Aliento Cremoso (4)"/>
+  <item id="4223807640" name="Aliento Cremoso (5)"/>
+  <item id="1705420091" name="Aliento Cremoso (6)"/>
+  <item id="3306047016" name="Alma Amargada"/>
+  <item id="3301004619" name="Alud Arenoso"/>
+  <item id="3090169829" name="Aluvión de Bombas"/>
+  <item id="377192576" name="Amigo Felino"/>
+  <item id="2909999827" name="Amor Absoluto"/>
+  <item id="2980386753" name="Amor Maldito"/>
+  <item id="2417179491" name="Amor Retorcido"/>
+  <item id="394474821" name="Amor de Madre"/>
+  <item id="1263949105" name="Anguienergía"/>
+  <item id="815668391" name="Antiguo Disparo"/>
+  <item id="216099614" name="Aparece un Yo-kai"/>
+  <item id="3546162262" name="Apetito Insano (1)"/>
+  <item id="3468333513" name="Apetito Insano (2)"/>
+  <item id="3680704193" name="Apetito Insano (3)"/>
+  <item id="3320655044" name="Aplastaespíritu Oro"/>
+  <item id="1112270727" name="Aplastaespíritus"/>
+  <item id="3828113557" name="Arenacias"/>
+  <item id="2083923495" name="Arenormal"/>
+  <item id="763507430" name="Arrojacerdos (1)"/>
+  <item id="3029033820" name="Arrojacerdos (2)"/>
+  <item id="79831177" name="Asistencia Aérea"/>
+  <item id="4203556524" name="Aspiración"/>
+  <item id="3348238141" name="Ataque (1)"/>
+  <item id="3733536380" name="Ataque (2)"/>
+  <item id="4121193919" name="Ataque (3)"/>
+  <item id="3971964158" name="Ataque (4)"/>
+  <item id="2751384121" name="Ataque (5)"/>
+  <item id="3473029345" name="Ataque (6)"/>
+  <item id="1928887416" name="Ataque (7)"/>
+  <item id="1516726045" name="Ataque (8)"/>
+  <item id="2088676438" name="Ataque (9)"/>
+  <item id="911751596" name="Ataque Petisusto (1)"/>
+  <item id="3245261724" name="Ataque Petisusto (2)"/>
+  <item id="1866818728" name="Ataque cargado (1)"/>
+  <item id="1985893865" name="Ataque cargado (2)"/>
+  <item id="4194082609" name="Ataque en carrera"/>
+  <item id="1058858371" name="Ataque poderoso"/>
+  <item id="1240097613" name="Ataque potente (1)"/>
+  <item id="1357992460" name="Ataque potente (2)"/>
+  <item id="1706391112" name="Ataque relámpago"/>
+  <item id="1922282251" name="Ataque y retirada"/>
+  <item id="3888666509" name="Aterrizaje Mortal (1)"/>
+  <item id="2126579255" name="Aterrizaje Mortal (2)"/>
+  <item id="3164639686" name="Aterrizaje Mortal (3)"/>
+  <item id="3272305401" name="Aterrizaje Mortal (4)"/>
+  <item id="2917006271" name="Aterrizaje Mortal (5)"/>
+  <item id="2274681542" name="Aterrizaje Mortal (6)"/>
+  <item id="338042967" name="Aterrizaje Mortal (7)"/>
+  <item id="3112382332" name="Atronador"/>
+  <item id="4066798557" name="Aullido Sagrado"/>
+  <item id="4204567839" name="Aumento de DEF"/>
+  <item id="2297581466" name="Aumento de VEL"/>
+  <item id="3234788809" name="Aumento de daño"/>
+  <item id="1887127221" name="Aura Chico Normal"/>
+  <item id="1683758960" name="Aura Enemiga"/>
+  <item id="2103328367" name="Aura de Negasus"/>
+  <item id="3102422836" name="Autodestrucción (1)"/>
+  <item id="378203020" name="Autodestrucción (2)"/>
+  <item id="1584808927" name="Autodestrucción (3)"/>
+  <item id="3534843707" name="Avalancha Imperial"/>
+  <item id="1226056532" name="Avalancha Invasor"/>
+  <item id="517939813" name="Ay, Ay, Ay"/>
+  <item id="2240487044" name="Aydiós Final"/>
+  <item id="3905321916" name="Baile Difuso"/>
+  <item id="421422407" name="Baile Espiritual (1)"/>
+  <item id="1041314959" name="Baile Espiritual (2)"/>
+  <item id="3098028497" name="Baile Vanidoso"/>
+  <item id="870399466" name="Bajo Cero"/>
+  <item id="2139843560" name="Bala de Zazel Directa"/>
+  <item id="3051124795" name="Bala suprema de Enma"/>
+  <item id="161756710" name="Balada Solitaria"/>
+  <item id="44981452" name="Bancarrota"/>
+  <item id="616748332" name="Barraca del Barquero (1)"/>
+  <item id="3184231574" name="Barraca del Barquero (2)"/>
+  <item id="3618844963" name="Barrera Espinosa"/>
+  <item id="1522777177" name="Barrera Fantasía"/>
+  <item id="720658487" name="Bastón Vanidoso"/>
+  <item id="4098846002" name="Batacazo Cremoso (1)"/>
+  <item id="3282995873" name="Batacazo Cremoso (2)"/>
+  <item id="1665837322" name="Batacazo Verrugoso (1)"/>
+  <item id="980177405" name="Batacazo Verrugoso (2)"/>
+  <item id="275325661" name="Batacazo Verrugoso (3)"/>
+  <item id="2716427963" name="Batazo Brutal"/>
+  <item id="1481911944" name="Batracio Épico"/>
+  <item id="1620229055" name="Bendito Bocao"/>
+  <item id="492047241" name="Beso Azul"/>
+  <item id="131019951" name="Beso Malicioso"/>
+  <item id="3081450256" name="Beso de la Vida"/>
+  <item id="2721257207" name="Billete al Hades"/>
+  <item id="885268374" name="Blues Ermiciélago"/>
+  <item id="2780909793" name="Bláster Guau Guau"/>
+  <item id="2485734012" name="Bláster Miau Miau"/>
+  <item id="2570695530" name="Bocachancla"/>
+  <item id="3336941579" name="Bocado Bendito"/>
+  <item id="2542887588" name="Bocado Repulsivo"/>
+  <item id="1437861357" name="Bocado a Capela"/>
+  <item id="611089186" name="Bocazas (1)"/>
+  <item id="1969893639" name="Bocazas (2)"/>
+  <item id="3939702931" name="Bofetada Férrea"/>
+  <item id="2357705898" name="Bola Prémium"/>
+  <item id="1049433248" name="Bola de arroz"/>
+  <item id="1617325679" name="Bollo Destructor"/>
+  <item id="1461603545" name="Bolsa de provisiones"/>
+  <item id="876669517" name="Bomba Craneal"/>
+  <item id="1021454123" name="Bomba Final"/>
+  <item id="879829864" name="Bomba Sanguínea"/>
+  <item id="2989375021" name="Bomba de Mecha"/>
+  <item id="3964150863" name="Bomba oni (1)"/>
+  <item id="2614556351" name="Bomba oni (2)"/>
+  <item id="7584464" name="Bomba oni (3)"/>
+  <item id="3122501057" name="Bomba-trampa"/>
+  <item id="2542149173" name="Bombardeo (1)"/>
+  <item id="417553727" name="Bombardeo (2)"/>
+  <item id="2098141023" name="Bombazo Oscuro (1)"/>
+  <item id="2119801867" name="Bombazo Oscuro (2)"/>
+  <item id="2911723406" name="Bombazo Oscuro (3)"/>
+  <item id="60486652" name="Bombazo Oscuro (4)"/>
+  <item id="4260041269" name="Borrasca Potente"/>
+  <item id="1907631430" name="Brillo Estelar"/>
+  <item id="3109509109" name="Brillodesfile"/>
+  <item id="2985574129" name="Bronca de Padre"/>
+  <item id="2593467551" name="Buen Provecho"/>
+  <item id="2685870419" name="Burbujas Caóticas (1)"/>
+  <item id="958296297" name="Burbujas Caóticas (2)"/>
+  <item id="416351924" name="Cabezazo Zasca"/>
+  <item id="3089523601" name="Calabrasada"/>
+  <item id="3372803652" name="Calamascopio"/>
+  <item id="3047974890" name="Calambrazo"/>
+  <item id="612257015" name="Calambre Felino (1)"/>
+  <item id="57744703" name="Calambre Felino (2)"/>
+  <item id="1172401292" name="Calamisil Guiado"/>
+  <item id="2690752399" name="Calañón Láser"/>
+  <item id="3281293943" name="Calcinar (1)"/>
+  <item id="1520288717" name="Calcinar (2)"/>
+  <item id="3120401042" name="Calcinar (3)"/>
+  <item id="3037404241" name="Caldito Rico"/>
+  <item id="654522256" name="Cambiacanales"/>
+  <item id="1622215173" name="Cambio Facial"/>
+  <item id="2170211590" name="Campamento Cachas"/>
+  <item id="543459743" name="Campo ultrafuerte"/>
+  <item id="3595366585" name="Caos de Proyectiles"/>
+  <item id="3676911067" name="Cara de Gángster"/>
+  <item id="716322245" name="Carga Arácnida"/>
+  <item id="1668889868" name="Carga Odiosa"/>
+  <item id="30164622" name="Carga de Lanzador"/>
+  <item id="535171869" name="Carnavalga"/>
+  <item id="4146993964" name="Carrerilla"/>
+  <item id="970554680" name="Cascada (1)"/>
+  <item id="3336972501" name="Cascada (2)"/>
+  <item id="1779671472" name="Cascada (3)"/>
+  <item id="2540788387" name="Cascada (4)"/>
+  <item id="463426096" name="Cascada (5)"/>
+  <item id="3084594369" name="Cascadafibio"/>
+  <item id="4167966472" name="Catarata Azur"/>
+  <item id="196392928" name="Caída Explosiva"/>
+  <item id="248997891" name="Caída Felina"/>
+  <item id="3478763459" name="Caída Felina Dorada"/>
+  <item id="2649952262" name="Cañonero"/>
+  <item id="2009734726" name="Cañón Koma"/>
+  <item id="4000354141" name="Cañón Omai"/>
+  <item id="1770522826" name="Cañón Peligroso"/>
+  <item id="912837239" name="Cebo Arrojadizo"/>
+  <item id="1094989890" name="Ceramicascada"/>
+  <item id="3931818149" name="Cerdo Asado (1)"/>
+  <item id="1934858527" name="Cerdo Asado (2)"/>
+  <item id="1320251400" name="Chaparrón"/>
+  <item id="1658855193" name="Chirona Molona"/>
+  <item id="1275386674" name="Chispa"/>
+  <item id="406020924" name="Chispeo Imperial"/>
+  <item id="2299599484" name="Chiste Malo"/>
+  <item id="3027317708" name="Chiste Pésimo"/>
+  <item id="3566822306" name="Choque Chispeante"/>
+  <item id="2805545753" name="Chorro de buceo"/>
+  <item id="2381199580" name="Chubasco"/>
+  <item id="1568548852" name="Cima Oscura"/>
+  <item id="1559897368" name="Cola Ardiente"/>
+  <item id="1942187629" name="Colapso Total"/>
+  <item id="2252548493" name="Comememorias"/>
+  <item id="1384091802" name="Contraataque"/>
+  <item id="1908685463" name="Coraza de Acero"/>
+  <item id="1913392542" name="Corazón Celestial"/>
+  <item id="1685042970" name="Corazón en un Puño (1)"/>
+  <item id="325617548" name="Corazón en un Puño (2)"/>
+  <item id="3754172590" name="Cornucopia"/>
+  <item id="2984642852" name="Corre Volando"/>
+  <item id="4027267408" name="Corre que te Pillo"/>
+  <item id="1176634587" name="Cortakappa"/>
+  <item id="1855526505" name="Corte Profundo"/>
+  <item id="1116475211" name="Corte Rabioso"/>
+  <item id="3585369561" name="Corte de Cigarra"/>
+  <item id="2033600285" name="Cotiazote (1)"/>
+  <item id="2167270637" name="Cotiazote (2)"/>
+  <item id="343117738" name="Cotigolpe (1)"/>
+  <item id="3251552992" name="Cotigolpe (2)"/>
+  <item id="1843191073" name="Cotihacha"/>
+  <item id="4164362914" name="Cotimartillo"/>
+  <item id="395379344" name="Crimen de Moda"/>
+  <item id="3799219427" name="Cápsula negro tizón (1)"/>
+  <item id="2071604569" name="Cápsula negro tizón (2)"/>
+  <item id="209526223" name="Cápsula negro tizón (3)"/>
+  <item id="2451146860" name="Cápsula negro tizón (4)"/>
+  <item id="2443393529" name="Cápsula rojo pasión (1)"/>
+  <item id="3869509999" name="Cápsula rojo pasión (2)"/>
+  <item id="2142066901" name="Cápsula rojo pasión (3)"/>
+  <item id="1538802313" name="Cápsula verde molón"/>
+  <item id="3841656063" name="Círculo Puro"/>
+  <item id="329533060" name="Círculo curativo"/>
+  <item id="2462769812" name="Círculo perfecto"/>
+  <item id="3116243912" name="Círculo sanador"/>
+  <item id="3771017416" name="Círculo tóxico"/>
+  <item id="3981676097" name="Círculo vicioso"/>
+  <item id="2358515521" name="Cólera en la Mesa"/>
+  <item id="3953735438" name="Danza Alegre"/>
+  <item id="3997044198" name="De un Bocado (1)"/>
+  <item id="321669196" name="De un Bocado (2)"/>
+  <item id="451791105" name="De un Bocado (3)"/>
+  <item id="2320809054" name="De un Bocado (4)"/>
+  <item id="149288073" name="Delicia Demoníaca"/>
+  <item id="1752389606" name="Demonición"/>
+  <item id="3900222942" name="Derribo quarterback"/>
+  <item id="3900884221" name="Desaparición"/>
+  <item id="2932586452" name="Descanso"/>
+  <item id="3889762062" name="Descorazamiento"/>
+  <item id="4084229273" name="Desenlace Explosivo"/>
+  <item id="1332487214" name="Deseo Ardiente"/>
+  <item id="3682082027" name="Despido Suave (1)"/>
+  <item id="2343931224" name="Despido Suave (2)"/>
+  <item id="3113293993" name="Destello Solar"/>
+  <item id="1026376920" name="Destripe Final"/>
+  <item id="3281859222" name="Destructor Final"/>
+  <item id="4052173894" name="Destruktor"/>
+  <item id="68823126" name="Destruyesferas (1)"/>
+  <item id="109717787" name="Destruyesferas (2)"/>
+  <item id="586109871" name="Destruyesferas (3)"/>
+  <item id="3496078750" name="Destruyesferas (4)"/>
+  <item id="2277748198" name="Destruyesferas (5)"/>
+  <item id="2263110198" name="Desubicación"/>
+  <item id="3716900824" name="Desánimo"/>
+  <item id="1070495100" name="Deuda Eterna"/>
+  <item id="450472114" name="Devoración Salvaje"/>
+  <item id="341390745" name="Directo de Gorila"/>
+  <item id="31967988" name="Disparo N.º 3"/>
+  <item id="1725168548" name="Disparo N.º 360"/>
+  <item id="2133278953" name="Disparo N.º 9"/>
+  <item id="4046349840" name="Disparo desbocado"/>
+  <item id="2588051099" name="Disparomperador 3"/>
+  <item id="3833728134" name="Disparomperador 9"/>
+  <item id="3743948876" name="Disparomperador ↑"/>
+  <item id="3297793689" name="Doble desánimo"/>
+  <item id="1668894108" name="Dracodestello"/>
+  <item id="618215244" name="Dragón Sombrío"/>
+  <item id="2206546517" name="Draquiabrasión"/>
+  <item id="3617654518" name="Drenaje Inmortal"/>
+  <item id="1946298703" name="Ducha Matutina"/>
+  <item id="3206115618" name="Duermepega"/>
+  <item id="772671872" name="Dulce Fortuna (1)"/>
+  <item id="2126747699" name="Dulce Fortuna (2)"/>
+  <item id="3652691242" name="Duro Golpe (1)"/>
+  <item id="2764350322" name="Duro Golpe (2)"/>
+  <item id="2035448567" name="Duro Golpe (3)"/>
+  <item id="4283121012" name="Efecto Mejorposa"/>
+  <item id="1530618426" name="Elige un Regalo"/>
+  <item id="3147189331" name="Embestida"/>
+  <item id="1364791448" name="Empapamiento"/>
+  <item id="3992337135" name="En Flor"/>
+  <item id="4014219899" name="En Toda la Boca"/>
+  <item id="3544978307" name="Energitrago"/>
+  <item id="1497118400" name="Energía Empírea"/>
+  <item id="1930732377" name="Energía Inspiradora (1)"/>
+  <item id="68391887" name="Energía Inspiradora (2)"/>
+  <item id="3626306940" name="Enlace Aleatorio"/>
+  <item id="2122596019" name="Ensueño"/>
+  <item id="2114089961" name="Entrada Quarterback"/>
+  <item id="562781723" name="Erupción Feliz"/>
+  <item id="1140595683" name="Escala la Cascada"/>
+  <item id="1942216144" name="Escalofrío"/>
+  <item id="641337064" name="Escandalera"/>
+  <item id="4108725285" name="Escudo Tiburóneo"/>
+  <item id="792148216" name="Escurridizo"/>
+  <item id="388165829" name="Esfera de Choque"/>
+  <item id="676398177" name="Espada Atunácea"/>
+  <item id="2040601807" name="Espada Félida"/>
+  <item id="580128120" name="Espejito"/>
+  <item id="1256794387" name="Espejito Espejito"/>
+  <item id="3031513379" name="Espiral Tragona (1)"/>
+  <item id="3234487385" name="Espiral Tragona (2)"/>
+  <item id="34154359" name="Espiriexplosión"/>
+  <item id="3523087127" name="Espirifuego Fatuo"/>
+  <item id="3969786535" name="Espirilusión (1)"/>
+  <item id="865812806" name="Espirilusión (2)"/>
+  <item id="1077811167" name="Esquema"/>
+  <item id="105073081" name="Estornudazo"/>
+  <item id="3333564659" name="Evasión"/>
+  <item id="62282581" name="Excalipurr (1)"/>
+  <item id="1881354151" name="Expendekai: Vaya..."/>
+  <item id="1967608077" name="Expendekai: ¡Premio!"/>
+  <item id="337259388" name="Explochucho"/>
+  <item id="2392665972" name="Explosión"/>
+  <item id="720448288" name="Explosión Ayay"/>
+  <item id="2298155161" name="Explosión Binaria"/>
+  <item id="2409105386" name="Explosión Burbuja (1)"/>
+  <item id="378623568" name="Explosión Burbuja (2)"/>
+  <item id="513555584" name="Explosión Cuerno"/>
+  <item id="1713730369" name="Explosión Focal"/>
+  <item id="3906111766" name="Explosión McKraken"/>
+  <item id="2212138747" name="Explosión de Suelo (1)"/>
+  <item id="3493909887" name="Explosión de Suelo (2)"/>
+  <item id="1966807095" name="Fatiga"/>
+  <item id="2281461167" name="Felicidad"/>
+  <item id="4127075260" name="Felinfierno"/>
+  <item id="754913265" name="Ferrofuria (1)"/>
+  <item id="2976148529" name="Ferrofuria (2)"/>
+  <item id="698524426" name="Ferrogolpe (1)"/>
+  <item id="2964058800" name="Ferrogolpe (2)"/>
+  <item id="1924294437" name="Ferrogolpe (3)"/>
+  <item id="1909332683" name="Ferrogolpe (4)"/>
+  <item id="2324169797" name="Ferrohelada (1)"/>
+  <item id="3812261349" name="Ferrohelada (2)"/>
+  <item id="1648788707" name="Fiebre del Oro"/>
+  <item id="1817867640" name="Finalópodo"/>
+  <item id="2192456952" name="Finta Venenosa"/>
+  <item id="3662597980" name="Flecha de Cupido"/>
+  <item id="3875409895" name="Fuego"/>
+  <item id="3068329113" name="Furia en la Carretera"/>
+  <item id="998513586" name="Gambazo"/>
+  <item id="2887417787" name="Gancho Giratorio"/>
+  <item id="458242900" name="Gancho Gordo"/>
+  <item id="371577907" name="Garra Demoníaca"/>
+  <item id="2463249959" name="Garra Desgarradora"/>
+  <item id="3969907068" name="Garra de Zazel (1)"/>
+  <item id="3653790684" name="Garra de Zazel (2)"/>
+  <item id="1470708186" name="Garras del Terror"/>
+  <item id="1116504027" name="Gas Contrariante"/>
+  <item id="3334865329" name="Gas Somnífero"/>
+  <item id="1139021571" name="Gas Soporífero"/>
+  <item id="302397560" name="Gas Tóxico"/>
+  <item id="2407780125" name="Gases Tóxicos"/>
+  <item id="406206695" name="Gataclismo"/>
+  <item id="784025070" name="Gigaturbocarga"/>
+  <item id="487725099" name="Giro Esponjoso"/>
+  <item id="2003889239" name="Glaciar Divino (1)"/>
+  <item id="3465230271" name="Glaciar Divino (2)"/>
+  <item id="837183760" name="Glotonería Feliz"/>
+  <item id="339084947" name="Golpe Arrollador"/>
+  <item id="399645813" name="Golpe Arácnido"/>
+  <item id="3672038229" name="Golpe Canino"/>
+  <item id="209334871" name="Golpe Demoníaco (1)"/>
+  <item id="4051402331" name="Golpe Demoníaco (2)"/>
+  <item id="868425729" name="Golpe Demoníaco (3)"/>
+  <item id="3665974525" name="Golpe Demoníaco (4)"/>
+  <item id="254566317" name="Golpe Explosivo (1)"/>
+  <item id="3552463117" name="Golpe Explosivo (2)"/>
+  <item id="1017199054" name="Golpe Fantasma"/>
+  <item id="1561620490" name="Golpe Infernal (1)"/>
+  <item id="1729795830" name="Golpe Infernal (2)"/>
+  <item id="3557652220" name="Golpe Infernal (3)"/>
+  <item id="4131783524" name="Golpe Inquieto"/>
+  <item id="299645092" name="Golpe Sushiyama"/>
+  <item id="388091184" name="Golpe Temblador"/>
+  <item id="2954746507" name="Golpe Total"/>
+  <item id="1871787744" name="Golpe de Barreño"/>
+  <item id="691608617" name="Golpe de Macho"/>
+  <item id="333147230" name="Golpe de Rayo"/>
+  <item id="1232457561" name="Golpe de Teclado"/>
+  <item id="3189901912" name="Golpe de llave"/>
+  <item id="1349654069" name="Gran Ola"/>
+  <item id="4236446333" name="Gran Pinza"/>
+  <item id="3817319518" name="Gran aumento DEF"/>
+  <item id="2447998683" name="Gran aumento VEL"/>
+  <item id="3654665352" name="Gran aumento daño"/>
+  <item id="2718335244" name="Gran reducción DEF"/>
+  <item id="2555701722" name="Gran reducción FUE"/>
+  <item id="3496498057" name="Gran reducción VEL"/>
+  <item id="1485796530" name="Granizo"/>
+  <item id="3230350213" name="Granizo Divino"/>
+  <item id="3802401054" name="Grito de Kyryn"/>
+  <item id="2713206555" name="Guardacaos"/>
+  <item id="3420586676" name="Guardia"/>
+  <item id="3736997683" name="Guardia Felina"/>
+  <item id="1319323613" name="Guardia Oceánica"/>
+  <item id="4283125220" name="Guardia Plateada"/>
+  <item id="3257623636" name="Guardia Platino"/>
+  <item id="3539547125" name="Guardia de hierro"/>
+  <item id="3001767417" name="Guardia espejo"/>
+  <item id="1792601233" name="Guijarro"/>
+  <item id="3746698145" name="Habilidad de amigo"/>
+  <item id="3890501532" name="Hachazo"/>
+  <item id="3381003669" name="Hambre Frenética"/>
+  <item id="2610334987" name="Haz Destructor (1)"/>
+  <item id="156573683" name="Haz Destructor (2)"/>
+  <item id="2421968457" name="Haz Destructor (3)"/>
+  <item id="3881533151" name="Haz Destructor (4)"/>
+  <item id="2034232188" name="Haz Destructor (5)"/>
+  <item id="238607338" name="Haz Destructor (6)"/>
+  <item id="2536606288" name="Haz Destructor (7)"/>
+  <item id="2476651065" name="Hechizo Sellado"/>
+  <item id="1100236275" name="Helada"/>
+  <item id="3838085871" name="Hilo de Golpes"/>
+  <item id="1828481687" name="Historia Lúgubre"/>
+  <item id="2725251090" name="Hoja Vagabunda"/>
+  <item id="2149327980" name="Hombro Dolorido"/>
+  <item id="1838948085" name="Hora de la Siesta (1)"/>
+  <item id="4124976811" name="Hora de la Siesta (2)"/>
+  <item id="2774819825" name="Hora del Té"/>
+  <item id="1758735453" name="Hueso de la Risa"/>
+  <item id="1933307546" name="Huesos Rodantes"/>
+  <item id="2476216975" name="Hurgamiento"/>
+  <item id="2461209634" name="Héroe Bromista"/>
+  <item id="1183116671" name="Iluminación"/>
+  <item id="141252053" name="Ilusión Visual"/>
+  <item id="443623925" name="Imitaguardián"/>
+  <item id="2211231552" name="Impacto Canino"/>
+  <item id="3350075897" name="Impacto Famélico"/>
+  <item id="4207816777" name="Impacto Fresco"/>
+  <item id="2627405902" name="Impacto Ternura"/>
+  <item id="2509649502" name="Impacto Témpano"/>
+  <item id="2028610211" name="Impacto de Barreño"/>
+  <item id="4263716156" name="Indiferencia"/>
+  <item id="3198553344" name="Inferno (1)"/>
+  <item id="1647158102" name="Infierno Dorado"/>
+  <item id="4280435232" name="Infierno Felino"/>
+  <item id="553180760" name="Infierno Rúbeo (1)"/>
+  <item id="3119615970" name="Infierno Rúbeo (2)"/>
+  <item id="3472277364" name="Infierno Rúbeo (3)"/>
+  <item id="3864734654" name="Infranqueable"/>
+  <item id="3945321661" name="Invocación"/>
+  <item id="2989342463" name="Invocación Komaleón"/>
+  <item id="858722995" name="Invocación Ocular (1)"/>
+  <item id="1127846771" name="Invocación Ocular (2)"/>
+  <item id="3157803653" name="Invocación Ocular (3)"/>
+  <item id="3284081393" name="Invocación Robonyan"/>
+  <item id="2850215712" name="Invocación Sam"/>
+  <item id="106571024" name="Invocación Yo-kai (1)"/>
+  <item id="1767001389" name="Invocación Yo-kai (2)"/>
+  <item id="4032502935" name="Invocación Yo-kai (3)"/>
+  <item id="2270964737" name="Invocación Yo-kai (4)"/>
+  <item id="92054238" name="Invocación de Élite"/>
+  <item id="1878068769" name="Ira Desquiciada"/>
+  <item id="3833381052" name="Jabón Escurridizo"/>
+  <item id="540287545" name="Juabsorción"/>
+  <item id="1737762937" name="La Guillotina"/>
+  <item id="559692401" name="Lametazo (1)"/>
+  <item id="1905372098" name="Lametazo (2)"/>
+  <item id="2499685910" name="Lametón Mimoso"/>
+  <item id="3661704595" name="Lametón Vital"/>
+  <item id="3488692575" name="Lanzabarreños"/>
+  <item id="3069106868" name="Lanzatricuchillos (1)"/>
+  <item id="1026072423" name="Lanzatricuchillos (2)"/>
+  <item id="1153419231" name="Latigazo Tentacular"/>
+  <item id="3261598241" name="Lenguaraz"/>
+  <item id="3704177688" name="Liarla Panda"/>
+  <item id="2316803957" name="Llamada del Jefe (1)"/>
+  <item id="1952493390" name="Llamada del Jefe (2)"/>
+  <item id="822689653" name="Llamada del Jefe (3)"/>
+  <item id="2818600655" name="Llamada del Jefe (4)"/>
+  <item id="3741802073" name="Llamada del Jefe (5)"/>
+  <item id="3304226078" name="Llamada del Jefe (6)"/>
+  <item id="4293213862" name="Llamarada"/>
+  <item id="644558808" name="Llave de Hombro"/>
+  <item id="1345419328" name="Llega la Parca"/>
+  <item id="3412407345" name="Lloriqueo"/>
+  <item id="4057037261" name="Lluvia Bombardeo Oscuro (1)"/>
+  <item id="199115950" name="Lluvia Bombardeo Oscuro (2)"/>
+  <item id="2094625848" name="Lluvia Bombardeo Oscuro (3)"/>
+  <item id="2384859093" name="Lluvia de Asura"/>
+  <item id="1408843737" name="Lluvia de Palillos"/>
+  <item id="1597116945" name="Locura Furiosa"/>
+  <item id="3172869592" name="Loncha Tediosa"/>
+  <item id="280240364" name="Loto Valiente"/>
+  <item id="2386671797" name="Lucha en Vivo"/>
+  <item id="2882626391" name="Línea de Fuego"/>
+  <item id="3818731622" name="Macarras"/>
+  <item id="636629473" name="Machacamelones"/>
+  <item id="2872977639" name="Machipuñetazo"/>
+  <item id="4182605285" name="Magia Maléfica"/>
+  <item id="203504411" name="Maldición Diablés"/>
+  <item id="1475366898" name="Maldición Mala"/>
+  <item id="2777999056" name="Maldito Guerrero"/>
+  <item id="2302686028" name="Maldito Seas"/>
+  <item id="2769695883" name="Manguerazo"/>
+  <item id="4251379360" name="Mano Despierta"/>
+  <item id="1785987868" name="Mano Envidiosa"/>
+  <item id="1059721250" name="Maraña (1)"/>
+  <item id="1877442961" name="Maraña (2)"/>
+  <item id="3054881644" name="Marca Mortal"/>
+  <item id="971023553" name="Marea Negra (1)"/>
+  <item id="3258191775" name="Marea Negra (2)"/>
+  <item id="1829912453" name="Maremoto"/>
+  <item id="2573015958" name="Me... ¡Decido!"/>
+  <item id="1226907162" name="Megacascada"/>
+  <item id="2830434571" name="Megacoletazo"/>
+  <item id="303304621" name="Megacornada"/>
+  <item id="4057594259" name="Megagolpe Temblador"/>
+  <item id="1843449768" name="Megamina"/>
+  <item id="56704831" name="Megaonda (1)"/>
+  <item id="1403825804" name="Megaonda (2)"/>
+  <item id="3160109968" name="Megavenespiritación"/>
+  <item id="3877366265" name="Merengue Atronador (1)"/>
+  <item id="2339910264" name="Merengue Atronador (2)"/>
+  <item id="50630080" name="Merengue Atronador (3)"/>
+  <item id="3457175302" name="Meteoro (1)"/>
+  <item id="1236943053" name="Meteoro (2)"/>
+  <item id="826348203" name="Mezquimaldición"/>
+  <item id="218774966" name="Miau Adorable"/>
+  <item id="2877109762" name="Miau Atigrado"/>
+  <item id="1563772651" name="Miaubolazo"/>
+  <item id="3257603268" name="Milagro de Grupo"/>
+  <item id="1298968097" name="Milhojas Afligidas (1)"/>
+  <item id="3235471778" name="Milhojas Afligidas (2)"/>
+  <item id="1199549153" name="Milhojas Afligidas (3)"/>
+  <item id="3985272922" name="Milhojas Afligidas (4)"/>
+  <item id="731460456" name="Milperdones"/>
+  <item id="1962671849" name="Mina"/>
+  <item id="3403289056" name="Mirada Ardiente"/>
+  <item id="2440766251" name="Mirada Intensa"/>
+  <item id="2182836374" name="Mirada Soberbia"/>
+  <item id="2887453339" name="Mirada de Centurión"/>
+  <item id="3648997393" name="Mirlotado"/>
+  <item id="992174089" name="Mocotortazo"/>
+  <item id="426670742" name="Momento Tenso"/>
+  <item id="3546123416" name="Monte Glotón"/>
+  <item id="536316934" name="Monte Tragón"/>
+  <item id="3466799081" name="Mordida Bicéfala"/>
+  <item id="420237970" name="Mordisco Molesto"/>
+  <item id="4047701541" name="Mover Expendekai"/>
+  <item id="2549475254" name="Movimiento Central"/>
+  <item id="3371994809" name="Multiaumento ESP"/>
+  <item id="2306712555" name="Multireducción ESP"/>
+  <item id="2289631796" name="Mundo Inocente (1)"/>
+  <item id="3635712903" name="Mundo Inocente (2)"/>
+  <item id="2152533340" name="Mundo Melenudo"/>
+  <item id="2005467299" name="Mundo Oscuro"/>
+  <item id="3678077454" name="Muralla Caída"/>
+  <item id="1773941781" name="Muro Paciente"/>
+  <item id="3422750888" name="Nana de Ermitaño"/>
+  <item id="795218376" name="Neblina Apestosa"/>
+  <item id="1536956801" name="Negatillería"/>
+  <item id="3013755707" name="No Corta el Mar (1)"/>
+  <item id="2741247599" name="No Corta el Mar (2)"/>
+  <item id="980242389" name="No Corta el Mar (3)"/>
+  <item id="3103326433" name="No Dormirás Más"/>
+  <item id="3036796775" name="No Molestar"/>
+  <item id="1076633610" name="No Puedes Pasar"/>
+  <item id="3586423304" name="No, Arenacias"/>
+  <item id="4182055333" name="Nocturnidad"/>
+  <item id="431562492" name="Ocho Cabezas"/>
+  <item id="814432518" name="Ojo Láser"/>
+  <item id="944516283" name="Ojos Suspicaces"/>
+  <item id="247597759" name="Ola Playera (1)"/>
+  <item id="1578081036" name="Ola Playera (2)"/>
+  <item id="243340378" name="Ola de Calor"/>
+  <item id="1679753621" name="Ominoso"/>
+  <item id="1427340886" name="Onda Bacteriana (1)"/>
+  <item id="296494965" name="Onda Bacteriana (2)"/>
+  <item id="1105288293" name="Onda Bacteriana (3)"/>
+  <item id="807996131" name="Onda Bostezo"/>
+  <item id="222896979" name="Onda Bostezo X"/>
+  <item id="988546042" name="Onda Cimbreante"/>
+  <item id="586292122" name="Onda de Carnaval"/>
+  <item id="1972227684" name="Oniexterminio (1)"/>
+  <item id="3968114654" name="Oniexterminio (2)"/>
+  <item id="2071308993" name="Onimasacre (1)"/>
+  <item id="3799841659" name="Onimasacre (2)"/>
+  <item id="4012375494" name="Onimasacre (3)"/>
+  <item id="1982770300" name="Onimasacre (4)"/>
+  <item id="19504362" name="Onimasacre (5)"/>
+  <item id="1052848030" name="Operación Ω"/>
+  <item id="522192700" name="Orbe de Enma"/>
+  <item id="2722496565" name="Oro Relámpago"/>
+  <item id="710161084" name="Oro Tajante"/>
+  <item id="1544485452" name="Oro aullador"/>
+  <item id="1645290820" name="Palillo Puntiagudo"/>
+  <item id="3692961906" name="Paliza Dorada"/>
+  <item id="3143638744" name="Paliza Pesadilla (1)"/>
+  <item id="4065209846" name="Paliza Pesadilla (2)"/>
+  <item id="1504898533" name="Paliza Pesadilla (3)"/>
+  <item id="750522644" name="Paliza Punki"/>
+  <item id="453707368" name="Paliza Vertebral"/>
+  <item id="936120608" name="Panceta Ahumada (1)"/>
+  <item id="2932162714" name="Panceta Ahumada (2)"/>
+  <item id="3978387077" name="Panjitsu (1)"/>
+  <item id="1073427910" name="Panzamisiles (1)"/>
+  <item id="3493420792" name="Panzamisiles (2)"/>
+  <item id="1841587895" name="Paraíso"/>
+  <item id="1243681919" name="Patada Convicta"/>
+  <item id="2981984016" name="Patada Felina"/>
+  <item id="3199998830" name="Patada Infernal"/>
+  <item id="4154826323" name="Patada Rompeceldas"/>
+  <item id="86770955" name="Pataleta Airada"/>
+  <item id="2407143705" name="Patapulta"/>
+  <item id="4215426399" name="Patas Volantes"/>
+  <item id="3526769694" name="Patitas Azul Puro"/>
+  <item id="450278254" name="Patitas Brillantes"/>
+  <item id="3178117641" name="Patitas Espinosas"/>
+  <item id="454635965" name="Patitas Furiosas (1)"/>
+  <item id="1008099445" name="Patitas Furiosas (2)"/>
+  <item id="2509653710" name="Patitas Monas"/>
+  <item id="1401495560" name="Patitas Pelirrojas"/>
+  <item id="4015396270" name="Patitas Perfectas"/>
+  <item id="1368290546" name="Patitas Perrunas"/>
+  <item id="2834722686" name="Patitas de Rubí"/>
+  <item id="1597137537" name="Pelusilla"/>
+  <item id="3977428625" name="Pepimiautaque"/>
+  <item id="1154679466" name="Peregrinazo"/>
+  <item id="3665096672" name="Pesadilla Infernal"/>
+  <item id="3535136953" name="Pesca del Día"/>
+  <item id="3402206809" name="Pestañeo Poderoso"/>
+  <item id="2027631442" name="Picorcalipsis"/>
+  <item id="11077686" name="Piedra de Draqui"/>
+  <item id="1169890018" name="Piensa Mal"/>
+  <item id="1525940681" name="Pinza Infernal"/>
+  <item id="2843533688" name="Piscicuración"/>
+  <item id="2298686889" name="Pisotón Nocturno"/>
+  <item id="3042752157" name="Pisotón expansivo"/>
+  <item id="2510951981" name="Placaje Tentacular"/>
+  <item id="870733528" name="Plata Platino"/>
+  <item id="2579070664" name="Platanazo"/>
+  <item id="845038024" name="Plumas Flotantes"/>
+  <item id="2841334809" name="Poder Alienígena"/>
+  <item id="908537394" name="Polvo de Injustio"/>
+  <item id="2059292588" name="Porcino Loco"/>
+  <item id="4031260597" name="Pose de Agallas"/>
+  <item id="1139042195" name="Pose de León"/>
+  <item id="3719730789" name="Pose de Miedo"/>
+  <item id="2080975565" name="Postura defensiva"/>
+  <item id="3796497363" name="Postura invencible"/>
+  <item id="1315518827" name="Postura maestra"/>
+  <item id="1180385819" name="Postura ofensiva"/>
+  <item id="241694792" name="Postura veloz"/>
+  <item id="471546701" name="Premio con trampa"/>
+  <item id="326899685" name="Prensado"/>
+  <item id="3741449603" name="Presión Corporal"/>
+  <item id="4220131544" name="Presión Infernal"/>
+  <item id="3591130369" name="Primeros Auxilios"/>
+  <item id="174850351" name="Proteína"/>
+  <item id="2369337286" name="Provocación"/>
+  <item id="459877996" name="Pulpalillo"/>
+  <item id="1113287457" name="Pulpincho"/>
+  <item id="3875295237" name="Pulverización"/>
+  <item id="2522743127" name="Puñetazo Mochi"/>
+  <item id="4160323398" name="Puñetazo Simio"/>
+  <item id="2843848125" name="Puñetazo de Capitán"/>
+  <item id="2963023545" name="Puño Repentino"/>
+  <item id="958674163" name="Puño abrasador"/>
+  <item id="2650857215" name="Puño de Malvavisco (1)"/>
+  <item id="1622720939" name="Puño de Malvavisco (2)"/>
+  <item id="3210561736" name="Puño de Pescador (1)"/>
+  <item id="643045746" name="Puño de Pescador (2)"/>
+  <item id="1053050160" name="Puño del Demonio"/>
+  <item id="3277192733" name="Puño misil (1)"/>
+  <item id="3864773918" name="Puño misil (2)"/>
+  <item id="1697361187" name="Puñomperador"/>
+  <item id="2229470924" name="Rayada"/>
+  <item id="1775908422" name="Rayo Acuático"/>
+  <item id="3489596286" name="Rayo Devastador"/>
+  <item id="3486203809" name="Rayo Divino"/>
+  <item id="2026468375" name="Rayo Loco"/>
+  <item id="3154518593" name="Rayo Lácer"/>
+  <item id="1890329311" name="Rayo Ofensivo"/>
+  <item id="1023990135" name="Rayo Triple (1)"/>
+  <item id="129396217" name="Rayo Triple (2)"/>
+  <item id="3938529094" name="Rayo de Belleza (1)"/>
+  <item id="1130519129" name="Rayo de Belleza (2)"/>
+  <item id="1227206650" name="Rayo de Empleado (1)"/>
+  <item id="59552779" name="Rayo de Empleado (2)"/>
+  <item id="1527528796" name="Rayo de Empleado (3)"/>
+  <item id="3868685517" name="Rayo de Gratitud (1)"/>
+  <item id="2141070711" name="Rayo de Gratitud (2)"/>
+  <item id="144250337" name="Rayo de Gratitud (3)"/>
+  <item id="2533195842" name="Rayo de Gratitud (4)"/>
+  <item id="3791302868" name="Rayo de Gratitud (5)"/>
+  <item id="2029248878" name="Rayo de Gratitud (6)"/>
+  <item id="3493306446" name="Rayo del Báculo"/>
+  <item id="4049837215" name="Rayo láser (1)"/>
+  <item id="2656226410" name="Rayo láser (2)"/>
+  <item id="1717259146" name="Recibe un Regalo"/>
+  <item id="1960794102" name="Recuperación"/>
+  <item id="2211760043" name="Red Enredadora"/>
+  <item id="3139285069" name="Reducción de DEF"/>
+  <item id="2169493659" name="Reducción de FUE"/>
+  <item id="3379782344" name="Reducción de VEL"/>
+  <item id="964671710" name="Refugio"/>
+  <item id="538407034" name="Regeneración"/>
+  <item id="971197530" name="Relampagrueso"/>
+  <item id="1428154995" name="Relámpago"/>
+  <item id="966920505" name="Remojón"/>
+  <item id="3525577675" name="Reparto"/>
+  <item id="1697908536" name="Reptil Épico"/>
+  <item id="871122077" name="Reunión Emergencia (1)"/>
+  <item id="3954846928" name="Reunión Emergencia (2)"/>
+  <item id="3730540948" name="Reunión Emergencia (3)"/>
+  <item id="1196611630" name="Reunión Emergencia (4)"/>
+  <item id="810936504" name="Reunión Emergencia (5)"/>
+  <item id="557236387" name="Revientatrullos (1)"/>
+  <item id="1374721924" name="Revientatrullos (2)"/>
+  <item id="2561517195" name="Revolución Doble (1)"/>
+  <item id="3068372023" name="Revolución Doble (2)"/>
+  <item id="520842696" name="Revolución Doble G (1)"/>
+  <item id="826634100" name="Revolución Doble G (2)"/>
+  <item id="4119737453" name="Rezo Bostezado"/>
+  <item id="2799567746" name="Risa de la Suerte"/>
+  <item id="1246646952" name="Robamemorias"/>
+  <item id="1460939436" name="Robapitanza"/>
+  <item id="1962056633" name="Robotaladro"/>
+  <item id="4194262033" name="Robozarpa"/>
+  <item id="3306043064" name="Roca de Dragón"/>
+  <item id="4274142799" name="Rompecoraza"/>
+  <item id="603723056" name="Rompecuernos"/>
+  <item id="2407883851" name="Rompehuesos"/>
+  <item id="1661969162" name="Rompeprisión"/>
+  <item id="665151088" name="Romper"/>
+  <item id="3822986883" name="Ronroneo Dorado"/>
+  <item id="1653648209" name="Ronroneo Rúbeo"/>
+  <item id="934962013" name="Rotura Compacta"/>
+  <item id="3497170721" name="Rugido Fresil"/>
+  <item id="29429886" name="Ráfaga Resignada"/>
+  <item id="4179624274" name="Rápidos"/>
+  <item id="1040258703" name="Río Bravo"/>
+  <item id="3976130873" name="Rómpete una Pierna (1)"/>
+  <item id="1979162755" name="Rómpete una Pierna (2)"/>
+  <item id="49319957" name="Rómpete una Pierna (3)"/>
+  <item id="3450270639" name="Sable de Empleado (1)"/>
+  <item id="2830851587" name="Sable de Empleado (2)"/>
+  <item id="574843154" name="Salto de Blasters"/>
+  <item id="2171878436" name="Salud Prestada"/>
+  <item id="1076646042" name="Samba de Alga"/>
+  <item id="3935307382" name="Sanguijuela"/>
+  <item id="546527618" name="Saqueavidas"/>
+  <item id="384511245" name="Savia"/>
+  <item id="2759732419" name="Se Me Va"/>
+  <item id="2704678507" name="Siesta Gatuna (1)"/>
+  <item id="1758578653" name="Siesta Gatuna (2)"/>
+  <item id="3506841543" name="Sifón"/>
+  <item id="679895051" name="Silencio Tenso"/>
+  <item id="1286677891" name="Slurrrb"/>
+  <item id="1228089807" name="Solo para Ti"/>
+  <item id="894786703" name="Sombra Directa"/>
+  <item id="2357600404" name="Sombra Veloz"/>
+  <item id="1306410170" name="Sombricada"/>
+  <item id="847848866" name="Sombrirráfaga (1)"/>
+  <item id="1648669713" name="Sombrirráfaga (2)"/>
+  <item id="2993496264" name="Sonrisa Sana"/>
+  <item id="1266757979" name="Sonrisa de Dandi"/>
+  <item id="2536904991" name="Sonrisa de Noko"/>
+  <item id="2857775279" name="Sonrisa de Panda"/>
+  <item id="3715512378" name="Sorbete de Nieve"/>
+  <item id="4098542660" name="Subida al Escenario"/>
+  <item id="2241407313" name="Sueño Eterno"/>
+  <item id="1948024433" name="Sueño de Oro"/>
+  <item id="957104443" name="Superregeneración"/>
+  <item id="392124380" name="Supersiesta"/>
+  <item id="504566515" name="Superturbocarga (1)"/>
+  <item id="3827052432" name="Superturbocarga (2)"/>
+  <item id="2468028166" name="Superturbocarga (3)"/>
+  <item id="1943099832" name="Suspiro Helado"/>
+  <item id="1287005426" name="Susto Arrugador"/>
+  <item id="3456392274" name="Susto Tímido"/>
+  <item id="3584446988" name="Susto o Corte"/>
+  <item id="2267754949" name="Tajo Arrocero"/>
+  <item id="147598958" name="Tajo Demoníaco (1)"/>
+  <item id="506331161" name="Tajo Demoníaco (2)"/>
+  <item id="2813729738" name="Tajo Desganado"/>
+  <item id="1559889358" name="Tajo Felino (1)"/>
+  <item id="1368213547" name="Tajo Felino (2)"/>
+  <item id="2337926699" name="Tajo Felino (3)"/>
+  <item id="485092306" name="Tajo Felino (4)"/>
+  <item id="1375628067" name="Tajo Legendario"/>
+  <item id="366643021" name="Tajo Lunar (1)"/>
+  <item id="416431253" name="Tajo Lunar (2)"/>
+  <item id="2897553758" name="Tajo Lunar (3)"/>
+  <item id="4161088964" name="Tajo Lunar (4)"/>
+  <item id="488223549" name="Tajo Lunar (5)"/>
+  <item id="3446345952" name="Tajo Osfurio"/>
+  <item id="1822311059" name="Tajo Sagrado (1)"/>
+  <item id="4156746553" name="Tajo Sagrado (2)"/>
+  <item id="2181646147" name="Tajo Temerario"/>
+  <item id="3211357939" name="Tajo Torrencial"/>
+  <item id="3755349883" name="Tajo Tostado"/>
+  <item id="2906106067" name="Tajo de Espiral (1)"/>
+  <item id="3331433540" name="Tajo de Espiral (2)"/>
+  <item id="1615954933" name="Tajo de Gravedad"/>
+  <item id="2673033031" name="Tajo del Caballero (1)"/>
+  <item id="1178778072" name="Tajo del Caballero (2)"/>
+  <item id="3092814631" name="Taladro de Sombras"/>
+  <item id="177726339" name="Tapa Protectora"/>
+  <item id="2026439815" name="Te Doy pa'l Pelo"/>
+  <item id="71572803" name="Temblor de Tierra"/>
+  <item id="3408276180" name="Temblotrompazo"/>
+  <item id="3026387993" name="Tenacidad Suma"/>
+  <item id="769602409" name="Tentaculadro"/>
+  <item id="1987909428" name="Tentaculadro Turbo"/>
+  <item id="3320549870" name="Tentáculos Helados (1)"/>
+  <item id="1222065332" name="Tentáculos Helados (2)"/>
+  <item id="4057870958" name="Terror Dorado"/>
+  <item id="2687779341" name="Tetracepción"/>
+  <item id="3098583872" name="Tierra Calabrasada (1)"/>
+  <item id="565834490" name="Tierra Calabrasada (2)"/>
+  <item id="1455342188" name="Tierra Calabrasada (3)"/>
+  <item id="3369752527" name="Tierra Calabrasada (4)"/>
+  <item id="3218958169" name="Tierra Calabrasada (5)"/>
+  <item id="651441891" name="Tierra Calabrasada (6)"/>
+  <item id="2740653759" name="Tifón Demoníaco"/>
+  <item id="2654676751" name="Tifón Sombrío"/>
+  <item id="1555643389" name="Tifón de Llamas"/>
+  <item id="860095386" name="Tinta Cegadora (1)"/>
+  <item id="1708177260" name="Tinta Cegadora (2)"/>
+  <item id="4089646681" name="Tirachinas Estigio"/>
+  <item id="1345390800" name="Tirada Aleatoria"/>
+  <item id="719527157" name="Tita Cariñosa"/>
+  <item id="3878892534" name="Tocaboles"/>
+  <item id="2765707128" name="Tochazo"/>
+  <item id="2949856658" name="Todo para Mí"/>
+  <item id="3139633213" name="Tonto pero Feliz"/>
+  <item id="989562235" name="Torbellino"/>
+  <item id="601928762" name="Tornado (1)"/>
+  <item id="3493949376" name="Tornado Férreo"/>
+  <item id="3963181340" name="Tornado Supino (1)"/>
+  <item id="3170158767" name="Tornado Supino (2)"/>
+  <item id="3761975315" name="Torrente"/>
+  <item id="3910872986" name="Torta Esquelética"/>
+  <item id="3564832298" name="Tortazo con Amor"/>
+  <item id="2404259741" name="Tos Dañina"/>
+  <item id="3398132003" name="Tragaperras (1)"/>
+  <item id="3686620939" name="Tragaperras (2)"/>
+  <item id="297431186" name="Tralla Metralla"/>
+  <item id="2735121536" name="Trampa"/>
+  <item id="1941139900" name="Tranquibofetón"/>
+  <item id="3604687211" name="Transpiramuro"/>
+  <item id="3511371641" name="Trauma Triple (1)"/>
+  <item id="2357772852" name="Trauma Triple (2)"/>
+  <item id="2483339372" name="Trauma Triple (3)"/>
+  <item id="2844981557" name="Trauma Triple (4)"/>
+  <item id="2639555517" name="Trilepatía"/>
+  <item id="1373003745" name="Triple ataque (1)"/>
+  <item id="1221422752" name="Triple ataque (2)"/>
+  <item id="1675640163" name="Triple ataque (3)"/>
+  <item id="2063272994" name="Triple ataque (4)"/>
+  <item id="901421797" name="Triple ataque (5)"/>
+  <item id="3066243928" name="Truco Sucio (1)"/>
+  <item id="3859725035" name="Truco Sucio (2)"/>
+  <item id="707857166" name="Técnica de Fuego"/>
+  <item id="126626378" name="Uno de tres"/>
+  <item id="1649560369" name="Uvamigos"/>
+  <item id="2568881523" name="Uy, Eh... Espera"/>
+  <item id="3574799970" name="Uñas y Dientes"/>
+  <item id="501303271" name="Vacíabolsillos"/>
+  <item id="4217600958" name="Vacío de Succión"/>
+  <item id="2522771911" name="Vagamundo"/>
+  <item id="303333181" name="Veneconda"/>
+  <item id="2772452049" name="Venespiritación"/>
+  <item id="1385244561" name="Venganza"/>
+  <item id="2063676302" name="Ventisca Brillante"/>
+  <item id="3764825000" name="Verdoplasma"/>
+  <item id="1212745298" name="Viento Norte"/>
+  <item id="3821801814" name="Virus Pésimo"/>
+  <item id="412227665" name="Vitamiau C"/>
+  <item id="4269284268" name="Volcán Oscuro"/>
+  <item id="3518830066" name="Voraz (1)"/>
+  <item id="3958888048" name="Voraz (2)"/>
+  <item id="1474447260" name="Vuelta Misteriosa"/>
+  <item id="2931500506" name="Yelmocoraza"/>
+  <item id="1859782796" name="Yo, Yo y Yo"/>
+  <item id="1172976594" name="Zarandeo"/>
+  <item id="500681559" name="Zarpa Sesgadora"/>
+  <item id="3224125502" name="Zona Tarumba"/>
+  <item id="3054784306" name="Zurra"/>
+  <item id="3851623607" name="¡A Todo Volumen!"/>
+  <item id="4189711294" name="¡Aaamiaugo!"/>
+  <item id="3885257382" name="¡Adelante!"/>
+  <item id="3366781752" name="¡Asereyanqui!"/>
+  <item id="2000440525" name="¡Cómo Osas!"/>
+  <item id="1834033504" name="¡Doblete!"/>
+  <item id="274941062" name="¡Oh!"/>
+  <item id="2051773861" name="¡Pa' mí! (1)"/>
+  <item id="2509042713" name="¡Pa' mí! (2)"/>
+  <item id="210085283" name="¡Pa' mí! (3)"/>
+  <item id="2072155445" name="¡Pa' mí! (4)"/>
+  <item id="3857055894" name="¡Pa' mí! (5)"/>
+  <item id="2464231424" name="¡Pa' mí! (6)"/>
+  <item id="2131248037" name="¡Panceta Hervida! (1)"/>
+  <item id="2240360222" name="¡Panceta Hervida! (2)"/>
+  <item id="478183076" name="¡Pata Negra!"/>
+  <item id="1951596671" name="¡Por Aquí!"/>
+  <item id="645735384" name="¡Purificando!"/>
+  <item id="3609360564" name="¡To' pa' mí!"/>
+  <item id="1082874801" name="¡Victoriaaa!"/>
+  <item id="3217954120" name="¡Yo Mando!"/>
+  <item id="1100176424" name="¡Órdenes Secretas!"/>
+  <item id="512625493" name="¿Me Has Visto?"/>
+  <item id="2604338908" name="¿Qué Será? (1)"/>
+  <item id="3376454404" name="¿Qué Será? (2)"/>
+  <item id="724397286" name="¿Qué Será? (3)"/>
+  <item id="2577368929" name="¿Qué Será? (4)"/>
+  <item id="4249643406" name="Área de Risas"/>
+  <item id="2921094753" name="Ímpetu"/>
+  <item id="1649297057" name="Ñam, Ñam, Ñam (1)"/>
+  <item id="215265154" name="Ñam, Ñam, Ñam (2)"/>
+  <item id="1435296215" name="Ñam, Ñam, Ñam (3)"/>
+  <item id="237470098" name="Ñam, Ñam, Ñam (4)"/>
+  <item id="132514015" name="Ñam, Ñam, Ñam (5)"/>
+  <item id="4152975511" name="Órdago"/>
+  <item id="1180768830" name="☆Caos Brillante"/>
+  <item id="3792782704" name="☆Lluvia Radiante"/>
+  <item id="3748752576" name="☆Parasol Prisma"/>
+  <item id="2030462836" name="☆Punzada Cuca"/>
+</items>

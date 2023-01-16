@@ -1,0 +1,418 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="284256326" name="무대꼬"/>
+  <item id="1744197840" name="안꿈쩍"/>
+  <item id="4278126954" name="다앞장"/>
+  <item id="2314746364" name="안하겠승"/>
+  <item id="396143711" name="하기싫승"/>
+  <item id="1620810953" name="말하기싫승"/>
+  <item id="4187147635" name="떡강쇠"/>
+  <item id="2392194533" name="시기떡"/>
+  <item id="506126452" name="해이칼"/>
+  <item id="1764610274" name="쑥대칼"/>
+  <item id="166353159" name="털레칼"/>
+  <item id="2129488273" name="승부사"/>
+  <item id="3890493483" name="요괴검사"/>
+  <item id="2430798013" name="요괴 성검사"/>
+  <item id="243768606" name="요괴 마검사"/>
+  <item id="2038476168" name="투구 귀신"/>
+  <item id="3767139378" name="환마장군"/>
+  <item id="2542718116" name="황천대장군"/>
+  <item id="120705333" name="타올라이온"/>
+  <item id="1882644899" name="이글라이온"/>
+  <item id="583469764" name="미라클 라이온"/>
+  <item id="1438661202" name="사슴벌레 무사"/>
+  <item id="3435752424" name="사슴벌레 대장"/>
+  <item id="3150863230" name="사슴벌레 대장"/>
+  <item id="631951069" name="왕사슴벌레 신"/>
+  <item id="1387134539" name="요괴인"/>
+  <item id="3416567793" name="사이보그 요괴인"/>
+  <item id="3164839783" name="광귀"/>
+  <item id="740066038" name="겁주귀"/>
+  <item id="1528541792" name="줄줄새"/>
+  <item id="1004288901" name="고뿔덕"/>
+  <item id="1289423635" name="다알견"/>
+  <item id="3587332777" name="네개눈"/>
+  <item id="2731895359" name="아차모"/>
+  <item id="1018298268" name="멍모자"/>
+  <item id="1270271754" name="웃기자나"/>
+  <item id="3535773360" name="퍼래퍼래"/>
+  <item id="2780343846" name="왕대쪽"/>
+  <item id="889697207" name="기발하괴"/>
+  <item id="1107329825" name="인기많총"/>
+  <item id="1956490562" name="인기마누스"/>
+  <item id="60464596" name="인기없스"/>
+  <item id="2593377390" name="나불할멈"/>
+  <item id="3985964280" name="백골할멈"/>
+  <item id="1945135451" name="까발멈"/>
+  <item id="83319245" name="맥"/>
+  <item id="2650671223" name="백"/>
+  <item id="3942201569" name="냠냠동자"/>
+  <item id="2051417456" name="전파신"/>
+  <item id="222369254" name="발전신"/>
+  <item id="1837538307" name="운외경"/>
+  <item id="444705941" name="암흑경"/>
+  <item id="2206793007" name="환상도사"/>
+  <item id="4103065017" name="아랑도사"/>
+  <item id="1793808410" name="방랑도사"/>
+  <item id="502032524" name="설녀"/>
+  <item id="2229614902" name="눈보라 공주"/>
+  <item id="4091677088" name="백귀공주"/>
+  <item id="1667044401" name="구미"/>
+  <item id="341451943" name="견신"/>
+  <item id="1185664960" name="힘없뚜기"/>
+  <item id="833421142" name="마초뚜기"/>
+  <item id="2829430508" name="고릴뚜기"/>
+  <item id="3751976570" name="칼칼송이"/>
+  <item id="1103498201" name="따끔성게"/>
+  <item id="918633295" name="멋골부인"/>
+  <item id="2949147381" name="해골양"/>
+  <item id="3637467747" name="칼슘미인"/>
+  <item id="1215318002" name="무리담"/>
+  <item id="1064793956" name="무리성"/>
+  <item id="1605435009" name="백성벽"/>
+  <item id="683134487" name="못가복"/>
+  <item id="2982059949" name="무쇠못가복"/>
+  <item id="3334057787" name="갑옷 귀신"/>
+  <item id="1490893464" name="설산씨름꾼"/>
+  <item id="802818574" name="화산씨름꾼"/>
+  <item id="3067304884" name="풍뎅무사"/>
+  <item id="3251923746" name="풍뎅무쌍"/>
+  <item id="1365997235" name="왕풍뎅신"/>
+  <item id="644630053" name="금일등"/>
+  <item id="3626558030" name="동삼등"/>
+  <item id="2939146968" name="은이등"/>
+  <item id="908493666" name="백금등"/>
+  <item id="1092727796" name="얼룩덜룩"/>
+  <item id="3745850967" name="바다 허깨비"/>
+  <item id="2822903489" name="무사맴"/>
+  <item id="827017083" name="짱무사맴"/>
+  <item id="1179416557" name="가수 무사맴"/>
+  <item id="3606276732" name="슬피우새"/>
+  <item id="2717145834" name="꼴사납새"/>
+  <item id="3241399055" name="사신조"/>
+  <item id="3056919449" name="지바냥"/>
+  <item id="792572451" name="가시냥"/>
+  <item id="1480229557" name="배드냥"/>
+  <item id="3328055062" name="로보냥"/>
+  <item id="2975410048" name="골드냥"/>
+  <item id="676361786" name="다이아냥"/>
+  <item id="1599555244" name="사파이냥"/>
+  <item id="3488111421" name="에메랄냥"/>
+  <item id="3102698411" name="루비냥"/>
+  <item id="288555633" name="토파냥"/>
+  <item id="1714696935" name="접시거북"/>
+  <item id="4282213213" name="방랑거북"/>
+  <item id="2285523915" name="서퍼거북"/>
+  <item id="375309928" name="백멍이"/>
+  <item id="1633285886" name="황멍이"/>
+  <item id="4166035268" name="사자견"/>
+  <item id="2404882386" name="호랑견"/>
+  <item id="535333443" name="때리멍"/>
+  <item id="1760541397" name="어물어물"/>
+  <item id="136852272" name="오들강지"/>
+  <item id="2133787558" name="오들왕자"/>
+  <item id="3861271068" name="아더월월"/>
+  <item id="2434884234" name="샌다끼리"/>
+  <item id="256243497" name="버티끼리"/>
+  <item id="2017642431" name="사이눈"/>
+  <item id="3779827205" name="묘해눈"/>
+  <item id="2521605779" name="풍술사"/>
+  <item id="116636418" name="징벌술사"/>
+  <item id="1911851924" name="공복영감"/>
+  <item id="587555059" name="쌀알영감"/>
+  <item id="1409437797" name="게걸영감"/>
+  <item id="3440050655" name="인면견"/>
+  <item id="3121361225" name="쌍두베로스"/>
+  <item id="610837738" name="삼도견"/>
+  <item id="1399821436" name="웃곰치"/>
+  <item id="3395732934" name="노래장어"/>
+  <item id="3177313616" name="단지큰뱀"/>
+  <item id="769583297" name="조아나비"/>
+  <item id="1524226135" name="끝나비"/>
+  <item id="975065522" name="최고나비"/>
+  <item id="1293508900" name="아싸라나비"/>
+  <item id="3557830814" name="미역군"/>
+  <item id="2736193544" name="다시마군"/>
+  <item id="1030985131" name="미역뿌리양"/>
+  <item id="1249158461" name="귀욤개"/>
+  <item id="3548247175" name="사랑개"/>
+  <item id="2759509009" name="음흉개"/>
+  <item id="885381504" name="보노보노"/>
+  <item id="1136847126" name="좌절좌절"/>
+  <item id="1969211253" name="막막좌절"/>
+  <item id="39385059" name="산타클도사"/>
+  <item id="2605819481" name="자루영감"/>
+  <item id="3965097679" name="보살엄니"/>
+  <item id="1915880300" name="착한맘할매"/>
+  <item id="87372794" name="번개아빠"/>
+  <item id="2621203008" name="엎어할배"/>
+  <item id="3946533590" name="결림동자"/>
+  <item id="2072268615" name="결림두목"/>
+  <item id="209944529" name="요통두목"/>
+  <item id="1816458804" name="네가티붕"/>
+  <item id="457426594" name="흑네가티붕"/>
+  <item id="2185926424" name="근질근질"/>
+  <item id="4115507086" name="길인도깨비"/>
+  <item id="1797861933" name="한쪽편깨비"/>
+  <item id="472777403" name="샘새"/>
+  <item id="2233946881" name="배춤새"/>
+  <item id="4062208919" name="뻥녀"/>
+  <item id="1654619654" name="순악질"/>
+  <item id="362303120" name="타라락"/>
+  <item id="1198106103" name="요괴대장"/>
+  <item id="812553569" name="요괴형님"/>
+  <item id="2842150107" name="민폐가수스"/>
+  <item id="3730895949" name="악말"/>
+  <item id="1074029038" name="주름할멈"/>
+  <item id="922964344" name="불노아씨"/>
+  <item id="2919891138" name="불사아씨"/>
+  <item id="3641520212" name="뽕쟁이"/>
+  <item id="1236413893" name="뽕귀신"/>
+  <item id="1052056915" name="황당꾼"/>
+  <item id="1584567478" name="실소꾼"/>
+  <item id="695575584" name="못자요"/>
+  <item id="2960979354" name="못깨요"/>
+  <item id="3346777356" name="안띄림자"/>
+  <item id="1495224495" name="못채림자"/>
+  <item id="773349433" name="없지림자"/>
+  <item id="3071357315" name="질척이"/>
+  <item id="3222667541" name="얼갱이"/>
+  <item id="1353260164" name="코에피"/>
+  <item id="665725970" name="쏟아비"/>
+  <item id="3656026233" name="꽁꽁차"/>
+  <item id="2934814959" name="칙칙하잔느"/>
+  <item id="937748821" name="부러버"/>
+  <item id="1088674243" name="자꾸손"/>
+  <item id="3733408864" name="틀어박쥐"/>
+  <item id="2843770102" name="집박쥐"/>
+  <item id="814296396" name="여관박쥐"/>
+  <item id="1200496090" name="거지동자"/>
+  <item id="3610312779" name="낙천동자"/>
+  <item id="2687906013" name="음침 까마귀"/>
+  <item id="3237067064" name="독서 까마귀"/>
+  <item id="3086387630" name="불신 도깨비"/>
+  <item id="788518932" name="민폐 도깨비"/>
+  <item id="1509484674" name="심술 도깨비"/>
+  <item id="3348921633" name="쫄데빌"/>
+  <item id="2962967991" name="안쫄데빌"/>
+  <item id="697441293" name="충치백작"/>
+  <item id="1586834587" name="왕고약"/>
+  <item id="3458871562" name="악중악"/>
+  <item id="3106734492" name="럭키 스네이크"/>
+  <item id="326482984" name="판다 스네이크"/>
+  <item id="1685228734" name="해피 드래곤"/>
+  <item id="4252753156" name="용용이"/>
+  <item id="2323443090" name="신룡"/>
+  <item id="337147953" name="청룡"/>
+  <item id="1662994599" name="실어실어"/>
+  <item id="4195752221" name="원망어"/>
+  <item id="2366712203" name="발끈어"/>
+  <item id="497955866" name="꿀꺽죠스"/>
+  <item id="1789461644" name="서툴러죠스"/>
+  <item id="175017321" name="막써조개"/>
+  <item id="2104081919" name="다내조개"/>
+  <item id="3831557189" name="긴코"/>
+  <item id="2473057491" name="바나나코"/>
+  <item id="218319216" name="지휘뱀"/>
+  <item id="2047113702" name="살모사 심판"/>
+  <item id="3809290332" name="삐치뱀"/>
+  <item id="2483689674" name="이무기"/>
+  <item id="78972251" name="블랙 이무기"/>
+  <item id="1941059021" name="무사냥"/>
+  <item id="558096042" name="수라멍"/>
+  <item id="1447358012" name="얼짱견"/>
+  <item id="3477979014" name="꽃감"/>
+  <item id="3091894032" name="도깨귀"/>
+  <item id="640555699" name="태사자"/>
+  <item id="1361652261" name="청소병"/>
+  <item id="3357571999" name="화나무사"/>
+  <item id="3207023369" name="주먹밥 무사"/>
+  <item id="798512792" name="때쟁이"/>
+  <item id="1486841358" name="때쟁이・괴"/>
+  <item id="945352683" name="부유냥"/>
+  <item id="1331683197" name="논귀"/>
+  <item id="3595996871" name="논귀・괴"/>
+  <item id="2706488913" name="빌리 대장"/>
+  <item id="1060449266" name="결벽장군"/>
+  <item id="1211243364" name="만성사자"/>
+  <item id="3510323934" name="누룽지무사"/>
+  <item id="2788981320" name="도식귀"/>
+  <item id="914581465" name="명식귀"/>
+  <item id="1099192143" name="홀랑우산"/>
+  <item id="1998158124" name="연기살이"/>
+  <item id="1984954" name="일단미안"/>
+  <item id="2568427520" name="따라해마네킹"/>
+  <item id="3994036374" name="뻥계인"/>
+  <item id="1886698805" name="아차방"/>
+  <item id="125013411" name="연귀"/>
+  <item id="2658851865" name="연귀・괴"/>
+  <item id="3917343887" name="묵파신"/>
+  <item id="2042818846" name="엎드려송"/>
+  <item id="247841160" name="삼면 운외경"/>
+  <item id="1845643373" name="타이몽"/>
+  <item id="419789051" name="닌자몽"/>
+  <item id="2148280641" name="두근토기"/>
+  <item id="4144699863" name="부럽쌀"/>
+  <item id="1768918132" name="더위타귀"/>
+  <item id="510180578" name="번개동자"/>
+  <item id="2271341912" name="헤매차"/>
+  <item id="4033273294" name="도둑 보따리"/>
+  <item id="1624883295" name="비싸동"/>
+  <item id="400486601" name="길치탱"/>
+  <item id="1160715182" name="백안귀"/>
+  <item id="841493304" name="보석귀"/>
+  <item id="2871097986" name="육식남"/>
+  <item id="3693496852" name="피뢰신"/>
+  <item id="1111678903" name="참맘모스"/>
+  <item id="893775649" name="왕두꺼비"/>
+  <item id="2890710683" name="왕도마뱀"/>
+  <item id="3679161869" name="없구리"/>
+  <item id="1274319772" name="외눈 동자"/>
+  <item id="1022599946" name="미각"/>
+  <item id="1546922735" name="냅다신발"/>
+  <item id="724769401" name="우녀"/>
+  <item id="2990164931" name="뒤집얼"/>
+  <item id="3309140821" name="맥왕"/>
+  <item id="1532620534" name="접시부기"/>
+  <item id="744414816" name="수범"/>
+  <item id="3042414554" name="접시부기・괴"/>
+  <item id="3260071756" name="마스터냥"/>
+  <item id="1391436509" name="소독버섯"/>
+  <item id="635998795" name="깽깽우산"/>
+  <item id="3685496352" name="깽깽우산・괴"/>
+  <item id="2896889526" name="넘흙착해"/>
+  <item id="899831564" name="동동이"/>
+  <item id="1118136218" name="우점이"/>
+  <item id="3703697977" name="우점이・괴"/>
+  <item id="2881929903" name="더부살이"/>
+  <item id="852464405" name="더부살이・괴"/>
+  <item id="1170776963" name="쾌청남"/>
+  <item id="3581394450" name="미역☆스타"/>
+  <item id="2725285508" name="버섯간호사"/>
+  <item id="3266774881" name="넘흙착해 사원"/>
+  <item id="3048224759" name="우산마인"/>
+  <item id="750347853" name="더부살이 신"/>
+  <item id="1539200731" name="노머니라이더"/>
+  <item id="3319448440" name="우점선생"/>
+  <item id="3000890350" name="기린"/>
+  <item id="735355476" name="일각수"/>
+  <item id="1557369538" name="외눈 짚신"/>
+  <item id="3429666643" name="NALBAM"/>
+  <item id="3144400837" name="날름보따리"/>
+  <item id="314037791" name="초식남"/>
+  <item id="1706092169" name="비키비키"/>
+  <item id="4240029491" name="너해 도사"/>
+  <item id="2344519589" name="감추리"/>
+  <item id="366612998" name="삼두 구렁이"/>
+  <item id="1658659472" name="합리부인"/>
+  <item id="4225004330" name="드라큘냥"/>
+  <item id="2362655676" name="KKEUTJANG"/>
+  <item id="476864045" name="가마가마"/>
+  <item id="1802202811" name="수북털"/>
+  <item id="195880798" name="수북털・괴"/>
+  <item id="2091636680" name="그게 아니야MEN"/>
+  <item id="3852633714" name="나으뜸영감"/>
+  <item id="2460333796" name="영희"/>
+  <item id="213984071" name="뺀질이"/>
+  <item id="2076578769" name="뺏새"/>
+  <item id="3805233771" name="온천도니맨"/>
+  <item id="2512941821" name="노이즈 라이더"/>
+  <item id="91713388" name="더부룩털"/>
+  <item id="1919967226" name="주영희"/>
+  <item id="545371293" name="땅거미"/>
+  <item id="1468433419" name="독거미"/>
+  <item id="3465532849" name="달웅이"/>
+  <item id="3112756519" name="목아파개굴"/>
+  <item id="669806724" name="시비비"/>
+  <item id="1357594642" name="소리새"/>
+  <item id="3387036072" name="기억났자라"/>
+  <item id="3202687294" name="낚신"/>
+  <item id="777665711" name="화나지네"/>
+  <item id="1499270201" name="인어"/>
+  <item id="966428124" name="인어・괴"/>
+  <item id="1318958410" name="뇨롱이"/>
+  <item id="3616859376" name="뇨롱이・괴"/>
+  <item id="2694042726" name="보류용"/>
+  <item id="1056391621" name="열폭 드래곤"/>
+  <item id="1240494419" name="기억신"/>
+  <item id="3505987817" name="꼬아걸"/>
+  <item id="2818445439" name="어선녀"/>
+  <item id="927010286" name="어신녀"/>
+  <item id="1078345080" name="까발레리나"/>
+  <item id="1994068763" name="웅가"/>
+  <item id="31204237" name="혀팔사"/>
+  <item id="2564125239" name="성가시괴"/>
+  <item id="4023534241" name="불쾌하괴"/>
+  <item id="1907808002" name="호쾌하괴"/>
+  <item id="112322452" name="어렵괴"/>
+  <item id="2679682606" name="파괴"/>
+  <item id="3904865976" name="짱이쥐"/>
+  <item id="2013305641" name="아펠리칸"/>
+  <item id="252160959" name="다크냥"/>
+  <item id="1874862682" name="위스냥"/>
+  <item id="415699660" name="세바스찬"/>
+  <item id="2177778550" name="로보냥F"/>
+  <item id="4140397536" name="세일러냥"/>
+  <item id="1756227139" name="마스크냥"/>
+  <item id="531289813" name="지바멍"/>
+  <item id="2258863983" name="괴팍양"/>
+  <item id="4054104057" name="불만이양"/>
+  <item id="1629203048" name="잠꿀돼지"/>
+  <item id="370973438" name="열불돼지"/>
+  <item id="1156411801" name="풍류판다"/>
+  <item id="870990095" name="풍류닌자・판다"/>
+  <item id="2867007669" name="장어무사"/>
+  <item id="3722715171" name="싸우장어"/>
+  <item id="1132508544" name="문어깨비"/>
+  <item id="881296662" name="문어귀신"/>
+  <item id="2911818924" name="땡산"/>
+  <item id="3666469946" name="노땡산"/>
+  <item id="1245116843" name="우동 씨름꾼"/>
+  <item id="1026672957" name="우동 천하장사"/>
+  <item id="1576419544" name="그래산"/>
+  <item id="720465998" name="우~화!산"/>
+  <item id="3019383284" name="신바람 수수"/>
+  <item id="3305050466" name="두근 수수"/>
+  <item id="1520141505" name="로보거북"/>
+  <item id="765244503" name="로보멍"/>
+  <item id="3029722605" name="로보영감"/>
+  <item id="3281180027" name="로보면견"/>
+  <item id="1395509482" name="로보스네이크"/>
+  <item id="606795900" name="로보뇽"/>
+  <item id="3664665623" name="메론냥"/>
+  <item id="2909367425" name="귤냥"/>
+  <item id="878722363" name="키위냥"/>
+  <item id="1130827181" name="포도냥"/>
+  <item id="3708000270" name="딸기냥"/>
+  <item id="2852432024" name="수박냥"/>
+  <item id="856553762" name="제트냥"/>
+  <item id="1141557684" name="원더냥"/>
+  <item id="2823622435" name="은밀의 혼"/>
+  <item id="3746185141" name="스파르타의 혼"/>
+  <item id="1178824207" name="항아리 가드의 혼"/>
+  <item id="826564249" name="가드의 혼"/>
+  <item id="2938161978" name="관통의 혼"/>
+  <item id="3626498988" name="도발의 혼"/>
+  <item id="1093577238" name="섬광의 혼"/>
+  <item id="908696192" name="미끄러운 오일의 혼"/>
+  <item id="2794882833" name="꼬으기의 혼"/>
+  <item id="3515987847" name="연옥의 혼"/>
+  <item id="2975219298" name="대폭포의 혼"/>
+  <item id="3327201012" name="전신의 혼"/>
+  <item id="1599627086" name="운석의 혼"/>
+  <item id="677343192" name="눈보라의 혼"/>
+  <item id="3057384059" name="폭풍의 혼"/>
+  <item id="1479908183" name="불의 혼"/>
+  <item id="791849921" name="물의 혼"/>
+  <item id="3213735504" name="번개의 혼"/>
+  <item id="3364521670" name="땅의 혼"/>
+  <item id="2591780257" name="얼음의 혼"/>
+  <item id="3984350519" name="바람의 혼"/>
+  <item id="1953827981" name="어둠의 혼"/>
+  <item id="57818139" name="황천의 혼"/>
+  <item id="2635508152" name="블로커의 혼"/>
+  <item id="3927021870" name="소환의 혼"/>
+  <item id="1931004052" name="무의 혼"/>
+  <item id="69203970" name="호감의 혼"/>
+</items>

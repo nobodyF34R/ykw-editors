@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="2870987530" name="Épée émoussée"/>
+  <item id="3692624796" name="Épée d'étourneau"/>
+  <item id="1158785574" name="Épée d'apprenti"/>
+  <item id="3722088875" name="Épée de rossignol"/>
+  <item id="1154727953" name="Épée de bon élève"/>
+  <item id="1136526344" name="Lame chat rouge"/>
+  <item id="3669448114" name="Couteau de cuisine"/>
+  <item id="2866651453" name="Concasseur d'oni"/>
+  <item id="884552862" name="Marteau mortel"/>
+  <item id="3751555058" name="Sabre de corbeau"/>
+  <item id="1184202312" name="Épée du maître"/>
+  <item id="1061799660" name="Blaster lapin"/>
+  <item id="3639733227" name="Épée chat rouge"/>
+  <item id="2952190845" name="Lame de boucher"/>
+  <item id="922716871" name="Concasseur bleu"/>
+  <item id="2828738404" name="Concasseur rouge"/>
+  <item id="1106819665" name="Marteau fracasseur"/>
+  <item id="3730720197" name="Épée du paon"/>
+  <item id="1196889215" name="Épée du sorcier"/>
+  <item id="2922688842" name="Blaster stellaire"/>
+  <item id="3644031452" name="Ultra concasseur N."/>
+  <item id="1049341147" name="Épée de solitude"/>
+  <item id="2841212243" name="Ultra concasseur R."/>
+  <item id="926802160" name="Ultra concasseur B."/>
+  <item id="1077596262" name="Marteau infernal"/>
+  <item id="3817166022" name="Bazooka"/>
+  <item id="1233951821" name="Épée royale"/>
+  <item id="2887148502" name="Sabre blizzard"/>
+  <item id="846394997" name="Sabre divin"/>
+  <item id="1108869882" name="Sabre tonnerre"/>
+  <item id="3675345728" name="Sabre maudit"/>
+  <item id="1165346531" name="Concasseur de feu"/>
+  <item id="3699152729" name="Broyeur d'ogre"/>
+  <item id="2877007823" name="Concasseur océan"/>
+  <item id="1002748510" name="Cogneur d'ogre"/>
+  <item id="1287883464" name="Marteau d'horreur"/>
+  <item id="738460461" name="Marteau du danger"/>
+  <item id="1526936507" name="Concasseur terre"/>
+  <item id="3255460353" name="Concasseur ultime"/>
+  <item id="3037549207" name="Concasseur paradis"/>
+  <item id="2170556351" name="Bazooka tonnerre"/>
+  <item id="4133961513" name="Rayon ultime"/>
+  <item id="728352564" name="Épée Dragon d'eau"/>
+  <item id="1550776226" name="Épée du Sgr oni"/>
+  <item id="3982810348" name="Lanceur Lapin B"/>
+  <item id="1138387149" name="Rayon de lune"/>
+  <item id="3671275895" name="Ombre de lune"/>
+  <item id="329493615" name="Bracelet sale"/>
+  <item id="1688509689" name="Bracelet en toc"/>
+  <item id="4256025923" name="Bracelet usé"/>
+  <item id="308397656" name="Bracelet coloré"/>
+  <item id="1701246670" name="Bracelet à pois"/>
+  <item id="4235175796" name="Bracelet à rayures"/>
+  <item id="2349159419" name="Bracelet mortel"/>
+  <item id="2386816418" name="Bracelet Go-Go"/>
+  <item id="1730168983" name="Bracelet farfelu"/>
+  <item id="4264106285" name="Bracelet bleu"/>
+  <item id="4182039860" name="Bracelet concentré"/>
+  <item id="1615694990" name="Bracelet grigrififi"/>
+  <item id="271022081" name="Menotte en acier"/>
+  <item id="1636820665" name="Bracelet stellaire"/>
+  <item id="1726096032" name="Bracelet de pureté"/>
+  <item id="4293620506" name="Bracelet fantôme"/>
+  <item id="378066479" name="Bracelet Maxigrigri"/>
+  <item id="4169578243" name="Poignet fouetté"/>
+  <item id="2251803582" name="Bracelet inégalable"/>
+  <item id="300225078" name="Menotte gravée"/>
+  <item id="2407630741" name="Poignet high-tech"/>
+  <item id="4046519080" name="Bracelet 2.0"/>
+  <item id="346686643" name="Bracelet arctique"/>
+  <item id="2328793360" name="Bracelet légendaire"/>
+  <item id="4205077919" name="Bracelet Neptune"/>
+  <item id="1672295461" name="Bracelet obscur"/>
+  <item id="4257849734" name="Menotte Terra"/>
+  <item id="1690366012" name="Menotte médisante"/>
+  <item id="331858090" name="Menotte du chaos"/>
+  <item id="3820967134" name="Bracelet d'ouragan"/>
+  <item id="2058749284" name="Bracelet de démon"/>
+  <item id="229717490" name="Bracelet du blizzard"/>
+  <item id="2205736251" name="Brassard ardent"/>
+  <item id="4102024621" name="Brassard moderne"/>
+  <item id="2495112264" name="Brassard puissant"/>
+  <item id="2480250961" name="Bracelet paradis"/>
+  <item id="3839004871" name="Bracelet Dieu soleil"/>
+  <item id="2111553917" name="Bracelet courageux"/>
+  <item id="182252011" name="Bracelet gentil"/>
+  <item id="2590239866" name="Bracelet vertueux"/>
+  <item id="18219905" name="Bâton funeste"/>
+  <item id="1980838679" name="Bâton simple"/>
+  <item id="4011352749" name="Baguette tordue"/>
+  <item id="3921136771" name="Crâne sur un bâton"/>
+  <item id="2010339616" name="Bâton tape-à-l'œil"/>
+  <item id="4007266458" name="Baguette bizarre"/>
+  <item id="1891540281" name="Méga baguette"/>
+  <item id="2662398997" name="Baguette blanche"/>
+  <item id="13920694" name="Baguette tricéphale"/>
+  <item id="1928864608" name="Bâton pessimiste"/>
+  <item id="1972758393" name="Bâton splendide"/>
+  <item id="3969693379" name="Baguette de chaos"/>
+  <item id="100602870" name="Supra baguette"/>
+  <item id="2504003175" name="Sac de Koma"/>
+  <item id="3958469338" name="Baguette de chien"/>
+  <item id="2633384524" name="Baguette oculaire"/>
+  <item id="43177967" name="Bâton triptyque"/>
+  <item id="1951894862" name="Baguette angélique"/>
+  <item id="3982417140" name="Baguette maléfique"/>
+  <item id="71137729" name="Sac tourbillonant"/>
+  <item id="3929217261" name="Bâton de lady"/>
+  <item id="2491573328" name="Éventail de Tengu"/>
+  <item id="55623128" name="Baguette 3 dragons"/>
+  <item id="2637441147" name="Baguette du diable"/>
+  <item id="1933199703" name="Bâton de jugement"/>
+  <item id="102738781" name="Baguette de cristal"/>
+  <item id="2558213886" name="Baguette de fortune"/>
+  <item id="3893480049" name="Bâton séparateur"/>
+  <item id="1897438155" name="Bâton du diable"/>
+  <item id="4017884776" name="Baguette fièvreuse"/>
+  <item id="1987403730" name="Baguette négative"/>
+  <item id="24276804" name="Œil de la Terre"/>
+  <item id="2446160597" name="Œil de la Mort"/>
+  <item id="3872014915" name="Baguette de vent"/>
+  <item id="2249051046" name="Bâton de l'avarice"/>
+  <item id="4044028720" name="Baguette de foudre"/>
+  <item id="1745070730" name="Bâton de paradis"/>
+  <item id="520395292" name="Baguette créatrice"/>
+  <item id="3922960454" name="Baguette lunaire"/>
+  <item id="1893396988" name="Baguette divine"/>
+  <item id="3467465842" name="Bague horrible"/>
+  <item id="1470367176" name="Bague rouillée"/>
+  <item id="3114951908" name="Bague en os"/>
+  <item id="3480174149" name="Bague arc-en-ciel"/>
+  <item id="1449553919" name="Bague d'aube"/>
+  <item id="1359719398" name="Bague illumination"/>
+  <item id="3093827283" name="Bague dorsale"/>
+  <item id="638360432" name="Bague dorée"/>
+  <item id="3393471493" name="Bague du savoir"/>
+  <item id="3442049052" name="Bague promesse"/>
+  <item id="1411436966" name="Bague de sommeil"/>
+  <item id="3175314579" name="Bague omnisciente"/>
+  <item id="771516674" name="Bague grigrififi"/>
+  <item id="1397560767" name="Bague étincelante"/>
+  <item id="3123622026" name="Bague osselet"/>
+  <item id="608838953" name="Bague métallique"/>
+  <item id="3414568498" name="Bague mystère"/>
+  <item id="3438012971" name="Bague de mer"/>
+  <item id="1440922513" name="Bague de lune"/>
+  <item id="3162578596" name="Bague Maxigrigri"/>
+  <item id="742261557" name="Bague inégalable"/>
+  <item id="3152861885" name="Bague crâne"/>
+  <item id="629690142" name="Bague de Blingos"/>
+  <item id="1385136008" name="Bague de Bogos"/>
+  <item id="1530475427" name="Bague Zazel rubis"/>
+  <item id="3198405688" name="Bague permagel"/>
+  <item id="549935515" name="Bague légendaire"/>
+  <item id="1353559316" name="Bague d'Éole"/>
+  <item id="3383033006" name="Bague obscure"/>
+  <item id="1472227597" name="Bague de brasier"/>
+  <item id="3469293751" name="Bague d'érosion"/>
+  <item id="3117287457" name="Bague de saint"/>
+  <item id="695276976" name="Cœur de tonnerre"/>
+  <item id="1584801062" name="Cœur rose"/>
+  <item id="1051831491" name="Cœur doré"/>
+  <item id="1236704341" name="Bague sang bleu"/>
+  <item id="3502231023" name="Bague sang rouge"/>
+  <item id="2813918585" name="Bague en diamant"/>
+  <item id="970746074" name="Bague Zazel agate"/>
+  <item id="1322997836" name="Bague de Zazelmar"/>
+  <item id="1400532171" name="Bouclier en bois"/>
+  <item id="3396550001" name="Bouclier rond"/>
+  <item id="612195421" name="Seau des bains"/>
+  <item id="3151733705" name="Couvercle poubelle"/>
+  <item id="1387792124" name="Bouclier de fer"/>
+  <item id="3417397062" name="Bouclier robuste"/>
+  <item id="3437007711" name="Bouclier élégant"/>
+  <item id="633288298" name="Seau Crocho"/>
+  <item id="1358870693" name="Bouclier d'argent"/>
+  <item id="3388467487" name="Bouclier d'alliage"/>
+  <item id="1469283516" name="Bouclier de Bogos"/>
+  <item id="546589738" name="Bouclier de force"/>
+  <item id="3114081680" name="Seau Porcinator"/>
+  <item id="670664755" name="Super seau Crocho"/>
+  <item id="3466210566" name="Couvercle géant"/>
+  <item id="1362940562" name="Bouclier de paladin"/>
+  <item id="3358950184" name="Bouclier tacticien"/>
+  <item id="559293981" name="Bouclier force EX"/>
+  <item id="2984852364" name="Bouclier innocent"/>
+  <item id="641458692" name="Ultra seau Crocho"/>
+  <item id="3478669105" name="Couvercle Potofeu"/>
+  <item id="1448154763" name="Abri tournoyant"/>
+  <item id="3093264295" name="Seau maléfique"/>
+  <item id="3337489178" name="Bouclier 3000"/>
+  <item id="594867329" name="Bouclier de gel"/>
+  <item id="3171967266" name="Bouclier légendaire"/>
+  <item id="3447362989" name="Bouclier tourbillon"/>
+  <item id="1416872983" name="Bouclier résolu"/>
+  <item id="3390525876" name="Seau brasier"/>
+  <item id="1394475022" name="Seau séduction"/>
+  <item id="605630616" name="Seau de pierre"/>
+  <item id="3030789385" name="Seau de lave"/>
+  <item id="3282115999" name="Couvercle isolation"/>
+  <item id="2741408890" name="Couvercle obscur"/>
+  <item id="3563169004" name="Para-vent"/>
+  <item id="1298724182" name="Para-vortex"/>
+  <item id="980403648" name="Para-fleurs"/>
+  <item id="2752204899" name="Bouclier antigravité"/>
+  <item id="3540803829" name="Bouclier quantique"/>
+  <item id="3434676122" name="Bouclier lune blanc"/>
+  <item id="1437707808" name="Bouclier lune doré"/>
+  <item id="3955624878" name="Amulette rafistolée"/>
+  <item id="1926191636" name="Amulette antique"/>
+  <item id="1952511034" name="Pendentif simple"/>
+  <item id="3926155673" name="Amulette parfumée"/>
+  <item id="1930244131" name="Amulette chaude"/>
+  <item id="3983123840" name="Amulette esprit"/>
+  <item id="2634240271" name="Sac à un œil"/>
+  <item id="57132204" name="Sac robuste"/>
+  <item id="1982220899" name="Pendentif courage"/>
+  <item id="3896696768" name="Amulette chance"/>
+  <item id="1900777082" name="Amulette joyeuse"/>
+  <item id="4012841945" name="Amulette vigueur"/>
+  <item id="2552769359" name="Amulette grigrififi"/>
+  <item id="2672160598" name="Poche rose"/>
+  <item id="18971381" name="Sac rose"/>
+  <item id="4008538606" name="Pendentif passion"/>
+  <item id="3917526519" name="Amulette noble"/>
+  <item id="1888085069" name="Amulette vibrante"/>
+  <item id="2582266232" name="Amulette maxigrigri"/>
+  <item id="156589289" name="Amulette trèfle"/>
+  <item id="2659681633" name="Sac à un œil XL"/>
+  <item id="14880962" name="Sac de Komak"/>
+  <item id="2011439188" name="Amulette déesse"/>
+  <item id="2119330943" name="Amulette dorée"/>
+  <item id="2613613540" name="Amulette tonnerre"/>
+  <item id="95159879" name="Amulette légende"/>
+  <item id="1975972552" name="Amulette volcan"/>
+  <item id="3973030770" name="Amulette obscure"/>
+  <item id="1923823313" name="Sac de maquillage"/>
+  <item id="3953289067" name="Sac de natation"/>
+  <item id="2628081661" name="Sac d'endurance"/>
+  <item id="203049580" name="Sac du blizzard"/>
+  <item id="2065529594" name="Sac vertueux"/>
+  <item id="467333919" name="Sac d'exorciste"/>
+  <item id="1826472841" name="Amulette d'avenir"/>
+  <item id="4124348979" name="Amulette éclatante"/>
+  <item id="2194907813" name="Amulette guide"/>
+  <item id="481769222" name="Amulette paisible"/>
+  <item id="1806698384" name="Amulette tourbillon"/>
+  <item id="2390004950" name="Ceinture tâchée"/>
+  <item id="4185105472" name="Ceinture simple"/>
+  <item id="1618671098" name="Ceinture basique"/>
+  <item id="299002690" name="Ceinture designer"/>
+  <item id="4172402295" name="Ceinture bling"/>
+  <item id="1639489485" name="Ceinture à boucle"/>
+  <item id="1725258708" name="Ceinture du mal"/>
+  <item id="2411134689" name="Ceinture robuste"/>
+  <item id="1687414157" name="Ceinture d'audace"/>
+  <item id="4210520110" name="Ceinture de ninja"/>
+  <item id="1677599124" name="Ceinture chic"/>
+  <item id="4254774327" name="Ceinture rancune"/>
+  <item id="2325578913" name="Ceinture ancestrale"/>
+  <item id="328520987" name="Ceinture de fête"/>
+  <item id="2381332664" name="Ceinture friande"/>
+  <item id="4233682432" name="Ceinture élégante"/>
+  <item id="4214561305" name="Ceinture de maître"/>
+  <item id="1648118691" name="Ceinture de victoire"/>
+  <item id="2338320022" name="Ceinture sacrée"/>
+  <item id="1699844026" name="Ceinture sénateur"/>
+  <item id="467727111" name="Ceinture mignonne"/>
+  <item id="2352097935" name="Ceinture d'avidité"/>
+  <item id="307674924" name="Ceinture sensible"/>
+  <item id="1827128209" name="Pagne Griffes D."/>
+  <item id="2306685962" name="Ceinture alpine"/>
+  <item id="387557801" name="Ceinture légendaire"/>
+  <item id="1735613734" name="Ceinture d'eau"/>
+  <item id="4269411484" name="Ceinture ultime"/>
+  <item id="1612618047" name="Ceinture brûlante"/>
+  <item id="4179085445" name="Ceinture tonnerre"/>
+  <item id="2383476755" name="Ceinture d'aide"/>
+  <item id="514844034" name="Ceinture séismique"/>
+  <item id="1772672276" name="Ceinture de salut"/>
+  <item id="158293233" name="Ceinture sereine"/>
+  <item id="2120772711" name="Ceinture rafale"/>
+  <item id="3881909725" name="Ceinture arctique"/>
+  <item id="2422607179" name="Ceinture royale"/>
+  <item id="235051240" name="Pagne des vivants"/>
+  <item id="2030413950" name="Super pagne doré"/>
+  <item id="1104134949" name="Amulette noire"/>
+  <item id="3636892319" name="Amulette rustique"/>
+  <item id="2829870608" name="Grelot brisé"/>
+  <item id="919139251" name="Porte-clés silure"/>
+  <item id="1074637074" name="Amulette fleur"/>
+  <item id="3640981672" name="Amulette élégante"/>
+  <item id="2842561575" name="Grelot chat"/>
+  <item id="3731438769" name="Amulette emplette"/>
+  <item id="923441540" name="Porte-clés blanc"/>
+  <item id="1112217419" name="Amulette d'aurore"/>
+  <item id="3678553841" name="Amulette intrigante"/>
+  <item id="1160172370" name="Amulette ninja"/>
+  <item id="841081796" name="Grigrififi"/>
+  <item id="2871571070" name="Porte-clés en or"/>
+  <item id="894183389" name="Porte-clés poisson"/>
+  <item id="3694101224" name="Grelot patte de chat"/>
+  <item id="1133084028" name="Amulette violette"/>
+  <item id="3665833158" name="Amulette du soir"/>
+  <item id="2740753506" name="Grand grigrififi"/>
+  <item id="3562775796" name="Amulette fleur"/>
+  <item id="870550003" name="Grelot incroyable"/>
+  <item id="881741290" name="Porte-clés étang"/>
+  <item id="2867517513" name="Porte-clés marais"/>
+  <item id="3723356383" name="Amulette omai"/>
+  <item id="1155840357" name="Amulette pattes"/>
+  <item id="834755439" name="Amulette plasma"/>
+  <item id="2946879180" name="Amulette de héros"/>
+  <item id="3754900035" name="Amulette montagne"/>
+  <item id="1187408889" name="Amulette de guerre"/>
+  <item id="3634560602" name="Porte-clés pêche"/>
+  <item id="1101770720" name="Porte-clés batelier"/>
+  <item id="917282678" name="Porte-clés négatif"/>
+  <item id="2786296551" name="Porte-clés glacier"/>
+  <item id="3507794545" name="Porte-clés abysse"/>
+  <item id="2983410580" name="Porte-clés abîme"/>
+  <item id="3335785218" name="Porte-clés omai"/>
+  <item id="1608342200" name="Super p.-clés omai"/>
+  <item id="685402670" name="Porte-clés infernal"/>
+  <item id="3065970573" name="Porte-clés pattes"/>
+  <item id="3250179867" name="Super p.-clés pattes"/>
+  <item id="1487969953" name="Porte-clés astral"/>
+  <item id="3725414516" name="P.-clés lune blanc"/>
+  <item id="1191444942" name="P.-clés lune rouge"/>
+  <item id="941221292" name="Puce Envahisseur"/>
+</items>

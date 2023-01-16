@@ -1,0 +1,130 @@
+<RCC>
+    <qresource prefix="/appInfo">
+        <file>AUTHORS.txt</file>
+        <file>small_icon.png</file>
+    </qresource>
+    <qresource prefix="/data">
+        <file alias="data/ai.xml">data/ai_en.xml</file>
+        <file alias="data/consume.xml">data/consume_en.xml</file>
+        <file alias="data/equipment.xml">data/equipment_en.xml</file>
+        <file alias="data/important.xml">data/important_en.xml</file>
+        <file alias="data/soul.xml">data/soul_en.xml</file>
+        <file alias="data/youkai.xml">data/youkai_en.xml</file>
+        <file alias="data/youkaiNum.xml">data/youkaiNum_en.xml</file>
+        <file alias="data/creature.xml">data/creature_en.xml</file>
+    </qresource>
+    <qresource lang="ja" prefix="/data">
+        <file alias="data/ai.xml">data/ai_ja.xml</file>
+        <file alias="data/consume.xml">data/consume_ja.xml</file>
+        <file alias="data/equipment.xml">data/equipment_ja.xml</file>
+        <file alias="data/important.xml">data/important_ja.xml</file>
+        <file alias="data/soul.xml">data/soul_ja.xml</file>
+        <file alias="data/youkai.xml">data/youkai_ja.xml</file>
+        <file alias="data/youkaiNum.xml">data/youkaiNum_ja.xml</file>
+        <file alias="data/creature.xml">data/creature_ja.xml</file>
+    </qresource>
+    <qresource lang="en" prefix="/data">
+        <file alias="data/ai.xml">data/ai_en.xml</file>
+        <file alias="data/consume.xml">data/consume_en.xml</file>
+        <file alias="data/equipment.xml">data/equipment_en.xml</file>
+        <file alias="data/important.xml">data/important_en.xml</file>
+        <file alias="data/soul.xml">data/soul_en.xml</file>
+        <file alias="data/youkai.xml">data/youkai_en.xml</file>
+        <file alias="data/youkaiNum.xml">data/youkaiNum_en.xml</file>
+        <file alias="data/creature.xml">data/creature_en.xml</file>
+    </qresource>
+    <qresource lang="en_GB" prefix="/data">
+        <file alias="data/ai.xml">data/ai_en.xml</file>
+        <file alias="data/consume.xml">data/consume_en_GB.xml</file>
+        <file alias="data/equipment.xml">data/equipment_en_GB.xml</file>
+        <file alias="data/important.xml">data/important_en_GB.xml</file>
+        <file alias="data/soul.xml">data/soul_en_GB.xml</file>
+        <file alias="data/youkai.xml">data/youkai_en_GB.xml</file>
+        <file alias="data/youkaiNum.xml">data/youkaiNum_en_GB.xml</file>
+        <file alias="data/creature.xml">data/creature_en_GB.xml</file>
+    </qresource>
+    <qresource lang="de" prefix="/data">
+        <file alias="data/ai.xml">data/ai_de.xml</file>
+        <file alias="data/consume.xml">data/consume_de.xml</file>
+        <file alias="data/equipment.xml">data/equipment_de.xml</file>
+        <file alias="data/important.xml">data/important_de.xml</file>
+        <file alias="data/soul.xml">data/soul_de.xml</file>
+        <file alias="data/youkai.xml">data/youkai_de.xml</file>
+        <file alias="data/youkaiNum.xml">data/youkaiNum_de.xml</file>
+        <file alias="data/creature.xml">data/creature_de.xml</file>
+    </qresource>
+    <qresource lang="es" prefix="/data">
+        <file alias="data/ai.xml">data/ai_es.xml</file>
+        <file alias="data/consume.xml">data/consume_es.xml</file>
+        <file alias="data/equipment.xml">data/equipment_es.xml</file>
+        <file alias="data/important.xml">data/important_es.xml</file>
+        <file alias="data/soul.xml">data/soul_es.xml</file>
+        <file alias="data/youkai.xml">data/youkai_es.xml</file>
+        <file alias="data/youkaiNum.xml">data/youkaiNum_es.xml</file>
+        <file alias="data/creature.xml">data/creature_es.xml</file>
+    </qresource>
+    <qresource lang="es_US" prefix="/data">
+        <file alias="data/ai.xml">data/ai_es.xml</file>
+        <file alias="data/consume.xml">data/consume_es_US.xml</file>
+        <file alias="data/equipment.xml">data/equipment_es_US.xml</file>
+        <file alias="data/important.xml">data/important_es_US.xml</file>
+        <file alias="data/soul.xml">data/soul_es_US.xml</file>
+        <file alias="data/youkai.xml">data/youkai_es_US.xml</file>
+        <file alias="data/youkaiNum.xml">data/youkaiNum_es_US.xml</file>
+        <file alias="data/creature.xml">data/creature_es_US.xml</file>
+    </qresource>
+    <qresource lang="fr" prefix="/data">
+        <file alias="data/ai.xml">data/ai_fr.xml</file>
+        <file alias="data/consume.xml">data/consume_fr.xml</file>
+        <file alias="data/equipment.xml">data/equipment_fr.xml</file>
+        <file alias="data/important.xml">data/important_fr.xml</file>
+        <file alias="data/soul.xml">data/soul_fr.xml</file>
+        <file alias="data/youkai.xml">data/youkai_fr.xml</file>
+        <file alias="data/youkaiNum.xml">data/youkaiNum_fr.xml</file>
+        <file alias="data/creature.xml">data/creature_fr.xml</file>
+    </qresource>
+    <qresource lang="fr_CA" prefix="/data">
+        <file alias="data/ai.xml">data/ai_fr.xml</file>
+        <file alias="data/consume.xml">data/consume_fr_CA.xml</file>
+        <file alias="data/equipment.xml">data/equipment_fr_CA.xml</file>
+        <file alias="data/important.xml">data/important_fr_CA.xml</file>
+        <file alias="data/soul.xml">data/soul_fr_CA.xml</file>
+        <file alias="data/youkai.xml">data/youkai_fr_CA.xml</file>
+        <file alias="data/youkaiNum.xml">data/youkaiNum_fr_CA.xml</file>
+        <file alias="data/creature.xml">data/creature_fr_CA.xml</file>
+    </qresource>
+    <qresource lang="it" prefix="/data">
+        <file alias="data/ai.xml">data/ai_it.xml</file>
+        <file alias="data/consume.xml">data/consume_it.xml</file>
+        <file alias="data/equipment.xml">data/equipment_it.xml</file>
+        <file alias="data/important.xml">data/important_it.xml</file>
+        <file alias="data/soul.xml">data/soul_it.xml</file>
+        <file alias="data/youkai.xml">data/youkai_it.xml</file>
+        <file alias="data/youkaiNum.xml">data/youkaiNum_it.xml</file>
+        <file alias="data/creature.xml">data/creature_it.xml</file>
+    </qresource>
+    <qresource lang="nl" prefix="/data">
+        <file alias="data/ai.xml">data/ai_nl.xml</file>
+        <file alias="data/consume.xml">data/consume_nl.xml</file>
+        <file alias="data/equipment.xml">data/equipment_nl.xml</file>
+        <file alias="data/important.xml">data/important_nl.xml</file>
+        <file alias="data/soul.xml">data/soul_nl.xml</file>
+        <file alias="data/youkai.xml">data/youkai_nl.xml</file>
+        <file alias="data/youkaiNum.xml">data/youkaiNum_nl.xml</file>
+        <file alias="data/creature.xml">data/creature_nl.xml</file>
+    </qresource>
+    <qresource lang="ru" prefix="/data">
+        <file alias="data/ai.xml">data/ai_ru.xml</file>
+        <file alias="data/consume.xml">data/consume_ru.xml</file>
+        <file alias="data/equipment.xml">data/equipment_ru.xml</file>
+        <file alias="data/important.xml">data/important_ru.xml</file>
+        <file alias="data/soul.xml">data/soul_ru.xml</file>
+        <file alias="data/youkai.xml">data/youkai_ru.xml</file>
+        <file alias="data/youkaiNum.xml">data/youkaiNum_ru.xml</file>
+        <file alias="data/creature.xml">data/creature_ru.xml</file>
+    </qresource>
+    <qresource prefix="/translations">
+        <file>translations/app_en.qm</file>
+        <file>translations/app_ja.qm</file>
+    </qresource>
+</RCC>

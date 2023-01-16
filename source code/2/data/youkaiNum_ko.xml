@@ -1,0 +1,451 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item index="1" name="무대꼬"/>
+  <item index="2" name="안꿈쩍"/>
+  <item index="3" name="다앞장"/>
+  <item index="4" name="해이칼"/>
+  <item index="5" name="쑥대칼"/>
+  <item index="6" name="털레칼"/>
+  <item index="7" name="청소병"/>
+  <item index="8" name="결벽장군"/>
+  <item index="9" name="태사자"/>
+  <item index="10" name="만성사자"/>
+  <item index="11" name="화나무사"/>
+  <item index="12" name="광귀"/>
+  <item index="13" name="겁주귀"/>
+  <item index="14" name="떡강쇠"/>
+  <item index="15" name="시기떡"/>
+  <item index="16" name="때쟁이"/>
+  <item index="17" name="주먹밥 무사"/>
+  <item index="18" name="누룽지무사"/>
+  <item index="19" name="투구 귀신"/>
+  <item index="20" name="환마장군"/>
+  <item index="21" name="황천대장군"/>
+  <item index="22" name="논귀"/>
+  <item index="23" name="빌리 대장"/>
+  <item index="24" name="타올라이온"/>
+  <item index="25" name="이글라이온"/>
+  <item index="26" name="미라클 라이온"/>
+  <item index="27" name="승부사"/>
+  <item index="28" name="요괴검사"/>
+  <item index="29" name="요괴 마검사"/>
+  <item index="30" name="요괴 성검사"/>
+  <item index="31" name="요괴인"/>
+  <item index="32" name="사이보그 요괴인"/>
+  <item index="33" name="왕대쪽"/>
+  <item index="34" name="기발하괴"/>
+  <item index="35" name="사슴벌레 무사"/>
+  <item index="36" name="사슴벌레 대장"/>
+  <item index="37" name="왕사슴벌레 신"/>
+  <item index="38" name="도식귀"/>
+  <item index="39" name="명식귀"/>
+  <item index="40" name="홀랑우산"/>
+  <item index="41" name="외눈 짚신"/>
+  <item index="42" name="줄줄새"/>
+  <item index="43" name="고뿔덕"/>
+  <item index="44" name="안하겠승"/>
+  <item index="45" name="하기싫승"/>
+  <item index="46" name="말하기싫승"/>
+  <item index="47" name="아차모"/>
+  <item index="48" name="아차방"/>
+  <item index="49" name="멍모자"/>
+  <item index="50" name="없구리"/>
+  <item index="51" name="웃기자나"/>
+  <item index="52" name="퍼래퍼래"/>
+  <item index="53" name="나불할멈"/>
+  <item index="54" name="까발멈"/>
+  <item index="55" name="백골할멈"/>
+  <item index="56" name="인기많총"/>
+  <item index="57" name="인기마누스"/>
+  <item index="58" name="인기없스"/>
+  <item index="59" name="일단미안"/>
+  <item index="60" name="엎드려송"/>
+  <item index="61" name="연기살이"/>
+  <item index="62" name="연귀"/>
+  <item index="63" name="냠냠동자"/>
+  <item index="64" name="전파신"/>
+  <item index="65" name="발전신"/>
+  <item index="66" name="묵파신"/>
+  <item index="67" name="뻥계인"/>
+  <item index="68" name="아펠리칸"/>
+  <item index="69" name="운외경"/>
+  <item index="70" name="삼면 운외경"/>
+  <item index="71" name="암흑경"/>
+  <item index="72" name="환상도사"/>
+  <item index="73" name="아랑도사"/>
+  <item index="74" name="방랑도사"/>
+  <item index="75" name="다알견"/>
+  <item index="76" name="네개눈"/>
+  <item index="77" name="세바스찬"/>
+  <item index="78" name="풍술사"/>
+  <item index="79" name="징벌술사"/>
+  <item index="80" name="구미"/>
+  <item index="81" name="견신"/>
+  <item index="82" name="타이몽"/>
+  <item index="83" name="닌자몽"/>
+  <item index="84" name="두근토기"/>
+  <item index="85" name="힘없뚜기"/>
+  <item index="86" name="마초뚜기"/>
+  <item index="87" name="고릴뚜기"/>
+  <item index="88" name="부럽쌀"/>
+  <item index="89" name="비싸동"/>
+  <item index="90" name="헤매차"/>
+  <item index="91" name="길치탱"/>
+  <item index="92" name="무리담"/>
+  <item index="93" name="무리성"/>
+  <item index="94" name="백성벽"/>
+  <item index="95" name="타라락"/>
+  <item index="96" name="요괴대장"/>
+  <item index="97" name="요괴형님"/>
+  <item index="98" name="갑옷 귀신"/>
+  <item index="99" name="따라해마네킹"/>
+  <item index="100" name="못가복"/>
+  <item index="101" name="무쇠못가복"/>
+  <item index="102" name="샌다끼리"/>
+  <item index="103" name="버티끼리"/>
+  <item index="104" name="참맘모스"/>
+  <item index="105" name="번개동자"/>
+  <item index="106" name="피뢰신"/>
+  <item index="107" name="더위타귀"/>
+  <item index="108" name="설산씨름꾼"/>
+  <item index="109" name="화산씨름꾼"/>
+  <item index="110" name="동삼등"/>
+  <item index="111" name="은이등"/>
+  <item index="112" name="금일등"/>
+  <item index="113" name="백금등"/>
+  <item index="114" name="풍뎅무사"/>
+  <item index="115" name="풍뎅무쌍"/>
+  <item index="116" name="왕풍뎅신"/>
+  <item index="117" name="로보냥"/>
+  <item index="118" name="골드냥"/>
+  <item index="119" name="얼룩덜룩"/>
+  <item index="120" name="바다 허깨비"/>
+  <item index="121" name="왕두꺼비"/>
+  <item index="122" name="왕도마뱀"/>
+  <item index="123" name="미각"/>
+  <item index="124" name="멋골부인"/>
+  <item index="125" name="해골양"/>
+  <item index="126" name="칼슘미인"/>
+  <item index="127" name="무사맴"/>
+  <item index="128" name="짱무사맴"/>
+  <item index="129" name="가수 무사맴"/>
+  <item index="130" name="오들강지"/>
+  <item index="131" name="오들왕자"/>
+  <item index="132" name="아더월월"/>
+  <item index="133" name="뒤집얼"/>
+  <item index="134" name="외눈 동자"/>
+  <item index="135" name="지바냥"/>
+  <item index="136" name="가시냥"/>
+  <item index="137" name="배드냥"/>
+  <item index="138" name="위스냥"/>
+  <item index="139" name="접시거북"/>
+  <item index="140" name="방랑거북"/>
+  <item index="141" name="서퍼거북"/>
+  <item index="142" name="백멍이"/>
+  <item index="143" name="사자견"/>
+  <item index="144" name="황멍이"/>
+  <item index="145" name="호랑견"/>
+  <item index="146" name="맥"/>
+  <item index="147" name="맥왕"/>
+  <item index="148" name="백"/>
+  <item index="149" name="우녀"/>
+  <item index="150" name="냅다신발"/>
+  <item index="151" name="귀욤개"/>
+  <item index="152" name="사랑개"/>
+  <item index="153" name="음흉개"/>
+  <item index="154" name="달웅이"/>
+  <item index="155" name="설녀"/>
+  <item index="156" name="눈보라 공주"/>
+  <item index="157" name="백귀공주"/>
+  <item index="158" name="접시부기"/>
+  <item index="159" name="수범"/>
+  <item index="160" name="마스터냥"/>
+  <item index="161" name="부러버"/>
+  <item index="162" name="자꾸손"/>
+  <item index="163" name="미역군"/>
+  <item index="164" name="미역☆스타"/>
+  <item index="165" name="다시마군"/>
+  <item index="166" name="미역뿌리양"/>
+  <item index="167" name="공복영감"/>
+  <item index="168" name="게걸영감"/>
+  <item index="169" name="쌀알영감"/>
+  <item index="170" name="소독버섯"/>
+  <item index="171" name="버섯간호사"/>
+  <item index="172" name="넘흙착해"/>
+  <item index="173" name="넘흙착해 사원"/>
+  <item index="174" name="깽깽우산"/>
+  <item index="175" name="우산마인"/>
+  <item index="176" name="거지동자"/>
+  <item index="177" name="노머니라이더"/>
+  <item index="178" name="낙천동자"/>
+  <item index="179" name="더부살이"/>
+  <item index="180" name="더부살이 신"/>
+  <item index="181" name="조아나비"/>
+  <item index="182" name="끝나비"/>
+  <item index="183" name="최고나비"/>
+  <item index="184" name="아싸라나비"/>
+  <item index="185" name="우점이"/>
+  <item index="186" name="우점선생"/>
+  <item index="187" name="동동이"/>
+  <item index="188" name="쾌청남"/>
+  <item index="189" name="보노보노"/>
+  <item index="190" name="좌절좌절"/>
+  <item index="191" name="막막좌절"/>
+  <item index="192" name="산타클도사"/>
+  <item index="193" name="자루영감"/>
+  <item index="194" name="사이눈"/>
+  <item index="195" name="묘해눈"/>
+  <item index="196" name="번개아빠"/>
+  <item index="197" name="엎어할배"/>
+  <item index="198" name="보살엄니"/>
+  <item index="199" name="착한맘할매"/>
+  <item index="200" name="기린"/>
+  <item index="201" name="일각수"/>
+  <item index="202" name="길인도깨비"/>
+  <item index="203" name="한쪽편깨비"/>
+  <item index="204" name="결림동자"/>
+  <item index="205" name="결림두목"/>
+  <item index="206" name="요통두목"/>
+  <item index="207" name="NALBAM"/>
+  <item index="208" name="KKEUTJANG"/>
+  <item index="209" name="초식남"/>
+  <item index="210" name="육식남"/>
+  <item index="211" name="네가티붕"/>
+  <item index="212" name="흑네가티붕"/>
+  <item index="213" name="근질근질"/>
+  <item index="214" name="안띄림자"/>
+  <item index="215" name="못채림자"/>
+  <item index="216" name="없지림자"/>
+  <item index="217" name="불신 도깨비"/>
+  <item index="218" name="민폐 도깨비"/>
+  <item index="219" name="심술 도깨비"/>
+  <item index="220" name="틀어박쥐"/>
+  <item index="221" name="집박쥐"/>
+  <item index="222" name="여관박쥐"/>
+  <item index="223" name="날름보따리"/>
+  <item index="224" name="도둑 보따리"/>
+  <item index="225" name="비키비키"/>
+  <item index="226" name="너해 도사"/>
+  <item index="227" name="감추리"/>
+  <item index="228" name="짱이쥐"/>
+  <item index="229" name="음침 까마귀"/>
+  <item index="230" name="독서 까마귀"/>
+  <item index="231" name="합리부인"/>
+  <item index="232" name="삼두 구렁이"/>
+  <item index="233" name="드라큘냥"/>
+  <item index="234" name="민폐가수스"/>
+  <item index="235" name="악말"/>
+  <item index="236" name="쫄데빌"/>
+  <item index="237" name="안쫄데빌"/>
+  <item index="238" name="충치백작"/>
+  <item index="239" name="백안귀"/>
+  <item index="240" name="보석귀"/>
+  <item index="241" name="왕고약"/>
+  <item index="242" name="악중악"/>
+  <item index="243" name="가마가마"/>
+  <item index="244" name="칼칼송이"/>
+  <item index="245" name="따끔성게"/>
+  <item index="246" name="질척이"/>
+  <item index="247" name="쏟아비"/>
+  <item index="248" name="얼갱이"/>
+  <item index="249" name="꽁꽁차"/>
+  <item index="250" name="코에피"/>
+  <item index="251" name="샘새"/>
+  <item index="252" name="뺏새"/>
+  <item index="253" name="배춤새"/>
+  <item index="254" name="소리새"/>
+  <item index="255" name="노이즈 라이더"/>
+  <item index="256" name="슬피우새"/>
+  <item index="257" name="꼴사납새"/>
+  <item index="258" name="사신조"/>
+  <item index="259" name="인면견"/>
+  <item index="260" name="쌍두베로스"/>
+  <item index="261" name="삼도견"/>
+  <item index="262" name="수북털"/>
+  <item index="263" name="더부룩털"/>
+  <item index="264" name="그게 아니야MEN"/>
+  <item index="265" name="칙칙하잔느"/>
+  <item index="266" name="뻥녀"/>
+  <item index="267" name="순악질"/>
+  <item index="268" name="나으뜸영감"/>
+  <item index="269" name="뺀질이"/>
+  <item index="270" name="뽕쟁이"/>
+  <item index="271" name="뽕귀신"/>
+  <item index="272" name="영희"/>
+  <item index="273" name="주영희"/>
+  <item index="274" name="온천도니맨"/>
+  <item index="275" name="황당꾼"/>
+  <item index="276" name="실소꾼"/>
+  <item index="277" name="주름할멈"/>
+  <item index="278" name="불노아씨"/>
+  <item index="279" name="불사아씨"/>
+  <item index="280" name="못자요"/>
+  <item index="281" name="못깨요"/>
+  <item index="282" name="땅거미"/>
+  <item index="283" name="독거미"/>
+  <item index="284" name="목아파개굴"/>
+  <item index="285" name="럭키 스네이크"/>
+  <item index="286" name="해피 드래곤"/>
+  <item index="287" name="판다 스네이크"/>
+  <item index="288" name="시비비"/>
+  <item index="289" name="꼬아걸"/>
+  <item index="290" name="웃곰치"/>
+  <item index="291" name="노래장어"/>
+  <item index="292" name="단지큰뱀"/>
+  <item index="293" name="실어실어"/>
+  <item index="294" name="원망어"/>
+  <item index="295" name="발끈어"/>
+  <item index="296" name="기억났자라"/>
+  <item index="297" name="기억신"/>
+  <item index="298" name="화나지네"/>
+  <item index="299" name="열폭 드래곤"/>
+  <item index="300" name="용용이"/>
+  <item index="301" name="신룡"/>
+  <item index="302" name="청룡"/>
+  <item index="303" name="인어"/>
+  <item index="304" name="어선녀"/>
+  <item index="305" name="어신녀"/>
+  <item index="306" name="뇨롱이"/>
+  <item index="307" name="때리멍"/>
+  <item index="308" name="어물어물"/>
+  <item index="309" name="꿀꺽죠스"/>
+  <item index="310" name="서툴러죠스"/>
+  <item index="311" name="막써조개"/>
+  <item index="312" name="다내조개"/>
+  <item index="313" name="긴코"/>
+  <item index="314" name="바나나코"/>
+  <item index="315" name="보류용"/>
+  <item index="316" name="낚신"/>
+  <item index="317" name="지휘뱀"/>
+  <item index="318" name="삐치뱀"/>
+  <item index="319" name="살모사 심판"/>
+  <item index="320" name="이무기"/>
+  <item index="321" name="블랙 이무기"/>
+  <item index="322" name="무사냥"/>
+  <item index="323" name="수라멍"/>
+  <item index="324" name="도깨귀"/>
+  <item index="325" name="까발레리나"/>
+  <item index="326" name="꽃감"/>
+  <item index="327" name="웅가"/>
+  <item index="328" name="얼짱견"/>
+  <item index="329" name="혀팔사"/>
+  <item index="330" name="사파이냥"/>
+  <item index="331" name="에메랄냥"/>
+  <item index="332" name="루비냥"/>
+  <item index="333" name="토파냥"/>
+  <item index="334" name="다이아냥"/>
+  <item index="335" name="메론냥"/>
+  <item index="336" name="귤냥"/>
+  <item index="337" name="키위냥"/>
+  <item index="338" name="포도냥"/>
+  <item index="339" name="딸기냥"/>
+  <item index="340" name="수박냥"/>
+  <item index="341" name="로보거북"/>
+  <item index="342" name="로보멍"/>
+  <item index="343" name="로보영감"/>
+  <item index="344" name="로보면견"/>
+  <item index="345" name="로보스네이크"/>
+  <item index="346" name="로보뇽"/>
+  <item index="347" name="원더냥"/>
+  <item index="348" name="로보냥F"/>
+  <item index="349" name="세일러냥"/>
+  <item index="350" name="마스크냥"/>
+  <item index="351" name="부유냥"/>
+  <item index="352" name="다크냥"/>
+  <item index="353" name="지바멍"/>
+  <item index="354" name="제트냥"/>
+  <item index="355" name="성가시괴"/>
+  <item index="356" name="불쾌하괴"/>
+  <item index="357" name="호쾌하괴"/>
+  <item index="358" name="어렵괴"/>
+  <item index="359" name="파괴"/>
+  <item index="360" name="때쟁이・괴"/>
+  <item index="361" name="논귀・괴"/>
+  <item index="362" name="연귀・괴"/>
+  <item index="363" name="접시부기・괴"/>
+  <item index="364" name="깽깽우산・괴"/>
+  <item index="365" name="더부살이・괴"/>
+  <item index="366" name="우점이・괴"/>
+  <item index="367" name="수북털・괴"/>
+  <item index="368" name="인어・괴"/>
+  <item index="369" name="뇨롱이・괴"/>
+  <item index="370" name="괴팍양"/>
+  <item index="371" name="불만이양"/>
+  <item index="372" name="잠꿀돼지"/>
+  <item index="373" name="열불돼지"/>
+  <item index="374" name="풍류판다"/>
+  <item index="375" name="풍류닌자・판다"/>
+  <item index="376" name="장어무사"/>
+  <item index="377" name="싸우장어"/>
+  <item index="378" name="문어깨비"/>
+  <item index="379" name="문어귀신"/>
+  <item index="380" name="땡산"/>
+  <item index="381" name="노땡산"/>
+  <item index="382" name="우동 씨름꾼"/>
+  <item index="383" name="우동 천하장사"/>
+  <item index="384" name="그래산"/>
+  <item index="385" name="우~화!산"/>
+  <item index="386" name="신바람 수수"/>
+  <item index="387" name="두근 수수"/>
+  <item index="388" name="뽑기해골"/>
+  <item index="389" name="거대냥"/>
+  <item index="390" name="왕후회 선장"/>
+  <item index="391" name="태풍의 눈"/>
+  <item index="392" name="금파"/>
+  <item index="393" name="은파"/>
+  <item index="394" name="우파우파"/>
+  <item index="395" name="진 우파우파"/>
+  <item index="396" name="삼두 구렁이"/>
+  <item index="397" name="삼두 도롱뇽"/>
+  <item index="398" name="온천도니맨"/>
+  <item index="399" name="온천흑도니맨"/>
+  <item index="400" name="낚신"/>
+  <item index="401" name="8대 망령 낚신"/>
+  <item index="402" name="거대빨강머리"/>
+  <item index="403" name="거대파랑머리"/>
+  <item index="404" name="무시시무사"/>
+  <item index="405" name="으시시무사"/>
+  <item index="406" name="이빨거미"/>
+  <item index="407" name="의사가아닐거야"/>
+  <item index="408" name="의사일리가없어"/>
+  <item index="409" name="오징어회장님"/>
+  <item index="410" name="오징어회장님"/>
+  <item index="411" name="수염오징어"/>
+  <item index="412" name="바퀴바퀴"/>
+  <item index="413" name="짹짹바구니"/>
+  <item index="414" name="가마가마"/>
+  <item index="415" name="나마도라"/>
+  <item index="416" name="게이트 키퍼"/>
+  <item index="417" name="말뚝박이"/>
+  <item index="418" name="고물배 선장"/>
+  <item index="419" name="감파"/>
+  <item index="420" name="옴파"/>
+  <item index="421" name="숙성마녀 소라미"/>
+  <item index="422" name="실뜨귀신"/>
+  <item index="423" name="뽑기해골G"/>
+  <item index="424" name="다이아 뽑기해골"/>
+  <item index="425" name="접대왕"/>
+  <item index="426" name="레드네이도"/>
+  <item index="427" name="빨간 도깨비"/>
+  <item index="428" name="퍼렁 도깨비"/>
+  <item index="429" name="껌정 도깨비"/>
+  <item index="430" name="ハナホ人 (Snottle)" />
+  <item index="431" name="妖怪ガッツＫ (Moximous N)" />
+  <item index="432" name="妖怪ガッツＦ (Moximous K)" />
+  <item index="433" name="ジバニャンＳ (Jibanyan S)" />
+  <item index="434" name="コマさんＳ (Komasan S)" />
+  <item index="435" name="コマじろうＳ (Komajiro S)" />
+  <item index="436" name="ヤミキュウビ (Darkyubi)" />
+  <item index="437" name="ヒカリオロチ (Illuminoct)" />
+  <item index="438" name="赤鬼 (ガードくずし) (Gargaros)" />
+  <item index="439" name="青鬼 (水あそび) (Ogralus)" />
+  <item index="440" name="黒鬼 (におうだち) (Orcanos)" />
+  <item index="441" name="レッドＪ (Rubeus J)" />
+  <item index="442" name="マイティードッグ (Handy Hound)" />
+  <item index="443" name="日ノ神 (Hi no Shin)" />
+  <item index="444" name="ドウ (Bronzlow)" />
+  <item index="445" name="ぶんぶく茶ヶ丸 (Bunbuku Chagamaru)" />
+  <item index="446" name="枝魔目さま (Edamame-sama)" />
+  <item index="447" name="暴走マッタナ氏 (Boso Mister Mattana)" />
+  <item index="448" name="カブキロイド (Kabukiroid)" />
+</items>

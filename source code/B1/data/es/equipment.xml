@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="2870987530" name="Espada roma"/>
+  <item id="3692624796" name="Espada golondrina"/>
+  <item id="1158785574" name="Espada novata"/>
+  <item id="3722088875" name="Espada de ruiseñor"/>
+  <item id="1154727953" name="Espada lumbrera"/>
+  <item id="1136526344" name="Filo gato rojo"/>
+  <item id="3669448114" name="Cuchillo de cocina"/>
+  <item id="2866651453" name="Aplastaoni"/>
+  <item id="884552862" name="Martillo letal"/>
+  <item id="3751555058" name="Espada de cuervo"/>
+  <item id="1184202312" name="Espada de maestro"/>
+  <item id="1061799660" name="Bláster del conejito"/>
+  <item id="3639733227" name="Filo gato rojo 2.0"/>
+  <item id="2952190845" name="Cuchillo de chef"/>
+  <item id="922716871" name="Aplastaoni (azul)"/>
+  <item id="2828738404" name="Aplastaoni (rojo)"/>
+  <item id="1106819665" name="Martillo calavera"/>
+  <item id="3730720197" name="Pavo real"/>
+  <item id="1196889215" name="Espada hechicera"/>
+  <item id="2922688842" name="Bláster de lucero"/>
+  <item id="3644031452" name="Ultraaplastaoni (N)"/>
+  <item id="1049341147" name="Espada solitaria"/>
+  <item id="2841212243" name="Ultraaplastaoni (R)"/>
+  <item id="926802160" name="Ultraaplastaoni (A)"/>
+  <item id="1077596262" name="Martillo infernal"/>
+  <item id="3817166022" name="Lanzador Capitán"/>
+  <item id="1233951821" name="Espadón feudal"/>
+  <item id="2887148502" name="Espada ventisca"/>
+  <item id="846394997" name="Espada divina"/>
+  <item id="1108869882" name="Espada del trueno"/>
+  <item id="3675345728" name="Espada destructora"/>
+  <item id="1165346531" name="Aplastaoni (Inf.)"/>
+  <item id="3699152729" name="Rompeogros"/>
+  <item id="2877007823" name="Aplastaoni (Oc.)"/>
+  <item id="1002748510" name="Machacaogros"/>
+  <item id="1287883464" name="Martillo del horror"/>
+  <item id="738460461" name="Maza desesperada"/>
+  <item id="1526936507" name="Aplastaoni (tierra)"/>
+  <item id="3255460353" name="Aplastaoni (def.)"/>
+  <item id="3037549207" name="Aplastaoni (cielo)"/>
+  <item id="2170556351" name="Granada rayo"/>
+  <item id="4133961513" name="Rayo definitivo"/>
+  <item id="728352564" name="Filo dragón agua"/>
+  <item id="1550776226" name="Espada caudillo oni"/>
+  <item id="3982810348" name="Lanzamisil Conejo B"/>
+  <item id="1138387149" name="Rayo de luna"/>
+  <item id="3671275895" name="Sombra lunar"/>
+  <item id="329493615" name="Pulsera sucia"/>
+  <item id="1688509689" name="Pulsera barata"/>
+  <item id="4256025923" name="Pulsera gastada"/>
+  <item id="308397656" name="Pulsera colorida"/>
+  <item id="1701246670" name="Pulsera de lunares"/>
+  <item id="4235175796" name="Pulsera rayada"/>
+  <item id="2349159419" name="Pulsera asesina"/>
+  <item id="2386816418" name="Pulsera gogó"/>
+  <item id="1730168983" name="Pulsera excéntrica"/>
+  <item id="4264106285" name="Pulsera azul"/>
+  <item id="4182039860" name="Bracil concentrado"/>
+  <item id="1615694990" name="Pulsera alterada"/>
+  <item id="271022081" name="Esposa de acero"/>
+  <item id="1636820665" name="Pulsera de estrella"/>
+  <item id="1726096032" name="Pulsera de Pureza"/>
+  <item id="4293620506" name="Pulsera fantasma"/>
+  <item id="378066479" name="Pulsera alterada G"/>
+  <item id="4169578243" name="Brazal Cremaligno"/>
+  <item id="2251803582" name="Pulsera inigualable"/>
+  <item id="300225078" name="Esposa grabada"/>
+  <item id="2407630741" name="Brazal futurista"/>
+  <item id="4046519080" name="Pulsera iluminada"/>
+  <item id="346686643" name="Pulsera ártica"/>
+  <item id="2328793360" name="Pulsera legendaria"/>
+  <item id="4205077919" name="Ajorca de Neptuno"/>
+  <item id="1672295461" name="Ajorca maléfica"/>
+  <item id="4257849734" name="Grillete terra"/>
+  <item id="1690366012" name="Grillete mezquino"/>
+  <item id="331858090" name="Grillete del tumulto"/>
+  <item id="3820967134" name="Bracil huracán"/>
+  <item id="2058749284" name="Bracil demoníaco"/>
+  <item id="229717490" name="Bracil ventisca"/>
+  <item id="2205736251" name="Brazal candente"/>
+  <item id="4102024621" name="Brazal magnético"/>
+  <item id="2495112264" name="Brazal poderoso"/>
+  <item id="2480250961" name="Pulsera del Edén"/>
+  <item id="3839004871" name="Bracil dios del Sol"/>
+  <item id="2111553917" name="Pulsera valiente"/>
+  <item id="182252011" name="Pulsera amable"/>
+  <item id="2590239866" name="Pulsera virtuosa"/>
+  <item id="18219905" name="Bastón siniestro"/>
+  <item id="1980838679" name="Báculo sencillo"/>
+  <item id="4011352749" name="Varita retorcida"/>
+  <item id="3921136771" name="Bastón tétrico"/>
+  <item id="2010339616" name="Báculo estiloso"/>
+  <item id="4007266458" name="Varita rara"/>
+  <item id="1891540281" name="Vara especial"/>
+  <item id="2662398997" name="Varita albina"/>
+  <item id="13920694" name="Varita tricéfala"/>
+  <item id="1928864608" name="Bastón terrorífico"/>
+  <item id="1972758393" name="Bastón espléndido"/>
+  <item id="3969693379" name="Varita del caos"/>
+  <item id="100602870" name="Vara superespecial"/>
+  <item id="2504003175" name="Paquete de Koma"/>
+  <item id="3958469338" name="Varita albina 2.0"/>
+  <item id="2633384524" name="Varita ojiabierta"/>
+  <item id="43177967" name="Bastón tríptico"/>
+  <item id="1951894862" name="Varita angelical"/>
+  <item id="3982417140" name="Varita maléfica"/>
+  <item id="71137729" name="Paquete remolino"/>
+  <item id="3929217261" name="Cetro de Lady"/>
+  <item id="2491573328" name="Abanico Tengu"/>
+  <item id="55623128" name="Varita dragón"/>
+  <item id="2637441147" name="Varita ojo infernal"/>
+  <item id="1933199703" name="Cetro del Juicio"/>
+  <item id="102738781" name="Varita de cristal"/>
+  <item id="2558213886" name="Varita de la Fortuna"/>
+  <item id="3893480049" name="Cetro partemares"/>
+  <item id="1897438155" name="Supercetro del Mal"/>
+  <item id="4017884776" name="Varita tres puntas"/>
+  <item id="1987403730" name="Varita trauma triple"/>
+  <item id="24276804" name="Ojo de la tierra"/>
+  <item id="2446160597" name="Ojo de la muerte"/>
+  <item id="3872014915" name="Vara vientosagrado"/>
+  <item id="2249051046" name="Cetro de la Avaricia"/>
+  <item id="4044028720" name="Varita trueno"/>
+  <item id="1745070730" name="Cetro del Cielo"/>
+  <item id="520395292" name="Varita del Creador"/>
+  <item id="3922960454" name="Varita lunar"/>
+  <item id="1893396988" name="Varita del dios lunar"/>
+  <item id="3467465842" name="Anillo feo"/>
+  <item id="1470367176" name="Anillo oxidado"/>
+  <item id="3114951908" name="Anillo óseo"/>
+  <item id="3480174149" name="Anillo arcoíris"/>
+  <item id="1449553919" name="Anillo de la aurora"/>
+  <item id="1359719398" name="Anillo Iluminación"/>
+  <item id="3093827283" name="Anillo huesudo"/>
+  <item id="638360432" name="Anillo chapado"/>
+  <item id="3393471493" name="Anillo sabio"/>
+  <item id="3442049052" name="Anillo de promesa"/>
+  <item id="1411436966" name="Anillo duermevela"/>
+  <item id="3175314579" name="Anillo providencia"/>
+  <item id="771516674" name="Anillo alterador"/>
+  <item id="1397560767" name="Anillo reluciente"/>
+  <item id="3123622026" name="Anillo mandíbula"/>
+  <item id="608838953" name="Anillo metálico"/>
+  <item id="3414568498" name="Anillo misterioso"/>
+  <item id="3438012971" name="Anillo ola"/>
+  <item id="1440922513" name="Anillo ondular"/>
+  <item id="3162578596" name="Anillo alterado G"/>
+  <item id="742261557" name="Anillo inigualable"/>
+  <item id="3152861885" name="Anillo de calavera"/>
+  <item id="629690142" name="Anillo áureo"/>
+  <item id="1385136008" name="Anillo diamantoso"/>
+  <item id="1530475427" name="Anillo rubí"/>
+  <item id="3198405688" name="Anillo permahielo"/>
+  <item id="549935515" name="Anillo legendario"/>
+  <item id="1353559316" name="Anillo del viento"/>
+  <item id="3383033006" name="Anillo maléfico"/>
+  <item id="1472227597" name="Anillo incineración"/>
+  <item id="3469293751" name="Anillo de erosión"/>
+  <item id="3117287457" name="Anillo del santo"/>
+  <item id="695276976" name="Corazón de trueno"/>
+  <item id="1584801062" name="Corazón rosa"/>
+  <item id="1051831491" name="Corazón áureo"/>
+  <item id="1236704341" name="Anillo sangre real"/>
+  <item id="3502231023" name="Anillo carmesí"/>
+  <item id="2813918585" name="Anillo diamantino"/>
+  <item id="970746074" name="Anillo ágata"/>
+  <item id="1322997836" name="Anillo zafiro"/>
+  <item id="1400532171" name="Escudo de madera"/>
+  <item id="3396550001" name="Escudo redondo"/>
+  <item id="612195421" name="Barreño de termas"/>
+  <item id="3151733705" name="Tapa de cubo"/>
+  <item id="1387792124" name="Escudo de hierro"/>
+  <item id="3417397062" name="Escudo robusto"/>
+  <item id="3437007711" name="Escudo elegante"/>
+  <item id="633288298" name="Cubo Termascino"/>
+  <item id="1358870693" name="Escudo de plata"/>
+  <item id="3388467487" name="Escudo de aleación"/>
+  <item id="1469283516" name="Escudo diamante"/>
+  <item id="546589738" name="Escudo FUE"/>
+  <item id="3114081680" name="Balde Jabalupo"/>
+  <item id="670664755" name="Balde Termascino"/>
+  <item id="3466210566" name="Tapa de caldero"/>
+  <item id="1362940562" name="Escudo de paladín"/>
+  <item id="3358950184" name="Escudo estratega"/>
+  <item id="559293981" name="Escudo FUE 2.0"/>
+  <item id="2984852364" name="Escudo inocente"/>
+  <item id="641458692" name="Cubeta Termascino"/>
+  <item id="3478669105" name="Tapa de Caldewok"/>
+  <item id="1448154763" name="Sombrilla remolino"/>
+  <item id="3093264295" name="Cubeta Jabalupo"/>
+  <item id="3337489178" name="Esc. materiaoscura"/>
+  <item id="594867329" name="Escudo de hielo"/>
+  <item id="3171967266" name="Escudo legendario"/>
+  <item id="3447362989" name="Escudo remolino"/>
+  <item id="1416872983" name="Escudo Resolución"/>
+  <item id="3390525876" name="Jofaina Termascino"/>
+  <item id="1394475022" name="Tinaja Termascino"/>
+  <item id="605630616" name="Jofaina Jabalupo"/>
+  <item id="3030789385" name="Tinaja Jabalupo"/>
+  <item id="3282115999" name="Tapa aislada"/>
+  <item id="2741408890" name="Tapa oscura"/>
+  <item id="3563169004" name="Cortavientos"/>
+  <item id="1298724182" name="Antiabsorción"/>
+  <item id="980403648" name="Sombrilla floreada"/>
+  <item id="2752204899" name="Esc. antigravedad"/>
+  <item id="3540803829" name="Escudo cuántico"/>
+  <item id="3434676122" name="Escudo luna blanco"/>
+  <item id="1437707808" name="Escudo luna dorado"/>
+  <item id="3955624878" name="Amuleto arreglado"/>
+  <item id="1926191636" name="Amuleto vetusto"/>
+  <item id="1952511034" name="Colgante sencillo"/>
+  <item id="3926155673" name="Amuleto aromático"/>
+  <item id="1930244131" name="Amuleto cálido"/>
+  <item id="3983123840" name="Amuleto espiritual"/>
+  <item id="2634240271" name="Monedero uniojo"/>
+  <item id="57132204" name="Bolsa robusta"/>
+  <item id="1982220899" name="Colgante valiente"/>
+  <item id="3896696768" name="Amuleto suertudo"/>
+  <item id="1900777082" name="Amuleto feliz"/>
+  <item id="4012841945" name="Amuleto de vigor"/>
+  <item id="2552769359" name="Amuleto alterador"/>
+  <item id="2672160598" name="Monedero rosa"/>
+  <item id="18971381" name="Bolsa rosa"/>
+  <item id="4008538606" name="Colgante de pasión"/>
+  <item id="3917526519" name="Amuleto noble"/>
+  <item id="1888085069" name="Amuleto palpitante"/>
+  <item id="2582266232" name="Amuleto alterador G"/>
+  <item id="156589289" name="Amuleto de trébol"/>
+  <item id="2659681633" name="Monedero uniojo G"/>
+  <item id="14880962" name="Bolsa poderosa"/>
+  <item id="2011439188" name="Amuleto de diosa"/>
+  <item id="2119330943" name="Amuleto dorado"/>
+  <item id="2613613540" name="Amuleto del trueno"/>
+  <item id="95159879" name="Amuleto leyenda"/>
+  <item id="1975972552" name="Amuleto volcánico"/>
+  <item id="3973030770" name="Amuleto maléfico"/>
+  <item id="1923823313" name="Bolsa de maquillaje"/>
+  <item id="3953289067" name="Bolsa de natación"/>
+  <item id="2628081661" name="Bolsa resistente"/>
+  <item id="203049580" name="Bolsa ventisca"/>
+  <item id="2065529594" name="Bolsa de lo justo"/>
+  <item id="467333919" name="Bolsa del exorcista"/>
+  <item id="1826472841" name="Amuleto vientojusto"/>
+  <item id="4124348979" name="Amuleto fulgor"/>
+  <item id="2194907813" name="Amuleto guía"/>
+  <item id="481769222" name="Amuleto sereno"/>
+  <item id="1806698384" name="Amuleto real"/>
+  <item id="2390004950" name="Cinturón mugriento"/>
+  <item id="4185105472" name="Faja simple"/>
+  <item id="1618671098" name="Cinturón básico"/>
+  <item id="299002690" name="Cinturón de diseño"/>
+  <item id="4172402295" name="Faja ostentosa"/>
+  <item id="1639489485" name="Cinturón de hebilla"/>
+  <item id="1725258708" name="Faja vengativa"/>
+  <item id="2411134689" name="Faja robusta"/>
+  <item id="1687414157" name="Cinturón atrevido"/>
+  <item id="4210520110" name="Faja shinobi"/>
+  <item id="1677599124" name="Cinturón chic"/>
+  <item id="4254774327" name="Faja del rencor"/>
+  <item id="2325578913" name="Faja ancestral"/>
+  <item id="328520987" name="Faja ceremonial"/>
+  <item id="2381332664" name="Faja de glotón"/>
+  <item id="4233682432" name="Cinturón sofisticado"/>
+  <item id="4214561305" name="Faja del maestro"/>
+  <item id="1648118691" name="Cinturón ganador"/>
+  <item id="2338320022" name="Faja sagrada"/>
+  <item id="1699844026" name="Faja del senador"/>
+  <item id="467727111" name="Cinturón mono"/>
+  <item id="2352097935" name="Faja de devorador"/>
+  <item id="307674924" name="Faja del sensible"/>
+  <item id="1827128209" name="Faja dorada"/>
+  <item id="2306685962" name="Faja alpina"/>
+  <item id="387557801" name="Faja legendaria"/>
+  <item id="1735613734" name="Cinturón salpicador"/>
+  <item id="4269411484" name="Cinturón definitivo"/>
+  <item id="1612618047" name="Faja ígnea"/>
+  <item id="4179085445" name="Faja de trueno"/>
+  <item id="2383476755" name="Faja de auxilio"/>
+  <item id="514844034" name="Faja sísmica"/>
+  <item id="1772672276" name="Faja de salvación"/>
+  <item id="158293233" name="Faja serena"/>
+  <item id="2120772711" name="Faja de la borrasca"/>
+  <item id="3881909725" name="Faja medianoche"/>
+  <item id="2422607179" name="Faja soberana"/>
+  <item id="235051240" name="Faja viviente"/>
+  <item id="2030413950" name="Faja real"/>
+  <item id="1104134949" name="Amuleto negro"/>
+  <item id="3636892319" name="Amuleto rústico"/>
+  <item id="2829870608" name="Cascabel roto"/>
+  <item id="919139251" name="Llavero de pez"/>
+  <item id="1074637074" name="Amuleto de flor"/>
+  <item id="3640981672" name="Amuleto elegante"/>
+  <item id="2842561575" name="Cascabel felino"/>
+  <item id="3731438769" name="Amuleto Nomevén"/>
+  <item id="923441540" name="Llavero pez blanco"/>
+  <item id="1112217419" name="Amuleto aurora"/>
+  <item id="3678553841" name="Amuleto fascinante"/>
+  <item id="1160172370" name="Amuleto de Nostoy"/>
+  <item id="841081796" name="Abalorio alterador"/>
+  <item id="2871571070" name="Llavero pez dorado"/>
+  <item id="894183389" name="Llavero pez grande"/>
+  <item id="3694101224" name="Cascabel de patitas"/>
+  <item id="1133084028" name="Amuleto violeta"/>
+  <item id="3665833158" name="Amuleto nocturno"/>
+  <item id="2740753506" name="Abalorio alterador G"/>
+  <item id="3562775796" name="Amuleto vampiro"/>
+  <item id="870550003" name="Sonaja Nyancreíble"/>
+  <item id="881741290" name="Llavero estanque"/>
+  <item id="2867517513" name="Llavero pantano"/>
+  <item id="3723356383" name="Amuleto Vueltomai"/>
+  <item id="1155840357" name="Amuleto Zarparroja"/>
+  <item id="834755439" name="Amuleto de plasma"/>
+  <item id="2946879180" name="Amuleto del héroe"/>
+  <item id="3754900035" name="Amuleto montaña"/>
+  <item id="1187408889" name="Amuleto aniquilador"/>
+  <item id="3634560602" name="Llavero pescador"/>
+  <item id="1101770720" name="Llavero barquero"/>
+  <item id="917282678" name="Llavero invocación"/>
+  <item id="2786296551" name="Llavero del glaciar"/>
+  <item id="3507794545" name="Llavero inframundo"/>
+  <item id="2983410580" name="Llavero maléfico"/>
+  <item id="3335785218" name="Llavero Vueltomai"/>
+  <item id="1608342200" name="Llavero Vueltomai G"/>
+  <item id="685402670" name="Llavero cancerbero"/>
+  <item id="3065970573" name="Llavero Zarparroja"/>
+  <item id="3250179867" name="Llavero Zarparroja G"/>
+  <item id="1487969953" name="Llavero felino"/>
+  <item id="3725414516" name="Llavero can oscuro"/>
+  <item id="1191444942" name="Llavero gato rojo"/>
+  <item id="941221292" name="Chip Invasor"/>
+</items>

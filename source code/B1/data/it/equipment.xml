@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="2870987530" name="Spada smussata"/>
+  <item id="3692624796" name="Lama sorprendente"/>
+  <item id="1158785574" name="Lama del novellino"/>
+  <item id="3722088875" name="Spada dell'usignolo"/>
+  <item id="1154727953" name="Lama dell'allievo"/>
+  <item id="1136526344" name="Lama gatto rosso"/>
+  <item id="3669448114" name="Coltello da cucina"/>
+  <item id="2866651453" name="SpaccaOni"/>
+  <item id="884552862" name="Martello letale"/>
+  <item id="3751555058" name="Lama del corvo"/>
+  <item id="1184202312" name="Spada del maestro"/>
+  <item id="1061799660" name="Bunny Blaster"/>
+  <item id="3639733227" name="Lama gatto rosso EX"/>
+  <item id="2952190845" name="Coltello dello chef"/>
+  <item id="922716871" name="SpaccaOni blu"/>
+  <item id="2828738404" name="SpaccaOni rosso"/>
+  <item id="1106819665" name="Martello teschio"/>
+  <item id="3730720197" name="Spada del pavone"/>
+  <item id="1196889215" name="Spada del mago"/>
+  <item id="2922688842" name="Blaster stellare"/>
+  <item id="3644031452" name="SpaccaOni Ultra n."/>
+  <item id="1049341147" name="Lama dell'eremita"/>
+  <item id="2841212243" name="SpaccaOni Ultra r."/>
+  <item id="926802160" name="SpaccaOni Ultra blu"/>
+  <item id="1077596262" name="Martello infernale"/>
+  <item id="3817166022" name="Capitan Launcher"/>
+  <item id="1233951821" name="Lama guerriera"/>
+  <item id="2887148502" name="Lama della bufera"/>
+  <item id="846394997" name="Lama divina"/>
+  <item id="1108869882" name="Lama del tuono"/>
+  <item id="3675345728" name="Lama dannata"/>
+  <item id="1165346531" name="SpaccaOni inferno"/>
+  <item id="3699152729" name="AnnientaOrchi"/>
+  <item id="2877007823" name="SpaccaOni oceano"/>
+  <item id="1002748510" name="SpaccaOrchi"/>
+  <item id="1287883464" name="Martello dell'orrore"/>
+  <item id="738460461" name="Martello del dolore"/>
+  <item id="1526936507" name="SpaccaOni terra"/>
+  <item id="3255460353" name="SpaccaOni ultimo"/>
+  <item id="3037549207" name="SpaccaOni celeste"/>
+  <item id="2170556351" name="Granata tonante"/>
+  <item id="4133961513" name="Raggio definitivo"/>
+  <item id="728352564" name="Lama drago d'acqua"/>
+  <item id="1550776226" name="Lama guerriera Oni"/>
+  <item id="3982810348" name="Rabbit Launcher B"/>
+  <item id="1138387149" name="Raggio di luna"/>
+  <item id="3671275895" name="Ombra lunare"/>
+  <item id="329493615" name="Bracciale sporco"/>
+  <item id="1688509689" name="Bracciale modesto"/>
+  <item id="4256025923" name="Bracc. consum."/>
+  <item id="308397656" name="Bracciale colorato"/>
+  <item id="1701246670" name="Bracciale maculato"/>
+  <item id="4235175796" name="Bracciale a strisce"/>
+  <item id="2349159419" name="Bracciale killer"/>
+  <item id="2386816418" name="Bracciale moderno"/>
+  <item id="1730168983" name="Bracciale bizzarro"/>
+  <item id="4264106285" name="Bracciale blu"/>
+  <item id="4182039860" name="Bracc. concentraz."/>
+  <item id="1615694990" name="Invertibracciale"/>
+  <item id="271022081" name="Manetta d'acciaio"/>
+  <item id="1636820665" name="Bracciale stellare"/>
+  <item id="1726096032" name="Bracciale puro"/>
+  <item id="4293620506" name="Bracciale fantasma"/>
+  <item id="378066479" name="Invertibracciale EX"/>
+  <item id="4169578243" name="Polsino soffiato"/>
+  <item id="2251803582" name="Bracciale superiore"/>
+  <item id="300225078" name="Manetta intarsiata"/>
+  <item id="2407630741" name="Polsino high tech"/>
+  <item id="4046519080" name="Bracciale risvegliato"/>
+  <item id="346686643" name="Bracciale artico"/>
+  <item id="2328793360" name="Bracciale epico"/>
+  <item id="4205077919" name="Bracciale di Nettuno"/>
+  <item id="1672295461" name="Bracciale malvagio"/>
+  <item id="4257849734" name="Manetta della Terra"/>
+  <item id="1690366012" name="Manetta malevola"/>
+  <item id="331858090" name="Manetta del caos"/>
+  <item id="3820967134" name="Bracciale uragano"/>
+  <item id="2058749284" name="Bracciale diabolico"/>
+  <item id="229717490" name="Bracciale bufera"/>
+  <item id="2205736251" name="Bracciale rovente"/>
+  <item id="4102024621" name="Bracc. magnetico"/>
+  <item id="2495112264" name="Bracciale potente"/>
+  <item id="2480250961" name="Bracciale dell'Eden"/>
+  <item id="3839004871" name="Bracciale di Sol"/>
+  <item id="2111553917" name="Bracciale valoroso"/>
+  <item id="182252011" name="Bracciale cortese"/>
+  <item id="2590239866" name="Bracciale virtuoso"/>
+  <item id="18219905" name="Bastone sinistro"/>
+  <item id="1980838679" name="Bastone semplice"/>
+  <item id="4011352749" name="Bacchetta ricurva"/>
+  <item id="3921136771" name="Teschio su bastone"/>
+  <item id="2010339616" name="Bastone elegante"/>
+  <item id="4007266458" name="Bacchetta bizzarra"/>
+  <item id="1891540281" name="Bastone super"/>
+  <item id="2662398997" name="Bacchetta bianca"/>
+  <item id="13920694" name="Bacchetta tricefala"/>
+  <item id="1928864608" name="Bastone pessimista"/>
+  <item id="1972758393" name="Bastone splendido"/>
+  <item id="3969693379" name="Bacchetta del caos"/>
+  <item id="100602870" name="Bastone ultra-super"/>
+  <item id="2504003175" name="Fagottino Koma"/>
+  <item id="3958469338" name="Bacchetta bianca EX"/>
+  <item id="2633384524" name="Bacchetta occhiuta"/>
+  <item id="43177967" name="Bastone trittico"/>
+  <item id="1951894862" name="Bacchetta angelica"/>
+  <item id="3982417140" name="Bacchetta malvagia"/>
+  <item id="71137729" name="Fagottino vorticoso"/>
+  <item id="3929217261" name="Bastone della Dama"/>
+  <item id="2491573328" name="Ventaglio Tengu"/>
+  <item id="55623128" name="Bacchetta drago"/>
+  <item id="2637441147" name="Bacchetta infernale"/>
+  <item id="1933199703" name="Bast. del giudizio"/>
+  <item id="102738781" name="Bacchetta cristallo"/>
+  <item id="2558213886" name="Bacchetta del fato"/>
+  <item id="3893480049" name="Bastone apriacque"/>
+  <item id="1897438155" name="Bastone del male"/>
+  <item id="4017884776" name="Bacchetta furente"/>
+  <item id="1987403730" name="Bacch. triplo guaio"/>
+  <item id="24276804" name="Occhio della Terra"/>
+  <item id="2446160597" name="Occhio della morte"/>
+  <item id="3872014915" name="Bacch. vento sacro"/>
+  <item id="2249051046" name="Bastone avarizia"/>
+  <item id="4044028720" name="Bacchetta tonante"/>
+  <item id="1745070730" name="Bastone celeste"/>
+  <item id="520395292" name="Bacchetta creatore"/>
+  <item id="3922960454" name="Bacchetta lunare"/>
+  <item id="1893396988" name="Bacch. dio lunare"/>
+  <item id="3467465842" name="Anello brutto"/>
+  <item id="1470367176" name="Anello arrugginito"/>
+  <item id="3114951908" name="Anello d'osso"/>
+  <item id="3480174149" name="Anello arcobaleno"/>
+  <item id="1449553919" name="Anello dell'aurora"/>
+  <item id="1359719398" name="Anello della ragione"/>
+  <item id="3093827283" name="Anello vertebrale"/>
+  <item id="638360432" name="Anello dorato"/>
+  <item id="3393471493" name="Anello del sapere"/>
+  <item id="3442049052" name="Anello del patto"/>
+  <item id="1411436966" name="Anello del sonno"/>
+  <item id="3175314579" name="Anello onniscente"/>
+  <item id="771516674" name="Invertianello"/>
+  <item id="1397560767" name="Anello luccicante"/>
+  <item id="3123622026" name="Anello di mandibola"/>
+  <item id="608838953" name="Anello metallico"/>
+  <item id="3414568498" name="Anello misterioso"/>
+  <item id="3438012971" name="Anello dell'onda"/>
+  <item id="1440922513" name="Anello lunare"/>
+  <item id="3162578596" name="Invertianello EX"/>
+  <item id="742261557" name="Anello superiore"/>
+  <item id="3152861885" name="Anello teschio"/>
+  <item id="629690142" name="Anello Dorosso"/>
+  <item id="1385136008" name="An. Diamantosso"/>
+  <item id="1530475427" name="Anello rubino Zazel"/>
+  <item id="3198405688" name="Anello permafrost"/>
+  <item id="549935515" name="Anello leggend."/>
+  <item id="1353559316" name="Anello di Eolo"/>
+  <item id="3383033006" name="Anello malvagio"/>
+  <item id="1472227597" name="Anello inceneritore"/>
+  <item id="3469293751" name="Anello erosione"/>
+  <item id="3117287457" name="Anello del santo"/>
+  <item id="695276976" name="Cuore di tuono"/>
+  <item id="1584801062" name="Cuore rosa"/>
+  <item id="1051831491" name="Cuore d'oro"/>
+  <item id="1236704341" name="Anello sangue blu"/>
+  <item id="3502231023" name="An. sangue rosso"/>
+  <item id="2813918585" name="Anello di diamanti"/>
+  <item id="970746074" name="Anello agata Zazel"/>
+  <item id="1322997836" name="Anello Zazelmare"/>
+  <item id="1400532171" name="Scudo di legno"/>
+  <item id="3396550001" name="Scudo rotondo"/>
+  <item id="612195421" name="Secchio delle terme"/>
+  <item id="3151733705" name="Coperchio bidone"/>
+  <item id="1387792124" name="Scudo di ferro"/>
+  <item id="3417397062" name="Scudo resistente"/>
+  <item id="3437007711" name="Scudo elegante"/>
+  <item id="633288298" name="Secchio Termaiale"/>
+  <item id="1358870693" name="Scudo d'argento"/>
+  <item id="3388467487" name="Scudo in lega"/>
+  <item id="1469283516" name="Scudo sfarzoso"/>
+  <item id="546589738" name="Scudo forza"/>
+  <item id="3114081680" name="Secchio Suimo"/>
+  <item id="670664755" name="Secchio elegante"/>
+  <item id="3466210566" name="Cop. del calderone"/>
+  <item id="1362940562" name="Scudo del paladino"/>
+  <item id="3358950184" name="Scudo del tattico"/>
+  <item id="559293981" name="Scudo forza EX"/>
+  <item id="2984852364" name="Scudo innocente"/>
+  <item id="641458692" name="Secchio dorato"/>
+  <item id="3478669105" name="Cop. Wokscillo"/>
+  <item id="1448154763" name="Mulinello vorticoso"/>
+  <item id="3093264295" name="Secchio malvagio"/>
+  <item id="3337489178" name="Scudo oscuro"/>
+  <item id="594867329" name="Scudo del gelo"/>
+  <item id="3171967266" name="Scudo epico"/>
+  <item id="3447362989" name="Scudo del vortice"/>
+  <item id="1416872983" name="Scudo risoluto"/>
+  <item id="3390525876" name="Secchio rovente"/>
+  <item id="1394475022" name="Secchio ammaliante"/>
+  <item id="605630616" name="Secchio di pietra"/>
+  <item id="3030789385" name="Secchio di lava"/>
+  <item id="3282115999" name="Coperchio isolante"/>
+  <item id="2741408890" name="Coperchio oscuro"/>
+  <item id="3563169004" name="Rompivento"/>
+  <item id="1298724182" name="Spruzzavortice"/>
+  <item id="980403648" name="Bocciolombrello"/>
+  <item id="2752204899" name="Scudo antigravità"/>
+  <item id="3540803829" name="Scudo quantico"/>
+  <item id="3434676122" name="Scudo luna bianca"/>
+  <item id="1437707808" name="Scudo luna dorata"/>
+  <item id="3955624878" name="Amuleto rattoppato"/>
+  <item id="1926191636" name="Amuleto antico"/>
+  <item id="1952511034" name="Ciondolo semplice"/>
+  <item id="3926155673" name="Amuleto fragrante"/>
+  <item id="1930244131" name="Amuleto del tepore"/>
+  <item id="3983123840" name="Amuleto spirituale"/>
+  <item id="2634240271" name="Fagottino ciclope"/>
+  <item id="57132204" name="Fagottino robusto"/>
+  <item id="1982220899" name="Ciondolo eroico"/>
+  <item id="3896696768" name="Amuleto fortuna"/>
+  <item id="1900777082" name="Amuleto della gioia"/>
+  <item id="4012841945" name="Amuleto del vigore"/>
+  <item id="2552769359" name="Invertiamuleto"/>
+  <item id="2672160598" name="Fagottino rosa"/>
+  <item id="18971381" name="Borsetta rosa"/>
+  <item id="4008538606" name="Ciondolo impetuoso"/>
+  <item id="3917526519" name="Amuleto nobile"/>
+  <item id="1888085069" name="Amuleto pulsante"/>
+  <item id="2582266232" name="Invertamuleto +"/>
+  <item id="156589289" name="Amul. quadrifoglio"/>
+  <item id="2659681633" name="Bors. ciclope XL"/>
+  <item id="14880962" name="Fagottino Cancan"/>
+  <item id="2011439188" name="Amuleto della dea"/>
+  <item id="2119330943" name="Amul. Oro Vorticoso"/>
+  <item id="2613613540" name="Amuleto del tuono"/>
+  <item id="95159879" name="Amuleto epico"/>
+  <item id="1975972552" name="Amuleto vulcanico"/>
+  <item id="3973030770" name="Amuleto malvagio"/>
+  <item id="1923823313" name="Fagottino da trucco"/>
+  <item id="3953289067" name="Fagottino da nuoto"/>
+  <item id="2628081661" name="Fagottino robusto"/>
+  <item id="203049580" name="Fagottino bufera"/>
+  <item id="2065529594" name="Fagottino della virtù"/>
+  <item id="467333919" name="Fagottino esorcista"/>
+  <item id="1826472841" name="Amuleto del vento"/>
+  <item id="4124348979" name="Amuleto luminoso"/>
+  <item id="2194907813" name="Amuleto guida"/>
+  <item id="481769222" name="Amuleto della calma"/>
+  <item id="1806698384" name="Amul. Vortic. regale"/>
+  <item id="2390004950" name="Cintura sudicia"/>
+  <item id="4185105472" name="Obi semplice"/>
+  <item id="1618671098" name="Cintura di base"/>
+  <item id="299002690" name="Cintura dello stilista"/>
+  <item id="4172402295" name="Obi sgargiante"/>
+  <item id="1639489485" name="Cintura con fibbia"/>
+  <item id="1725258708" name="Obi maligno"/>
+  <item id="2411134689" name="Obi resistente"/>
+  <item id="1687414157" name="Cintura audace"/>
+  <item id="4210520110" name="Obi da ninja"/>
+  <item id="1677599124" name="Cintura elegante"/>
+  <item id="4254774327" name="Obi del rancore"/>
+  <item id="2325578913" name="Obi ancestrale"/>
+  <item id="328520987" name="Obi cerimoniale"/>
+  <item id="2381332664" name="Obi del ghiottone"/>
+  <item id="4233682432" name="Cintura chic"/>
+  <item id="4214561305" name="Obi del maestro"/>
+  <item id="1648118691" name="Cintura della vittoria"/>
+  <item id="2338320022" name="Obi sacro"/>
+  <item id="1699844026" name="Obi del senatore"/>
+  <item id="467727111" name="Cintura carina"/>
+  <item id="2352097935" name="Obi del divoratore"/>
+  <item id="307674924" name="Obi senziente"/>
+  <item id="1827128209" name="Panno Artigli d'Oro"/>
+  <item id="2306685962" name="Obi alpino"/>
+  <item id="387557801" name="Obi epico"/>
+  <item id="1735613734" name="Cintura splash"/>
+  <item id="4269411484" name="Cintura definitiva"/>
+  <item id="1612618047" name="Obi fiammeggiante"/>
+  <item id="4179085445" name="Obi del tuono"/>
+  <item id="2383476755" name="Obi del soccorso"/>
+  <item id="514844034" name="Obi del sisma"/>
+  <item id="1772672276" name="Obi della salvezza"/>
+  <item id="158293233" name="Obi della serenità"/>
+  <item id="2120772711" name="Obi strepitante"/>
+  <item id="3881909725" name="Obi boreale"/>
+  <item id="2422607179" name="Obi sovrano"/>
+  <item id="235051240" name="Panno dei vivi"/>
+  <item id="2030413950" name="Panno Artigli regale"/>
+  <item id="1104134949" name="Amuleto nero"/>
+  <item id="3636892319" name="Amuleto rurale"/>
+  <item id="2829870608" name="Campanella rotta"/>
+  <item id="919139251" name="Portachiavi pesce"/>
+  <item id="1074637074" name="Amuleto fiore"/>
+  <item id="3640981672" name="Amuleto elegante"/>
+  <item id="2842561575" name="Campanella felina"/>
+  <item id="3731438769" name="Amuleto Annebio"/>
+  <item id="923441540" name="Port. pesce bianco"/>
+  <item id="1112217419" name="Amuleto dell'aurora"/>
+  <item id="3678553841" name="Amuleto intrigante"/>
+  <item id="1160172370" name="Amuleto di Blando"/>
+  <item id="841081796" name="Invertigemme"/>
+  <item id="2871571070" name="Port. pesce d'oro"/>
+  <item id="894183389" name="Port. pesce grande"/>
+  <item id="3694101224" name="Campanella zampa"/>
+  <item id="1133084028" name="Amuleto viola"/>
+  <item id="3665833158" name="Amuleto notturno"/>
+  <item id="2740753506" name="Invertigemme +"/>
+  <item id="3562775796" name="Amuleto vampiro"/>
+  <item id="870550003" name="Campanella miao"/>
+  <item id="881741290" name="Portachiavi stagno"/>
+  <item id="2867517513" name="Portachiavi palustre"/>
+  <item id="3723356383" name="Amuleto vorticoso"/>
+  <item id="1155840357" name="Amul. Zamperosse"/>
+  <item id="834755439" name="Amuleto al plasma"/>
+  <item id="2946879180" name="Amuleto dell'eroe"/>
+  <item id="3754900035" name="Amuleto montano"/>
+  <item id="1187408889" name="Amuleto rovinoso"/>
+  <item id="3634560602" name="Port. del pescatore"/>
+  <item id="1101770720" name="Port. barcaiolo"/>
+  <item id="917282678" name="Port. invocazione"/>
+  <item id="2786296551" name="Portachiavi glaciale"/>
+  <item id="3507794545" name="Portachiavi Inferi"/>
+  <item id="2983410580" name="Portachiavi letale"/>
+  <item id="3335785218" name="Port. vorticoso"/>
+  <item id="1608342200" name="Port. vorticoso +"/>
+  <item id="685402670" name="Portachiavi maligno"/>
+  <item id="3065970573" name="Port. Zamperosse"/>
+  <item id="3250179867" name="Port. Zamperosse +"/>
+  <item id="1487969953" name="Portachiavi gatto"/>
+  <item id="3725414516" name="Port. cane lunare"/>
+  <item id="1191444942" name="Port. gatto lunare"/>
+  <item id="941221292" name="Chip Invasore"/>
+</items>

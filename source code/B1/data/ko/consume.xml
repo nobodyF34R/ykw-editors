@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="367732779" name="빨강 동전"/>
+  <item id="2363652497" name="노랑 동전"/>
+  <item id="4226107655" name="주황 동전"/>
+  <item id="1703009444" name="분홍 동전"/>
+  <item id="310832178" name="초록 동전"/>
+  <item id="2341453192" name="파랑 동전"/>
+  <item id="4236807454" name="보라 동전"/>
+  <item id="1815580815" name="연파랑 동전"/>
+  <item id="456171545" name="5스타 동전"/>
+  <item id="2079795708" name="특수 동전"/>
+  <item id="217061738" name="복덩이 뽑기 동전"/>
+  <item id="2516142288" name="1스타 동전"/>
+  <item id="3808327750" name="열광 동전(꽃)"/>
+  <item id="2090528229" name="열광 동전(새)"/>
+  <item id="194895219" name="열광 동전(바람)"/>
+  <item id="2459208905" name="열광 동전(달)"/>
+  <item id="3851664479" name="두근두근 동전(요)"/>
+  <item id="1965859278" name="두근두근 동전(괴)"/>
+  <item id="36409688" name="두근두근 동전(혼)"/>
+  <item id="668813993" name="고향 동전(경기)"/>
+  <item id="3201571603" name="고향 동전(강원)"/>
+  <item id="3386059653" name="고향 동전(충북)"/>
+  <item id="1471659558" name="고향 동전(충남)"/>
+  <item id="548441776" name="고향 동전(경남)"/>
+  <item id="3115966218" name="고향 동전(전남)"/>
+  <item id="3468619676" name="고향 동전(경북)"/>
+  <item id="1577185805" name="고향 동전(전북)"/>
+  <item id="688308891" name="고향 동전(제주)"/>
+  <item id="1237404542" name="빙글빙글 동전"/>
+  <item id="2908180302" name="빨강 동전G"/>
+  <item id="878583540" name="노랑 동전G"/>
+  <item id="1129918050" name="주황 동전G"/>
+  <item id="3711810497" name="분홍 동전G"/>
+  <item id="2855963479" name="초록 동전G"/>
+  <item id="859036397" name="파랑 동전G"/>
+  <item id="1144318587" name="보라 동전G"/>
+  <item id="3565942762" name="연파랑 동전G"/>
+  <item id="508211046" name="다앞장 동전"/>
+  <item id="1766694896" name="털레칼 동전"/>
+  <item id="3523142007" name="결벽장군 동전"/>
+  <item id="2801390049" name="만성사자 동전"/>
+  <item id="562459907" name="겁주귀 동전"/>
+  <item id="652980506" name="환마장군 동전"/>
+  <item id="2973329554" name="빌리 대장 동전"/>
+  <item id="1374454156" name="타올라이온 동전"/>
+  <item id="4031041098" name="승부사 동전"/>
+  <item id="3219316896" name="요괴 성검사 동전"/>
+  <item id="3096388793" name="사이보그 요괴인 동전"/>
+  <item id="1224192205" name="요괴 용사M 동전"/>
+  <item id="3325974532" name="부유냥 동전"/>
+  <item id="1072726107" name="마스크냥 동전"/>
+  <item id="3481801775" name="왕사슴벌레 신 동전"/>
+  <item id="1451312533" name="무사냥 동전"/>
+  <item id="1675289358" name="코파코파 동전"/>
+  <item id="3599967598" name="나불할멈 동전"/>
+  <item id="4208177844" name="연귀 동전"/>
+  <item id="4257117869" name="발전신 동전"/>
+  <item id="2269380316" name="묵파신 동전"/>
+  <item id="2710836728" name="운외경 동전"/>
+  <item id="402449229" name="삼면 운외경 동전"/>
+  <item id="350081944" name="세바스찬 동전"/>
+  <item id="3743770949" name="풍술사 동전"/>
+  <item id="949830722" name="구미 동전"/>
+  <item id="1335522516" name="견신 동전"/>
+  <item id="2379514402" name="타이몽 동전"/>
+  <item id="2327397947" name="닌자몽 동전"/>
+  <item id="2820823507" name="수라멍 동전"/>
+  <item id="330307457" name="무리담 동전"/>
+  <item id="231138009" name="타라락 동전"/>
+  <item id="3836037100" name="따라해마네킹 동전"/>
+  <item id="178988736" name="참맘모스 동전"/>
+  <item id="2476898170" name="피뢰신 동전"/>
+  <item id="1627116507" name="설산씨름꾼 동전"/>
+  <item id="4094179974" name="금일등 동전"/>
+  <item id="3374823937" name="풍뎅무사 동전"/>
+  <item id="1689724695" name="풍뎅무쌍 동전"/>
+  <item id="3821569013" name="로보냥 동전"/>
+  <item id="2496639843" name="골드냥 동전"/>
+  <item id="2198800912" name="얼룩덜룩 동전"/>
+  <item id="2108429910" name="왕두꺼비 동전"/>
+  <item id="3977448391" name="왕도마뱀 동전"/>
+  <item id="2059522639" name="도깨귀 동전"/>
+  <item id="3683526052" name="무사맴 동전"/>
+  <item id="3189803671" name="가수 무사맴 동전"/>
+  <item id="2723323136" name="아더월월 동전"/>
+  <item id="1116173342" name="지바냥 동전"/>
+  <item id="897598600" name="가시냥 동전"/>
+  <item id="2883899691" name="배드냥 동전"/>
+  <item id="3046253683" name="위스냥 동전"/>
+  <item id="3264550117" name="세일러냥 동전"/>
+  <item id="3705921981" name="접시거북 동전"/>
+  <item id="657054509" name="서퍼거북 동전"/>
+  <item id="1173008391" name="백멍이 동전"/>
+  <item id="854425745" name="황멍이 동전"/>
+  <item id="1536968031" name="지바멍 동전"/>
+  <item id="1345252283" name="냅다신발 동전"/>
+  <item id="3460988440" name="사랑개 동전"/>
+  <item id="3108851342" name="음흉개 동전"/>
+  <item id="2585017169" name="눈보라 공주 동전"/>
+  <item id="2894665010" name="백귀공주 동전"/>
+  <item id="748385737" name="접시부기 동전"/>
+  <item id="3579162006" name="까발레리나 동전"/>
+  <item id="1559331142" name="미역군 동전"/>
+  <item id="541335348" name="미역☆스타 동전"/>
+  <item id="3003113578" name="공복영감 동전"/>
+  <item id="129377802" name="소독버섯 동전"/>
+  <item id="1890653852" name="버섯간호사 동전"/>
+  <item id="3921168166" name="넘흙착해 동전"/>
+  <item id="2580722601" name="우산마인 동전"/>
+  <item id="2010960517" name="노머니라이더 동전"/>
+  <item id="4006970175" name="더부살이 신 동전"/>
+  <item id="3321417980" name="아싸라나비 동전"/>
+  <item id="737587664" name="보노보노 동전"/>
+  <item id="1464020898" name="산타클도사 동전"/>
+  <item id="3427704023" name="번개아빠 동전"/>
+  <item id="3142167617" name="보살엄니 동전"/>
+  <item id="14410259" name="기린 동전"/>
+  <item id="2422538114" name="일각수 동전"/>
+  <item id="2663348144" name="꽃감 동전"/>
+  <item id="3355193907" name="요통두목 동전"/>
+  <item id="3882077972" name="틀어박쥐 동전"/>
+  <item id="2969240229" name="감추리 동전"/>
+  <item id="2160689896" name="드라큘냥 동전"/>
+  <item id="1858593732" name="우사뿅 동전"/>
+  <item id="2275690225" name="안쫄데빌 동전"/>
+  <item id="4037244519" name="충치백작 동전"/>
+  <item id="514660171" name="백안귀 동전"/>
+  <item id="1772759005" name="악중악 동전"/>
+  <item id="4157518462" name="웅가 동전"/>
+  <item id="432067410" name="인면견 동전"/>
+  <item id="3493628736" name="그게 아니야MEN 동전"/>
+  <item id="2000382632" name="칙칙하잔느 동전"/>
+  <item id="3955262" name="뽕쟁이 동전"/>
+  <item id="2805709782" name="뽕귀신 동전"/>
+  <item id="2306854595" name="불노아씨 동전"/>
+  <item id="4269342293" name="불사아씨 동전"/>
+  <item id="2570390404" name="땅거미 동전"/>
+  <item id="122789415" name="독거미 동전"/>
+  <item id="3996269330" name="얼짱견 동전"/>
+  <item id="1884729009" name="럭키 스네이크 동전"/>
+  <item id="3915382539" name="신룡 동전"/>
+  <item id="1847614441" name="어선녀 동전"/>
+  <item id="4146661971" name="어신녀 동전"/>
+  <item id="422013823" name="뇨롱이 동전"/>
+  <item id="1043524204" name="꿀꺽죠스 동전"/>
+  <item id="2656620445" name="긴코 동전"/>
+  <item id="1228266234" name="바나나코 동전"/>
+  <item id="250073612" name="이무기 동전"/>
+  <item id="2044781210" name="블랙 이무기 동전"/>
+  <item id="2150513349" name="혀팔사 동전"/>
+  <item id="123635653" name="전설의 검"/>
+  <item id="2656556671" name="저주받은 검"/>
+  <item id="3914393321" name="성검"/>
+  <item id="1999926090" name="장군의 영혼"/>
+  <item id="3359708" name="하트하트"/>
+  <item id="2570719846" name="쩌릿쩌릿 구슬"/>
+  <item id="3996984048" name="얼음 머리핀"/>
+  <item id="2122465121" name="불굴의 영혼"/>
+  <item id="159715319" name="눈보라 망토"/>
+  <item id="1765967378" name="사랑의 홀"/>
+  <item id="507885188" name="묵직아령"/>
+  <item id="2269964094" name="백금괴"/>
+  <item id="4031502248" name="젊음의 분가루"/>
+  <item id="1848590859" name="악마의 파편"/>
+  <item id="422081181" name="용 구슬"/>
+  <item id="2149655335" name="난폭한 칼"/>
+  <item id="4146467761" name="흙 정장"/>
+  <item id="1738083872" name="신통한 물"/>
+  <item id="278806198" name="저주받은 일기장"/>
+  <item id="1114625489" name="시끄러운 경적"/>
+  <item id="896066887" name="기억 흡수기"/>
+  <item id="2892084477" name="인어의 보옥"/>
+  <item id="3680928875" name="목각 곰"/>
+  <item id="1157763528" name="금붕어 등불"/>
+  <item id="839197022" name="장인의 등불"/>
+  <item id="2869719268" name="금 용마루 장식"/>
+  <item id="3691724914" name="문어빵 철판"/>
+  <item id="1286888931" name="감사한 모래"/>
+  <item id="1001614709" name="전통 우산"/>
+  <item id="1534387344" name="토용"/>
+  <item id="745788422" name="새빨간 히비스커스"/>
+  <item id="3044705724" name="사랑의 삼각김밥"/>
+  <item id="3263018282" name="마괴의 원천"/>
+  <item id="1545150601" name="워매~ 혼령"/>
+  <item id="723390495" name="영험한 주춧돌"/>
+  <item id="2987868581" name="괴적한 옷장"/>
+  <item id="813725687" name="뮤직 카드"/>
+  <item id="2844337741" name="순금알"/>
+  <item id="573954073" name="빨간 도깨비의 극옥"/>
+  <item id="3141306787" name="퍼렁 도깨비의 극옥"/>
+  <item id="3426466101" name="껌정 도깨비의 극옥"/>
+  <item id="1381969046" name="온천도니맨의 극옥"/>
+  <item id="626531328" name="삼두 구렁이의 극옥"/>
+  <item id="3159444922" name="낚신의 극옥"/>
+  <item id="3411442988" name="뽑기해골의 극옥"/>
+  <item id="1542021309" name="레드 J의 극옥"/>
+  <item id="753815595" name="마이티 도그의 극옥"/>
+  <item id="1277811150" name="위스마시멜로맨의 극옥"/>
+  <item id="992930136" name="도식귀의 극옥"/>
+  <item id="2720512226" name="오징어회장님의 극옥"/>
+  <item id="3575679092" name="우파우파의 극옥"/>
+  <item id="1262755287" name="가마가마의 극옥"/>
+  <item id="1011035457" name="온천흑도니맨의 극옥"/>
+  <item id="2773122299" name="삼두 도롱뇽의 극옥"/>
+  <item id="3528281197" name="8대 망령 낚신의 극옥"/>
+  <item id="1123176956" name="뽑기해골G의 극옥"/>
+  <item id="905273706" name="다이아 뽑기해골의 극옥"/>
+  <item id="1728350733" name="명식귀의 극옥"/>
+  <item id="268679835" name="히노신의 극옥"/>
+  <item id="2299194145" name="로이드 가부의 극옥"/>
+  <item id="4262321079" name="실뜨귀신의 극옥"/>
+  <item id="1617514004" name="프리즌 브레이커의 극옥"/>
+  <item id="393117314" name="G나불할멈의 극옥"/>
+  <item id="2389126968" name="로보냥 28호의 극옥"/>
+  <item id="4183826350" name="백사자의 극옥"/>
+  <item id="1776222783" name="적마묘의 극옥"/>
+  <item id="4123676849" name="달님 동전"/>
+  <item id="2194497575" name="강자 동전"/>
+  <item id="3792366018" name="VIP 동전"/>
+  <item id="3612430169" name="Mircle Coin"/>
+  <item id="2690023375" name="Untidy Coin"/>
+  <item id="962539125" name="Unkaind Coin"/>
+  <item id="1314397923" name="Reversette Coin"/>
+  <item id="3739681650" name="Reversa Coin"/>
+  <item id="2850042852" name="Seaweed Sensei Cn"/>
+  <item id="4212250755" name="Unfairy Coin"/>
+  <item id="2350311445" name="Carniboy Coin"/>
+  <item id="354400687" name="Greesel Coin"/>
+  <item id="1645775161" name="Drenchetta Coin"/>
+  <item id="4235992218" name="Unpleasant Coin"/>
+  <item id="2340105228" name="Toiletta Coin"/>
+  <item id="309493174" name="Skreek Coin"/>
+  <item id="1702186272" name="Whinona Coin"/>
+  <item id="517485225" name="Zazel Ultra Orb"/>
+  <item id="2116008780" name="Capt. Thunder U Orb"/>
+  <item id="152603610" name="Shogun King U Orb"/>
+  <item id="2417089120" name="Hinozall Awoken U Orb"/>
+  <item id="3877038838" name="Robonyan 3000 U Orb"/>
+  <item id="2037546837" name="Golden Claws U Orb"/>
+  <item id="242569155" name="Swirlious Gold U Orb"/>
+  <item id="3733853915" name="골든 볼"/>
+  <item id="938324974" name="Random Record"/>
+  <item id="1089110904" name="IOF Challenge Tkt"/>
+  <item id="2934235732" name="SK Challenge Tkt"/>
+</items>

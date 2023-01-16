@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="367732779" name="Red Coin"/>
+  <item id="2363652497" name="Yellow Coin"/>
+  <item id="4226107655" name="Orange Coin"/>
+  <item id="1703009444" name="Pink Coin"/>
+  <item id="310832178" name="Green Coin"/>
+  <item id="2341453192" name="Blue Coin"/>
+  <item id="4236807454" name="Purple Coin"/>
+  <item id="1815580815" name="Light-Blue Coin"/>
+  <item id="456171545" name="5-Star Coin"/>
+  <item id="2079795708" name="Special Coin"/>
+  <item id="217061738" name="Lucky Crank-a-Coin"/>
+  <item id="2516142288" name="1-Star Coin"/>
+  <item id="3808327750" name="Thrill Coin (Flower)"/>
+  <item id="2090528229" name="Thrill Coin (Bird)"/>
+  <item id="194895219" name="Thrill Coin (Wind)"/>
+  <item id="2459208905" name="Thrill Coin (Moon)"/>
+  <item id="3851664479" name="Mystery Coin (Yo)"/>
+  <item id="1965859278" name="Mystery Coin (Kai)"/>
+  <item id="36409688" name="Mystery Coin (Oni)"/>
+  <item id="668813993" name="Region Coin (N)"/>
+  <item id="3201571603" name="Region Coin (NE)"/>
+  <item id="3386059653" name="Region Coin (E)"/>
+  <item id="1471659558" name="Region Coin (Cent.)"/>
+  <item id="548441776" name="Region Coin (W)"/>
+  <item id="3115966218" name="Region Coin (Mtn.)"/>
+  <item id="3468619676" name="Region Coin (S)"/>
+  <item id="1577185805" name="Region Coin (Mid.)"/>
+  <item id="688308891" name="Region Coin (Isl.)"/>
+  <item id="1237404542" name="Vortex Coin"/>
+  <item id="4123676849" name="Full Moon Coin"/>
+  <item id="2194497575" name="Strength Coin"/>
+  <item id="3792366018" name="VIP Coin"/>
+  <item id="2908180302" name="Great Red Coin"/>
+  <item id="878583540" name="Great Yellow Coin"/>
+  <item id="1129918050" name="Great Orange Coin"/>
+  <item id="3711810497" name="Great Pink Coin"/>
+  <item id="2855963479" name="Great Green Coin"/>
+  <item id="859036397" name="Great Blue Coin"/>
+  <item id="1144318587" name="Great Purple Coin"/>
+  <item id="3565942762" name="Great SkyBlue Coin"/>
+  <item id="508211046" name="Tanbo Coin"/>
+  <item id="1766694896" name="Slacka-slash Coin"/>
+  <item id="3523142007" name="Washogun Coin"/>
+  <item id="2801390049" name="Lie-in Heart Coin"/>
+  <item id="562459907" name="Snartle Coin"/>
+  <item id="652980506" name="Reuknight Coin"/>
+  <item id="2973329554" name="Sgt. Burly Coin"/>
+  <item id="1374454156" name="Blazion Coin"/>
+  <item id="4031041098" name="Chansin Coin"/>
+  <item id="3219316896" name="Gleam Coin"/>
+  <item id="3096388793" name="B3-NK1 Coin"/>
+  <item id="1224192205" name="Moximous N Coin"/>
+  <item id="3325974532" name="Hovernyan Coin"/>
+  <item id="1072726107" name="Machonyan Coin"/>
+  <item id="3481801775" name="Cruncha Coin"/>
+  <item id="1451312533" name="Shogunyan Coin"/>
+  <item id="1675289358" name="Snottle Coin"/>
+  <item id="3599967598" name="Tattletell Coin"/>
+  <item id="4208177844" name="Smogmella Coin"/>
+  <item id="4257117869" name="Statiking Coin"/>
+  <item id="2269380316" name="Master Oden Coin"/>
+  <item id="2710836728" name="Mirapo Coin"/>
+  <item id="402449229" name="Miradox Coin"/>
+  <item id="350081944" name="Verygoodsir Coin"/>
+  <item id="3743770949" name="Tengu Coin"/>
+  <item id="949830722" name="Kyubi Coin"/>
+  <item id="1335522516" name="Frostail Coin"/>
+  <item id="2379514402" name="Chymera Coin"/>
+  <item id="2327397947" name="Kingmera Coin"/>
+  <item id="2820823507" name="Komashura Coin"/>
+  <item id="3612430169" name="Mircle Coin"/>
+  <item id="330307457" name="Noway Coin"/>
+  <item id="231138009" name="Roughraff Coin"/>
+  <item id="3836037100" name="Mimikin Coin"/>
+  <item id="178988736" name="Enduriphant Coin"/>
+  <item id="2476898170" name="Frazzel Coin"/>
+  <item id="1627116507" name="Mad Mountain Coin"/>
+  <item id="4094179974" name="Castelius I Coin"/>
+  <item id="3374823937" name="Rhinoggin Coin"/>
+  <item id="1689724695" name="Rhinormous Coin"/>
+  <item id="3821569013" name="Robonyan Coin"/>
+  <item id="2496639843" name="Goldenyan Coin"/>
+  <item id="2198800912" name="Dromp Coin"/>
+  <item id="2108429910" name="Toadal Dude Coin"/>
+  <item id="3977448391" name="Uber Geeko Coin"/>
+  <item id="2059522639" name="Gilgaros Coin"/>
+  <item id="2690023375" name="Untidy Coin"/>
+  <item id="3683526052" name="Cadin Coin"/>
+  <item id="3189803671" name="Singcada Coin"/>
+  <item id="2723323136" name="Swelterrier Coin"/>
+  <item id="1116173342" name="Jibanyan Coin"/>
+  <item id="897598600" name="Thornyan Coin"/>
+  <item id="2883899691" name="Baddinyan Coin"/>
+  <item id="3046253683" name="Buchinyan Coin"/>
+  <item id="3264550117" name="Sailornyan Coin"/>
+  <item id="3705921981" name="Walkappa Coin"/>
+  <item id="657054509" name="Supyo Coin"/>
+  <item id="1173008391" name="Komasan Coin"/>
+  <item id="854425745" name="Komajiro Coin"/>
+  <item id="1536968031" name="Jibakoma Coin"/>
+  <item id="1345252283" name="Nekidspeed Coin"/>
+  <item id="3460988440" name="Pinkipoo Coin"/>
+  <item id="3108851342" name="Pookivil Coin"/>
+  <item id="2585017169" name="Blizzaria Coin"/>
+  <item id="2894665010" name="Damona Coin"/>
+  <item id="748385737" name="Faux Kappa Coin"/>
+  <item id="3579162006" name="Spoilerina Coin"/>
+  <item id="962539125" name="Unkaind Coin"/>
+  <item id="1559331142" name="Wiglin Coin"/>
+  <item id="541335348" name="Kelpacabana Coin"/>
+  <item id="3003113578" name="Hungramps Coin"/>
+  <item id="129377802" name="Tongus Coin"/>
+  <item id="1890653852" name="Nurse Tongus Coin"/>
+  <item id="3921168166" name="Sandmeh Coin"/>
+  <item id="2580722601" name="Scarasol Coin"/>
+  <item id="2010960517" name="Supoor Hero Coin"/>
+  <item id="4006970175" name="High Gnomey Coin"/>
+  <item id="3321417980" name="Peppillon Coin"/>
+  <item id="737587664" name="Happierre Coin"/>
+  <item id="1464020898" name="Ol' Saint Trick Coin"/>
+  <item id="3427704023" name="Papa Bolt Coin"/>
+  <item id="3142167617" name="Mama Aura Coin"/>
+  <item id="14410259" name="Kyryn Coin"/>
+  <item id="2422538114" name="Unikirin Coin"/>
+  <item id="2663348144" name="Elder Bloom Coin"/>
+  <item id="1314397923" name="Reversette Coin"/>
+  <item id="3739681650" name="Reversa Coin"/>
+  <item id="2850042852" name="Seaweed Sensei Cn"/>
+  <item id="3355193907" name="Agon Coin"/>
+  <item id="3882077972" name="Hidabat Coin"/>
+  <item id="2969240229" name="Count Zapaway Coin"/>
+  <item id="2160689896" name="Dracunyan Coin"/>
+  <item id="1858593732" name="Usapyon Coin"/>
+  <item id="2275690225" name="Beelzebold Coin"/>
+  <item id="4037244519" name="Count Cavity Coin"/>
+  <item id="514660171" name="Eyesoar Coin"/>
+  <item id="1772759005" name="Awevil Coin"/>
+  <item id="4157518462" name="Poofessor Coin"/>
+  <item id="4212250755" name="Unfairy Coin"/>
+  <item id="2350311445" name="Carniboy Coin"/>
+  <item id="354400687" name="Greesel Coin"/>
+  <item id="432067410" name="Manjimutt Coin"/>
+  <item id="3493628736" name="Nosirs Coin"/>
+  <item id="2000382632" name="Dismarelda Coin"/>
+  <item id="3955262" name="Cheeksqueek Coin"/>
+  <item id="2805709782" name="Cuttincheez Coin"/>
+  <item id="2306854595" name="Everfore Coin"/>
+  <item id="4269342293" name="Eterna Coin"/>
+  <item id="2570390404" name="Arachnus Coin"/>
+  <item id="122789415" name="Arachnia Coin"/>
+  <item id="3996269330" name="Dandoodle Coin"/>
+  <item id="1645775161" name="Drenchetta Coin"/>
+  <item id="4235992218" name="Unpleasant Coin"/>
+  <item id="2340105228" name="Toiletta Coin"/>
+  <item id="309493174" name="Skreek Coin"/>
+  <item id="1884729009" name="Noko Coin"/>
+  <item id="3915382539" name="Dragon Lord Coin"/>
+  <item id="1847614441" name="Mermadonna Coin"/>
+  <item id="4146661971" name="Mermother Coin"/>
+  <item id="422013823" name="Lady Longnek Coin"/>
+  <item id="1043524204" name="Chummer Coin"/>
+  <item id="2656620445" name="Babblong Coin"/>
+  <item id="1228266234" name="Bananose Coin"/>
+  <item id="250073612" name="Venoct Coin"/>
+  <item id="2044781210" name="Shadow Venoct Coin"/>
+  <item id="2150513349" name="Slurpent Coin"/>
+  <item id="1702186272" name="Whinona Coin"/>
+  <item id="123635653" name="Legendary Blade"/>
+  <item id="2656556671" name="Cursed Blade"/>
+  <item id="3914393321" name="Holy Blade"/>
+  <item id="1999926090" name="General's Soul"/>
+  <item id="3359708" name="Love Buster"/>
+  <item id="2570719846" name="GHz Orb"/>
+  <item id="3996984048" name="Glacial Clip"/>
+  <item id="2122465121" name="Unbeatable Soul"/>
+  <item id="159715319" name="Snowstorm Cloak"/>
+  <item id="1765967378" name="Love Scepter"/>
+  <item id="507885188" name="Buff Weight"/>
+  <item id="2269964094" name="Platinum Bar"/>
+  <item id="4031502248" name="Ageless Powder"/>
+  <item id="1848590859" name="Shard of Evil"/>
+  <item id="422081181" name="Dragon Orb"/>
+  <item id="2149655335" name="Raging Blade"/>
+  <item id="4146467761" name="Sand Suit"/>
+  <item id="1738083872" name="Ethereal Water"/>
+  <item id="278806198" name="Cursed Journal"/>
+  <item id="1114625489" name="Horn"/>
+  <item id="896066887" name="Mem-o-Vac"/>
+  <item id="2892084477" name="Mermaid Pearl"/>
+  <item id="3680928875" name="Carved Bear"/>
+  <item id="1157763528" name="Goldfish Lantern"/>
+  <item id="839197022" name="Master's Lantern"/>
+  <item id="2869719268" name="Gold Emblem"/>
+  <item id="3691724914" name="Takoyaki Tray"/>
+  <item id="1286888931" name="Dune Sand"/>
+  <item id="1001614709" name="Vintage Parasol"/>
+  <item id="1534387344" name="Terracotta Figure"/>
+  <item id="745788422" name="Red Hibiscus"/>
+  <item id="3044705724" name="Love Rice Ball"/>
+  <item id="3263018282" name="Essence of Evil"/>
+  <item id="1545150601" name="Swirly Soul"/>
+  <item id="723390495" name="Keystone"/>
+  <item id="2987868581" name="Comfy Closet"/>
+  <item id="813725687" name="Music Card"/>
+  <item id="2844337741" name="Golden Egg"/>
+  <item id="573954073" name="Gargaros Ultra Orb"/>
+  <item id="3141306787" name="Ogralus Ultra Orb"/>
+  <item id="3426466101" name="Orcanos Ultra Orb"/>
+  <item id="1381969046" name="Sproink Ultra Orb"/>
+  <item id="626531328" name="Slimamander U Orb"/>
+  <item id="3159444922" name="SV Snaggerjag U Orb"/>
+  <item id="3411442988" name="Gutsy Bones U Orb"/>
+  <item id="1542021309" name="Rubeus J Ultra Orb"/>
+  <item id="753815595" name="Hardy Hound U Orb"/>
+  <item id="1277811150" name="Whisped Cream U Orb"/>
+  <item id="992930136" name="Demuncher Ult Orb"/>
+  <item id="2720512226" name="McKraken Ultra Orb"/>
+  <item id="3575679092" name="Dame Dedtime U Orb"/>
+  <item id="1262755287" name="Wobblewok Ult Orb"/>
+  <item id="1011035457" name="Hoggles Ultra Orb"/>
+  <item id="2773122299" name="Eyedra Ultra Orb"/>
+  <item id="3528281197" name="Styx Mk. VI Ult Orb"/>
+  <item id="1123176956" name="Goldy Bones U Orb"/>
+  <item id="905273706" name="Glitzy Bones U Orb"/>
+  <item id="1728350733" name="Devourer Ultra Orb"/>
+  <item id="268679835" name="Hinozall Ultra Orb"/>
+  <item id="2299194145" name="Kabuking Ultra Orb"/>
+  <item id="4262321079" name="Kat Kraydel Ult Orb"/>
+  <item id="1617514004" name="Mass Mutterer U Orb"/>
+  <item id="393117314" name="Tattleterror Ult Orb"/>
+  <item id="2389126968" name="Robonyan 28 U Orb"/>
+  <item id="4183826350" name="Swirlious Omai U Orb"/>
+  <item id="1776222783" name="Red Paws Ultra Orb"/>
+  <item id="517485225" name="Zazel Ultra Orb"/>
+  <item id="2116008780" name="Capt. Thunder U Orb"/>
+  <item id="152603610" name="Shogun King U Orb"/>
+  <item id="2417089120" name="Hinozall Awoken U Orb"/>
+  <item id="3877038838" name="Robonyan 3000 U Orb"/>
+  <item id="2037546837" name="Golden Claws U Orb"/>
+  <item id="242569155" name="Swirlious Gold U Orb"/>
+  <item id="3733853915" name="Golden Ball"/>
+  <item id="938324974" name="Random Record"/>
+  <item id="1089110904" name="IOF Challenge Tkt"/>
+  <item id="2934235732" name="SK Challenge Tkt"/>
+</items>

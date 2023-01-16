@@ -1,0 +1,473 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="2046011958" index="1" name="Alcaldero"/>
+  <item id="1799751128" index="2" name="Sinná"/>
+  <item id="1918710937" index="3" name="Sinnareno"/>
+  <item id="3827602063" index="4" name="Katano"/>
+  <item id="1553528298" index="5" name="Katananái"/>
+  <item id="1166263467" index="6" name="Katakroken"/>
+  <item id="2859601318" index="7" name="Milimpiano"/>
+  <item id="2104724135" index="8" name="Samulimpio"/>
+  <item id="3100090952" index="9" name="Dormileón"/>
+  <item id="2992314685" index="10" name="León Alfa"/>
+  <item id="315517635" index="11" name="Pataleto"/>
+  <item id="1643699290" index="12" name="Osfurio"/>
+  <item id="2028203291" index="13" name="Sacoco"/>
+  <item id="4136713569" index="14" name="Mochimacho"/>
+  <item id="4018801696" index="15" name="Machimío"/>
+  <item id="933573919" index="16" name="Chupatinas"/>
+  <item id="2201481998" index="17" name="Puergazán"/>
+  <item id="518048695" index="18" name="Torreznio"/>
+  <item id="206922841" index="19" name="Samuranguila"/>
+  <item id="1412854799" index="20" name="Anguilocio"/>
+  <item id="2400801402" index="21" name="Cortarroz"/>
+  <item id="182943320" index="22" name="Socarrat"/>
+  <item id="1150518150" index="23" name="Yelmandante"/>
+  <item id="1445342312" index="24" name="Juntollero"/>
+  <item id="1329405225" index="25" name="Genedáver"/>
+  <item id="2645360020" index="26" name="Atierrador"/>
+  <item id="3318738370" index="27" name="Capi-Cachas"/>
+  <item id="4003089165" index="28" name="Flamileón"/>
+  <item id="4152457804" index="29" name="Tembloleón"/>
+  <item id="3702270351" index="30" name="Sirleón"/>
+  <item id="83617212" index="31" name="Ludorái"/>
+  <item id="3158803161" index="32" name="Lustre"/>
+  <item id="4230997219" index="33" name="Furtre"/>
+  <item id="2774315928" index="34" name="Dortre"/>
+  <item id="3645160255" index="35" name="Benkei"/>
+  <item id="3227486846" index="36" name="B3-NK1"/>
+  <item id="3406132351" index="37" name="Ultra N"/>
+  <item id="1941508890" index="38" name="Ultra K"/>
+  <item id="621845233" index="39" name="Hovernyan"/>
+  <item id="3838898721" index="40" name="Tigrenyan"/>
+  <item id="294016696" index="41" name="Sushiyama"/>
+  <item id="144533497" index="42" name="Kapunki"/>
+  <item id="1934455732" index="43" name="Lucharabajo"/>
+  <item id="3421574353" index="44" name="Camperabajo"/>
+  <item id="3538560400" index="45" name="Chafarabajo"/>
+  <item id="408080822" index="46" name="Devoramonios"/>
+  <item id="21618935" index="47" name="Devoralmas"/>
+  <item id="3079793018" index="48" name="Iluminocto"/>
+  <item id="2699998931" index="49" name="Fracaguas"/>
+  <item id="4067932905" index="50" name="Chancleto"/>
+  <item id="966511628" index="51" name="Mokopavo"/>
+  <item id="545324365" index="52" name="Pachús"/>
+  <item id="3556401853" index="53" name="Yopaso"/>
+  <item id="1311595012" index="54" name="Puf"/>
+  <item id="1463184197" index="55" name="Yanomás"/>
+  <item id="3146751539" index="56" name="Komemo"/>
+  <item id="2012164562" index="57" name="Komecasa"/>
+  <item id="2727653234" index="58" name="Tontolín"/>
+  <item id="1431073508" index="59" name="Sincara"/>
+  <item id="1456622790" index="60" name="Tomoko"/>
+  <item id="53737814" index="61" name="Algazara"/>
+  <item id="438880279" index="62" name="Labizula"/>
+  <item id="2354146817" index="63" name="Cotilleja"/>
+  <item id="2665791983" index="64" name="Marulleja"/>
+  <item id="2504679232" index="65" name="Esquelleja"/>
+  <item id="2839163357" index="66" name="Cupístolo"/>
+  <item id="887949668" index="67" name="Casanovo"/>
+  <item id="771110949" index="68" name="Casanono"/>
+  <item id="2240145679" index="69" name="Losiento"/>
+  <item id="931616744" index="70" name="Domiplof"/>
+  <item id="1027182186" index="71" name="Niebli"/>
+  <item id="3478345399" index="72" name="Nébula"/>
+  <item id="2117842652" index="73" name="Ondívoro"/>
+  <item id="3330789817" index="74" name="Coberturo"/>
+  <item id="3751600376" index="75" name="Estatinarca"/>
+  <item id="2403020941" index="76" name="Don Kaldo"/>
+  <item id="797712772" index="77" name="Falsillo"/>
+  <item id="3250302461" index="78" name="Apelicano"/>
+  <item id="2263857027" index="79" name="Telespejo"/>
+  <item id="624097286" index="80" name="Trielespejo"/>
+  <item id="2683602626" index="81" name="Malpejismo"/>
+  <item id="1045680358" index="82" name="Ilúho"/>
+  <item id="659087783" index="83" name="Elúho"/>
+  <item id="207991396" index="84" name="Ubiúho"/>
+  <item id="2166860649" index="85" name="Trilépata"/>
+  <item id="2554108456" index="86" name="Tetrariosa"/>
+  <item id="4133838287" index="87" name="Ambrosio"/>
+  <item id="1801742127" index="88" name="Tengu"/>
+  <item id="1920947822" index="89" name="Flamngu"/>
+  <item id="160243924" index="90" name="Kyubi"/>
+  <item id="278270357" index="91" name="Nievacolas"/>
+  <item id="2643369827" index="92" name="Kimera"/>
+  <item id="2224401954" index="93" name="Kimerreal"/>
+  <item id="5875674" index="94" name="Aterracota"/>
+  <item id="2972796849" index="95" name="Tentelento"/>
+  <item id="2743396447" index="96" name="Tentemacho"/>
+  <item id="3131037982" index="97" name="Tenterila"/>
+  <item id="3102064831" index="98" name="Quierodeso"/>
+  <item id="3365620317" index="99" name="Gambulloso"/>
+  <item id="1250891874" index="100" name="Indiligencio"/>
+  <item id="1881615672" index="101" name="Tanquivocado"/>
+  <item id="886008723" index="102" name="Nihablar"/>
+  <item id="2356350198" index="103" name="Impás"/>
+  <item id="2506636727" index="104" name="Murallín"/>
+  <item id="2352466200" index="105" name="Rebelcebú"/>
+  <item id="3428822818" index="106" name="Caporrista"/>
+  <item id="4268346784" index="107" name="Hermanión"/>
+  <item id="645579901" index="108" name="Lorigón"/>
+  <item id="2536523489" index="109" name="Mimoniquí"/>
+  <item id="2663818008" index="110" name="Globqueo"/>
+  <item id="2279445081" index="111" name="Globtundente"/>
+  <item id="3193428670" index="112" name="Sumodón"/>
+  <item id="595649031" index="113" name="Supersumodón"/>
+  <item id="2604434786" index="114" name="Desinverest"/>
+  <item id="2307467916" index="115" name="Inverestupción"/>
+  <item id="3245191076" index="116" name="Inquielifante"/>
+  <item id="3631652581" index="117" name="Perselefante"/>
+  <item id="4282759791" index="118" name="Mamuguanto"/>
+  <item id="317458484" index="119" name="Rayael"/>
+  <item id="1207557386" index="120" name="Cazarayos"/>
+  <item id="2857398097" index="121" name="Zudado"/>
+  <item id="3148741828" index="122" name="Montaña Loca"/>
+  <item id="2729889157" index="123" name="Lord Lava"/>
+  <item id="2953011819" index="124" name="Castelius III"/>
+  <item id="2603495848" index="125" name="Castelius II"/>
+  <item id="2836943658" index="126" name="Castelius I"/>
+  <item id="2184511721" index="127" name="Maxicastelius"/>
+  <item id="51485601" index="128" name="Pegarabajo"/>
+  <item id="295973967" index="129" name="Enormarabajo"/>
+  <item id="146736398" index="130" name="Cuernarabajo"/>
+  <item id="1047638545" index="131" name="Robonyan"/>
+  <item id="661291856" index="132" name="Aureonyan"/>
+  <item id="1322859178" index="133" name="Robonyan 2.0"/>
+  <item id="4051387260" index="134" name="Pom"/>
+  <item id="3898634813" index="135" name="Flus"/>
+  <item id="3991934337" index="136" name="Eleganfibio"/>
+  <item id="4109051072" index="137" name="Frikigarto"/>
+  <item id="63412728" index="138" name="Gargantúo"/>
+  <item id="3145465501" index="139" name="Cazamentires"/>
+  <item id="2848870771" index="140" name="Demoniorco"/>
+  <item id="3046311383" index="141" name="Patis"/>
+  <item id="1130078060" index="142" name="Deslumbrella"/>
+  <item id="4226283529" index="143" name="Rechinella"/>
+  <item id="3808217416" index="144" name="Esquelebella"/>
+  <item id="1237787673" index="145" name="Ningarra"/>
+  <item id="162480675" index="146" name="Habilgarra"/>
+  <item id="280261474" index="147" name="Cantigarra"/>
+  <item id="3825660024" index="148" name="Escanlofrío"/>
+  <item id="1555732253" index="149" name="Frihuahua"/>
+  <item id="1168221788" index="150" name="Lavadenco"/>
+  <item id="1609739110" index="151" name="Picassina"/>
+  <item id="221209266" index="152" name="Chíclope"/>
+  <item id="2745600680" index="153" name="Jibanyan"/>
+  <item id="2893525287" index="154" name="Jibanyan S"/>
+  <item id="3127622064" index="155" name="Naranyan"/>
+  <item id="2437343859" index="156" name="Kiwinyan"/>
+  <item id="2287852338" index="157" name="Uvanyan"/>
+  <item id="3340520949" index="158" name="Fresanyan"/>
+  <item id="3725032628" index="159" name="Sandinyan"/>
+  <item id="2742061297" index="160" name="Melonyan"/>
+  <item id="903818430" index="161" name="Zafinyan"/>
+  <item id="519208829" index="162" name="Esmenyan"/>
+  <item id="132730428" index="163" name="Rubinyan"/>
+  <item id="1219025147" index="164" name="Topanyan"/>
+  <item id="751050239" index="165" name="Diamanyan"/>
+  <item id="454749645" index="166" name="Espinyan"/>
+  <item id="2261636468" index="167" name="Pelochnyan"/>
+  <item id="1806853494" index="168" name="Buchinyan"/>
+  <item id="1550619972" index="169" name="Sailornyan"/>
+  <item id="1147659048" index="170" name="Maravinyan"/>
+  <item id="68125970" index="171" name="Jetnyan"/>
+  <item id="610966554" index="172" name="Pelirrojo"/>
+  <item id="2791091410" index="173" name="Pupilo Panja"/>
+  <item id="3035169596" index="174" name="Panja Pro"/>
+  <item id="2490923674" index="175" name="Kappandante"/>
+  <item id="3424348876" index="176" name="Kappadachín"/>
+  <item id="3573570445" index="177" name="Kapparfista"/>
+  <item id="2249971501" index="178" name="Robokapp"/>
+  <item id="1957105065" index="179" name="Komasan"/>
+  <item id="1309620467" index="180" name="Komaleón"/>
+  <item id="2071344678" index="181" name="Komasan S"/>
+  <item id="1841052904" index="182" name="Komajiro"/>
+  <item id="2084133489" index="183" name="Komatigrado"/>
+  <item id="1651312487" index="184" name="Komajiro S"/>
+  <item id="2494462147" index="185" name="Robokoma"/>
+  <item id="3165905527" index="186" name="Jibakoma"/>
+  <item id="643344010" index="187" name="Baku"/>
+  <item id="3880700931" index="188" name="Somnia"/>
+  <item id="1061394379" index="189" name="Blanpir"/>
+  <item id="1296499848" index="190" name="Cellisca"/>
+  <item id="4126893037" index="191" name="Rapidizo"/>
+  <item id="1152508273" index="192" name="Pufipatitas"/>
+  <item id="1443122847" index="193" name="Pufilindo"/>
+  <item id="1327464414" index="194" name="Pufimaloso"/>
+  <item id="1048957631" index="195" name="Oso Boco"/>
+  <item id="753303304" index="196" name="Fristina"/>
+  <item id="2488932461" index="197" name="Granizia"/>
+  <item id="2588494293" index="197" name="Grazi"/>
+  <item id="2369857836" index="198" name="Dámona"/>
+  <item id="2056910010" index="199" name="Kappafalso"/>
+  <item id="1669514747" index="200" name="Tigrappa"/>
+  <item id="3257242591" index="201" name="Gran Mangu"/>
+  <item id="3989993334" index="202" name="Kieroto"/>
+  <item id="4106831415" index="203" name="Zampo"/>
+  <item id="4228744724" index="204" name="Cimbrón"/>
+  <item id="1696488402" index="205" name="Algacabana"/>
+  <item id="3843471189" index="206" name="Pasodón"/>
+  <item id="3460031638" index="207" name="Ritma"/>
+  <item id="3554148426" index="208" name="Abuzampa"/>
+  <item id="2344292380" index="209" name="Gargazampa"/>
+  <item id="3401789707" index="210" name="Aburroz"/>
+  <item id="739385254" index="211" name="Roboabuzampa"/>
+  <item id="3499113521" index="212" name="Níscala"/>
+  <item id="4173947755" index="213" name="Curaníscala"/>
+  <item id="810502914" index="214" name="Arenito"/>
+  <item id="1081410574" index="215" name="Don Arenito"/>
+  <item id="1747737428" index="216" name="Sombrillo"/>
+  <item id="1388358624" index="217" name="Sombrillogro"/>
+  <item id="825576937" index="218" name="Contentallo"/>
+  <item id="1767267775" index="219" name="Talloestrella"/>
+  <item id="1879396303" index="220" name="Nomedá"/>
+  <item id="2988432595" index="221" name="Paupermán"/>
+  <item id="1763606158" index="222" name="Opti"/>
+  <item id="3474428761" index="223" name="Nomi"/>
+  <item id="3934047365" index="224" name="Gran Nomi"/>
+  <item id="3647396296" index="225" name="Enerposa"/>
+  <item id="3229477001" index="226" name="Eneposa"/>
+  <item id="1641725613" index="227" name="Mejorposa"/>
+  <item id="2025951212" index="228" name="Vivariposa"/>
+  <item id="2007757884" index="229" name="Torivinador"/>
+  <item id="178502582" index="230" name="Torivino"/>
+  <item id="3718397111" index="231" name="Rayito"/>
+  <item id="4005046778" index="232" name="Felisonte"/>
+  <item id="3067820460" index="233" name="Reversa"/>
+  <item id="2948597997" index="234" name="Reversada"/>
+  <item id="241655497" index="235" name="Tricotom"/>
+  <item id="394030984" index="236" name="Dádivo"/>
+  <item id="2043791553" index="237" name="Bolilete"/>
+  <item id="1623914880" index="238" name="Doblilete"/>
+  <item id="1233379831" index="239" name="Papá Rayo"/>
+  <item id="1352192182" index="240" name="Tío Infinito"/>
+  <item id="4047472274" index="241" name="Mamá Aura"/>
+  <item id="3894720467" index="242" name="Tita Corazón"/>
+  <item id="1254874508" index="243" name="Kyryn"/>
+  <item id="1406201037" index="244" name="Unikyryn"/>
+  <item id="3562330446" index="245" name="Noguío"/>
+  <item id="3444566031" index="246" name="Topami"/>
+  <item id="1530285593" index="247" name="Algio"/>
+  <item id="3817482620" index="248" name="Agujeto"/>
+  <item id="4203812925" index="249" name="Machaka"/>
+  <item id="3770815751" index="250" name="Envelo"/>
+  <item id="876284733" index="251" name="Cafeíno"/>
+  <item id="3316206299" index="252" name="Acelgo"/>
+  <item id="3660506547" index="253" name="Morenaso"/>
+  <item id="2120028613" index="254" name="Negatisquito"/>
+  <item id="3336664736" index="255" name="Deprisquito"/>
+  <item id="3757721569" index="256" name="Picorrón"/>
+  <item id="1367906203" index="257" name="Nomevén"/>
+  <item id="166430669" index="258" name="Nostoy"/>
+  <item id="284210828" index="259" name="Nul"/>
+  <item id="3658254148" index="260" name="Suspicioni"/>
+  <item id="3273111045" index="261" name="Pataletoni"/>
+  <item id="3896174022" index="262" name="Contrarioni"/>
+  <item id="691944325" index="263" name="Keji Do Khan"/>
+  <item id="999003243" index="264" name="Gruñón Khan"/>
+  <item id="1433276435" index="265" name="Enciélago"/>
+  <item id="3367577770" index="266" name="Caseriélago"/>
+  <item id="3517061611" index="267" name="Ermiciélago"/>
+  <item id="1484681826" index="268" name="Prestragón"/>
+  <item id="4063461127" index="269" name="Bolsadrón"/>
+  <item id="2098539966" index="270" name="Espaoi"/>
+  <item id="1872790096" index="271" name="Hazlotú"/>
+  <item id="3608995125" index="272" name="Záppingla"/>
+  <item id="2030553752" index="273" name="Rataleza"/>
+  <item id="1655758881" index="274" name="Tengulecto"/>
+  <item id="2074857824" index="275" name="Tengullón"/>
+  <item id="935563782" index="276" name="Frivolia"/>
+  <item id="2407527779" index="277" name="Babamandra"/>
+  <item id="2357685336" index="278" name="Dracunyan"/>
+  <item id="3390690701" index="279" name="Usapyon"/>
+  <item id="3540182220" index="280" name="Usapyon"/>
+  <item id="4163876623" index="281" name="Usapyon"/>
+  <item id="3778315854" index="282" name="Usapyon"/>
+  <item id="2926907529" index="283" name="Usapyon"/>
+  <item id="1961084999" index="284" name="Negasus"/>
+  <item id="1845033222" index="285" name="Pifiasus"/>
+  <item id="2188351250" index="286" name="Timidiablo"/>
+  <item id="986968183" index="287" name="Osademonio"/>
+  <item id="600359222" index="288" name="Conde Caries"/>
+  <item id="1653768918" index="289" name="Ojezno"/>
+  <item id="2072621975" index="290" name="Joyezno"/>
+  <item id="2059114061" index="291" name="Avarqueroso"/>
+  <item id="1671472908" index="292" name="Diablés"/>
+  <item id="646882515" index="293" name="Caldewok"/>
+  <item id="1002127958" index="294" name="Oskyubi"/>
+  <item id="456691514" index="295" name="Ejemtos"/>
+  <item id="35896955" index="296" name="Erizlor"/>
+  <item id="2975326376" index="297" name="Goto"/>
+  <item id="1205583869" index="298" name="Sirimiri"/>
+  <item id="2823606761" index="299" name="Copo"/>
+  <item id="1589677756" index="300" name="Ventisquero"/>
+  <item id="2204205610" index="301" name="Coagulón"/>
+  <item id="1827192363" index="302" name="Cartepollo"/>
+  <item id="1228096695" index="303" name="Mirlobirlo"/>
+  <item id="1978896234" index="304" name="Rafaz"/>
+  <item id="741375313" index="305" name="Estréquito"/>
+  <item id="2984723944" index="306" name="Vrumbo"/>
+  <item id="2970821958" index="307" name="Ayay"/>
+  <item id="2819101703" index="308" name="Horterraro"/>
+  <item id="2200258500" index="309" name="Alarción"/>
+  <item id="856127353" index="310" name="Cantonio"/>
+  <item id="1936658755" index="311" name="Multiniche"/>
+  <item id="1785995266" index="312" name="Ser Bero"/>
+  <item id="2982487839" index="313" name="Robocantonio"/>
+  <item id="2654127030" index="314" name="Peluco"/>
+  <item id="156967565" index="315" name="Foliculio"/>
+  <item id="65403663" index="316" name="No-No"/>
+  <item id="4284995736" index="317" name="Negatalia"/>
+  <item id="881569405" index="318" name="Reboca"/>
+  <item id="764452668" index="319" name="Pilicajosa"/>
+  <item id="341709365" index="320" name="Aranecido"/>
+  <item id="116112859" index="321" name="Desaranecido"/>
+  <item id="3143212138" index="322" name="Batallitos"/>
+  <item id="290477281" index="323" name="Eskakeo"/>
+  <item id="1128085621" index="324" name="Cuesco"/>
+  <item id="1512442164" index="325" name="Péditum"/>
+  <item id="2850829188" index="326" name="Lena"/>
+  <item id="468618595" index="327" name="Malena"/>
+  <item id="4052689874" index="328" name="Termascino"/>
+  <item id="4219559696" index="329" name="Graciosno"/>
+  <item id="3801771601" index="330" name="Hilarión"/>
+  <item id="1716938665" index="331" name="Arruñona"/>
+  <item id="3739877580" index="332" name="Belladona"/>
+  <item id="3354472845" index="333" name="Eterna"/>
+  <item id="3540910611" index="334" name="Darknyan"/>
+  <item id="3912560894" index="335" name="Insomna"/>
+  <item id="4029661631" index="336" name="Morfea"/>
+  <item id="2740120070" index="337" name="Aracnio"/>
+  <item id="3125402439" index="338" name="Aracne"/>
+  <item id="2251929050" index="339" name="Tortícolis"/>
+  <item id="3255300392" index="340" name="Noko"/>
+  <item id="3501350598" index="341" name="Florinoko"/>
+  <item id="3676094569" index="342" name="Pandanoko"/>
+  <item id="158941306" index="343" name="Robonoko"/>
+  <item id="2492209716" index="344" name="Malmet"/>
+  <item id="3542900964" index="345" name="Agorerana"/>
+  <item id="2997844371" index="346" name="Whisper"/>
+  <item id="3166447659" index="347" name="Whispócrates"/>
+  <item id="3419633190" index="348" name="Anjijila"/>
+  <item id="3536340839" index="349" name="Tenongrio"/>
+  <item id="4192539812" index="350" name="Urnaconda"/>
+  <item id="1298491007" index="351" name="Pezqueroso"/>
+  <item id="1607518609" index="352" name="Pezgativo"/>
+  <item id="1187772624" index="353" name="Pezquiciado"/>
+  <item id="3968471914" index="354" name="Minipulpobola"/>
+  <item id="2900522320" index="355" name="Pulpobola Rey"/>
+  <item id="1951624455" index="356" name="Desolvidador"/>
+  <item id="3248082698" index="357" name="Memorio"/>
+  <item id="4131864376" index="358" name="Mosquereta"/>
+  <item id="2032511087" index="359" name="Bronquereta"/>
+  <item id="1745762723" index="360" name="Draqui"/>
+  <item id="4124639514" index="361" name="Lord Dragón"/>
+  <item id="3972149339" index="362" name="Dragón Azur"/>
+  <item id="466415508" index="363" name="Robodraqui"/>
+  <item id="1325095005" index="364" name="Nereida"/>
+  <item id="1804601217" index="365" name="Sirenia"/>
+  <item id="1921726144" index="366" name="Oceánida"/>
+  <item id="1548679091" index="367" name="Cisnia"/>
+  <item id="4138950550" index="368" name="Ido"/>
+  <item id="4020793047" index="369" name="Turdido"/>
+  <item id="3882659572" index="370" name="Pellurón"/>
+  <item id="4269252533" index="371" name="Pringurón"/>
+  <item id="3205480098" index="372" name="Boquirroto"/>
+  <item id="2786365411" index="373" name="Yopago"/>
+  <item id="129227207" index="374" name="Charlatón"/>
+  <item id="514386054" index="375" name="Tochaplátano"/>
+  <item id="3841102038" index="376" name="Vacilagón"/>
+  <item id="3438217826" index="377" name="Bergantín"/>
+  <item id="1025240221" index="378" name="Mandícoro"/>
+  <item id="254643743" index="379" name="Cinisierpe"/>
+  <item id="604036572" index="380" name="Arfidio"/>
+  <item id="2242350072" index="381" name="Venocto"/>
+  <item id="2629614265" index="382" name="Venoctoscuro"/>
+  <item id="2534548502" index="383" name="Shogunyan"/>
+  <item id="799949683" index="384" name="Komasura"/>
+  <item id="410039105" index="385" name="Dorantúo"/>
+  <item id="2337239218" index="386" name="Chafarina"/>
+  <item id="180690095" index="387" name="Abuflorido"/>
+  <item id="3408336520" index="388" name="Repeloso"/>
+  <item id="2994305994" index="389" name="Dandiniche"/>
+  <item id="1939567085" index="390" name="Octosierpe"/>
+  <item id="829356020" index="391" name="Chupatodo"/>
+  <item id="2607234943" index="392" name="Aterrahorror"/>
+  <item id="3382219868" index="393" name="Apéstula"/>
+  <item id="2085762641" index="394" name="Kappamalo"/>
+  <item id="1860671935" index="395" name="Sombrío"/>
+  <item id="3386659250" index="396" name="Pillastre"/>
+  <item id="1902130903" index="397" name="Toragorero"/>
+  <item id="2566455645" index="398" name="Cardado"/>
+  <item id="1211144886" index="399" name="Trampeida"/>
+  <item id="1518679384" index="400" name="Malisnia"/>
+  <item id="4244235962" index="401" name="Injustio"/>
+  <item id="3997976916" index="402" name="Malicia"/>
+  <item id="1458581041" index="403" name="Implacablio"/>
+  <item id="244530791" index="404" name="Inaguantablio"/>
+  <item id="3056556290" index="405" name="Destrukto"/>
+  <item id="1857823650" index="406" name="Jibanyan B"/>
+  <item id="2081000524" index="407" name="Komasan B"/>
+  <item id="3300256553" index="408" name="Sir Nyancelot"/>
+  <item id="2631334783" index="409" name="Maginyan"/>
+  <item id="3789468917" index="410" name="Momonyan"/>
+  <item id="4083882779" index="411" name="Perronyan"/>
+  <item id="1272413310" index="412" name="Simionyan"/>
+  <item id="3590341831" index="413" name="Faisanyan"/>
+  <item id="1709933416" index="414" name="Termascino"/>
+  <item id="1485548248" index="415" name="Jabalupo"/>
+  <item id="2276961136" index="416" name="Tripasqueleto"/>
+  <item id="3134685888" index="417" name="Aureosqueleto"/>
+  <item id="4252497936" index="418" name="Diamanqueleto"/>
+  <item id="3949233291" index="419" name="Bergantín"/>
+  <item id="3590630715" index="420" name="Estigio VI"/>
+  <item id="2839643126" index="421" name="Babamandra"/>
+  <item id="2485234246" index="422" name="Ojimandra"/>
+  <item id="3191510965" index="423" name="Gargantúo"/>
+  <item id="2412940584" index="424" name="Cazamentires"/>
+  <item id="698713756" index="425" name="Demoniorco"/>
+  <item id="3400319082" index="426" name="Devoramonios"/>
+  <item id="4157401562" index="427" name="Devoralmas"/>
+  <item id="808705292" index="428" name="Cotiterror"/>
+  <item id="442429900" index="429" name="Rúbeo J"/>
+  <item id="3606376786" index="430" name="Gran Sabueso"/>
+  <item id="3054409949" index="431" name="Caldewok"/>
+  <item id="3910389664" index="432" name="Murmullamasa"/>
+  <item id="4105032442" index="433" name="Cremaligno"/>
+  <item id="1008376696" index="434" name="Lady Desdicha"/>
+  <item id="1260235758" index="435" name="Lady Démona"/>
+  <item id="2743372527" index="436" name="McKraken"/>
+  <item id="2057607235" index="437" name="McKraken"/>
+  <item id="632934206" index="438" name="Kabukio"/>
+  <item id="4237942162" index="439" name="Robonyan 28"/>
+  <item id="1414705349" index="440" name="Kali Mera"/>
+  <item id="278657237" index="441" name="Intelecto"/>
+  <item id="940036708" index="442" name="Zarparroja"/>
+  <item id="3062420871" index="443" name="Vueltomai"/>
+  <item id="3195385929" index="444" name="Coman-Cachas"/>
+  <item id="2224638205" index="445" name="Aracnéfico"/>
+  <item id="3860244511" index="446" name="Belcefibio"/>
+  <item id="2898270119" index="447" name="Normalino"/>
+  <item id="113893164" index="448" name="Kintaronyan"/>
+  <item id="1588252538" index="449" name="Kabukio"/>
+  <item id="2716997409" index="450" name="Rúbeo J"/>
+  <item id="2519525139" index="451" name="Gran Sabueso"/>
+  <item id="424570948" index="452" name="Alga Senséi"/>
+  <item id="343699650" index="453" name="Odisenyan"/>
+  <item id="201056170" index="454" name="Tripasqueleto"/>
+  <item id="2602493845" index="455" name="Usapyon B"/>
+  <item id="3007822031" index="456" name="Tristeresa"/>
+  <item id="781222006" index="457" name="Estrenoko"/>
+  <item id="823602974" index="458" name="Gran Enma"/>
+  <item id="3159219358" index="459" name="Capitán Rayo"/>
+  <item id="851630973" index="460" name="Capitán Rayo"/>
+  <item id="4268284899" index="461" name="Duque Lametodo"/>
+  <item id="659081551" index="462" name="Chupatricio"/>
+  <item id="2049103129" index="463" name="Zazel"/>
+  <item id="1894243328" index="464" name="Zazelirio"/>
+  <item id="771477861" index="465" name="Intelecto Iluminado"/>
+  <item id="3254383650" index="466" name="Robonyan 3000"/>
+  <item id="90700756" index="467" name="Zarpadorada"/>
+  <item id="2347301943" index="468" name="Vueltodorado"/>
+  <item id="3957508561" index="469" name="Shogún Real"/>
+</items>
