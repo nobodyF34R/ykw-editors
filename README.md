@@ -3,13 +3,13 @@
 
 ## Legend
 
+my-tools: some python scripts i made
+
 compiled: all the editors in exe form
 
-save tools: decrypt and encrypt yokai watch saves
+save-tools: decrypt and encrypt yokai watch saves
 
-source code: all the editors' code
-
-tools: some python scripts i made
+source-code: all the editors' code
 
 ## Important
 
