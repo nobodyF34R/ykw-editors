@@ -14,8 +14,8 @@ def p(keys, repeat=1, delay=0.000000001):
 def fill(soul="",repeat=1):
     if isinstance(soul, str):
         soul = [soul]
-    for i in range(repeat):
-        for s in soul:
+    for s in soul:
+        for i in range(repeat):
             p("tab",2)
             p(list(s.replace(" ",""))+["tab", '6', '5', '5', '3', '5',"tab","1","0"])
             p("tab",6)
@@ -36,4 +36,4 @@ def fill(soul="",repeat=1):
 sleep(3)
 
 #soul [can be list], repeat
-fill(soul="toad",repeat=6)
+fill(soul=["supers","toad"],repeat=6)
