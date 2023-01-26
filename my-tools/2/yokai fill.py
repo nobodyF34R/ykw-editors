@@ -116,7 +116,7 @@ def fill(yokai="", attitude=[], repeat=[1]):
 #press play and put your curser on "#1"
 sleep(3)
 
-#yokai [can be list], attitude [can be list], repeat [amount for every yokai]
+#yokai [can be list], attitude [can be list], repeat [1 amount per yokai]
 fill(yokai=["orcanos",322],attitude=["calm","rough"],repeat=["6",6])
 
 #yokai can be medallium index or name
