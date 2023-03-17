@@ -1,2 +1,4 @@
 /compiled
 .gitignore
+*.ywd
+*.yw

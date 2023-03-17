@@ -32,8 +32,8 @@ def fill(soul="",repeat=1):
     press_and_release("space")
 
 
-#press play and put your curser on "#1"
+#run and put your curser on "#1"
 sleep(3)
 
 #soul [can be list], repeat
-fill(soul=["supers","toad"],repeat=6)
+fill(soul=["mac"],repeat=12)

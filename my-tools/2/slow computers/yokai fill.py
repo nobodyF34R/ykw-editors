@@ -3,10 +3,9 @@
 from keyboard import *
 from time import *
 
-#on fast computers delay can be 0.05 on slower ones set delay to 0.2
-speed = 0.05
+speed = 0.2
 
-def p(keys, repeat=1, delay=0.000000001):
+def p(keys, repeat=1, delay=0.2):
     if isinstance(keys, str):
         keys = [keys]
     for _ in range(repeat):
@@ -116,7 +115,7 @@ def fill(yokai="", attitude=[], repeat=[1]):
             if k != len(attitude)-1:
                 k+=1
 
-#press play and put your curser on "#1"
+#run and put your curser on "#1"
 sleep(3)
 
 #yokai [can be list], attitude [can be list], repeat [amount for every yokai]

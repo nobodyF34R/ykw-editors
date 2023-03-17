@@ -1,0 +1,104 @@
+hp:28 highest example
+
+other:15
+
+middle: 16, 8
+
+max is probably 32, 16 (maybe 31, 15)
+
+ev: 4,5,5,4,4
+ev: 12?
+
+00:
+num1
+02:
+num2
+04 - 07:
+yokaiid
+08 - 32:
+nickname (08 == 0 if no nickname)
+
+33:
+0
+34:
+0
+35 - 37:
+something
+38:
+0
+39:
+0
+40:
+60
+41:
+0
+
+42:
+attack stat
+
+43:
+8
+44:
+73
+45:
+0
+
+46:
+technique stat
+
+47:
+8
+48:
+16
+49:
+0
+
+50:
+soultimate stat
+
+51:
+8
+
+52 - 55:
+xp
+
+56:
+134
+57:
+0
+58:
+90
+59:
+0
+
+60 - 63:
+ownerid
+64 - 78:
+stats
+79:
+level
+
+80:
+4
+81:
+3
+82:
+1
+83:
+0
+84:
+loaflevel and attitude
+85:
+8
+86:
+132
+87:
+8
+88:
+159
+89:
+0
+90:
+129
+91:
+0

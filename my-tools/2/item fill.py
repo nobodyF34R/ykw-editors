@@ -211,8 +211,8 @@ def fill(books=True,extras=True,collectables=False):
 
 
 
-#press play and put your curser on "#1"
+#run and put your curser on "#1"
 sleep(3)
 
 #books [True or False], extras [True or False], collectables [True or False]
-fill(collectables=True)
+fill(True,False,False)
