@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="1332445335" name="Yo-kai Watch"/>
+  <item id="1208370318" name="Yovni-kai Watch"/>
+  <item id="3596800301" name="Yo-kai Watch M. U"/>
+  <item id="2707808699" name="Yo-kai Watch M. U2"/>
+  <item id="1057059864" name="Yo-kai Watch rêve"/>
+  <item id="896643275" name="Yo-kai Watch rêve"/>
+  <item id="3507426612" name="Médall. Yo-kai"/>
+  <item id="2893603185" name="Médall. Yo-kai"/>
+  <item id="3480871020" name="Blaster Yo-kai"/>
+  <item id="3095318778" name="Foreuse Yo-kai"/>
+  <item id="639255897" name="Aspirateur Yo-kai"/>
+  <item id="1115062365" name="Lunettes de Maman"/>
+  <item id="1543533829" name="Itinéraire du bureau"/>
+  <item id="2785551778" name="Filet à insectes"/>
+  <item id="917977139" name="Canne à pêche"/>
+  <item id="635227553" name="Marteau zombie"/>
+  <item id="1159414852" name="Gilet pare-balles"/>
+  <item id="840725714" name="Sac à dos"/>
+  <item id="1360885199" name="Émetteur-récepteur"/>
+  <item id="1102055589" name="Clé de la réserve"/>
+  <item id="561480000" name="Carte des lieux"/>
+  <item id="3812194230" name="Clé du Yo-kai World"/>
+  <item id="721896851" name="Torche"/>
+  <item id="1450226134" name="Maquette de mécha"/>
+  <item id="2987267113" name="Invitation Yopple"/>
+  <item id="3305710783" name="Invitation Yopple"/>
+  <item id="3356763253" name="Clé du sous-sol ◇"/>
+  <item id="3205698787" name="Clé du sous-sol ○"/>
+  <item id="799803762" name="Clé du sous-sol ▽"/>
+  <item id="1487616484" name="Clé réception est"/>
+  <item id="173724291" name="Clé réception ouest"/>
+  <item id="1533915420" name="Clé de l'entrée est"/>
+  <item id="745177482" name="Clé entrée ouest"/>
+  <item id="2103304725" name="Clé chambre est"/>
+  <item id="3830756271" name="Clé chambre ouest"/>
+  <item id="1574842233" name="Fancy That! n° 1"/>
+  <item id="3302457027" name="Fancy That! n° 2"/>
+  <item id="3016773205" name="Fancy That! n° 3"/>
+  <item id="766827510" name="Fancy That! n° 4"/>
+  <item id="1521740640" name="Fancy That! n° 5"/>
+  <item id="3283794650" name="Fancy That! n° 6"/>
+  <item id="3032320588" name="Fancy That! n° 7"/>
+  <item id="604149725" name="Fancy That! n° 8"/>
+  <item id="1392879435" name="Fancy That! n° 9"/>
+  <item id="868363950" name="Fancy That! n° 10"/>
+  <item id="1153769016" name="Fancy That! n° 11"/>
+  <item id="3721154434" name="Fancy That! n° 12"/>
+  <item id="2865463060" name="Fancy That! n° 13"/>
+  <item id="883944119" name="Fancy That! n° 14"/>
+  <item id="1135139361" name="Fancy That! n° 15"/>
+  <item id="3668020123" name="Fancy That! n° 16"/>
+  <item id="2913385229" name="Fancy That! n° 17"/>
+  <item id="1025091228" name="Fancy That! n° 18"/>
+  <item id="1243518474" name="Fancy That! n° 19"/>
+  <item id="418348397" name="Fancy That! n° 20"/>
+  <item id="2179345623" name="Fancy That! n° 23"/>
+  <item id="2025156773" name="Spécifications"/>
+  <item id="3787202847" name="Bol à soupe vide"/>
+  <item id="2528842121" name="Invitation à la fête"/>
+  <item id="148866090" name="Rouage d'hélico 1"/>
+  <item id="2144908476" name="Rouage d'hélico 2"/>
+  <item id="3872515334" name="Rouage d'hélico 3"/>
+  <item id="2446775696" name="Bonbon apaisant"/>
+  <item id="23709697" name="Paquet suspect"/>
+  <item id="1986984087" name="Processeur Y9"/>
+  <item id="380203378" name="Clés de l'école élé."/>
+  <item id="1638810084" name="Clé du vieux manoir"/>
+  <item id="4171698270" name="Clé tunnel aband."/>
+  <item id="2409636040" name="Clé du salon 1"/>
+  <item id="298104171" name="Clé du salon 2"/>
+  <item id="1724089853" name="Télézaphone"/>
+  <item id="4291482695" name="Filet avarié"/>
+  <item id="2295194833" name="Champignon fabul."/>
+  <item id="410188096" name="Œuf irréel"/>
+  <item id="1869990358" name="Pois dorés"/>
+  <item id="1032069809" name="Boîte de candeur"/>
+  <item id="1250103847" name="Note salle souterr."/>
+  <item id="2049975820" name="Pass illimité"/>
+  <item id="2487109408" name="Pass journalier"/>
+  <item id="3261391014" name="Télémir de poche"/>
+  <item id="1390148919" name="Short de zombie"/>
+  <item id="2870289768" name="Capteur Scientifib."/>
+  <item id="3692172798" name="Huile de Tendino"/>
+  <item id="1682363220" name="Clé appart A-104"/>
+  <item id="4249846510" name="Clé appart A-201"/>
+  <item id="2320020088" name="Clé appart A-303"/>
+  <item id="338438107" name="Clé appart B-204"/>
+  <item id="1663768397" name="Clé appart B-301"/>
+  <item id="4196550391" name="Clé appart C-104"/>
+  <item id="2368042593" name="Clé appart C-201"/>
+  <item id="496659440" name="Clé appart C-204"/>
+  <item id="1788697446" name="Clé appart C-301"/>
+  <item id="3984554921" name="Coussin sushi"/>
+  <item id="2591574847" name="Sac tempura"/>
+  <item id="180836014" name="Coussin tofu"/>
+  <item id="69000860" name="Cloche des esprits"/>
+  <item id="1931210250" name="Sac à fantômes"/>
+  <item id="3927097264" name="Sac à spectre"/>
+  <item id="2635435814" name="Pass Chat rouge"/>
+  <item id="57744005" name="Pass Chien blanc"/>
+  <item id="1953901075" name="Gâteau promesse"/>
+  <item id="1778442059" name="Wib wob"/>
+  <item id="4077489905" name="Rapport infernal"/>
+  <item id="443165636" name="Carte à jouer : roi"/>
+  <item id="1835866962" name="Carte à jouer : dame"/>
+  <item id="4100213480" name="Carte à jouer : valet"/>
+  <item id="2204334718" name="Carte à jouer : as"/>
+  <item id="333211631" name="Carte à jouer : 10"/>
+  <item id="1692096377" name="Carte à jouer : joker"/>
+  <item id="2109761080" name="Pass du studio"/>
+  <item id="791776607" name="Pass express"/>
+  <item id="1479982537" name="Noix de kupo"/>
+  <item id="3242191987" name="Légume de Gysahl"/>
+  <item id="3057179877" name="Trio brioches vap."/>
+  <item id="677136710" name="Capsule du héros"/>
+  <item id="1599830480" name="Badge Blasters T"/>
+  <item id="3327273066" name="Œuf tremblotant"/>
+  <item id="2975144188" name="Pierre ogre de fer ∞"/>
+  <item id="568984941" name="Pierre S ∞"/>
+  <item id="1458386427" name="Pierre du renard ∞"/>
+  <item id="908770334" name="Pierre du dragon ∞"/>
+  <item id="1093504136" name="Pierre d'oubli ∞"/>
+  <item id="3626294578" name="Pierre du phénix ∞"/>
+  <item id="2938367396" name="Pierre avare ∞"/>
+  <item id="826767367" name="Pierre stupide ∞"/>
+  <item id="1178618001" name="Pierre ornée ∞"/>
+  <item id="2823694781" name="Pierre abyssale ∞"/>
+  <item id="955331628" name="Pierre légendaire ∞"/>
+  <item id="4158121970" name="Vélo promenade"/>
+  <item id="1860089416" name="Vélo Rock 'n' Roll"/>
+  <item id="433686238" name="Vélo rayure bleue"/>
+  <item id="2277315453" name="Vélo chewing-gum"/>
+  <item id="4038730731" name="Vélo bossa nova"/>
+  <item id="1773367889" name="Vélo nuit noire"/>
+  <item id="515130055" name="Vélo charme rural"/>
+  <item id="2383109974" name="Vélo fraîcheur funky"/>
+  <item id="4178341824" name="Vélo rouge flamboy."/>
+  <item id="2580276773" name="Vélo vortex"/>
+  <item id="4006401715" name="Vélo crème"/>
+  <item id="2009433865" name="Vélo baies rouges"/>
+  <item id="12760991" name="Vélo douce brise"/>
+  <item id="2661687868" name="Vélo sorbet orange"/>
+  <item id="3919647402" name="Vélo à la carte"/>
+  <item id="1890075408" name="Vélo citron vert"/>
+  <item id="128938886" name="Vélo zeste de citron"/>
+  <item id="2534436375" name="Vélo grain de raisin"/>
+  <item id="3759627905" name="Vélo café noir"/>
+  <item id="3001464294" name="Vélo étoile filante"/>
+  <item id="3535583278" name="Ressort sauteur"/>
+  <item id="1270213012" name="Poing-marteau"/>
+  <item id="1018353922" name="Radeau en bois"/>
+  <item id="2731953313" name="Radeau en bambou"/>
+  <item id="3587275831" name="Coque en acier"/>
+  <item id="1289235853" name="Coque pirate"/>
+  <item id="1004477723" name="Coque de vedette"/>
+  <item id="2875195530" name="Rame de bois"/>
+  <item id="3697750044" name="Rame Wakapoeira"/>
+  <item id="3164649977" name="Rame rouillée"/>
+  <item id="3416754543" name="Rame trident"/>
+  <item id="1387190485" name="Rame aigue-marine"/>
+  <item id="631892035" name="Premier drapeau"/>
+  <item id="3150806496" name="Voile de Salsalga"/>
+  <item id="3435810166" name="Voile rotor"/>
+  <item id="1438850252" name="Pavillon de pirate"/>
+  <item id="583281754" name="Voile bleu ciel"/>
+  <item id="3313238365" name="Amulette du soleil"/>
+  <item id="2542660154" name="Ailes poisson vol."/>
+  <item id="3767196332" name="Silenc. arc-en-ciel"/>
+  <item id="3221821376" name="Poster Sailor Nanas"/>
+  <item id="1493190266" name="Masque d'Ultramax"/>
+  <item id="772241132" name="Voiture téléguidée"/>
+  <item id="2959336271" name="Panneau Charline"/>
+  <item id="3345273817" name="Coiffure de cosplay"/>
+  <item id="1584235107" name="Doudou"/>
+  <item id="694858485" name="Casque sphérique"/>
+  <item id="3117789028" name="Maquette de fusée"/>
+  <item id="3469910002" name="Radiocassette"/>
+  <item id="2920617495" name="Borne d'arcade"/>
+  <item id="2982536637" name="Ticket doré 1"/>
+  <item id="3334657323" name="Ticket doré 2"/>
+  <item id="1607173265" name="Ticket doré 3"/>
+  <item id="684504071" name="Ticket doré 4"/>
+  <item id="3064471972" name="Ticket doré 5"/>
+  <item id="3249475890" name="Ticket doré 6"/>
+  <item id="836207942" name="Ticket doré 7"/>
+  <item id="2947748069" name="Ticket doré 8"/>
+  <item id="1487290504" name="Statue Thibonim."/>
+  <item id="799109150" name="Statue de Minustrel"/>
+  <item id="3206442383" name="Statue du Dr Jobard"/>
+  <item id="3357105433" name="Statue Yopple-bot"/>
+  <item id="2833175804" name="Statue Dodorothée"/>
+  <item id="3755598954" name="Statue King Keskler"/>
+  <item id="1188083152" name="Statue agent Rixe"/>
+</items>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="1" name="Grognon"/>
+  <item id="2" name="Logique"/>
+  <item id="3" name="Prudent"/>
+  <item id="4" name="Gentil"/>
+  <item id="5" name="Bizarre"/>
+  <item id="6" name="Altruiste"/>
+  <item id="7" name="Dur"/>
+  <item id="8" name="Futé"/>
+  <item id="9" name="Calme"/>
+  <item id="10" name="Tendre"/>
+  <item id="11" name="Cruel"/>
+  <item id="12" name="Dévoué"/>
+</items>

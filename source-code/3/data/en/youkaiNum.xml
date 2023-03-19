@@ -1,0 +1,957 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="1" name="Sigh-Durr"/>
+  <item id="2" name="Flippit"/>
+  <item id="3" name="Pandle"/>
+  <item id="4" name="Undy"/>
+  <item id="5" name="Tanbo"/>
+  <item id="6" name="Cutta-nah"/>
+  <item id="7" name="Cutta-nah-nah"/>
+  <item id="8" name="Slacka-slash"/>
+  <item id="9" name="Brushido"/>
+  <item id="10" name="Washogun"/>
+  <item id="11" name="Lie-in"/>
+  <item id="12" name="Lie-in Heart"/>
+  <item id="13" name="Hissfit"/>
+  <item id="14" name="Zerberker"/>
+  <item id="15" name="Snartle"/>
+  <item id="16" name="Brutle"/>
+  <item id="17" name="Mochismo"/>
+  <item id="18" name="Minochi"/>
+  <item id="19" name="Minimoto"/>
+  <item id="20" name="Slumberhog"/>
+  <item id="21" name="Snortlehog"/>
+  <item id="22" name="Samureel"/>
+  <item id="23" name="Time Keeler"/>
+  <item id="24" name="Goofball"/>
+  <item id="25" name="Slugger"/>
+  <item id="26" name="Helmsman"/>
+  <item id="27" name="Reuknight"/>
+  <item id="28" name="Corptain"/>
+  <item id="29" name="Slicenrice"/>
+  <item id="30" name="Flamurice"/>
+  <item id="31" name="Tublappa"/>
+  <item id="32" name="Lappinitup"/>
+  <item id="33" name="El Gutso"/>
+  <item id="34" name="Gutso Grande"/>
+  <item id="35" name="Mudmunch"/>
+  <item id="36" name="BBQvil"/>
+  <item id="37" name="Liarbird"/>
+  <item id="38" name="Benkei"/>
+  <item id="39" name="B3-NK1"/>
+  <item id="40" name="Blazion"/>
+  <item id="41" name="Quaken"/>
+  <item id="42" name="Siro"/>
+  <item id="43" name="Chansin"/>
+  <item id="44" name="Sheen"/>
+  <item id="45" name="Snee"/>
+  <item id="46" name="Gleam"/>
+  <item id="47" name="Hovernyan"/>
+  <item id="48" name="Moximous N"/>
+  <item id="49" name="Moximous K"/>
+  <item id="50" name="Hot Air Buffoon"/>
+  <item id="51" name="Sushiyama"/>
+  <item id="52" name="Kapunki"/>
+  <item id="53" name="Beetler"/>
+  <item id="54" name="Beetall"/>
+  <item id="55" name="Cruncha"/>
+  <item id="56" name="Machonyan"/>
+  <item id="57" name="Momonyan"/>
+  <item id="58" name="Sir Nyansalot"/>
+  <item id="59" name="Sgt. Burly"/>
+  <item id="60" name="Bison Burly"/>
+  <item id="61" name="Demuncher"/>
+  <item id="62" name="Devourer"/>
+  <item id="63" name="Illuminoct"/>
+  <item id="64" name="Arachnevil"/>
+  <item id="65" name="Shurikenny"/>
+  <item id="66" name="Nunchucky"/>
+  <item id="67" name="Camellia"/>
+  <item id="68" name="Brokenbrella"/>
+  <item id="69" name="Pittapatt"/>
+  <item id="70" name="Zip Unlock"/>
+  <item id="71" name="Slippup"/>
+  <item id="72" name="Snotsolong"/>
+  <item id="73" name="Duchoo"/>
+  <item id="74" name="D'wanna"/>
+  <item id="75" name="N'more"/>
+  <item id="76" name="Q'wit"/>
+  <item id="77" name="Wazzat"/>
+  <item id="78" name="Houzzat"/>
+  <item id="79" name="Dummkap"/>
+  <item id="80" name="Who-Me"/>
+  <item id="81" name="2-Much-2-Take"/>
+  <item id="82" name="Why Naant"/>
+  <item id="83" name="Naandhi"/>
+  <item id="84" name="Faysoff"/>
+  <item id="85" name="Snottle"/>
+  <item id="86" name="Legsit"/>
+  <item id="87" name="Chukket"/>
+  <item id="88" name="Cornfused"/>
+  <item id="89" name="Unshelltered"/>
+  <item id="90" name="Lafalotta"/>
+  <item id="91" name="Blips"/>
+  <item id="92" name="Tattletell"/>
+  <item id="93" name="Tattlecast"/>
+  <item id="94" name="Skranny"/>
+  <item id="95" name="Cupistol"/>
+  <item id="96" name="Casanuva"/>
+  <item id="97" name="Casanono"/>
+  <item id="98" name="So-Sorree"/>
+  <item id="99" name="Bowminos"/>
+  <item id="100" name="Smogling"/>
+  <item id="101" name="Smogmella"/>
+  <item id="102" name="Signibble"/>
+  <item id="103" name="Signiton"/>
+  <item id="104" name="Master Oden"/>
+  <item id="105" name="Statiking"/>
+  <item id="106" name="Failian"/>
+  <item id="107" name="Apelican"/>
+  <item id="108" name="Fuu 2"/>
+  <item id="109" name="Shrillington"/>
+  <item id="110" name="House Partay"/>
+  <item id="111" name="Skulleidoscope"/>
+  <item id="112" name="Lionguist"/>
+  <item id="113" name="Illoo"/>
+  <item id="114" name="Elloo"/>
+  <item id="115" name="Alloo"/>
+  <item id="116" name="Espy"/>
+  <item id="117" name="Infour"/>
+  <item id="118" name="Mirapo"/>
+  <item id="119" name="Miradox"/>
+  <item id="120" name="Mircle"/>
+  <item id="121" name="Verygoodsir"/>
+  <item id="122" name="Statikid"/>
+  <item id="123" name="Prof. Plumage"/>
+  <item id="124" name="Throne Wiper"/>
+  <item id="125" name="Imagenius"/>
+  <item id="126" name="Miss Teri"/>
+  <item id="127" name="Maginyan"/>
+  <item id="128" name="Squandeer"/>
+  <item id="129" name="Tengu"/>
+  <item id="130" name="Flengu"/>
+  <item id="131" name="Kyubi"/>
+  <item id="132" name="Frostail"/>
+  <item id="133" name="Chymera"/>
+  <item id="134" name="Kingmera"/>
+  <item id="135" name="Toadal Demon"/>
+  <item id="136" name="Thurston"/>
+  <item id="137" name="Spect-hare"/>
+  <item id="138" name="Sn. Spect-hare"/>
+  <item id="139" name="Oh Wheel"/>
+  <item id="140" name="Dulluma"/>
+  <item id="141" name="Darumacho"/>
+  <item id="142" name="Goruma"/>
+  <item id="143" name="Wotchagot"/>
+  <item id="144" name="Pride Shrimp"/>
+  <item id="145" name="No-Go Kart"/>
+  <item id="146" name="Mistank"/>
+  <item id="147" name="Terrorpotta"/>
+  <item id="148" name="Blownhistoppa"/>
+  <item id="149" name="Noway"/>
+  <item id="150" name="Impass"/>
+  <item id="151" name="Walldin"/>
+  <item id="152" name="Roughraff"/>
+  <item id="153" name="Badude"/>
+  <item id="154" name="Bruff"/>
+  <item id="155" name="Roughgraff"/>
+  <item id="156" name="Chilled Cowcao"/>
+  <item id="157" name="Stircrazy Stu"/>
+  <item id="158" name="Nummskull"/>
+  <item id="159" name="Skillskull"/>
+  <item id="160" name="Armsman"/>
+  <item id="161" name="Mimikin"/>
+  <item id="162" name="Oh Bah Gah!"/>
+  <item id="163" name="Sp mountain"/>
+  <item id="164" name="Blowkade"/>
+  <item id="165" name="Ledballoon"/>
+  <item id="166" name="Sumodon"/>
+  <item id="167" name="Yokozudon"/>
+  <item id="168" name="Whateverest"/>
+  <item id="169" name="Whatuption"/>
+  <item id="170" name="Fidgephant"/>
+  <item id="171" name="Touphant"/>
+  <item id="172" name="Enduriphant"/>
+  <item id="173" name="Zappary"/>
+  <item id="174" name="Frazzel"/>
+  <item id="175" name="Ship. Sailor"/>
+  <item id="176" name="Adm. Admiral"/>
+  <item id="177" name="Swelton"/>
+  <item id="178" name="Sing Kong"/>
+  <item id="179" name="Slippy"/>
+  <item id="180" name="Repossessor"/>
+  <item id="181" name="Mr. Blockhead"/>
+  <item id="182" name="Mad Mountain"/>
+  <item id="183" name="Lava Lord"/>
+  <item id="184" name="Castelius III"/>
+  <item id="185" name="Castelius II"/>
+  <item id="186" name="Castelius I"/>
+  <item id="187" name="Castelius Max"/>
+  <item id="188" name="Puppynyan"/>
+  <item id="189" name="Rhinoggin"/>
+  <item id="190" name="Rhinormous"/>
+  <item id="191" name="Hornaplenty"/>
+  <item id="192" name="Kintaronyan"/>
+  <item id="193" name="Steaking"/>
+  <item id="194" name="Robonyan"/>
+  <item id="195" name="Robonyan F"/>
+  <item id="196" name="Showbonyan"/>
+  <item id="197" name="Goldenyan"/>
+  <item id="198" name="Dromp"/>
+  <item id="199" name="Swosh"/>
+  <item id="200" name="Toadal Dude"/>
+  <item id="201" name="Uber Geeko"/>
+  <item id="202" name="Gargaros"/>
+  <item id="203" name="Ogralus"/>
+  <item id="204" name="Orcanos"/>
+  <item id="205" name="Kabuking"/>
+  <item id="206" name="Jawsome Kid"/>
+  <item id="207" name="El Sharkador"/>
+  <item id="208" name="Silver Lining"/>
+  <item id="209" name="Leggly"/>
+  <item id="210" name="Twirly Pie"/>
+  <item id="211" name="Petty-Cake"/>
+  <item id="212" name="Hoppy."/>
+  <item id="213" name="Dazzabel"/>
+  <item id="214" name="Rattelle"/>
+  <item id="215" name="Skelebella"/>
+  <item id="216" name="Cadin"/>
+  <item id="217" name="Cadable"/>
+  <item id="218" name="Singcada"/>
+  <item id="219" name="Buttered Blue"/>
+  <item id="220" name="Pch. Baguette"/>
+  <item id="221" name="Pupsicle"/>
+  <item id="222" name="Chilhuahua"/>
+  <item id="223" name="Swelterrier"/>
+  <item id="224" name="Unbelievaboy!"/>
+  <item id="225" name="Unbearaboy!"/>
+  <item id="226" name="Inflammaboy!"/>
+  <item id="227" name="Jumbelina"/>
+  <item id="228" name="Boyclops"/>
+  <item id="229" name="Krystal Fox"/>
+  <item id="230" name="Runsure"/>
+  <item id="231" name="Kittylumbus"/>
+  <item id="232" name="Zest-a-Minute"/>
+  <item id="233" name="Baku"/>
+  <item id="234" name="Whapir"/>
+  <item id="235" name="Bakulia"/>
+  <item id="236" name="Panja Pupil"/>
+  <item id="237" name="Panja Pro"/>
+  <item id="238" name="Cue-Tee"/>
+  <item id="239" name="Demandi"/>
+  <item id="240" name="Walkappa"/>
+  <item id="241" name="Appak"/>
+  <item id="242" name="Supyo"/>
+  <item id="243" name="Jibanyan"/>
+  <item id="244" name="Jibanyan B"/>
+  <item id="245" name="Jibanyan S"/>
+  <item id="246" name="Jiban. Liu Bei"/>
+  <item id="247" name="Rudy"/>
+  <item id="248" name="Thornyan"/>
+  <item id="249" name="Baddinyan"/>
+  <item id="250" name="Buchinyan"/>
+  <item id="251" name="Komasan"/>
+  <item id="252" name="Komane"/>
+  <item id="253" name="Komasan B"/>
+  <item id="254" name="Komasan S"/>
+  <item id="255" name="Koma. Sun Ce"/>
+  <item id="256" name="Jibakoma"/>
+  <item id="257" name="Komajiro"/>
+  <item id="258" name="Komiger"/>
+  <item id="259" name="Komajiro S"/>
+  <item id="260" name="Drizzelda"/>
+  <item id="261" name="Nekidspeed"/>
+  <item id="262" name="Stinkeye"/>
+  <item id="263" name="Slackoon"/>
+  <item id="264" name="Puppiccino"/>
+  <item id="265" name="Ballin"/>
+  <item id="266" name="Shmoopie"/>
+  <item id="267" name="Pinkipoo"/>
+  <item id="268" name="Pookivil"/>
+  <item id="269" name="Harry Barry"/>
+  <item id="270" name="Wondernyan"/>
+  <item id="271" name="Jetnyan"/>
+  <item id="272" name="Chimpanyan"/>
+  <item id="273" name="Tomnyan"/>
+  <item id="274" name="Koma Knomads"/>
+  <item id="275" name="Frostina"/>
+  <item id="276" name="Blizzaria"/>
+  <item id="277" name="Damona"/>
+  <item id="278" name="Melonyan"/>
+  <item id="279" name="Oranyan"/>
+  <item id="280" name="Kiwinyan"/>
+  <item id="281" name="Grapenyan"/>
+  <item id="282" name="Strawbnyan"/>
+  <item id="283" name="Watermelnyan"/>
+  <item id="284" name="Sapphinyan"/>
+  <item id="285" name="Emenyan"/>
+  <item id="286" name="Rubinyan"/>
+  <item id="287" name="Topanyan"/>
+  <item id="288" name="Dianyan"/>
+  <item id="289" name="Robokapp"/>
+  <item id="290" name="Robokoma"/>
+  <item id="291" name="Sailornyan"/>
+  <item id="292" name="Rubeus J"/>
+  <item id="293" name="Hardy Hound"/>
+  <item id="294" name="Whirlweasel"/>
+  <item id="295" name="Chocobonyan"/>
+  <item id="296" name="Mooglenyan"/>
+  <item id="297" name="Wobblenyan"/>
+  <item id="298" name="Wibblekoma"/>
+  <item id="299" name="Sushinyan"/>
+  <item id="300" name="Tempurasan"/>
+  <item id="301" name="Faux Kappa"/>
+  <item id="302" name="Tigappa"/>
+  <item id="303" name="Master Nyada"/>
+  <item id="304" name="Tenguriginal"/>
+  <item id="305" name="Tengulightened"/>
+  <item id="306" name="Pallysol"/>
+  <item id="307" name="Bumblejack"/>
+  <item id="308" name="In-Tune"/>
+  <item id="309" name="Wantston"/>
+  <item id="310" name="Grubsnitch"/>
+  <item id="311" name="Wiglin"/>
+  <item id="312" name="Kelpacabana"/>
+  <item id="313" name="Steppa"/>
+  <item id="314" name="Rhyth"/>
+  <item id="315" name="Seaweed Sns."/>
+  <item id="316" name="Hungramps"/>
+  <item id="317" name="Hungorge"/>
+  <item id="318" name="Grainpa"/>
+  <item id="319" name="Supersize G."/>
+  <item id="320" name="Tongus"/>
+  <item id="321" name="Nurse Tongus"/>
+  <item id="322" name="Sandmeh"/>
+  <item id="323" name="Mr. Sandmeh"/>
+  <item id="324" name="Lil Blue Hood"/>
+  <item id="325" name="Bubble Beth"/>
+  <item id="326" name="Afronaut"/>
+  <item id="327" name="Cereal Spiller"/>
+  <item id="328" name="Tomorrow Gal"/>
+  <item id="329" name="Swaycorn"/>
+  <item id="330" name="Push Pup"/>
+  <item id="331" name="Happycane"/>
+  <item id="332" name="Starrycane"/>
+  <item id="333" name="Lodo"/>
+  <item id="334" name="Supoor Hero"/>
+  <item id="335" name="Chippa"/>
+  <item id="336" name="Gnomey"/>
+  <item id="337" name="High Gnomey"/>
+  <item id="338" name="Enerfly"/>
+  <item id="339" name="Enefly"/>
+  <item id="340" name="Betterfly"/>
+  <item id="341" name="Peppillon"/>
+  <item id="342" name="Predictabull"/>
+  <item id="343" name="Smashibull"/>
+  <item id="344" name="DON-CHAN"/>
+  <item id="345" name="Ray O'Light"/>
+  <item id="346" name="Ol' Saint Trick"/>
+  <item id="347" name="Ol' Fortune"/>
+  <item id="348" name="Ponderoo"/>
+  <item id="349" name="Tongue-Twister"/>
+  <item id="350" name="Lazy Sundae"/>
+  <item id="351" name="Got It Maid"/>
+  <item id="352" name="Greengramps"/>
+  <item id="353" name="Right Brothers"/>
+  <item id="354" name="Tattlecakes"/>
+  <item id="355" name="Happierre"/>
+  <item id="356" name="Reversa"/>
+  <item id="357" name="Reversette"/>
+  <item id="358" name="Pheasanyan"/>
+  <item id="359" name="Fundango"/>
+  <item id="360" name="Pearly White"/>
+  <item id="361" name="Robogramps"/>
+  <item id="362" name="Rollen"/>
+  <item id="363" name="Dubbles"/>
+  <item id="364" name="Scarasol"/>
+  <item id="365" name="Odysseynyan"/>
+  <item id="366" name="Ghostess"/>
+  <item id="367" name="Papa Bolt"/>
+  <item id="368" name="Uncle Infinite"/>
+  <item id="369" name="Mama Aura"/>
+  <item id="370" name="Auntie Heart"/>
+  <item id="371" name="Kyryn"/>
+  <item id="372" name="Unikirin"/>
+  <item id="373" name="Double Time"/>
+  <item id="374" name="Sonic Bam"/>
+  <item id="375" name="Neggplant"/>
+  <item id="376" name="Snitchin"/>
+  <item id="377" name="Messyrai"/>
+  <item id="378" name="Leadoni"/>
+  <item id="379" name="Mynimo"/>
+  <item id="380" name="Ake"/>
+  <item id="381" name="Payn"/>
+  <item id="382" name="Agon"/>
+  <item id="383" name="Herbiboy"/>
+  <item id="384" name="Carniboy"/>
+  <item id="385" name="Wydeawake"/>
+  <item id="386" name="Allnyta"/>
+  <item id="387" name="Treetter"/>
+  <item id="388" name="Retreeter"/>
+  <item id="389" name="Negatibuzz"/>
+  <item id="390" name="Moskevil"/>
+  <item id="391" name="Scritchy"/>
+  <item id="392" name="Dimmy"/>
+  <item id="393" name="Blandon"/>
+  <item id="394" name="Nul"/>
+  <item id="395" name="Salty Bacon"/>
+  <item id="396" name="Suspicioni"/>
+  <item id="397" name="Tantroni"/>
+  <item id="398" name="Contrarioni"/>
+  <item id="399" name="Grumpus Khan"/>
+  <item id="400" name="Groupus Khan"/>
+  <item id="401" name="Hidabat"/>
+  <item id="402" name="Abodabat"/>
+  <item id="403" name="Belfree"/>
+  <item id="404" name="Yoink"/>
+  <item id="405" name="Gimme"/>
+  <item id="406" name="Indexter"/>
+  <item id="407" name="Hack King"/>
+  <item id="408" name="Yoodooit"/>
+  <item id="409" name="Count Zapaway"/>
+  <item id="410" name="Tyrat"/>
+  <item id="411" name="DisliKing"/>
+  <item id="412" name="Crook-a-doodle"/>
+  <item id="413" name="Rocky Badboya"/>
+  <item id="414" name="Injurnalist"/>
+  <item id="415" name="Misterr Typoo"/>
+  <item id="416" name="Tengloom"/>
+  <item id="417" name="Nird"/>
+  <item id="418" name="K'mon-K'mon"/>
+  <item id="419" name="Snobetty"/>
+  <item id="420" name="Dracunyan"/>
+  <item id="421" name="Lil Kappa"/>
+  <item id="422" name="Horizontail"/>
+  <item id="423" name="Usapyon"/>
+  <item id="424" name="Usapyon"/>
+  <item id="425" name="Usapyon"/>
+  <item id="426" name="Usapyon"/>
+  <item id="427" name="Usapyon"/>
+  <item id="428" name="Usapyon B"/>
+  <item id="429" name="Usa. Zhongda"/>
+  <item id="430" name="Slimamander"/>
+  <item id="431" name="Negasus"/>
+  <item id="432" name="Neighfarious"/>
+  <item id="433" name="Gutsy Bones"/>
+  <item id="434" name="Timidevil"/>
+  <item id="435" name="Beelzebold"/>
+  <item id="436" name="Count Cavity"/>
+  <item id="437" name="Eyesoar"/>
+  <item id="438" name="Eyellure"/>
+  <item id="439" name="Greesel"/>
+  <item id="440" name="Awevil"/>
+  <item id="441" name="Wobblewok"/>
+  <item id="442" name="Darkyubi"/>
+  <item id="443" name="Dr. E. Raser"/>
+  <item id="444" name="Dr. Nocturne"/>
+  <item id="445" name="Tut 'n' K'mon"/>
+  <item id="446" name="Tie-red"/>
+  <item id="447" name="Love-Torn"/>
+  <item id="448" name="Shakey"/>
+  <item id="449" name="Quagmira"/>
+  <item id="450" name="Coughkoff"/>
+  <item id="451" name="Hurchin"/>
+  <item id="452" name="Droplette"/>
+  <item id="453" name="Drizzle"/>
+  <item id="454" name="Slush"/>
+  <item id="455" name="Alhail"/>
+  <item id="456" name="Gush"/>
+  <item id="457" name="Peckpocket"/>
+  <item id="458" name="Robbinyu"/>
+  <item id="459" name="Rockabelly"/>
+  <item id="460" name="Squeeky"/>
+  <item id="461" name="Rawry"/>
+  <item id="462" name="Buhu"/>
+  <item id="463" name="Flumpy"/>
+  <item id="464" name="Skreek"/>
+  <item id="465" name="Manjimutt"/>
+  <item id="466" name="Multimutt"/>
+  <item id="467" name="Sir Berus"/>
+  <item id="468" name="Furgus"/>
+  <item id="469" name="Furdinand"/>
+  <item id="470" name="Pergushin"/>
+  <item id="471" name="Percrushionists"/>
+  <item id="472" name="Nosirs"/>
+  <item id="473" name="Grubbles"/>
+  <item id="474" name="Nervous Rex"/>
+  <item id="475" name="Rinsin Repete"/>
+  <item id="476" name="Chatalie"/>
+  <item id="477" name="Nagatha"/>
+  <item id="478" name="Dismarelda"/>
+  <item id="479" name="Drenchetta"/>
+  <item id="480" name="Danke Sand"/>
+  <item id="481" name="No Sandkyu"/>
+  <item id="482" name="Papa Windbag"/>
+  <item id="483" name="Ben Tover"/>
+  <item id="484" name="Compunzer"/>
+  <item id="485" name="Lamedian"/>
+  <item id="486" name="Soloman"/>
+  <item id="487" name="Rhumbastiltskin"/>
+  <item id="488" name="Slax"/>
+  <item id="489" name="Cheeksqueek"/>
+  <item id="490" name="Cuttincheez"/>
+  <item id="491" name="Toiletta"/>
+  <item id="492" name="Foiletta"/>
+  <item id="493" name="Robomutt"/>
+  <item id="494" name="Shedwin"/>
+  <item id="495" name="Glumdango"/>
+  <item id="496" name="Spewart"/>
+  <item id="497" name="Grumples"/>
+  <item id="498" name="Everfore"/>
+  <item id="499" name="Eterna"/>
+  <item id="500" name="Sproink"/>
+  <item id="501" name="Darknyan"/>
+  <item id="502" name="Decidevible"/>
+  <item id="503" name="Hairum Scarum"/>
+  <item id="504" name="Insomni"/>
+  <item id="505" name="Sandi"/>
+  <item id="506" name="Arachnus"/>
+  <item id="507" name="Arachnia"/>
+  <item id="508" name="Oridjinn"/>
+  <item id="509" name="Horridjinn"/>
+  <item id="510" name="Little Charrmer"/>
+  <item id="511" name="Cricky"/>
+  <item id="512" name="Humtea Jumtea"/>
+  <item id="513" name="Snailspace"/>
+  <item id="514" name="Putasockinit"/>
+  <item id="515" name="Snidewinder"/>
+  <item id="516" name="Noko"/>
+  <item id="517" name="Bloominoko"/>
+  <item id="518" name="Pandanoko"/>
+  <item id="519" name="Starry Noko"/>
+  <item id="520" name="Snaggly"/>
+  <item id="521" name="Whinona"/>
+  <item id="522" name="OMGator"/>
+  <item id="523" name="Nautaloss"/>
+  <item id="524" name="Shellebrity"/>
+  <item id="525" name="Heheheel"/>
+  <item id="526" name="Croonger"/>
+  <item id="527" name="Urnaconda"/>
+  <item id="528" name="Takoyakid"/>
+  <item id="529" name="Takoyaking"/>
+  <item id="530" name="Fishpicable"/>
+  <item id="531" name="Rageon"/>
+  <item id="532" name="Tunatic"/>
+  <item id="533" name="Flushback"/>
+  <item id="534" name="Vacuumory"/>
+  <item id="535" name="Irewig"/>
+  <item id="536" name="Firewig"/>
+  <item id="537" name="Draggie"/>
+  <item id="538" name="Dragon Lord"/>
+  <item id="539" name="Azure Dragon"/>
+  <item id="540" name="Mermaidyn"/>
+  <item id="541" name="Mermadonna"/>
+  <item id="542" name="Mermother"/>
+  <item id="543" name="T-Wrecks"/>
+  <item id="544" name="D-Stroy"/>
+  <item id="545" name="Clodzilla"/>
+  <item id="546" name="Lady Longnek"/>
+  <item id="547" name="Whisper"/>
+  <item id="548" name="Whispocrates"/>
+  <item id="549" name="Snippity Cricket"/>
+  <item id="550" name="Flocktopus"/>
+  <item id="551" name="Bitter Batter"/>
+  <item id="552" name="Daiz"/>
+  <item id="553" name="Confuze"/>
+  <item id="554" name="Chummer"/>
+  <item id="555" name="Shrook"/>
+  <item id="556" name="Spenp"/>
+  <item id="557" name="Almi"/>
+  <item id="558" name="Babblong"/>
+  <item id="559" name="Bananose"/>
+  <item id="560" name="Cocobanana"/>
+  <item id="561" name="Draaagin"/>
+  <item id="562" name="Robonoko"/>
+  <item id="563" name="Robodraggie"/>
+  <item id="564" name="Ooze Zat"/>
+  <item id="565" name="Copperled"/>
+  <item id="566" name="Cynake"/>
+  <item id="567" name="Slitheref"/>
+  <item id="568" name="SV Snaggerjag"/>
+  <item id="569" name="Mython"/>
+  <item id="570" name="Venoct"/>
+  <item id="571" name="Shadow Venoct"/>
+  <item id="572" name="Frogetmenot"/>
+  <item id="573" name="Originyan"/>
+  <item id="574" name="Sighborg Y"/>
+  <item id="575" name="Unfairy"/>
+  <item id="576" name="Unkaind"/>
+  <item id="577" name="Untidy"/>
+  <item id="578" name="Unpleasant"/>
+  <item id="579" name="Unkeen"/>
+  <item id="580" name="Grublappa"/>
+  <item id="581" name="Madmunch"/>
+  <item id="582" name="Badsmella"/>
+  <item id="583" name="Mad Kappa"/>
+  <item id="584" name="Shamasol"/>
+  <item id="585" name="Gnomine"/>
+  <item id="586" name="Defectabull"/>
+  <item id="587" name="Feargus"/>
+  <item id="588" name="Scaremaiden"/>
+  <item id="589" name="Wrongnek"/>
+  <item id="590" name="King Jibanyan"/>
+  <item id="591" name="Qn. Usapyon"/>
+  <item id="592" name="Jackomasan"/>
+  <item id="593" name="Komajiro Ten"/>
+  <item id="594" name="Acenyan"/>
+  <item id="595" name="Josper"/>
+  <item id="596" name="Benzaiten"/>
+  <item id="597" name="Hotei"/>
+  <item id="598" name="Daikokuten"/>
+  <item id="599" name="Ebisu"/>
+  <item id="600" name="Bishamonten"/>
+  <item id="601" name="Columbakat"/>
+  <item id="602" name="T. Energison"/>
+  <item id="603" name="Starwin"/>
+  <item id="604" name="Last Nyanmurai"/>
+  <item id="605" name="Koma Star"/>
+  <item id="606" name="Platinos"/>
+  <item id="607" name="Flash T. Cash"/>
+  <item id="608" name="Shogunyan"/>
+  <item id="609" name="Komashura"/>
+  <item id="610" name="Gilgaros"/>
+  <item id="611" name="Spoilerina"/>
+  <item id="612" name="Elder Bloom"/>
+  <item id="613" name="Poofessor"/>
+  <item id="614" name="Dandoodle"/>
+  <item id="615" name="Slurpent"/>
+  <item id="616" name="Re-Q-Perate"/>
+  <item id="617" name="Princess Pearl"/>
+  <item id="618" name="Asura"/>
+  <item id="619" name="Terminyanator"/>
+  <item id="620" name="Supernyan"/>
+  <item id="621" name="Hovernyan S"/>
+  <item id="622" name="Hover. Cao Cao"/>
+  <item id="623" name="Yoganalisten"/>
+  <item id="624" name="Judgebrick"/>
+  <item id="625" name="Urnfulfilled"/>
+  <item id="626" name="Sad 2 the Bone"/>
+  <item id="627" name="Venoctobot"/>
+  <item id="628" name="Orcanos Lu Bu"/>
+  <item id="629" name="Kyubot"/>
+  <item id="630" name="Ult. Robonyan"/>
+  <item id="631" name="Molar Petite"/>
+  <item id="632" name="Life-is-Parfait"/>
+  <item id="633" name="Mee 2"/>
+  <item id="634" name="Koalanyan"/>
+  <item id="635" name="Jibanyan T"/>
+  <item id="636" name="Komasan T"/>
+  <item id="637" name="Eggcelency"/>
+  <item id="638" name="Deadcool"/>
+  <item id="639" name="Sweattuce"/>
+  <item id="640" name="Mr Blue-Shy"/>
+  <item id="641" name="Amplifly"/>
+  <item id="642" name="Ulteria"/>
+  <item id="643" name="My-Baaad"/>
+  <item id="644" name="Sunk'nsoul"/>
+  <item id="645" name="Crummy Mum."/>
+  <item id="646" name="Kaped Koma."/>
+  <item id="647" name="Tofupyon"/>
+  <item id="648" name="Ed Zoff"/>
+  <item id="649" name="Gorgeous Amb."/>
+  <item id="650" name="Hinozall"/>
+  <item id="651" name="Zazel"/>
+  <item id="652" name="Procrastino."/>
+  <item id="653" name="Treasure Pest"/>
+  <item id="654" name="J. Ne-Sais-Quoi"/>
+  <item id="655" name="Whi. Kongming"/>
+  <item id="656" name="Jurojin"/>
+  <item id="657" name="Fukurokuju"/>
+  <item id="658" name="Sarchopha."/>
+  <item id="659" name="King Deadward"/>
+  <item id="660" name="Pandora"/>
+  <item id="661" name="Comic Genieus"/>
+  <item id="662" name="Bastnetnyan"/>
+  <item id="663" name="Komanubis"/>
+  <item id="664" name="Gabby"/>
+  <item id="665" name="Teducator"/>
+  <item id="666" name="Gentlemutt"/>
+  <item id="667" name="City Licker"/>
+  <item id="668" name="Whyvern King"/>
+  <item id="669" name="Lord Enma"/>
+  <item id="670" name="Rgt. Zazel"/>
+  <item id="671" name="Hinozall Awk."/>
+  <item id="672" name="Ancient Enma"/>
+  <item id="673" name="Enma Awk."/>
+  <item id="674" name="The Boracle"/>
+  <item id="675" name="Rampajah"/>
+  <item id="676" name="Cymbalina"/>
+  <item id="677" name="Mumbles"/>
+  <item id="678" name="Roary"/>
+  <item id="679" name="Letsbifrenz"/>
+  <item id="680" name="Wack o' Lantern"/>
+  <item id="681" name="Moolinda"/>
+  <item id="682" name="Neighthan"/>
+  <item id="683" name="Big Fish"/>
+  <item id="684" name="Alpina"/>
+  <item id="685" name="Lunie"/>
+  <item id="686" name="Blizzie"/>
+  <item id="687" name="KJ"/>
+  <item id="688" name="Solar Enma"/>
+  <item id="689" name="Infinite Enma"/>
+  <item id="690" name="Umbral Enma"/>
+  <item id="691" name="Indiana Jaws"/>
+  <item id="692" name="Shovulcan"/>
+  <item id="693" name="Zomboy"/>
+  <item id="694" name="Nyanses II"/>
+  <item id="695" name="Meopatra"/>
+  <item id="696" name="Fitwit"/>
+  <item id="697" name="El Dorago"/>
+  <item id="698" name="The Hinix"/>
+  <item id="699" name="(No.699)"/>
+  <item id="700" name="(No.700)"/>
+  <item id="701" name="(No.701)"/>
+  <item id="702" name="(No.702)"/>
+  <item id="703" name="(No.703)"/>
+  <item id="704" name="(No.704)"/>
+  <item id="705" name="(No.705)"/>
+  <item id="706" name="(No.706)"/>
+  <item id="707" name="(No.707)"/>
+  <item id="708" name="(No.708)"/>
+  <item id="709" name="(No.709)"/>
+  <item id="710" name="(No.710)"/>
+  <item id="711" name="(No.711)"/>
+  <item id="712" name="(No.712)"/>
+  <item id="713" name="(No.713)"/>
+  <item id="714" name="(No.714)"/>
+  <item id="715" name="(No.715)"/>
+  <item id="716" name="(No.716)"/>
+  <item id="717" name="(No.717)"/>
+  <item id="718" name="(No.718)"/>
+  <item id="719" name="(No.719)"/>
+  <item id="720" name="(No.720)"/>
+  <item id="721" name="(No.721)"/>
+  <item id="722" name="(No.722)"/>
+  <item id="723" name="(No.723)"/>
+  <item id="724" name="(No.724)"/>
+  <item id="725" name="(No.725)"/>
+  <item id="726" name="(No.726)"/>
+  <item id="727" name="(No.727)"/>
+  <item id="728" name="(No.728)"/>
+  <item id="729" name="(No.729)"/>
+  <item id="730" name="(No.730)"/>
+  <item id="731" name="(No.731)"/>
+  <item id="732" name="(No.732)"/>
+  <item id="733" name="(No.733)"/>
+  <item id="734" name="(No.734)"/>
+  <item id="735" name="(No.735)"/>
+  <item id="736" name="(No.736)"/>
+  <item id="737" name="(No.737)"/>
+  <item id="738" name="(No.738)"/>
+  <item id="739" name="(No.739)"/>
+  <item id="740" name="(No.740)"/>
+  <item id="741" name="(No.741)"/>
+  <item id="742" name="(No.742)"/>
+  <item id="743" name="(No.743)"/>
+  <item id="744" name="(No.744)"/>
+  <item id="745" name="(No.745)"/>
+  <item id="746" name="(No.746)"/>
+  <item id="747" name="(No.747)"/>
+  <item id="748" name="(No.748)"/>
+  <item id="749" name="(No.749)"/>
+  <item id="750" name="(No.750)"/>
+  <item id="751" name="(No.751)"/>
+  <item id="752" name="(No.752)"/>
+  <item id="753" name="(No.753)"/>
+  <item id="754" name="(No.754)"/>
+  <item id="755" name="(No.755)"/>
+  <item id="756" name="(No.756)"/>
+  <item id="757" name="(No.757)"/>
+  <item id="758" name="(No.758)"/>
+  <item id="759" name="(No.759)"/>
+  <item id="760" name="(No.760)"/>
+  <item id="761" name="(No.761)"/>
+  <item id="762" name="(No.762)"/>
+  <item id="763" name="(No.763)"/>
+  <item id="764" name="(No.764)"/>
+  <item id="765" name="(No.765)"/>
+  <item id="766" name="(No.766)"/>
+  <item id="767" name="(No.767)"/>
+  <item id="768" name="(No.768)"/>
+  <item id="769" name="(No.769)"/>
+  <item id="770" name="(No.770)"/>
+  <item id="771" name="(No.771)"/>
+  <item id="772" name="(No.772)"/>
+  <item id="773" name="(No.773)"/>
+  <item id="774" name="(No.774)"/>
+  <item id="775" name="(No.775)"/>
+  <item id="776" name="(No.776)"/>
+  <item id="777" name="(No.777)"/>
+  <item id="778" name="(No.778)"/>
+  <item id="779" name="(No.779)"/>
+  <item id="780" name="(No.780)"/>
+  <item id="781" name="(No.781)"/>
+  <item id="782" name="(No.782)"/>
+  <item id="783" name="(No.783)"/>
+  <item id="784" name="(No.784)"/>
+  <item id="785" name="(No.785)"/>
+  <item id="786" name="(No.786)"/>
+  <item id="787" name="(No.787)"/>
+  <item id="788" name="(No.788)"/>
+  <item id="789" name="(No.789)"/>
+  <item id="790" name="(No.790)"/>
+  <item id="791" name="(No.791)"/>
+  <item id="792" name="(No.792)"/>
+  <item id="793" name="(No.793)"/>
+  <item id="794" name="(No.794)"/>
+  <item id="795" name="(No.795)"/>
+  <item id="796" name="(No.796)"/>
+  <item id="797" name="(No.797)"/>
+  <item id="798" name="(No.798)"/>
+  <item id="799" name="(No.799)"/>
+  <item id="800" name="(No.800)"/>
+  <item id="801" name="(No.801)"/>
+  <item id="802" name="(No.802)"/>
+  <item id="803" name="(No.803)"/>
+  <item id="804" name="(No.804)"/>
+  <item id="805" name="(No.805)"/>
+  <item id="806" name="(No.806)"/>
+  <item id="807" name="(No.807)"/>
+  <item id="808" name="(No.808)"/>
+  <item id="809" name="(No.809)"/>
+  <item id="810" name="(No.810)"/>
+  <item id="811" name="(No.811)"/>
+  <item id="812" name="(No.812)"/>
+  <item id="813" name="(No.813)"/>
+  <item id="814" name="(No.814)"/>
+  <item id="815" name="(No.815)"/>
+  <item id="816" name="(No.816)"/>
+  <item id="817" name="(No.817)"/>
+  <item id="818" name="(No.818)"/>
+  <item id="819" name="(No.819)"/>
+  <item id="820" name="(No.820)"/>
+  <item id="821" name="(No.821)"/>
+  <item id="822" name="(No.822)"/>
+  <item id="823" name="(No.823)"/>
+  <item id="824" name="(No.824)"/>
+  <item id="825" name="(No.825)"/>
+  <item id="826" name="(No.826)"/>
+  <item id="827" name="(No.827)"/>
+  <item id="828" name="(No.828)"/>
+  <item id="829" name="(No.829)"/>
+  <item id="830" name="(No.830)"/>
+  <item id="831" name="(No.831)"/>
+  <item id="832" name="(No.832)"/>
+  <item id="833" name="(No.833)"/>
+  <item id="834" name="(No.834)"/>
+  <item id="835" name="(No.835)"/>
+  <item id="836" name="(No.836)"/>
+  <item id="837" name="(No.837)"/>
+  <item id="838" name="(No.838)"/>
+  <item id="839" name="(No.839)"/>
+  <item id="840" name="(No.840)"/>
+  <item id="841" name="(No.841)"/>
+  <item id="842" name="(No.842)"/>
+  <item id="843" name="(No.843)"/>
+  <item id="844" name="(No.844)"/>
+  <item id="845" name="(No.845)"/>
+  <item id="846" name="(No.846)"/>
+  <item id="847" name="(No.847)"/>
+  <item id="848" name="(No.848)"/>
+  <item id="849" name="(No.849)"/>
+  <item id="850" name="(No.850)"/>
+  <item id="851" name="(No.851)"/>
+  <item id="852" name="(No.852)"/>
+  <item id="853" name="(No.853)"/>
+  <item id="854" name="(No.854)"/>
+  <item id="855" name="(No.855)"/>
+  <item id="856" name="(No.856)"/>
+  <item id="857" name="(No.857)"/>
+  <item id="858" name="(No.858)"/>
+  <item id="859" name="(No.859)"/>
+  <item id="860" name="(No.860)"/>
+  <item id="861" name="(No.861)"/>
+  <item id="862" name="(No.862)"/>
+  <item id="863" name="(No.863)"/>
+  <item id="864" name="(No.864)"/>
+  <item id="865" name="(No.865)"/>
+  <item id="866" name="(No.866)"/>
+  <item id="867" name="(No.867)"/>
+  <item id="868" name="(No.868)"/>
+  <item id="869" name="(No.869)"/>
+  <item id="870" name="(No.870)"/>
+  <item id="871" name="(No.871)"/>
+  <item id="872" name="(No.872)"/>
+  <item id="873" name="(No.873)"/>
+  <item id="874" name="(No.874)"/>
+  <item id="875" name="(No.875)"/>
+  <item id="876" name="(No.876)"/>
+  <item id="877" name="(No.877)"/>
+  <item id="878" name="(No.878)"/>
+  <item id="879" name="(No.879)"/>
+  <item id="880" name="(No.880)"/>
+  <item id="881" name="(No.881)"/>
+  <item id="882" name="(No.882)"/>
+  <item id="883" name="(No.883)"/>
+  <item id="884" name="(No.884)"/>
+  <item id="885" name="(No.885)"/>
+  <item id="886" name="(No.886)"/>
+  <item id="887" name="(No.887)"/>
+  <item id="888" name="(No.888)"/>
+  <item id="889" name="(No.889)"/>
+  <item id="890" name="(No.890)"/>
+  <item id="891" name="(No.891)"/>
+  <item id="892" name="(No.892)"/>
+  <item id="893" name="(No.893)"/>
+  <item id="894" name="(No.894)"/>
+  <item id="895" name="(No.895)"/>
+  <item id="896" name="(No.896)"/>
+  <item id="897" name="(No.897)"/>
+  <item id="898" name="(No.898)"/>
+  <item id="899" name="(No.899)"/>
+  <item id="900" name="(No.900)"/>
+  <item id="901" name="Junkernaut"/>
+  <item id="902" name="Supermanager"/>
+  <item id="903" name="Hoaxy-Coaxy"/>
+  <item id="904" name="Agent X"/>
+  <item id="905" name="The Executor"/>
+  <item id="906" name="Slackerjack"/>
+  <item id="907" name="Meganyan"/>
+  <item id="908" name="Dr. Maddiman"/>
+  <item id="909" name="Yo-kaiju"/>
+  <item id="910" name="Yopple-Bot"/>
+  <item id="911" name="No-Bot"/>
+  <item id="912" name="Beddy-Byes"/>
+  <item id="913" name="Rongo Swirll"/>
+  <item id="914" name="Ghoulfather"/>
+  <item id="915" name="Don Spiracy"/>
+  <item id="916" name="Slackolyte"/>
+  <item id="917" name="Duwheel"/>
+  <item id="918" name="Duolyte"/>
+  <item id="919" name="Chirpster"/>
+  <item id="920" name="Chirpolyte"/>
+  <item id="921" name="Torneyedo"/>
+  <item id="922" name="Mass Mutterer"/>
+  <item id="923" name="Hinozall"/>
+  <item id="924" name="Hollow Guard"/>
+  <item id="925" name="Skulk"/>
+  <item id="926" name="Gargaros"/>
+  <item id="927" name="Ogralus"/>
+  <item id="928" name="Orcanos"/>
+  <item id="929" name="Orcalyte"/>
+  <item id="930" name="Zenlightener"/>
+  <item id="931" name="Plundros"/>
+  <item id="932" name="Sproink"/>
+  <item id="933" name="Hoggles"/>
+  <item id="934" name="Tattleterror"/>
+  <item id="935" name="Hans Full"/>
+  <item id="936" name="Hans Galore"/>
+  <item id="937" name="McKraken"/>
+  <item id="938" name="Hardy Hound"/>
+  <item id="939" name="Rubeus J"/>
+  <item id="940" name="Hinozall Awk."/>
+  <item id="941" name="Robonyan 28"/>
+  <item id="942" name="Yellskitchen"/>
+  <item id="943" name="Maiden Ruin"/>
+  <item id="944" name="The Woebra"/>
+  <item id="945" name="The Goldfather"/>
+  <item id="946" name="IcarOS"/>
+  <item id="947" name="Narwail"/>
+  <item id="948" name="Whaleman"/>
+  <item id="949" name="Soulcleaver"/>
+  <item id="950" name="Cpt. Thunder"/>
+  <item id="951" name="Cpt. Thunder"/>
+  <item id="952" name="Shogun King"/>
+  <item id="953" name="Holey Moley"/>
+  <item id="954" name="Lastest Nyan."/>
+</items>

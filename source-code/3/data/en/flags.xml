@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="1" name="Box and Rotary"/>
+  <item id="2" name="Track and Field Turf"/>
+  <item id="3" name="Four Blue Roofs"/>
+  <item id="4" name="Beside the Wheel"/>
+  <item id="5" name="Islet Bridge"/>
+  <item id="6" name="Beside the Church"/>
+  <item id="7" name="Watch Shop Watch"/>
+  <item id="8" name="Alley House Front"/>
+  <item id="9" name="Millionaire Mansion"/>
+  <item id="10" name="Hideout Rock"/>
+  <item id="11" name="Lost Forest Tunnel"/>
+  <item id="12" name="Pitch Black Cavern"/>
+  <item id="13" name="Near a Farm Pond"/>
+  <item id="14" name="East Canyon Villag."/>
+  <item id="15" name="Wild Pony Habitat"/>
+  <item id="16" name="River to the Estate"/>
+  <item id="17" name="Light from a Cave"/>
+  <item id="18" name="Canyon River"/>
+  <item id="19" name="Island Ruins"/>
+  <item id="20" name="Sandstone Relic"/>
+  <item id="21" name="The Brave"/>
+  <item id="22" name="The Mysterious"/>
+  <item id="23" name="The Tough"/>
+  <item id="24" name="The Charming"/>
+  <item id="25" name="Year's End Record"/>
+  <item id="26" name="The Shady"/>
+  <item id="27" name="The Eerie"/>
+  <item id="28" name="Spook. Dog. Rec."/>
+  <item id="29" name="Horrorsmit. Record"/>
+  <item id="30" name="Summer Watch Rec."/>
+  <item id="31" name="Kismeetles Record"/>
+  <item id="32" name="Cornfused Record"/>
+  <item id="33" name="The Water Boyz"/>
+  <item id="34" name="Mystery Record"/>
+  <item id="35" name="Nomnom Brothers"/>
+  <item id="36" name="R. Hot Oni Backers"/>
+  <item id="37" name="Kintaronyan Trio A"/>
+  <item id="38" name="Kintaronyan Trio B"/>
+  <item id="39" name="All Stars Record"/>
+  <item id="40" name="Blazion Record"/>
+  <item id="41" name="Sgt. Burly Record"/>
+  <item id="42" name="Hovernyan Record"/>
+  <item id="43" name="Tattletell Record"/>
+  <item id="44" name="Cornfused Record"/>
+  <item id="45" name="Roughraff Record"/>
+  <item id="46" name="Jibanyan Record"/>
+  <item id="47" name="Komasan Record"/>
+  <item id="48" name="Hungramps Record"/>
+  <item id="49" name="Hidabat Record"/>
+  <item id="50" name="Dismarelda Record"/>
+  <item id="51" name="Babblong Record"/>
+  <item id="52" name="Usapyon Record"/>
+  <item id="53" name="Shogunyan Record"/>
+  <item id="54" name="Lucky Song"/>
+  <item id="55" name="(No.55)"/>
+  <item id="56" name="(No.56)"/>
+  <item id="57" name="(No.57)"/>
+  <item id="58" name="(No.58)"/>
+  <item id="59" name="(No.59)"/>
+  <item id="60" name="(No.60)"/>
+  <item id="61" name="(No.61)"/>
+  <item id="62" name="(No.62)"/>
+  <item id="63" name="(No.63)"/>
+  <item id="64" name="(No.64)"/>
+  <item id="65" name="(No.65)"/>
+  <item id="66" name="(No.66)"/>
+  <item id="67" name="(No.67)"/>
+  <item id="68" name="(No.68)"/>
+  <item id="69" name="(No.69)"/>
+  <item id="70" name="(No.70)"/>
+  <item id="71" name="(No.71)"/>
+  <item id="72" name="(No.72)"/>
+  <item id="73" name="(No.73)"/>
+  <item id="74" name="(No.74)"/>
+  <item id="75" name="(No.75)"/>
+  <item id="76" name="(No.76)"/>
+  <item id="77" name="(No.77)"/>
+  <item id="78" name="(No.78)"/>
+  <item id="79" name="(No.79)"/>
+  <item id="80" name="(No.80)"/>
+  <item id="81" name="(No.81)"/>
+  <item id="82" name="(No.82)"/>
+  <item id="83" name="(No.83)"/>
+  <item id="84" name="(No.84)"/>
+  <item id="85" name="Floppy Ears"/>
+  <item id="86" name="Jibanyan Ears"/>
+  <item id="87" name="Bunny Ears"/>
+  <item id="88" name="Mouse Ears"/>
+  <item id="89" name="Robo Head"/>
+  <item id="90" name="Jewel Head"/>
+  <item id="91" name="Bob"/>
+  <item id="92" name="Center Parting"/>
+  <item id="93" name="Moustache Design"/>
+  <item id="94" name="Panda Design"/>
+  <item id="95" name="Jibanyan Design"/>
+  <item id="96" name="Intense Eyes"/>
+  <item id="97" name="Moxie Eyes"/>
+  <item id="98" name="Surprised Eyes"/>
+  <item id="99" name="Cat's Eyes"/>
+  <item id="100" name="Sleepy Eyes"/>
+  <item id="101" name="Charming Eyes"/>
+  <item id="102" name="Smirking Eyes"/>
+  <item id="103" name="Girly Eyes"/>
+  <item id="104" name="Star-struck Eyes"/>
+  <item id="105" name="Loveheart Eyes"/>
+  <item id="106" name="Colorheart Eyes"/>
+  <item id="107" name="Starry Eyes"/>
+  <item id="108" name="Color Stars Eyes"/>
+  <item id="109" name="Mini Moustache"/>
+  <item id="110" name="High Eyebrows"/>
+  <item id="111" name="Frowny Eyebrows"/>
+  <item id="112" name="Topknot"/>
+  <item id="113" name="Side Parting"/>
+  <item id="114" name="Headband"/>
+  <item id="115" name="Afro"/>
+  <item id="116" name="Leaf"/>
+  <item id="117" name="Cowboy Hat"/>
+  <item id="118" name="Floral Hairclip"/>
+  <item id="119" name="Royal Crown"/>
+  <item id="120" name="Warrior's Helmet"/>
+  <item id="121" name="Maid's Headpiece"/>
+  <item id="122" name="Fashionabl. Frames"/>
+  <item id="123" name="Specs &amp; 'Tache"/>
+  <item id="124" name="Komasan Brows"/>
+  <item id="125" name="Tights"/>
+  <item id="126" name="Shawl"/>
+  <item id="127" name="Jibanyan Girdle"/>
+  <item id="128" name="Loincloth"/>
+  <item id="129" name="Dungarees"/>
+  <item id="130" name="Lively Kimono"/>
+  <item id="131" name="Smart Kimono"/>
+  <item id="132" name="Maid"/>
+  <item id="133" name="Cowboy Waistcoat"/>
+  <item id="134" name="Warrior's Armor"/>
+  <item id="135" name="Royal Garb"/>
+  <item id="136" name="Robo Body"/>
+  <item id="137" name="Jewel Body"/>
+  <item id="138" name="Bobtail"/>
+  <item id="139" name="Striped Tail"/>
+  <item id="140" name="Tilde Tail"/>
+  <item id="141" name="Fox Tail"/>
+  <item id="142" name="Heart Tail"/>
+  <item id="143" name="Jibanyan Tail"/>
+  <item id="144" name="Komasan Tail"/>
+  <item id="145" name="Wild Tail"/>
+  <item id="146" name="Devil Tail"/>
+  <item id="147" name="Curly Tail"/>
+  <item id="148" name="Squirrel Tail"/>
+  <item id="149" name="Dog Tail"/>
+  <item id="150" name="Robo Tail"/>
+  <item id="151" name="Jewel Tail"/>
+  <item id="152" name="Gym Towel"/>
+  <item id="153" name="Work Tie"/>
+  <item id="154" name="Bow Tie"/>
+  <item id="155" name="Bold Bandana"/>
+  <item id="156" name="Ruff"/>
+  <item id="157" name="Celebratory Bell"/>
+  <item id="158" name="Chic Bow"/>
+  <item id="159" name="Cute Bow"/>
+  <item id="160" name="Gold Medal"/>
+  <item id="161" name="Wanderer Cape"/>
+  <item id="162" name="Triumphal Cape"/>
+  <item id="163" name="Bat Cape"/>
+  <item id="164" name="Angel Wings"/>
+  <item id="165" name="Jibanyan Bell"/>
+  <item id="166" name="Komasan Wrap"/>
+  <item id="167" name="Adult Scarf"/>
+  <item id="168" name="Girlynyan Voice"/>
+  <item id="169" name="Grannyan Voice"/>
+  <item id="170" name="Zombienyan Voice"/>
+  <item id="171" name="Bratnyan Voice"/>
+  <item id="172" name="Naughtynyan Voice"/>
+  <item id="173" name="Kabukinyan Voice"/>
+  <item id="174" name="Maginyan Voice"/>
+  <item id="175" name="Brothernyan Voice"/>
+  <item id="176" name="Dogrampsnyan Vo."/>
+  <item id="177" name="Papanyan Voice"/>
+  <item id="178" name="Grandanyan Voice"/>
+  <item id="179" name="Sproinyan Voice"/>
+  <item id="180" name="Bernsteinyan Voic."/>
+  <item id="181" name="Unclenyan Voice"/>
+  <item id="182" name="Kappanyan Voice"/>
+  <item id="183" name="Ancestornyan Voi."/>
+  <item id="184" name="Avant-gardnyan V."/>
+  <item id="185" name="Princessnyan Voic."/>
+  <item id="186" name="Coolnyan Voice"/>
+  <item id="187" name="Astrobunnyan Voi."/>
+  <item id="188" name="Cuteynyan Voice"/>
+  <item id="189" name="Youngunyan Voice"/>
+  <item id="190" name="Caninyan Voice"/>
+  <item id="191" name="Domestibatnyan V."/>
+  <item id="192" name="Sumonyan Voice"/>
+  <item id="193" name="Captainyan Voice"/>
+  <item id="194" name="Catvaliernyan Voic."/>
+  <item id="195" name="Zazenyan Voice"/>
+  <item id="196" name="Enmanyan Voice"/>
+  <item id="197" name="Angelinyan Voice"/>
+  <item id="198" name="Shynyan Voice"/>
+  <item id="199" name="Nosirnyan Voice"/>
+  <item id="200" name="Infanyan Voice"/>
+  <item id="201" name="Geezernyan Voice"/>
+  <item id="202" name="Haileyannyan V."/>
+  <item id="203" name="Whispernyan Voice"/>
+  <item id="204" name="Peppy Kidsnyan V."/>
+</items>

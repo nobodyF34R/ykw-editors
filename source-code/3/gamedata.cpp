@@ -21,14 +21,9 @@ GameData::GameData()
                         << "busters_hidden_treasure";
     foreach (QString s, this->availableData) {
         QFile f(QString(":/data/data/%1.xml").arg(s));
-        QFile g(QString(":/data/data/%1_%2.xml").arg(s).arg(QLocale().name()));
-        QFile* file = &g;
-        if (!g.exists()) {
-            file = &f;
-        }
-        if (file->open(QIODevice::ReadOnly)) {
+        if (f.open(QIODevice::ReadOnly)) {
             QXmlStreamReader r;
-            r.setDevice(&*file);
+            r.setDevice(&f);
             while (!r.atEnd()) {
                 r.readNext();
                 if (r.isStartElement()) {

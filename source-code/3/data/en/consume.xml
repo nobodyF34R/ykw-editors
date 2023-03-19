@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="1803927674" name="Plum Rice Ball"/>
+  <item id="4069298624" name="Leaf Rice Ball"/>
+  <item id="2240520534" name="Roe Rice Ball"/>
+  <item id="468661493" name="Shrimp Rice Ball"/>
+  <item id="1783081549" name="Sandwich"/>
+  <item id="4082039799" name="Custard Bread"/>
+  <item id="4095950830" name="Blueberry Bagel"/>
+  <item id="2219428705" name="Baguette"/>
+  <item id="1831497300" name="Curry Bread"/>
+  <item id="2200178552" name="Club Sandwich"/>
+  <item id="439180994" name="Blehgel"/>
+  <item id="1744901140" name="Humdrum Gum"/>
+  <item id="4043851182" name="Gooey Candy"/>
+  <item id="2249159992" name="Giant Cracker"/>
+  <item id="409723035" name="Fruit Drops"/>
+  <item id="1869402125" name="Shaved Ice"/>
+  <item id="2170728737" name="Rainbow J. Beans"/>
+  <item id="4133847479" name="Candy Apple"/>
+  <item id="1774419491" name="Milk"/>
+  <item id="4039782297" name="Coffee Milk"/>
+  <item id="2278366991" name="Fruit Milk"/>
+  <item id="430541484" name="Amazing Milk"/>
+  <item id="1821141158" name="Y-Cola"/>
+  <item id="4119148828" name="Soul Tea"/>
+  <item id="2189560202" name="Spiritizer Y"/>
+  <item id="1809951935" name="Doctor Rapper"/>
+  <item id="4075355397" name="Y-Cola Max"/>
+  <item id="484875305" name="VoltXtreme"/>
+  <item id="1833829009" name="Hamburger"/>
+  <item id="4098315051" name="Cheeseburger"/>
+  <item id="1780729480" name="Star Burger"/>
+  <item id="2202035133" name="Double Burger"/>
+  <item id="4079654706" name="Deluxe Star Burger"/>
+  <item id="488961566" name="Nom Burger"/>
+  <item id="2217584548" name="Extreme Star Burg."/>
+  <item id="1858787071" name="Ramen Cup"/>
+  <item id="4156786501" name="Pork Ramen"/>
+  <item id="2160375763" name="Deluxe Ramen"/>
+  <item id="513811056" name="Everything Ramen"/>
+  <item id="1704366530" name="Cucumber Roll"/>
+  <item id="4238327928" name="Shrimp Sushi"/>
+  <item id="1660638683" name="California Rolls"/>
+  <item id="4226942049" name="Egg Sushi"/>
+  <item id="2342056174" name="Salmon Roe Sushi"/>
+  <item id="2364880119" name="Fin Sushi"/>
+  <item id="474622310" name="Sea Urchin Sushi"/>
+  <item id="368862541" name="Fatty Tuna Sushi"/>
+  <item id="1800215024" name="High-End Sushi"/>
+  <item id="1683291125" name="Pot Stickers"/>
+  <item id="4250774095" name="Liver &amp; Chives"/>
+  <item id="2321193689" name="Crab Omelet"/>
+  <item id="339611514" name="Chili Shrimp"/>
+  <item id="3539717416" name="Carrot"/>
+  <item id="1274190994" name="Cucumber"/>
+  <item id="1022733316" name="Bamboo Shoot"/>
+  <item id="3583379761" name="Corn on the Cob"/>
+  <item id="1285511307" name="Avocado"/>
+  <item id="999843869" name="Green Mango"/>
+  <item id="2727426471" name="Matsutake"/>
+  <item id="3502076785" name="Chicken Thigh"/>
+  <item id="3620779880" name="Pork Cutlet"/>
+  <item id="1236542155" name="Slab Bacon"/>
+  <item id="1051923037" name="Beef Tongue"/>
+  <item id="1322903250" name="Sirloin Steak"/>
+  <item id="2698479614" name="Marbled Beef"/>
+  <item id="970905156" name="Chateaubriand"/>
+  <item id="3514767686" name="Dried Mackerel"/>
+  <item id="1215711484" name="Yellowtail"/>
+  <item id="3591560543" name="Mussels"/>
+  <item id="1327205605" name="Lobster"/>
+  <item id="1064401002" name="Fresh Urchin"/>
+  <item id="941407347" name="King Salmon"/>
+  <item id="2702568905" name="Choice Tuna"/>
+  <item id="3559919555" name="Chicken Curry"/>
+  <item id="1295605369" name="Lamb Curry"/>
+  <item id="977170159" name="Seafood Curry"/>
+  <item id="2757425996" name="Buster Curry"/>
+  <item id="3589432820" name="Cheesecake"/>
+  <item id="2888752464" name="Cupcake"/>
+  <item id="1291531342" name="Shortcake"/>
+  <item id="3676958150" name="Mom's Cherry Pie"/>
+  <item id="3533677037" name="Sweet Rice Cake"/>
+  <item id="1006372056" name="Royal Pancakes"/>
+  <item id="2778239355" name="Jumbo Parfait"/>
+  <item id="3152962595" name="Choco-Banana"/>
+  <item id="1268183127" name="Spirit Doughnut"/>
+  <item id="1016185025" name="Soul Doughnut"/>
+  <item id="3437843637" name="Specter Doughnut"/>
+  <item id="3618954157" name="Steamed Daikon"/>
+  <item id="1321044503" name="Boiled Egg"/>
+  <item id="968538753" name="Beef Skewers"/>
+  <item id="2816356130" name="Top-Class Oden"/>
+  <item id="1333780512" name="Noodles in Broth"/>
+  <item id="3598102938" name="Soba Noodles"/>
+  <item id="947441846" name="Fishy Noodles"/>
+  <item id="2786870549" name="Duck Noodles"/>
+  <item id="3710580391" name="Potato Chips"/>
+  <item id="3662099134" name="Caramel Peanuts"/>
+  <item id="1143187229" name="Tasty Nibbles"/>
+  <item id="858036107" name="Cheesy Chips"/>
+  <item id="1129210628" name="Peppy Popcorn"/>
+  <item id="2906653224" name="Snow-Pea Snack"/>
+  <item id="3706231952" name="Chocobar"/>
+  <item id="1172426026" name="Strawbe. Chocobar"/>
+  <item id="853999036" name="Premium Chocobar"/>
+  <item id="3247180017" name="Ice Cream"/>
+  <item id="1485134155" name="Berry Ice Cream"/>
+  <item id="797075933" name="Rainbow Soft Serv."/>
+  <item id="2984705150" name="Special ☆ Sundae"/>
+  <item id="3226362566" name="Doughnut"/>
+  <item id="1497838460" name="Twisty Doughnut"/>
+  <item id="775947242" name="Choco. Doughnut"/>
+  <item id="2955187785" name="Cosmic Doughnut"/>
+  <item id="3255360671" name="Cheesy Pizza"/>
+  <item id="738639283" name="Pizza Margherita"/>
+  <item id="1526828325" name="Garlic Chicken Piz."/>
+  <item id="3311736966" name="Crispy Bacon Pizza"/>
+  <item id="2992777232" name="Star Pizza"/>
+  <item id="3284842152" name="Plain Hotdog"/>
+  <item id="1522788114" name="Ground Beef Dog"/>
+  <item id="767874948" name="Hot Chili Dog"/>
+  <item id="3013624359" name="Special Hot Dog"/>
+  <item id="3330646061" name="Bolognese"/>
+  <item id="1603072407" name="Spaghe. Carbonara"/>
+  <item id="680247553" name="Genovese"/>
+  <item id="3069138082" name="Clam Spaghetti"/>
+  <item id="3253232692" name="3-star Pescatore"/>
+  <item id="3343370778" name="Eggplant Tempura"/>
+  <item id="1582209952" name="Pumpkin Tempura"/>
+  <item id="692693814" name="Chicken Tempura"/>
+  <item id="3073195669" name="Fish Tempura"/>
+  <item id="3223981571" name="Squid Tempura"/>
+  <item id="1495490489" name="Eel Tempura"/>
+  <item id="774139695" name="Jumbo Shri. Temp."/>
+  <item id="3197858494" name="Deluxe Tempura"/>
+  <item id="3305206851" name="Mega Tasty Bar"/>
+  <item id="3301121652" name="Sushi Tempur. Feast"/>
+  <item id="1573539790" name="Sushi Sukiya. Feast"/>
+  <item id="718110552" name="Tempur. Suki. Feast"/>
+  <item id="3483326793" name="Sukiyaki Lunchbox"/>
+  <item id="1452673267" name="Chicken Sukiyaki"/>
+  <item id="563165285" name="Beef Sukiyaki"/>
+  <item id="3220549062" name="Spec. Marbled Suki."/>
+  <item id="3371343184" name="Suki. Yo-kai Spec."/>
+  <item id="3326445316" name="Forbidden Fruit"/>
+  <item id="338248220" name="Nasty Medicine"/>
+  <item id="2367689638" name="Bitter Medicine"/>
+  <item id="4196868912" name="Mighty Medicine"/>
+  <item id="1682159251" name="Miracle Medicine"/>
+  <item id="2370076515" name="Mini Exporb"/>
+  <item id="320924352" name="Small Exporb"/>
+  <item id="2317990778" name="Medium Exporb"/>
+  <item id="4247686124" name="Large Exporb"/>
+  <item id="1665801807" name="Mega Exporb"/>
+  <item id="340602585" name="Holy Exporb"/>
+  <item id="397252210" name="Staminum"/>
+  <item id="2393163720" name="Staminum Alpha"/>
+  <item id="279199406" name="Hidden Hits"/>
+  <item id="1624164897" name="Arcane Attacks"/>
+  <item id="2309844756" name="Top Techniques"/>
+  <item id="399112887" name="Ancient Arts"/>
+  <item id="4272578434" name="Soul Secrets"/>
+  <item id="2394991373" name="Mystic Mysteries"/>
+  <item id="469268883" name="A Serious Life"/>
+  <item id="2196842537" name="Think Karate"/>
+  <item id="4126546111" name="Use Karate"/>
+  <item id="1804766492" name="Skill Compendium"/>
+  <item id="479575434" name="Skill Encyclopedia"/>
+  <item id="2241653808" name="Get Guarding"/>
+  <item id="4070300838" name="Guard Gloriously"/>
+  <item id="1646575927" name="Li'l Angel Heals"/>
+  <item id="354677153" name="Bye, Li'l Angel"/>
+  <item id="1977907268" name="The Pest's Quest"/>
+  <item id="48449746" name="The Perfect Pest"/>
+  <item id="2615810408" name="Support Life #7"/>
+  <item id="3974965758" name="Support Special"/>
+  <item id="376437829" name="Getaway Plush"/>
+  <item id="1628217366" name="Iron Doll"/>
+  <item id="291919001" name="Bronze Doll"/>
+  <item id="2288977187" name="Silver Doll"/>
+  <item id="4285019573" name="Golden Doll"/>
+  <item id="369856640" name="Platinum Doll"/>
+  <item id="2399322426" name="Black Doll"/>
+  <item id="2908180302" name="Fish Bait"/>
+  <item id="878583540" name="Black Syrup"/>
+  <item id="288702760" name="Originyan Essence"/>
+  <item id="440013732" name="Legendary Blade"/>
+  <item id="2201174558" name="Cursed Blade"/>
+  <item id="2220787207" name="Holy Blade"/>
+  <item id="4097077896" name="General's Soul"/>
+  <item id="1783686955" name="Love Buster"/>
+  <item id="492296125" name="GHz Orb"/>
+  <item id="1676061440" name="Unbeatable Soul"/>
+  <item id="2586342239" name="Platinum Bar"/>
+  <item id="350329750" name="Snowstorm Cloak"/>
+  <item id="1948652147" name="Love Scepter"/>
+  <item id="4082742929" name="Glacial Clip"/>
+  <item id="52503269" name="Buff Weight"/>
+  <item id="1934349930" name="Shard of Evil"/>
+  <item id="3979297737" name="Ageless Powder"/>
+  <item id="2638591814" name="Dragon Orb"/>
+  <item id="1098757352" name="Raging Blade"/>
+  <item id="913998974" name="Sand Suit"/>
+  <item id="2943604164" name="Ethereal Water"/>
+  <item id="3631539538" name="Cursed Journal"/>
+  <item id="1221327043" name="Horn"/>
+  <item id="1070385237" name="Mem-o-Vac"/>
+  <item id="156362294" name="Mermaid Pearl"/>
+  <item id="2119620256" name="Love Rice Ball"/>
+  <item id="2421733260" name="Carved Bear"/>
+  <item id="238821935" name="Goldfish Lantern"/>
+  <item id="2033914553" name="Master's Lantern"/>
+  <item id="3761390339" name="Gold Emblem"/>
+  <item id="2536862613" name="Takoyaki Tray"/>
+  <item id="126512644" name="Dune Sand"/>
+  <item id="1888312978" name="Vintage Parasol"/>
+  <item id="273340279" name="Terracotta Figure"/>
+  <item id="1733158881" name="Red Hibiscus"/>
+  <item id="4265915995" name="Swirly Soul"/>
+  <item id="2302904013" name="Keystone"/>
+  <item id="388436846" name="Comfy Closet"/>
+  <item id="1612719096" name="Perilous Pearl"/>
+  <item id="4180243010" name="Old Earthenware"/>
+  <item id="2385396436" name="Ball of Badness"/>
+  <item id="512843589" name="Scented Bath Oil"/>
+  <item id="1771466707" name="Bad News"/>
+  <item id="996639924" name="Dino DNA"/>
+  <item id="2725172494" name="MVP Award"/>
+  <item id="1281405986" name="Essence of Evil"/>
+  <item id="3580487064" name="Starry Spangles"/>
+  <item id="2592718716" name="Red Coin"/>
+  <item id="58781382" name="Yellow Coin"/>
+  <item id="1955061328" name="Orange Coin"/>
+  <item id="3940764659" name="Pink Coin"/>
+  <item id="2648996709" name="Green Coin"/>
+  <item id="82651871" name="Blue Coin"/>
+  <item id="1944721993" name="Purple Coin"/>
+  <item id="3814000600" name="Light-Blue Coin"/>
+  <item id="573954073" name="One-Star Coin"/>
+  <item id="3411442988" name="Five-Star Coin"/>
+  <item id="1542021309" name="Special Coin"/>
+  <item id="753815595" name="Yo Mystery Coin"/>
+  <item id="1277811150" name="Kai Mystery Coin"/>
+  <item id="992930136" name="Soul Mystery Coin"/>
+  <item id="3575679092" name="Sushi Coin"/>
+  <item id="1262755287" name="Tempura Coin"/>
+  <item id="1011035457" name="Whirlwind Coin"/>
+  <item id="2773122299" name="Wanderer Coin"/>
+  <item id="3528281197" name="Rusted Coin"/>
+  <item id="905273706" name="Flower Excite. Coin"/>
+  <item id="1728350733" name="Bird Excite. Coin"/>
+  <item id="268679835" name="Wind Excite. Coin"/>
+  <item id="2299194145" name="Moon Excite. Coin"/>
+  <item id="1598172252" name="Heaven Excit. Coin"/>
+  <item id="4262321079" name="Mellow Coin"/>
+  <item id="1617514004" name="Brave Dream Coin"/>
+  <item id="393117314" name="Light Dream Coin"/>
+  <item id="2389126968" name="Platin. Dream Coin"/>
+  <item id="4183826350" name="Fortun. Dream Coin"/>
+  <item id="1776222783" name="Princess Dre. Coin"/>
+  <item id="517485225" name="Wisdom Dre. Coin"/>
+  <item id="2116008780" name="Pride Dream Coin"/>
+  <item id="152603610" name="Chivalry Dre. Coin"/>
+  <item id="2417089120" name="G1 Dream Coin"/>
+  <item id="3877038838" name="G2 Dream Coin"/>
+  <item id="2037546837" name="G3 Dream Coin"/>
+  <item id="242569155" name="G4 Dream Coin"/>
+  <item id="3766169327" name="2nd Helping Coin"/>
+  <item id="909371794" name="Belly Buster Coin"/>
+  <item id="1891906430" name="L Souvenir Coin"/>
+  <item id="130221032" name="F Souvenir Coin"/>
+  <item id="828255627" name="S Souvenir Coin"/>
+  <item id="1180245277" name="K Souvenir Coin"/>
+  <item id="3746581671" name="Joyful Coin"/>
+  <item id="2824305713" name="Excellent Coin"/>
+  <item id="1093982468" name="Beaming Coin"/>
+  <item id="3627911358" name="Iron Pot Coin"/>
+  <item id="2939861032" name="Fancy That! Coin"/>
+  <item id="1065723321" name="Black Coin"/>
+  <item id="1216517423" name="Jet Black Coin"/>
+  <item id="675617994" name="Demonic Coin"/>
+  <item id="3326836198" name="Underworld Coin"/>
+  <item id="2974567792" name="Sealed Coin"/>
+  <item id="791206099" name="Emblem Coin"/>
+  <item id="1479534661" name="Treasure Coin"/>
+  <item id="3240540671" name="Legend Coin"/>
+  <item id="2205822962" name="Feast Coin"/>
+  <item id="3055651177" name="Super Red Coin"/>
+  <item id="647927032" name="Super Yellow Coin"/>
+  <item id="1369023598" name="Super Orange Coin"/>
+  <item id="57167625" name="Super Pink Coin"/>
+  <item id="1953464223" name="Super Green Coin"/>
+  <item id="3982896677" name="Super Blue Coin"/>
+  <item id="2590056115" name="Super Purple Coin"/>
+  <item id="67472144" name="S. Light-Blue Coin"/>
+  <item id="1929558918" name="Ultra Red Coin"/>
+  <item id="3926649404" name="Ultra Yellow Coin"/>
+  <item id="2634865322" name="Ultra Orange Coin"/>
+  <item id="229885755" name="Ultra Pink Coin"/>
+  <item id="2058680237" name="Ultra Green Coin"/>
+  <item id="443776584" name="Ultra Blue Coin"/>
+  <item id="1836338910" name="Ultra Purple Coin"/>
+  <item id="4101840740" name="U. Light-Blue Coin"/>
+  <item id="2263324832" name="One-Star C. Frag."/>
+  <item id="3860861253" name="Five-Star C. Frag."/>
+  <item id="2435260883" name="Special Coin Frag."/>
+  <item id="2895455609" name="Dancing Star"/>
+  <item id="899445955" name="Lottery Ticket"/>
+  <item id="1117471829" name="Music Card"/>
+  <item id="1714581950" name="Ghastly Fragment"/>
+  <item id="1178938710" name="Gate Globe"/>
+  <item id="2285637778" name="Oddball Toadstool"/>
+  <item id="3121246736" name="Pop Star Snapshot"/>
+  <item id="587408298" name="Trash"/>
+  <item id="137261161" name="Fungi Fest Ticket"/>
+  <item id="2133410047" name="Showdown Pass"/>
+  <item id="3779974492" name="Platinum Pass"/>
+  <item id="2521490890" name="Radiant Pass"/>
+  <item id="256095344" name="Gilded Pass"/>
+  <item id="2017756390" name="Gabby Pass"/>
+  <item id="3908802935" name="Teducation Pass"/>
+  <item id="2684135905" name="Big City Pass"/>
+  <item id="3440198278" name="Sophisticated Pass"/>
+  <item id="1409553212" name="Sushi Tempu. Invite"/>
+  <item id="3395323551" name="Sushi Sukiya. Invite"/>
+  <item id="3177690633" name="Tempura Suk. Invite"/>
+  <item id="1200047969" name="Red Box"/>
+  <item id="4058032182" name="Circus Ticket"/>
+  <item id="1399445285" name="Green Mango"/>
+  <item id="4166444061" name="Sturdy Log"/>
+  <item id="2404504715" name="Firm Branch"/>
+  <item id="374900017" name="Rough Splinter"/>
+  <item id="1633662375" name="Det. Ag. Poster"/>
+  <item id="3285633716" name="Hoary Tomb Stone"/>
+  <item id="3033659938" name="Sovereign Stone"/>
+  <item id="3558241223" name="Pandora Stone"/>
+  <item id="2735817553" name="Funny Stone"/>
+  <item id="974656235" name="Shelter Stone"/>
+  <item id="1293886077" name="Komanubis Stone"/>
+  <item id="1968800812" name="Prophecy Stone"/>
+  <item id="39761082" name="Rampage Stone"/>
+  <item id="3548100574" name="S Stone"/>
+  <item id="2759624520" name="Iron Ogre Stone"/>
+  <item id="2621055257" name="Hinixstone"/>
+  <item id="3946647951" name="Meopetra"/>
+  <item id="1916026933" name="Silly Stone"/>
+  <item id="87257251" name="Gilded Stone"/>
+  <item id="2509008178" name="Sanguine Stone"/>
+  <item id="3800784292" name="Underworld Stone"/>
+  <item id="2186073153" name="Legendary Stone"/>
+  <item id="4115391703" name="Hidden Gem Stone"/>
+  <item id="1031132914" name="∞ S Stone Frag. 1"/>
+  <item id="1249044068" name="∞ S Stone Frag. 2"/>
+  <item id="1816311149" name="∞ Hinixstone Fra. 1"/>
+  <item id="457541115" name="∞ Hinixstone Fra. 2"/>
+  <item id="2233536600" name="∞ Meopetra Fra. 1"/>
+  <item id="4062585038" name="∞ Meopetra Fra. 2"/>
+  <item id="1798271348" name="∞ Silly Stone Fra. 1"/>
+  <item id="472400354" name="∞ Silly Stone Fra. 2"/>
+  <item id="2358729843" name="∞ Gild. Stone Fr. 1"/>
+  <item id="4220546277" name="∞ Gild. Stone Fr. 2"/>
+  <item id="3670932469" name="Righteous Tag"/>
+  <item id="2915748707" name="Innovative Tag"/>
+  <item id="2606228736" name="Ancient Tag"/>
+  <item id="3964720534" name="Awoken Tag"/>
+</items>

@@ -1,0 +1,302 @@
+[
+  {
+    "type": 0,
+    "name": "T\u00fcchtiger Rekrut"
+  },
+  {
+    "type": 1,
+    "name": "Zerst\u00f6rungstheoretiker"
+  },
+  {
+    "type": 2,
+    "name": "Mentors Mentor"
+  },
+  {
+    "type": 0,
+    "name": "Yo-kai-Fan"
+  },
+  {
+    "type": 1,
+    "name": "Yo-kai-Fanatiker"
+  },
+  {
+    "type": 2,
+    "name": "Yo-kai-Meister"
+  },
+  {
+    "type": 1,
+    "name": "Legendenfreund"
+  },
+  {
+    "type": 2,
+    "name": "Legendenvertrauter"
+  },
+  {
+    "type": 0,
+    "name": "Finale Form"
+  },
+  {
+    "type": 2,
+    "name": "Darwinpreis"
+  },
+  {
+    "type": 2,
+    "name": "Frankenstein"
+  },
+  {
+    "type": 0,
+    "name": "Spiegel-Spezialist"
+  },
+  {
+    "type": 2,
+    "name": "Schatzsucher"
+  },
+  {
+    "type": 1,
+    "name": "K\u00e4fer-Sammel-Meister"
+  },
+  {
+    "type": 1,
+    "name": "Angel-Koryph\u00e4e"
+  },
+  {
+    "type": 0,
+    "name": "\u00dcbel-\u00dcberwinder"
+  },
+  {
+    "type": 0,
+    "name": "Himmelsbohrer"
+  },
+  {
+    "type": 1,
+    "name": "Putzfimmel"
+  },
+  {
+    "type": 1,
+    "name": "Portal-Profi"
+  },
+  {
+    "type": 1,
+    "name": "Portal-Plattmacher"
+  },
+  {
+    "type": 0,
+    "name": "Wandelwille"
+  },
+  {
+    "type": 1,
+    "name": "Wandelwahn"
+  },
+  {
+    "type": 1,
+    "name": "Yo-kai-T\u00fcftler"
+  },
+  {
+    "type": 2,
+    "name": "Yo-kai-Detektiv"
+  },
+  {
+    "type": 1,
+    "name": "Freund und Helfer"
+  },
+  {
+    "type": 1,
+    "name": "KaiNet-K\u00f6nig"
+  },
+  {
+    "type": 0,
+    "name": "Enger Freundeskreis"
+  },
+  {
+    "type": 1,
+    "name": "Musikliebhaber"
+  },
+  {
+    "type": 0,
+    "name": "Filmfreund"
+  },
+  {
+    "type": 1,
+    "name": "K\u00e4mpfer f\u00fcr das Gute"
+  },
+  {
+    "type": 1,
+    "name": "Genyaral"
+  },
+  {
+    "type": 0,
+    "name": "Nyummer Eins"
+  },
+  {
+    "type": 0,
+    "name": "Vielverkoster"
+  },
+  {
+    "type": 0,
+    "name": "Stein vom Herzen"
+  },
+  {
+    "type": 0,
+    "name": "Seelenguru"
+  },
+  {
+    "type": 1,
+    "name": "Gl\u00fcckskind"
+  },
+  {
+    "type": 0,
+    "name": "Schicksalhaftes Los"
+  },
+  {
+    "type": 1,
+    "name": "Yo-kaimat-Manie"
+  },
+  {
+    "type": 1,
+    "name": "Schleifers Unteroffizier"
+  },
+  {
+    "type": 2,
+    "name": "Schleifers Feldwebel"
+  },
+  {
+    "type": 0,
+    "name": "Krieger"
+  },
+  {
+    "type": 2,
+    "name": "Berserker"
+  },
+  {
+    "type": 0,
+    "name": "Ultiseel-Experte"
+  },
+  {
+    "type": 0,
+    "name": "Deckungsfeuer"
+  },
+  {
+    "type": 0,
+    "name": "Adlerauge"
+  },
+  {
+    "type": 0,
+    "name": "Helfende Hand"
+  },
+  {
+    "type": 1,
+    "name": "Orcanos-Klopper"
+  },
+  {
+    "type": 0,
+    "name": "Fahrrad-Ber\u00fchmtheit"
+  },
+  {
+    "type": 2,
+    "name": "Fahrrad-Legende"
+  },
+  {
+    "type": 1,
+    "name": "Musiker"
+  },
+  {
+    "type": 2,
+    "name": "Dirigent"
+  },
+  {
+    "type": 0,
+    "name": "Bezwinger der Str\u00f6mung"
+  },
+  {
+    "type": 0,
+    "name": "Spa\u00dfverderber"
+  },
+  {
+    "type": 0,
+    "name": "Pfadfinder"
+  },
+  {
+    "type": 0,
+    "name": "Tiersch\u00fctzer"
+  },
+  {
+    "type": 0,
+    "name": "Rotschopf"
+  },
+  {
+    "type": 0,
+    "name": "Findiger Finder"
+  },
+  {
+    "type": 1,
+    "name": "Fluchtk\u00fcnstler"
+  },
+  {
+    "type": 0,
+    "name": "Oni-Austrickser"
+  },
+  {
+    "type": 1,
+    "name": "\u00dcberlebender"
+  },
+  {
+    "type": 1,
+    "name": "Gesunder Appetit"
+  },
+  {
+    "type": 0,
+    "name": "Qualit\u00e4tsoffensive"
+  },
+  {
+    "type": 0,
+    "name": "Feinschmecker"
+  },
+  {
+    "type": 0,
+    "name": "Geselliger Geselle"
+  },
+  {
+    "type": 0,
+    "name": "Stickersammler"
+  },
+  {
+    "type": 1,
+    "name": "Ehrengast"
+  },
+  {
+    "type": 0,
+    "name": "Yo-kai-Neuling"
+  },
+  {
+    "type": 1,
+    "name": "Yo-kai-Experte"
+  },
+  {
+    "type": 2,
+    "name": "Yo-kai-Gottheit"
+  },
+  {
+    "type": 1,
+    "name": "Badabling-Bezwinger"
+  },
+  {
+    "type": 1,
+    "name": "Atlanith-Abrei\u00dfer"
+  },
+  {
+    "type": 0,
+    "name": "100%-Geber"
+  },
+  {
+    "type": 2,
+    "name": "120%-Geber!"
+  },
+  {
+    "type": 2,
+    "name": "Labyrinth-\u00dcberlister"
+  },
+  {
+    "type": 1,
+    "name": "Thronr\u00e4uber"
+  }
+]

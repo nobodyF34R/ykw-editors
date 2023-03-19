@@ -1,0 +1,798 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="3699429459" name="New Yo-kai City"/>
+  <item id="400294902" name="Uptown Springdale"/>
+  <item id="90811416" name="Mt. Wildwood"/>
+  <item id="3184905085" name="Blossom Heights"/>
+  <item id="537064388" name="Downtown Springdale"/>
+  <item id="2562626721" name="Shopper's Row"/>
+  <item id="2315991887" name="Breezy Hills"/>
+  <item id="850877482" name="Excellent Tower"/>
+  <item id="1792298108" name="Sparkopolis"/>
+  <item id="3530042137" name="Greenfields Station"/>
+  <item id="1830572182" name="San Fantastico"/>
+  <item id="1350334758" name="Harrisville"/>
+  <item id="1120523976" name="Harrisville Station Plaza"/>
+  <item id="2437443928" name="t201g00"/>
+  <item id="2214452918" name="t202g00"/>
+  <item id="211765729" name="t206g00"/>
+  <item id="3605531528" name="t231g00"/>
+  <item id="3294471270" name="t232g00"/>
+  <item id="1192333893" name="Southmond"/>
+  <item id="1436827051" name="Northbeech"/>
+  <item id="3977796302" name="East Pine"/>
+  <item id="1892639351" name="Hazeltine Mansion"/>
+  <item id="3362981138" name="Secret Forest Base"/>
+  <item id="3670452988" name="Meadowbrooke Farm"/>
+  <item id="2054274037" name="Dukesville"/>
+  <item id="1757680667" name="Pecan Port"/>
+  <item id="2353873376" name="Cluvian Continent"/>
+  <item id="3771669389" name="Mirror of Truth"/>
+  <item id="247560865" name="?"/>
+  <item id="3886210964" name="?"/>
+  <item id="1782914666" name="Adams House - 1F"/>
+  <item id="4081864656" name="Adams House - 2F"/>
+  <item id="2219540294" name="Forester House - 1F"/>
+  <item id="439347941" name="Forester House - 2F"/>
+  <item id="72949693" name="Logan's House"/>
+  <item id="1483963624" name="Banter Bakery"/>
+  <item id="3061652932" name="Everymart Uptown"/>
+  <item id="1595848945" name="Springdale Community Center"/>
+  <item id="2970671581" name="Piggleston Bank"/>
+  <item id="1453913306" name="Lambert Post Office"/>
+  <item id="1097354665" name="Jungle Hunter"/>
+  <item id="389212719" name="Springdale Elementary - 1F South"/>
+  <item id="2386279317" name="Springdale Elementary - 1F North"/>
+  <item id="4181494531" name="Springdale Elementary - 2F"/>
+  <item id="274673206" name="Springdale Elementary - 3F"/>
+  <item id="1861112459" name="Springdale Elementary - Roof"/>
+  <item id="434725405" name="Springdale Elementary Gym"/>
+  <item id="2029040004" name="Deserted House"/>
+  <item id="1254544134" name="Shrine Behind the Waterfall"/>
+  <item id="3226261217" name="Bernstein House - 1F"/>
+  <item id="1497728859" name="Bernstein House - 2F"/>
+  <item id="776124365" name="Bernstein House - 3F"/>
+  <item id="2924533558" name="Megan's House"/>
+  <item id="4068127843" name="Timers &amp; More"/>
+  <item id="477418831" name="Candy Stop"/>
+  <item id="4111954042" name="Everymart Blossom Heights"/>
+  <item id="3949036834" name="Shoten Temple"/>
+  <item id="91218958" name="Prayer's Peak Tunnel"/>
+  <item id="3960226107" name="Chloro-Phil Good"/>
+  <item id="33693719" name="Springdale Hot Springs - Lobby"/>
+  <item id="2461875590" name="Springdale Hot Springs - &lt;CN&gt;Men&lt;/C&gt;"/>
+  <item id="3854175504" name="Springdale Hot Springs - &lt;CR&gt;Women&lt;/C&gt;"/>
+  <item id="3174769316" name="Byrd House - Mayan Room"/>
+  <item id="1395999624" name="Byrd House - Hidden Room"/>
+  <item id="3776004593" name="Wayfarer Manor - Room 101"/>
+  <item id="2518053223" name="Wayfarer Manor - Room 102"/>
+  <item id="253698269" name="Wayfarer Manor - Room 103"/>
+  <item id="2014842955" name="Wayfarer Manor - Room 104"/>
+  <item id="3866920424" name="Wayfarer Manor - Room 105"/>
+  <item id="2440803710" name="Wayfarer Manor - Room 201"/>
+  <item id="141747396" name="Wayfarer Manor - Room 202"/>
+  <item id="2138428498" name="Wayfarer Manor - Room 203"/>
+  <item id="4023044547" name="Wayfarer Manor - Room 204"/>
+  <item id="2563635541" name="Wayfarer Manor - VIP Room"/>
+  <item id="864546703" name="Springdale Underground Area"/>
+  <item id="1873644762" name="Seabreeze Tunnel"/>
+  <item id="2175004150" name="Frostia's Place"/>
+  <item id="1757432003" name="Arcadia Arcade"/>
+  <item id="2261658095" name="Nom Burger"/>
+  <item id="1635124456" name="Fortune Hospital - 1F"/>
+  <item id="28413197" name="Fortune Hospital - 2F"/>
+  <item id="1991687579" name="Foundation Academy"/>
+  <item id="2562251959" name="Everymart Downtown"/>
+  <item id="1910208898" name="Café Shanista"/>
+  <item id="2681542830" name="Springdale Sports Club - 1F"/>
+  <item id="258606399" name="Springdale Sports Club - 2F"/>
+  <item id="2020423081" name="Springdale Sports Club - 3F"/>
+  <item id="972499804" name="Belly Buster Curry House"/>
+  <item id="3623438960" name="Tortoise Camera Shop"/>
+  <item id="1050341189" name="Sunset Mall - B1"/>
+  <item id="3499396713" name="Sunset Mall - 1F"/>
+  <item id="925672302" name="Sunset Mall - Dolphin Cafe"/>
+  <item id="552344093" name="Springdale Business Tower - 1F"/>
+  <item id="3470949169" name="Springdale Business Tower - 7F"/>
+  <item id="662822404" name="Sumptuous Sukiyaki"/>
+  <item id="197216734" name="Springdale Central Station"/>
+  <item id="2685852457" name="Springdale Flower Road"/>
+  <item id="3608275903" name="Settle In Bookstore"/>
+  <item id="958368403" name="North Wind Ramen"/>
+  <item id="3497799590" name="Everymart Shopper's Row"/>
+  <item id="1047678602" name="Sun Pavilion"/>
+  <item id="3653919629" name="Toys iZ We"/>
+  <item id="3456817918" name="Mary's Coin Laundry"/>
+  <item id="537181138" name="Superior Style"/>
+  <item id="3378978535" name="Whatta Find"/>
+  <item id="661225419" name="Sushi Springdale"/>
+  <item id="3234943692" name="Tempura Tempest"/>
+  <item id="4153550547" name="Archer House - 1F"/>
+  <item id="1855682409" name="Archer House - 2F"/>
+  <item id="4043301578" name="Stone House"/>
+  <item id="519144422" name="Amy's House - 1F"/>
+  <item id="4182355681" name="Amy's House - 2F"/>
+  <item id="2576230148" name="Lina's House"/>
+  <item id="4001961874" name="Thomas House"/>
+  <item id="8877758" name="Breezy Hills Apartments - Entrance"/>
+  <item id="3924087691" name="Breezy Hills Apartments - 7F"/>
+  <item id="3315876945" name="Everymart Breezy Hills"/>
+  <item id="732571005" name="Trophy Room"/>
+  <item id="2330317462" name="Wisteria Gardens Parking"/>
+  <item id="334267180" name="Wisteria Gardens Entrance"/>
+  <item id="2374506127" name="Stonewood House"/>
+  <item id="1328431542" name="Excellent Tower - Entrance"/>
+  <item id="3592884236" name="Excellent Tower - Elevator"/>
+  <item id="2703237274" name="Excellent Tower - Observation Deck"/>
+  <item id="390943200" name="Next HarMEOWny Theater - Entrance"/>
+  <item id="2386821210" name="Next HarMEOWny Theater - Stage"/>
+  <item id="270571001" name="AnimeChum"/>
+  <item id="4264490197" name="Maid in Heaven"/>
+  <item id="429316562" name="Everymart Sparkopolis"/>
+  <item id="240541857" name="&lt;CNAME&gt; Detective Agency"/>
+  <item id="3763863949" name="Soba Sensation"/>
+  <item id="277171466" name="Rolling Waves Meeting Hall"/>
+  <item id="4270533670" name="Rusty's Mart"/>
+  <item id="2123975901" name="Deserted House"/>
+  <item id="1437867806" name="Sea"/>
+  <item id="770008250" name="Grandma's House"/>
+  <item id="3286959510" name="Harrisville School"/>
+  <item id="713597091" name="Mountain Market"/>
+  <item id="982028249" name="BBQ - Adams House - 1F"/>
+  <item id="2743197283" name="BBQ - Adams House - 2F"/>
+  <item id="3565612789" name="Suspicious Room"/>
+  <item id="3555404524" name="BBQ - Forester House - 1F"/>
+  <item id="1129592701" name="BBQ - Forester House - 2F"/>
+  <item id="596885144" name="Margarita's"/>
+  <item id="3449675700" name="House of Boxes"/>
+  <item id="146730331" name="Acornia Bank"/>
+  <item id="3870329975" name="Skycutter Post Office"/>
+  <item id="1207925660" name="Southmond School"/>
+  <item id="3740674598" name="Southmond School - West Building"/>
+  <item id="2851150512" name="Southmond School - East Building"/>
+  <item id="1083359109" name="Southmond School - Cafeteria"/>
+  <item id="675094583" name="Everymart Northbeech"/>
+  <item id="3325247771" name="Springdale Trading - St. Peanutsburg"/>
+  <item id="793830446" name="Bon Voyage Boats"/>
+  <item id="3244197122" name="Miracle Circus"/>
+  <item id="652650501" name="Star Burger"/>
+  <item id="824578422" name="Tinker's Toy Town"/>
+  <item id="3743969370" name="Sunrise Sushi"/>
+  <item id="910939503" name="Amore Pizza"/>
+  <item id="436945589" name="Warehouse No. 3 Marketplace"/>
+  <item id="51409908" name="City Hall - 1F"/>
+  <item id="2585338446" name="City Hall - 2F"/>
+  <item id="3978171096" name="City Hall - Rooftop"/>
+  <item id="2424391506" name="East Pine Church"/>
+  <item id="2123310718" name="Bob's Watches"/>
+  <item id="2548859723" name="Steak and Pine 29"/>
+  <item id="2044912231" name="Old House"/>
+  <item id="1737758527" name="Tempura Temptations"/>
+  <item id="2398597642" name="Succulent Sukiyaki"/>
+  <item id="2984038466" name="Wayfarer Manor - Room 101"/>
+  <item id="3336298708" name="Wayfarer Manor - Room 102"/>
+  <item id="1607643502" name="Wayfarer Manor - Room 103"/>
+  <item id="685081080" name="Wayfarer Manor - Room 104"/>
+  <item id="3065058395" name="Wayfarer Manor - Room 105"/>
+  <item id="3249939661" name="Wayfarer Manor - Room 201"/>
+  <item id="1488942455" name="Wayfarer Manor - Room 202"/>
+  <item id="800605665" name="Wayfarer Manor - Room 203"/>
+  <item id="3204929648" name="Wayfarer Manor - Room 204"/>
+  <item id="3355470054" name="Wayfarer Manor - Room 205"/>
+  <item id="3052017806" name="Secret Base"/>
+  <item id="132687465" name="Outlaw Hotel"/>
+  <item id="3924215621" name="Sheriff's Office"/>
+  <item id="8741488" name="Wild Hunters"/>
+  <item id="3698211210" name="Club Koma"/>
+  <item id="845174950" name="Enma Villa"/>
+  <item id="3674471827" name="Yopple Store"/>
+  <item id="890084543" name="Phoenix Sushi"/>
+  <item id="3535122872" name="Serenity Tempura"/>
+  <item id="2151963359" name="Blasters House - B1"/>
+  <item id="4148390473" name="Blasters House"/>
+  <item id="3998767880" name="Haven Sukiyaki"/>
+  <item id="4057226364" name="Cluvian Continent - Blasters Camp"/>
+  <item id="3450706840" name="Ambrosia Pavilion - Entrance"/>
+  <item id="1420085794" name="Yo-kai World - Entry Hall"/>
+  <item id="1405685307" name="Ambrosia Pavilion"/>
+  <item id="3279295402" name="Treasure Ship of the Seven Gods"/>
+  <item id="2616671262" name="Yopple HQ - Garden"/>
+  <item id="1979276594" name="Yopple HQ - Lobby"/>
+  <item id="2627401735" name="Yopple HQ - CEO's Office"/>
+  <item id="1922341163" name="Yopple HQ - Yo-kai Watch Center"/>
+  <item id="2502734892" name="Yopple HQ - Meeting Room"/>
+  <item id="2196507999" name="Yopple HQ - Lab"/>
+  <item id="1826778227" name="Yopple HQ - Assembly Line"/>
+  <item id="2239875398" name="Yopple HQ - Fighting Room"/>
+  <item id="1804576874" name="Yopple HQ - Cafeteria"/>
+  <item id="2352448877" name="Yopple HQ - The Fish Tank"/>
+  <item id="3568741081" name="Bada-Bing Tower - Lobby"/>
+  <item id="985189365" name="Bada-Bing Tower - Elevator"/>
+  <item id="3554373312" name="Dangerous Floor"/>
+  <item id="1037373420" name="Dream Floor - Moon"/>
+  <item id="3664585451" name="Dream Floor - Fire"/>
+  <item id="4288411930" name="Dream Floor - Water"/>
+  <item id="295016502" name="Dream Floor - Woods"/>
+  <item id="2414939541" name="Dream Floor - Woods"/>
+  <item id="4176887043" name="Dream Floor - Gold"/>
+  <item id="1644129465" name="Dream Floor - Gold"/>
+  <item id="385375279" name="Dream Floor - Earth"/>
+  <item id="4047532328" name="Dream Floor - Sun"/>
+  <item id="3867199579" name="Ghoulfather's Office"/>
+  <item id="143567223" name="UFO Interior"/>
+  <item id="2905004746" name="t100d00"/>
+  <item id="3659655772" name="Springdale Sewers - Mouse Alley"/>
+  <item id="1126743014" name="Springdale Sewers - Secret Space"/>
+  <item id="875531120" name="Springdale Sewers - Cat Square"/>
+  <item id="2857049811" name="Springdale Sewers - Neon Town"/>
+  <item id="3712757317" name="Springdale Sewers - Main Street"/>
+  <item id="1145405439" name="Springdale Sewers - School Route"/>
+  <item id="859983721" name="Springdale Sewers - Kaos March Mural"/>
+  <item id="2751288056" name="Springdale Sewers - Bracing Path"/>
+  <item id="3573178990" name="Springdale Sewers - Breezy Hills Byway"/>
+  <item id="3023956875" name="Springdale Sewers - Frogetmenot's Inn"/>
+  <item id="3275414301" name="Sparkopolis Sewers - Meeting Place"/>
+  <item id="1513327271" name="Springdale Sewers - Yo-kai Parade Mural"/>
+  <item id="758430257" name="Springdale Sewers - Downtown Westside"/>
+  <item id="1654492473" name="Shady Back Alley"/>
+  <item id="4220836995" name="Lonely Waterway"/>
+  <item id="2358504469" name="The Catwalk"/>
+  <item id="1710246176" name="Desolate Lane"/>
+  <item id="1881678551" name="Mt. Wildwood - Mountain Path"/>
+  <item id="3911283565" name="Mt. Wildwood - Summit"/>
+  <item id="2653307899" name="Jumbo Slider"/>
+  <item id="1527083284" name="Abandoned Tunnel West"/>
+  <item id="3255574702" name="Abandoned Tunnel East"/>
+  <item id="3365160370" name="Tucked Away Lot"/>
+  <item id="647636126" name="Hidden Side Street"/>
+  <item id="3515839731" name="Secret Byway"/>
+  <item id="3820557937" name="Old Mansion - Main House"/>
+  <item id="230127453" name="Old Mansion - Side House"/>
+  <item id="3839152744" name="Old Mansion - Main House Attic"/>
+  <item id="2111669202" name="Old Mansion - Side House Attic"/>
+  <item id="1430486283" name="Academy Shortcut"/>
+  <item id="3142392871" name="Behind Frostia's Place"/>
+  <item id="1378793746" name="Delivery Bay"/>
+  <item id="3156269118" name="Springdale Underground Parking"/>
+  <item id="1280855114" name="Springdale Business Tower - 4F"/>
+  <item id="2723556710" name="Springdale Business Tower - 13F"/>
+  <item id="1261799507" name="Springdale Business Tower - East Stairs"/>
+  <item id="2772167039" name="Springdale Business Tower - West Stairs"/>
+  <item id="1735729033" name="Springdale Business Tower - CEO's Off."/>
+  <item id="3992918638" name="Shopping Street Narrows"/>
+  <item id="4108593967" name="Tranquility Apts. - A-102"/>
+  <item id="1844279957" name="Tranquility Apts. - A-104"/>
+  <item id="451561987" name="Tranquility Apts. - A-201"/>
+  <item id="2223955872" name="Tranquility Apts. - A-303"/>
+  <item id="4085903158" name="Tranquility Apts. - B-202"/>
+  <item id="1786822284" name="Tranquility Apts. - B-204"/>
+  <item id="495423002" name="Tranquility Apts. - B-301"/>
+  <item id="2369295243" name="Tranquility Apts. - B-302"/>
+  <item id="4198474525" name="Tranquility Apts. - C-102"/>
+  <item id="2832091258" name="Tranquility Apts. - B-102"/>
+  <item id="3754522860" name="Tranquility Apts. - B-101"/>
+  <item id="1186998614" name="Tranquility Apts. - C-104"/>
+  <item id="835131840" name="Tranquility Apts. - A-202"/>
+  <item id="2946731107" name="Tranquility Apts. - A-204"/>
+  <item id="3634674933" name="Tranquility Apts. - A-103"/>
+  <item id="1101917519" name="Tranquility Apts. - C-201"/>
+  <item id="917167577" name="Tranquility Apts. - A-302"/>
+  <item id="2786443336" name="Tranquility Apts. - B-303"/>
+  <item id="3507679454" name="Tranquility Apts. - C-203"/>
+  <item id="2983557435" name="Tranquility Apts. - C-204"/>
+  <item id="3335670189" name="Tranquility Apts. - C-301"/>
+  <item id="1608194071" name="Tranquility Apts. - C-302"/>
+  <item id="685516929" name="Tranquility Apts. - B-301 (Past)"/>
+  <item id="3065560354" name="Tranquility Apts. - B-302 (Past)"/>
+  <item id="3250556340" name="Tranquility Apts. - B-303 (Past)"/>
+  <item id="1488378894" name="Tranquility Apts. - B-304 (Past)"/>
+  <item id="2308169578" name="Nocturne Hospital - 1F"/>
+  <item id="1738391110" name="Nocturne Hospital - 2F"/>
+  <item id="2399017843" name="Nocturne Hospital - 3F"/>
+  <item id="1626372703" name="Hospital - Basement"/>
+  <item id="4031735758" name="Hospital - Basement Lab"/>
+  <item id="3864102081" name="Rugged Path"/>
+  <item id="3563578947" name="Gourd Pond Museum - 1F"/>
+  <item id="1299101689" name="Gourd Pond Museum - 2F"/>
+  <item id="979994479" name="Gourd Pond Museum - Vault"/>
+  <item id="529908403" name="Shady Parking Lot"/>
+  <item id="4053509023" name="Junk Alley"/>
+  <item id="3190985879" name="Hazy Manor"/>
+  <item id="1346172347" name="Hazy Manor"/>
+  <item id="3110031502" name="Lotus Lake"/>
+  <item id="1464938914" name="Cape of Evening Calm"/>
+  <item id="2968067237" name="Forevermore Falls"/>
+  <item id="2501887828" name="Classroom"/>
+  <item id="2064754296" name="Blind Alley"/>
+  <item id="2456945485" name="Requiem Riverside"/>
+  <item id="4211328643" name="t109d30"/>
+  <item id="408804953" name="Briny Grotto"/>
+  <item id="4132683637" name="Hidden Workshop"/>
+  <item id="21425944" name="Seaside Cave"/>
+  <item id="4014509620" name="Dragon Heights"/>
+  <item id="624818153" name="Rice Paddy Path"/>
+  <item id="3409155781" name="Fullface Rock"/>
+  <item id="1431765862" name="Cicada Canyon"/>
+  <item id="575681520" name="Mt. Middleton Summit"/>
+  <item id="931682311" name="Alley off the Plaza"/>
+  <item id="2330754031" name="River Tootin Tributary"/>
+  <item id="2482457262" name="Remote Relic"/>
+  <item id="2113481602" name="Grumbler's Grotto - Entrance"/>
+  <item id="2493157047" name="Solitary Sanctuary"/>
+  <item id="2056581019" name="Forest Islet"/>
+  <item id="2636956316" name="Secret Cavern"/>
+  <item id="844110986" name="Garden Grill"/>
+  <item id="3697180070" name="Denton's Repairs"/>
+  <item id="6716936" name="Scrapyard"/>
+  <item id="551924580" name="Hip &amp; Hopping Alley"/>
+  <item id="3471561288" name="Warehouse No. 2"/>
+  <item id="315871718" name="Pearly Chamber of Whimsy"/>
+  <item id="2360820805" name="Whimsical Shopping - 1st Room"/>
+  <item id="4222645459" name="Whimsical Shopping - 2nd Room"/>
+  <item id="1796172098" name="Whimsical Shopping - 3rd Room"/>
+  <item id="197714087" name="Whimsical Work - 1st Room"/>
+  <item id="2462167325" name="Whimsical Work - 2nd Room"/>
+  <item id="3854991755" name="Whimsical Work - 3rd Room"/>
+  <item id="2511107332" name="Whimsical Quiz - 1st Room"/>
+  <item id="3802875282" name="Whimsical Quiz - 2nd Room"/>
+  <item id="1913935875" name="Whimsical Quiz - 3rd Room"/>
+  <item id="85158037" name="Whimsical Quiz - Punishment Room"/>
+  <item id="1149859424" name="Whimsical Drilling - 1st Room"/>
+  <item id="3716163546" name="Whimsical Drilling - 2nd Room"/>
+  <item id="2860980044" name="Whimsical Drilling - 3rd Room"/>
+  <item id="887325423" name="Whimsical Drilling - 4th Room"/>
+  <item id="2556023809" name="Hotel - Rear Byway"/>
+  <item id="2168644928" name="Phantomart"/>
+  <item id="1867285612" name="Phantomart - Storeroom"/>
+  <item id="93252792" name="Hazeltine Mansion - Undergr. Passage"/>
+  <item id="3951070612" name="Hazeltine Mansion - Entrance Hall"/>
+  <item id="48441505" name="Hazeltine Mansion - 1F Hallway"/>
+  <item id="3974973837" name="Hazeltine Mansion - Dining Room"/>
+  <item id="190145674" name="Hazeltine Mansion - Judgement Hallway"/>
+  <item id="479583737" name="Hazeltine Mansion - Kitchen"/>
+  <item id="4070292693" name="Hazeltine Mansion - Bathroom"/>
+  <item id="469244384" name="Hazeltine Mansion - 2F Hallway"/>
+  <item id="4126570700" name="Hazeltine Mansion - Archive"/>
+  <item id="307123659" name="Hazeltine Mansion"/>
+  <item id="2754198172" name="Gloombell Forest"/>
+  <item id="1244126128" name="Mushroom Park"/>
+  <item id="2399463775" name="Grumbler's Grotto"/>
+  <item id="1628080243" name="Grumbler's Grotto"/>
+  <item id="2645640881" name="Meadowbrooke Farm"/>
+  <item id="2016871852" name="Hopper's Gorge"/>
+  <item id="1630287085" name="Hopper's Gorge - Condor Canyon"/>
+  <item id="1023825848" name="Tower of Zenlightenment - 1st Trial"/>
+  <item id="2752448002" name="Tower of Zenlightenment - 2nd Trial"/>
+  <item id="3540530836" name="Tower of Zenlightenment - 3rd Trial"/>
+  <item id="1298965303" name="Tower of Zenlightenment - 4th Trial"/>
+  <item id="980128673" name="Tower of Zenlightenment - 5th Trial"/>
+  <item id="2741158427" name="Tower of Zenlightenment - 6th Trial"/>
+  <item id="3563451021" name="Tower of Zenlightenment - 7th Trial"/>
+  <item id="1155198748" name="Tower of Zenlightenment - 8th Trial"/>
+  <item id="870178698" name="Tower of Zenlightenment - 9th Trial"/>
+  <item id="1394234991" name="Tower of Zenlightenment - Final Trial"/>
+  <item id="1801252926" name="Ascension Ground"/>
+  <item id="4178366255" name="Banquet Room"/>
+  <item id="3380380910" name="Cluvian Keyhole - Entrance"/>
+  <item id="1349899604" name="Tomb of King Clupharaon - Entr."/>
+  <item id="661841346" name="Temple of Clusis - Entrance"/>
+  <item id="3105255521" name="Statue of Clunubis - Entrance"/>
+  <item id="3457237239" name="Pyramid of Clu - Entrance"/>
+  <item id="1461195085" name="Mt. Cluvimpus - Entrance"/>
+  <item id="538911195" name="Cluphinx - Entrance"/>
+  <item id="2963291210" name="Tower of Clu - Entrance"/>
+  <item id="3349613788" name="Enma Palace - Entrance"/>
+  <item id="1232004117" name="Sky Garden - Entrance"/>
+  <item id="2281445790" name="Suspicious Room"/>
+  <item id="1061191419" name="t491d01"/>
+  <item id="4095520094" name="t591d01"/>
+  <item id="3869835952" name="t592d01"/>
+  <item id="2141213450" name="t592d02"/>
+  <item id="145187740" name="t592d03"/>
+  <item id="2529424959" name="t592d04"/>
+  <item id="3787769513" name="t592d05"/>
+  <item id="2026739475" name="t592d06"/>
+  <item id="264939397" name="t592d07"/>
+  <item id="2675292692" name="t592d08"/>
+  <item id="2293564263" name="t592d10"/>
+  <item id="4289868785" name="t592d11"/>
+  <item id="1723556427" name="t592d12"/>
+  <item id="3980996593" name="t401d99"/>
+  <item id="857051418" name="t491o01"/>
+  <item id="4165550783" name="t591o01"/>
+  <item id="1631589125" name="t591o02"/>
+  <item id="3942444369" name="t592o01"/>
+  <item id="1945484523" name="t592o02"/>
+  <item id="83004541" name="t592o03"/>
+  <item id="2593528286" name="t592o04"/>
+  <item id="3985713480" name="t592o05"/>
+  <item id="1956149490" name="t592o06"/>
+  <item id="60770404" name="t592o07"/>
+  <item id="2468369909" name="t592o08"/>
+  <item id="3827787107" name="t592o09"/>
+  <item id="2229333126" name="Enma Palace"/>
+  <item id="4092058640" name="t592o11"/>
+  <item id="1794018730" name="t592o12"/>
+  <item id="3276300201" name="Springdale Central"/>
+  <item id="1514212883" name="Green St (Sparkopolis)"/>
+  <item id="759578245" name="Hibarly Hills"/>
+  <item id="3005393702" name="Petal Peak"/>
+  <item id="3290799024" name="Factory Row"/>
+  <item id="1563216394" name="Sweet Meadow"/>
+  <item id="707525276" name="Fortune Place"/>
+  <item id="3130320653" name="Skybridge"/>
+  <item id="3449018267" name="Dreamer's Field"/>
+  <item id="2907987582" name="Ridgemont"/>
+  <item id="3662900968" name="Bayside"/>
+  <item id="1129987922" name="San Fantastico"/>
+  <item id="878514116" name="Greenfields"/>
+  <item id="2855901799" name="Temple Park"/>
+  <item id="3711871729" name="Dingle Falls"/>
+  <item id="1144519499" name="Harrisville"/>
+  <item id="858835933" name="Spring"/>
+  <item id="2744112716" name="Sunshine"/>
+  <item id="3565741786" name="Little Haven"/>
+  <item id="2256080317" name="Scarfit Downs"/>
+  <item id="4051582251" name="Cherry Hill"/>
+  <item id="1752657041" name="Whimsy Valley"/>
+  <item id="3051879916" name="t001t01"/>
+  <item id="1542036672" name="t001t03"/>
+  <item id="3314354531" name="t001t04"/>
+  <item id="1230779182" name="t002t03"/>
+  <item id="3610814093" name="t002t04"/>
+  <item id="2969598394" name="t100t00"/>
+  <item id="2742496243" name="t100w011"/>
+  <item id="2287630384" name="t100w021"/>
+  <item id="2436974961" name="t100w031"/>
+  <item id="3724599222" name="t100w041"/>
+  <item id="3340496631" name="t100w051"/>
+  <item id="3963010356" name="t100w061"/>
+  <item id="4113402997" name="t100w071"/>
+  <item id="1924501690" name="t100w081"/>
+  <item id="1806606843" name="t100w091"/>
+  <item id="3148771461" name="t100w101"/>
+  <item id="2729787844" name="t100w111"/>
+  <item id="2308444679" name="t100w121"/>
+  <item id="2424513350" name="t100w131"/>
+  <item id="3754079617" name="t100w141"/>
+  <item id="3336144064" name="t100w151"/>
+  <item id="3992246019" name="t100w161"/>
+  <item id="4109362754" name="t100w171"/>
+  <item id="1937242765" name="t100w181"/>
+  <item id="1785514956" name="t100w191"/>
+  <item id="3119042268" name="t100w201"/>
+  <item id="2700345245" name="t100w211"/>
+  <item id="3652679827" name="t102w011"/>
+  <item id="290977763" name="t107w011"/>
+  <item id="411267309" name="t131w011"/>
+  <item id="4048487508" name="t400w011"/>
+  <item id="3663878039" name="t400w021"/>
+  <item id="3279513302" name="t400w031"/>
+  <item id="2352541713" name="t400w041"/>
+  <item id="355574187" name="t400w042"/>
+  <item id="2502148432" name="t400w051"/>
+  <item id="3188626067" name="t400w061"/>
+  <item id="2803213266" name="t400w071"/>
+  <item id="546160413" name="t400w081"/>
+  <item id="3112496807" name="t400w082"/>
+  <item id="966168156" name="t400w091"/>
+  <item id="3918946082" name="t400w101"/>
+  <item id="4035800675" name="t400w111"/>
+  <item id="945818103" name="t001w011"/>
+  <item id="3425644004" name="t401w011"/>
+  <item id="981115936" name="t107w021"/>
+  <item id="2907447854" name="t001b01"/>
+  <item id="876966804" name="t001b02"/>
+  <item id="1128416002" name="t001b03"/>
+  <item id="3025605487" name="t001b11"/>
+  <item id="761152213" name="t001b12"/>
+  <item id="1515811395" name="t001b13"/>
+  <item id="3006977910" name="t001b15"/>
+  <item id="2675589292" name="t001b21"/>
+  <item id="1903436160" name="t001b23"/>
+  <item id="3493582443" name="t001b51"/>
+  <item id="1043707719" name="t001b53"/>
+  <item id="3612742258" name="t001b55"/>
+  <item id="962098014" name="t001b57"/>
+  <item id="3739246169" name="t001b59"/>
+  <item id="4212557224" name="t001b61"/>
+  <item id="3792549097" name="t001b71"/>
+  <item id="201577925" name="t001b73"/>
+  <item id="3848302832" name="t001b75"/>
+  <item id="2087264586" name="t001b76"/>
+  <item id="191762908" name="t001b77"/>
+  <item id="2614168653" name="t001b78"/>
+  <item id="3973463259" name="t001b79"/>
+  <item id="311597232" name="t001b80"/>
+  <item id="1704306726" name="t001b81"/>
+  <item id="3220803008" name="t002b01"/>
+  <item id="3735852782" name="t100b01"/>
+  <item id="1202046804" name="t100b02"/>
+  <item id="2230750825" name="t100b02a"/>
+  <item id="503308243" name="t100b02b"/>
+  <item id="815986626" name="t100b03"/>
+  <item id="2932236897" name="t100b04"/>
+  <item id="3653325559" name="t100b05"/>
+  <item id="1086849869" name="t100b06"/>
+  <item id="936326107" name="t100b07"/>
+  <item id="3969578092" name="t100b21"/>
+  <item id="2891909572" name="t100b21a"/>
+  <item id="894851198" name="t100b21b"/>
+  <item id="1972610518" name="t100b22"/>
+  <item id="1769749291" name="t100b22c"/>
+  <item id="43291968" name="t100b23"/>
+  <item id="1885801066" name="t100b23c"/>
+  <item id="2632974563" name="t100b24"/>
+  <item id="1059495085" name="t100b24c"/>
+  <item id="100225369" name="t100b27"/>
+  <item id="3795942494" name="t100b29"/>
+  <item id="3133166570" name="t100b41"/>
+  <item id="2749063851" name="t100b51"/>
+  <item id="986854161" name="t100b52"/>
+  <item id="1305805703" name="t100b53"/>
+  <item id="2763433650" name="t100b55"/>
+  <item id="1253623710" name="t100b57"/>
+  <item id="2902518425" name="t100b59"/>
+  <item id="2297835880" name="t100b61"/>
+  <item id="301949138" name="t100b62"/>
+  <item id="1727549508" name="t100b63"/>
+  <item id="4171023847" name="t100b64"/>
+  <item id="2409362801" name="t100b65"/>
+  <item id="378709195" name="t100b66"/>
+  <item id="1637192797" name="t100b67"/>
+  <item id="4046096844" name="t100b68"/>
+  <item id="2251143514" name="t100b69"/>
+  <item id="3874107583" name="t100b70"/>
+  <item id="2448228393" name="t100b71"/>
+  <item id="149180819" name="t100b72"/>
+  <item id="2145607941" name="t100b73"/>
+  <item id="3783783590" name="t100b74"/>
+  <item id="2525021232" name="t100b75"/>
+  <item id="260674954" name="t100b76"/>
+  <item id="2022614300" name="t100b77"/>
+  <item id="3895572621" name="t100b78"/>
+  <item id="2671151131" name="t100b79"/>
+  <item id="1634872432" name="t100b80"/>
+  <item id="376773862" name="t100b81"/>
+  <item id="2407288156" name="t100b82"/>
+  <item id="1712386443" name="t101b01"/>
+  <item id="4279869489" name="t101b02"/>
+  <item id="2283704487" name="t101b03"/>
+  <item id="1411814153" name="t101b21"/>
+  <item id="3123245605" name="t101b23"/>
+  <item id="1397446416" name="t101b25"/>
+  <item id="3175429692" name="t101b27"/>
+  <item id="771369901" name="t101b28"/>
+  <item id="1295884872" name="t101b31"/>
+  <item id="3560240114" name="t101b32"/>
+  <item id="1956994661" name="t102b01"/>
+  <item id="3987476447" name="t102b02"/>
+  <item id="2594914121" name="t102b03"/>
+  <item id="1841196836" name="t102b11"/>
+  <item id="1184054503" name="t102b21"/>
+  <item id="2828885451" name="t102b23"/>
+  <item id="3424205056" name="t103b01"/>
+  <item id="571955244" name="t103b03"/>
+  <item id="3413441817" name="t103b05"/>
+  <item id="628792373" name="t103b07"/>
+  <item id="3267539250" name="t103b09"/>
+  <item id="4264516482" name="t103b21"/>
+  <item id="270613166" name="t103b23"/>
+  <item id="1372455353" name="t104b01"/>
+  <item id="3217055893" name="t104b03"/>
+  <item id="1677222715" name="t104b21"/>
+  <item id="2381709847" name="t104b23"/>
+  <item id="1687529250" name="t104b25"/>
+  <item id="2325464590" name="t104b27"/>
+  <item id="1831070473" name="t104b29"/>
+  <item id="2061718138" name="t104b31"/>
+  <item id="2498573142" name="t104b33"/>
+  <item id="2106496611" name="t104b35"/>
+  <item id="2474702671" name="t104b37"/>
+  <item id="3916588764" name="t105b01"/>
+  <item id="125569008" name="t105b03"/>
+  <item id="3678667870" name="t105b21"/>
+  <item id="894068082" name="t105b23"/>
+  <item id="3693723719" name="t105b25"/>
+  <item id="4224174386" name="t106b01"/>
+  <item id="3388058544" name="t106b21"/>
+  <item id="671074972" name="t106b23"/>
+  <item id="3505036017" name="t106b31"/>
+  <item id="1055194077" name="t106b33"/>
+  <item id="1132179031" name="t107b01"/>
+  <item id="2910179195" name="t107b03"/>
+  <item id="454606337" name="t108b01"/>
+  <item id="4111916845" name="t108b03"/>
+  <item id="477461016" name="t108b05"/>
+  <item id="4068154164" name="t108b07"/>
+  <item id="365114931" name="t108b09"/>
+  <item id="2745489764" name="t109b01"/>
+  <item id="2442312678" name="t109b21"/>
+  <item id="483435243" name="t121b01"/>
+  <item id="4074685383" name="t121b03"/>
+  <item id="55269055" name="t121b03c"/>
+  <item id="465397490" name="t121b05"/>
+  <item id="786874473" name="t121b21"/>
+  <item id="3236471109" name="t121b23"/>
+  <item id="939389224" name="t121b31"/>
+  <item id="565218139" name="t131b01"/>
+  <item id="327608793" name="t131b21"/>
+  <item id="4253583605" name="t131b23"/>
+  <item id="855975093" name="t132b01"/>
+  <item id="3708503449" name="t132b03"/>
+  <item id="2388723549" name="t400b01"/>
+  <item id="392713959" name="t400b02"/>
+  <item id="920477752" name="t401b01"/>
+  <item id="3637707028" name="t401b03"/>
+  <item id="833659937" name="t401b05"/>
+  <item id="3753821453" name="t401b07"/>
+  <item id="801526137" name="t401b11"/>
+  <item id="82510522" name="t401b21"/>
+  <item id="3940901782" name="t401b23"/>
+  <item id="610848726" name="t402b01"/>
+  <item id="3395727098" name="t402b03"/>
+  <item id="587533263" name="t402b05"/>
+  <item id="3440077539" name="t402b07"/>
+  <item id="716392420" name="t402b09"/>
+  <item id="375303508" name="t402b21"/>
+  <item id="2631182515" name="t403b01"/>
+  <item id="1926941087" name="t403b03"/>
+  <item id="2934098481" name="t403b21"/>
+  <item id="1089252125" name="t403b23"/>
+  <item id="2844724776" name="t403b25"/>
+  <item id="17010698" name="t404b01"/>
+  <item id="4010668326" name="t404b03"/>
+  <item id="107893779" name="t404b05"/>
+  <item id="3898619199" name="t404b07"/>
+  <item id="2341049837" name="t405b21"/>
+  <item id="1703408833" name="t405b23"/>
+  <item id="2363773428" name="t405b25"/>
+  <item id="2869581953" name="t406b01"/>
+  <item id="196954504" name="t411b01"/>
+  <item id="965421834" name="t411b21"/>
+  <item id="546314827" name="t411b31"/>
+  <item id="3113831409" name="t411b32"/>
+  <item id="3466492775" name="t411b33"/>
+  <item id="1358622404" name="t411b34"/>
+  <item id="670948946" name="t411b35"/>
+  <item id="3203698664" name="t411b36"/>
+  <item id="3388194686" name="t411b37"/>
+  <item id="1498194671" name="t411b38"/>
+  <item id="776704633" name="t411b39"/>
+  <item id="416726042" name="t411b40"/>
+  <item id="420013670" name="t412b01"/>
+  <item id="2299147268" name="e101g003"/>
+  <item id="1617531185" name="e101g005"/>
+  <item id="2486868012" name="e104d331"/>
+  <item id="3278712098" name="e100g002"/>
+  <item id="1804363269" name="e200g001"/>
+  <item id="4068816831" name="e200g002"/>
+  <item id="2239891241" name="e200g003"/>
+  <item id="468095626" name="e200g004"/>
+  <item id="1922520900" name="e200g011"/>
+  <item id="3953002238" name="e200g012"/>
+  <item id="2627286632" name="e200g013"/>
+  <item id="50176971" name="e200g014"/>
+  <item id="1979355997" name="e200g015"/>
+  <item id="3975398119" name="e200g016"/>
+  <item id="2616521329" name="e200g017"/>
+  <item id="189525984" name="e200g018"/>
+  <item id="2085412726" name="e200g019"/>
+  <item id="1458327477" name="e201g001"/>
+  <item id="3487899151" name="e201g002"/>
+  <item id="3101830809" name="e201g003"/>
+  <item id="1367444396" name="e201g005"/>
+  <item id="3364411926" name="e201g006"/>
+  <item id="3213879936" name="Uptown - Triangle Way"/>
+  <item id="1480050567" name="e201g009"/>
+  <item id="290207077" name="e202g001"/>
+  <item id="741088469" name="e203g001"/>
+  <item id="3257040377" name="e203g003"/>
+  <item id="725735628" name="e203g005"/>
+  <item id="3310336480" name="e203g007"/>
+  <item id="2741823861" name="e205g001"/>
+  <item id="1298303065" name="e205g003"/>
+  <item id="2751540588" name="e205g005"/>
+  <item id="3838612389" name="e206g001"/>
+  <item id="180548233" name="e206g003"/>
+  <item id="2698032544" name="e210g001"/>
+  <item id="1323226252" name="e210g003"/>
+  <item id="2814210489" name="e210g005"/>
+  <item id="3117122785" name="e210g011"/>
+  <item id="549639515" name="e210g012"/>
+  <item id="994178998" name="e250g001"/>
+  <item id="618452130" name="e260g002"/>
+  <item id="1406919732" name="e260g003"/>
+  <item id="3451875735" name="e260g004"/>
+  <item id="3132637441" name="e260g005"/>
+  <item id="598806715" name="e260g006"/>
+  <item id="1421221933" name="e260g007"/>
+  <item id="3288939964" name="e260g008"/>
+  <item id="3004042538" name="e260g009"/>
+  <item id="3553199311" name="e260g010"/>
+  <item id="1988712125" name="e270g001"/>
+  <item id="2558998417" name="e270g003"/>
+  <item id="1910805156" name="e270g005"/>
+  <item id="2682975112" name="e270g007"/>
+  <item id="3917509952" name="e301g011"/>
+  <item id="1888036090" name="e301g012"/>
+  <item id="126751852" name="e301g013"/>
+  <item id="3266127491" name="e301g021"/>
+  <item id="1537505081" name="e301g022"/>
+  <item id="748898223" name="e301g023"/>
+  <item id="2897291092" name="e301g030"/>
+  <item id="4213828325" name="e301g150"/>
+  <item id="1317508264" name="e301g180"/>
+  <item id="1287727857" name="e301g280"/>
+  <item id="2629958543" name="e301g310"/>
+  <item id="1502606417" name="e301g990"/>
+  <item id="2523310529" name="e302g060"/>
+  <item id="4148525632" name="e302g720"/>
+  <item id="2996486541" name="e302g950"/>
+  <item id="3589644378" name="e303g230"/>
+  <item id="2209286108" name="e303g250"/>
+  <item id="3514359016" name="e303g430"/>
+  <item id="3539732614" name="e303g630"/>
+  <item id="2769670601" name="e303g860"/>
+  <item id="1291333513" name="e304g200"/>
+  <item id="1353451597" name="e304g510"/>
+  <item id="3184324739" name="e305g480"/>
+  <item id="1405260207" name="e305g482"/>
+  <item id="1691801753" name="e305g910"/>
+  <item id="12197277" name="e305g950"/>
+  <item id="126536197" name="e306g020"/>
+  <item id="1221287106" name="e306g050"/>
+  <item id="939136734" name="e306g300"/>
+  <item id="1510693379" name="e307g660"/>
+  <item id="673899892" name="e306g610"/>
+  <item id="4184851366" name="e309g170"/>
+  <item id="2054857691" name="e309g780"/>
+  <item id="219484400" name="e310g150"/>
+  <item id="140117621" name="e310g650"/>
+  <item id="595023286" name="e310g660"/>
+  <item id="980182263" name="e310g670"/>
+  <item id="1844750662" name="e310g710"/>
+  <item id="1242260953" name="e311g500"/>
+  <item id="3283703786" name="Mysterious Ruins"/>
+  <item id="463638188" name="e360g001"/>
+  <item id="2192301846" name="e360g002"/>
+  <item id="4121751424" name="e360g003"/>
+  <item id="1808300579" name="e360g004"/>
+  <item id="483347125" name="e360g005"/>
+  <item id="2244352783" name="e360g006"/>
+  <item id="4072745881" name="e360g007"/>
+  <item id="1652438536" name="e360g008"/>
+  <item id="360253086" name="e360g009"/>
+  <item id="1975422843" name="e360g010"/>
+  <item id="45727725" name="e360g011"/>
+  <item id="2612063831" name="e360g012"/>
+  <item id="3971473089" name="e360g013"/>
+  <item id="1926450018" name="e360g014"/>
+  <item id="3956939480" name="e360g017"/>
+  <item id="2070218569" name="e360g018"/>
+  <item id="207763423" name="e360g019"/>
+  <item id="951691237" name="e360g360"/>
+  <item id="3202505950" name="e370g010"/>
+  <item id="3164922503" name="e370g310"/>
+  <item id="3455806897" name="e300g001"/>
+  <item id="1425161227" name="e300g002"/>
+  <item id="603262109" name="e300g003"/>
+  <item id="3180435774" name="e300g004"/>
+  <item id="1402992658" name="e300g006"/>
+  <item id="3571473648" name="e300g011"/>
+  <item id="1307118922" name="e300g012"/>
+  <item id="988691932" name="e300g013"/>
+  <item id="2760550527" name="e300g014"/>
+  <item id="2266694698" name="e300g920"/>
+  <item id="3954273234" name="testmap"/>
+  <item id="1133294214" name="testmappl"/>
+  <item id="520018797" name="testmappl02"/>
+  <item id="1777986555" name="testmappl03"/>
+  <item id="4154293848" name="testmappl04"/>
+  <item id="2157596366" name="testmappl05"/>
+  <item id="429072244" name="testmappl06"/>
+  <item id="1855205346" name="testmappl07"/>
+  <item id="4264243827" name="testmappl08"/>
+  <item id="2301362917" name="testmappl09"/>
+  <item id="3924527872" name="testmappl10"/>
+</items>

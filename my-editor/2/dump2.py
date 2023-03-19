@@ -919,6 +919,34 @@ items = {
 attitudes = ["","Grouchy","Logical","Careful","Gentle","Twisted","Helpful","Rough","Brainy","Calm","Tender","Cruel","Devoted"]
 
 #functions
+def get(read,place,length=1,integer=True,half=False):
+    finished = ""
+    if half:
+        return [int(f'{read[place]:08b}'[:4],2),int(f'{read[place]:08b}'[4:],2)] 
+    else:
+        if integer == None:
+            for i in read[place:place+length][-1::-1]:
+                finished += f'{i:08b}'
+            return finished
+        elif integer:
+            for i in read[place:place+length][-1::-1]:
+                finished += f'{i:08b}'
+            return int(finished,2)
+        else:
+            if read[place:place+length][0]==0:
+                return ""
+            for i in read[place:place+length][-1::-1]:
+                if not chr(i).isprintable(): #maybe broken
+                    break
+                finished += chr(i)
+            return finished
+
+def fix_save(yokaidict, ownerid):
+    for i in range(len(yokaidict)):
+        yokaidict[i]["num1"]=i
+        yokaidict[i]["num2"]=i+1
+        yokaidict[i]["ownerid"]=ownerid
+    return yokaidict
 
 def edit_at(yokaidict, index, yokai="", attitude=""):
     return yokaidict
@@ -929,137 +957,50 @@ with open(file, "rb") as f:
     # f.seek(0x108E0, 0)
     # money = struct.unpack("<I", f.read(4))[0]
     # print("money: {}".format(money))
+    ownerid = get(f.read(),58108,4)
 
     yokaidict = {}
     index = 0
-    
+    f.seek(20744) # 20744 is yokai info location. 1 yokai takes up 92 bytes
     while True:
-        current = 0x0
-        f.seek(current + 0x5108 + 0x5C * index, 0) # 0x5108 is yokai info location. 1 yokai takes up 0x5C bytes
-        num1 = struct.unpack("<h", f.read(2))[0]
-        if num1 == 0 and index != 0: #could be broken
+        yokai = f.read(92)
+        if get(yokai,0) == 0 and index != 0: #could be broken
             break
-        current = 0x02
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        num2 = struct.unpack("<h", f.read(2))[0]
-        current = 0x04
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        yokaiid = struct.unpack("<I", f.read(4))[0] #what yokai it is
-        current = 0x08
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        nickname = f.read(24) #23 or 24. probably 32
-        if nickname[0] == 0:
-            nickname = ""
-        else:
-            nickname = nickname.strip(b"\x00").decode("utf8")
-        current = 0x2a
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        attack = struct.unpack("<B", f.read(1))[0]
-        current = 0x2e
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        technique = struct.unpack("<B", f.read(1))[0]
-        current = 0x32
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        soultimate = struct.unpack("<B", f.read(1))[0]
-        current = 0x34
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        xp = struct.unpack("<I", f.read(4))[0]
-        current = 0x3C
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        ownerid = struct.unpack("<I", f.read(4))[0] #consistent
-
-        current = 0x40
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        IV_HP = struct.unpack("<B", f.read(1))[0]
-        current = 0x41
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        IV_Str = struct.unpack("<B", f.read(1))[0]
-        current = 0x42
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        IV_Spr = struct.unpack("<B", f.read(1))[0]
-        current = 0x43
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        IV_Def = struct.unpack("<B", f.read(1))[0]
-        current = 0x44
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        IV_Spd = struct.unpack("<B", f.read(1))[0]
-        current = 0x45
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        CB_HP = struct.unpack("<B", f.read(1))[0] #idk what CB means. prolly EVs
-        current = 0x46
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        CB_Str = struct.unpack("<B", f.read(1))[0]
-        current = 0x47
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        CB_Spr = struct.unpack("<B", f.read(1))[0]
-        current = 0x48
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        CB_Def = struct.unpack("<B", f.read(1))[0]
-        current = 0x49
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        CB_Spd = struct.unpack("<B", f.read(1))[0]
-        current = 0x4a
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        SC_HP = struct.unpack("<B", f.read(1))[0] #sport club
-        current = 0x4b
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        SC_Str = struct.unpack("<B", f.read(1))[0]
-        current = 0x4c
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        SC_Spr = struct.unpack("<B", f.read(1))[0]
-        current = 0x4d
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        SC_Def = struct.unpack("<B", f.read(1))[0]
-        current = 0x4e
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        SC_Spd = struct.unpack("<B", f.read(1))[0]
-
-        current = 0x4F
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        level = struct.unpack("<B", f.read(1))[0]
-        current = 0x54
-        f.seek(current + 0x5108 + 0x5C * index, 0)
-        loaflevel = struct.unpack("<B", f.read(1))[0] >> 4 #0 - 15
-        current = 0x54
-        f.seek(current + 0x5108 + 0x5C * index, 0) 
-        attitude = struct.unpack("<B", f.read(1))[0] & 0x0F #0 - 12
-
-        #there's more info in a yokai, idk what it does tho. items maybe??
 
         yokaidict[index] = {
-            "num1": num1, #00
-            "num2": num2, #02
-            "id": yokais[yokaiid], #04-07
-            "nickname": nickname, #08 - 32
-            "attack": attack, #42
-            "technique": technique, #46
-            "soultimate": soultimate, #50
-            "xp": xp, #52 - 55
-            "ownerid": ownerid, #60 - 63
+            "num1": get(yokai,0), #00
+            "num2": get(yokai,2), #02
+            "id": yokais[get(yokai,4,4)], #04-07 may have to get rid of "yokais[]"
+            "nickname": get(yokai,8,24,False), #08 - 32
+            "attack": get(yokai,42), #42
+            "technique": get(yokai,46), #46
+            "soultimate": get(yokai,50), #50
+            "xp": get(yokai,52,4), #52 - 55
+            "ownerid": get(yokai,60,4), #60 - 63
             "stats": { # 64 - 78
-                "IV_HP": IV_HP,
-                "IV_Str": IV_Str,
-                "IV_Spr": IV_Spr,
-                "IV_Def": IV_Def,
-                "IV_Spd": IV_Spd,
-                "CB_HP": CB_HP,
-                "CB_Str": CB_Str,
-                "CB_Spr": CB_Spr,
-                "CB_Def": CB_Def,
-                "CB_Spd": CB_Spd,
-                "SC_HP": SC_HP,
-                "SC_Str": SC_Str,
-                "SC_Spr": SC_Spr,
-                "SC_Def": SC_Def,
-                "SC_Spd": SC_Spd
+                "IV_HP": get(yokai,64),
+                "IV_Str": get(yokai,65),
+                "IV_Spr": get(yokai,66),
+                "IV_Def": get(yokai,67),
+                "IV_Spd": get(yokai,68),
+                "CB_HP": get(yokai,69),
+                "CB_Str": get(yokai,70),
+                "CB_Spr": get(yokai,71),
+                "CB_Def": get(yokai,72),
+                "CB_Spd": get(yokai,73),
+                "SC_HP": get(yokai,74),
+                "SC_Str": get(yokai,75),
+                "SC_Spr": get(yokai,76),
+                "SC_Def": get(yokai,77),
+                "SC_Spd": get(yokai,78)
             },
-            "level": level, #79
-            "loaflevel": loaflevel, #84
-            "attitude": attitudes[attitude] #84 (shared byte)
+            "level": get(yokai,79), #79
+            "loaflevel": get(yokai,84,half=True)[0], #84
+            "attitude": get(yokai,84,half=True)[0] #84 (shared byte)
         }
 
         index += 1
 
     #editor goes here
 
-    print(json.dumps(yokaidict, indent=2))
+    print(json.dumps(fix_save(yokaidict, ownerid), indent=2))

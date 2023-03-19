@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="3493734398" name="Cicala verde"/>
+  <item id="1753366683" name="Cicala verde★"/>
+  <item id="1228371524" name="Cicala marrone"/>
+  <item id="4052422945" name="Cicala marrone★"/>
+  <item id="1702355358" name="Cicala grande"/>
+  <item id="3721103099" name="Cicala grande★"/>
+  <item id="4236161060" name="Cicala africana"/>
+  <item id="1153619777" name="Cicala africana★"/>
+  <item id="1043351250" name="Cicala serale"/>
+  <item id="2257330615" name="Cicala serale★"/>
+  <item id="2339995826" name="Cicala asiatica"/>
+  <item id="868607959" name="Cicala asiatica★"/>
+  <item id="1314566749" name="Scarabeo lucan."/>
+  <item id="4142323000" name="Scarabeo luc.★"/>
+  <item id="858605080" name="Dorcus"/>
+  <item id="2341544317" name="Dorcus★"/>
+  <item id="354227473" name="Lucanus"/>
+  <item id="2913038964" name="Lucanus★"/>
+  <item id="3612599271" name="Cervo volante"/>
+  <item id="1877968002" name="Cervo volante★"/>
+  <item id="2689913713" name="Scarabeo rino."/>
+  <item id="417903636" name="Scarabeo rino.★"/>
+  <item id="2350138539" name="Falena bianca"/>
+  <item id="883434446" name="Falena bianca★"/>
+  <item id="3374651071" name="Coda di rondine"/>
+  <item id="1905881562" name="Coda di rondine★"/>
+  <item id="2063668422" name="Occhio di pavone"/>
+  <item id="3283973027" name="Occhio di pavone★"/>
+  <item id="541504394" name="Farfalla viola"/>
+  <item id="2566575343" name="Farfalla viola★"/>
+  <item id="3662603053" name="Libellula lydia"/>
+  <item id="1660060744" name="Libellula lydia★"/>
+  <item id="2907296699" name="Libellula reale"/>
+  <item id="368424158" name="Libellula reale★"/>
+  <item id="2969153051" name="Libellula grande"/>
+  <item id="138791294" name="Libellula grande★"/>
+  <item id="3189909033" name="Lucciola"/>
+  <item id="111034700" name="Lucciola★"/>
+  <item id="3109020208" name="Coccinella"/>
+  <item id="32736597" name="Coccinella★"/>
+  <item id="962429643" name="Cavalletta"/>
+  <item id="2179065262" name="Cavalletta★"/>
+  <item id="1463911196" name="Grillo del riso"/>
+  <item id="4026393721" name="Grillo del riso★"/>
+  <item id="3739594700" name="Locusta"/>
+  <item id="1717160105" name="Locusta★"/>
+  <item id="2455941619" name="Grillo"/>
+  <item id="719246998" name="Grillo★"/>
+  <item id="2087506143" name="Suzumushi"/>
+  <item id="3302012858" name="Suzumushi★"/>
+  <item id="201729104" name="Cavalletta verde"/>
+  <item id="3032105781" name="Cavalletta verde★"/>
+  <item id="1563510735" name="Mantide asiatica"/>
+  <item id="3851231402" name="Mantide asiatica★"/>
+  <item id="2850201434" name="Mantide gigante"/>
+  <item id="291436607" name="Mantide gigante★"/>
+  <item id="1345079045" name="Longicorno"/>
+  <item id="3901759584" name="Longicorno★"/>
+  <item id="3448658526" name="Insetto stecco"/>
+  <item id="1966226747" name="Insetto stecco★"/>
+  <item id="3710068532" name="Grillotalpide"/>
+  <item id="1704935505" name="Grillotalpide★"/>
+  <item id="2614427096" name="Oniscidea"/>
+  <item id="594057917" name="Oniscidea★"/>
+  <item id="657160083" name="Scarabeo fiore"/>
+  <item id="2677477622" name="Scarabeo fiore★"/>
+  <item id="3848634725" name="Scarabeo"/>
+  <item id="1574561280" name="Scarabeo★"/>
+  <item id="2500818410" name="Scarabeo verde"/>
+  <item id="766710415" name="Scarabeo verde★"/>
+  <item id="3792192892" name="Stercorario"/>
+  <item id="1521754649" name="Stercorario★"/>
+  <item id="4123589647" name="Ditisco"/>
+  <item id="1299487594" name="Ditisco★"/>
+  <item id="3025330938" name="Belostomatide"/>
+  <item id="216958367" name="Belostomatide★"/>
+  <item id="191619145" name="Coleottero"/>
+  <item id="3017246508" name="Coleottero★"/>
+  <item id="3973303630" name="Lucertola bruna"/>
+  <item id="1416604203" name="Lucertola bruna★"/>
+  <item id="2854492066" name="Lucertola"/>
+  <item id="311980231" name="Lucertola★"/>
+  <item id="2194656409" name="Geco fiammato"/>
+  <item id="980659196" name="Geco fiammato★"/>
+  <item id="1516012502" name="Notostraca"/>
+  <item id="3806389427" name="Notostraca★"/>
+  <item id="708212569" name="Lumaca di stagno"/>
+  <item id="2458521660" name="Lumaca di stagno★"/>
+  <item id="1143633550" name="Ampullaria dorata"/>
+  <item id="4237693419" name="Ampullaria dorata★"/>
+  <item id="3355352717" name="Lumaca"/>
+  <item id="2135095784" name="Lumaca★"/>
+  <item id="3460879014" name="Raganella"/>
+  <item id="1995748803" name="Raganella★"/>
+  <item id="4212356157" name="Rospo"/>
+  <item id="1135547224" name="Rospo★"/>
+  <item id="3566562079" name="Libellula rossa"/>
+  <item id="1814629498" name="Libellula rossa★"/>
+  <item id="2744277897" name="Insetto pattinatore"/>
+  <item id="456015084" name="Insetto pattinator.★"/>
+  <item id="4049842414" name="Curculionide"/>
+  <item id="1239406475" name="Curculionide★"/>
+  <item id="2254733432" name="Scarabeo d'acqua"/>
+  <item id="1054402333" name="Scarabe. d'acqua★"/>
+  <item id="527290818" name="Larva di libellula"/>
+  <item id="2815538855" name="Larva di libellula★"/>
+  <item id="1751834964" name="Scorpione d'acqua"/>
+  <item id="3503719985" name="Scorpio. d'acqua★"/>
+  <item id="4128142583" name="Cicindela"/>
+  <item id="1320293266" name="Cicindela★"/>
+  <item id="2164868193" name="Sfingide"/>
+  <item id="968172292" name="Sfingide★"/>
+  <item id="402658779" name="Damigella"/>
+  <item id="2696704702" name="Damigella★"/>
+  <item id="1862739277" name="Elateride"/>
+  <item id="3619373608" name="Elateride★"/>
+  <item id="3522973129" name="Tartaruga"/>
+  <item id="1765812908" name="Tartaruga★"/>
+  <item id="3325883578" name="Trionichide"/>
+  <item id="2122355679" name="Trionichide★"/>
+  <item id="230968935" name="Granchio di fiume"/>
+  <item id="3044550914" name="Granchio di fiume★"/>
+  <item id="2496471005" name="Gambero di fiume"/>
+  <item id="745633976" name="Gambero di fiume★"/>
+  <item id="2108603112" name="Aragosta"/>
+  <item id="3306347917" name="Aragosta★"/>
+  <item id="3321527362" name="Gamberetto"/>
+  <item id="2101746471" name="Gamberetto★"/>
+  <item id="3002944724" name="Stella marina"/>
+  <item id="172043185" name="Stella marina★"/>
+  <item id="350191398" name="Ippocampo"/>
+  <item id="2892175427" name="Ippocampo★"/>
+  <item id="2711009606" name="Carpa"/>
+  <item id="422239779" name="Carpa★"/>
+  <item id="3599862224" name="Ayu"/>
+  <item id="1848503989" name="Ayu★"/>
+  <item id="748280183" name="Cefalo"/>
+  <item id="2485501458" name="Cefalo★"/>
+  <item id="2476792772" name="Salmone rosso"/>
+  <item id="723303585" name="Salmone rosso★"/>
+  <item id="2973484076" name="Carpa koi"/>
+  <item id="159884105" name="Carpa koi★"/>
+  <item id="1224023155" name="Boccalone"/>
+  <item id="4031347478" name="Boccalone★"/>
+  <item id="2059632369" name="Salmone"/>
+  <item id="3263109524" name="Salmone★"/>
+  <item id="1072835813" name="Hucho h. gigante"/>
+  <item id="2270055296" name="Hucho h. gig.★"/>
+  <item id="178883198" name="Sardina"/>
+  <item id="2987781403" name="Sardina★"/>
+  <item id="950003964" name="Sgombro"/>
+  <item id="2149814169" name="Sgombro★"/>
+  <item id="4208008714" name="Lanzardo"/>
+  <item id="1114470767" name="Lanzardo★"/>
+  <item id="2379624092" name="Attinopterigio"/>
+  <item id="896158201" name="Attinopterigio★"/>
+  <item id="3683420442" name="Barracuda"/>
+  <item id="1664151167" name="Barracuda★"/>
+  <item id="2327571077" name="Pesce rondine"/>
+  <item id="839355872" name="Pesce rondine★"/>
+  <item id="1335416938" name="Testa di serpente"/>
+  <item id="4146380559" name="Testa di serpente★"/>
+  <item id="3481974929" name="Scorf. di fondale"/>
+  <item id="2000084980" name="Scorf. di fonda.★"/>
+  <item id="1537141217" name="Boccaporporina"/>
+  <item id="3810692740" name="Boccaporporina★"/>
+  <item id="1559440888" name="Spigola"/>
+  <item id="3830401693" name="Spigola★"/>
+  <item id="2884009365" name="Pesce nero"/>
+  <item id="324672240" name="Pesce nero★"/>
+  <item id="3977357177" name="Monacantide"/>
+  <item id="1437450268" name="Monacantide★"/>
+  <item id="1689619369" name="Halibut"/>
+  <item id="3691637964" name="Halibut★"/>
+  <item id="3264723035" name="Platessa"/>
+  <item id="2049695550" name="Platessa★"/>
+  <item id="2820732269" name="Snapper rosso"/>
+  <item id="278696456" name="Snapper rosso★"/>
+  <item id="1451485483" name="Ishidai"/>
+  <item id="3997142606" name="Ishidai★"/>
+  <item id="3705752835" name="Dentice"/>
+  <item id="1683827302" name="Dentice★"/>
+  <item id="330480447" name="Ricciola"/>
+  <item id="2869877850" name="Ricciola★"/>
+  <item id="4257012243" name="Pesce istrice"/>
+  <item id="1157676406" name="Pesce istrice★"/>
+  <item id="562354621" name="Cobite di stagno"/>
+  <item id="2570632920" name="Cobite di stagno★"/>
+  <item id="737418606" name="Pesce coltello"/>
+  <item id="2471000587" name="Pesce coltello★"/>
+  <item id="3836210002" name="Conger"/>
+  <item id="1545309239" name="Conger★"/>
+  <item id="3821678411" name="Anguilla"/>
+  <item id="1534478382" name="Anguilla★"/>
+  <item id="3096283143" name="Pesce gatto"/>
+  <item id="3272546" name="Pesce gatto★"/>
+  <item id="3370613896" name="Medusa"/>
+  <item id="1885019117" name="Medusa★"/>
+  <item id="1675120560" name="Polpo"/>
+  <item id="3680774357" name="Polpo★"/>
+  <item id="2894838156" name="Calamaro corallino"/>
+  <item id="339205865" name="Calamaro corall.★"/>
+  <item id="4094334520" name="Seppia"/>
+  <item id="1287057757" name="Seppia★"/>
+  <item id="1374563634" name="Calamaro lucciola"/>
+  <item id="3914484311" name="Calamaro lucciola★"/>
+  <item id="3046148301" name="Calamaro"/>
+  <item id="221048744" name="Calamaro★"/>
+  <item id="897771574" name="Totano"/>
+  <item id="2369687379" name="Totano★"/>
+  <item id="1116068000" name="Rana pescatrice"/>
+  <item id="4198088645" name="Rana pescatrice★"/>
+  <item id="2585171951" name="Pastinaca"/>
+  <item id="581628042" name="Pastinaca★"/>
+  <item id="3219147806" name="Marlin"/>
+  <item id="123480955" name="Marlin★"/>
+  <item id="2198709934" name="Tonno"/>
+  <item id="1001505227" name="Tonno★"/>
+  <item id="854535215" name="Pesce scatola"/>
+  <item id="2320714570" name="Pesce scatola★"/>
+  <item id="1172839609" name="Murenesocide"/>
+  <item id="4250172380" name="Murenesocide★"/>
+  <item id="3579248936" name="Vong. acqua dolce"/>
+  <item id="1844143693" name="Vong. acq. dolce★"/>
+  <item id="2723164606" name="Tartar. muschiata"/>
+  <item id="451696347" name="Tartar. muschiata★"/>
+  <item id="4037139161" name="Salmone imperiale"/>
+  <item id="1209908668" name="Salmo. imperiale★"/>
+  <item id="2275863119" name="Pesce gatto gig."/>
+  <item id="1058704682" name="Pesce gatto gig.★"/>
+  <item id="514833397" name="Luccio alligatore"/>
+  <item id="2786319504" name="Luccio alligatore★"/>
+  <item id="1772653411" name="Spigola bianca"/>
+  <item id="3507809286" name="Spigola bianca★"/>
+  <item id="4157349568" name="Persico"/>
+  <item id="1332771237" name="Persico★"/>
+  <item id="2160799318" name="Persico sole"/>
+  <item id="947341619" name="Persico sole★"/>
+  <item id="432177132" name="Tart. orecch. rosse"/>
+  <item id="2709395593" name="Tart. orecc. rosse★"/>
+  <item id="1858424698" name="Salmerino fontana"/>
+  <item id="3598264351" name="Salmerin. fontana★"/>
+</items>

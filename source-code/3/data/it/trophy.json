@@ -1,0 +1,302 @@
+[
+  {
+    "type": 0,
+    "name": "Principiante capace"
+  },
+  {
+    "type": 1,
+    "name": "Sventacomplotti"
+  },
+  {
+    "type": 2,
+    "name": "Maestro zen"
+  },
+  {
+    "type": 0,
+    "name": "Fan degli Yo-kai"
+  },
+  {
+    "type": 1,
+    "name": "Super fan degli Yo-kai"
+  },
+  {
+    "type": 2,
+    "name": "Super collezionista"
+  },
+  {
+    "type": 1,
+    "name": "Quartetto di leggende"
+  },
+  {
+    "type": 2,
+    "name": "I magnifici otto"
+  },
+  {
+    "type": 0,
+    "name": "Limite raggiunto!"
+  },
+  {
+    "type": 2,
+    "name": "Seguace del Tarwinismo"
+  },
+  {
+    "type": 2,
+    "name": "La fusione fa la forza"
+  },
+  {
+    "type": 0,
+    "name": "Passione specchi"
+  },
+  {
+    "type": 2,
+    "name": "A caccia di tesori"
+  },
+  {
+    "type": 1,
+    "name": "Retino infallibile"
+  },
+  {
+    "type": 1,
+    "name": "Amo da maestro"
+  },
+  {
+    "type": 0,
+    "name": "Eroe-cottero"
+  },
+  {
+    "type": 0,
+    "name": "Frantumarocce"
+  },
+  {
+    "type": 1,
+    "name": "Fan delle pulizie"
+  },
+  {
+    "type": 1,
+    "name": "Laurea in portalogia"
+  },
+  {
+    "type": 1,
+    "name": "Senza confini"
+  },
+  {
+    "type": 0,
+    "name": "Esploranebbia"
+  },
+  {
+    "type": 1,
+    "name": "Maratona nebbiosa"
+  },
+  {
+    "type": 1,
+    "name": "Cacciatore di Quizcartelli"
+  },
+  {
+    "type": 2,
+    "name": "Detective Yo-kai"
+  },
+  {
+    "type": 1,
+    "name": "Felice di aiutare"
+  },
+  {
+    "type": 1,
+    "name": "Boss della rete"
+  },
+  {
+    "type": 0,
+    "name": "Cerchia ristretta"
+  },
+  {
+    "type": 1,
+    "name": "Collezione musicale"
+  },
+  {
+    "type": 0,
+    "name": "YoTuber"
+  },
+  {
+    "type": 1,
+    "name": "Yo-giustiziere"
+  },
+  {
+    "type": 1,
+    "name": "Catalogo"
+  },
+  {
+    "type": 0,
+    "name": "Nyumero uno"
+  },
+  {
+    "type": 0,
+    "name": "Palato fine"
+  },
+  {
+    "type": 0,
+    "name": "Potenzia-essenza"
+  },
+  {
+    "type": 0,
+    "name": "Guru delle gemme"
+  },
+  {
+    "type": 1,
+    "name": "Fortuna sfacciata"
+  },
+  {
+    "type": 0,
+    "name": "Mano del destino"
+  },
+  {
+    "type": 1,
+    "name": "Selvaggia Slot-kai"
+  },
+  {
+    "type": 1,
+    "name": "Collega di Kuadro"
+  },
+  {
+    "type": 2,
+    "name": "Partner di Kuadro"
+  },
+  {
+    "type": 0,
+    "name": "Combattente"
+  },
+  {
+    "type": 2,
+    "name": "Asso del combattimento"
+  },
+  {
+    "type": 0,
+    "name": "Stella dell'Energimax"
+  },
+  {
+    "type": 0,
+    "name": "Fuoco di copertura"
+  },
+  {
+    "type": 0,
+    "name": "Passo rapido"
+  },
+  {
+    "type": 0,
+    "name": "Supporto"
+  },
+  {
+    "type": 1,
+    "name": "Nemesi di Nerorko"
+  },
+  {
+    "type": 0,
+    "name": "Star della bicicletta"
+  },
+  {
+    "type": 2,
+    "name": "Leggenda del ciclismo"
+  },
+  {
+    "type": 1,
+    "name": "Musicista"
+  },
+  {
+    "type": 2,
+    "name": "Solista"
+  },
+  {
+    "type": 0,
+    "name": "Remi a tavoletta"
+  },
+  {
+    "type": 0,
+    "name": "Non \u00e8 divertente!"
+  },
+  {
+    "type": 0,
+    "name": "Boy Scout"
+  },
+  {
+    "type": 0,
+    "name": "Eroe dei pulcini"
+  },
+  {
+    "type": 0,
+    "name": "Rosso come la curiosit\u00e0"
+  },
+  {
+    "type": 0,
+    "name": "Orgoglio di Paolo Box"
+  },
+  {
+    "type": 1,
+    "name": "Passo felpato"
+  },
+  {
+    "type": 0,
+    "name": "Incubo degli Oni"
+  },
+  {
+    "type": 1,
+    "name": "Requiem"
+  },
+  {
+    "type": 1,
+    "name": "Banchetto"
+  },
+  {
+    "type": 0,
+    "name": "Mito del controllo qualit\u00e0"
+  },
+  {
+    "type": 0,
+    "name": "Cena da gourmet"
+  },
+  {
+    "type": 0,
+    "name": "Vita mondana"
+  },
+  {
+    "type": 0,
+    "name": "Fuggi fuggi"
+  },
+  {
+    "type": 1,
+    "name": "Ospite d'onore"
+  },
+  {
+    "type": 0,
+    "name": "Principiante Yo-kai"
+  },
+  {
+    "type": 1,
+    "name": "Esperto Yo-kai"
+  },
+  {
+    "type": 2,
+    "name": "Divinit\u00e0 Yo-kai"
+  },
+  {
+    "type": 1,
+    "name": "Bada-brillante"
+  },
+  {
+    "type": 1,
+    "name": "Schiaccia-Perduliti"
+  },
+  {
+    "type": 0,
+    "name": "Team del mese"
+  },
+  {
+    "type": 2,
+    "name": "Team dell'anno"
+  },
+  {
+    "type": 2,
+    "name": "Esploracovi"
+  },
+  {
+    "type": 1,
+    "name": "Spodesta-divinit\u00e0"
+  }
+]

@@ -1,5 +1,18 @@
 Yo-kai Editor 3 - togenyan
 
+v0.7.3 2018-12-17
+追加:
+* ドイツ語のテキストを追加
+  (Add German texts)
+
+修正:
+* セーブデータに変更が反映されない問題を修正
+
+v0.7.2 2018-12-16
+追加:
+* 英語、フランス語、スペイン語、イタリア語のテキストを追加
+  (Add English, French, Spanish, Italian texts based on the EUR games)
+
 v0.7.1 2017-09-02
 修正:
 * 妖怪タブのボタンの一部が押せない（ご報告頂いた方に感謝申し上げます。）

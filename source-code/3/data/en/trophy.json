@@ -1,0 +1,302 @@
+[
+  {
+    "type": 0,
+    "name": "Promising Rookie"
+  },
+  {
+    "type": 1,
+    "name": "Conspiracy Buster"
+  },
+  {
+    "type": 2,
+    "name": "Zen Master"
+  },
+  {
+    "type": 0,
+    "name": "Yo-kai Fan"
+  },
+  {
+    "type": 1,
+    "name": "Yo-kai Fanatic"
+  },
+  {
+    "type": 2,
+    "name": "Yo-kai Master"
+  },
+  {
+    "type": 1,
+    "name": "Quartet of Legends"
+  },
+  {
+    "type": 2,
+    "name": "Great Eight"
+  },
+  {
+    "type": 0,
+    "name": "All Maxed Out!"
+  },
+  {
+    "type": 2,
+    "name": "Starwinian Scholar"
+  },
+  {
+    "type": 2,
+    "name": "Greater Than Their Sum"
+  },
+  {
+    "type": 0,
+    "name": "Mirror Master"
+  },
+  {
+    "type": 2,
+    "name": "Treasure Hunter"
+  },
+  {
+    "type": 1,
+    "name": "Bug-Collecting Master"
+  },
+  {
+    "type": 1,
+    "name": "Fishing Master"
+  },
+  {
+    "type": 0,
+    "name": "Helipad Hero"
+  },
+  {
+    "type": 0,
+    "name": "Deep Driller"
+  },
+  {
+    "type": 1,
+    "name": "Clean Freak"
+  },
+  {
+    "type": 1,
+    "name": "Gately's Graduate"
+  },
+  {
+    "type": 1,
+    "name": "Gate Crasher"
+  },
+  {
+    "type": 0,
+    "name": "Hazy Hiker"
+  },
+  {
+    "type": 1,
+    "name": "Hazy Marathon"
+  },
+  {
+    "type": 1,
+    "name": "Baffle Board Buster"
+  },
+  {
+    "type": 2,
+    "name": "Yo-kai Detective"
+  },
+  {
+    "type": 1,
+    "name": "Happy Helper"
+  },
+  {
+    "type": 1,
+    "name": "KaiNet King"
+  },
+  {
+    "type": 0,
+    "name": "Close Circles of Friends"
+  },
+  {
+    "type": 1,
+    "name": "Tune-full"
+  },
+  {
+    "type": 0,
+    "name": "YoTuber"
+  },
+  {
+    "type": 1,
+    "name": "Yo-justice For All"
+  },
+  {
+    "type": 1,
+    "name": "Catalogue"
+  },
+  {
+    "type": 0,
+    "name": "Nyanber One"
+  },
+  {
+    "type": 0,
+    "name": "Culinary Connoisseur"
+  },
+  {
+    "type": 0,
+    "name": "Soul Synergist"
+  },
+  {
+    "type": 0,
+    "name": "Gem Guru"
+  },
+  {
+    "type": 1,
+    "name": "Sheer Dumb Luck"
+  },
+  {
+    "type": 0,
+    "name": "Draw of Destiny"
+  },
+  {
+    "type": 1,
+    "name": "Crank-a-Kai Crazy"
+  },
+  {
+    "type": 1,
+    "name": "Burly's Buddy"
+  },
+  {
+    "type": 2,
+    "name": "Burly's Bestie"
+  },
+  {
+    "type": 0,
+    "name": "Warrior"
+  },
+  {
+    "type": 2,
+    "name": "Master Battler"
+  },
+  {
+    "type": 0,
+    "name": "Soultimate Star"
+  },
+  {
+    "type": 0,
+    "name": "Covering Fire!"
+  },
+  {
+    "type": 0,
+    "name": "Quick Stepper"
+  },
+  {
+    "type": 0,
+    "name": "Helping Hand"
+  },
+  {
+    "type": 1,
+    "name": "Orcanos Overwhelmer"
+  },
+  {
+    "type": 0,
+    "name": "Cycling Star"
+  },
+  {
+    "type": 2,
+    "name": "Cycling Legend"
+  },
+  {
+    "type": 1,
+    "name": "Musician"
+  },
+  {
+    "type": 2,
+    "name": "Maestro"
+  },
+  {
+    "type": 0,
+    "name": "Paddle to the Metal"
+  },
+  {
+    "type": 0,
+    "name": "You're Not Funny!"
+  },
+  {
+    "type": 0,
+    "name": "Boy Scout"
+  },
+  {
+    "type": 0,
+    "name": "Chick Champion"
+  },
+  {
+    "type": 0,
+    "name": "Crimson Curiosities"
+  },
+  {
+    "type": 0,
+    "name": "Pride of Mr. Box"
+  },
+  {
+    "type": 1,
+    "name": "Stealthy Stepper"
+  },
+  {
+    "type": 0,
+    "name": "Oni Obfuscator"
+  },
+  {
+    "type": 1,
+    "name": "Requiem"
+  },
+  {
+    "type": 1,
+    "name": "Banquet"
+  },
+  {
+    "type": 0,
+    "name": "Quality Control Champ"
+  },
+  {
+    "type": 0,
+    "name": "Fine Dining"
+  },
+  {
+    "type": 0,
+    "name": "Socialite"
+  },
+  {
+    "type": 0,
+    "name": "Stampede"
+  },
+  {
+    "type": 1,
+    "name": "Special Guest"
+  },
+  {
+    "type": 0,
+    "name": "Yo-kai Beginner"
+  },
+  {
+    "type": 1,
+    "name": "Yo-kai Expert"
+  },
+  {
+    "type": 2,
+    "name": "Yo-kai Deity"
+  },
+  {
+    "type": 1,
+    "name": "Bada-bling Buster"
+  },
+  {
+    "type": 1,
+    "name": "Cluvalith Crusher"
+  },
+  {
+    "type": 0,
+    "name": "Bringin' Your B Game"
+  },
+  {
+    "type": 2,
+    "name": "Bringin' Your A Game"
+  },
+  {
+    "type": 2,
+    "name": "Dungeon Delver"
+  },
+  {
+    "type": 1,
+    "name": "Divine Dethroner"
+  }
+]

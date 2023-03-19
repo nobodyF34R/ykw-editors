@@ -119,3 +119,30 @@ have an awesome 2023!
 
 Regards,
 me.
+
+
+
+
+
+
+
+
+
+
+me <me@gmail.com>	Sat, Mar 18, 2023 at 10:22 PM
+To: togenyan <nyantoge@gmail.com>
+hi togenyan, sorry to bother you again.
+i've come across the 0.7.3 version of "yokai editor 3"
+image.png
+if you could please send the source code of this version that would be phenomenal.
+
+thank you in advance,
+me
+togenyan <nyantoge@gmail.com>	Sun, Mar 19, 2023 at 10:00 AM
+To: me <me@gmail.com>
+Hi me,
+
+Attached is the source code for Yo-kai Editor 3 0.7.3. Hope this helps.
+
+		Yo-kai_Editor_3_0.7.3.zip
+690K

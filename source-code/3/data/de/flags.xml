@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="1" name="Kästen und Kreisel"/>
+  <item id="2" name="Sportliche Stätte"/>
+  <item id="3" name="Vier blaue Dächer"/>
+  <item id="4" name="Beim Traumrad"/>
+  <item id="5" name="Insel mit Brücke"/>
+  <item id="6" name="Neben der Kirche"/>
+  <item id="7" name="Vorm Uhrenladen"/>
+  <item id="8" name="Vorm Haus (Gasse)"/>
+  <item id="9" name="Millionärsanwesen"/>
+  <item id="10" name="Fels (Unterschlupf)"/>
+  <item id="11" name="Tunnel (düst. Wald)"/>
+  <item id="12" name="Stockfinst're Höhle"/>
+  <item id="13" name="Teich bei der Farm"/>
+  <item id="14" name="Dorf (östl. Canyon)"/>
+  <item id="15" name="Wildpony-Wiesen"/>
+  <item id="16" name="Fluss z. Inselanwe."/>
+  <item id="17" name="Licht einer Höhle"/>
+  <item id="18" name="Fluss im Canyon"/>
+  <item id="19" name="Rätselh. Inselruine"/>
+  <item id="20" name="Rote Ruine"/>
+  <item id="21" name="Shrimpfreunde-Griller-Schallplatte"/>
+  <item id="22" name="Konzerto-Blanko-Schallplatte"/>
+  <item id="23" name="Die-Nyanyan-All-Stars-Schallplatte"/>
+  <item id="24" name="Die-Fanatischen-Vier-Schallplatte"/>
+  <item id="25" name="Trickolaus-&amp;-Co.-KG-Schallplatte"/>
+  <item id="26" name="Böhse-Yo-kaiz-Schallplatte"/>
+  <item id="27" name="Yo-+-Yo-Schallplatte"/>
+  <item id="28" name="Spuk-Doggy-Dog-Schallplatte"/>
+  <item id="29" name="Unheimlig-Schallplatte"/>
+  <item id="30" name="Söhne-Lenzhausens-Schallplatte"/>
+  <item id="31" name="Noko-Angels-Schallplatte"/>
+  <item id="32" name="Ähh...-Doofkolb...-Schallplatte"/>
+  <item id="33" name="Teichkind-Schallplatte"/>
+  <item id="34" name="Raketenstolz-Schallplatte"/>
+  <item id="35" name="Mampfstein-Schallplatte"/>
+  <item id="36" name="Fettes-Rot-Schallplatte"/>
+  <item id="37" name="Das-Taronyan-Trio-Schallplatte A"/>
+  <item id="38" name="Das-Taronyan-Trio-Schallplatte B"/>
+  <item id="39" name="Lenzhausen-&amp;-USA-All-Stars-Schallplatte"/>
+  <item id="40" name="Leodrio-Schallplatte"/>
+  <item id="41" name="Schleifer-Schallplatte"/>
+  <item id="42" name="Hovernyan-Schallplatte"/>
+  <item id="43" name="Petzmeralda-Schallplatte"/>
+  <item id="44" name="Doofkolb-Schallplatte"/>
+  <item id="45" name="Rebelzebub-Schallplatte"/>
+  <item id="46" name="Jibanyan-Schallplatte"/>
+  <item id="47" name="Komasan-Schallplatte"/>
+  <item id="48" name="Opa-Gusto-Schallplatte"/>
+  <item id="49" name="Fledalein-Schallplatte"/>
+  <item id="50" name="Tristine-Schallplatte"/>
+  <item id="51" name="Labernase-Schallplatte"/>
+  <item id="52" name="Usapyon-Schallplatte"/>
+  <item id="53" name="Shogunyan-Schallplatte"/>
+  <item id="54" name="4raumwohnung-Schallplatte"/>
+  <item id="55" name="(No.55)"/>
+  <item id="56" name="(No.56)"/>
+  <item id="57" name="(No.57)"/>
+  <item id="58" name="(No.58)"/>
+  <item id="59" name="(No.59)"/>
+  <item id="60" name="(No.60)"/>
+  <item id="61" name="(No.61)"/>
+  <item id="62" name="(No.62)"/>
+  <item id="63" name="(No.63)"/>
+  <item id="64" name="(No.64)"/>
+  <item id="65" name="(No.65)"/>
+  <item id="66" name="(No.66)"/>
+  <item id="67" name="(No.67)"/>
+  <item id="68" name="(No.68)"/>
+  <item id="69" name="(No.69)"/>
+  <item id="70" name="(No.70)"/>
+  <item id="71" name="(No.71)"/>
+  <item id="72" name="(No.72)"/>
+  <item id="73" name="(No.73)"/>
+  <item id="74" name="(No.74)"/>
+  <item id="75" name="(No.75)"/>
+  <item id="76" name="(No.76)"/>
+  <item id="77" name="(No.77)"/>
+  <item id="78" name="(No.78)"/>
+  <item id="79" name="(No.79)"/>
+  <item id="80" name="(No.80)"/>
+  <item id="81" name="(No.81)"/>
+  <item id="82" name="(No.82)"/>
+  <item id="83" name="(No.83)"/>
+  <item id="84" name="(No.84)"/>
+  <item id="85" name="Schlappohren"/>
+  <item id="86" name="Jibanyan-Ohren"/>
+  <item id="87" name="Hasenohren"/>
+  <item id="88" name="Mauseohren"/>
+  <item id="89" name="Robokopf"/>
+  <item id="90" name="Juwelenkopf"/>
+  <item id="91" name="Bob"/>
+  <item id="92" name="Mittelscheitel"/>
+  <item id="93" name="Schnurrbart-Design"/>
+  <item id="94" name="Panda-Design"/>
+  <item id="95" name="Jibanyan-Design"/>
+  <item id="96" name="Intensive Augen"/>
+  <item id="97" name="Mumm-Augen"/>
+  <item id="98" name="Überraschte Augen"/>
+  <item id="99" name="Katzenaugen"/>
+  <item id="100" name="Schläfrige Augen"/>
+  <item id="101" name="Attraktive Augen"/>
+  <item id="102" name="Feixende Augen"/>
+  <item id="103" name="Feminine Augen"/>
+  <item id="104" name="Ehrfürchtige Augen"/>
+  <item id="105" name="Verliebte Augen"/>
+  <item id="106" name="Farbherz-Augen"/>
+  <item id="107" name="Stern-Augen"/>
+  <item id="108" name="Farbig. Sternenaug."/>
+  <item id="109" name="Minischnurrbart"/>
+  <item id="110" name="Hohe Augenbrauen"/>
+  <item id="111" name="Grimmige Augenbr."/>
+  <item id="112" name="Haarknoten"/>
+  <item id="113" name="Seitenscheitel"/>
+  <item id="114" name="Stirnband"/>
+  <item id="115" name="Afro"/>
+  <item id="116" name="Blatt"/>
+  <item id="117" name="Cowboy-Hut"/>
+  <item id="118" name="Blumen-Haarspang."/>
+  <item id="119" name="Königliche Krone"/>
+  <item id="120" name="Kriegerhelm"/>
+  <item id="121" name="Dienstm.-Kopfbed."/>
+  <item id="122" name="Modische Brille"/>
+  <item id="123" name="Brille &amp; Schnurrbart"/>
+  <item id="124" name="Komasan-Augenbr."/>
+  <item id="125" name="Strumpfhose"/>
+  <item id="126" name="Halstuch"/>
+  <item id="127" name="Jibanyan-Gürtel"/>
+  <item id="128" name="Lendenschurz"/>
+  <item id="129" name="Latzhose"/>
+  <item id="130" name="Anschaulich. Kimo."/>
+  <item id="131" name="Pfiffiger Kimono"/>
+  <item id="132" name="Dienstmädchen"/>
+  <item id="133" name="Cowboy-Weste"/>
+  <item id="134" name="Kriegerrüstung"/>
+  <item id="135" name="Königlich. Gewand"/>
+  <item id="136" name="Robokörper"/>
+  <item id="137" name="Juwelenkörper"/>
+  <item id="138" name="Stutzschwanz"/>
+  <item id="139" name="Gestreift. Schwanz"/>
+  <item id="140" name="Gewellter Schwanz"/>
+  <item id="141" name="Fuchsschwanz"/>
+  <item id="142" name="Herz-Schwanz"/>
+  <item id="143" name="Jibanyan-Schwanz"/>
+  <item id="144" name="Komasan-Schwanz"/>
+  <item id="145" name="Wilder Schwanz"/>
+  <item id="146" name="Teufelsschwanz"/>
+  <item id="147" name="Ringelschwanz"/>
+  <item id="148" name="Eichhörnchenschw."/>
+  <item id="149" name="Hundeschwanz"/>
+  <item id="150" name="Roboschwanz"/>
+  <item id="151" name="Juwelenschwanz"/>
+  <item id="152" name="Turnhallen-Handtu."/>
+  <item id="153" name="Arbeitskrawatte"/>
+  <item id="154" name="Fliege"/>
+  <item id="155" name="Freches Halstuch"/>
+  <item id="156" name="Halskrause"/>
+  <item id="157" name="Feierglöckchen"/>
+  <item id="158" name="Schicke Schleife"/>
+  <item id="159" name="Süße Schleife"/>
+  <item id="160" name="Goldmedaille"/>
+  <item id="161" name="Wanderer-Umhang"/>
+  <item id="162" name="Sieger-Umhang"/>
+  <item id="163" name="Flughund-Umhang"/>
+  <item id="164" name="Engelsflügel"/>
+  <item id="165" name="Jibanyanglöckchen"/>
+  <item id="166" name="Komasan-Wickel"/>
+  <item id="167" name="Großer Schal"/>
+  <item id="168" name="Prinzessinyan-Sti."/>
+  <item id="169" name="Omanyan-Stimme"/>
+  <item id="170" name="Jibanyan-Stimme"/>
+  <item id="171" name="Bengelnyan-Stim."/>
+  <item id="172" name="Frechnyan-Stimme"/>
+  <item id="173" name="Zenyan-Stimme"/>
+  <item id="174" name="Babynyan-Stimme"/>
+  <item id="175" name="Adeligernyan-Stim."/>
+  <item id="176" name="Hundeopanyan-Sti."/>
+  <item id="177" name="Scheunyan-Stimme"/>
+  <item id="178" name="Opanyan-Stimme"/>
+  <item id="179" name="Wabbelwutz-Stimm."/>
+  <item id="180" name="Bernsteinyan-Stim."/>
+  <item id="181" name="Onkelnyan-Stimme"/>
+  <item id="182" name="Kappanyan-Stimme"/>
+  <item id="183" name="Vorfahrnyan-Stim."/>
+  <item id="184" name="Whispernyan-Stim."/>
+  <item id="185" name="Mädchenyan-Stim."/>
+  <item id="186" name="Coolnyan-Stimme"/>
+  <item id="187" name="Astrohasenyan-Sti."/>
+  <item id="188" name="Süßnyan-Stimme"/>
+  <item id="189" name="Jungnyan-Stimme"/>
+  <item id="190" name="Komanyan-Stimme"/>
+  <item id="191" name="Zahmflughund-Sti."/>
+  <item id="192" name="Sumonyan-Stimme"/>
+  <item id="193" name="Kapitänyan-Stimme"/>
+  <item id="194" name="Kavaliernyan-Stim."/>
+  <item id="195" name="Papanyan-Stimme"/>
+  <item id="196" name="Enmanyan-Stimme"/>
+  <item id="197" name="Maginyan-Stimme"/>
+  <item id="198" name="Kindernyan-Stimm."/>
+  <item id="199" name="Nein-nyan-Stimme"/>
+  <item id="200" name="Schüchternyan-Sti."/>
+  <item id="201" name="Altnyan-Stimme"/>
+  <item id="202" name="Nerdnyan-Stimme"/>
+  <item id="203" name="Avantgardnyan-Sti."/>
+  <item id="204" name="Koalanyan-Stimme"/>
+</items>

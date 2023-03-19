@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="1803927674" name="Onigiri prugna"/>
+  <item id="4069298624" name="Onigiri in foglia"/>
+  <item id="2240520534" name="Onigiri con uova"/>
+  <item id="468661493" name="Onigiri gamberi"/>
+  <item id="1783081549" name="Tramezzino"/>
+  <item id="4082039799" name="Pane farcito"/>
+  <item id="4095950830" name="Ciambella ai mirtilli"/>
+  <item id="2219428705" name="Baguette"/>
+  <item id="1831497300" name="Pane al curry"/>
+  <item id="2200178552" name="Tramezzin. gustoso"/>
+  <item id="439180994" name="Ciambellingua"/>
+  <item id="1744901140" name="Gommabon"/>
+  <item id="4043851182" name="Dolcetto molle"/>
+  <item id="2249159992" name="Cracker gigante"/>
+  <item id="409723035" name="Caramelle alla frutta"/>
+  <item id="1869402125" name="Granita"/>
+  <item id="2170728737" name="Caram. arcobaleno"/>
+  <item id="4133847479" name="Mela candita"/>
+  <item id="1774419491" name="Latte"/>
+  <item id="4039782297" name="Caffellatte"/>
+  <item id="2278366991" name="Latte alla frutta"/>
+  <item id="430541484" name="Lattissimo"/>
+  <item id="1821141158" name="Y-Cola"/>
+  <item id="4119148828" name="Tè dell'anima"/>
+  <item id="2189560202" name="Spiriterade Y"/>
+  <item id="1809951935" name="Doc-Soda"/>
+  <item id="4075355397" name="Y-Cola Max"/>
+  <item id="484875305" name="VoltExtremo"/>
+  <item id="1833829009" name="Hamburger"/>
+  <item id="4098315051" name="Cheeseburger"/>
+  <item id="1780729480" name="Stella Burger"/>
+  <item id="2202035133" name="Doppio hamburger"/>
+  <item id="4079654706" name="Stellaburger deluxe"/>
+  <item id="488961566" name="Gnam Burger"/>
+  <item id="2217584548" name="Stellaburger maxi"/>
+  <item id="1858787071" name="Ramen pronto"/>
+  <item id="4156786501" name="Ramen di maiale"/>
+  <item id="2160375763" name="Ramen deluxe"/>
+  <item id="513811056" name="Ramen totale"/>
+  <item id="1704366530" name="Rotolino al cetriolo"/>
+  <item id="4238327928" name="Sushi con gamberi"/>
+  <item id="1660638683" name="Rotolini California"/>
+  <item id="4226942049" name="Sushi con frittata"/>
+  <item id="2342056174" name="Sus. uova salmone"/>
+  <item id="2364880119" name="Sushi pinna pesce"/>
+  <item id="474622310" name="Sushi riccio di mare"/>
+  <item id="368862541" name="Sushi al tonno"/>
+  <item id="1800215024" name="Gran sushi misto"/>
+  <item id="1683291125" name="Ravioli al vapore"/>
+  <item id="4250774095" name="Fegato alla piastra"/>
+  <item id="2321193689" name="Omelette granchio"/>
+  <item id="339611514" name="Gamberetti piccanti"/>
+  <item id="3539717416" name="Carota"/>
+  <item id="1274190994" name="Cetriolo"/>
+  <item id="1022733316" name="Germ. di bambù"/>
+  <item id="3583379761" name="Pannocchia"/>
+  <item id="1285511307" name="Avocado"/>
+  <item id="999843869" name="Mango verde"/>
+  <item id="2727426471" name="Fungo"/>
+  <item id="3502076785" name="Coscia di pollo"/>
+  <item id="3620779880" name="Cotoletta di maiale"/>
+  <item id="1236542155" name="Pezzo di pancetta"/>
+  <item id="1051923037" name="Lingua di manzo"/>
+  <item id="1322903250" name="Bistecca di manzo"/>
+  <item id="2698479614" name="Manzo prelibato"/>
+  <item id="970905156" name="Filetto alla griglia"/>
+  <item id="3514767686" name="Sgombro essiccato"/>
+  <item id="1215711484" name="Tonno pinna gialla"/>
+  <item id="3591560543" name="Cozze"/>
+  <item id="1327205605" name="Aragosta"/>
+  <item id="1064401002" name="Riccio mare fresco"/>
+  <item id="941407347" name="Filetto di salmone"/>
+  <item id="2702568905" name="Tonno scelto"/>
+  <item id="3559919555" name="Curry di pollo"/>
+  <item id="1295605369" name="Curry di agnello"/>
+  <item id="977170159" name="Curry di mare"/>
+  <item id="2757425996" name="Curry abbondante"/>
+  <item id="3589432820" name="Cheesecake"/>
+  <item id="2888752464" name="Pasticcino"/>
+  <item id="1291531342" name="Torta alla crema"/>
+  <item id="3676958150" name="Tor. cilie. di mamma"/>
+  <item id="3533677037" name="Tortino di riso"/>
+  <item id="1006372056" name="Pancake reali"/>
+  <item id="2778239355" name="Coppa di gelato"/>
+  <item id="3152962595" name="Ciocco-banana"/>
+  <item id="1268183127" name="Brioche spirito"/>
+  <item id="1016185025" name="Brioche dell'anima"/>
+  <item id="3437843637" name="Brioche fantasma"/>
+  <item id="3618954157" name="Daikon al vapore"/>
+  <item id="1321044503" name="Uovo sodo"/>
+  <item id="968538753" name="Spiedini di manzo"/>
+  <item id="2816356130" name="Oden d'alta classe"/>
+  <item id="1333780512" name="Spaghetti in brodo"/>
+  <item id="3598102938" name="Spaghetti soba"/>
+  <item id="947441846" name="Spaghetti all'aringa"/>
+  <item id="2786870549" name="Spaghetti all'anatra"/>
+  <item id="3710580391" name="Patatine"/>
+  <item id="3662099134" name="Arachi. caramellate"/>
+  <item id="1143187229" name="Snack goloso"/>
+  <item id="858036107" name="Patate al formaggio"/>
+  <item id="1129210628" name="Popcor. energetico"/>
+  <item id="2906653224" name="Snack di taccole"/>
+  <item id="3706231952" name="Barr. cioccolato"/>
+  <item id="1172426026" name="Barr. cioccofragola"/>
+  <item id="853999036" name="Barr. cioc. premium"/>
+  <item id="3247180017" name="Cono gelato"/>
+  <item id="1485134155" name="Cono gel. fruttato"/>
+  <item id="797075933" name="Con. g. arcobaleno"/>
+  <item id="2984705150" name="Cono gel. supremo"/>
+  <item id="3226362566" name="Ciambella"/>
+  <item id="1497838460" name="Treccia dolce"/>
+  <item id="775947242" name="Ciamb. cioccolato"/>
+  <item id="2955187785" name="Ciambella cosmica"/>
+  <item id="3255360671" name="Pizza al formaggio"/>
+  <item id="738639283" name="Pizza margherita"/>
+  <item id="1526828325" name="Pizza pollo e aglio"/>
+  <item id="3311736966" name="Pizza con pancetta"/>
+  <item id="2992777232" name="Pizza a stella"/>
+  <item id="3284842152" name="Hot dog"/>
+  <item id="1522788114" name="Hot dog di manzo"/>
+  <item id="767874948" name="Hot dog con chili"/>
+  <item id="3013624359" name="Hot dog supremo"/>
+  <item id="3330646061" name="Sp. alla bolognese"/>
+  <item id="1603072407" name="Spa. alla carbonara"/>
+  <item id="680247553" name="Linguine al pesto"/>
+  <item id="3069138082" name="Spag. alle vongole"/>
+  <item id="3253232692" name="Spagh. allo scoglio"/>
+  <item id="3343370778" name="Tem. di melanzane"/>
+  <item id="1582209952" name="Tempura di zucca"/>
+  <item id="692693814" name="Tempura di pollo"/>
+  <item id="3073195669" name="Tempura di pesce"/>
+  <item id="3223981571" name="Tempur. di calamari"/>
+  <item id="1495490489" name="Tempura di anguilla"/>
+  <item id="774139695" name="Tem. di gamberoni"/>
+  <item id="3197858494" name="Tempura deluxe"/>
+  <item id="3305206851" name="Barretta deliziosa"/>
+  <item id="3301121652" name="Banc. sus. tempura"/>
+  <item id="1573539790" name="Banc. sus. sukiyaki"/>
+  <item id="718110552" name="Banc. tem. sukiyaki"/>
+  <item id="3483326793" name="Sukiyaki da asporto"/>
+  <item id="1452673267" name="Sukiyaki di pollo"/>
+  <item id="563165285" name="Sukiyaki di manzo"/>
+  <item id="3220549062" name="Sukiyaki prelibato"/>
+  <item id="3371343184" name="Suk. Yo-kai Special"/>
+  <item id="3326445316" name="Frutto proibito"/>
+  <item id="338248220" name="Medicina disgus."/>
+  <item id="2367689638" name="Medicina amara"/>
+  <item id="4196868912" name="Medicina potente"/>
+  <item id="1682159251" name="Medic. miracolosa"/>
+  <item id="2370076515" name="ESPhera mini"/>
+  <item id="320924352" name="ESPhera piccola"/>
+  <item id="2317990778" name="ESPhera media"/>
+  <item id="4247686124" name="ESPhera grande"/>
+  <item id="1665801807" name="ESPhera mega"/>
+  <item id="340602585" name="ESPhera sacra"/>
+  <item id="397252210" name="Vigorium"/>
+  <item id="2393163720" name="Vigorium alfa"/>
+  <item id="279199406" name="Colpi nascosti"/>
+  <item id="1624164897" name="Attacchi arcani"/>
+  <item id="2309844756" name="Le tecniche migliori"/>
+  <item id="399112887" name="Antiche arti"/>
+  <item id="4272578434" name="I segreti dell'anima"/>
+  <item id="2394991373" name="Misteri mistici"/>
+  <item id="469268883" name="Una vita seria"/>
+  <item id="2196842537" name="A tutto karate"/>
+  <item id="4126546111" name="Usa il karate"/>
+  <item id="1804766492" name="Tecnidario"/>
+  <item id="479575434" name="Tecnipedia"/>
+  <item id="2241653808" name="In guardia"/>
+  <item id="4070300838" name="In guardia con stile"/>
+  <item id="1646575927" name="Angelino ti cura"/>
+  <item id="354677153" name="Ciao, Angelino"/>
+  <item id="1977907268" name="Peste in missione"/>
+  <item id="48449746" name="La peste perfetta"/>
+  <item id="2615810408" name="Collabora n.7"/>
+  <item id="3974965758" name="Collabora ed. sp."/>
+  <item id="376437829" name="Bambola di fuga"/>
+  <item id="1628217366" name="Bambola di ferro"/>
+  <item id="291919001" name="Bambola di bronzo"/>
+  <item id="2288977187" name="Bambola d'argento"/>
+  <item id="4285019573" name="Bambola d'oro"/>
+  <item id="369856640" name="Bambola di platino"/>
+  <item id="2399322426" name="Bambola nera"/>
+  <item id="2908180302" name="Esca da pesca"/>
+  <item id="878583540" name="Sciroppo nero"/>
+  <item id="288702760" name="Essenza Originyan"/>
+  <item id="440013732" name="Lama leggendaria"/>
+  <item id="2201174558" name="Lama maledetta"/>
+  <item id="2220787207" name="Lama sacra"/>
+  <item id="4097077896" name="Anima generale"/>
+  <item id="1783686955" name="Spaccamore"/>
+  <item id="492296125" name="Sfera elettrica"/>
+  <item id="1676061440" name="Anima imbattibile"/>
+  <item id="2586342239" name="Lingotto di platino"/>
+  <item id="350329750" name="Mantello bufera"/>
+  <item id="1948652147" name="Scettro dell'amore"/>
+  <item id="4082742929" name="Forcina glaciale"/>
+  <item id="52503269" name="Bilanciere"/>
+  <item id="1934349930" name="Fram. di male"/>
+  <item id="3979297737" name="Polvere eterna"/>
+  <item id="2638591814" name="Sfera del drago"/>
+  <item id="1098757352" name="Lama furente"/>
+  <item id="913998974" name="Completo sabbia"/>
+  <item id="2943604164" name="Acqua eterea"/>
+  <item id="3631539538" name="Rivista maledetta"/>
+  <item id="1221327043" name="Clacson"/>
+  <item id="1070385237" name="Aspira-ricordi"/>
+  <item id="156362294" name="Perla della sirena"/>
+  <item id="2119620256" name="Onigiri dell'amore"/>
+  <item id="2421733260" name="Scultura d'orso"/>
+  <item id="238821935" name="Lanterna pesce"/>
+  <item id="2033914553" name="Lume artigianale"/>
+  <item id="3761390339" name="Emblema d'oro"/>
+  <item id="2536862613" name="Teglia in ghisa"/>
+  <item id="126512644" name="Sabbia delle dune"/>
+  <item id="1888312978" name="Cappello vintage"/>
+  <item id="273340279" name="Statua di terracotta"/>
+  <item id="1733158881" name="Ibisco rosso"/>
+  <item id="4265915995" name="Anima turbinosa"/>
+  <item id="2302904013" name="Fulcro"/>
+  <item id="388436846" name="Armadio comodo"/>
+  <item id="1612719096" name="Perla pericolosa"/>
+  <item id="4180243010" name="Vaso antico"/>
+  <item id="2385396436" name="Sfera malvagità"/>
+  <item id="512843589" name="Balsamo da bagno"/>
+  <item id="1771466707" name="Brutta notizia"/>
+  <item id="996639924" name="DNA di dinosauro"/>
+  <item id="2725172494" name="Prem. &quot;Migl. giocat.&quot;"/>
+  <item id="1281405986" name="Essenza del male"/>
+  <item id="3580487064" name="Polv. stellestrisce"/>
+  <item id="2592718716" name="Moneta rossa"/>
+  <item id="58781382" name="Moneta gialla"/>
+  <item id="1955061328" name="Moneta arancione"/>
+  <item id="3940764659" name="Moneta rosa"/>
+  <item id="2648996709" name="Moneta verde"/>
+  <item id="82651871" name="Moneta blu"/>
+  <item id="1944721993" name="Moneta viola"/>
+  <item id="3814000600" name="Moneta azzurra"/>
+  <item id="573954073" name="Moneta una stella"/>
+  <item id="3411442988" name="Mon. cinq. stelle"/>
+  <item id="1542021309" name="Moneta speciale"/>
+  <item id="753815595" name="Moneta Yo"/>
+  <item id="1277811150" name="Moneta Kai"/>
+  <item id="992930136" name="Moneta Essenza"/>
+  <item id="3575679092" name="Moneta sushi"/>
+  <item id="1262755287" name="Moneta tempura"/>
+  <item id="1011035457" name="Moneta vortice"/>
+  <item id="2773122299" name="Moneta errante"/>
+  <item id="3528281197" name="Moneta arrugginita"/>
+  <item id="905273706" name="Moneta fiore"/>
+  <item id="1728350733" name="Moneta uccello"/>
+  <item id="268679835" name="Moneta vento"/>
+  <item id="2299194145" name="Moneta luna"/>
+  <item id="1598172252" name="Moneta del cielo"/>
+  <item id="4262321079" name="Moneta rilassante"/>
+  <item id="1617514004" name="Mon. onirica corag."/>
+  <item id="393117314" name="Moneta onirica luce"/>
+  <item id="2389126968" name="Mon. onirica platino"/>
+  <item id="4183826350" name="Mon. onirica fortun."/>
+  <item id="1776222783" name="Mon. onir. princip."/>
+  <item id="517485225" name="Mon. onir. saggezz."/>
+  <item id="2116008780" name="Mon. onir. orgoglio"/>
+  <item id="152603610" name="Mon. onirica nobiltà"/>
+  <item id="2417089120" name="Moneta onirica G1"/>
+  <item id="3877038838" name="Moneta onirica G2"/>
+  <item id="2037546837" name="Moneta onirica G3"/>
+  <item id="242569155" name="Moneta onirica G4"/>
+  <item id="3766169327" name="Mon. second. porz."/>
+  <item id="909371794" name="Monet. mangiatutto"/>
+  <item id="1891906430" name="Moneta souvenir L"/>
+  <item id="130221032" name="Moneta souvenir F"/>
+  <item id="828255627" name="Moneta souvenir S"/>
+  <item id="1180245277" name="Moneta souvenir K"/>
+  <item id="3746581671" name="Moneta gioiosa"/>
+  <item id="2824305713" name="Moneta Magnifex"/>
+  <item id="1093982468" name="Moneta radiante"/>
+  <item id="3627911358" name="Mone. vaso di ferro"/>
+  <item id="2939861032" name="Mo. &quot;Fancy That!&quot;"/>
+  <item id="1065723321" name="Moneta nera"/>
+  <item id="1216517423" name="Moneta nera nera"/>
+  <item id="675617994" name="Moneta demoniaca"/>
+  <item id="3326836198" name="Moneta degli Inferi"/>
+  <item id="2974567792" name="Moneta del sigillo"/>
+  <item id="791206099" name="Mon. dell'emblema"/>
+  <item id="1479534661" name="Moneta del tesoro"/>
+  <item id="3240540671" name="Moneta leggenda"/>
+  <item id="2205822962" name="Moneta banchetto"/>
+  <item id="3055651177" name="Super mone. rossa"/>
+  <item id="647927032" name="Super monet. gialla"/>
+  <item id="1369023598" name="Super m. arancione"/>
+  <item id="57167625" name="Super moneta rosa"/>
+  <item id="1953464223" name="Super mone. verde"/>
+  <item id="3982896677" name="Super moneta blu"/>
+  <item id="2590056115" name="Super moneta viola"/>
+  <item id="67472144" name="Super mon. azzurra"/>
+  <item id="1929558918" name="Ultra moneta rossa"/>
+  <item id="3926649404" name="Ultra moneta gialla"/>
+  <item id="2634865322" name="Ultra mo. arancione"/>
+  <item id="229885755" name="Ultra moneta rosa"/>
+  <item id="2058680237" name="Ultra moneta verde"/>
+  <item id="443776584" name="Ultra moneta blu"/>
+  <item id="1836338910" name="Ultra moneta viola"/>
+  <item id="4101840740" name="Ultra mone. azzurra"/>
+  <item id="2263324832" name="Pezzo m. una stella"/>
+  <item id="3860861253" name="Pez. m. cinq. stelle"/>
+  <item id="2435260883" name="Pez. mon. speciale"/>
+  <item id="2895455609" name="Stella danzante"/>
+  <item id="899445955" name="Biglietto lotteria"/>
+  <item id="1117471829" name="Biglietto musicale"/>
+  <item id="1714581950" name="Frammen. spettrale"/>
+  <item id="1178938710" name="Sfera del portale"/>
+  <item id="2285637778" name="Fungo bizzarro"/>
+  <item id="3121246736" name="Foto della popstar"/>
+  <item id="587408298" name="Spazzatura"/>
+  <item id="137261161" name="Biglietto Fungofest"/>
+  <item id="2133410047" name="Pass Sfida"/>
+  <item id="3779974492" name="Pass Platino"/>
+  <item id="2521490890" name="Pass Splendor"/>
+  <item id="256095344" name="Pass Aureo"/>
+  <item id="2017756390" name="Pass di Eloquia"/>
+  <item id="3908802935" name="Pass di Educatorso"/>
+  <item id="2684135905" name="Pass di Lodalurbe"/>
+  <item id="3440198278" name="Pass Aristocanom"/>
+  <item id="1409553212" name="Invi. Sushi Tempura"/>
+  <item id="3395323551" name="Invit. Sushi Sukiyaki"/>
+  <item id="3177690633" name="Inv. Temp. Sukiyaki"/>
+  <item id="1200047969" name="Cofanetto rosso"/>
+  <item id="4058032182" name="Biglietto per il circo"/>
+  <item id="1399445285" name="Mango verde"/>
+  <item id="4166444061" name="Tronco massiccio"/>
+  <item id="2404504715" name="Ramo resistente"/>
+  <item id="374900017" name="Framment. robusto"/>
+  <item id="1633662375" name="Manif. &quot;Investigaz.&quot;"/>
+  <item id="3285633716" name="Pietra tomb. antica"/>
+  <item id="3033659938" name="Pietra sovrana"/>
+  <item id="3558241223" name="Pietra di Pandora"/>
+  <item id="2735817553" name="Pietra dello spasso"/>
+  <item id="974656235" name="Pietra del riparo"/>
+  <item id="1293886077" name="Pietra cust. tombe"/>
+  <item id="1968800812" name="Pietra profetica"/>
+  <item id="39761082" name="Pietra della rabbia"/>
+  <item id="3548100574" name="Pietra S"/>
+  <item id="2759624520" name="Pietr. Dem. Acciaio"/>
+  <item id="2621055257" name="Pietra rinascita"/>
+  <item id="3946647951" name="Pietra dell'avidità"/>
+  <item id="1916026933" name="Pietra comica"/>
+  <item id="87257251" name="Pietra dorata"/>
+  <item id="2509008178" name="Pietra cremisi"/>
+  <item id="3800784292" name="Pietra degli Inferi"/>
+  <item id="2186073153" name="Pietra leggendaria"/>
+  <item id="4115391703" name="P. gemma nascosta"/>
+  <item id="1031132914" name="1° fram. pietra S ∞"/>
+  <item id="1249044068" name="2° fram. pietra S ∞"/>
+  <item id="1816311149" name="Fr. piet. rinascit. ∞ 1"/>
+  <item id="457541115" name="Fr. piet. rinascit. ∞ 2"/>
+  <item id="2233536600" name="Fr. pietr. avidità ∞ 1"/>
+  <item id="4062585038" name="Fr. pietr. avidità ∞ 2"/>
+  <item id="1798271348" name="Fr. pietr. comica ∞ 1"/>
+  <item id="472400354" name="Fr. pietr. comica ∞ 2"/>
+  <item id="2358729843" name="Fr. pietra dorata ∞ 1"/>
+  <item id="4220546277" name="Fr. pietra dorata ∞ 2"/>
+  <item id="3670932469" name="Targhett. del Giusto"/>
+  <item id="2915748707" name="Tar. dell'Innovatore"/>
+  <item id="2606228736" name="Targhet. dell'Antico"/>
+  <item id="3964720534" name="Tar. del Risvegliato"/>
+</items>

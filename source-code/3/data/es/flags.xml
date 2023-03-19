@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="1" name="Casitas y rotonda"/>
+  <item id="2" name="Pista de atletismo"/>
+  <item id="3" name="Cuatro tejados azules"/>
+  <item id="4" name="Junto a la rueda"/>
+  <item id="5" name="Puente del islote"/>
+  <item id="6" name="Junto a la iglesia sagrada"/>
+  <item id="7" name="Frente a la relojería"/>
+  <item id="8" name="Frente a la casa del callejón"/>
+  <item id="9" name="Mansión del millonario"/>
+  <item id="10" name="Roca junto al escondrijo"/>
+  <item id="11" name="Túnel del bosque sombrío"/>
+  <item id="12" name="En la cueva oscura"/>
+  <item id="13" name="Estanque Meadowbrooke"/>
+  <item id="14" name="Pueblo del cañón del este"/>
+  <item id="15" name="Hábitat del poni salvaje"/>
+  <item id="16" name="Río hacia la finca"/>
+  <item id="17" name="Orilla junto a la cueva"/>
+  <item id="18" name="Río del cañón"/>
+  <item id="19" name="Ruinas misteriosas de la isla"/>
+  <item id="20" name="Ruinas de arenisca"/>
+  <item id="21" name="Comida radical"/>
+  <item id="22" name="Comix Club"/>
+  <item id="23" name="Nyanyan All Stars"/>
+  <item id="24" name="Los antialmas del soul"/>
+  <item id="25" name="Fin de año"/>
+  <item id="26" name="Los molestos"/>
+  <item id="27" name="Críticos gastronómicos"/>
+  <item id="28" name="Perritos espeluznantes"/>
+  <item id="29" name="Horrorsmith"/>
+  <item id="30" name="Verano Mix"/>
+  <item id="31" name="Los Neatles"/>
+  <item id="32" name="Mazor... confundido"/>
+  <item id="33" name="Aletas desatadas"/>
+  <item id="34" name="Cambio Z"/>
+  <item id="35" name="Ñameliers"/>
+  <item id="36" name="Red Hot Hellion Steppers"/>
+  <item id="37" name="El Trío Taronyan (Cara A)"/>
+  <item id="38" name="El Trío Taronyan (Cara B)"/>
+  <item id="39" name="Floridablanca &amp; EE. UU. All Stars"/>
+  <item id="40" name="Flamileón"/>
+  <item id="41" name="Capi-Cachas"/>
+  <item id="42" name="Hovernyan"/>
+  <item id="43" name="Cotilleja"/>
+  <item id="44" name="Mazorco"/>
+  <item id="45" name="Rebelcebú"/>
+  <item id="46" name="Jibanyan"/>
+  <item id="47" name="Komasan"/>
+  <item id="48" name="Abuzampa"/>
+  <item id="49" name="Enciélago"/>
+  <item id="50" name="Negatalia"/>
+  <item id="51" name="Charlatón"/>
+  <item id="52" name="Usapyon"/>
+  <item id="53" name="Shogunyan"/>
+  <item id="54" name="Menuda potra"/>
+  <item id="55" name="(No.55)"/>
+  <item id="56" name="(No.56)"/>
+  <item id="57" name="(No.57)"/>
+  <item id="58" name="(No.58)"/>
+  <item id="59" name="(No.59)"/>
+  <item id="60" name="(No.60)"/>
+  <item id="61" name="(No.61)"/>
+  <item id="62" name="(No.62)"/>
+  <item id="63" name="(No.63)"/>
+  <item id="64" name="(No.64)"/>
+  <item id="65" name="(No.65)"/>
+  <item id="66" name="(No.66)"/>
+  <item id="67" name="(No.67)"/>
+  <item id="68" name="(No.68)"/>
+  <item id="69" name="(No.69)"/>
+  <item id="70" name="(No.70)"/>
+  <item id="71" name="(No.71)"/>
+  <item id="72" name="(No.72)"/>
+  <item id="73" name="(No.73)"/>
+  <item id="74" name="(No.74)"/>
+  <item id="75" name="(No.75)"/>
+  <item id="76" name="(No.76)"/>
+  <item id="77" name="(No.77)"/>
+  <item id="78" name="(No.78)"/>
+  <item id="79" name="(No.79)"/>
+  <item id="80" name="(No.80)"/>
+  <item id="81" name="(No.81)"/>
+  <item id="82" name="(No.82)"/>
+  <item id="83" name="(No.83)"/>
+  <item id="84" name="(No.84)"/>
+  <item id="85" name="Orejas caídas"/>
+  <item id="86" name="Orejas de Jibanyan"/>
+  <item id="87" name="Orejas de conejo"/>
+  <item id="88" name="Orejas de ratón"/>
+  <item id="89" name="Cabeza de robot"/>
+  <item id="90" name="Cabeza diamante"/>
+  <item id="91" name="Media luna"/>
+  <item id="92" name="Raya al medio"/>
+  <item id="93" name="Bigote"/>
+  <item id="94" name="Oso panda"/>
+  <item id="95" name="Jibanyan"/>
+  <item id="96" name="Intensos"/>
+  <item id="97" name="Gallardos"/>
+  <item id="98" name="Sorprendidos"/>
+  <item id="99" name="Gatunos"/>
+  <item id="100" name="Somnolientos"/>
+  <item id="101" name="Cautivadores"/>
+  <item id="102" name="Arrogantes"/>
+  <item id="103" name="Femeninos"/>
+  <item id="104" name="Deslumbrantes"/>
+  <item id="105" name="De corazón"/>
+  <item id="106" name="De corazón 2"/>
+  <item id="107" name="De estrella"/>
+  <item id="108" name="De estrella 2"/>
+  <item id="109" name="Minibigote"/>
+  <item id="110" name="Cejas redondas"/>
+  <item id="111" name="Cejas fruncidas"/>
+  <item id="112" name="Moño"/>
+  <item id="113" name="Raya al lado"/>
+  <item id="114" name="Cinta"/>
+  <item id="115" name="Afro"/>
+  <item id="116" name="Hoja"/>
+  <item id="117" name="Som. de vaquero"/>
+  <item id="118" name="Flor"/>
+  <item id="119" name="Corona"/>
+  <item id="120" name="Casco guerrero"/>
+  <item id="121" name="Cofia"/>
+  <item id="122" name="Gafas chulas"/>
+  <item id="123" name="Gafas con nariz"/>
+  <item id="124" name="Cejas Komasan"/>
+  <item id="125" name="A medias"/>
+  <item id="126" name="Capa"/>
+  <item id="127" name="Faja Jibanyan"/>
+  <item id="128" name="Taparrabos"/>
+  <item id="129" name="Peto"/>
+  <item id="130" name="Kimono alegre"/>
+  <item id="131" name="Kimono elegante"/>
+  <item id="132" name="Traje doncella"/>
+  <item id="133" name="Chaleco vaquero"/>
+  <item id="134" name="Armadura"/>
+  <item id="135" name="Traje realeza"/>
+  <item id="136" name="Robótico"/>
+  <item id="137" name="De diamante"/>
+  <item id="138" name="Cortada"/>
+  <item id="139" name="De rayas"/>
+  <item id="140" name="Torcida"/>
+  <item id="141" name="De zorro"/>
+  <item id="142" name="De corazón"/>
+  <item id="143" name="De Jibanyan"/>
+  <item id="144" name="De Komasan"/>
+  <item id="145" name="Despeinada"/>
+  <item id="146" name="Demoniaca"/>
+  <item id="147" name="Enroscada"/>
+  <item id="148" name="De ardilla"/>
+  <item id="149" name="De perro"/>
+  <item id="150" name="De robot"/>
+  <item id="151" name="De diamante"/>
+  <item id="152" name="Toalla"/>
+  <item id="153" name="Corbata"/>
+  <item id="154" name="Pajarita"/>
+  <item id="155" name="Pañuelo"/>
+  <item id="156" name="Gorguera"/>
+  <item id="157" name="Cascabel"/>
+  <item id="158" name="Pajarita chic"/>
+  <item id="159" name="Pajarita cuqui"/>
+  <item id="160" name="Medalla de oro"/>
+  <item id="161" name="Capa trotamundos"/>
+  <item id="162" name="Capa triunfal"/>
+  <item id="163" name="Capa murciélago"/>
+  <item id="164" name="Alas de ángel"/>
+  <item id="165" name="Cascabel Jibanyan"/>
+  <item id="166" name="Fardo Komasan"/>
+  <item id="167" name="Pañuelo elegante"/>
+  <item id="168" name="Niña"/>
+  <item id="169" name="Abuela"/>
+  <item id="170" name="Zombi"/>
+  <item id="171" name="Mimada"/>
+  <item id="172" name="Traviesa"/>
+  <item id="173" name="Kabukio"/>
+  <item id="174" name="Maginyan"/>
+  <item id="175" name="Hermano"/>
+  <item id="176" name="Cachorrito"/>
+  <item id="177" name="Padre"/>
+  <item id="178" name="Abuelo"/>
+  <item id="179" name="Termascino"/>
+  <item id="180" name="Oso"/>
+  <item id="181" name="Tío"/>
+  <item id="182" name="Kappa"/>
+  <item id="183" name="Ancestro"/>
+  <item id="184" name="Whisper"/>
+  <item id="185" name="Princesa"/>
+  <item id="186" name="Guay"/>
+  <item id="187" name="Astroconejo"/>
+  <item id="188" name="Cuqui"/>
+  <item id="189" name="Joven"/>
+  <item id="190" name="Perro"/>
+  <item id="191" name="Normal"/>
+  <item id="192" name="Sumo"/>
+  <item id="193" name="Capitán"/>
+  <item id="194" name="Guerrero"/>
+  <item id="195" name="Zazel"/>
+  <item id="196" name="Enma"/>
+  <item id="197" name="Ángel"/>
+  <item id="198" name="Tímida"/>
+  <item id="199" name="No-No"/>
+  <item id="200" name="Robótica"/>
+  <item id="201" name="Grave"/>
+  <item id="202" name="Valeria"/>
+  <item id="203" name="Moderna"/>
+  <item id="204" name="Aguda"/>
+</items>

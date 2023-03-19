@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="1803927674" name="Arroz con ciruelas"/>
+  <item id="4069298624" name="Arroz hoja de col"/>
+  <item id="2240520534" name="Arroz con huevas"/>
+  <item id="468661493" name="Arroz con gambas"/>
+  <item id="1783081549" name="Sándwich"/>
+  <item id="4082039799" name="Bollo con crema"/>
+  <item id="4095950830" name="Rosca arándanos"/>
+  <item id="2219428705" name="Baguette"/>
+  <item id="1831497300" name="Pan de curry"/>
+  <item id="2200178552" name="Sándwich club"/>
+  <item id="439180994" name="Rosca lenguaraz"/>
+  <item id="1744901140" name="Chicle de 10"/>
+  <item id="4043851182" name="Caramelo pegajoso"/>
+  <item id="2249159992" name="Galleta gigante"/>
+  <item id="409723035" name="Caramelos de frutas"/>
+  <item id="1869402125" name="Helado granizado"/>
+  <item id="2170728737" name="Chuches multico."/>
+  <item id="4133847479" name="Manzana caramelo"/>
+  <item id="1774419491" name="Leche"/>
+  <item id="4039782297" name="Café con leche"/>
+  <item id="2278366991" name="Leche de frutas"/>
+  <item id="430541484" name="Leche fresca"/>
+  <item id="1821141158" name="Y-Cola"/>
+  <item id="4119148828" name="Té relajante"/>
+  <item id="2189560202" name="Insomnia Y"/>
+  <item id="1809951935" name="Soda Cola"/>
+  <item id="4075355397" name="Y-Cola Max"/>
+  <item id="484875305" name="Energicina"/>
+  <item id="1833829009" name="Hamburguesa"/>
+  <item id="4098315051" name="Hamburgue. queso"/>
+  <item id="1780729480" name="Hamburg. estrella"/>
+  <item id="2202035133" name="Hamburguesa doble"/>
+  <item id="4079654706" name="Hamb. estre. doble"/>
+  <item id="488961566" name="Hamburguesa Ñam"/>
+  <item id="2217584548" name="Hamb. est. extrema"/>
+  <item id="1858787071" name="Vaso de ramen"/>
+  <item id="4156786501" name="Ramen con cerdo"/>
+  <item id="2160375763" name="Ramen deluxe"/>
+  <item id="513811056" name="Ramen completo"/>
+  <item id="1704366530" name="Maki de pepino"/>
+  <item id="4238327928" name="Nigiri de gamba"/>
+  <item id="1660638683" name="Maki California"/>
+  <item id="4226942049" name="Sushi de huevo"/>
+  <item id="2342056174" name="Sushi huev. salmón"/>
+  <item id="2364880119" name="Sushi de aleta"/>
+  <item id="474622310" name="Sushi de erizo"/>
+  <item id="368862541" name="Nigiri de atún"/>
+  <item id="1800215024" name="Degustación sushi"/>
+  <item id="1683291125" name="Empanadi. chinas"/>
+  <item id="4250774095" name="Hígado cebollino"/>
+  <item id="2321193689" name="Tortilla de cangrejo"/>
+  <item id="339611514" name="Gambas picantes"/>
+  <item id="3539717416" name="Zanahoria"/>
+  <item id="1274190994" name="Pepino"/>
+  <item id="1022733316" name="Brote de bambú"/>
+  <item id="3583379761" name="Mazorca de maíz"/>
+  <item id="1285511307" name="Aguacate"/>
+  <item id="999843869" name="Mango verde"/>
+  <item id="2727426471" name="Seta japonesa"/>
+  <item id="3502076785" name="Muslo de pollo"/>
+  <item id="3620779880" name="Chuleta de cerdo"/>
+  <item id="1236542155" name="Panceta"/>
+  <item id="1051923037" name="Lengua de vaca"/>
+  <item id="1322903250" name="Filete de ternera"/>
+  <item id="2698479614" name="Carne veteada"/>
+  <item id="970905156" name="Solomillo"/>
+  <item id="3514767686" name="Caballa en salazón"/>
+  <item id="1215711484" name="Jurel"/>
+  <item id="3591560543" name="Mejillones"/>
+  <item id="1327205605" name="Bogavante"/>
+  <item id="1064401002" name="Erizo fresco"/>
+  <item id="941407347" name="Salmón rey"/>
+  <item id="2702568905" name="Atún selecto"/>
+  <item id="3559919555" name="Curry de pollo"/>
+  <item id="1295605369" name="Curry de cordero"/>
+  <item id="977170159" name="Curry de marisco"/>
+  <item id="2757425996" name="Curry mixto"/>
+  <item id="3589432820" name="Tarta de queso"/>
+  <item id="2888752464" name="Magdalena"/>
+  <item id="1291531342" name="Tarta de fresa"/>
+  <item id="3676958150" name="Pastel cere. casero"/>
+  <item id="3533677037" name="Dulce de arroz"/>
+  <item id="1006372056" name="Tortitas"/>
+  <item id="2778239355" name="Helado con frutas"/>
+  <item id="3152962595" name="Chocobanana"/>
+  <item id="1268183127" name="Fantasquebollo"/>
+  <item id="1016185025" name="Carnanibollo"/>
+  <item id="3437843637" name="Mentespebollo"/>
+  <item id="3618954157" name="Daikon al vapor"/>
+  <item id="1321044503" name="Huevo cocido"/>
+  <item id="968538753" name="Brochetas de carne"/>
+  <item id="2816356130" name="Caldo completo"/>
+  <item id="1333780512" name="Sopa de fideos"/>
+  <item id="3598102938" name="Fideos sarracenos"/>
+  <item id="947441846" name="Fideos pescado"/>
+  <item id="2786870549" name="Fideos con pato"/>
+  <item id="3710580391" name="Patatas fritas"/>
+  <item id="3662099134" name="Cacahue. garrapiña."/>
+  <item id="1143187229" name="Saladitos"/>
+  <item id="858036107" name="Palomitas de queso"/>
+  <item id="1129210628" name="Palomit. especiales"/>
+  <item id="2906653224" name="Guisantes aperitivo"/>
+  <item id="3706231952" name="Chocobarrita"/>
+  <item id="1172426026" name="Chocobarrita fresa"/>
+  <item id="853999036" name="Chocoba. prémium"/>
+  <item id="3247180017" name="Helado"/>
+  <item id="1485134155" name="Helado de bayas"/>
+  <item id="797075933" name="Helado multicolor"/>
+  <item id="2984705150" name="Megahelado esp. ☆"/>
+  <item id="3226362566" name="Rosquilla"/>
+  <item id="1497838460" name="Lazo"/>
+  <item id="775947242" name="Chocorrosquilla"/>
+  <item id="2955187785" name="Rosquilla cósmica"/>
+  <item id="3255360671" name="Pizza cuatro quesos"/>
+  <item id="738639283" name="Pizza margarita"/>
+  <item id="1526828325" name="Pizza de pollo"/>
+  <item id="3311736966" name="Pizza de beicon"/>
+  <item id="2992777232" name="Pizza estrella"/>
+  <item id="3284842152" name="Perrito caliente"/>
+  <item id="1522788114" name="Perrito-hamburgue."/>
+  <item id="767874948" name="Perrito picante"/>
+  <item id="3013624359" name="Superperrito"/>
+  <item id="3330646061" name="Espague. boloñesa"/>
+  <item id="1603072407" name="Espagu. carbonara"/>
+  <item id="680247553" name="Espagu. genovesa"/>
+  <item id="3069138082" name="Espaguetis almejas"/>
+  <item id="3253232692" name="Espaguet. marinera"/>
+  <item id="3343370778" name="Tempura berenjena"/>
+  <item id="1582209952" name="Tempura calabaza"/>
+  <item id="692693814" name="Tempura de pollo"/>
+  <item id="3073195669" name="Tempura pescado"/>
+  <item id="3223981571" name="Tempura calamar"/>
+  <item id="1495490489" name="Tempura congrio"/>
+  <item id="774139695" name="Temp. gamba giga."/>
+  <item id="3197858494" name="Degustaci. tempura"/>
+  <item id="3305206851" name="Chocodelicia"/>
+  <item id="3301121652" name="Sushi con tempura"/>
+  <item id="1573539790" name="Banqu. sushi comb."/>
+  <item id="718110552" name="Ban. tempura comb."/>
+  <item id="3483326793" name="Sukiyaki para llevar"/>
+  <item id="1452673267" name="Pollo combinado"/>
+  <item id="563165285" name="Sukiyaki de ternera"/>
+  <item id="3220549062" name="Suki. veteado espe."/>
+  <item id="3371343184" name="Espe. Yo-kai combi."/>
+  <item id="3326445316" name="Fruta prohibida"/>
+  <item id="338248220" name="Medi. asquerosa"/>
+  <item id="2367689638" name="Medicina amarga"/>
+  <item id="4196868912" name="Medicina increíble"/>
+  <item id="1682159251" name="Medicina milagrosa"/>
+  <item id="2370076515" name="Exporbe mini"/>
+  <item id="320924352" name="Exporbe S"/>
+  <item id="2317990778" name="Exporbe M"/>
+  <item id="4247686124" name="Exporbe L"/>
+  <item id="1665801807" name="Exporbe XL"/>
+  <item id="340602585" name="Exporbe sagrado"/>
+  <item id="397252210" name="Resistina"/>
+  <item id="2393163720" name="Resistina Alfa"/>
+  <item id="279199406" name="Golpes secretos"/>
+  <item id="1624164897" name="Ataques arcanos"/>
+  <item id="2309844756" name="Técnicas a tope"/>
+  <item id="399112887" name="Artes antiguas"/>
+  <item id="4272578434" name="Secretos del alma"/>
+  <item id="2394991373" name="Misterios místicos"/>
+  <item id="469268883" name="Date vida"/>
+  <item id="2196842537" name="Kárate va"/>
+  <item id="4126546111" name="Kárate doy"/>
+  <item id="1804766492" name="Tecnicedario"/>
+  <item id="479575434" name="Tecnipedia"/>
+  <item id="2241653808" name="En guardia"/>
+  <item id="4070300838" name="Defensa gloriosa"/>
+  <item id="1646575927" name="Ángel sanador"/>
+  <item id="354677153" name="Adiós, angelito"/>
+  <item id="1977907268" name="Cansino y paz"/>
+  <item id="48449746" name="Código Cansino"/>
+  <item id="2615810408" name="Cooperar hoy n.º 7"/>
+  <item id="3974965758" name="Especial Cooperar"/>
+  <item id="376437829" name="Muñeco de trapo"/>
+  <item id="1628217366" name="Muñeco de hierro"/>
+  <item id="291919001" name="Muñeco de bronce"/>
+  <item id="2288977187" name="Muñeco de plata"/>
+  <item id="4285019573" name="Muñeco de oro"/>
+  <item id="369856640" name="Muñeco de platino"/>
+  <item id="2399322426" name="Muñeca negra"/>
+  <item id="2908180302" name="Cebo para peces"/>
+  <item id="878583540" name="Sirope negro"/>
+  <item id="288702760" name="Esencia Originyan"/>
+  <item id="440013732" name="Espada legendaria"/>
+  <item id="2201174558" name="Espada maldita"/>
+  <item id="2220787207" name="Espada sagrada"/>
+  <item id="4097077896" name="Alma de general"/>
+  <item id="1783686955" name="Potenciador amor"/>
+  <item id="492296125" name="Orbe eléctrico"/>
+  <item id="1676061440" name="Alma invencible"/>
+  <item id="2586342239" name="Lingote de platino"/>
+  <item id="350329750" name="Capa de ventisca"/>
+  <item id="1948652147" name="Cetro del amor"/>
+  <item id="4082742929" name="Horquilla glacial"/>
+  <item id="52503269" name="Pesas pesadas"/>
+  <item id="1934349930" name="Esquirla del mal"/>
+  <item id="3979297737" name="Polvos antiedad"/>
+  <item id="2638591814" name="Orbe del dragón"/>
+  <item id="1098757352" name="Espada iracunda"/>
+  <item id="913998974" name="Traje caqui"/>
+  <item id="2943604164" name="Agua sobrenatural"/>
+  <item id="3631539538" name="Diario maldito"/>
+  <item id="1221327043" name="Bocina"/>
+  <item id="1070385237" name="Aspiramemorias"/>
+  <item id="156362294" name="Perla de sirena"/>
+  <item id="2119620256" name="Arroz del amor"/>
+  <item id="2421733260" name="Oso tallado"/>
+  <item id="238821935" name="Farolillo de pez"/>
+  <item id="2033914553" name="Farolillo maestro"/>
+  <item id="3761390339" name="Emblema dorado"/>
+  <item id="2536862613" name="Plancha takoyaki"/>
+  <item id="126512644" name="Arena de duna"/>
+  <item id="1888312978" name="Sombrero oriental"/>
+  <item id="273340279" name="Figura de terracota"/>
+  <item id="1733158881" name="Hibisco rojo"/>
+  <item id="4265915995" name="Alma arremolinada"/>
+  <item id="2302904013" name="Piedra angular"/>
+  <item id="388436846" name="Armario cómodo"/>
+  <item id="1612719096" name="Perla peligrosa"/>
+  <item id="4180243010" name="Cerámica antigua"/>
+  <item id="2385396436" name="Bola del mal"/>
+  <item id="512843589" name="Aceite de baño"/>
+  <item id="1771466707" name="Malas noticias"/>
+  <item id="996639924" name="ADN de dinosaurio"/>
+  <item id="2725172494" name="Premio JMV"/>
+  <item id="1281405986" name="Esencia del mal"/>
+  <item id="3580487064" name="Topping estrellitas"/>
+  <item id="2592718716" name="Moneda roja"/>
+  <item id="58781382" name="Moneda amarilla"/>
+  <item id="1955061328" name="Moneda naranja"/>
+  <item id="3940764659" name="Moneda rosa"/>
+  <item id="2648996709" name="Moneda verde"/>
+  <item id="82651871" name="Moneda azul"/>
+  <item id="1944721993" name="Moneda morada"/>
+  <item id="3814000600" name="Moneda turquesa"/>
+  <item id="573954073" name="Moneda 1 estrella"/>
+  <item id="3411442988" name="Moneda 5 estrellas"/>
+  <item id="1542021309" name="Moneda especial"/>
+  <item id="753815595" name="Mone. misterio (Yo)"/>
+  <item id="1277811150" name="Mon. misterio (Kai)"/>
+  <item id="992930136" name="Mo. misterio (alma)"/>
+  <item id="3575679092" name="Moneda de sushi"/>
+  <item id="1262755287" name="Moneda tempura"/>
+  <item id="1011035457" name="Moneda torbellino"/>
+  <item id="2773122299" name="Mone. trotamundos"/>
+  <item id="3528281197" name="Moneda oxidada"/>
+  <item id="905273706" name="Mon. emoción (flor)"/>
+  <item id="1728350733" name="Mo. emoc. (pájaro)"/>
+  <item id="268679835" name="Mo. emoc. (viento)"/>
+  <item id="2299194145" name="Mon. emoci. (luna)"/>
+  <item id="1598172252" name="M. emoci. celestial"/>
+  <item id="4262321079" name="Moneda relajante"/>
+  <item id="1617514004" name="Mon. sueño (valor)"/>
+  <item id="393117314" name="Moned. sueño (luz)"/>
+  <item id="2389126968" name="Mo. sueño (platino)"/>
+  <item id="4183826350" name="Mo. sueño (suerte)"/>
+  <item id="1776222783" name="M. sueño (princesa)"/>
+  <item id="517485225" name="M. sueñ. (sabiduría)"/>
+  <item id="2116008780" name="Mo. sueño (orgullo)"/>
+  <item id="152603610" name="M. sueño (nobleza)"/>
+  <item id="2417089120" name="Moned. sueño (G1)"/>
+  <item id="3877038838" name="Moned. sueño (G2)"/>
+  <item id="2037546837" name="Moned. sueño (G3)"/>
+  <item id="242569155" name="Moned. sueño (G4)"/>
+  <item id="3766169327" name="Moneda de repetir"/>
+  <item id="909371794" name="Moneda a reventar"/>
+  <item id="1891906430" name="Moneda souve. (L)"/>
+  <item id="130221032" name="Moneda souve. (F)"/>
+  <item id="828255627" name="Moneda souve. (S)"/>
+  <item id="1180245277" name="Moneda souve. (K)"/>
+  <item id="3746581671" name="Moneda alegre"/>
+  <item id="2824305713" name="Moneda excelente"/>
+  <item id="1093982468" name="Moneda reluciente"/>
+  <item id="3627911358" name="Mon. caldero hierro"/>
+  <item id="2939861032" name="Mone. &quot;Fancy That!&quot;"/>
+  <item id="1065723321" name="Moneda negra"/>
+  <item id="1216517423" name="Moneda azabache"/>
+  <item id="675617994" name="Moned. demoniaca"/>
+  <item id="3326836198" name="Moned. inframundo"/>
+  <item id="2974567792" name="Moneda sellada"/>
+  <item id="791206099" name="Moneda emblema"/>
+  <item id="1479534661" name="Moneda del tesoro"/>
+  <item id="3240540671" name="Moneda legendaria"/>
+  <item id="2205822962" name="Moneda banquete"/>
+  <item id="3055651177" name="Supermoneda roja"/>
+  <item id="647927032" name="Supermon. amarilla"/>
+  <item id="1369023598" name="Supermon. naranja"/>
+  <item id="57167625" name="Supermoneda rosa"/>
+  <item id="1953464223" name="Supermone. verde"/>
+  <item id="3982896677" name="Supermoneda azul"/>
+  <item id="2590056115" name="Supermon. morada"/>
+  <item id="67472144" name="Supermo. turquesa"/>
+  <item id="1929558918" name="Ultramoneda roja"/>
+  <item id="3926649404" name="Ultramone. amarilla"/>
+  <item id="2634865322" name="Ultramone. naranja"/>
+  <item id="229885755" name="Ultramoneda rosa"/>
+  <item id="2058680237" name="Ultramoneda verde"/>
+  <item id="443776584" name="Ultramoneda azul"/>
+  <item id="1836338910" name="Ultramone. morada"/>
+  <item id="4101840740" name="Ultramon. turquesa"/>
+  <item id="2263324832" name="Trozo m. 1 estrella"/>
+  <item id="3860861253" name="Trozo m. 5 estrellas"/>
+  <item id="2435260883" name="Moneda especial"/>
+  <item id="2895455609" name="Estrella brillante"/>
+  <item id="899445955" name="Billete de lotería"/>
+  <item id="1117471829" name="Tarjeta musical"/>
+  <item id="1714581950" name="Fragmen. aterrador"/>
+  <item id="1178938710" name="Esfera del portal"/>
+  <item id="2285637778" name="Seta extraña"/>
+  <item id="3121246736" name="Foto de estrella"/>
+  <item id="587408298" name="Basura"/>
+  <item id="137261161" name="Entrada Festisetas"/>
+  <item id="2133410047" name="Pase para el duelo"/>
+  <item id="3779974492" name="Pase de platino"/>
+  <item id="2521490890" name="Pase radiante"/>
+  <item id="256095344" name="Pase dorado"/>
+  <item id="2017756390" name="Pase parlanchín"/>
+  <item id="3908802935" name="Pase educosín"/>
+  <item id="2684135905" name="Pase urbano"/>
+  <item id="3440198278" name="Pase sofisticado"/>
+  <item id="1409553212" name="Cupón sushi temp."/>
+  <item id="3395323551" name="Cupón sushi combi."/>
+  <item id="3177690633" name="Cup. tempura com."/>
+  <item id="1200047969" name="Caja roja"/>
+  <item id="4058032182" name="Entrada de circo"/>
+  <item id="1399445285" name="Mango verde"/>
+  <item id="4166444061" name="Leño resistente"/>
+  <item id="2404504715" name="Rama firme"/>
+  <item id="374900017" name="Palo basto"/>
+  <item id="1633662375" name="Cartel detectives"/>
+  <item id="3285633716" name="Lápida ancestral"/>
+  <item id="3033659938" name="Piedra soberana"/>
+  <item id="3558241223" name="Piedra de Pandora"/>
+  <item id="2735817553" name="Piedra peculiar"/>
+  <item id="974656235" name="Piedra refugio"/>
+  <item id="1293886077" name="Piedra sepulturero"/>
+  <item id="1968800812" name="Piedra profética"/>
+  <item id="39761082" name="Piedra zascante"/>
+  <item id="3548100574" name="Piedra S"/>
+  <item id="2759624520" name="P. demonio acero"/>
+  <item id="2621055257" name="Piedra del renacer"/>
+  <item id="3946647951" name="Piedra de avaricia"/>
+  <item id="1916026933" name="Piedra atontadora"/>
+  <item id="87257251" name="Piedra gloriosa"/>
+  <item id="2509008178" name="Piedra sangrienta"/>
+  <item id="3800784292" name="Piedra inframundo"/>
+  <item id="2186073153" name="Piedra legendaria"/>
+  <item id="4115391703" name="Piedra gema oculta"/>
+  <item id="1031132914" name="Frag. piedra S ∞ 1"/>
+  <item id="1249044068" name="Frag. piedra S ∞ 2"/>
+  <item id="1816311149" name="Frag. p. renac. ∞ 1"/>
+  <item id="457541115" name="Frag. p. renac. ∞ 2"/>
+  <item id="2233536600" name="Frag. p. avaricia ∞ 1"/>
+  <item id="4062585038" name="Frag. p. avaricia ∞ 2"/>
+  <item id="1798271348" name="Frag. p. atont. ∞ 1"/>
+  <item id="472400354" name="Frag. p. atont. ∞ 2"/>
+  <item id="2358729843" name="Frag. p. glorios. ∞ 1"/>
+  <item id="4220546277" name="Frag. p. glorios. ∞ 2"/>
+  <item id="3670932469" name="Insignia justiciera"/>
+  <item id="2915748707" name="Insignia intelectual"/>
+  <item id="2606228736" name="Insignia ancestral"/>
+  <item id="3964720534" name="Insignia iluminada"/>
+</items>

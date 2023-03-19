@@ -1,0 +1,957 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="1" name="Melofreccio"/>
+  <item id="2" name="Rovinasonno"/>
+  <item id="3" name="Padezoma"/>
+  <item id="4" name="Padesolo"/>
+  <item id="5" name="Mambo"/>
+  <item id="6" name="Katanoh"/>
+  <item id="7" name="Katachiom"/>
+  <item id="8" name="Pigrabbio"/>
+  <item id="9" name="Pulishido"/>
+  <item id="10" name="Pulishogun"/>
+  <item id="11" name="Leopigro"/>
+  <item id="12" name="Leoforte"/>
+  <item id="13" name="Pesterr"/>
+  <item id="14" name="Furyo"/>
+  <item id="15" name="Homblu"/>
+  <item id="16" name="Pikiatodo"/>
+  <item id="17" name="Nervimacho"/>
+  <item id="18" name="Miomacho"/>
+  <item id="19" name="Velominimo"/>
+  <item id="20" name="Sonnoporco"/>
+  <item id="21" name="Torporco"/>
+  <item id="22" name="Anguirai"/>
+  <item id="23" name="Roninguilla"/>
+  <item id="24" name="Incapall"/>
+  <item id="25" name="Straik"/>
+  <item id="26" name="Adelmo"/>
+  <item id="27" name="Uniguerriero"/>
+  <item id="28" name="Capitavere"/>
+  <item id="29" name="Guerriso"/>
+  <item id="30" name="Risfiamma"/>
+  <item id="31" name="Leccatino"/>
+  <item id="32" name="Leccalux"/>
+  <item id="33" name="Kumbatto"/>
+  <item id="34" name="Kumbatto Rey"/>
+  <item id="35" name="Follfango"/>
+  <item id="36" name="Barbecrudel"/>
+  <item id="37" name="Negotajo"/>
+  <item id="38" name="Benkei"/>
+  <item id="39" name="B3-NK1"/>
+  <item id="40" name="Leofuoco"/>
+  <item id="41" name="Leosismo"/>
+  <item id="42" name="Siro"/>
+  <item id="43" name="Zardo"/>
+  <item id="44" name="Lucenio"/>
+  <item id="45" name="Quietana"/>
+  <item id="46" name="Aurio"/>
+  <item id="47" name="Hovernyan"/>
+  <item id="48" name="Maximus Puro"/>
+  <item id="49" name="Maximus Deca"/>
+  <item id="50" name="Pallongonfio"/>
+  <item id="51" name="Nipponon"/>
+  <item id="52" name="Kapunkai"/>
+  <item id="53" name="Scarafante"/>
+  <item id="54" name="Scaragen"/>
+  <item id="55" name="Scaragone"/>
+  <item id="56" name="Machonyan"/>
+  <item id="57" name="Momonyan"/>
+  <item id="58" name="Sir Nyancillotto"/>
+  <item id="59" name="Serg. Kuadro"/>
+  <item id="60" name="Bison Kuadro"/>
+  <item id="61" name="Mastyk"/>
+  <item id="62" name="Mangiavita"/>
+  <item id="63" name="Lumynotto"/>
+  <item id="64" name="Ranyoni"/>
+  <item id="65" name="Buieroico"/>
+  <item id="66" name="Venchaku"/>
+  <item id="67" name="Camelia"/>
+  <item id="68" name="Debombrello"/>
+  <item id="69" name="Sandalio"/>
+  <item id="70" name="Cernyer"/>
+  <item id="71" name="Scappacan"/>
+  <item id="72" name="Grumoko"/>
+  <item id="73" name="Ocachu"/>
+  <item id="74" name="Fregmen"/>
+  <item id="75" name="Basbast"/>
+  <item id="76" name="Unabast"/>
+  <item id="77" name="Dimenticap"/>
+  <item id="78" name="Dimentigrand"/>
+  <item id="79" name="Scioccap"/>
+  <item id="80" name="Odomal"/>
+  <item id="81" name="Sentutto"/>
+  <item id="82" name="Terrogo"/>
+  <item id="83" name="Vabben"/>
+  <item id="84" name="Voltovuoto"/>
+  <item id="85" name="Dinaso"/>
+  <item id="86" name="Usheila"/>
+  <item id="87" name="Nuggeton"/>
+  <item id="88" name="Maisicuro"/>
+  <item id="89" name="Uovuoto"/>
+  <item id="90" name="Rubaris"/>
+  <item id="91" name="Blubo"/>
+  <item id="92" name="Rivela"/>
+  <item id="93" name="Kia-Kia"/>
+  <item id="94" name="Schelevekia"/>
+  <item id="95" name="Cupistol"/>
+  <item id="96" name="Casanuva"/>
+  <item id="97" name="Casanono"/>
+  <item id="98" name="Falskus"/>
+  <item id="99" name="Inchimino"/>
+  <item id="100" name="Fumospirito"/>
+  <item id="101" name="Vapornella"/>
+  <item id="102" name="Segnam"/>
+  <item id="103" name="Amplicamp"/>
+  <item id="104" name="Mastro Kuoko"/>
+  <item id="105" name="Restat"/>
+  <item id="106" name="Bugisco"/>
+  <item id="107" name="Pericano"/>
+  <item id="108" name="Woosh 2"/>
+  <item id="109" name="Lord Fastilio"/>
+  <item id="110" name="Festinkas"/>
+  <item id="111" name="Teschiobaleno"/>
+  <item id="112" name="Leonguista"/>
+  <item id="113" name="Illuguroo"/>
+  <item id="114" name="Eluguroo"/>
+  <item id="115" name="Vaguroo"/>
+  <item id="116" name="Trespy"/>
+  <item id="117" name="Quadaspy"/>
+  <item id="118" name="Traspec"/>
+  <item id="119" name="Trispecchio"/>
+  <item id="120" name="Scuriflesso"/>
+  <item id="121" name="Kumandi"/>
+  <item id="122" name="Statichello"/>
+  <item id="123" name="Prof. Ibisyoso"/>
+  <item id="124" name="Igienio"/>
+  <item id="125" name="Immagenio"/>
+  <item id="126" name="Miss Terry"/>
+  <item id="127" name="Maginyan"/>
+  <item id="128" name="Cervoglio"/>
+  <item id="129" name="Tengu"/>
+  <item id="130" name="Tenguflamma"/>
+  <item id="131" name="Kyubi"/>
+  <item id="132" name="Gelocoda"/>
+  <item id="133" name="Kimera"/>
+  <item id="134" name="Remera"/>
+  <item id="135" name="Onirosp"/>
+  <item id="136" name="Sobron"/>
+  <item id="137" name="Ag. Spioniglia"/>
+  <item id="138" name="Candiglia"/>
+  <item id="139" name="Guido"/>
+  <item id="140" name="Gusciolento"/>
+  <item id="141" name="Muchomacho"/>
+  <item id="142" name="Goro-Goro"/>
+  <item id="143" name="Risvidiosa"/>
+  <item id="144" name="Fierogambero"/>
+  <item id="145" name="Carperso"/>
+  <item id="146" name="Persarmato"/>
+  <item id="147" name="Tensiovaso"/>
+  <item id="148" name="Furiovaso"/>
+  <item id="149" name="Nono-No"/>
+  <item id="150" name="Imposs"/>
+  <item id="151" name="Fuimuro"/>
+  <item id="152" name="Malandro"/>
+  <item id="153" name="Bandido"/>
+  <item id="154" name="Fratosto"/>
+  <item id="155" name="Graffit"/>
+  <item id="156" name="Muuuringa"/>
+  <item id="157" name="Stuf"/>
+  <item id="158" name="Craniovuoto"/>
+  <item id="159" name="Succeschio"/>
+  <item id="160" name="Korpo"/>
+  <item id="161" name="Pupomimo"/>
+  <item id="162" name="Esagerhambur."/>
+  <item id="163" name="Piccodivelocità"/>
+  <item id="164" name="Bloccospino"/>
+  <item id="165" name="Pesospino"/>
+  <item id="166" name="Sumbrodo"/>
+  <item id="167" name="Brodozuna"/>
+  <item id="168" name="Moncurante"/>
+  <item id="169" name="Moncurioso"/>
+  <item id="170" name="Incontifante"/>
+  <item id="171" name="Duroboscide"/>
+  <item id="172" name="Resistofante"/>
+  <item id="173" name="Giavellampo"/>
+  <item id="174" name="Equilanciere"/>
+  <item id="175" name="Fortunavio"/>
+  <item id="176" name="Am. Bonasorte"/>
+  <item id="177" name="Sudon-Sudon"/>
+  <item id="178" name="Punk Kong"/>
+  <item id="179" name="Pantomix"/>
+  <item id="180" name="Incompletion"/>
+  <item id="181" name="Infangofono"/>
+  <item id="182" name="Ghelo"/>
+  <item id="183" name="Vulcando"/>
+  <item id="184" name="Castelius III"/>
+  <item id="185" name="Castelius II"/>
+  <item id="186" name="Castelius I"/>
+  <item id="187" name="Max Castelius"/>
+  <item id="188" name="Canyan"/>
+  <item id="189" name="Rinofante"/>
+  <item id="190" name="Rinorme"/>
+  <item id="191" name="Multicorno"/>
+  <item id="192" name="Kintaronyan"/>
+  <item id="193" name="Re Ale di Man."/>
+  <item id="194" name="Robonyan"/>
+  <item id="195" name="Robonyan F"/>
+  <item id="196" name="Showbonyan"/>
+  <item id="197" name="Orobonyan"/>
+  <item id="198" name="Terrio"/>
+  <item id="199" name="Aqueo"/>
+  <item id="200" name="Ragabatrax"/>
+  <item id="201" name="Domesgeco"/>
+  <item id="202" name="Koross"/>
+  <item id="203" name="Blutus"/>
+  <item id="204" name="Nerorko"/>
+  <item id="205" name="Kabukio"/>
+  <item id="206" name="John Pinna"/>
+  <item id="207" name="Pesh Khan"/>
+  <item id="208" name="Nuvola Azzurra"/>
+  <item id="209" name="Ingambe"/>
+  <item id="210" name="Stordo"/>
+  <item id="211" name="Tortastra"/>
+  <item id="212" name="Mimalletta"/>
+  <item id="213" name="Teskiant"/>
+  <item id="214" name="Stylossa"/>
+  <item id="215" name="Skelebell"/>
+  <item id="216" name="Cicalama"/>
+  <item id="217" name="Cicabile"/>
+  <item id="218" name="Cicanto"/>
+  <item id="219" name="Panbotto"/>
+  <item id="220" name="Baguantonio"/>
+  <item id="221" name="Fre-D"/>
+  <item id="222" name="Gelhuahua"/>
+  <item id="223" name="Kaldokan"/>
+  <item id="224" name="Incredibimbo"/>
+  <item id="225" name="Rybello"/>
+  <item id="226" name="Rybollo"/>
+  <item id="227" name="Mutavisia"/>
+  <item id="228" name="Ciclopino"/>
+  <item id="229" name="Indovolpina"/>
+  <item id="230" name="Corrignoro"/>
+  <item id="231" name="Micellano"/>
+  <item id="232" name="Aspretta"/>
+  <item id="233" name="Baku"/>
+  <item id="234" name="Blantapiro"/>
+  <item id="235" name="Anirica"/>
+  <item id="236" name="Pupillo Panja"/>
+  <item id="237" name="Pro Panja"/>
+  <item id="238" name="Ordinia"/>
+  <item id="239" name="Mayuty"/>
+  <item id="240" name="Cammikappa"/>
+  <item id="241" name="Movikappa"/>
+  <item id="242" name="Tavolama"/>
+  <item id="243" name="Jibanyan"/>
+  <item id="244" name="Jibanyan B"/>
+  <item id="245" name="Jibanyan S"/>
+  <item id="246" name="Jiban. Liu Bei"/>
+  <item id="247" name="Ross"/>
+  <item id="248" name="Spinyan"/>
+  <item id="249" name="Malonyan"/>
+  <item id="250" name="Buchinyan"/>
+  <item id="251" name="Komasan"/>
+  <item id="252" name="Crinikoma"/>
+  <item id="253" name="Komasan B"/>
+  <item id="254" name="Komasan S"/>
+  <item id="255" name="Koma. Sun Ce"/>
+  <item id="256" name="Jibakoma"/>
+  <item id="257" name="Komajiro"/>
+  <item id="258" name="Komagre"/>
+  <item id="259" name="Komajiro S"/>
+  <item id="260" name="Pioggianna"/>
+  <item id="261" name="Velorapido"/>
+  <item id="262" name="Putzo"/>
+  <item id="263" name="Pronfone"/>
+  <item id="264" name="Canpuccino"/>
+  <item id="265" name="Sfericca"/>
+  <item id="266" name="Carnino"/>
+  <item id="267" name="Amoroseo"/>
+  <item id="268" name="Amoroscuro"/>
+  <item id="269" name="Harry Barry"/>
+  <item id="270" name="Wondernyan"/>
+  <item id="271" name="Jetnyan"/>
+  <item id="272" name="Scimyan"/>
+  <item id="273" name="Tomnyan"/>
+  <item id="274" name="Komastoppisti"/>
+  <item id="275" name="Gelina"/>
+  <item id="276" name="Nevaria"/>
+  <item id="277" name="Neradama"/>
+  <item id="278" name="Melonyan"/>
+  <item id="279" name="Aranyan"/>
+  <item id="280" name="Kiwinyan"/>
+  <item id="281" name="Uvanyan"/>
+  <item id="282" name="Fragonyan"/>
+  <item id="283" name="Angurnyan"/>
+  <item id="284" name="Zaffinyan"/>
+  <item id="285" name="Smeranyan"/>
+  <item id="286" name="Rubinyan"/>
+  <item id="287" name="Topanyan"/>
+  <item id="288" name="Diamanyan"/>
+  <item id="289" name="Robokapp"/>
+  <item id="290" name="Robokoma"/>
+  <item id="291" name="Sailornyan"/>
+  <item id="292" name="Felimonio"/>
+  <item id="293" name="Cancan"/>
+  <item id="294" name="Fericuro"/>
+  <item id="295" name="Chocobonyan"/>
+  <item id="296" name="Mogurinyan"/>
+  <item id="297" name="Ipnonyan"/>
+  <item id="298" name="Ipnokoma"/>
+  <item id="299" name="Sushinyan"/>
+  <item id="300" name="Tempurasan"/>
+  <item id="301" name="Falkappa"/>
+  <item id="302" name="Foreskappa"/>
+  <item id="303" name="Maestro Miu"/>
+  <item id="304" name="Tenguriginale"/>
+  <item id="305" name="Luminata"/>
+  <item id="306" name="Parsolino"/>
+  <item id="307" name="Taglioceko"/>
+  <item id="308" name="Can-Tan"/>
+  <item id="309" name="Ovojo"/>
+  <item id="310" name="Magnalestus"/>
+  <item id="311" name="Danz"/>
+  <item id="312" name="Algacabana"/>
+  <item id="313" name="Banz"/>
+  <item id="314" name="Tanz"/>
+  <item id="315" name="Alga Sensei"/>
+  <item id="316" name="Nonno Fame"/>
+  <item id="317" name="Offam"/>
+  <item id="318" name="Nonno Kiko"/>
+  <item id="319" name="Nonno Ciccio"/>
+  <item id="320" name="Curaling"/>
+  <item id="321" name="Linguermiera"/>
+  <item id="322" name="Sabbio"/>
+  <item id="323" name="Sig. Sabbio"/>
+  <item id="324" name="Vaschella"/>
+  <item id="325" name="Profumarta"/>
+  <item id="326" name="Kaporezzo"/>
+  <item id="327" name="Risperdo"/>
+  <item id="328" name="Doman"/>
+  <item id="329" name="Ghiandubbio"/>
+  <item id="330" name="Canmouse"/>
+  <item id="331" name="Dolgioioso"/>
+  <item id="332" name="Dolceleste"/>
+  <item id="333" name="Pocotanto"/>
+  <item id="334" name="Povereroe"/>
+  <item id="335" name="Optimio"/>
+  <item id="336" name="Gnomino"/>
+  <item id="337" name="Gran Gnomino"/>
+  <item id="338" name="Farfanima"/>
+  <item id="339" name="Farfanemi"/>
+  <item id="340" name="Farfamiglio"/>
+  <item id="341" name="Farfavigo"/>
+  <item id="342" name="Bovindovino"/>
+  <item id="343" name="Toroveggente"/>
+  <item id="344" name="DON-CHAN"/>
+  <item id="345" name="Ray Lux"/>
+  <item id="346" name="Tridonio"/>
+  <item id="347" name="Posidonio"/>
+  <item id="348" name="Pensanguro"/>
+  <item id="349" name="Malparlo"/>
+  <item id="350" name="Pigroletto"/>
+  <item id="351" name="Servix"/>
+  <item id="352" name="Nonno Verde"/>
+  <item id="353" name="Bencosy"/>
+  <item id="354" name="Alfornina"/>
+  <item id="355" name="Felicio"/>
+  <item id="356" name="Mutevina"/>
+  <item id="357" name="Mutevana"/>
+  <item id="358" name="Pavonyan"/>
+  <item id="359" name="Sballio"/>
+  <item id="360" name="Bianclora"/>
+  <item id="361" name="Nonnobot"/>
+  <item id="362" name="Lanchu"/>
+  <item id="363" name="Dopios"/>
+  <item id="364" name="Comparsol"/>
+  <item id="365" name="Odisseanyan"/>
+  <item id="366" name="Locandemonia"/>
+  <item id="367" name="Babbo Saetta"/>
+  <item id="368" name="Zio Infinio"/>
+  <item id="369" name="Mamma Aura"/>
+  <item id="370" name="Zia Cora"/>
+  <item id="371" name="Kirin"/>
+  <item id="372" name="Unikirin"/>
+  <item id="373" name="Velotempo"/>
+  <item id="374" name="Sonicombatten."/>
+  <item id="375" name="Melanconico"/>
+  <item id="376" name="Spioncello"/>
+  <item id="377" name="Confusio"/>
+  <item id="378" name="Demanone"/>
+  <item id="379" name="Favorio"/>
+  <item id="380" name="Ferispalla"/>
+  <item id="381" name="Dolorr"/>
+  <item id="382" name="Agonio"/>
+  <item id="383" name="Ambizero"/>
+  <item id="384" name="Fashin"/>
+  <item id="385" name="Svejo"/>
+  <item id="386" name="Dormai"/>
+  <item id="387" name="Socialbero"/>
+  <item id="388" name="Rituittolo"/>
+  <item id="389" name="Negatibuzz"/>
+  <item id="390" name="Malazanz"/>
+  <item id="391" name="Prudor"/>
+  <item id="392" name="Annebio"/>
+  <item id="393" name="Blando"/>
+  <item id="394" name="Nullio"/>
+  <item id="395" name="Bacontrito"/>
+  <item id="396" name="Suspicion"/>
+  <item id="397" name="Collerio"/>
+  <item id="398" name="Bastian"/>
+  <item id="399" name="Negakan"/>
+  <item id="400" name="Ululay"/>
+  <item id="401" name="Dentrostrello"/>
+  <item id="402" name="Casastrello"/>
+  <item id="403" name="Eremistrello"/>
+  <item id="404" name="Prestamme"/>
+  <item id="405" name="Aladron"/>
+  <item id="406" name="Nerdio"/>
+  <item id="407" name="Hackerrimo"/>
+  <item id="408" name="Fatù"/>
+  <item id="409" name="Conte Zapula"/>
+  <item id="410" name="Tiratto"/>
+  <item id="411" name="Re Plorevole"/>
+  <item id="412" name="Pollotruffante"/>
+  <item id="413" name="Manny Panikiao"/>
+  <item id="414" name="Giormalista"/>
+  <item id="415" name="Sbattituro"/>
+  <item id="416" name="Tenguleggon"/>
+  <item id="417" name="Uccelleggon"/>
+  <item id="418" name="Subitora"/>
+  <item id="419" name="Elisnobetta"/>
+  <item id="420" name="Dracunyan"/>
+  <item id="421" name="Kappadonna"/>
+  <item id="422" name="Comodoso"/>
+  <item id="423" name="Usapyon"/>
+  <item id="424" name="Usapyon"/>
+  <item id="425" name="Usapyon"/>
+  <item id="426" name="Usapyon"/>
+  <item id="427" name="Usapyon"/>
+  <item id="428" name="Usapyon B"/>
+  <item id="429" name="Usa. Zhongda"/>
+  <item id="430" name="Trisalamandra"/>
+  <item id="431" name="Negasus"/>
+  <item id="432" name="Malvallo"/>
+  <item id="433" name="Tuttosso"/>
+  <item id="434" name="Trèmone"/>
+  <item id="435" name="Prodemone"/>
+  <item id="436" name="Conte Cario"/>
+  <item id="437" name="Corocchio"/>
+  <item id="438" name="Prezocchio"/>
+  <item id="439" name="Avodus"/>
+  <item id="440" name="Malavo"/>
+  <item id="441" name="Wokscillo"/>
+  <item id="442" name="Kyubi Nero"/>
+  <item id="443" name="Dr. T. Cancello"/>
+  <item id="444" name="Dottor Nocto"/>
+  <item id="445" name="Offrett"/>
+  <item id="446" name="Stancravatta"/>
+  <item id="447" name="Letterotta"/>
+  <item id="448" name="Cambiaman"/>
+  <item id="449" name="Pantonio"/>
+  <item id="450" name="Malagol"/>
+  <item id="451" name="Maloriccio"/>
+  <item id="452" name="Umio"/>
+  <item id="453" name="Plovio"/>
+  <item id="454" name="Frisco"/>
+  <item id="455" name="Grandion"/>
+  <item id="456" name="Sanguinasio"/>
+  <item id="457" name="Uccelladro"/>
+  <item id="458" name="Uccellaso"/>
+  <item id="459" name="Voladdome"/>
+  <item id="460" name="Rumorio"/>
+  <item id="461" name="Rumbo"/>
+  <item id="462" name="Buhu"/>
+  <item id="463" name="Sciattandato"/>
+  <item id="464" name="Disnero"/>
+  <item id="465" name="Canom"/>
+  <item id="466" name="Bi-Canom"/>
+  <item id="467" name="Herr Bero"/>
+  <item id="468" name="Pelocodo"/>
+  <item id="469" name="Pelovunque"/>
+  <item id="470" name="Tambulator"/>
+  <item id="471" name="Schiacciasemi"/>
+  <item id="472" name="Innasocenti"/>
+  <item id="473" name="Ingiallia"/>
+  <item id="474" name="Ansiosceriffo"/>
+  <item id="475" name="Risciak"/>
+  <item id="476" name="Kiakierenata"/>
+  <item id="477" name="Brontolaura"/>
+  <item id="478" name="Negatina"/>
+  <item id="479" name="Fradicina"/>
+  <item id="480" name="Gratidun"/>
+  <item id="481" name="Sabbeno"/>
+  <item id="482" name="Irritavo"/>
+  <item id="483" name="Vishido"/>
+  <item id="484" name="Battutristo"/>
+  <item id="485" name="Cominon"/>
+  <item id="486" name="Sol-O-Sol"/>
+  <item id="487" name="Rumboroso"/>
+  <item id="488" name="Pandebosciato"/>
+  <item id="489" name="Puzzetto"/>
+  <item id="490" name="Fetor"/>
+  <item id="491" name="Chiusella"/>
+  <item id="492" name="Disturbella"/>
+  <item id="493" name="Canombot"/>
+  <item id="494" name="Spargipelo"/>
+  <item id="495" name="Maltango"/>
+  <item id="496" name="Cinetosio"/>
+  <item id="497" name="Rugada"/>
+  <item id="498" name="Perennia"/>
+  <item id="499" name="Eternia"/>
+  <item id="500" name="Termaiale"/>
+  <item id="501" name="Darknyan"/>
+  <item id="502" name="Decidyo"/>
+  <item id="503" name="Chiompauro"/>
+  <item id="504" name="Insomnia"/>
+  <item id="505" name="Oniria"/>
+  <item id="506" name="Arachnus"/>
+  <item id="507" name="Arachnia"/>
+  <item id="508" name="Origenio"/>
+  <item id="509" name="Orrigenio"/>
+  <item id="510" name="Incantella"/>
+  <item id="511" name="Torcirana"/>
+  <item id="512" name="Tèntennante"/>
+  <item id="513" name="Lemmelemme"/>
+  <item id="514" name="Esageraserpe"/>
+  <item id="515" name="Malizio"/>
+  <item id="516" name="Noko"/>
+  <item id="517" name="Fortunoko"/>
+  <item id="518" name="Pandanoko"/>
+  <item id="519" name="Noko Stella"/>
+  <item id="520" name="Skorbia"/>
+  <item id="521" name="Lamentia"/>
+  <item id="522" name="WOWDrillo"/>
+  <item id="523" name="Lopod"/>
+  <item id="524" name="Gushelebrity"/>
+  <item id="525" name="Anguillahah"/>
+  <item id="526" name="Canguilla"/>
+  <item id="527" name="Urnaconda"/>
+  <item id="528" name="Polpolpetto"/>
+  <item id="529" name="Repolpetto"/>
+  <item id="530" name="Odiapesce"/>
+  <item id="531" name="Detestorione"/>
+  <item id="532" name="Rabbiotonno"/>
+  <item id="533" name="Tartarcordo"/>
+  <item id="534" name="Aspiricordo"/>
+  <item id="535" name="Sforbiroso"/>
+  <item id="536" name="Sforbifuoco"/>
+  <item id="537" name="Draghetto"/>
+  <item id="538" name="Drago Reale"/>
+  <item id="539" name="Dragazzurro"/>
+  <item id="540" name="Serena"/>
+  <item id="541" name="Sirterna"/>
+  <item id="542" name="Madrena"/>
+  <item id="543" name="Scassauro"/>
+  <item id="544" name="Dinostruggo"/>
+  <item id="545" name="Goffzilla"/>
+  <item id="546" name="Lady Collung"/>
+  <item id="547" name="Whisper"/>
+  <item id="548" name="S. Whispocrate"/>
+  <item id="549" name="Grillorbice"/>
+  <item id="550" name="Polpopolare"/>
+  <item id="551" name="Invipolpo"/>
+  <item id="552" name="Fixi"/>
+  <item id="553" name="Konfuxi"/>
+  <item id="554" name="Squacignolo"/>
+  <item id="555" name="Disabilitantis"/>
+  <item id="556" name="Sprek"/>
+  <item id="557" name="Tupag"/>
+  <item id="558" name="Blablablo"/>
+  <item id="559" name="Bananaso"/>
+  <item id="560" name="Bancacao"/>
+  <item id="561" name="Indecidrago"/>
+  <item id="562" name="Robonoko"/>
+  <item id="563" name="Draghettobot"/>
+  <item id="564" name="Lukiè"/>
+  <item id="565" name="Bosserpente"/>
+  <item id="566" name="Scontroserpe"/>
+  <item id="567" name="Rettilarbitro"/>
+  <item id="568" name="Velanera"/>
+  <item id="569" name="Testhon"/>
+  <item id="570" name="Velenotto"/>
+  <item id="571" name="Velenombra"/>
+  <item id="572" name="Ricordarana"/>
+  <item id="573" name="Originyan"/>
+  <item id="574" name="Saiborg Y"/>
+  <item id="575" name="Pestifero"/>
+  <item id="576" name="Scortella"/>
+  <item id="577" name="Kattivik"/>
+  <item id="578" name="Confundor"/>
+  <item id="579" name="Nihilo"/>
+  <item id="580" name="Leccaccione"/>
+  <item id="581" name="Fangozzo"/>
+  <item id="582" name="Fetornella"/>
+  <item id="583" name="Fuorkappa"/>
+  <item id="584" name="Parazol"/>
+  <item id="585" name="Gnomalsorty"/>
+  <item id="586" name="Malindovino"/>
+  <item id="587" name="Morbocodo"/>
+  <item id="588" name="Siarena"/>
+  <item id="589" name="Lady Colcobra"/>
+  <item id="590" name="Re Jibanyan"/>
+  <item id="591" name="Regi. Usapyon"/>
+  <item id="592" name="Fante Koma"/>
+  <item id="593" name="Komajiro Dieci"/>
+  <item id="594" name="Assonyan"/>
+  <item id="595" name="Jolly Whisper"/>
+  <item id="596" name="Benzaiten"/>
+  <item id="597" name="Hotei"/>
+  <item id="598" name="Daikokuten"/>
+  <item id="599" name="Ebisu"/>
+  <item id="600" name="Bishamonten"/>
+  <item id="601" name="Gattoforo"/>
+  <item id="602" name="T. Energison"/>
+  <item id="603" name="Tarwin"/>
+  <item id="604" name="Ult. Nyanmurai"/>
+  <item id="605" name="Koma Star"/>
+  <item id="606" name="Platinos"/>
+  <item id="607" name="Rick Assay"/>
+  <item id="608" name="Shogunyan"/>
+  <item id="609" name="Komademone"/>
+  <item id="610" name="Gilgador"/>
+  <item id="611" name="Rovinella"/>
+  <item id="612" name="Senilfior"/>
+  <item id="613" name="Professorso"/>
+  <item id="614" name="Barbonbel"/>
+  <item id="615" name="Octaserp"/>
+  <item id="616" name="Quesausto"/>
+  <item id="617" name="Principerla"/>
+  <item id="618" name="Takkabrig"/>
+  <item id="619" name="Terminyanator"/>
+  <item id="620" name="Supernyan"/>
+  <item id="621" name="Hovernyan S"/>
+  <item id="622" name="Hover. Cao Cao"/>
+  <item id="623" name="Monoyoga"/>
+  <item id="624" name="Teblock"/>
+  <item id="625" name="Pienò"/>
+  <item id="626" name="Scheletristo"/>
+  <item id="627" name="Velenottobot"/>
+  <item id="628" name="Nerorko Lu Bu"/>
+  <item id="629" name="Kyubibot"/>
+  <item id="630" name="Robonyan Final"/>
+  <item id="631" name="Guglielma Den."/>
+  <item id="632" name="Cremcaramella"/>
+  <item id="633" name="Woosha"/>
+  <item id="634" name="Koalanyan"/>
+  <item id="635" name="Jibanyan T"/>
+  <item id="636" name="Komasan T"/>
+  <item id="637" name="Prin. Giuovanna"/>
+  <item id="638" name="Deadcool"/>
+  <item id="639" name="Insudata"/>
+  <item id="640" name="Meteotimido"/>
+  <item id="641" name="Amplifarfalla"/>
+  <item id="642" name="Paghella"/>
+  <item id="643" name="Kolpamì"/>
+  <item id="644" name="Affogas"/>
+  <item id="645" name="Depremummia"/>
+  <item id="646" name="Batkoma"/>
+  <item id="647" name="Tofupyon"/>
+  <item id="648" name="Noctockio"/>
+  <item id="649" name="Ambasc. Luxus"/>
+  <item id="650" name="Imagino"/>
+  <item id="651" name="Zazel"/>
+  <item id="652" name="Pygro"/>
+  <item id="653" name="Scrimonello"/>
+  <item id="654" name="Pradiabla"/>
+  <item id="655" name="Whis. Kongming"/>
+  <item id="656" name="Jurojin"/>
+  <item id="657" name="Fukurokuju"/>
+  <item id="658" name="Faorone"/>
+  <item id="659" name="Re Morton"/>
+  <item id="660" name="Pandora"/>
+  <item id="661" name="Burlagenio"/>
+  <item id="662" name="Nyastet"/>
+  <item id="663" name="Komanubi"/>
+  <item id="664" name="Eloquia"/>
+  <item id="665" name="Educatorso"/>
+  <item id="666" name="Aristocanom"/>
+  <item id="667" name="Lodalurbe"/>
+  <item id="668" name="Domandemon."/>
+  <item id="669" name="Enma il Grande"/>
+  <item id="670" name="Zazel il Giusto"/>
+  <item id="671" name="Imagino Risv."/>
+  <item id="672" name="Enma l'Antico"/>
+  <item id="673" name="Enma Risveglia."/>
+  <item id="674" name="Noiadamus"/>
+  <item id="675" name="Marrabbià"/>
+  <item id="676" name="Fracassia"/>
+  <item id="677" name="Initio"/>
+  <item id="678" name="Ultimio"/>
+  <item id="679" name="Miku-Miku"/>
+  <item id="680" name="Lantriste"/>
+  <item id="681" name="Muulinda"/>
+  <item id="682" name="Pihihippo"/>
+  <item id="683" name="Carpone"/>
+  <item id="684" name="Alpina"/>
+  <item id="685" name="Lunio"/>
+  <item id="686" name="Nevina"/>
+  <item id="687" name="KJ"/>
+  <item id="688" name="Enma Helios"/>
+  <item id="689" name="Enma Chronos"/>
+  <item id="690" name="Enma Humbra"/>
+  <item id="691" name="Ind. Squalones"/>
+  <item id="692" name="Scavulcaniano"/>
+  <item id="693" name="Zomborg"/>
+  <item id="694" name="Nyansete II"/>
+  <item id="695" name="Miopatra"/>
+  <item id="696" name="Fisicomico"/>
+  <item id="697" name="Dorago"/>
+  <item id="698" name="Imaginix"/>
+  <item id="699" name="(No.699)"/>
+  <item id="700" name="(No.700)"/>
+  <item id="701" name="(No.701)"/>
+  <item id="702" name="(No.702)"/>
+  <item id="703" name="(No.703)"/>
+  <item id="704" name="(No.704)"/>
+  <item id="705" name="(No.705)"/>
+  <item id="706" name="(No.706)"/>
+  <item id="707" name="(No.707)"/>
+  <item id="708" name="(No.708)"/>
+  <item id="709" name="(No.709)"/>
+  <item id="710" name="(No.710)"/>
+  <item id="711" name="(No.711)"/>
+  <item id="712" name="(No.712)"/>
+  <item id="713" name="(No.713)"/>
+  <item id="714" name="(No.714)"/>
+  <item id="715" name="(No.715)"/>
+  <item id="716" name="(No.716)"/>
+  <item id="717" name="(No.717)"/>
+  <item id="718" name="(No.718)"/>
+  <item id="719" name="(No.719)"/>
+  <item id="720" name="(No.720)"/>
+  <item id="721" name="(No.721)"/>
+  <item id="722" name="(No.722)"/>
+  <item id="723" name="(No.723)"/>
+  <item id="724" name="(No.724)"/>
+  <item id="725" name="(No.725)"/>
+  <item id="726" name="(No.726)"/>
+  <item id="727" name="(No.727)"/>
+  <item id="728" name="(No.728)"/>
+  <item id="729" name="(No.729)"/>
+  <item id="730" name="(No.730)"/>
+  <item id="731" name="(No.731)"/>
+  <item id="732" name="(No.732)"/>
+  <item id="733" name="(No.733)"/>
+  <item id="734" name="(No.734)"/>
+  <item id="735" name="(No.735)"/>
+  <item id="736" name="(No.736)"/>
+  <item id="737" name="(No.737)"/>
+  <item id="738" name="(No.738)"/>
+  <item id="739" name="(No.739)"/>
+  <item id="740" name="(No.740)"/>
+  <item id="741" name="(No.741)"/>
+  <item id="742" name="(No.742)"/>
+  <item id="743" name="(No.743)"/>
+  <item id="744" name="(No.744)"/>
+  <item id="745" name="(No.745)"/>
+  <item id="746" name="(No.746)"/>
+  <item id="747" name="(No.747)"/>
+  <item id="748" name="(No.748)"/>
+  <item id="749" name="(No.749)"/>
+  <item id="750" name="(No.750)"/>
+  <item id="751" name="(No.751)"/>
+  <item id="752" name="(No.752)"/>
+  <item id="753" name="(No.753)"/>
+  <item id="754" name="(No.754)"/>
+  <item id="755" name="(No.755)"/>
+  <item id="756" name="(No.756)"/>
+  <item id="757" name="(No.757)"/>
+  <item id="758" name="(No.758)"/>
+  <item id="759" name="(No.759)"/>
+  <item id="760" name="(No.760)"/>
+  <item id="761" name="(No.761)"/>
+  <item id="762" name="(No.762)"/>
+  <item id="763" name="(No.763)"/>
+  <item id="764" name="(No.764)"/>
+  <item id="765" name="(No.765)"/>
+  <item id="766" name="(No.766)"/>
+  <item id="767" name="(No.767)"/>
+  <item id="768" name="(No.768)"/>
+  <item id="769" name="(No.769)"/>
+  <item id="770" name="(No.770)"/>
+  <item id="771" name="(No.771)"/>
+  <item id="772" name="(No.772)"/>
+  <item id="773" name="(No.773)"/>
+  <item id="774" name="(No.774)"/>
+  <item id="775" name="(No.775)"/>
+  <item id="776" name="(No.776)"/>
+  <item id="777" name="(No.777)"/>
+  <item id="778" name="(No.778)"/>
+  <item id="779" name="(No.779)"/>
+  <item id="780" name="(No.780)"/>
+  <item id="781" name="(No.781)"/>
+  <item id="782" name="(No.782)"/>
+  <item id="783" name="(No.783)"/>
+  <item id="784" name="(No.784)"/>
+  <item id="785" name="(No.785)"/>
+  <item id="786" name="(No.786)"/>
+  <item id="787" name="(No.787)"/>
+  <item id="788" name="(No.788)"/>
+  <item id="789" name="(No.789)"/>
+  <item id="790" name="(No.790)"/>
+  <item id="791" name="(No.791)"/>
+  <item id="792" name="(No.792)"/>
+  <item id="793" name="(No.793)"/>
+  <item id="794" name="(No.794)"/>
+  <item id="795" name="(No.795)"/>
+  <item id="796" name="(No.796)"/>
+  <item id="797" name="(No.797)"/>
+  <item id="798" name="(No.798)"/>
+  <item id="799" name="(No.799)"/>
+  <item id="800" name="(No.800)"/>
+  <item id="801" name="(No.801)"/>
+  <item id="802" name="(No.802)"/>
+  <item id="803" name="(No.803)"/>
+  <item id="804" name="(No.804)"/>
+  <item id="805" name="(No.805)"/>
+  <item id="806" name="(No.806)"/>
+  <item id="807" name="(No.807)"/>
+  <item id="808" name="(No.808)"/>
+  <item id="809" name="(No.809)"/>
+  <item id="810" name="(No.810)"/>
+  <item id="811" name="(No.811)"/>
+  <item id="812" name="(No.812)"/>
+  <item id="813" name="(No.813)"/>
+  <item id="814" name="(No.814)"/>
+  <item id="815" name="(No.815)"/>
+  <item id="816" name="(No.816)"/>
+  <item id="817" name="(No.817)"/>
+  <item id="818" name="(No.818)"/>
+  <item id="819" name="(No.819)"/>
+  <item id="820" name="(No.820)"/>
+  <item id="821" name="(No.821)"/>
+  <item id="822" name="(No.822)"/>
+  <item id="823" name="(No.823)"/>
+  <item id="824" name="(No.824)"/>
+  <item id="825" name="(No.825)"/>
+  <item id="826" name="(No.826)"/>
+  <item id="827" name="(No.827)"/>
+  <item id="828" name="(No.828)"/>
+  <item id="829" name="(No.829)"/>
+  <item id="830" name="(No.830)"/>
+  <item id="831" name="(No.831)"/>
+  <item id="832" name="(No.832)"/>
+  <item id="833" name="(No.833)"/>
+  <item id="834" name="(No.834)"/>
+  <item id="835" name="(No.835)"/>
+  <item id="836" name="(No.836)"/>
+  <item id="837" name="(No.837)"/>
+  <item id="838" name="(No.838)"/>
+  <item id="839" name="(No.839)"/>
+  <item id="840" name="(No.840)"/>
+  <item id="841" name="(No.841)"/>
+  <item id="842" name="(No.842)"/>
+  <item id="843" name="(No.843)"/>
+  <item id="844" name="(No.844)"/>
+  <item id="845" name="(No.845)"/>
+  <item id="846" name="(No.846)"/>
+  <item id="847" name="(No.847)"/>
+  <item id="848" name="(No.848)"/>
+  <item id="849" name="(No.849)"/>
+  <item id="850" name="(No.850)"/>
+  <item id="851" name="(No.851)"/>
+  <item id="852" name="(No.852)"/>
+  <item id="853" name="(No.853)"/>
+  <item id="854" name="(No.854)"/>
+  <item id="855" name="(No.855)"/>
+  <item id="856" name="(No.856)"/>
+  <item id="857" name="(No.857)"/>
+  <item id="858" name="(No.858)"/>
+  <item id="859" name="(No.859)"/>
+  <item id="860" name="(No.860)"/>
+  <item id="861" name="(No.861)"/>
+  <item id="862" name="(No.862)"/>
+  <item id="863" name="(No.863)"/>
+  <item id="864" name="(No.864)"/>
+  <item id="865" name="(No.865)"/>
+  <item id="866" name="(No.866)"/>
+  <item id="867" name="(No.867)"/>
+  <item id="868" name="(No.868)"/>
+  <item id="869" name="(No.869)"/>
+  <item id="870" name="(No.870)"/>
+  <item id="871" name="(No.871)"/>
+  <item id="872" name="(No.872)"/>
+  <item id="873" name="(No.873)"/>
+  <item id="874" name="(No.874)"/>
+  <item id="875" name="(No.875)"/>
+  <item id="876" name="(No.876)"/>
+  <item id="877" name="(No.877)"/>
+  <item id="878" name="(No.878)"/>
+  <item id="879" name="(No.879)"/>
+  <item id="880" name="(No.880)"/>
+  <item id="881" name="(No.881)"/>
+  <item id="882" name="(No.882)"/>
+  <item id="883" name="(No.883)"/>
+  <item id="884" name="(No.884)"/>
+  <item id="885" name="(No.885)"/>
+  <item id="886" name="(No.886)"/>
+  <item id="887" name="(No.887)"/>
+  <item id="888" name="(No.888)"/>
+  <item id="889" name="(No.889)"/>
+  <item id="890" name="(No.890)"/>
+  <item id="891" name="(No.891)"/>
+  <item id="892" name="(No.892)"/>
+  <item id="893" name="(No.893)"/>
+  <item id="894" name="(No.894)"/>
+  <item id="895" name="(No.895)"/>
+  <item id="896" name="(No.896)"/>
+  <item id="897" name="(No.897)"/>
+  <item id="898" name="(No.898)"/>
+  <item id="899" name="(No.899)"/>
+  <item id="900" name="(No.900)"/>
+  <item id="901" name="Rothamm"/>
+  <item id="902" name="Supermanager"/>
+  <item id="903" name="Malocadabro"/>
+  <item id="904" name="Mister Kihè"/>
+  <item id="905" name="Letalio"/>
+  <item id="906" name="Flaudemone"/>
+  <item id="907" name="Meganyan"/>
+  <item id="908" name="Dottor Frank"/>
+  <item id="909" name="Trizilla"/>
+  <item id="910" name="Yopple-Bot"/>
+  <item id="911" name="No-Bot"/>
+  <item id="912" name="Letterribilia"/>
+  <item id="913" name="Baketon"/>
+  <item id="914" name="Pa-Pa-Padrino"/>
+  <item id="915" name="Don Plotto"/>
+  <item id="916" name="Disceflauto"/>
+  <item id="917" name="Bifron"/>
+  <item id="918" name="Bifronscepolo"/>
+  <item id="919" name="Malvimini"/>
+  <item id="920" name="Malvinepolo"/>
+  <item id="921" name="Occhiogano"/>
+  <item id="922" name="Brontolante"/>
+  <item id="923" name="Imagino"/>
+  <item id="924" name="Guard. Vuoto"/>
+  <item id="925" name="Naskond"/>
+  <item id="926" name="Koross"/>
+  <item id="927" name="Blutus"/>
+  <item id="928" name="Nerorko"/>
+  <item id="929" name="Orkoscepolo"/>
+  <item id="930" name="Terrorizen"/>
+  <item id="931" name="Depredos"/>
+  <item id="932" name="Termaiale"/>
+  <item id="933" name="Suimo"/>
+  <item id="934" name="Ciarlaterrore"/>
+  <item id="935" name="Manipiù"/>
+  <item id="936" name="Manitutt"/>
+  <item id="937" name="Poliministro"/>
+  <item id="938" name="Cancan"/>
+  <item id="939" name="Felimonio"/>
+  <item id="940" name="Imagino Risv."/>
+  <item id="941" name="Robonyan 28"/>
+  <item id="942" name="Masterceffo"/>
+  <item id="943" name="Rovinosa"/>
+  <item id="944" name="Malaserpe"/>
+  <item id="945" name="Pa-Pa-Padroro"/>
+  <item id="946" name="IcarOS"/>
+  <item id="947" name="Balament"/>
+  <item id="948" name="Balenoid"/>
+  <item id="949" name="Macellaspiriti"/>
+  <item id="950" name="Capitan Tuono"/>
+  <item id="951" name="Capitan Tuono"/>
+  <item id="952" name="Re Shogun"/>
+  <item id="953" name="Talpoon"/>
+  <item id="954" name="Ults. Nyanmurai"/>
+</items>

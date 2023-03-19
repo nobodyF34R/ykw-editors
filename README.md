@@ -15,23 +15,18 @@ source-code: all the editors' code
 ## Important
 
 MSVCP120.dll error fix: https://www.microsoft.com/en-us/download/details.aspx?id=40784
-(choose vcredist_x86.exe.)
+(choose vcredist_x86.exe)
 
 
 ## Credits
 
 togenyan for making the editors & providing the source code
 
-https://github.com/3dshackstimemachine/yo-kai-editors for providing the binaries
+https://gbatemp.net/threads/release-yo-kai-watch-save-data-decrypter-encrypter.415728/page-30 for providing the binaries
 
-https://archive.org/details/yw_save-master for providing the save tools
+https://github.com/3dshackstimemachine/yo-kai-editors for providing the B2 binary
 
-
-## Other (untested)
-
-potential 4 editor: https://gbatemp.net/threads/another-yo-kai-watch-4-save-editor-ns.610031/
-
-run on mac: https://gbatemp.net/threads/release-yo-kai-editors-on-m1-macbooks.593050/
+https://github.com/Darkey28/yw_save for providing the save tools
 
 
 ## Licence

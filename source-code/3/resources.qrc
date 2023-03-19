@@ -4,6 +4,9 @@
         <file>small_icon.png</file>
     </qresource>
     <qresource prefix="/data">
+        <file>data/gashaData.json</file>
+    </qresource>
+    <qresource prefix="/data" lang="ja">
         <file>data/consume.xml</file>
         <file>data/equipment.xml</file>
         <file>data/important.xml</file>
@@ -15,10 +18,89 @@
         <file>data/flags.xml</file>
         <file>data/map.xml</file>
         <file>data/hackslash.xml</file>
-        <file>data/gashaData.json</file>
         <file>data/trophy.json</file>
         <file>data/busters_equipment.xml</file>
         <file>data/busters_hidden_treasure.xml</file>
+    </qresource>
+    <qresource prefix="/data" lang="en">
+        <file alias="data/consume.xml">data/en/consume.xml</file>
+        <file alias="data/equipment.xml">data/en/equipment.xml</file>
+        <file alias="data/important.xml">data/en/important.xml</file>
+        <file alias="data/soul.xml">data/en/soul.xml</file>
+        <file alias="data/youkai.xml">data/en/youkai.xml</file>
+        <file alias="data/creature.xml">data/en/creature.xml</file>
+        <file alias="data/ai.xml">data/en/ai.xml</file>
+        <file alias="data/youkaiNum.xml">data/en/youkaiNum.xml</file>
+        <file alias="data/flags.xml">data/en/flags.xml</file>
+        <file alias="data/map.xml">data/en/map.xml</file>
+        <file alias="data/hackslash.xml">data/en/hackslash.xml</file>
+        <file alias="data/trophy.json">data/en/trophy.json</file>
+        <file alias="data/busters_equipment.xml">data/en/busters_equipment.xml</file>
+        <file alias="data/busters_hidden_treasure.xml">data/en/busters_hidden_treasure.xml</file>
+    </qresource>
+    <qresource prefix="/data" lang="es">
+        <file alias="data/consume.xml">data/es/consume.xml</file>
+        <file alias="data/equipment.xml">data/es/equipment.xml</file>
+        <file alias="data/important.xml">data/es/important.xml</file>
+        <file alias="data/soul.xml">data/es/soul.xml</file>
+        <file alias="data/youkai.xml">data/es/youkai.xml</file>
+        <file alias="data/creature.xml">data/es/creature.xml</file>
+        <file alias="data/ai.xml">data/es/ai.xml</file>
+        <file alias="data/youkaiNum.xml">data/es/youkaiNum.xml</file>
+        <file alias="data/flags.xml">data/es/flags.xml</file>
+        <file alias="data/map.xml">data/es/map.xml</file>
+        <file alias="data/hackslash.xml">data/es/hackslash.xml</file>
+        <file alias="data/trophy.json">data/es/trophy.json</file>
+        <file alias="data/busters_equipment.xml">data/es/busters_equipment.xml</file>
+        <file alias="data/busters_hidden_treasure.xml">data/es/busters_hidden_treasure.xml</file>
+    </qresource>
+    <qresource prefix="/data" lang="fr">
+        <file alias="data/consume.xml">data/fr/consume.xml</file>
+        <file alias="data/equipment.xml">data/fr/equipment.xml</file>
+        <file alias="data/important.xml">data/fr/important.xml</file>
+        <file alias="data/soul.xml">data/fr/soul.xml</file>
+        <file alias="data/youkai.xml">data/fr/youkai.xml</file>
+        <file alias="data/creature.xml">data/fr/creature.xml</file>
+        <file alias="data/ai.xml">data/fr/ai.xml</file>
+        <file alias="data/youkaiNum.xml">data/fr/youkaiNum.xml</file>
+        <file alias="data/flags.xml">data/fr/flags.xml</file>
+        <file alias="data/map.xml">data/fr/map.xml</file>
+        <file alias="data/hackslash.xml">data/fr/hackslash.xml</file>
+        <file alias="data/trophy.json">data/fr/trophy.json</file>
+        <file alias="data/busters_equipment.xml">data/fr/busters_equipment.xml</file>
+        <file alias="data/busters_hidden_treasure.xml">data/fr/busters_hidden_treasure.xml</file>
+    </qresource>
+    <qresource prefix="/data" lang="de">
+        <file alias="data/consume.xml">data/de/consume.xml</file>
+        <file alias="data/equipment.xml">data/de/equipment.xml</file>
+        <file alias="data/important.xml">data/de/important.xml</file>
+        <file alias="data/soul.xml">data/de/soul.xml</file>
+        <file alias="data/youkai.xml">data/de/youkai.xml</file>
+        <file alias="data/creature.xml">data/de/creature.xml</file>
+        <file alias="data/ai.xml">data/de/ai.xml</file>
+        <file alias="data/youkaiNum.xml">data/de/youkaiNum.xml</file>
+        <file alias="data/flags.xml">data/de/flags.xml</file>
+        <file alias="data/map.xml">data/de/map.xml</file>
+        <file alias="data/hackslash.xml">data/de/hackslash.xml</file>
+        <file alias="data/trophy.json">data/de/trophy.json</file>
+        <file alias="data/busters_equipment.xml">data/de/busters_equipment.xml</file>
+        <file alias="data/busters_hidden_treasure.xml">data/de/busters_hidden_treasure.xml</file>
+    </qresource>
+    <qresource prefix="/data" lang="it">
+        <file alias="data/consume.xml">data/it/consume.xml</file>
+        <file alias="data/equipment.xml">data/it/equipment.xml</file>
+        <file alias="data/important.xml">data/it/important.xml</file>
+        <file alias="data/soul.xml">data/it/soul.xml</file>
+        <file alias="data/youkai.xml">data/it/youkai.xml</file>
+        <file alias="data/creature.xml">data/it/creature.xml</file>
+        <file alias="data/ai.xml">data/it/ai.xml</file>
+        <file alias="data/youkaiNum.xml">data/it/youkaiNum.xml</file>
+        <file alias="data/flags.xml">data/it/flags.xml</file>
+        <file alias="data/map.xml">data/it/map.xml</file>
+        <file alias="data/hackslash.xml">data/it/hackslash.xml</file>
+        <file alias="data/trophy.json">data/it/trophy.json</file>
+        <file alias="data/busters_equipment.xml">data/it/busters_equipment.xml</file>
+        <file alias="data/busters_hidden_treasure.xml">data/it/busters_hidden_treasure.xml</file>
     </qresource>
     <qresource prefix="/translations">
         <file>translations/app_ja.qm</file>

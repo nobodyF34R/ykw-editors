@@ -1,0 +1,798 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="3699429459" name="New Yorkai"/>
+  <item id="400294902" name="Les Hauts de Granval"/>
+  <item id="90811416" name="Mont Sylvestre"/>
+  <item id="3184905085" name="Coteau fleuri"/>
+  <item id="537064388" name="Centre-ville de Granval"/>
+  <item id="2562626721" name="Quartier des boutiques"/>
+  <item id="2315991887" name="La Corniche"/>
+  <item id="850877482" name="Tour Excellence"/>
+  <item id="1792298108" name="Électropolis"/>
+  <item id="3530042137" name="Gare de Verteplaines"/>
+  <item id="1830572182" name="San Fantastico"/>
+  <item id="1350334758" name="Ourcival"/>
+  <item id="1120523976" name="Parvis de la gare - Ourcival"/>
+  <item id="2437443928" name="t201g00"/>
+  <item id="2214452918" name="t202g00"/>
+  <item id="211765729" name="t206g00"/>
+  <item id="3605531528" name="t231g00"/>
+  <item id="3294471270" name="t232g00"/>
+  <item id="1192333893" name="Cajoun"/>
+  <item id="1436827051" name="Betel"/>
+  <item id="3977796302" name="Cawet"/>
+  <item id="1892639351" name="Manoir des Cardamom"/>
+  <item id="3362981138" name="Base secrète de la forêt"/>
+  <item id="3670452988" name="Ferme des blés"/>
+  <item id="2054274037" name="Dukeville"/>
+  <item id="1757680667" name="Port de Pacane"/>
+  <item id="2353873376" name="Continent Permu"/>
+  <item id="3771669389" name="Miroir de vérité"/>
+  <item id="247560865" name="???"/>
+  <item id="3886210964" name="???"/>
+  <item id="1782914666" name="Maison des Adams - rdc"/>
+  <item id="4081864656" name="Maison des Adams - 1er"/>
+  <item id="2219540294" name="Maison des Forester - rdc"/>
+  <item id="439347941" name="Maison des Forester - 1er"/>
+  <item id="72949693" name="Maison de Ronan"/>
+  <item id="1483963624" name="Boulangerie La Malice"/>
+  <item id="3061652932" name="Tout pour tous des Hauts"/>
+  <item id="1595848945" name="Centre associatif de Granval"/>
+  <item id="2970671581" name="Banque Cent pourceaux"/>
+  <item id="1453913306" name="Bureau de poste d'Agnel"/>
+  <item id="1097354665" name="Troc safari"/>
+  <item id="389212719" name="École élém. Granval - rdc sud"/>
+  <item id="2386279317" name="École élém. Granval - rdc nord"/>
+  <item id="4181494531" name="École élém. Granval - 1er"/>
+  <item id="274673206" name="École élém. Granval - 2e"/>
+  <item id="1861112459" name="Toit de l'école élémentaire"/>
+  <item id="434725405" name="Gymnase de l'école élémentaire"/>
+  <item id="2029040004" name="Maison abandonnée"/>
+  <item id="1254544134" name="Sanctuaire derrière la cascade"/>
+  <item id="3226261217" name="Maison des Blaise - rdc"/>
+  <item id="1497728859" name="Maison des Blaise - 1er"/>
+  <item id="776124365" name="Maison des Blaise - 2e"/>
+  <item id="2924533558" name="Maison de Vérane"/>
+  <item id="4068127843" name="Au Phil du temps"/>
+  <item id="477418831" name="La bonbonnière"/>
+  <item id="4111954042" name="Tout pour tous du Coteau"/>
+  <item id="3949036834" name="Temple de la Voie"/>
+  <item id="91218958" name="Tunnel de la Butte aux prières"/>
+  <item id="3960226107" name="Chlorophyto"/>
+  <item id="33693719" name="Sources ch. de Granval - accueil"/>
+  <item id="2461875590" name="Sources ch. Granval - &lt;CN&gt;Hommes&lt;/C&gt;"/>
+  <item id="3854175504" name="Sources ch. Granval - &lt;CR&gt;Femmes&lt;/C&gt;"/>
+  <item id="3174769316" name="Maison M. Loiseau - pièce princ."/>
+  <item id="1395999624" name="Maison M. Loiseau - pièce secr."/>
+  <item id="3776004593" name="Auberge des voyageurs - 101"/>
+  <item id="2518053223" name="Auberge des voyageurs - 102"/>
+  <item id="253698269" name="Auberge des voyageurs - 103"/>
+  <item id="2014842955" name="Auberge des voyageurs - 104"/>
+  <item id="3866920424" name="Auberge des voyageurs - 105"/>
+  <item id="2440803710" name="Auberge des voyageurs - 201"/>
+  <item id="141747396" name="Auberge des voyageurs - 202"/>
+  <item id="2138428498" name="Auberge des voyageurs - 203"/>
+  <item id="4023044547" name="Auberge des voyageurs - 204"/>
+  <item id="2563635541" name="Auberge des voyageurs - Suite"/>
+  <item id="864546703" name="Galerie souterraine de Granval"/>
+  <item id="1873644762" name="Tunnel des Abysses"/>
+  <item id="2175004150" name="Au Vent d'hiver"/>
+  <item id="1757432003" name="Arcadia"/>
+  <item id="2261658095" name="Miam Burger"/>
+  <item id="1635124456" name="Clinique Bonne-Nouvelle - rdc"/>
+  <item id="28413197" name="Clinique Bonne-Nouvelle - 1er"/>
+  <item id="1991687579" name="Académie du Saint-Bernard"/>
+  <item id="2562251959" name="Tout pour tous du centre-ville"/>
+  <item id="1910208898" name="Café des Arts"/>
+  <item id="2681542830" name="Centre sportif de Granval - rdc"/>
+  <item id="258606399" name="Centre sportif de Granval - 1er"/>
+  <item id="2020423081" name="Centre sportif de Granval - 2e"/>
+  <item id="972499804" name="Curry gourmand"/>
+  <item id="3623438960" name="Tortue photographie"/>
+  <item id="1050341189" name="Galerie du couchant - 1er ss"/>
+  <item id="3499396713" name="Galerie du couchant - rdc"/>
+  <item id="925672302" name="Galerie du couchant - Café du dauphin"/>
+  <item id="552344093" name="Tour de commerce Granval - rdc"/>
+  <item id="3470949169" name="Tour de commerce Granval - 6e"/>
+  <item id="662822404" name="Sukiyaki somptueux"/>
+  <item id="197216734" name="Gare centrale de Granval"/>
+  <item id="2685852457" name="Rue des Fleurs de Granval"/>
+  <item id="3608275903" name="Librairie Plume"/>
+  <item id="958368403" name="Ramen Bise du Nord"/>
+  <item id="3497799590" name="Tout pour tous du quart. des bout."/>
+  <item id="1047678602" name="Pavillon du Soleil"/>
+  <item id="3653919629" name="Nos Amis les Jouets"/>
+  <item id="3456817918" name="Laverie La Pièce en poche"/>
+  <item id="537181138" name="Top spot"/>
+  <item id="3378978535" name="Bric-et-broc"/>
+  <item id="661225419" name="Sushi Granval"/>
+  <item id="3234943692" name="Tempête Tempura"/>
+  <item id="4153550547" name="Maison des Descartes - rdc"/>
+  <item id="1855682409" name="Maison des Descartes - 1er"/>
+  <item id="4043301578" name="Maison des Roch"/>
+  <item id="519144422" name="Maison d'Amélie - rdc"/>
+  <item id="4182355681" name="Maison d'Amélie - 1er"/>
+  <item id="2576230148" name="Maison de Line"/>
+  <item id="4001961874" name="Maison des Célestin"/>
+  <item id="8877758" name="Résidence de la Corniche - entrée"/>
+  <item id="3924087691" name="Résidence de la Corniche - 6e"/>
+  <item id="3315876945" name="Tout pour tous de la Corniche"/>
+  <item id="732571005" name="Salle des trophées"/>
+  <item id="2330317462" name="Parking du Jardin des Lys"/>
+  <item id="334267180" name="Entrée du Jardin des Lys"/>
+  <item id="2374506127" name="Maison des Rochebois"/>
+  <item id="1328431542" name="Tour Excellence - hall d'accueil"/>
+  <item id="3592884236" name="Tour Excellence - ascenseur"/>
+  <item id="2703237274" name="Tour Excellence - point d'observation"/>
+  <item id="390943200" name="Salle concert Next HarMIAOUny - entrée"/>
+  <item id="2386821210" name="Salle concert Next HarMIAOUny - scène"/>
+  <item id="270571001" name="MangAmitié"/>
+  <item id="4264490197" name="Cosplay café"/>
+  <item id="429316562" name="Tout pour tous d'Électropolis"/>
+  <item id="240541857" name="Agence &lt;CNAME&gt;"/>
+  <item id="3763863949" name="L'instant Soba"/>
+  <item id="277171466" name="Salle de réunion des Flots bleus"/>
+  <item id="4270533670" name="L'Écaille rouillée"/>
+  <item id="2123975901" name="Maison abandonnée"/>
+  <item id="1437867806" name="Océan"/>
+  <item id="770008250" name="Maison de Grand-mère"/>
+  <item id="3286959510" name="École d'Ourcival"/>
+  <item id="713597091" name="Comptoir montagnard"/>
+  <item id="982028249" name="USA - maison des Adams - rdc"/>
+  <item id="2743197283" name="USA - maison des Adams - 1er"/>
+  <item id="3565612789" name="Pièce suspecte"/>
+  <item id="3555404524" name="USA - Maison des Forester - rdc"/>
+  <item id="1129592701" name="USA - Maison des Forester - 1er"/>
+  <item id="596885144" name="L'épicerie de Violette"/>
+  <item id="3449675700" name="Maison des Boyte"/>
+  <item id="146730331" name="Banque Grenier"/>
+  <item id="3870329975" name="Poste de l'hirondelle"/>
+  <item id="1207925660" name="École de Cajoun"/>
+  <item id="3740674598" name="École de Cajoun - aile ouest"/>
+  <item id="2851150512" name="École de Cajoun - aile est"/>
+  <item id="1083359109" name="École de Cajoun - cafétéria"/>
+  <item id="675094583" name="Tout pour tous de Betel"/>
+  <item id="3325247771" name="Comptoir de Granval - bureau Pistach."/>
+  <item id="793830446" name="L'esquif sans écueil"/>
+  <item id="3244197122" name="Cirque miracle"/>
+  <item id="652650501" name="Star Burger"/>
+  <item id="824578422" name="Joujoux à gogo"/>
+  <item id="3743969370" name="Sushi du soleil levant"/>
+  <item id="910939503" name="Amore Pizza"/>
+  <item id="436945589" name="Marché du hangar n° 3"/>
+  <item id="51409908" name="Mairie - rdc"/>
+  <item id="2585338446" name="Mairie - 1er"/>
+  <item id="3978171096" name="Mairie - toit"/>
+  <item id="2424391506" name="Église de Cawet"/>
+  <item id="2123310718" name="Tocantes de Todd"/>
+  <item id="2548859723" name="Aux steaks de Cawet"/>
+  <item id="2044912231" name="Vieille maison"/>
+  <item id="1737758527" name="Un temps à tempura"/>
+  <item id="2398597642" name="Au Sukiyaki Sublime"/>
+  <item id="2984038466" name="Auberge des voyageurs - 101"/>
+  <item id="3336298708" name="Auberge des voyageurs - 102"/>
+  <item id="1607643502" name="Auberge des voyageurs - 103"/>
+  <item id="685081080" name="Auberge des voyageurs - 104"/>
+  <item id="3065058395" name="Auberge des voyageurs - 105"/>
+  <item id="3249939661" name="Auberge des voyageurs - 201"/>
+  <item id="1488942455" name="Auberge des voyageurs - 202"/>
+  <item id="800605665" name="Auberge des voyageurs - 203"/>
+  <item id="3204929648" name="Auberge des voyageurs - 204"/>
+  <item id="3355470054" name="Auberge des voyageurs - 205"/>
+  <item id="3052017806" name="Base secrète"/>
+  <item id="132687465" name="Hôtel des hors-la-loi"/>
+  <item id="3924215621" name="Bureau du shérif"/>
+  <item id="8741488" name="Relais des chasseurs"/>
+  <item id="3698211210" name="Club Koma"/>
+  <item id="845174950" name="Villa Enma"/>
+  <item id="3674471827" name="Yopple Store"/>
+  <item id="890084543" name="Sushi du Phénix"/>
+  <item id="3535122872" name="Tempura de la sérénité"/>
+  <item id="2151963359" name="Maison Blasters - 1er ss"/>
+  <item id="4148390473" name="Maison Blasters"/>
+  <item id="3998767880" name="Sanctuaire Sukiyaki"/>
+  <item id="4057226364" name="Continent Permu - bivouac des Blasters"/>
+  <item id="3450706840" name="Pavillon de l'ambroisie - entrée"/>
+  <item id="1420085794" name="Yo-kai World - Antichambre"/>
+  <item id="1405685307" name="Pavillon de l'ambroisie"/>
+  <item id="3279295402" name="Navire aux trésors 7 dieux de la fortune"/>
+  <item id="2616671262" name="Siège de Yopple - jardin"/>
+  <item id="1979276594" name="Siège de Yopple - accueil"/>
+  <item id="2627401735" name="Siège de Yopple - bureau du PDG"/>
+  <item id="1922341163" name="Siège de Yopple - galerie Yo-kai Watch"/>
+  <item id="2502734892" name="Siège de Yopple - salle de réunion"/>
+  <item id="2196507999" name="Siège de Yopple - labo"/>
+  <item id="1826778227" name="Siège de Yopple - chaîne d'assemblage"/>
+  <item id="2239875398" name="Siège de Yopple - arène"/>
+  <item id="1804576874" name="Siège de Yopple - cafétéria"/>
+  <item id="2352448877" name="Siège de Yopple - aquarium"/>
+  <item id="3568741081" name="Tour Morleone - accueil"/>
+  <item id="985189365" name="Tour Morleone - ascenseur"/>
+  <item id="3554373312" name="Étage dangereux"/>
+  <item id="1037373420" name="Étage onirique - lune"/>
+  <item id="3664585451" name="Étage onirique - feu"/>
+  <item id="4288411930" name="Étage onirique - eau"/>
+  <item id="295016502" name="Étage onirique - bois"/>
+  <item id="2414939541" name="Étage onirique - bois"/>
+  <item id="4176887043" name="Étage onirique - or"/>
+  <item id="1644129465" name="Étage onirique - or"/>
+  <item id="385375279" name="Étage onirique - terre"/>
+  <item id="4047532328" name="Étage onirique - soleil"/>
+  <item id="3867199579" name="Bureau de Don Morleone"/>
+  <item id="143567223" name="Intérieur de l'OVNI"/>
+  <item id="2905004746" name="t100d00"/>
+  <item id="3659655772" name="Égouts de Granval - allée de la souris"/>
+  <item id="1126743014" name="Égouts de Granval - lieu secret"/>
+  <item id="875531120" name="Égouts de Granval - place du chat"/>
+  <item id="2857049811" name="Égouts de Granval - ville des néons"/>
+  <item id="3712757317" name="Égouts de Granval - rue principale"/>
+  <item id="1145405439" name="Égouts de Granval - chemin de l'école"/>
+  <item id="859983721" name="Égouts de Granval - fresque des esprits"/>
+  <item id="2751288056" name="Égouts de Granval - sentier vivifiant"/>
+  <item id="3573178990" name="Égouts Granv. - raccordement Corniche"/>
+  <item id="3023956875" name="Égouts Granval - taverne d'Entraînette"/>
+  <item id="3275414301" name="Égouts d'Électropol. - point de rencontre"/>
+  <item id="1513327271" name="Égouts de Granval - fresque des Yo-kai"/>
+  <item id="758430257" name="Égouts de Granval - ouest du centre-ville"/>
+  <item id="1654492473" name="Ruelle obscure"/>
+  <item id="4220836995" name="Canal isolé"/>
+  <item id="2358504469" name="Passage des Matous"/>
+  <item id="1710246176" name="Allée sinistre"/>
+  <item id="1881678551" name="Sentier de rando - mont Sylv."/>
+  <item id="3911283565" name="Sommet du mont Sylvestre"/>
+  <item id="2653307899" name="Méga toboggan"/>
+  <item id="1527083284" name="Tunnel abandonné - ouest"/>
+  <item id="3255574702" name="Tunnel abandonné - est"/>
+  <item id="3365160370" name="Terrain vague"/>
+  <item id="647636126" name="Petite rue cachée"/>
+  <item id="3515839731" name="Chemin secret"/>
+  <item id="3820557937" name="Vieux manoir - demeure"/>
+  <item id="230127453" name="Vieux manoir - dépendance"/>
+  <item id="3839152744" name="Vieux manoir - grenier demeure"/>
+  <item id="2111669202" name="Vieux manoir - grenier dépendance"/>
+  <item id="1430486283" name="Raccourci vers l'Académie"/>
+  <item id="3142392871" name="Arrière-cour du Vent d'hiver"/>
+  <item id="1378793746" name="Aire de livraison"/>
+  <item id="3156269118" name="Parking souterrain de Granval"/>
+  <item id="1280855114" name="Tour de commerce Granval - 3e"/>
+  <item id="2723556710" name="Tour de commerce de Granval - 13e"/>
+  <item id="1261799507" name="Tour de commerce Granval - escalier est"/>
+  <item id="2772167039" name="Tour commerce Granval - escalier ouest"/>
+  <item id="1735729033" name="Tour commerce Granval - bureau PDG"/>
+  <item id="3992918638" name="Contre-allées rue commerçante"/>
+  <item id="4108593967" name="Résidence Sérénité - A 102"/>
+  <item id="1844279957" name="Résidence Sérénité - A 104"/>
+  <item id="451561987" name="Résidence Sérénité - A 201"/>
+  <item id="2223955872" name="Résidence Sérénité - A 303"/>
+  <item id="4085903158" name="Résidence Sérénité - B 202"/>
+  <item id="1786822284" name="Résidence Sérénité - B 204"/>
+  <item id="495423002" name="Résidence Sérénité - B 301"/>
+  <item id="2369295243" name="Résidence Sérénité - B 302"/>
+  <item id="4198474525" name="Résidence Sérénité - C 102"/>
+  <item id="2832091258" name="Résidence Sérénité - B 102"/>
+  <item id="3754522860" name="Résidence Sérénité - B 101"/>
+  <item id="1186998614" name="Résidence Sérénité - C 104"/>
+  <item id="835131840" name="Résidence Sérénité - A 202"/>
+  <item id="2946731107" name="Résidence Sérénité - A 204"/>
+  <item id="3634674933" name="Résidence Sérénité - A 103"/>
+  <item id="1101917519" name="Résidence Sérénité - C 201"/>
+  <item id="917167577" name="Résidence Sérénité - A 302"/>
+  <item id="2786443336" name="Résidence Sérénité - B 303"/>
+  <item id="3507679454" name="Résidence Sérénité - C 203"/>
+  <item id="2983557435" name="Résidence Sérénité - C 204"/>
+  <item id="3335670189" name="Résidence Sérénité - C 301"/>
+  <item id="1608194071" name="Résidence Sérénité - C 302"/>
+  <item id="685516929" name="Résidence Sérénité - B 301 (Passé)"/>
+  <item id="3065560354" name="Résidence Sérénité - B 302 (Passé)"/>
+  <item id="3250556340" name="Résidence Sérénité - B 303 (Passé)"/>
+  <item id="1488378894" name="Résidence Sérénité - B 304 (Passé)"/>
+  <item id="2308169578" name="Clinique du Crépuscule - rdc"/>
+  <item id="1738391110" name="Clinique du Crépuscule - 1er"/>
+  <item id="2399017843" name="Clinique du Crépuscule - 2e"/>
+  <item id="1626372703" name="Clinique - Sous-sol"/>
+  <item id="4031735758" name="Clinique - Laboratoire souterrain"/>
+  <item id="3864102081" name="Chemin de traverse"/>
+  <item id="3563578947" name="Musée lac des Coloquintes - rdc"/>
+  <item id="1299101689" name="Musée lac des Coloquintes - 1er"/>
+  <item id="979994479" name="Musée lac des Coloq. - ch. forte"/>
+  <item id="529908403" name="Parking louche"/>
+  <item id="4053509023" name="Allée de la brocante"/>
+  <item id="3190985879" name="Manoir brumeux"/>
+  <item id="1346172347" name="Manoir brumeux"/>
+  <item id="3110031502" name="Lac du lotus"/>
+  <item id="1464938914" name="Cap du Crépuscule"/>
+  <item id="2968067237" name="Cascades de l'autre monde"/>
+  <item id="2501887828" name="Salle de classe"/>
+  <item id="2064754296" name="Impasse"/>
+  <item id="2456945485" name="Rive du requiem"/>
+  <item id="4211328643" name="t109d30"/>
+  <item id="408804953" name="Grotte saline"/>
+  <item id="4132683637" name="L'Atelier dérobé"/>
+  <item id="21425944" name="Grotte du littoral"/>
+  <item id="4014509620" name="Coteau du Dragon"/>
+  <item id="624818153" name="Chemin des rizières"/>
+  <item id="3409155781" name="Rocher de face"/>
+  <item id="1431765862" name="Canyon de la cigale"/>
+  <item id="575681520" name="Sommet du mont de l'Ours"/>
+  <item id="931682311" name="Ruelle près de la gare"/>
+  <item id="2330754031" name="Affluent de la Macadamia"/>
+  <item id="2482457262" name="Relique reculée"/>
+  <item id="2113481602" name="Grotte du grincheux - entrée"/>
+  <item id="2493157047" name="Sanctuaire solitaire"/>
+  <item id="2056581019" name="Îlot boisé"/>
+  <item id="2636956316" name="Caverne secrète"/>
+  <item id="844110986" name="Aire de barbecue"/>
+  <item id="3697180070" name="Garage de Chuck"/>
+  <item id="6716936" name="Casse"/>
+  <item id="551924580" name="Allée du hip-hop"/>
+  <item id="3471561288" name="Hangar n° 2"/>
+  <item id="315871718" name="Dimension mystère"/>
+  <item id="2360820805" name="Magasin mystère - 1re salle"/>
+  <item id="4222645459" name="Magasin mystère - 2e salle"/>
+  <item id="1796172098" name="Magasin mystère - 3e salle"/>
+  <item id="197714087" name="Travail mystère - 1re pièce"/>
+  <item id="2462167325" name="Travail mystère - 2e pièce"/>
+  <item id="3854991755" name="Travail mystère - 3e pièce"/>
+  <item id="2511107332" name="Quiz mystère - 1re pièce"/>
+  <item id="3802875282" name="Quiz mystère - 2e pièce"/>
+  <item id="1913935875" name="Quiz mystère - 3e pièce"/>
+  <item id="85158037" name="Quiz mystère - salle de correction"/>
+  <item id="1149859424" name="Percée mystère - 1re pièce"/>
+  <item id="3716163546" name="Percée mystère - 2e pièce"/>
+  <item id="2860980044" name="Percée mystère - 3e pièce"/>
+  <item id="887325423" name="Percée mystère - 4e pièce"/>
+  <item id="2556023809" name="Hôtel - porte arrière"/>
+  <item id="2168644928" name="Esprits-unic"/>
+  <item id="1867285612" name="Esprits-unic - réserve"/>
+  <item id="93252792" name="Manoir des Cardamom - sous-sol"/>
+  <item id="3951070612" name="Manoir des Cardamom - hall d'entrée"/>
+  <item id="48441505" name="Manoir des Cardamom - couloir du rdc"/>
+  <item id="3974973837" name="Manoir des Cardamom - salle à manger"/>
+  <item id="190145674" name="Manoir Cardamom - hall du jugement"/>
+  <item id="479583737" name="Manoir des Cardamom - cuisines"/>
+  <item id="4070292693" name="Manoir des Cardamom - salle de bain"/>
+  <item id="469244384" name="Manoir des Cardamom - couloir du 1er"/>
+  <item id="4126570700" name="Manoir des Cardamom - bibliothèque"/>
+  <item id="307123659" name="Manoir des Cardamom"/>
+  <item id="2754198172" name="Forêt de Mortebranche"/>
+  <item id="1244126128" name="Parc du champignon"/>
+  <item id="2399463775" name="Grotte du grincheux"/>
+  <item id="1628080243" name="Grotte du grincheux"/>
+  <item id="2645640881" name="Ferme des blés"/>
+  <item id="2016871852" name="Vallée du rodéo"/>
+  <item id="1630287085" name="Vallée du rodéo - canyon du condor"/>
+  <item id="1023825848" name="Tour du Karmagister - 1re épreuve"/>
+  <item id="2752448002" name="Tour du Karmagister - 2e épreuve"/>
+  <item id="3540530836" name="Tour du Karmagister - 3e épreuve"/>
+  <item id="1298965303" name="Tour du Karmagister - 4e épreuve"/>
+  <item id="980128673" name="Tour du Karmagister - 5e épreuve"/>
+  <item id="2741158427" name="Tour du Karmagister - 6e épreuve"/>
+  <item id="3563451021" name="Tour du Karmagister - 7e épreuve"/>
+  <item id="1155198748" name="Tour du Karmagister - 8e épreuve"/>
+  <item id="870178698" name="Tour du Karmagister - 9e épreuve"/>
+  <item id="1394234991" name="Tour du Karmagister - dernière épreuve"/>
+  <item id="1801252926" name="Terre de la révélation"/>
+  <item id="4178366255" name="Salle de réception"/>
+  <item id="3380380910" name="Verrou Permu - entrée"/>
+  <item id="1349899604" name="Tombe du roi Pharamu - entrée"/>
+  <item id="661841346" name="Temple de Musiris - entrée"/>
+  <item id="3105255521" name="Statue d'Amubis - entrée"/>
+  <item id="3457237239" name="Pyramude - entrée"/>
+  <item id="1461195085" name="Mont Mulympe - entrée"/>
+  <item id="538911195" name="Musphinx - entrée"/>
+  <item id="2963291210" name="Tour de Muise - entrée"/>
+  <item id="3349613788" name="Palais Enma - entrée"/>
+  <item id="1232004117" name="Jardin suspendu - entrée"/>
+  <item id="2281445790" name="Pièce suspecte"/>
+  <item id="1061191419" name="t491d01"/>
+  <item id="4095520094" name="t591d01"/>
+  <item id="3869835952" name="t592d01"/>
+  <item id="2141213450" name="t592d02"/>
+  <item id="145187740" name="t592d03"/>
+  <item id="2529424959" name="t592d04"/>
+  <item id="3787769513" name="t592d05"/>
+  <item id="2026739475" name="t592d06"/>
+  <item id="264939397" name="t592d07"/>
+  <item id="2675292692" name="t592d08"/>
+  <item id="2293564263" name="t592d10"/>
+  <item id="4289868785" name="t592d11"/>
+  <item id="1723556427" name="t592d12"/>
+  <item id="3980996593" name="t401d99"/>
+  <item id="857051418" name="t491o01"/>
+  <item id="4165550783" name="t591o01"/>
+  <item id="1631589125" name="t591o02"/>
+  <item id="3942444369" name="t592o01"/>
+  <item id="1945484523" name="t592o02"/>
+  <item id="83004541" name="t592o03"/>
+  <item id="2593528286" name="t592o04"/>
+  <item id="3985713480" name="t592o05"/>
+  <item id="1956149490" name="t592o06"/>
+  <item id="60770404" name="t592o07"/>
+  <item id="2468369909" name="t592o08"/>
+  <item id="3827787107" name="t592o09"/>
+  <item id="2229333126" name="Palais Enma"/>
+  <item id="4092058640" name="t592o11"/>
+  <item id="1794018730" name="t592o12"/>
+  <item id="3276300201" name="Gare centrale de Granval"/>
+  <item id="1514212883" name="R. brindille - Électrop."/>
+  <item id="759578245" name="Collines de l'alouette"/>
+  <item id="3005393702" name="Pic fleuri"/>
+  <item id="3290799024" name="Gare des Fabriques"/>
+  <item id="1563216394" name="Doux-carré"/>
+  <item id="707525276" name="Place de la Fortune"/>
+  <item id="3130320653" name="Pont Azur"/>
+  <item id="3449018267" name="Pré aux songes"/>
+  <item id="2907987582" name="Poincrête"/>
+  <item id="3662900968" name="La Crique"/>
+  <item id="1129987922" name="San Fantastico"/>
+  <item id="878514116" name="Verteplaines"/>
+  <item id="2855901799" name="Parc du temple"/>
+  <item id="3711871729" name="Chutes indigo"/>
+  <item id="1144519499" name="Ourcival"/>
+  <item id="858835933" name="Gare du Printemps"/>
+  <item id="2744112716" name="Gare du Soleil"/>
+  <item id="3565741786" name="Doux refuge"/>
+  <item id="2256080317" name="Val glouton"/>
+  <item id="4051582251" name="Mont cerise"/>
+  <item id="1752657041" name="Vallée du mystère"/>
+  <item id="3051879916" name="t001t01"/>
+  <item id="1542036672" name="t001t03"/>
+  <item id="3314354531" name="t001t04"/>
+  <item id="1230779182" name="t002t03"/>
+  <item id="3610814093" name="t002t04"/>
+  <item id="2969598394" name="t100t00"/>
+  <item id="2742496243" name="t100w011"/>
+  <item id="2287630384" name="t100w021"/>
+  <item id="2436974961" name="t100w031"/>
+  <item id="3724599222" name="t100w041"/>
+  <item id="3340496631" name="t100w051"/>
+  <item id="3963010356" name="t100w061"/>
+  <item id="4113402997" name="t100w071"/>
+  <item id="1924501690" name="t100w081"/>
+  <item id="1806606843" name="t100w091"/>
+  <item id="3148771461" name="t100w101"/>
+  <item id="2729787844" name="t100w111"/>
+  <item id="2308444679" name="t100w121"/>
+  <item id="2424513350" name="t100w131"/>
+  <item id="3754079617" name="t100w141"/>
+  <item id="3336144064" name="t100w151"/>
+  <item id="3992246019" name="t100w161"/>
+  <item id="4109362754" name="t100w171"/>
+  <item id="1937242765" name="t100w181"/>
+  <item id="1785514956" name="t100w191"/>
+  <item id="3119042268" name="t100w201"/>
+  <item id="2700345245" name="t100w211"/>
+  <item id="3652679827" name="t102w011"/>
+  <item id="290977763" name="t107w011"/>
+  <item id="411267309" name="t131w011"/>
+  <item id="4048487508" name="t400w011"/>
+  <item id="3663878039" name="t400w021"/>
+  <item id="3279513302" name="t400w031"/>
+  <item id="2352541713" name="t400w041"/>
+  <item id="355574187" name="t400w042"/>
+  <item id="2502148432" name="t400w051"/>
+  <item id="3188626067" name="t400w061"/>
+  <item id="2803213266" name="t400w071"/>
+  <item id="546160413" name="t400w081"/>
+  <item id="3112496807" name="t400w082"/>
+  <item id="966168156" name="t400w091"/>
+  <item id="3918946082" name="t400w101"/>
+  <item id="4035800675" name="t400w111"/>
+  <item id="945818103" name="t001w011"/>
+  <item id="3425644004" name="t401w011"/>
+  <item id="981115936" name="t107w021"/>
+  <item id="2907447854" name="t001b01"/>
+  <item id="876966804" name="t001b02"/>
+  <item id="1128416002" name="t001b03"/>
+  <item id="3025605487" name="t001b11"/>
+  <item id="761152213" name="t001b12"/>
+  <item id="1515811395" name="t001b13"/>
+  <item id="3006977910" name="t001b15"/>
+  <item id="2675589292" name="t001b21"/>
+  <item id="1903436160" name="t001b23"/>
+  <item id="3493582443" name="t001b51"/>
+  <item id="1043707719" name="t001b53"/>
+  <item id="3612742258" name="t001b55"/>
+  <item id="962098014" name="t001b57"/>
+  <item id="3739246169" name="t001b59"/>
+  <item id="4212557224" name="t001b61"/>
+  <item id="3792549097" name="t001b71"/>
+  <item id="201577925" name="t001b73"/>
+  <item id="3848302832" name="t001b75"/>
+  <item id="2087264586" name="t001b76"/>
+  <item id="191762908" name="t001b77"/>
+  <item id="2614168653" name="t001b78"/>
+  <item id="3973463259" name="t001b79"/>
+  <item id="311597232" name="t001b80"/>
+  <item id="1704306726" name="t001b81"/>
+  <item id="3220803008" name="t002b01"/>
+  <item id="3735852782" name="t100b01"/>
+  <item id="1202046804" name="t100b02"/>
+  <item id="2230750825" name="t100b02a"/>
+  <item id="503308243" name="t100b02b"/>
+  <item id="815986626" name="t100b03"/>
+  <item id="2932236897" name="t100b04"/>
+  <item id="3653325559" name="t100b05"/>
+  <item id="1086849869" name="t100b06"/>
+  <item id="936326107" name="t100b07"/>
+  <item id="3969578092" name="t100b21"/>
+  <item id="2891909572" name="t100b21a"/>
+  <item id="894851198" name="t100b21b"/>
+  <item id="1972610518" name="t100b22"/>
+  <item id="1769749291" name="t100b22c"/>
+  <item id="43291968" name="t100b23"/>
+  <item id="1885801066" name="t100b23c"/>
+  <item id="2632974563" name="t100b24"/>
+  <item id="1059495085" name="t100b24c"/>
+  <item id="100225369" name="t100b27"/>
+  <item id="3795942494" name="t100b29"/>
+  <item id="3133166570" name="t100b41"/>
+  <item id="2749063851" name="t100b51"/>
+  <item id="986854161" name="t100b52"/>
+  <item id="1305805703" name="t100b53"/>
+  <item id="2763433650" name="t100b55"/>
+  <item id="1253623710" name="t100b57"/>
+  <item id="2902518425" name="t100b59"/>
+  <item id="2297835880" name="t100b61"/>
+  <item id="301949138" name="t100b62"/>
+  <item id="1727549508" name="t100b63"/>
+  <item id="4171023847" name="t100b64"/>
+  <item id="2409362801" name="t100b65"/>
+  <item id="378709195" name="t100b66"/>
+  <item id="1637192797" name="t100b67"/>
+  <item id="4046096844" name="t100b68"/>
+  <item id="2251143514" name="t100b69"/>
+  <item id="3874107583" name="t100b70"/>
+  <item id="2448228393" name="t100b71"/>
+  <item id="149180819" name="t100b72"/>
+  <item id="2145607941" name="t100b73"/>
+  <item id="3783783590" name="t100b74"/>
+  <item id="2525021232" name="t100b75"/>
+  <item id="260674954" name="t100b76"/>
+  <item id="2022614300" name="t100b77"/>
+  <item id="3895572621" name="t100b78"/>
+  <item id="2671151131" name="t100b79"/>
+  <item id="1634872432" name="t100b80"/>
+  <item id="376773862" name="t100b81"/>
+  <item id="2407288156" name="t100b82"/>
+  <item id="1712386443" name="t101b01"/>
+  <item id="4279869489" name="t101b02"/>
+  <item id="2283704487" name="t101b03"/>
+  <item id="1411814153" name="t101b21"/>
+  <item id="3123245605" name="t101b23"/>
+  <item id="1397446416" name="t101b25"/>
+  <item id="3175429692" name="t101b27"/>
+  <item id="771369901" name="t101b28"/>
+  <item id="1295884872" name="t101b31"/>
+  <item id="3560240114" name="t101b32"/>
+  <item id="1956994661" name="t102b01"/>
+  <item id="3987476447" name="t102b02"/>
+  <item id="2594914121" name="t102b03"/>
+  <item id="1841196836" name="t102b11"/>
+  <item id="1184054503" name="t102b21"/>
+  <item id="2828885451" name="t102b23"/>
+  <item id="3424205056" name="t103b01"/>
+  <item id="571955244" name="t103b03"/>
+  <item id="3413441817" name="t103b05"/>
+  <item id="628792373" name="t103b07"/>
+  <item id="3267539250" name="t103b09"/>
+  <item id="4264516482" name="t103b21"/>
+  <item id="270613166" name="t103b23"/>
+  <item id="1372455353" name="t104b01"/>
+  <item id="3217055893" name="t104b03"/>
+  <item id="1677222715" name="t104b21"/>
+  <item id="2381709847" name="t104b23"/>
+  <item id="1687529250" name="t104b25"/>
+  <item id="2325464590" name="t104b27"/>
+  <item id="1831070473" name="t104b29"/>
+  <item id="2061718138" name="t104b31"/>
+  <item id="2498573142" name="t104b33"/>
+  <item id="2106496611" name="t104b35"/>
+  <item id="2474702671" name="t104b37"/>
+  <item id="3916588764" name="t105b01"/>
+  <item id="125569008" name="t105b03"/>
+  <item id="3678667870" name="t105b21"/>
+  <item id="894068082" name="t105b23"/>
+  <item id="3693723719" name="t105b25"/>
+  <item id="4224174386" name="t106b01"/>
+  <item id="3388058544" name="t106b21"/>
+  <item id="671074972" name="t106b23"/>
+  <item id="3505036017" name="t106b31"/>
+  <item id="1055194077" name="t106b33"/>
+  <item id="1132179031" name="t107b01"/>
+  <item id="2910179195" name="t107b03"/>
+  <item id="454606337" name="t108b01"/>
+  <item id="4111916845" name="t108b03"/>
+  <item id="477461016" name="t108b05"/>
+  <item id="4068154164" name="t108b07"/>
+  <item id="365114931" name="t108b09"/>
+  <item id="2745489764" name="t109b01"/>
+  <item id="2442312678" name="t109b21"/>
+  <item id="483435243" name="t121b01"/>
+  <item id="4074685383" name="t121b03"/>
+  <item id="55269055" name="t121b03c"/>
+  <item id="465397490" name="t121b05"/>
+  <item id="786874473" name="t121b21"/>
+  <item id="3236471109" name="t121b23"/>
+  <item id="939389224" name="t121b31"/>
+  <item id="565218139" name="t131b01"/>
+  <item id="327608793" name="t131b21"/>
+  <item id="4253583605" name="t131b23"/>
+  <item id="855975093" name="t132b01"/>
+  <item id="3708503449" name="t132b03"/>
+  <item id="2388723549" name="t400b01"/>
+  <item id="392713959" name="t400b02"/>
+  <item id="920477752" name="t401b01"/>
+  <item id="3637707028" name="t401b03"/>
+  <item id="833659937" name="t401b05"/>
+  <item id="3753821453" name="t401b07"/>
+  <item id="801526137" name="t401b11"/>
+  <item id="82510522" name="t401b21"/>
+  <item id="3940901782" name="t401b23"/>
+  <item id="610848726" name="t402b01"/>
+  <item id="3395727098" name="t402b03"/>
+  <item id="587533263" name="t402b05"/>
+  <item id="3440077539" name="t402b07"/>
+  <item id="716392420" name="t402b09"/>
+  <item id="375303508" name="t402b21"/>
+  <item id="2631182515" name="t403b01"/>
+  <item id="1926941087" name="t403b03"/>
+  <item id="2934098481" name="t403b21"/>
+  <item id="1089252125" name="t403b23"/>
+  <item id="2844724776" name="t403b25"/>
+  <item id="17010698" name="t404b01"/>
+  <item id="4010668326" name="t404b03"/>
+  <item id="107893779" name="t404b05"/>
+  <item id="3898619199" name="t404b07"/>
+  <item id="2341049837" name="t405b21"/>
+  <item id="1703408833" name="t405b23"/>
+  <item id="2363773428" name="t405b25"/>
+  <item id="2869581953" name="t406b01"/>
+  <item id="196954504" name="t411b01"/>
+  <item id="965421834" name="t411b21"/>
+  <item id="546314827" name="t411b31"/>
+  <item id="3113831409" name="t411b32"/>
+  <item id="3466492775" name="t411b33"/>
+  <item id="1358622404" name="t411b34"/>
+  <item id="670948946" name="t411b35"/>
+  <item id="3203698664" name="t411b36"/>
+  <item id="3388194686" name="t411b37"/>
+  <item id="1498194671" name="t411b38"/>
+  <item id="776704633" name="t411b39"/>
+  <item id="416726042" name="t411b40"/>
+  <item id="420013670" name="t412b01"/>
+  <item id="2299147268" name="e101g003"/>
+  <item id="1617531185" name="e101g005"/>
+  <item id="2486868012" name="e104d331"/>
+  <item id="3278712098" name="e100g002"/>
+  <item id="1804363269" name="e200g001"/>
+  <item id="4068816831" name="e200g002"/>
+  <item id="2239891241" name="e200g003"/>
+  <item id="468095626" name="e200g004"/>
+  <item id="1922520900" name="e200g011"/>
+  <item id="3953002238" name="e200g012"/>
+  <item id="2627286632" name="e200g013"/>
+  <item id="50176971" name="e200g014"/>
+  <item id="1979355997" name="e200g015"/>
+  <item id="3975398119" name="e200g016"/>
+  <item id="2616521329" name="e200g017"/>
+  <item id="189525984" name="e200g018"/>
+  <item id="2085412726" name="e200g019"/>
+  <item id="1458327477" name="e201g001"/>
+  <item id="3487899151" name="e201g002"/>
+  <item id="3101830809" name="e201g003"/>
+  <item id="1367444396" name="e201g005"/>
+  <item id="3364411926" name="e201g006"/>
+  <item id="3213879936" name="Avenue du Triangle - les Hauts"/>
+  <item id="1480050567" name="e201g009"/>
+  <item id="290207077" name="e202g001"/>
+  <item id="741088469" name="e203g001"/>
+  <item id="3257040377" name="e203g003"/>
+  <item id="725735628" name="e203g005"/>
+  <item id="3310336480" name="e203g007"/>
+  <item id="2741823861" name="e205g001"/>
+  <item id="1298303065" name="e205g003"/>
+  <item id="2751540588" name="e205g005"/>
+  <item id="3838612389" name="e206g001"/>
+  <item id="180548233" name="e206g003"/>
+  <item id="2698032544" name="e210g001"/>
+  <item id="1323226252" name="e210g003"/>
+  <item id="2814210489" name="e210g005"/>
+  <item id="3117122785" name="e210g011"/>
+  <item id="549639515" name="e210g012"/>
+  <item id="994178998" name="e250g001"/>
+  <item id="618452130" name="e260g002"/>
+  <item id="1406919732" name="e260g003"/>
+  <item id="3451875735" name="e260g004"/>
+  <item id="3132637441" name="e260g005"/>
+  <item id="598806715" name="e260g006"/>
+  <item id="1421221933" name="e260g007"/>
+  <item id="3288939964" name="e260g008"/>
+  <item id="3004042538" name="e260g009"/>
+  <item id="3553199311" name="e260g010"/>
+  <item id="1988712125" name="e270g001"/>
+  <item id="2558998417" name="e270g003"/>
+  <item id="1910805156" name="e270g005"/>
+  <item id="2682975112" name="e270g007"/>
+  <item id="3917509952" name="e301g011"/>
+  <item id="1888036090" name="e301g012"/>
+  <item id="126751852" name="e301g013"/>
+  <item id="3266127491" name="e301g021"/>
+  <item id="1537505081" name="e301g022"/>
+  <item id="748898223" name="e301g023"/>
+  <item id="2897291092" name="e301g030"/>
+  <item id="4213828325" name="e301g150"/>
+  <item id="1317508264" name="e301g180"/>
+  <item id="1287727857" name="e301g280"/>
+  <item id="2629958543" name="e301g310"/>
+  <item id="1502606417" name="e301g990"/>
+  <item id="2523310529" name="e302g060"/>
+  <item id="4148525632" name="e302g720"/>
+  <item id="2996486541" name="e302g950"/>
+  <item id="3589644378" name="e303g230"/>
+  <item id="2209286108" name="e303g250"/>
+  <item id="3514359016" name="e303g430"/>
+  <item id="3539732614" name="e303g630"/>
+  <item id="2769670601" name="e303g860"/>
+  <item id="1291333513" name="e304g200"/>
+  <item id="1353451597" name="e304g510"/>
+  <item id="3184324739" name="e305g480"/>
+  <item id="1405260207" name="e305g482"/>
+  <item id="1691801753" name="e305g910"/>
+  <item id="12197277" name="e305g950"/>
+  <item id="126536197" name="e306g020"/>
+  <item id="1221287106" name="e306g050"/>
+  <item id="939136734" name="e306g300"/>
+  <item id="1510693379" name="e307g660"/>
+  <item id="673899892" name="e306g610"/>
+  <item id="4184851366" name="e309g170"/>
+  <item id="2054857691" name="e309g780"/>
+  <item id="219484400" name="e310g150"/>
+  <item id="140117621" name="e310g650"/>
+  <item id="595023286" name="e310g660"/>
+  <item id="980182263" name="e310g670"/>
+  <item id="1844750662" name="e310g710"/>
+  <item id="1242260953" name="e311g500"/>
+  <item id="3283703786" name="Ruines mystérieuses"/>
+  <item id="463638188" name="e360g001"/>
+  <item id="2192301846" name="e360g002"/>
+  <item id="4121751424" name="e360g003"/>
+  <item id="1808300579" name="e360g004"/>
+  <item id="483347125" name="e360g005"/>
+  <item id="2244352783" name="e360g006"/>
+  <item id="4072745881" name="e360g007"/>
+  <item id="1652438536" name="e360g008"/>
+  <item id="360253086" name="e360g009"/>
+  <item id="1975422843" name="e360g010"/>
+  <item id="45727725" name="e360g011"/>
+  <item id="2612063831" name="e360g012"/>
+  <item id="3971473089" name="e360g013"/>
+  <item id="1926450018" name="e360g014"/>
+  <item id="3956939480" name="e360g017"/>
+  <item id="2070218569" name="e360g018"/>
+  <item id="207763423" name="e360g019"/>
+  <item id="951691237" name="e360g360"/>
+  <item id="3202505950" name="e370g010"/>
+  <item id="3164922503" name="e370g310"/>
+  <item id="3455806897" name="e300g001"/>
+  <item id="1425161227" name="e300g002"/>
+  <item id="603262109" name="e300g003"/>
+  <item id="3180435774" name="e300g004"/>
+  <item id="1402992658" name="e300g006"/>
+  <item id="3571473648" name="e300g011"/>
+  <item id="1307118922" name="e300g012"/>
+  <item id="988691932" name="e300g013"/>
+  <item id="2760550527" name="e300g014"/>
+  <item id="2266694698" name="e300g920"/>
+  <item id="3954273234" name="testmap"/>
+  <item id="1133294214" name="testmappl"/>
+  <item id="520018797" name="testmappl02"/>
+  <item id="1777986555" name="testmappl03"/>
+  <item id="4154293848" name="testmappl04"/>
+  <item id="2157596366" name="testmappl05"/>
+  <item id="429072244" name="testmappl06"/>
+  <item id="1855205346" name="testmappl07"/>
+  <item id="4264243827" name="testmappl08"/>
+  <item id="2301362917" name="testmappl09"/>
+  <item id="3924527872" name="testmappl10"/>
+</items>

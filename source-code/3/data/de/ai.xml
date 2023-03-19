@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="1" name="Mürrisch"/>
+  <item id="2" name="Logisch"/>
+  <item id="3" name="Vorsichtig"/>
+  <item id="4" name="Sanft"/>
+  <item id="5" name="Verrückt"/>
+  <item id="6" name="Hilfreich"/>
+  <item id="7" name="Grob"/>
+  <item id="8" name="Klug"/>
+  <item id="9" name="Ruhig"/>
+  <item id="10" name="Zärtlich"/>
+  <item id="11" name="Gemein"/>
+  <item id="12" name="Ergeben"/>
+</items>

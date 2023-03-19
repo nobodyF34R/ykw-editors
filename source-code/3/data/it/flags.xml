@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="1" name="Cubi e rotatoria"/>
+  <item id="2" name="Pista di atletica"/>
+  <item id="3" name="Quattro tetti blu"/>
+  <item id="4" name="Accanto alla ruota"/>
+  <item id="5" name="Ponte dell'isolotto"/>
+  <item id="6" name="Accanto alla sacra Chiesa"/>
+  <item id="7" name="Di fronte al negozio di orologi"/>
+  <item id="8" name="Davanti alla casa nel vicolo"/>
+  <item id="9" name="Residenza del milionario"/>
+  <item id="10" name="Roccia vicina al nascondiglio"/>
+  <item id="11" name="Galleria nella foresta tetra"/>
+  <item id="12" name="Nella caverna nera"/>
+  <item id="13" name="Vicino allo stagno nella prateria"/>
+  <item id="14" name="Villaggio nel canyon orientale"/>
+  <item id="15" name="Area dei pony selvaggi"/>
+  <item id="16" name="Fiume accanto alla villa"/>
+  <item id="17" name="Spiaggia vicina alla grotta"/>
+  <item id="18" name="Fiume del canyon"/>
+  <item id="19" name="Misteriosa rovina sull'isola"/>
+  <item id="20" name="Rovina di arenaria"/>
+  <item id="21" name="Album: I sushi son desideri"/>
+  <item id="22" name="Album: The Comix Club"/>
+  <item id="23" name="Album: The Nyan-Sync"/>
+  <item id="24" name="Album: The Flame Jam"/>
+  <item id="25" name="Album: Canti di fine anno"/>
+  <item id="26" name="Album: Ganz and Bosses"/>
+  <item id="27" name="Album: I Bananaffama"/>
+  <item id="28" name="Album: I fratelli di can-pagna"/>
+  <item id="29" name="Album: Horrorsmith"/>
+  <item id="30" name="Album: Sapore di myare"/>
+  <item id="31" name="Album: I Noko-132"/>
+  <item id="32" name="Album: Maisicuro e felice..."/>
+  <item id="33" name="Album: Gli Yo-Kappa"/>
+  <item id="34" name="Album: Ground control to Usapyon"/>
+  <item id="35" name="Album: BurgerNyan"/>
+  <item id="36" name="Album: The Red Hot Terror Soldiers"/>
+  <item id="37" name="Album: The TaronyanTrio Lato A"/>
+  <item id="38" name="Album: The TaronyanTrio Lato B"/>
+  <item id="39" name="Album: Valdoro &amp; USA Special"/>
+  <item id="40" name="Album: Leofuoco"/>
+  <item id="41" name="Album: Serg. Kuadro"/>
+  <item id="42" name="Album: Hovernyan"/>
+  <item id="43" name="Album: Rivela"/>
+  <item id="44" name="Album: Maisicuro"/>
+  <item id="45" name="Album: Malandro"/>
+  <item id="46" name="Album: Jibanyan"/>
+  <item id="47" name="Album: Komasan"/>
+  <item id="48" name="Album: Nonno Fame"/>
+  <item id="49" name="Album: Dentrostrello"/>
+  <item id="50" name="Album: Negatina"/>
+  <item id="51" name="Album: Blablablo"/>
+  <item id="52" name="Album: Usapyon"/>
+  <item id="53" name="Album: Shogunyan"/>
+  <item id="54" name="Album: Voci in festa"/>
+  <item id="55" name="(No.55)"/>
+  <item id="56" name="(No.56)"/>
+  <item id="57" name="(No.57)"/>
+  <item id="58" name="(No.58)"/>
+  <item id="59" name="(No.59)"/>
+  <item id="60" name="(No.60)"/>
+  <item id="61" name="(No.61)"/>
+  <item id="62" name="(No.62)"/>
+  <item id="63" name="(No.63)"/>
+  <item id="64" name="(No.64)"/>
+  <item id="65" name="(No.65)"/>
+  <item id="66" name="(No.66)"/>
+  <item id="67" name="(No.67)"/>
+  <item id="68" name="(No.68)"/>
+  <item id="69" name="(No.69)"/>
+  <item id="70" name="(No.70)"/>
+  <item id="71" name="(No.71)"/>
+  <item id="72" name="(No.72)"/>
+  <item id="73" name="(No.73)"/>
+  <item id="74" name="(No.74)"/>
+  <item id="75" name="(No.75)"/>
+  <item id="76" name="(No.76)"/>
+  <item id="77" name="(No.77)"/>
+  <item id="78" name="(No.78)"/>
+  <item id="79" name="(No.79)"/>
+  <item id="80" name="(No.80)"/>
+  <item id="81" name="(No.81)"/>
+  <item id="82" name="(No.82)"/>
+  <item id="83" name="(No.83)"/>
+  <item id="84" name="(No.84)"/>
+  <item id="85" name="Orecchie morbide"/>
+  <item id="86" name="Orecchie Jibanyan"/>
+  <item id="87" name="Orecch. coniglietto"/>
+  <item id="88" name="Orecchie topolino"/>
+  <item id="89" name="Robotesta"/>
+  <item id="90" name="Testa gioiello"/>
+  <item id="91" name="Bob"/>
+  <item id="92" name="Riga in mezzo"/>
+  <item id="93" name="Modello baffi"/>
+  <item id="94" name="Modello panda"/>
+  <item id="95" name="Modello Jibanyan"/>
+  <item id="96" name="Occhi profondi"/>
+  <item id="97" name="Occhi coraggiosi"/>
+  <item id="98" name="Occhi sorpresi"/>
+  <item id="99" name="Occhi da gatto"/>
+  <item id="100" name="Occhi assonnati"/>
+  <item id="101" name="Occhi affascinanti"/>
+  <item id="102" name="Occhi ammiccanti"/>
+  <item id="103" name="Occhi femminili"/>
+  <item id="104" name="Occhi con stelle"/>
+  <item id="105" name="Occhi a cuore"/>
+  <item id="106" name="Occhi cuori colorati"/>
+  <item id="107" name="Occhi a stella"/>
+  <item id="108" name="Occ. stelle colorate"/>
+  <item id="109" name="Baffetti"/>
+  <item id="110" name="Sopracciglia alte"/>
+  <item id="111" name="Soprac. aggrottate"/>
+  <item id="112" name="Chignon samurai"/>
+  <item id="113" name="Riga di lato"/>
+  <item id="114" name="Fascia"/>
+  <item id="115" name="Stile afro"/>
+  <item id="116" name="Foglia"/>
+  <item id="117" name="Cappello cowboy"/>
+  <item id="118" name="Forcine a fiore"/>
+  <item id="119" name="Corona"/>
+  <item id="120" name="Elmo da guerriero"/>
+  <item id="121" name="Cuffia da cameriera"/>
+  <item id="122" name="Cornici trendy"/>
+  <item id="123" name="Occhiali e baffi"/>
+  <item id="124" name="Sopracc. Komasan"/>
+  <item id="125" name="Collant"/>
+  <item id="126" name="Scialle"/>
+  <item id="127" name="Busto Jibanyan"/>
+  <item id="128" name="Perizoma"/>
+  <item id="129" name="Salopette"/>
+  <item id="130" name="Kimono vivace"/>
+  <item id="131" name="Kimono elegante"/>
+  <item id="132" name="Cameriera"/>
+  <item id="133" name="Gilè da cowboy"/>
+  <item id="134" name="Armatura guerriero"/>
+  <item id="135" name="Stile regale"/>
+  <item id="136" name="Robocorpo"/>
+  <item id="137" name="Corpo gioiello"/>
+  <item id="138" name="Coda mozza"/>
+  <item id="139" name="Coda striata"/>
+  <item id="140" name="Coda ondulata"/>
+  <item id="141" name="Coda da volpe"/>
+  <item id="142" name="Coda a cuore"/>
+  <item id="143" name="Coda Jibanyan"/>
+  <item id="144" name="Coda Komasan"/>
+  <item id="145" name="Coda selvaggia"/>
+  <item id="146" name="Coda da diavoletto"/>
+  <item id="147" name="Coda riccia"/>
+  <item id="148" name="Coda da scoiattolo"/>
+  <item id="149" name="Coda da cane"/>
+  <item id="150" name="Coda robotica"/>
+  <item id="151" name="Coda gioiello"/>
+  <item id="152" name="Asciugam. palestra"/>
+  <item id="153" name="Cravatta da lavoro"/>
+  <item id="154" name="Papillon"/>
+  <item id="155" name="Bandana"/>
+  <item id="156" name="Collare"/>
+  <item id="157" name="Campana festosa"/>
+  <item id="158" name="Fiocco chic"/>
+  <item id="159" name="Fiocco carino"/>
+  <item id="160" name="Medaglia d'oro"/>
+  <item id="161" name="Mantell. viaggiatore"/>
+  <item id="162" name="Mantello trionfale"/>
+  <item id="163" name="Mantello pipistrello"/>
+  <item id="164" name="Ali d'angelo"/>
+  <item id="165" name="Campan. Jibanyan"/>
+  <item id="166" name="Scialle Komasan"/>
+  <item id="167" name="Sciarpa da adulto"/>
+  <item id="168" name="Voce Micianyan"/>
+  <item id="169" name="Voce Nonnanyan"/>
+  <item id="170" name="Voce Zombinyan"/>
+  <item id="171" name="Voce Vizianyan"/>
+  <item id="172" name="Voce Malandrinyan"/>
+  <item id="173" name="Voce Stanconyan"/>
+  <item id="174" name="Voce Maginyan"/>
+  <item id="175" name="Voce Burbernyan"/>
+  <item id="176" name="Voce Sirnyan"/>
+  <item id="177" name="Voce Imbranyan"/>
+  <item id="178" name="Voce Nonnonyan"/>
+  <item id="179" name="Voce Termanyan"/>
+  <item id="180" name="Voce Cioninyan"/>
+  <item id="181" name="Voce Adultnyan"/>
+  <item id="182" name="Voce Kappanyan"/>
+  <item id="183" name="Voce Antenanyan"/>
+  <item id="184" name="Voce Whisnyan"/>
+  <item id="185" name="Voce Princessnyan"/>
+  <item id="186" name="Voce Coolnyan"/>
+  <item id="187" name="Voce Galatticnyan"/>
+  <item id="188" name="Voce Carinyan"/>
+  <item id="189" name="Voce Giovanyan"/>
+  <item id="190" name="Voce Giranyan"/>
+  <item id="191" name="Voce Acunyan"/>
+  <item id="192" name="Voce Sumonyan"/>
+  <item id="193" name="Voce Capitanyan"/>
+  <item id="194" name="Voce Gattaliernyan"/>
+  <item id="195" name="Voce Zazenyan"/>
+  <item id="196" name="Voce Divinyan"/>
+  <item id="197" name="Voce Bimbonyan"/>
+  <item id="198" name="Voce Timidyan"/>
+  <item id="199" name="Voce Innasonyan"/>
+  <item id="200" name="Voce Ordinarnyan"/>
+  <item id="201" name="Voce Decisonyan"/>
+  <item id="202" name="Voce Lunanyan"/>
+  <item id="203" name="Voce Drammanyan"/>
+  <item id="204" name="Voce Felinyan"/>
+</items>

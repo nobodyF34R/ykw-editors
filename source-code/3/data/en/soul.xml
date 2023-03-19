@@ -1,0 +1,710 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="1744197840" name="Blazion Soul"/>
+  <item id="4278126954" name="Mr. Blockhead Soul"/>
+  <item id="2314746364" name="Quaken Soul"/>
+  <item id="396143711" name="Siro Soul"/>
+  <item id="1620810953" name="Komashura Soul"/>
+  <item id="4187147635" name="Benkei Soul"/>
+  <item id="2392194533" name="Jibanyan Soul"/>
+  <item id="506126452" name="Rudy Soul"/>
+  <item id="1764610274" name="Rocky Badboya Sl."/>
+  <item id="166353159" name="B3-NK1 Soul"/>
+  <item id="2129488273" name="Snartle Soul"/>
+  <item id="3890493483" name="Arachnus Soul"/>
+  <item id="2430798013" name="Arachnia Soul"/>
+  <item id="243768606" name="Rubeus J Soul"/>
+  <item id="2038476168" name="Sgt. Burly Soul"/>
+  <item id="3767139378" name="DON-CHAN Soul"/>
+  <item id="2542718116" name="Kelpacabana Soul"/>
+  <item id="120705333" name="Bison Burly Soul"/>
+  <item id="1882644899" name="Sing Kong Soul"/>
+  <item id="583469764" name="Demandi Soul"/>
+  <item id="2261248938" name="KJ Soul"/>
+  <item id="1438661202" name="Illoo Soul"/>
+  <item id="3435752424" name="Elloo Soul"/>
+  <item id="3150863230" name="Alloo Soul"/>
+  <item id="631951069" name="Spewart Soul"/>
+  <item id="3196145147" name="Whis. Kongming Sl."/>
+  <item id="1387134539" name="Dazzabel Soul"/>
+  <item id="3416567793" name="Rattelle Soul"/>
+  <item id="3164839783" name="Adm. Admiral Soul"/>
+  <item id="740066038" name="Got It Maid Soul"/>
+  <item id="315865818" name="Gabby Soul"/>
+  <item id="4055948092" name="Cymbalina Soul"/>
+  <item id="1528541792" name="Manjimutt Soul"/>
+  <item id="1004288901" name="Multimutt Soul"/>
+  <item id="1289423635" name="Sir Berus Soul"/>
+  <item id="3587332777" name="Brokenbrella Soul"/>
+  <item id="2731895359" name="Leggly Soul"/>
+  <item id="1018298268" name="Columbakat Soul"/>
+  <item id="1270271754" name="Slippy Soul"/>
+  <item id="2511085112" name="Amplifly Soul"/>
+  <item id="3535773360" name="Chansin Soul"/>
+  <item id="2780343846" name="Fundango Soul"/>
+  <item id="889697207" name="Sheen Soul"/>
+  <item id="1107329825" name="Gleam Soul"/>
+  <item id="1956490562" name="Hardy Hound Soul"/>
+  <item id="60464596" name="Brutle Soul"/>
+  <item id="2593377390" name="Decidevible Soul"/>
+  <item id="3985964280" name="Little Charrmer Sl."/>
+  <item id="1945135451" name="Who-Me Soul"/>
+  <item id="83319245" name="House Partay Soul"/>
+  <item id="2650671223" name="Skulleidoscope Sl."/>
+  <item id="3942201569" name="Skreek Soul"/>
+  <item id="2051417456" name="Squandeer Soul"/>
+  <item id="222369254" name="2-Much-2-Take Sl."/>
+  <item id="1837538307" name="Mython Soul"/>
+  <item id="1656311381" name="Zazel Soul"/>
+  <item id="444705941" name="Helmsman Soul"/>
+  <item id="2206793007" name="Noway Soul"/>
+  <item id="4103065017" name="Armsman Soul"/>
+  <item id="1793808410" name="Heheheel Soul"/>
+  <item id="502032524" name="Croonger Soul"/>
+  <item id="2229614902" name="Urnaconda Soul"/>
+  <item id="4091677088" name="Reuknight Soul"/>
+  <item id="1667044401" name="Impass Soul"/>
+  <item id="341451943" name="Walldin Soul"/>
+  <item id="1185664960" name="Pride Shrimp Soul"/>
+  <item id="833421142" name="Orcanos Soul"/>
+  <item id="1873039007" name="Mumbles Soul"/>
+  <item id="2829430508" name="Nekidspeed Soul"/>
+  <item id="3751976570" name="Apelican Soul"/>
+  <item id="1103498201" name="Runsure Soul"/>
+  <item id="918633295" name="Jetnyan Soul"/>
+  <item id="2949147381" name="Shurikenny Soul"/>
+  <item id="3637467747" name="Whirlweasel Soul"/>
+  <item id="1215318002" name="Double Time Soul"/>
+  <item id="1064793956" name="Sonic Bam Soul"/>
+  <item id="683134487" name="Papa Windbag Soul"/>
+  <item id="2982059949" name="Ponderoo Soul"/>
+  <item id="4140397536" name="Shellebrity Soul"/>
+  <item id="3334057787" name="Dianyan Soul"/>
+  <item id="1490893464" name="Sapphinyan Soul"/>
+  <item id="802818574" name="Emenyan Soul"/>
+  <item id="3067304884" name="Rubinyan Soul"/>
+  <item id="3251923746" name="Topanyan Soul"/>
+  <item id="1365997235" name="Glumdango Soul"/>
+  <item id="644630053" name="Mochismo Soul"/>
+  <item id="3626558030" name="Dulluma Soul"/>
+  <item id="2939146968" name="Peckpocket Soul"/>
+  <item id="908493666" name="Rockabelly Soul"/>
+  <item id="1092727796" name="Mimikin Soul"/>
+  <item id="1049832704" name="Yoganalisten Soul"/>
+  <item id="3745850967" name="Darumacho Soul"/>
+  <item id="2822903489" name="Goruma Soul"/>
+  <item id="827017083" name="Robbinyu Soul"/>
+  <item id="1179416557" name="Sproink Soul"/>
+  <item id="3606276732" name="Buchinyan Soul"/>
+  <item id="2717145834" name="Tempurasan Soul"/>
+  <item id="3241399055" name="Wobblenyan Soul"/>
+  <item id="3056919449" name="Pookivil Soul"/>
+  <item id="792572451" name="Dismarelda Soul"/>
+  <item id="1480229557" name="K'mon-K'mon Soul"/>
+  <item id="3328055062" name="Ship. Sailor Soul"/>
+  <item id="2975410048" name="Neggplant Soul"/>
+  <item id="676361786" name="DisliKing Soul"/>
+  <item id="3499969580" name="Sunk'nsoul Soul"/>
+  <item id="1599555244" name="Snee Soul"/>
+  <item id="3488111421" name="Damona Soul"/>
+  <item id="3102698411" name="Neighfarious Soul"/>
+  <item id="288555633" name="Awevil Soul"/>
+  <item id="1714696935" name="Unkaind Soul"/>
+  <item id="973007129" name="J. Ne-Sais-Quoi Sl."/>
+  <item id="4282213213" name="Hissfit Soul"/>
+  <item id="2285523915" name="Slicenrice Soul"/>
+  <item id="375309928" name="Zerberker Soul"/>
+  <item id="1633285886" name="Dragon Lord Soul"/>
+  <item id="4166035268" name="Azure Dragon Soul"/>
+  <item id="2404882386" name="Flamurice Soul"/>
+  <item id="535333443" name="Robonyan F Soul"/>
+  <item id="1760541397" name="Toadal Demon Soul"/>
+  <item id="136852272" name="Arachnevil Soul"/>
+  <item id="2133787558" name="Koma. Sun Ce Soul"/>
+  <item id="3861271068" name="Hotei Soul"/>
+  <item id="413367817" name="Roary Soul"/>
+  <item id="2917841001" name="Neighthan Soul"/>
+  <item id="2434884234" name="Lady Longnek Soul"/>
+  <item id="256243497" name="Tyrat Soul"/>
+  <item id="2017642431" name="Afronaut Soul"/>
+  <item id="3779827205" name="Corptain Soul"/>
+  <item id="2521605779" name="Wrongnek Soul"/>
+  <item id="116636418" name="Professor Plum. Sl."/>
+  <item id="1911851924" name="Hot Air Buffoon Sl."/>
+  <item id="587555059" name="King Jibanyan Soul"/>
+  <item id="459667185" name="Venoctobot Soul"/>
+  <item id="1818412647" name="Kyubot Soul"/>
+  <item id="1409437797" name="Ol' Fortune Soul"/>
+  <item id="3440050655" name="Failian Soul"/>
+  <item id="3121361225" name="Pearly White Soul"/>
+  <item id="610837738" name="Slimamander Soul"/>
+  <item id="1399821436" name="Draaagin Soul"/>
+  <item id="3395732934" name="Robokapp Soul"/>
+  <item id="3177313616" name="Robokoma Soul"/>
+  <item id="769583297" name="Robogramps Soul"/>
+  <item id="1524226135" name="Robomutt Soul"/>
+  <item id="975065522" name="Robonoko Soul"/>
+  <item id="1293508900" name="Robodraggie Soul"/>
+  <item id="3557830814" name="Flash T. Cash Soul"/>
+  <item id="2736193544" name="Wibblekoma Soul"/>
+  <item id="1030985131" name="Minochi Soul"/>
+  <item id="1249158461" name="Rinsin Repete Soul"/>
+  <item id="3548247175" name="Slax Soul"/>
+  <item id="885381504" name="Oridjinn Soul"/>
+  <item id="1136847126" name="Horridjinn Soul"/>
+  <item id="2873431623" name="Terminyanator Soul"/>
+  <item id="2360815481" name="Koalanyan Soul"/>
+  <item id="1969211253" name="Shmoopie Soul"/>
+  <item id="39385059" name="Pinkipoo Soul"/>
+  <item id="2605819481" name="Unpleasant Soul"/>
+  <item id="3965097679" name="Starwin Soul"/>
+  <item id="1915880300" name="Mooglenyan Soul"/>
+  <item id="87372794" name="Kabuking Soul"/>
+  <item id="3946533590" name="Tomnyan Soul"/>
+  <item id="2072268615" name="Koma Knomads Sl."/>
+  <item id="209944529" name="Pupsicle Soul"/>
+  <item id="1816458804" name="Right Brothers Sl."/>
+  <item id="457426594" name="Soloman Soul"/>
+  <item id="2185926424" name="Chilhuahua Soul"/>
+  <item id="4115507086" name="Tut 'n' K'mon Soul"/>
+  <item id="1797861933" name="Re-Q-Perate Soul"/>
+  <item id="472777403" name="Last Nyanmurai Sl."/>
+  <item id="2346380128" name="City Licker Soul"/>
+  <item id="2233946881" name="Terrorpotta Soul"/>
+  <item id="4062208919" name="Squeeky Soul"/>
+  <item id="1654619654" name="Chicken Chuk. Soul"/>
+  <item id="362303120" name="Lionguist Soul"/>
+  <item id="1198106103" name="Rawry Soul"/>
+  <item id="812553569" name="Lappinitup Soul"/>
+  <item id="2842150107" name="Jawsome Kid Soul"/>
+  <item id="3730895949" name="El Sharkador Soul"/>
+  <item id="3802869422" name="Judgebrick Soul"/>
+  <item id="3471554932" name="Urnfulfilled Soul"/>
+  <item id="922964344" name="Grumpus Khan Sl."/>
+  <item id="2919891138" name="El Gutso Soul"/>
+  <item id="3641520212" name="Carniboy Soul"/>
+  <item id="1236413893" name="Groupus Khan Soul"/>
+  <item id="1052056915" name="El Gutso Grande Sl."/>
+  <item id="1584567478" name="Pch. Baguette Soul"/>
+  <item id="695575584" name="Inflammaboy! Soul"/>
+  <item id="2960979354" name="Jiban. Liu Bei Soul"/>
+  <item id="887351763" name="Moolinda Soul"/>
+  <item id="3346777356" name="Herbiboy Soul"/>
+  <item id="1495224495" name="Toiletta Soul"/>
+  <item id="773349433" name="Snaggly Soul"/>
+  <item id="3071357315" name="Snottle Soul"/>
+  <item id="3222667541" name="Goofball Soul"/>
+  <item id="1353260164" name="Snitchin Soul"/>
+  <item id="665725970" name="Messyrai Soul"/>
+  <item id="415699660" name="Treetter Soul"/>
+  <item id="3119286754" name="Procrastino. Soul"/>
+  <item id="3656026233" name="Foiletta Soul"/>
+  <item id="2934814959" name="Retreeter Soul"/>
+  <item id="937748821" name="Horizontail Soul"/>
+  <item id="1088674243" name="Dr. E. Raser Soul"/>
+  <item id="3733408864" name="Dr. Nocturne Soul"/>
+  <item id="197692315" name="Jibanyan T Soul"/>
+  <item id="3906726525" name="Deadcool Soul"/>
+  <item id="2843770102" name="Jumbelina Soul"/>
+  <item id="814296396" name="Nosirs Soul"/>
+  <item id="1200496090" name="Drenchetta Soul"/>
+  <item id="3610312779" name="Stinkeye Soul"/>
+  <item id="2687906013" name="Injurnalist Soul"/>
+  <item id="3237067064" name="Pergushin Soul"/>
+  <item id="3086387630" name="Grubbles Soul"/>
+  <item id="788518932" name="Whinona Soul"/>
+  <item id="1509484674" name="Throne Wiper Soul"/>
+  <item id="3348921633" name="Percrushionists Sl."/>
+  <item id="2962967991" name="Cutta-nah Soul"/>
+  <item id="697441293" name="Cutta-nah-nah Soul"/>
+  <item id="1586834587" name="Irewig Soul"/>
+  <item id="3458871562" name="Panja Pupil Soul"/>
+  <item id="3106734492" name="Takoyakid Soul"/>
+  <item id="326482984" name="Slacka-slash Soul"/>
+  <item id="1685228734" name="Baddinyan Soul"/>
+  <item id="4252753156" name="Bruff Soul"/>
+  <item id="2323443090" name="Shrook Soul"/>
+  <item id="337147953" name="Firewig Soul"/>
+  <item id="1662994599" name="Panja Pro Soul"/>
+  <item id="4195752221" name="Takoyaking Soul"/>
+  <item id="1970927398" name="Supernyan Soul"/>
+  <item id="2811919546" name="Ed Zoff Soul"/>
+  <item id="286601762" name="Lunie Soul"/>
+  <item id="2366712203" name="Mirapo Soul"/>
+  <item id="497955866" name="Pittapatt Soul"/>
+  <item id="1789461644" name="Mircle Soul"/>
+  <item id="175017321" name="Miradox Soul"/>
+  <item id="2104081919" name="Master Nyada Soul"/>
+  <item id="663231553" name="Kaped Koma. Soul"/>
+  <item id="3831557189" name="Coughkoff Soul"/>
+  <item id="2473057491" name="Hurchin Soul"/>
+  <item id="218319216" name="Pallysol Soul"/>
+  <item id="2047113702" name="Shamasol Soul"/>
+  <item id="3809290332" name="Cornfused Soul"/>
+  <item id="2483689674" name="Repossessor Soul"/>
+  <item id="78972251" name="Thornyan Soul"/>
+  <item id="1941059021" name="Scarasol Soul"/>
+  <item id="2700589219" name="Pandora Soul"/>
+  <item id="558096042" name="Suspicioni Soul"/>
+  <item id="1447358012" name="Tantroni Soul"/>
+  <item id="3477979014" name="Mudmunch Soul"/>
+  <item id="3091894032" name="Madmunch Soul"/>
+  <item id="640555699" name="Cricky Soul"/>
+  <item id="1361652261" name="Zip Unlock Soul"/>
+  <item id="3357571999" name="Love-Torn Soul"/>
+  <item id="3207023369" name="Nird Soul"/>
+  <item id="798512792" name="Contrarioni Soul"/>
+  <item id="1486841358" name="Eyesoar Soul"/>
+  <item id="945352683" name="Eyellure Soul"/>
+  <item id="2561744626" name="Crummy Mum. Soul"/>
+  <item id="1139071301" name="Wack o' Lantern Sl."/>
+  <item id="1331683197" name="Sighborg Y Soul"/>
+  <item id="3595996871" name="Tie-red Soul"/>
+  <item id="2706488913" name="Bitter Batter Soul"/>
+  <item id="1060449266" name="Asura Soul"/>
+  <item id="1211243364" name="Nautaloss Soul"/>
+  <item id="3510323934" name="Flocktopus Soul"/>
+  <item id="2788981320" name="Robonyan Soul"/>
+  <item id="914581465" name="Toadal Dude Soul"/>
+  <item id="1099192143" name="Sir Nyansalot Soul"/>
+  <item id="1998158124" name="Blownhistopp. Soul"/>
+  <item id="1984954" name="Silver Lining Soul"/>
+  <item id="4021694052" name="Treasure Pest Soul"/>
+  <item id="2568427520" name="Cupistol Soul"/>
+  <item id="3994036374" name="Sigh-Durr Soul"/>
+  <item id="1886698805" name="Putasockinit Soul"/>
+  <item id="125013411" name="Jibanyan B Soul"/>
+  <item id="2658851865" name="Komasan B Soul"/>
+  <item id="3917343887" name="Usapyon B Soul"/>
+  <item id="2042818846" name="Nunchucky Soul"/>
+  <item id="247841160" name="Usapyon Soul"/>
+  <item id="1845643373" name="Snidewinder Soul"/>
+  <item id="1909636039" name="Komanubis Soul"/>
+  <item id="419789051" name="Tattletell Soul"/>
+  <item id="2148280641" name="Skranny Soul"/>
+  <item id="4144699863" name="Tattlecast Soul"/>
+  <item id="1768918132" name="Happierre Soul"/>
+  <item id="510180578" name="Ol' Saint Trick Soul"/>
+  <item id="2271341912" name="Mama Aura Soul"/>
+  <item id="4033273294" name="Auntie Heart Soul"/>
+  <item id="1624883295" name="Chippa Soul"/>
+  <item id="400486601" name="Illuminoct Soul"/>
+  <item id="1160715182" name="Elder Bloom Soul"/>
+  <item id="841493304" name="Master Oden Soul"/>
+  <item id="2871097986" name="Verygoodsir Soul"/>
+  <item id="3693496852" name="Happycane Soul"/>
+  <item id="1111678903" name="Starrycane Soul"/>
+  <item id="893775649" name="Chilled Cowcao Sl."/>
+  <item id="2890710683" name="Stircrazy Stu Soul"/>
+  <item id="3679161869" name="Cue-Tee Soul"/>
+  <item id="1274319772" name="In-Tune Soul"/>
+  <item id="1022599946" name="Tomorrow Gal Soul"/>
+  <item id="1546922735" name="Chocobonyan Soul"/>
+  <item id="724769401" name="Qn. Usapyon Soul"/>
+  <item id="4242398198" name="Gentlemutt Soul"/>
+  <item id="1234443670" name="Ulteria Soul"/>
+  <item id="2990164931" name="Negatibuzz Soul"/>
+  <item id="3309140821" name="Moskevil Soul"/>
+  <item id="1532620534" name="Grubsnitch Soul"/>
+  <item id="744414816" name="Hidabat Soul"/>
+  <item id="3042414554" name="Scritchy Soul"/>
+  <item id="3260071756" name="Abodabat Soul"/>
+  <item id="1391436509" name="Belfree Soul"/>
+  <item id="635998795" name="Komasan Soul"/>
+  <item id="3685496352" name="Komajiro Soul"/>
+  <item id="2896889526" name="Krystal Fox Soul"/>
+  <item id="899831564" name="Komane Soul"/>
+  <item id="1118136218" name="Komiger Soul"/>
+  <item id="3703697977" name="Venoct Soul"/>
+  <item id="2881929903" name="Shadow Venoct Sl."/>
+  <item id="852464405" name="Maginyan Soul"/>
+  <item id="1170776963" name="Statikid Soul"/>
+  <item id="3855018679" name="Jurojin Soul"/>
+  <item id="3581394450" name="D'wanna Soul"/>
+  <item id="2725285508" name="N'more Soul"/>
+  <item id="3266774881" name="Q'wit Soul"/>
+  <item id="3048224759" name="Walkappa Soul"/>
+  <item id="750347853" name="Hungramps Soul"/>
+  <item id="1539200731" name="Chatalie Soul"/>
+  <item id="3319448440" name="Nagatha Soul"/>
+  <item id="3000890350" name="Chummer Soul"/>
+  <item id="735355476" name="Babblong Soul"/>
+  <item id="1557369538" name="So-Sorree Soul"/>
+  <item id="3429666643" name="Samureel Soul"/>
+  <item id="3144400837" name="Lord Shrillingt. Soul"/>
+  <item id="3381034349" name="Molar Petite Soul"/>
+  <item id="314037791" name="Appak Soul"/>
+  <item id="1706092169" name="Hungorge Soul"/>
+  <item id="4240029491" name="Timidevil Soul"/>
+  <item id="2344519589" name="Bananose Soul"/>
+  <item id="366612998" name="Bowminos Soul"/>
+  <item id="1658659472" name="Time Keeler Soul"/>
+  <item id="1712456372" name="Alpina Soul"/>
+  <item id="4225004330" name="Wotchagot Soul"/>
+  <item id="2362655676" name="Zest-a-Minute Soul"/>
+  <item id="2177778550" name="Unshelltered Soul"/>
+  <item id="476864045" name="Swosh Soul"/>
+  <item id="1802202811" name="Grainpa Soul"/>
+  <item id="195880798" name="Melonyan Soul"/>
+  <item id="2091636680" name="Oranyan Soul"/>
+  <item id="3852633714" name="Kiwinyan Soul"/>
+  <item id="2460333796" name="Grapenyan Soul"/>
+  <item id="213984071" name="Strawbnyan Soul"/>
+  <item id="2076578769" name="Watermelnyan Soul"/>
+  <item id="3805233771" name="Cocobanana Soul"/>
+  <item id="1756227139" name="Momonyan Soul"/>
+  <item id="531289813" name="Puppynyan Soul"/>
+  <item id="2258863983" name="Chimpanyan Soul"/>
+  <item id="4054104057" name="Pheasanyan Soul"/>
+  <item id="2462177825" name="Fukurokuju Soul"/>
+  <item id="1992261598" name="Her Eggcelency Sl."/>
+  <item id="2512941821" name="Ben Tover Soul"/>
+  <item id="91713388" name="BBQvil Soul"/>
+  <item id="1919967226" name="Cereal Spiller Soul"/>
+  <item id="545371293" name="Quagmira Soul"/>
+  <item id="1468433419" name="Uber Geeko Soul"/>
+  <item id="3465532849" name="Kyryn Soul"/>
+  <item id="3112756519" name="Unikirin Soul"/>
+  <item id="669806724" name="Harry Barry Soul"/>
+  <item id="3387036072" name="Ooze Zat Soul"/>
+  <item id="3202687294" name="Supersize G. Soul"/>
+  <item id="1474488526" name="Tofupyon Soul"/>
+  <item id="810067250" name="Comic Genieus Sl."/>
+  <item id="1295995255" name="The Hinix Soul"/>
+  <item id="777665711" name="Wydeawake Soul"/>
+  <item id="1499270201" name="Yoodooit Soul"/>
+  <item id="966428124" name="Snobetty Soul"/>
+  <item id="1318958410" name="Dracunyan Soul"/>
+  <item id="3616859376" name="Allnyta Soul"/>
+  <item id="2694042726" name="Ballin Soul"/>
+  <item id="1056391621" name="Jackomasan Soul"/>
+  <item id="1240494419" name="Tongus Soul"/>
+  <item id="3505987817" name="Puppiccino Soul"/>
+  <item id="2818445439" name="Greengramps Soul"/>
+  <item id="212160386" name="My-Baaad Soul"/>
+  <item id="927010286" name="Demuncher Soul"/>
+  <item id="1078345080" name="Devourer Soul"/>
+  <item id="1994068763" name="Nurse Tongus Soul"/>
+  <item id="31204237" name="Steaking Soul"/>
+  <item id="2564125239" name="Miss Teri Soul"/>
+  <item id="4023534241" name="Unbelievaboy! Soul"/>
+  <item id="1907808002" name="Tattlecakes Soul"/>
+  <item id="112322452" name="Slurpent Soul"/>
+  <item id="2679682606" name="Thurston Soul"/>
+  <item id="3904865976" name="Unbearaboy! Soul"/>
+  <item id="2013305641" name="Roughgraff Soul"/>
+  <item id="252160959" name="Daikokuten Soul"/>
+  <item id="1874862682" name="Swelton Soul"/>
+  <item id="1629203048" name="Poofessor Soul"/>
+  <item id="370973438" name="Imagenius Soul"/>
+  <item id="1156411801" name="Petty-Cake Soul"/>
+  <item id="870990095" name="Slackoon Soul"/>
+  <item id="2867007669" name="Lil Blue Hood Soul"/>
+  <item id="3722715171" name="Lazy Sundae Soul"/>
+  <item id="1132508544" name="Bubble Beth Soul"/>
+  <item id="3673000191" name="Shovulcan Soul"/>
+  <item id="881296662" name="Brushido Soul"/>
+  <item id="2911818924" name="Tublappa Soul"/>
+  <item id="3666469946" name="Grublappa Soul"/>
+  <item id="1245116843" name="Washogun Soul"/>
+  <item id="1026672957" name="Sailornyan Soul"/>
+  <item id="1576419544" name="Skillskull Soul"/>
+  <item id="720465998" name="Camellia Soul"/>
+  <item id="3019383284" name="Princess Pearl Sl."/>
+  <item id="3305050466" name="Sushinyan Soul"/>
+  <item id="2093988621" name="Komasan T Soul"/>
+  <item id="2131309557" name="Mee 2 Soul"/>
+  <item id="1520141505" name="Smogling Soul"/>
+  <item id="765244503" name="Smogmella Soul"/>
+  <item id="3029722605" name="Badsmella Soul"/>
+  <item id="3281180027" name="Ray O'Light Soul"/>
+  <item id="1395509482" name="Whateverest Soul"/>
+  <item id="606795900" name="Tongue-Twister Sl."/>
+  <item id="3664665623" name="Salty Bacon Soul"/>
+  <item id="2909367425" name="Kyubi Soul"/>
+  <item id="878722363" name="Komasan S Soul"/>
+  <item id="1130827181" name="Swelterrier Soul"/>
+  <item id="3708000270" name="Flengu Soul"/>
+  <item id="2852432024" name="Tunatic Soul"/>
+  <item id="856553762" name="Copperled Soul"/>
+  <item id="1141557684" name="Jibakoma Soul"/>
+  <item id="3568686117" name="Whatuption Soul"/>
+  <item id="2746410163" name="Bishamonten Soul"/>
+  <item id="3279252822" name="Snotsolong Soul"/>
+  <item id="3027393984" name="Droplette Soul"/>
+  <item id="763038842" name="Fishpicable Soul"/>
+  <item id="1518091500" name="Drizzelda Soul"/>
+  <item id="3289950543" name="Kittylumbus Soul"/>
+  <item id="3005192665" name="Drizzle Soul"/>
+  <item id="706136163" name="Rageon Soul"/>
+  <item id="1561458933" name="SV Snaggerjag Sl."/>
+  <item id="3450791268" name="Ogralus Soul"/>
+  <item id="3131692530" name="Frogetmenot Soul"/>
+  <item id="402178202" name="Ebisu Soul"/>
+  <item id="2074246932" name="Sweattuce Soul"/>
+  <item id="1582605541" name="Mr Blue-Shy Soul"/>
+  <item id="1627385868" name="Signibble Soul"/>
+  <item id="4193690038" name="Push Pup Soul"/>
+  <item id="2398196000" name="Signiton Soul"/>
+  <item id="278201475" name="Dromp Soul"/>
+  <item id="1737634837" name="Komajiro S Soul"/>
+  <item id="4271596975" name="Frazzel Soul"/>
+  <item id="2308724025" name="T. Energison Soul"/>
+  <item id="421742760" name="Koma Star Soul"/>
+  <item id="1847883838" name="No-Go Kart Soul"/>
+  <item id="249819611" name="Danke Sand Soul"/>
+  <item id="2045034829" name="Speedemountai. Sl."/>
+  <item id="3773665527" name="Bumblejack Soul"/>
+  <item id="2548736097" name="Mistank Soul"/>
+  <item id="160314818" name="No Sandkyu Soul"/>
+  <item id="2122909012" name="Hairum Scarum Sl."/>
+  <item id="3883947246" name="Duchoo Soul"/>
+  <item id="2424792184" name="Slush Soul"/>
+  <item id="3701225" name="Flippit Soul"/>
+  <item id="2000636287" name="Slippup Soul"/>
+  <item id="634298904" name="Frostina Soul"/>
+  <item id="1388941966" name="Blizzaria Soul"/>
+  <item id="3418407732" name="Alhail Soul"/>
+  <item id="3167220642" name="Agent Spect-ha. Sl."/>
+  <item id="581133825" name="Snow Spect-har. Sl"/>
+  <item id="533641744" name="Blizzie Soul"/>
+  <item id="1436833431" name="Cadin Soul"/>
+  <item id="3433891629" name="Cadable Soul"/>
+  <item id="3148494779" name="Buhu Soul"/>
+  <item id="722807338" name="Flumpy Soul"/>
+  <item id="1544690364" name="Leadoni Soul"/>
+  <item id="1020629849" name="Mynimo Soul"/>
+  <item id="1272095695" name="Tengloom Soul"/>
+  <item id="3537629813" name="Flushback Soul"/>
+  <item id="2782708451" name="Tengu Soul"/>
+  <item id="1001936704" name="Vacuumory Soul"/>
+  <item id="1287612374" name="Tenguriginal Soul"/>
+  <item id="3585488492" name="Castelius II Soul"/>
+  <item id="2729510650" name="Castelius III Soul"/>
+  <item id="839785323" name="Castelius I Soul"/>
+  <item id="1158228989" name="Goldenyan Soul"/>
+  <item id="1324997007" name="Sarchopha. Soul"/>
+  <item id="1939080606" name="Castelius Max Soul"/>
+  <item id="76756232" name="Platinos Soul"/>
+  <item id="2644141234" name="Showbonyan Soul"/>
+  <item id="3936179236" name="Whisper Soul"/>
+  <item id="1962525063" name="Whispocrates Soul"/>
+  <item id="67039505" name="Pandle Soul"/>
+  <item id="2599919787" name="Undy Soul"/>
+  <item id="3991965757" name="Nervous Rex Soul"/>
+  <item id="2102365612" name="Tanbo Soul"/>
+  <item id="172539194" name="Jibanyan S Soul"/>
+  <item id="1787770079" name="Supyo Soul"/>
+  <item id="495453257" name="Rollen Soul"/>
+  <item id="2223068659" name="Dubbles Soul"/>
+  <item id="4085671269" name="Reversa Soul"/>
+  <item id="1843589318" name="Reversette Soul"/>
+  <item id="451264592" name="Insomni Soul"/>
+  <item id="2213319146" name="Gutsy Bones Soul"/>
+  <item id="4109083004" name="Tengulightened Sl."/>
+  <item id="1683274989" name="Acenyan Soul"/>
+  <item id="4222623727" name="Hover. Cao Cao Sl."/>
+  <item id="324242555" name="Ake Soul"/>
+  <item id="1101162268" name="Payn Soul"/>
+  <item id="916805514" name="Agon Soul"/>
+  <item id="2947286576" name="Roughraff Soul"/>
+  <item id="3635099302" name="Badude Soul"/>
+  <item id="1188012805" name="Count Cavity Soul"/>
+  <item id="835228563" name="Shogunyan Soul"/>
+  <item id="2831270441" name="Gilgaros Soul"/>
+  <item id="3754357439" name="Untidy Soul"/>
+  <item id="1333391150" name="Slumberhog Soul"/>
+  <item id="947838904" name="Snortlehog Soul"/>
+  <item id="1488541277" name="Kintaronyan Soul"/>
+  <item id="364805827" name="Hovernyan S Soul"/>
+  <item id="1758038662" name="Rampajah Soul"/>
+  <item id="801007307" name="Zappary Soul"/>
+  <item id="3065460593" name="Boyclops Soul"/>
+  <item id="3249539047" name="Frostail Soul"/>
+  <item id="1607766596" name="Singcada Soul"/>
+  <item id="684958418" name="Cuttincheez Soul"/>
+  <item id="2983916392" name="Slugger Soul"/>
+  <item id="3336422398" name="Usa. Zhongda Soul"/>
+  <item id="1449320047" name="Benzaiten Soul"/>
+  <item id="2682051307" name="Whyvern King Soul"/>
+  <item id="864955850" name="Zomboy Soul"/>
+  <item id="560328441" name="Dummkap Soul"/>
+  <item id="3743500946" name="Daiz Soul"/>
+  <item id="2821093892" name="Wiglin Soul"/>
+  <item id="825174974" name="Steppa Soul"/>
+  <item id="1177033512" name="Rhyth Soul"/>
+  <item id="3628895883" name="Cheeksqueek Soul"/>
+  <item id="2940976669" name="Dimmy Soul"/>
+  <item id="910356391" name="Predictabull Soul"/>
+  <item id="1095098161" name="Defectabull Soul"/>
+  <item id="3522871968" name="Liarbird Soul"/>
+  <item id="2801660470" name="Shakey Soul"/>
+  <item id="3325721555" name="Hoppy. Soul"/>
+  <item id="2973584197" name="Confuze Soul"/>
+  <item id="674503423" name="Blandon Soul"/>
+  <item id="1597188713" name="Nul Soul"/>
+  <item id="3243753418" name="Hovernyan Soul"/>
+  <item id="3058732892" name="Smashibull Soul"/>
+  <item id="794418918" name="Starry Noko Soul"/>
+  <item id="114658129" name="Hinozall Soul"/>
+  <item id="135136099" name="The Boracle Soul"/>
+  <item id="2175414195" name="Letsbifrenz Soul"/>
+  <item id="1482616432" name="Espy Soul"/>
+  <item id="3370251233" name="Lafalotta Soul"/>
+  <item id="3219571575" name="Blips Soul"/>
+  <item id="372943533" name="Enerfly Soul"/>
+  <item id="1631427131" name="Enefly Soul"/>
+  <item id="4164209537" name="Compunzer Soul"/>
+  <item id="2402548503" name="Spenp Soul"/>
+  <item id="290942644" name="Faysoff Soul"/>
+  <item id="1716543010" name="Furgus Soul"/>
+  <item id="4284026776" name="Feargus Soul"/>
+  <item id="2287877902" name="Mermaidyn Soul"/>
+  <item id="417407647" name="Scaremaiden Soul"/>
+  <item id="1877348873" name="Snailspace Soul"/>
+  <item id="253860844" name="Infour Soul"/>
+  <item id="2015800186" name="Skelebella Soul"/>
+  <item id="3778017984" name="Betterfly Soul"/>
+  <item id="2519255638" name="Peppillon Soul"/>
+  <item id="139223029" name="Negasus Soul"/>
+  <item id="2135650147" name="Lamedian Soul"/>
+  <item id="3863101145" name="Almi Soul"/>
+  <item id="2437221967" name="Furdinand Soul"/>
+  <item id="33166302" name="Mermadonna Soul"/>
+  <item id="1996301128" name="Mermother Soul"/>
+  <item id="604817455" name="Shedwin Soul"/>
+  <item id="1351560407" name="Ult. Robonyan Soul"/>
+  <item id="693343347" name="Life-is-Parfait Soul"/>
+  <item id="3622864949" name="King Deadward Sl."/>
+  <item id="1196397988" name="Bastnetnyan Soul"/>
+  <item id="4138540837" name="Big Fish Soul"/>
+  <item id="2861005936" name="Nyanses II Soul"/>
+  <item id="1393293497" name="Whapir Soul"/>
+  <item id="3389171971" name="Gush Soul"/>
+  <item id="3171260821" name="Lodo Soul"/>
+  <item id="593562678" name="Noko Soul"/>
+  <item id="1415986336" name="Gnomey Soul"/>
+  <item id="3446631706" name="Gnomine Soul"/>
+  <item id="3127401868" name="Pandanoko Soul"/>
+  <item id="718749725" name="Bloominoko Soul"/>
+  <item id="1573941387" name="High Gnomey Soul"/>
+  <item id="41863088" name="Gorgeous Amb. Sl."/>
+  <item id="1024981358" name="Wantston Soul"/>
+  <item id="1242614264" name="Yoink Soul"/>
+  <item id="3541669954" name="Ct. Zapaway Soul"/>
+  <item id="2753472724" name="Crook-a-doodle Sl."/>
+  <item id="981089655" name="Cynake Soul"/>
+  <item id="1300041185" name="Gimme Soul"/>
+  <item id="3564395611" name="Odysseynyan Soul"/>
+  <item id="1149836636" name="Indiana Jaws Soul"/>
+  <item id="3716173030" name="Meopatra Soul"/>
+  <item id="2742250701" name="Draggie Soul"/>
+  <item id="869036380" name="Lie-in Soul"/>
+  <item id="1154171338" name="Buttered Blue Soul"/>
+  <item id="1918267305" name="Casanuva Soul"/>
+  <item id="89218879" name="Casanono Soul"/>
+  <item id="2623016581" name="Dandoodle Soul"/>
+  <item id="3948887571" name="Lie-in Heart Soul"/>
+  <item id="1966844848" name="Blowkade Soul"/>
+  <item id="37526310" name="Ledballoon Soul"/>
+  <item id="2603993756" name="Mad Mountain Soul"/>
+  <item id="3962763786" name="Lava Lord Soul"/>
+  <item id="2089674651" name="Fidgephant Soul"/>
+  <item id="193648397" name="Touphant Soul"/>
+  <item id="1800232680" name="Enduriphant Soul"/>
+  <item id="474639998" name="Machonyan Soul"/>
+  <item id="2235776964" name="Sumodon Soul"/>
+  <item id="4064546642" name="Yokozudon Soul"/>
+  <item id="1814076145" name="Seaweed S. Soul"/>
+  <item id="455584359" name="Humtea Jumtea Sl."/>
+  <item id="1526720516" name="Fitwit Soul"/>
+  <item id="2184117213" name="Wazzat Soul"/>
+  <item id="4113156939" name="Nummskull Soul"/>
+  <item id="1704384218" name="Misterr Typoo Soul"/>
+  <item id="311551564" name="OMGator Soul"/>
+  <item id="1080036651" name="T-Wrecks Soul"/>
+  <item id="929512893" name="Snippity Cricket Sl."/>
+  <item id="2926472199" name="Sushiyama Soul"/>
+  <item id="3647560849" name="Kapunki Soul"/>
+  <item id="1192085810" name="Rhinoggin Soul"/>
+  <item id="806025636" name="Rhinormous Soul"/>
+  <item id="2835589150" name="Hornaplenty Soul"/>
+  <item id="3724843144" name="Houzzat Soul"/>
+  <item id="1320912153" name="Unkeen Soul"/>
+  <item id="968668559" name="Gargaros Soul"/>
+  <item id="1501248618" name="D-Stroy Soul"/>
+  <item id="779881724" name="Clodzilla Soul"/>
+  <item id="3077922118" name="Komajiro Ten Soul"/>
+  <item id="3228724688" name="Josper Soul"/>
+  <item id="551934040" name="Orcanos Lu Bu Soul"/>
+  <item id="28856136" name="Sad to the Bone Sl."/>
+  <item id="976773601" name="El Dorago Soul"/>
+  <item id="1578563699" name="Beetler Soul"/>
+  <item id="689031397" name="Beetall Soul"/>
+  <item id="2954402143" name="Cruncha Soul"/>
+  <item id="3340741065" name="Papa Bolt Soul"/>
+  <item id="1470149720" name="Uncle Infinite Soul"/>
+  <item id="547849422" name="Beelzebold Soul"/>
+  <item id="3739426981" name="Slitheref Soul"/>
+  <item id="2850295859" name="Faux Kappa Soul"/>
+  <item id="820855177" name="Tigappa Soul"/>
+  <item id="1206546719" name="Mad Kappa Soul"/>
+  <item id="3650020540" name="Sandmeh Soul"/>
+  <item id="2928268330" name="Mr. Sandmeh Soul"/>
+  <item id="931169680" name="Oh Wheel Soul"/>
+  <item id="1082635526" name="Statiking Soul"/>
+  <item id="3493374103" name="Greesel Soul"/>
+  <item id="2805962753" name="Wondernyan Soul"/>
+  <item id="3354923492" name="Fuu 2 Soul"/>
+  <item id="2969510258" name="Why Naant Soul"/>
+  <item id="704016584" name="Naandhi Soul"/>
+  <item id="1592868958" name="Ghostess Soul"/>
+  <item id="3231045117" name="Baku Soul"/>
+  <item id="3079857515" name="Indexter Soul"/>
+  <item id="781956305" name="Darkyubi Soul"/>
+  <item id="1503429703" name="Grumples Soul"/>
+  <item id="3374553558" name="Everfore Soul"/>
+  <item id="3190073664" name="Eterna Soul"/>
+  <item id="343676148" name="Sandi Soul"/>
+  <item id="1669014626" name="Bakulia Soul"/>
+  <item id="4201805272" name="Wobblewok Soul"/>
+  <item id="2373272910" name="Unfairy Soul"/>
+  <item id="319934701" name="Hack King Soul"/>
+  <item id="1708427852" name="Teducator Soul"/>
+  <item id="1679220859" name="Minimoto Soul"/>
+  <item id="4246712769" name="Legsit Soul"/>
+  <item id="2316861783" name="Oh Bah Gah! Soul"/>
+  <item id="447192262" name="Twirly Pie Soul"/>
+  <item id="1839246416" name="Swaycorn Soul"/>
+  <item id="224863669" name="Lil Kappa Soul"/>
+  <item id="2053117219" name="Rhumbastiltskin Sl."/>
+  <item id="3815326873" name="Chymera Soul"/>
+  <item id="2490266639" name="Kingmera Soul"/>
+  <item id="168485292" name="Supoor Hero Soul"/>
+  <item id="2098057530" name="Spoilerina Soul"/>
+  <item id="3825500288" name="Darknyan Soul"/>
+  <item id="2466492438" name="Moximous N Soul"/>
+  <item id="62696839" name="Moximous K Soul"/>
+  <item id="3746185141" name="Spiky Soul"/>
+  <item id="1178824207" name="Slicer Soul"/>
+  <item id="826564249" name="Combo Soul"/>
+  <item id="2938161978" name="Scorching Soul"/>
+  <item id="3626498988" name="Soaking Soul"/>
+  <item id="1093577238" name="Sparking Soul"/>
+  <item id="908696192" name="Spacedust Soul"/>
+  <item id="2794882833" name="Subzero Soul"/>
+  <item id="3515987847" name="Spin Soul"/>
+  <item id="2975219298" name="Purification Soul"/>
+  <item id="3327201012" name="Slick Soul"/>
+  <item id="1599627086" name="Shielding Soul"/>
+  <item id="3057384059" name="Peerless Soul"/>
+  <item id="3241986797" name="Sinister Soul"/>
+  <item id="1479908183" name="Charge Soul"/>
+  <item id="791849921" name="Stealth Soul"/>
+  <item id="3213735504" name="Supernatural Soul"/>
+  <item id="3364521670" name="Superstar Soul"/>
+  <item id="2591780257" name="Weightless Soul"/>
+  <item id="3984350519" name="Summoner's Soul"/>
+  <item id="1953827981" name="Blowaway Soul"/>
+  <item id="57818139" name="Red Rush Soul"/>
+</items>

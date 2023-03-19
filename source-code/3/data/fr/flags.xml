@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='utf-8'?>
+<items>
+  <item id="1" name="Carrés/rond-point"/>
+  <item id="2" name="Terrain d'athlétisme"/>
+  <item id="3" name="Quatre toits bleus"/>
+  <item id="4" name="Près de la roue"/>
+  <item id="5" name="Pont de l'îlot"/>
+  <item id="6" name="Vers l'église sacrée"/>
+  <item id="7" name="Devant l'horlogerie"/>
+  <item id="8" name="Façade maisonnette"/>
+  <item id="9" name="Manoir millionnaire"/>
+  <item id="10" name="Rocher cachette"/>
+  <item id="11" name="Tunnel forêt lugubre"/>
+  <item id="12" name="Caverne sombre"/>
+  <item id="13" name="Étang de la ferme"/>
+  <item id="14" name="Village canyon est"/>
+  <item id="15" name="Plaine poneys sauv."/>
+  <item id="16" name="Rivière domaine"/>
+  <item id="17" name="Plage vers la grotte"/>
+  <item id="18" name="Rivière du canyon"/>
+  <item id="19" name="Ruines myst. de l'ile"/>
+  <item id="20" name="Ruines de pierre"/>
+  <item id="21" name="Para bailar la bolba"/>
+  <item id="22" name="Le Club des Trois"/>
+  <item id="23" name="Trois Nyasquetaires"/>
+  <item id="24" name="Flammalicca"/>
+  <item id="25" name="Joyeux Nyaël"/>
+  <item id="26" name="Camiaourades"/>
+  <item id="27" name="Karaté Bide"/>
+  <item id="28" name="Les Barbakomas"/>
+  <item id="29" name="Horreursmith"/>
+  <item id="30" name="Alerte à Nyalibulle"/>
+  <item id="31" name="Woodstokai"/>
+  <item id="32" name="Épigerien... Non"/>
+  <item id="33" name="Wu Kap Clan"/>
+  <item id="34" name="Couleurs Rangers"/>
+  <item id="35" name="Les Miam brothers"/>
+  <item id="36" name="Red Hot Oni Baff."/>
+  <item id="37" name="Nyalliage (face A)"/>
+  <item id="38" name="Nyalliage (face B)"/>
+  <item id="39" name="Granval et USA"/>
+  <item id="40" name="Feulion"/>
+  <item id="41" name="Coach Antonic"/>
+  <item id="42" name="Hovernyan"/>
+  <item id="43" name="Toutouïe"/>
+  <item id="44" name="Épigerien"/>
+  <item id="45" name="Loubarbare"/>
+  <item id="46" name="Jibanyan"/>
+  <item id="47" name="Komasan"/>
+  <item id="48" name="Granpapéti"/>
+  <item id="49" name="Chauvekipeut"/>
+  <item id="50" name="Lulugubre"/>
+  <item id="51" name="Jacquasseur"/>
+  <item id="52" name="Usapyon"/>
+  <item id="53" name="Shogunyan"/>
+  <item id="54" name="Disque joyeux"/>
+  <item id="55" name="(No.55)"/>
+  <item id="56" name="(No.56)"/>
+  <item id="57" name="(No.57)"/>
+  <item id="58" name="(No.58)"/>
+  <item id="59" name="(No.59)"/>
+  <item id="60" name="(No.60)"/>
+  <item id="61" name="(No.61)"/>
+  <item id="62" name="(No.62)"/>
+  <item id="63" name="(No.63)"/>
+  <item id="64" name="(No.64)"/>
+  <item id="65" name="(No.65)"/>
+  <item id="66" name="(No.66)"/>
+  <item id="67" name="(No.67)"/>
+  <item id="68" name="(No.68)"/>
+  <item id="69" name="(No.69)"/>
+  <item id="70" name="(No.70)"/>
+  <item id="71" name="(No.71)"/>
+  <item id="72" name="(No.72)"/>
+  <item id="73" name="(No.73)"/>
+  <item id="74" name="(No.74)"/>
+  <item id="75" name="(No.75)"/>
+  <item id="76" name="(No.76)"/>
+  <item id="77" name="(No.77)"/>
+  <item id="78" name="(No.78)"/>
+  <item id="79" name="(No.79)"/>
+  <item id="80" name="(No.80)"/>
+  <item id="81" name="(No.81)"/>
+  <item id="82" name="(No.82)"/>
+  <item id="83" name="(No.83)"/>
+  <item id="84" name="(No.84)"/>
+  <item id="85" name="Oreilles tombantes"/>
+  <item id="86" name="Oreilles Jibanyan"/>
+  <item id="87" name="Oreilles de lapin"/>
+  <item id="88" name="Oreilles de souris"/>
+  <item id="89" name="Tête de robot"/>
+  <item id="90" name="Tête bijou"/>
+  <item id="91" name="Style en demi-lune"/>
+  <item id="92" name="Style scindé"/>
+  <item id="93" name="Style moustachu"/>
+  <item id="94" name="Style panda"/>
+  <item id="95" name="Style Jibanyan"/>
+  <item id="96" name="Yeux intenses"/>
+  <item id="97" name="Yeux au max !"/>
+  <item id="98" name="Yeux surpris"/>
+  <item id="99" name="Yeux de chat"/>
+  <item id="100" name="Yeux somnolents"/>
+  <item id="101" name="Yeux charmants"/>
+  <item id="102" name="Yeux rieurs"/>
+  <item id="103" name="Yeux efféminés"/>
+  <item id="104" name="Yeux admiratifs"/>
+  <item id="105" name="Yeux en cœur"/>
+  <item id="106" name="Yeux cœur colorés"/>
+  <item id="107" name="Yeux étoilés"/>
+  <item id="108" name="Yeux étoilés colorés"/>
+  <item id="109" name="Mini moustache"/>
+  <item id="110" name="Sourcils relevés"/>
+  <item id="111" name="Sourcils froncés"/>
+  <item id="112" name="Bushignon"/>
+  <item id="113" name="Raie sur le côté"/>
+  <item id="114" name="Bandeau"/>
+  <item id="115" name="Coupe afro"/>
+  <item id="116" name="Feuille"/>
+  <item id="117" name="Chapeau cowboy"/>
+  <item id="118" name="Barrette florale"/>
+  <item id="119" name="Couronne royale"/>
+  <item id="120" name="Casque de guerrier"/>
+  <item id="121" name="Coiffe de serveuse"/>
+  <item id="122" name="Monture à la mode"/>
+  <item id="123" name="lunettes rigolotes"/>
+  <item id="124" name="Sourcils Komasan"/>
+  <item id="125" name="Justaucorps"/>
+  <item id="126" name="Châle"/>
+  <item id="127" name="Ceinture Jibanyan"/>
+  <item id="128" name="Pagne"/>
+  <item id="129" name="Salopette"/>
+  <item id="130" name="Kimono coloré"/>
+  <item id="131" name="Kimono élégant"/>
+  <item id="132" name="Tenue de serveuse"/>
+  <item id="133" name="Veste de cowboy"/>
+  <item id="134" name="Armure de guerrier"/>
+  <item id="135" name="Tenue royale"/>
+  <item id="136" name="Corps de robot"/>
+  <item id="137" name="Corps bijou"/>
+  <item id="138" name="Queue courte"/>
+  <item id="139" name="Queue rayée"/>
+  <item id="140" name="Queue tordue"/>
+  <item id="141" name="Queue de renard"/>
+  <item id="142" name="Queue en cœur"/>
+  <item id="143" name="Queue de Jibanyan"/>
+  <item id="144" name="Queue de Komasan"/>
+  <item id="145" name="Queue sauvage"/>
+  <item id="146" name="Queue de démon"/>
+  <item id="147" name="Queue tire-bouchon"/>
+  <item id="148" name="Queue d'écureuil"/>
+  <item id="149" name="Queue de chien"/>
+  <item id="150" name="Queue de robot"/>
+  <item id="151" name="Queue bijou"/>
+  <item id="152" name="Serviette de sport"/>
+  <item id="153" name="Cravate"/>
+  <item id="154" name="Nœud papillon"/>
+  <item id="155" name="Bandana"/>
+  <item id="156" name="Collerette"/>
+  <item id="157" name="Clochette de fête"/>
+  <item id="158" name="Nœud chic"/>
+  <item id="159" name="Nœud charmant"/>
+  <item id="160" name="Médaille d'or"/>
+  <item id="161" name="Cape du voyageur"/>
+  <item id="162" name="Cape du triomphe"/>
+  <item id="163" name="Cape du vampire"/>
+  <item id="164" name="Ailes d'ange"/>
+  <item id="165" name="Clochette Jibanyan"/>
+  <item id="166" name="Baluchon Komasan"/>
+  <item id="167" name="Foulard d'adulte"/>
+  <item id="168" name="Efféminyan"/>
+  <item id="169" name="Mamienyan"/>
+  <item id="170" name="Zombinyan"/>
+  <item id="171" name="Pestenyan"/>
+  <item id="172" name="Coolnyan"/>
+  <item id="173" name="Kabukinyan"/>
+  <item id="174" name="Maginyan"/>
+  <item id="175" name="Enmanyan"/>
+  <item id="176" name="Chienyan"/>
+  <item id="177" name="Papanyan"/>
+  <item id="178" name="Papinyan"/>
+  <item id="179" name="Cochonyan"/>
+  <item id="180" name="Blaisenyan"/>
+  <item id="181" name="Onclenyan"/>
+  <item id="182" name="Kappanyan"/>
+  <item id="183" name="Ancêtrenyan"/>
+  <item id="184" name="Whispernyan"/>
+  <item id="185" name="Princessenyan"/>
+  <item id="186" name="Vilainyan"/>
+  <item id="187" name="Astrolapinyan"/>
+  <item id="188" name="Angélinyan"/>
+  <item id="189" name="Juvényan"/>
+  <item id="190" name="Dobernyan"/>
+  <item id="191" name="Chauvesouminyan"/>
+  <item id="192" name="Sumonyan"/>
+  <item id="193" name="Capitainyan"/>
+  <item id="194" name="Chavaliernyan"/>
+  <item id="195" name="Zazenyan"/>
+  <item id="196" name="Fréronyan"/>
+  <item id="197" name="Mignonyan"/>
+  <item id="198" name="Timidenyan"/>
+  <item id="199" name="Nyon-nyan"/>
+  <item id="200" name="Mômenyan"/>
+  <item id="201" name="Vieillarnyan"/>
+  <item id="202" name="Héroïnyan"/>
+  <item id="203" name="Postmodernyan"/>
+  <item id="204" name="Bambinyan"/>
+</items>
