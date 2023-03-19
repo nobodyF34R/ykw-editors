@@ -1,6 +1,6 @@
-hp:28 highest example
+hp: 28 highest example
 
-other:15
+other: 15
 
 middle: 16, 8
 
