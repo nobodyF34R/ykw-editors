@@ -102,3 +102,12 @@ loaflevel and attitude
 129
 91:
 0
+
+item offset: 2926357
+
+00: num1
+01
+02: num2
+03
+04-07: item
+08-11: amount??

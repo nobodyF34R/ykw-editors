@@ -7,9 +7,11 @@ This python script decrypts and encrypts save data of Yo-kai Watch.
 ## Requirements
 
 * Python 3.x
-* PyCrypto (Optional)
+* pycryptodome (must comment out line 248 and 249 of /Users/.../Library/Python/3.10/lib/python/site-packages/Crypto/Cipher/_mode_ctr.py) (optional)
 
-PyCrypto is necessary for handling save data of Yo-kai Watch 2, Busters, and 3.
+pycryptodome is necessary for handling save data of Yo-kai Watch 2, Busters, and 3. 
+
+to install do: pip install pycryptodome
 
 ## Supported games
 | game                             | decryption | encryption | head.yw needed | option           |
@@ -56,18 +58,6 @@ You can specify the game with "--game" option.
 * --game ywb : Yo-kai Watch Busters
 * --game ywb_getto : Yo-kai Watch Busters Getto-gumi
 * --game yw3 : Yo-kai Watch 3
-
-### Getto-gumi
-Example config.txt for Yo-kai Watch Busters Akanekodan Getto-gumi
-
-```
-; Akanekodan
-DUMP "000016c6:/yw-b_ca/head.yw" "dumps/000016c6/yw-b_ca/head.yw"
-DUMP "000016c6:/yw-b_ca/game1.yw" "dumps/000016c6/yw-b_ca/game1.yw"
-
-RESTORE "dumps/000016c6/yw-b_ca/game1.yw" "000016c6:/yw-b_ca/game1.yw"
-RESTORE "dumps/000016c6/yw-b_ca/game1.yw" "000016c6:/yw-b_da/game1.yw"
-```
 
 ## Tools
 ### tools/dump.py
