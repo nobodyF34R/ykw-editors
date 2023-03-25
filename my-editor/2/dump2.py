@@ -996,16 +996,15 @@ def edit_yokai(yokaidict, ownerid, index, yokai=None, attitude=None,nickname=Non
 #     print(", ".join([yokais[yokaidict[index]["id"]] for index in yokaidict]))
 
 #main
-file = ""
+file = "/Users/emilia/Documents/dev/ykw/ykw-editors/my-editor/2/game1.ywd"
 with open(file, "r+b") as f:
     # f.seek(0x108E0, 0)
     # money = struct.unpack("<I", f.read(4))[0]
     # print("money: {}".format(money))
     
     #item offset: 2926357
-
-    f.seek(58408) #maybe broken
-    ownerid = get(f.read(4),0,4)
+    # f.seek(58408) #definitely broken
+    # ownerid = get(f.read(4),0,4)
 
     yokaidict = {}
     index = 0
@@ -1049,6 +1048,7 @@ with open(file, "r+b") as f:
 
         index += 1
 
+    ownerid = yokaidict[0]["ownerid"]
     yokaidict = fix_save(yokaidict, ownerid)
 
     #editor goes here
