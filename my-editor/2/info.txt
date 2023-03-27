@@ -103,11 +103,37 @@ loaflevel and attitude
 91:
 0
 
-item offset: 2926357
+item offset: 11452
 
 00: num1
 01
 02: num2
 03
 04-07: item
-08-11: amount??
+08: amount
+
+equipment offset: 16624
+
+00: num1
+01
+02: num2
+03
+04-07: equipment
+08-11: amount
+12-15: amount in use
+
+control+shift+f: ImportantCountMax
+
+    if (this->getMgr()->getFlags() & GameConfig::GameTypeFlags::IS_SHINNUCHI) {
+        this->seen->setOffset(0x408);
+        this->befriended->setOffset(0x448);
+        this->youkaiCam->setOffset(0x4C8);
+        ui->befriendedGB->setTitle(tr("BEFRIENDED"));
+        ui->youkaiCamGB->setTitle(tr("YO-KAI_CAM"));
+    } else {
+        this->seen->setOffset(0x400);
+        this->befriended->setOffset(0x440);
+        this->youkaiCam->setOffset(0x5EC);
+        ui->befriendedGB->setTitle(tr("BEFRIENDED_BS"));
+        ui->youkaiCamGB->setTitle(tr("BEFRIENDED_FS"));
+    }
