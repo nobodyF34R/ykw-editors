@@ -29,7 +29,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-import sys
 import struct
 import argparse
 
@@ -932,7 +931,7 @@ def allThornyan(file, code=-1952990963):
         )
         struct.pack_into("<i", data, pos + 4, code)
         pos += 0x5C
-    with open(file + ".edited.yw", "xb") as f:
+    with open(file + ".edited.ywd", "xb") as f:
         f.write(data)
 
 if __name__ == "__main__":

@@ -9,6 +9,9 @@ max is probably 32, 16 (maybe 31, 15)
 ev: 4,5,5,4,4
 ev: 12?
 
+
+
+
 00:
 num1
 02:
@@ -103,10 +106,16 @@ loaflevel and attitude
 91:
 0
 
+
+
+
+
+
+
 item offset: 11452
 
 00: num1
-01
+01: 00
 02: num2
 03
 04-07: item
@@ -115,12 +124,37 @@ item offset: 11452
 equipment offset: 16624
 
 00: num1
-01
+01: 10
 02: num2
 03
 04-07: equipment
 08-11: amount
 12-15: amount in use
+
+important offset: 18076
+
+00: num1
+01: 20
+02: UNKNOWN !!!!!!!!!!!!!!!
+04-07: important (what it is aka id)
+
+soul offset: 19528
+
+00: num1
+01: 30
+02: num2
+03
+04-7: soul
+08-09: xp
+10: soul level (10)
+11: used or not used
+
+
+
+
+
+
+
 
 control+shift+f: ImportantCountMax
 
@@ -137,3 +171,12 @@ control+shift+f: ImportantCountMax
         ui->befriendedGB->setTitle(tr("BEFRIENDED_BS"));
         ui->youkaiCamGB->setTitle(tr("BEFRIENDED_FS"));
     }
+
+    static const int SECTIONS_CNT = 0x10;
+    static const quint8 defaultOrder[SECTIONS_CNT];
+    static const quint8 sectionF2magic = 0x02;
+    static const int YoukaiCountMax = 406;
+    static const int ItemCountMax = 430;
+    static const int EquipmentCountMax = 90;
+    static const int ImportantCountMax = 180;
+    static const int SoulCountMax = 100;

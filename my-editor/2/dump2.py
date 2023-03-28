@@ -2,13 +2,13 @@
 # coding: utf-8
 
 """
-dump.py
+dump2.py (SHINNUCHI)
 
 ======
 
 The MIT License (MIT)
 
-Copyright (c) 2016 togenyan
+Copyright (c) 2023 QWERTYUIOPASDFGHJKLZXCVBNM
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -21,10 +21,10 @@ The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
@@ -506,7 +506,7 @@ yokais = {
     640401: "Kabuking"
 }
 
-kaiyos = {v.lower(): k for k, v in yokais.items()}
+reverse_yokais = {v.lower(): k for k, v in yokais.items()}
 
 items = {
     2170728737: "Chocobar", 
@@ -546,7 +546,7 @@ items = {
     2342056174: "Salmon Sushi", 
     368862541: "Fatty Tuna Sushi", 
     1683291125: "Pot Stickers", 
-    4250774095: "Liver &amp; Chives", 
+    4250774095: "Liver & Chives", 
     2321193689: "Crab Omelet", 
     339611514: "Chili Shrimp", 
     1664696300: "Mapo Tofu", 
@@ -914,7 +914,7 @@ items = {
     1001505227: "★Tuna"
 }
 
-emits = {v.lower(): k for k, v in items.items()}
+reverse_items = {v.lower(): k for k, v in items.items()}
 
 equipments = {
     1158785574: "Worn Bangle", 
@@ -993,15 +993,603 @@ equipments = {
     2222028263: "Lt.'s Medal"
 }
 
-mentsequip = {v.lower(): k for k, v in equipments.items()}
+reverse_equipments = {v.lower(): k for k, v in equipments.items()}
 
-attitudes = ["","grouchy","logical","careful","gentle","twisted","helpful","rough","brainy","calm","tender","cruel","devoted"]
+importants = {
+    1332445335: "Yo-kai Watch", 
+    3596800301: "Yo-kai Watch", 
+    496659440: "Model Zero", 
+    917977139: "Curious Clock", 
+    1102055589: "Curious Clock", 
+    2707808699: "Yo-kai Medallium", 
+    1208370318: "Bug Net", 
+    3507426612: "Fishing Rod", 
+    2785551778: "Museum Ticket", 
+    1450226134: "Breeze Cycle", 
+    3480871020: "Spring Cycle", 
+    2270540466: "Sunset Cycle", 
+    4031939108: "Seaside Cycle", 
+    1626185653: "Sakura Cycle", 
+    401256227: "Forest Cycle", 
+    1999447750: "Cirrus Cycle", 
+    2758224: "Sunshine Cycle", 
+    2569226218: "Splendid Cycle", 
+    3995367292: "Sinister Cycle", 
+    1883300575: "Sparkling Cycle", 
+    122147401: "Sunset Cycle", 
+    2655945715: "Seaside Cycle", 
+    3913921381: "Sakura Cycle", 
+    2046209780: "Forest Cycle", 
+    250715746: "Cirrus Cycle", 
+    4038408713: "Sunshine Cycle", 
+    2276592287: "Splendid Cycle", 
+    515595045: "Sinister Cycle", 
+    1773956019: "Sparkling Cycle", 
+    2471723833: "Select-A-Coin", 
+    561480000: "Select-A-Coin +", 
+    2487109408: "Day Pass", 
+    2049975820: "Free 'n' Easy Pass", 
+    323085250: "Stamp Card", 
+    3095318778: "Extra Homework", 
+    639255897: "Ancient Herbs", 
+    1360885199: "Pro Screwdriver", 
+    3356763253: "Spirit Doughnuts", 
+    3205698787: "Soul Doughnuts", 
+    799803762: "Mom's Directions", 
+    1487616484: "School Keys", 
+    2320020088: "Komasan's Letter", 
+    338438107: "Swirly Bell", 
+    1663768397: "Heckapeño", 
+    4196550391: "Top-Notch Watch", 
+    2368042593: "Mysterious Marble", 
+    1788697446: "Rockaway Extract", 
+    1543533829: "Milk Bottle Tops", 
+    721896851: "Moximous Game", 
+    3830756271: "Shack Key", 
+    221714074: "Mega Watch", 
+    1057059864: "Hose", 
+    173724291: "Back Door Key", 
+    1682363220: "Large Fancy Key", 
+    4249846510: "Small Fancy Key", 
+    3812194230: "Yo-kai World Key", 
+    75586225: "Spooky Key", 
+    2009767659: "Boar Key", 
+    3883238266: "Deer Key", 
+    1938188839: "Butterfly Key", 
+    2103304725: "Payn Oil", 
+    3261391014: "Next HarMEOWny Pic 1", 
+    1390148919: "Next HarMEOWny Pic 2", 
+    635227553: "Next HarMEOWny Pic 3", 
+    1159414852: "Next HarMEOWny Pic 4", 
+    840725714: "Next HarMEOWny Pic 5", 
+    2870289768: "Next HarMEOWny Pic 6", 
+    3692172798: "Next HarMEOWny Pic 7", 
+    1115062365: "Next HarMEOWny Pic 8", 
+    896643275: "Next HarMEOWny Pic 9", 
+    2893603185: "Next HarMEOWny Pic 10", 
+    3682587111: "Derriera Dragon", 
+    1270926454: "Key to Apt. C-302", 
+    1019739360: "Key to Apt. A-201", 
+    1849038727: "Key to Apt. A-203", 
+    422651665: "Key to Apt. B-102", 
+    2151184043: "Key to Apt. B-204", 
+    4148119101: "Key to Apt. B-301", 
+    1767625630: "Key to Apt. C-101", 
+    509403912: "Key to Apt. C-303", 
+    4158193168: "Movie Poster", 
+    2162151046: "Rockin' Jumpsuit", 
+    433495868: "Hero Cutout", 
+    1859235754: "Film Reel", 
+    4268667451: "Curry-Shop Sign", 
+    2305393325: "Famous Frock", 
+    3920497480: "Otterina", 
+    2661891038: "Y-Cola Bottle", 
+    127953508: "Waddle Potty", 
+    1890015986: "Snap-Turtle Doll", 
+    4005810001: "Nyaight Scroll", 
+    2579824583: "Victory Scroll", 
+    13479549: "Nyext Scroll", 
+    4158121970: "Bun of Oneness", 
+    1860089416: "Critical Lost Item", 
+    2277315453: "Ghostly Goo", 
+    4038730731: "Red Card Key", 
+    1773367889: "Blue Card Key", 
+    515130055: "Gold Card Key", 
+    2383109974: "Muscle Belt", 
+    4178341824: "Blunt Sword", 
+    2580276773: "New Retro Robot", 
+    4006401715: "Old Retro Robot", 
+    2009433865: "Treasure Map", 
+    12760991: "Soggy Map", 
+    2661687868: "Crumpled Map", 
+    3919647402: "Stained Map", 
+    1890075408: "New Treasure Map", 
+    128938886: "Treasure Room Key", 
+    2534436375: "Final Treasure Map", 
+    3759627905: "Strange Handle", 
+    3001464294: "B&W Camera", 
+    3319891312: "School Photo", 
+    1558762698: "Galleria Blvd Pic", 
+    737141852: "Gourdzilla Photo", 
+    3045814783: "Autograph Card", 
+    3263971689: "Fluffy Towel", 
+    3848423452: "Sharp-Toothed Comb", 
+    2087393702: "Dance Revolution", 
+    191637808: "Hexpress Pass", 
+    2500377747: "Gera Gera Land Ticket", 
+    3792669701: "Paradise Springs Ticket", 
+    2064047551: "Wolfit Down Ticket", 
+    201452841: "Heavenly Bath Pass", 
+    2629759160: "Mountain Bath Pass", 
+    3954819118: "Hill Bath Pass", 
+    2340309451: "Wanderer's Bath Pass", 
+    4235819357: "Forest Bath Pass", 
+    1701849319: "Lucky Bath Pass", 
+    309794929: "Treasure Bath Pass", 
+    2350091730: "Utility Belt", 
+    4212440388: "Cloak of Secrecy", 
+    1646128382: "Brake Handle", 
+    354081896: "Happy-Go-Lucky Pass", 
+    2242232825: "Lucky Crank-a-Coin", 
+    4070764911: "Moxie Mark", 
+    2689800712: "Important Item 20", 
+    3612617374: "Important Item 21", 
+    1314749220: "Important Item 22", 
+    962218930: "Important Item 23", 
+    2805915153: "Important Item 24", 
+    3493457543: "Important Item 25", 
+    3503128323: "Melon Seeds", 
+    2815053717: "Orange Seeds", 
+    930435588: "Kiwi Seeds", 
+    1081238162: "Grape Seeds", 
+    548793207: "Berry Seeds", 
+    1471339489: "Watermelon Sds.", 
+    3468397147: "Walkappa Cog", 
+    3116153549: "Komasan Cog", 
+    668479342: "Hungramps Cog", 
+    1356799992: "Manjimutt Cog", 
+    3386265154: "Noko Cog", 
+    3201400532: "Draggie Cog", 
+    778986309: "F-Series Bell", 
+    1500074963: "Sailor Bell", 
+    194558132: "Macho Bell", 
+    2090829858: "Wonderer's Bell", 
+    3851868568: "Jet Bell", 
+    2459035918: "Boo Bundle", 
+    217414829: "Keepsake Cap", 
+    2079476795: "Dark Bell"
+}
+
+reverse_importants = {v.lower(): k for k, v in importants.items()}
+
+souls = {
+    284256326: "Pandle", 
+    1744197840: "Undy", 
+    4278126954: "Tanbo", 
+    2314746364: "D'wanna", 
+    396143711: "N'more", 
+    1620810953: "Q'wit", 
+    4187147635: "Mochismo", 
+    2392194533: "Minochi", 
+    506126452: "Cutta-nah", 
+    1764610274: "Cutta-nah-nah", 
+    166353159: "Slacka-slash", 
+    2129488273: "Chansin", 
+    3890493483: "Sheen", 
+    2430798013: "Gleam", 
+    243768606: "Snee", 
+    2038476168: "Helmsman", 
+    3767139378: "Reuknight", 
+    2542718116: "Corptain", 
+    120705333: "Blazion", 
+    1882644899: "Quaken", 
+    583469764: "Siro", 
+    1438661202: "Beetler", 
+    3435752424: "Beetall", 
+    3150863230: "Beetall", 
+    631951069: "Cruncha", 
+    1387134539: "Benkei", 
+    3416567793: "B3-NK1", 
+    3164839783: "Zerberker", 
+    740066038: "Snartle", 
+    1528541792: "Snotsolong", 
+    1004288901: "Duchoo", 
+    1289423635: "Espy", 
+    3587332777: "Infour", 
+    2731895359: "Wazzat", 
+    1018298268: "Dummkap", 
+    1270271754: "Lafalotta", 
+    3535773360: "Blips", 
+    2780343846: "Sushiyama", 
+    889697207: "Kapunki", 
+    1107329825: "Cupistol", 
+    1956490562: "Casanuva", 
+    60464596: "Casanono", 
+    2593377390: "Tattletell", 
+    3985964280: "Skranny", 
+    1945135451: "Tattlecast", 
+    83319245: "Baku", 
+    2650671223: "Whapir", 
+    3942201569: "Signibble", 
+    2051417456: "Signiton", 
+    222369254: "Statiking", 
+    1837538307: "Mirapo", 
+    444705941: "Mircle", 
+    2206793007: "Illoo", 
+    4103065017: "Elloo", 
+    1793808410: "Alloo", 
+    502032524: "Frostina", 
+    2229614902: "Blizzaria", 
+    4091677088: "Damona", 
+    1667044401: "Kyubi", 
+    341451943: "Frostail", 
+    1185664960: "Dulluma", 
+    833421142: "Darumacho", 
+    2829430508: "Goruma", 
+    3751976570: "Coughkoff", 
+    1103498201: "Hurchin", 
+    918633295: "Dazzabel", 
+    2949147381: "Rattelle", 
+    3637467747: "Skelebella", 
+    1215318002: "Noway", 
+    1064793956: "Impass", 
+    1605435009: "Walldin", 
+    683134487: "Blowkade", 
+    2982059949: "Ledballoon", 
+    3334057787: "Armsman", 
+    1490893464: "Mad Mountain", 
+    802818574: "Lava Lord", 
+    3067304884: "Rhinoggin", 
+    3251923746: "Rhinormous", 
+    1365997235: "Hornaplenty", 
+    644630053: "Castelius I", 
+    3626558030: "Castelius III", 
+    2939146968: "Castelius II", 
+    908493666: "Castelius Max", 
+    1092727796: "Dromp", 
+    3745850967: "Swosh", 
+    2822903489: "Cadin", 
+    827017083: "Cadable", 
+    1179416557: "Singcada", 
+    3606276732: "Buhu", 
+    2717145834: "Flumpy", 
+    3241399055: "Skreek", 
+    3056919449: "Jibanyan", 
+    792572451: "Thornyan", 
+    1480229557: "Baddinyan", 
+    3328055062: "Robonyan", 
+    2975410048: "Goldenyan", 
+    676361786: "Dianyan", 
+    1599555244: "Sapphinyan", 
+    3488111421: "Emenyan", 
+    3102698411: "Rubinyan", 
+    288555633: "Topanyan", 
+    1714696935: "Walkappa", 
+    4282213213: "Appak", 
+    2285523915: "Supyo", 
+    375309928: "Komasan", 
+    1633285886: "Komajiro", 
+    4166035268: "Komane", 
+    2404882386: "Komiger", 
+    535333443: "Daiz", 
+    1760541397: "Confuze", 
+    136852272: "Pupsicle", 
+    2133787558: "Chilhuahua", 
+    3861271068: "Swelterrier", 
+    2434884234: "Fidgephant", 
+    256243497: "Touphant", 
+    2017642431: "Rollen", 
+    3779827205: "Dubbles", 
+    2521605779: "Tengu", 
+    116636418: "Flengu", 
+    1911851924: "Hungramps", 
+    587555059: "Grainpa", 
+    1409437797: "Hungorge", 
+    3440050655: "Manjimutt", 
+    3121361225: "Multimutt", 
+    610837738: "Sir Berus", 
+    1399821436: "Heheheel", 
+    3395732934: "Croonger", 
+    3177313616: "Urnaconda", 
+    769583297: "Enerfly", 
+    1524226135: "Enefly", 
+    975065522: "Betterfly", 
+    1293508900: "Peppillon", 
+    3557830814: "Wiglin", 
+    2736193544: "Steppa", 
+    1030985131: "Rhyth", 
+    1249158461: "Shmoopie", 
+    3548247175: "Pinkipoo", 
+    2759509009: "Pookivil", 
+    885381504: "Happierre", 
+    1136847126: "Reversa", 
+    1969211253: "Reversette", 
+    39385059: "Ol' Saint Trick", 
+    2605819481: "Ol' Fortune", 
+    3965097679: "Mama Aura", 
+    1915880300: "Auntie Heart", 
+    87372794: "Papa Bolt", 
+    2621203008: "Uncle Infinite", 
+    3946533590: "Ake", 
+    2072268615: "Payn", 
+    209944529: "Agon", 
+    1816458804: "Negatibuzz", 
+    457426594: "Moskevil", 
+    2185926424: "Scritchy", 
+    4115507086: "Leadoni", 
+    1797861933: "Mynimo", 
+    472777403: "Peckpocket", 
+    2233946881: "Rockabelly", 
+    4062208919: "Chatalie", 
+    1654619654: "Nagatha", 
+    362303120: "Roughraff", 
+    1198106103: "Badude", 
+    812553569: "Bruff", 
+    2842150107: "Negasus", 
+    3730895949: "Neighfarious", 
+    1074029038: "Grumples", 
+    922964344: "Everfore", 
+    2919891138: "Eterna", 
+    3641520212: "Cheeksqueek", 
+    1236413893: "Cuttincheez", 
+    1052056915: "Compunzer", 
+    1584567478: "Lamedian", 
+    695575584: "Insomni", 
+    2960979354: "Sandi", 
+    3346777356: "Dimmy", 
+    1495224495: "Blandon", 
+    773349433: "Nul", 
+    3071357315: "Droplette", 
+    3222667541: "Slush", 
+    1353260164: "Gush", 
+    665725970: "Drizzle", 
+    3656026233: "Alhail", 
+    2934814959: "Dismarelda", 
+    937748821: "Wantston", 
+    1088674243: "Grubsnitch", 
+    3733408864: "Hidabat", 
+    2843770102: "Abodabat", 
+    814296396: "Belfree", 
+    1200496090: "Lodo", 
+    3610312779: "Chippa", 
+    2687906013: "Tengloom", 
+    3237067064: "Nird", 
+    3086387630: "Suspicioni", 
+    788518932: "Tantroni", 
+    1509484674: "Contrarioni", 
+    3348921633: "Timidevil", 
+    2962967991: "Beelzebold", 
+    697441293: "Count Cavity", 
+    1586834587: "Greesel", 
+    3458871562: "Awevil", 
+    3106734492: "Noko", 
+    326482984: "Pandanoko", 
+    1685228734: "Bloominoko", 
+    4252753156: "Draggie", 
+    2323443090: "Dragon Lord", 
+    337147953: "Azure Dragon", 
+    1662994599: "Fishpicable", 
+    4195752221: "Rageon", 
+    2366712203: "Tunatic", 
+    497955866: "Chummer", 
+    1789461644: "Shrook", 
+    175017321: "Spenp", 
+    2104081919: "Almi", 
+    3831557189: "Babblong", 
+    2473057491: "Bananose", 
+    218319216: "Copperled", 
+    2047113702: "Slitheref", 
+    3809290332: "Cynake", 
+    2483689674: "Venoct", 
+    78972251: "Shad. Venoct", 
+    1941059021: "Shogunyan", 
+    558096042: "Komashura", 
+    1447358012: "Dandoodle", 
+    3477979014: "Elder Bloom", 
+    3091894032: "Gilgaros", 
+    640555699: "Lie-in", 
+    1361652261: "Brushido", 
+    3357571999: "Hissfit", 
+    3207023369: "Slicenrice", 
+    798512792: "Tublappa", 
+    1486841358: "Grublappa", 
+    945352683: "Hovernyan", 
+    1331683197: "Mudmunch", 
+    3595996871: "Madmunch", 
+    2706488913: "Sgt. Burly", 
+    1060449266: "Washogun", 
+    1211243364: "Lie-in Heart", 
+    3510323934: "Flamurice", 
+    2788981320: "Demuncher", 
+    914581465: "Devourer", 
+    1099192143: "Brokenbrella", 
+    1998158124: "Smogling", 
+    1984954: "So-Sorree", 
+    2568427520: "Mimikin", 
+    3994036374: "Failian", 
+    1886698805: "Houzzat", 
+    125013411: "Smogmella", 
+    2658851865: "Badsmella", 
+    3917343887: "Master Oden", 
+    2042818846: "Bowminos", 
+    247841160: "Miradox", 
+    1845643373: "Chymera", 
+    419789051: "Kingmera", 
+    2148280641: "Terrorpotta", 
+    4144699863: "Wotchagot", 
+    1768918132: "Swelton", 
+    510180578: "Zappary", 
+    2271341912: "No-Go Kart", 
+    4033273294: "Gimme", 
+    1624883295: "Pride Shrimp", 
+    400486601: "Mistank", 
+    1160715182: "Eyesoar", 
+    841493304: "Eyellure", 
+    2871097986: "Carniboy", 
+    3693496852: "Frazzel", 
+    1111678903: "Enduriphant", 
+    893775649: "Toadal Dude", 
+    2890710683: "Uber Geeko", 
+    3679161869: "Faysoff", 
+    1274319772: "Boyclops", 
+    1022599946: "Leggly", 
+    1546922735: "Nekidspeed", 
+    724769401: "Drizzelda", 
+    2990164931: "Jumbelina", 
+    3309140821: "Bakulia", 
+    1532620534: "Faux Kappa", 
+    744414816: "Tigappa", 
+    3042414554: "Mad Kappa", 
+    3260071756: "Master Nyada", 
+    1391436509: "Tongus", 
+    635998795: "Pallysol", 
+    3685496352: "Shamasol", 
+    2896889526: "Sandmeh", 
+    899831564: "Don Chan", 
+    1118136218: "Predictabull", 
+    3703697977: "Defectabull", 
+    2881929903: "Gnomey", 
+    852464405: "Gnomine", 
+    1170776963: "Ray O'Light", 
+    3581394450: "Kelpacabana", 
+    2725285508: "Nurse Tongus", 
+    3266774881: "Mr. Sandmeh", 
+    3048224759: "Scarasol", 
+    750347853: "High Gnomey", 
+    1539200731: "Supoor Hero", 
+    3319448440: "Smashibull", 
+    3000890350: "Kyryn", 
+    735355476: "Unikirin", 
+    1557369538: "Pittapatt", 
+    3429666643: "Wydeawake", 
+    3144400837: "Yoink", 
+    314037791: "Herbiboy", 
+    1706092169: "K'mon-K'mon", 
+    4240029491: "Yoodooit", 
+    2344519589: "Count Zapaway", 
+    366612998: "Slimamander", 
+    1658659472: "Snobetty", 
+    4225004330: "Dracunyan", 
+    2362655676: "Allnyta", 
+    476864045: "Wobblewok", 
+    1802202811: "Furgus", 
+    195880798: "Feargus", 
+    2091636680: "Nosirs", 
+    3852633714: "Papa Windbag", 
+    2460333796: "Toiletta", 
+    213984071: "Ben Tover", 
+    2076578769: "Robbinyu", 
+    3805233771: "Sproink", 
+    2512941821: "Rawry", 
+    91713388: "Furdinand", 
+    1919967226: "Foiletta", 
+    545371293: "Arachnus", 
+    1468433419: "Arachnia", 
+    3465532849: "Harry Barry", 
+    3112756519: "Cricky", 
+    669806724: "Snaggly", 
+    1357594642: "Squeeky", 
+    3387036072: "Flushback", 
+    3202687294: "SV Snaggerjag", 
+    777665711: "Irewig", 
+    1499270201: "Mermaidyn", 
+    966428124: "Scaremaiden", 
+    1318958410: "Lady Longnek", 
+    3616859376: "Wrongnek", 
+    2694042726: "Draaagin", 
+    1056391621: "Firewig", 
+    1240494419: "Vacuumory", 
+    3505987817: "Whinona", 
+    2818445439: "Mermadonna", 
+    927010286: "Mermother", 
+    1078345080: "Spoilerina", 
+    1994068763: "Poofessor", 
+    31204237: "Slurpent", 
+    2564125239: "Unfairy", 
+    4023534241: "Unkaind", 
+    1907808002: "Untidy", 
+    112322452: "Unpleasant", 
+    2679682606: "Unkeen", 
+    3904865976: "Tyrat", 
+    2013305641: "Apelican", 
+    252160959: "Darknyan", 
+    1874862682: "Buchinyan", 
+    415699660: "Verygoodsir", 
+    2177778550: "Robonyan F", 
+    4140397536: "Sailornyan", 
+    1756227139: "Machonyan", 
+    531289813: "Jibakoma", 
+    2258863983: "Grumpus Khan", 
+    4054104057: "Groupus Khan", 
+    1629203048: "Slumberhog", 
+    370973438: "Snortlehog", 
+    1156411801: "Panja Pupil", 
+    870990095: "Panja Pro", 
+    2867007669: "Samureel", 
+    3722715171: "Time Keeler", 
+    1132508544: "Takoyakid", 
+    881296662: "Takoyaking", 
+    2911818924: "Danke Sand", 
+    3666469946: "No Sandkyu", 
+    1245116843: "Sumodon", 
+    1026672957: "Yokozudon", 
+    1576419544: "Whateverest", 
+    720465998: "Whatuption", 
+    3019383284: "Happycane", 
+    3305050466: "Starrycane", 
+    1520141505: "Robokapp", 
+    765244503: "Robokoma", 
+    3029722605: "Robogramps", 
+    3281180027: "Robomutt", 
+    1395509482: "Robonoko", 
+    606795900: "Robodraggie", 
+    3664665623: "Melonyan", 
+    2909367425: "Oranyan", 
+    878722363: "Kiwinyan", 
+    1130827181: "Grapenyan", 
+    3708000270: "Strawbnyan", 
+    2852432024: "Watermelnyan", 
+    856553762: "Jetnyan", 
+    1141557684: "Wondernyan", 
+    2823622435: "Stealth Soul", 
+    3746185141: "Soldier's Soul", 
+    1178824207: "Stout Soul", 
+    826564249: "Stubborn Soul", 
+    2938161978: "Scatter Soul", 
+    3626498988: "Stinging Soul", 
+    1093577238: "Speed Soul", 
+    908696192: "Slippery Soul", 
+    2794882833: "Surly Soul", 
+    3515987847: "Scorching Soul", 
+    2975219298: "Soaking Soul", 
+    3327201012: "Sparking Soul", 
+    1599627086: "Spacedust Soul", 
+    677343192: "Subzero Soul", 
+    3057384059: "Spin Soul", 
+    1479908183: "Searing Soul", 
+    791849921: "Sodden Soul", 
+    3213735504: "Storm Soul", 
+    3364521670: "Sprouting Soul", 
+    2591780257: "Snow Soul", 
+    3984350519: "Squall Soul", 
+    1953827981: "Supernatural Soul", 
+    57818139: "Sinister Soul", 
+    2635508152: "Shielding Soul", 
+    3927021870: "Summoner's Soul", 
+    1931004052: "Surrender Soul", 
+    69203970: "Superstar Soul"
+}
+
+reverse_souls = {v.lower(): k for k, v in souls.items()}
+
+attitudes = ["", "grouchy", "logical", "careful", "gentle", "twisted", "helpful", "rough", "brainy", "calm", "tender", "cruel", "devoted"]
+
 
 #functions
-def get(read,place,length=1,integer=True,half=False):
+def get(read, place, length=1, integer=True, half=False):
     finished = ""
     if half:
-        return [int(f'{read[place]:08b}'[:4],2),int(f'{read[place]:08b}'[4:],2)] 
+        return [int(f'{read[place]:08b}'[:4], 2), int(f'{read[place]:08b}'[4:], 2)] 
     else:
         if integer == None:
             for i in read[place:place+length][-1::-1]:
@@ -1010,28 +1598,23 @@ def get(read,place,length=1,integer=True,half=False):
         elif integer:
             for i in read[place:place+length][-1::-1]:
                 finished += f'{i:08b}'
-            return int(finished,2)
+            return int(finished, 2)
         else:
             if read[place:place+length][0]==0:
                 return ""
             for i in read[place:place+length]:
-                if not chr(i).isprintable():
+                if i == 0:
                     break
                 finished += chr(i)
             return finished
 
-def fix_yokais(yokaidict, ownerid):
-    for i in range(len(yokaidict)):
-        yokaidict[i]["num1"]=i
-        yokaidict[i]["num2"]=i+1
-        yokaidict[i]["ownerid"]=ownerid
-    return yokaidict
-
-def fix_items(itemdict): #works for equipment too
-    for i in range(len(itemdict)):
-        itemdict[i]["num1"]=i
-        itemdict[i]["num2"]=i+1
-    return itemdict
+def fix_dict(dict,ownerid=None): #works for equipment too
+    for i in range(len(dict)):
+        dict[i]["num1"]=i
+        dict[i]["num2"]=i+1
+        if ownerid:
+            dict[i]["ownerid"]=ownerid
+    return dict
 
 def edit_yokai(yokaidict, ownerid, index, yokai=None, attitude=None, nickname=None):
     try:
@@ -1042,7 +1625,7 @@ def edit_yokai(yokaidict, ownerid, index, yokai=None, attitude=None, nickname=No
     yokaidict[index]["num2"] = index+1
     if yokai != None:
         try:
-            yokaidict[index]["id"] = kaiyos[yokai]
+            yokaidict[index]["id"] = reverse_yokais[yokai]
         except:
             yokaidict[index]["id"] = yokai
     if nickname != None:
@@ -1050,23 +1633,23 @@ def edit_yokai(yokaidict, ownerid, index, yokai=None, attitude=None, nickname=No
     yokaidict[index]["attack"] = 255 #10
     yokaidict[index]["technique"] = 255 #10
     yokaidict[index]["soultimate"] = 255 #10
-    yokaidict[index]["xp"] = 65535 #0
+    yokaidict[index]["xp"] = 4294967295 #0
     yokaidict[index]["ownerid"] = ownerid
     yokaidict[index]["stats"] = {
         "IV_HP": 255, #need to find out maxes TODO
-        "IV_Str": 255,
-        "IV_Spr": 255,
-        "IV_Def": 255,
-        "IV_Spd": 255,
-        "CB_HP": 255,
-        "CB_Str": 255,
-        "CB_Spr": 255,
-        "CB_Def": 255,
-        "CB_Spd": 255,
-        "SC_HP": 255,
-        "SC_Str": 255,
-        "SC_Spr": 255,
-        "SC_Def": 255,
+        "IV_Str": 255, 
+        "IV_Spr": 255, 
+        "IV_Def": 255, 
+        "IV_Spd": 255, 
+        "CB_HP": 255, 
+        "CB_Str": 255, 
+        "CB_Spr": 255, 
+        "CB_Def": 255, 
+        "CB_Spd": 255, 
+        "SC_HP": 255, 
+        "SC_Str": 255, 
+        "SC_Spr": 255, 
+        "SC_Def": 255, 
         "SC_Spd": 255
     }
     yokaidict[index]["level"] = 255 #99
@@ -1088,7 +1671,7 @@ def edit_item(itemdict, index, item=None, amount=None):
     itemdict[index]["num2"] = index+1
     if item:
         try:
-            itemdict[index]["item"] = emits[item]
+            itemdict[index]["item"] = reverse_items[item]
         except:
             itemdict[index]["item"] = item
     if amount:
@@ -1104,7 +1687,7 @@ def edit_equipment(equipmentdict, index, equipment=None, amount=None):
     equipmentdict[index]["num2"] = index+1
     if equipment:
         try:
-            equipmentdict[index]["equipment"] = mentsequip[equipment]
+            equipmentdict[index]["equipment"] = reverse_equipments[equipment]
         except:
             equipmentdict[index]["equipment"] = equipment
     if amount:
@@ -1112,11 +1695,37 @@ def edit_equipment(equipmentdict, index, equipment=None, amount=None):
     equipmentdict[index]["used"] = 0
     return equipmentdict
 
-# def print_yokais(yokaidict):
-#     print(", ".join([yokais[yokaidict[index]["id"]] for index in yokaidict]))
+def edit_important(importantdict, index, important):
+    try:
+        importantdict[index]
+    except:
+        importantdict[index] = {}
+    importantdict[index]["num1"] = index #made redundant by fix_dict
+    importantdict[index]["num2"] = index+1
+    try:
+        importantdict[index]["important"] = reverse_importants[important]
+    except:
+        importantdict[index]["important"] = important
+    return importantdict
+
+def edit_soul(souldict, index, soul):
+    try:
+        souldict[index]
+    except:
+        souldict[index] = {}
+    souldict[index]["num1"] = index #made redundant by fix_dict
+    souldict[index]["num2"] = index+1
+    try:
+        souldict[index]["soul"] = reverse_souls[soul]
+    except:
+        souldict[index]["soul"] = soul
+    souldict[index]["xp"] = 65535
+    souldict[index]["level"] = 255 #10
+    souldict[index]["used"] = 0 #TODO fix this
+    return souldict
 
 #main
-file = "/Users/emilia/Documents/dev/ykw/ykw-editors/my-editor/2/game1.ywd"
+file = "/Users/emilia/Documents/dev/ykw/ykw-editors/my-editor/2/game check copy.ywd"
 with open(file, "r+b") as f:
     #money offset: 67808
 
@@ -1125,44 +1734,44 @@ with open(file, "r+b") as f:
     f.seek(20744) # 20744 is yokai info location. 1 yokai takes up 92 bytes
     while True:
         yokai = f.read(92)
-        if get(yokai,0) == 0 and index != 0: #could be broken
+        if get(yokai, 0) == 0 and index != 0: #could be broken
             break
 
         yokaidict[index] = {
-            "num1": get(yokai,0), #0
-            "num2": get(yokai,2), #2
-            "id": get(yokai,4,4), #4-07
-            "nickname": get(yokai,8,24,False), #8-32 maybe broken
-            "attack": get(yokai,42), #42
-            "technique": get(yokai,46), #46
-            "soultimate": get(yokai,50), #50
-            "xp": get(yokai,52,4), #52 - 55
-            "ownerid": get(yokai,60,4), #60 - 63
+            "num1": get(yokai, 0), #0
+            "num2": get(yokai, 2), #2
+            "id": get(yokai, 4, 4), #4-07
+            "nickname": get(yokai, 8, 24, False), #8-32 maybe broken
+            "attack": get(yokai, 42), #42
+            "technique": get(yokai, 46), #46
+            "soultimate": get(yokai, 50), #50
+            "xp": get(yokai, 52, 4), #52 - 55
+            "ownerid": get(yokai, 60, 4), #60 - 63
             "stats": { # 64 - 78
-                "IV_HP": get(yokai,64),
-                "IV_Str": get(yokai,65),
-                "IV_Spr": get(yokai,66),
-                "IV_Def": get(yokai,67),
-                "IV_Spd": get(yokai,68),
-                "CB_HP": get(yokai,69),
-                "CB_Str": get(yokai,70),
-                "CB_Spr": get(yokai,71),
-                "CB_Def": get(yokai,72),
-                "CB_Spd": get(yokai,73),
-                "SC_HP": get(yokai,74),
-                "SC_Str": get(yokai,75),
-                "SC_Spr": get(yokai,76),
-                "SC_Def": get(yokai,77),
-                "SC_Spd": get(yokai,78)
-            },
-            "level": get(yokai,79), #79
-            "loaflevel": get(yokai,84,half=True)[0], #84
-            "attitude": get(yokai,84,half=True)[0] #84 (shared byte)
+                "IV_HP": get(yokai, 64), 
+                "IV_Str": get(yokai, 65), 
+                "IV_Spr": get(yokai, 66), 
+                "IV_Def": get(yokai, 67), 
+                "IV_Spd": get(yokai, 68), 
+                "CB_HP": get(yokai, 69), 
+                "CB_Str": get(yokai, 70), 
+                "CB_Spr": get(yokai, 71), 
+                "CB_Def": get(yokai, 72), 
+                "CB_Spd": get(yokai, 73), 
+                "SC_HP": get(yokai, 74), 
+                "SC_Str": get(yokai, 75), 
+                "SC_Spr": get(yokai, 76), 
+                "SC_Def": get(yokai, 77), 
+                "SC_Spd": get(yokai, 78)
+            }, 
+            "level": get(yokai, 79), #79
+            "loaflevel": get(yokai, 84, half=True)[0], #84
+            "attitude": get(yokai, 84, half=True)[0] #84 (shared byte)
         }
 
         index += 1
     ownerid = yokaidict[0]["ownerid"]
-    yokaidict = fix_yokais(yokaidict, ownerid)
+    yokaidict = fix_dict(yokaidict, ownerid)
 
     itemdict = {}
     index = 0
@@ -1170,18 +1779,18 @@ with open(file, "r+b") as f:
     while True:
         item = f.read(12)
 
-        if get(item,0) == 0 and index != 0: #could be broken
+        if get(item, 0) == 0 and index != 0: #could be broken
             break
 
         itemdict[index] = {
-            "num1": get(item,0), #0
-            "num2": get(item,2), #2
-            "item": get(item,4,4), #4
-            "amount": get(item,8,4) #8
+            "num1": get(item, 0), #0
+            "num2": get(item, 2), #2
+            "item": get(item, 4, 4), #4
+            "amount": get(item, 8, 4) #8
         }
 
         index += 1
-    itemdict = fix_items(itemdict)
+    itemdict = fix_dict(itemdict)
 
     equipmentdict = {}
     index = 0
@@ -1189,103 +1798,182 @@ with open(file, "r+b") as f:
     while True:
         equipment = f.read(16)
 
-        if get(equipment,0) == 0 and index != 0: #could be broken
+        if get(equipment, 0) == 0 and index != 0: #could be broken
             break
 
         equipmentdict[index] = {
-            "num1": get(equipment,0), #0
-            "num2": get(equipment,2), #2
-            "equipment": get(equipment,4,4), #4
-            "amount": get(equipment,8,4), #8 #maybe 1 byte
-            "used": get(equipment,12,4) #i think this is how many are currently equipt
+            "num1": get(equipment, 0), #0
+            "num2": get(equipment, 2), #2
+            "equipment": get(equipment, 4, 4), #4
+            "amount": get(equipment, 8, 4), #8 #maybe 1 byte
+            "used": get(equipment, 12, 4) #i think this is how many are currently equipped
         }
 
         index += 1
-    equipmentdict = fix_items(equipmentdict) #works for equipment too
+    equipmentdict = fix_dict(equipmentdict)
+
+    importantdict = {}
+    index = 0
+    f.seek(18076) # 18076 is important info location. 1 important takes up 8 bytes
+    while True:
+        important = f.read(8)
+
+        if get(important, 0) == 0 and index != 0: #could be broken
+            break
+
+        importantdict[index] = {
+            "num1": get(important, 0), #0
+            "num2": get(important, 2), #2 unsure.
+            "important": get(important, 4, 4), #4
+        }
+
+        index += 1
+    importantdict = fix_dict(importantdict) #probably broken
+    
+    souldict = {}
+    index = 0
+    f.seek(19528) # 19528 is soul info location. 1 soul takes up 12 bytes
+    while True:
+        soul = f.read(12)
+
+        if get(soul, 0) == 0 and index != 0: #could be broken
+            break
+
+        souldict[index] = {
+            "num1": get(soul, 0), #0
+            "num2": get(soul, 2), #2
+            "soul": get(soul, 4, 4), #4
+            "xp": get(soul, 8, 2), #8
+            "level": get(soul, 10), #8
+            "used": get(soul, 11) #11 true or false need to figure out if 00 means used or not used
+        }
+
+        index += 1
+    souldict = fix_dict(souldict)
+
+    # TODO add important and souls
+
 
     #editor goes here
+    if False:
+        #to append yokai: make index len(yokaidict). must include yokai, attitude & nickname if appending. (can all be "" except for yokai)
+        #append a pandle
+        yokaidict = edit_yokai(yokaidict, ownerid, len(yokaidict), "pandle", "", "bob")
+        #change to a rough ake
+        yokaidict = edit_yokai(yokaidict, ownerid, len(yokaidict)-1, "ake", "rough")
 
-    # #to append yokai: make index len(yokaidict). must include yokai, attitude & nickname if appending. (can all be "" except for yokai)
-    # #append a pandle
-    # yokaidict = edit_yokai(yokaidict, ownerid, len(yokaidict), "pandle", "", "bob")
-    # #change to a rough ake
-    # yokaidict = edit_yokai(yokaidict, ownerid, len(yokaidict)-1, "ake", "rough")
+        #to append item: make index len(itemdict). must include item & amount if appending.
+        #append 60 sandwitch
+        itemdict = edit_item(itemdict, len(itemdict), "sandwitch", 60)
+        #change to milk
+        itemdict = edit_item(itemdict, len(itemdict)-1, "milk") 
 
-    # #to append item: make index len(itemdict). must include item & amount if appending.
-    # #append 60 sandwitch
-    # itemdict = edit_item(itemdict, len(itemdict), "sandwitch", 60)
-    # #change to milk
-    # itemdict = edit_item(itemdict, len(itemdict)-1, "milk") 
+        #to append equipment: make index len(equipmentdict). must include equipment & amount if appending.
+        #append 60 cheap bracelet
+        equipmentdict = edit_equipment(equipmentdict, len(equipmentdict), "cheap bracelet", 60)
+        #change to power bracelet
+        equipmentdict = edit_equipment(equipmentdict, len(equipmentdict)-1, "power bracelet") #if you get the index wrong it will mess everything up
 
-    # #to append equipment: make index len(equipmentdict). must include equipment & amount if appending.
-    # #append 60 cheap bracelet
-    # equipmentdict = edit_equipment(equipmentdict, len(equipmentdict), "cheap bracelet", 60)
-    # #change to power bracelet
-    # equipmentdict = edit_equipment(equipmentdict, len(equipmentdict)-1, "power bracelet") #if you get the idex wrong it will mess everything up
+        #if removing, must dict = fix_dict(dict) afterwards
 
-    #write yokais back
-    if yokaidict != fix_yokais(yokaidict, ownerid): #hopefully unnessicary
-        raise Exception("yokai broken")
-    for i in yokaidict: # could make function
-        f.seek(20744+92*int(i))
-        f.write(yokaidict[i]["num1"].to_bytes(1,"little"))
-        f.seek(20744+92*int(i)+2)
-        f.write(yokaidict[i]["num2"].to_bytes(1,"little"))
-        f.seek(20744+92*int(i)+4)
-        f.write(yokaidict[i]["id"].to_bytes(4,"little"))
-        f.seek(20744+92*int(i)+8)
-        f.write((bytearray([ord(k)for k in yokaidict[i]["nickname"]])+bytearray(24))[:24])
-        f.seek(20744+92*int(i)+42)
-        f.write(yokaidict[i]["attack"].to_bytes(1,"little"))
-        f.seek(20744+92*int(i)+46)
-        f.write(yokaidict[i]["technique"].to_bytes(1,"little"))
-        f.seek(20744+92*int(i)+50)
-        f.write(yokaidict[i]["soultimate"].to_bytes(1,"little"))
-        f.seek(20744+92*int(i)+52)
-        f.write(yokaidict[i]["xp"].to_bytes(4,"little"))
-        f.seek(20744+92*int(i)+60)
-        f.write(yokaidict[i]["ownerid"].to_bytes(4,"little"))
-        statnum = 64
-        for stat in yokaidict[i]["stats"]:
-            f.seek(20744+92*int(i)+statnum)
-            f.write(yokaidict[i]["stats"][stat].to_bytes(1,"little"))
-            statnum +=1
-        f.seek(20744+92*int(i)+79)
-        f.write(yokaidict[i]["level"].to_bytes(1,"little"))
-        f.seek(20744+92*int(i)+84)
-        f.write(int(f'{yokaidict[i]["loaflevel"]:04b}'+f'{yokaidict[i]["attitude"]:04b}',2).to_bytes(1,"little"))
-
-    #write items back
-    if itemdict != fix_items(itemdict):
-        raise Exception("items broken")
-    for i in itemdict: # could make function
-        f.seek(11452+12*int(i))
-        f.write(itemdict[i]["num1"].to_bytes(1,"little"))
-        f.seek(11452+12*int(i)+2)
-        f.write(itemdict[i]["num2"].to_bytes(1,"little"))
-        f.seek(11452+12*int(i)+4)
-        f.write(itemdict[i]["item"].to_bytes(4,"little"))
-        f.seek(11452+12*int(i)+8)
-        f.write(itemdict[i]["amount"].to_bytes(4,"little"))
-    
-    #write equipment back
-    if equipmentdict != fix_items(equipmentdict): #works for equipment too
-        raise Exception("equipment broken")
-    for i in equipmentdict: # could make function
-        f.seek(16624+16*int(i))
-        f.write(equipmentdict[i]["num1"].to_bytes(1,"little"))
-        f.seek(16624+16*int(i)+1)
-        f.write(b"\x10") # i don't know what this does
-        f.seek(16624+16*int(i)+2)
-        f.write(equipmentdict[i]["num2"].to_bytes(1,"little"))
-        f.seek(16624+16*int(i)+4)
-        f.write(equipmentdict[i]["equipment"].to_bytes(4,"little"))
-        f.seek(16624+16*int(i)+8)
-        f.write(equipmentdict[i]["amount"].to_bytes(4,"little"))
-        f.seek(16624+16*int(i)+12)
-        f.write(equipmentdict[i]["used"].to_bytes(4,"little"))
-
+    #print data
     print(json.dumps(yokaidict, indent=2))
     print(", ".join([yokais[yokaidict[index]["id"]] for index in yokaidict]))
     print(", ".join([items[itemdict[index]["item"]] for index in itemdict]))
     print(", ".join([equipments[equipmentdict[index]["equipment"]] for index in equipmentdict]))
+    print(", ".join([importants[importantdict[index]["important"]] for index in importantdict]))
+    print(", ".join([souls[souldict[index]["soul"]] for index in souldict]))
+
+    #write yokais back
+    j=0
+    for i in yokaidict:
+        f.seek(20744+92*int(j))
+        f.write(yokaidict[i]["num1"].to_bytes(1, "little"))
+        f.seek(20744+92*int(j)+2)
+        f.write(yokaidict[i]["num2"].to_bytes(1, "little"))
+        f.seek(20744+92*int(j)+4)
+        f.write(yokaidict[i]["id"].to_bytes(4, "little"))
+        f.seek(20744+92*int(j)+8)
+        f.write((bytearray([ord(k)for k in yokaidict[i]["nickname"]])+bytearray(24))[:24]) # to be more accurate to game could just append
+        f.seek(20744+92*int(j)+42)
+        f.write(yokaidict[i]["attack"].to_bytes(1, "little"))
+        f.seek(20744+92*int(j)+46)
+        f.write(yokaidict[i]["technique"].to_bytes(1, "little"))
+        f.seek(20744+92*int(j)+50)
+        f.write(yokaidict[i]["soultimate"].to_bytes(1, "little"))
+        f.seek(20744+92*int(j)+52)
+        f.write(yokaidict[i]["xp"].to_bytes(4, "little"))
+        f.seek(20744+92*int(j)+60)
+        f.write(yokaidict[i]["ownerid"].to_bytes(4, "little"))
+        statnum = 64
+        for stat in yokaidict[i]["stats"]:
+            f.seek(20744+92*int(j)+statnum)
+            f.write(yokaidict[i]["stats"][stat].to_bytes(1, "little"))
+            statnum +=1
+        f.seek(20744+92*int(j)+79)
+        f.write(yokaidict[i]["level"].to_bytes(1, "little"))
+        f.seek(20744+92*int(j)+84)
+        f.write(int(f'{yokaidict[i]["loaflevel"]:04b}'+f'{yokaidict[i]["attitude"]:04b}', 2).to_bytes(1, "little"))
+        j+=1
+
+    #write items back
+    j=0
+    for i in itemdict:
+        f.seek(11452+12*int(j))
+        f.write(itemdict[i]["num1"].to_bytes(1, "little"))
+        f.seek(11452+12*int(j)+2)
+        f.write(itemdict[i]["num2"].to_bytes(1, "little"))
+        f.seek(11452+12*int(j)+4)
+        f.write(itemdict[i]["item"].to_bytes(4, "little"))
+        f.seek(11452+12*int(j)+8)
+        f.write(itemdict[i]["amount"].to_bytes(4, "little"))
+        j+=1
+    
+    #write equipment back
+    j=0
+    for i in equipmentdict:
+        f.seek(16624+16*int(j))
+        f.write(equipmentdict[i]["num1"].to_bytes(1, "little"))
+        f.seek(16624+16*int(j)+1)
+        f.write(b"\x10") # i don't know what this does, may be unnecessary
+        f.seek(16624+16*int(j)+2)
+        f.write(equipmentdict[i]["num2"].to_bytes(1, "little"))
+        f.seek(16624+16*int(j)+4)
+        f.write(equipmentdict[i]["equipment"].to_bytes(4, "little"))
+        f.seek(16624+16*int(j)+8)
+        f.write(equipmentdict[i]["amount"].to_bytes(4, "little"))
+        f.seek(16624+16*int(j)+12)
+        f.write(equipmentdict[i]["used"].to_bytes(4, "little"))
+        j+=1
+
+    #write important back
+    j=0
+    for i in importantdict:
+        f.seek(18076+8*int(j))
+        f.write(importantdict[i]["num1"].to_bytes(1, "little"))
+        f.seek(18076+8*int(j)+1)
+        f.write(b"\x20") # i don't know what this does, may be unnecessary
+        f.seek(18076+8*int(j)+2)
+        f.write(importantdict[i]["num2"].to_bytes(1, "little"))
+        f.seek(18076+8*int(j)+4)
+        f.write(importantdict[i]["important"].to_bytes(4, "little"))
+        j+=1
+
+    #write soul back
+    j=0
+    for i in souldict:
+        f.seek(19528+12*int(j))
+        f.write(souldict[i]["num1"].to_bytes(1, "little"))
+        f.seek(19528+12*int(j)+1)
+        f.write(b"\x30") # i don't know what this does, may be unnecessary
+        f.seek(19528+12*int(j)+2)
+        f.write(souldict[i]["num2"].to_bytes(1, "little"))
+        f.seek(19528+12*int(j)+4)
+        f.write(souldict[i]["soul"].to_bytes(4, "little"))
+        f.seek(19528+12*int(j)+8)
+        f.write(souldict[i]["xp"].to_bytes(2, "little"))
+        f.seek(19528+12*int(j)+10)
+        f.write(souldict[i]["level"].to_bytes(1, "little"))
+        f.seek(19528+12*int(j)+11)
+        f.write(souldict[i]["used"].to_bytes(1, "little"))
+        j+=1
