@@ -29,8 +29,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-import json
-
 yokais = {
     2046011958: "Pandle", 
     1799751128: "Undy", 
@@ -1608,6 +1606,7 @@ def get(read, place, length=1, integer=True, half=False):
                 finished += chr(i)
             return finished
 
+
 def fix_dict(dict,ownerid=None): #works for equipment too
     for i in range(len(dict)):
         dict[i]["num1"]=i
@@ -1615,6 +1614,7 @@ def fix_dict(dict,ownerid=None): #works for equipment too
         if ownerid:
             dict[i]["ownerid"]=ownerid
     return dict
+
 
 def edit_yokai(yokaidict, ownerid, index, yokai=None, attitude=None, nickname=None):
     try:
@@ -1725,13 +1725,13 @@ def edit_soul(souldict, index, soul):
     return souldict
 
 #main
-file = "/Users/emilia/Documents/dev/ykw/ykw-editors/my-editor/2/game check copy.ywd"
-with open(file, "r+b") as f:
+file = "/Users/emilia/Documents/dev/ykw/ykw-editors/my-editor/2/game1.ywd"
+with open(file, "r+b") as f: #if you ignore num1 and num2 you can just fix_dict() them all at the end, idk if that would work best though
     #money offset: 67808
 
     yokaidict = {}
     index = 0
-    f.seek(20744) # 20744 is yokai info location. 1 yokai takes up 92 bytes
+    f.seek(20744) # 20744 is always yokai info location. 1 yokai takes up 92 bytes. offset same for all files. 00
     while True:
         yokai = f.read(92)
         if get(yokai, 0) == 0 and index != 0: #could be broken
@@ -1773,9 +1773,13 @@ with open(file, "r+b") as f:
     ownerid = yokaidict[0]["ownerid"]
     yokaidict = fix_dict(yokaidict, ownerid)
 
+    #offset at the location "0000000000fffffffffffe6d08feff000003482400feff"+29th byte aka item location
+    f.seek(0)
+    offset = f.read(20744).index(b"\x00\x00\x00\x00\x00\xFF\xFF\xFF\xFF\xFF\xFE\x6D\x08\xFE\xFF\x00\x00\x03\x48\x24\x00\xFE\xFF") + 29 #certainly broken or at least bad
+
     itemdict = {}
     index = 0
-    f.seek(11452) # 11452 is item info location. 1 item takes up 12 bytes
+    f.seek(offset) # offset is item info location. 1 item takes up 12 bytes. 00
     while True:
         item = f.read(12)
 
@@ -1794,7 +1798,7 @@ with open(file, "r+b") as f:
 
     equipmentdict = {}
     index = 0
-    f.seek(16624) # 16624 is equipment info location. 1 equipment takes up 16 bytes
+    f.seek(offset+5172) # offset + 5172 is equipment info location. 1 equipment takes up 16 bytes. 10
     while True:
         equipment = f.read(16)
 
@@ -1814,7 +1818,7 @@ with open(file, "r+b") as f:
 
     importantdict = {}
     index = 0
-    f.seek(18076) # 18076 is important info location. 1 important takes up 8 bytes
+    f.seek(offset+6624) # offset + 6624 is important info location. 1 important takes up 8 bytes. 20
     while True:
         important = f.read(8)
 
@@ -1832,7 +1836,7 @@ with open(file, "r+b") as f:
     
     souldict = {}
     index = 0
-    f.seek(19528) # 19528 is soul info location. 1 soul takes up 12 bytes
+    f.seek(offset+8076) # offset + 8076 is soul info location. 1 soul takes up 12 bytes. 30
     while True:
         soul = f.read(12)
 
@@ -1855,29 +1859,24 @@ with open(file, "r+b") as f:
 
 
     #editor goes here
-    if False:
+    if 0:
         #to append yokai: make index len(yokaidict). must include yokai, attitude & nickname if appending. (can all be "" except for yokai)
         #append a pandle
-        yokaidict = edit_yokai(yokaidict, ownerid, len(yokaidict), "pandle", "", "bob")
+        yokaidict = edit_yokai(yokaidict, ownerid, len(yokaidict), "pandle", "", "bob") #if you get the index wrong it will mess everything up
         #change to a rough ake
-        yokaidict = edit_yokai(yokaidict, ownerid, len(yokaidict)-1, "ake", "rough")
-
-        #to append item: make index len(itemdict). must include item & amount if appending.
-        #append 60 sandwitch
-        itemdict = edit_item(itemdict, len(itemdict), "sandwitch", 60)
-        #change to milk
-        itemdict = edit_item(itemdict, len(itemdict)-1, "milk") 
-
-        #to append equipment: make index len(equipmentdict). must include equipment & amount if appending.
+        yokaidict = edit_yokai(yokaidict, ownerid, len(yokaidict)-1, "shogunyan", "rough")
+        #append 60 milk twice
+        itemdict = edit_item(itemdict, len(itemdict), "milk", 60)
+        itemdict = edit_item(itemdict, len(itemdict), "milk", 60)
         #append 60 cheap bracelet
         equipmentdict = edit_equipment(equipmentdict, len(equipmentdict), "cheap bracelet", 60)
-        #change to power bracelet
-        equipmentdict = edit_equipment(equipmentdict, len(equipmentdict)-1, "power bracelet") #if you get the index wrong it will mess everything up
+        #append a swosh soul
+        souldict = edit_soul(souldict, len(souldict), "swosh")
 
-        #if removing, must dict = fix_dict(dict) afterwards
+        del itemdict[len(itemdict)-1] #if removing anything except last element, must dict = fix_dict(dict) afterwards. fixing often is good practice.
 
-    #print data
-    print(json.dumps(yokaidict, indent=2))
+    #print data & validity check
+    import json
     print(", ".join([yokais[yokaidict[index]["id"]] for index in yokaidict]))
     print(", ".join([items[itemdict[index]["item"]] for index in itemdict]))
     print(", ".join([equipments[equipmentdict[index]["equipment"]] for index in equipmentdict]))
@@ -1919,61 +1918,61 @@ with open(file, "r+b") as f:
     #write items back
     j=0
     for i in itemdict:
-        f.seek(11452+12*int(j))
-        f.write(itemdict[i]["num1"].to_bytes(1, "little"))
-        f.seek(11452+12*int(j)+2)
+        f.seek(offset+12*int(j))
+        f.write(itemdict[i]["num1"].to_bytes(1, "little")) 
+        f.seek(offset+12*int(j)+2)
         f.write(itemdict[i]["num2"].to_bytes(1, "little"))
-        f.seek(11452+12*int(j)+4)
+        f.seek(offset+12*int(j)+4)
         f.write(itemdict[i]["item"].to_bytes(4, "little"))
-        f.seek(11452+12*int(j)+8)
+        f.seek(offset+12*int(j)+8)
         f.write(itemdict[i]["amount"].to_bytes(4, "little"))
         j+=1
     
     #write equipment back
     j=0
     for i in equipmentdict:
-        f.seek(16624+16*int(j))
+        f.seek(offset+5172+16*int(j))
         f.write(equipmentdict[i]["num1"].to_bytes(1, "little"))
-        f.seek(16624+16*int(j)+1)
+        f.seek(offset+5172+16*int(j)+1)
         f.write(b"\x10") # i don't know what this does, may be unnecessary
-        f.seek(16624+16*int(j)+2)
+        f.seek(offset+5172+16*int(j)+2)
         f.write(equipmentdict[i]["num2"].to_bytes(1, "little"))
-        f.seek(16624+16*int(j)+4)
+        f.seek(offset+5172+16*int(j)+4)
         f.write(equipmentdict[i]["equipment"].to_bytes(4, "little"))
-        f.seek(16624+16*int(j)+8)
+        f.seek(offset+5172+16*int(j)+8)
         f.write(equipmentdict[i]["amount"].to_bytes(4, "little"))
-        f.seek(16624+16*int(j)+12)
+        f.seek(offset+5172+16*int(j)+12)
         f.write(equipmentdict[i]["used"].to_bytes(4, "little"))
         j+=1
 
     #write important back
     j=0
     for i in importantdict:
-        f.seek(18076+8*int(j))
+        f.seek(offset+6624+8*int(j))
         f.write(importantdict[i]["num1"].to_bytes(1, "little"))
-        f.seek(18076+8*int(j)+1)
+        f.seek(offset+6624+8*int(j)+1)
         f.write(b"\x20") # i don't know what this does, may be unnecessary
-        f.seek(18076+8*int(j)+2)
+        f.seek(offset+6624+8*int(j)+2)
         f.write(importantdict[i]["num2"].to_bytes(1, "little"))
-        f.seek(18076+8*int(j)+4)
+        f.seek(offset+6624+8*int(j)+4)
         f.write(importantdict[i]["important"].to_bytes(4, "little"))
         j+=1
 
     #write soul back
     j=0
     for i in souldict:
-        f.seek(19528+12*int(j))
+        f.seek(offset+8076+12*int(j))
         f.write(souldict[i]["num1"].to_bytes(1, "little"))
-        f.seek(19528+12*int(j)+1)
+        f.seek(offset+8076+12*int(j)+1)
         f.write(b"\x30") # i don't know what this does, may be unnecessary
-        f.seek(19528+12*int(j)+2)
+        f.seek(offset+8076+12*int(j)+2)
         f.write(souldict[i]["num2"].to_bytes(1, "little"))
-        f.seek(19528+12*int(j)+4)
+        f.seek(offset+8076+12*int(j)+4)
         f.write(souldict[i]["soul"].to_bytes(4, "little"))
-        f.seek(19528+12*int(j)+8)
+        f.seek(offset+8076+12*int(j)+8)
         f.write(souldict[i]["xp"].to_bytes(2, "little"))
-        f.seek(19528+12*int(j)+10)
+        f.seek(offset+8076+12*int(j)+10)
         f.write(souldict[i]["level"].to_bytes(1, "little"))
-        f.seek(19528+12*int(j)+11)
+        f.seek(offset+8076+12*int(j)+11)
         f.write(souldict[i]["used"].to_bytes(1, "little"))
         j+=1
