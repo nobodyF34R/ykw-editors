@@ -931,7 +931,7 @@ def allThornyan(file, code=-1952990963):
         )
         struct.pack_into("<i", data, pos + 4, code)
         pos += 0x5C
-    with open(file + ".edited.ywd", "xb") as f:
+    with open(file + ".edited.ywd", "w+b") as f: #xb
         f.write(data)
 
 if __name__ == "__main__":

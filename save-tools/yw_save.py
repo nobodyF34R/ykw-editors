@@ -331,7 +331,7 @@ def process(infile, outfile, gameType, isEncrypt, head=None):
         if gameType in games:
             out = games[gameType](data, isEncrypt, head=head)
         if out:
-            with open(outfile, "xb") as g:
+            with open(outfile, "w+b") as g: #xb
                 g.write(out)
             return 0
         return 1

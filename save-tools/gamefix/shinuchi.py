@@ -110,7 +110,7 @@ def validate(input_data):
                 pos = rng_0x07.xorshift(i + 1)
                 state[pos + 8], state[i + 8] = state[i + 8], state[pos + 8]
             if [x["type"] for x in sections][:0xF] != state[:0xF]:
-                print("Incorrect section order detected.")
+                #print("Incorrect section order detected.") #IMPORTANT commented out because it's annoy. it's probably something important though haha -Emilia
                 return fix_order(bs, sections, state[:0xF])
         else:
             return None
