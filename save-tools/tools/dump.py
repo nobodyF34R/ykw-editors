@@ -32,7 +32,7 @@ SOFTWARE.
 import struct
 import argparse
 
-youkai = {
+yokais = {
     -1952990963: "NULL",
     430840389: "Chansin",
     1433098476: "Dazzabel",
@@ -869,7 +869,7 @@ def main(file):
             else:
                 name = " ({}) ".format(name)
             print("{}{}Lv.{}\n IV_A:   {}\n IV_B_1: {}\n IV_B_2: {}\n EV:     {}\n rawEV:  {}".format(
-                    youkai.get(params[0], "(none)"),
+                    yokais.get(params[0], "(none)"),
                     name,
                     params[-2],
                     "-".join([str(x) for x in params[2:7]]),
@@ -925,8 +925,8 @@ def allThornyan(file, code=-1952990963):
         if params[0] == 0:
             continue
         print("{} -> {}".format(
-                youkai.get(params[0], "(unknown)"),
-                youkai.get(code, "(unknown)"),
+                yokais.get(params[0], "(unknown)"),
+                yokais.get(code, "(unknown)"),
             )
         )
         struct.pack_into("<i", data, pos + 4, code)

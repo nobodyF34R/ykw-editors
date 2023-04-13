@@ -1583,22 +1583,45 @@ reverse_souls = {v.lower(): k for k, v in souls.items()}
 
 attitudes = ["", "grouchy", "logical", "careful", "gentle", "twisted", "helpful", "rough", "brainy", "calm", "tender", "cruel", "devoted"]
 
+hqs = ["Not set.", "The Mountains", "The Woods", "The Seaside", "The Desert", "The Ocean", "The City", "The Countryside", "The North Pole", "Atlantis", "Bermuda Triangle", "The Sun", "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto", "The Past", "The Future", "Outer Space", "The Crank-a-kai", "Memory Store", "Mt. Wildwood", "Catfish Pond", "Triangle Park", "Banter Bakery", "Bountiful Blooms", "Timers & More", "Arcadia Arcade", "Rolling Waves", "Nom Burger", "Whatta Find", "Wisteria Gardens", "Excellent Tower", "Temple Park", "Gourd Pond", "Fortune Place", "Factory Row", "Hooligan Road", "Mt. Middleton", "Fountain Park", "Old Harrisville", "Old Springdale", "Flatpot Plains", "Asia", "North America", "South America", "Europe", "Africa", "Oceania", "Jungle Hunter", "Piggleston Bank", "Blossom Heights", "Everymart", "Shopper's Row", "Breezy Hills", "Harrisville", "San Fantastico", "Springdale", "The Yo-kai World", "It's a secret!"]
+
+jobs = ["Not set.", "New Student", "Good Student", "Bad Student", "Prodigy", "Graduate", "Trainee", "Mother", "Father", "Employee", "CEO", "Public Servant", "Singer", "Actor", "Actress", "Pop Idol", "Author", "Performer", "Dancer", "Game Developer", "Designer", "Artist", "Driver", "Beautician", "Engineer", "Chef", "Teacher", "Doctor", "Carpenter", "Journalist", "Worker", "Part-Timer", "Security Guard", "Freeloader", "Butler", "Next HarMEOWny", "Warrior", "Ninja", "Racer", "Athlete", "Cosmic Entity", "Superhero", "Diplomat", "Dancing Seaweed", "Champion", "Detective", "Yo-kai", "It's a secret!"]
+
+hobbys = ["Not set.", "Playing Sports", "Reading", "Singing Karaoke", "Studying", "Watching Anime", "Gaming", "Card Gaming", "Bowling", "Watching Movies", "Traveling", "Riding Trains", "Driving Cars", "Riding Motorbikes", "Drawing", "Making jewelry", "Making Models", "Cosplay", "Calligraphy", "Fishing", "Photography", "Catching Bugs", "Cycling", "Practicing Yoga", "Gathering Food", "Diving", "Surfing", "Surfing the Net", "Fashion", "Gardening", "Cooking", "Astronomy", "Hide-and-Seek", "Playing Checkers", "Playing Chess", "Jigsaw Puzzles", "Collecting stamps", "People Watching", "The Stock Market", "Time Traveling", "Bird Watching", "Yo-kai Watching", "Hunting", "Playing", "Training", "Sleeping", "It's a secret!",] #intentional typo
+
+ambitions = ["Not set.", "Athlete", "Comics Artist", "Singer", "Actor", "Actress", "Pop Idol", "Racer", "Carpenter", "Pastry Chef", "Doctor", "Beautician", "Musician", "Performer", "Rock Star", "Game Developer", "Employee", "CEO", "Public servant", "Teacher", "Artist", "Celebrity", "Partner", "Freeloader", "Grandpa", "Grandma", "Super Villain", "Superhero", "King", "Queen", "Elected Official", "Dog Trainer", "Soldier", "Giant", "World Champion", "Great Detective", "Wrestling Champ", "Fearless Ninja", "Mighty Warrior", "Infamous Pirate", "Master Thief", "Elemental Force", "Dancing Seaweed", "Manjimutt", "Moximous Mask", "Yo-kai", "Undecided", "It's a secret!"]
+
+games = ["BS","FS","PS"]
+
+titles = ["Novice","Rank 14","Rank 13","Rank 12","Rank 11","Rank 10","Rank 9","Rank 8","Rank 7","Rank 6","Rank 5","Rank 4","Rank 3","Rank 2","Rank 1","Expert","Mentor","Teacher","Professor","Champion","Master","Superhuman","Wizard","Ruler","Genie","Deity"]
+
+favourites = {
+    4045001763: "Shogunyan",
+    4206316172: "Shad. Venoct",
+    2747538935: "Sgt. Burly",
+    518528302: "Snartle",
+    2122007412: "Gilgaros"
+}
 
 #functions
-def get(read, place, length=1, integer=True, half=False):
+def get(read, place, length=1, integer=True, half=False, bigfloat=False):
     finished = ""
     if half:
         return [int(f'{read[place]:08b}'[:4], 2), int(f'{read[place]:08b}'[4:], 2)] 
     else:
-        if integer == None:
-            for i in read[place:place+length][-1::-1]:
-                finished += f'{i:08b}'
-            return finished
-        elif integer:
+        if integer == None: #float
+            if read[place:place+length] == b'\x00'*4: #5.877471754111438e-39
+                return 0
+            hex_int = int.from_bytes(read[place:place+length], "little")
+            sign_bit = (hex_int >> 31) & 1
+            exponent = ((hex_int >> 23) & 0xFF) - 127
+            mantissa = hex_int & 0x7FFFFF
+            return (-1)**sign_bit*(1+mantissa/2**23)*2**exponent #may have to remove rounding
+        elif integer: #int
             for i in read[place:place+length][-1::-1]:
                 finished += f'{i:08b}'
             return int(finished, 2)
-        else:
+        else: #string
             if read[place:place+length][0]==0:
                 return ""
             for i in read[place:place+length]:
@@ -1606,6 +1629,13 @@ def get(read, place, length=1, integer=True, half=False):
                     break
                 finished += chr(i)
             return finished
+
+def give(floa): #some shenanigans to convert a float to bytes
+    if floa == 0: return b"\x00"*4
+    e = 0
+    while floa >= 2: floa, e = floa / 2, e + 1
+    while floa < 1: floa, e = floa * 2, e - 1
+    return (0 | (e + 127) << 23 | int((floa - 1) * (2**23))).to_bytes(4, 'little')
 
 
 def fix_dict(dict): #pointless at the moment
@@ -1628,7 +1658,7 @@ def edit_yokai(yokaidict, ownerid, index, yokai=None, attitude=None, nickname=No
                 yokaidict[index]["num1"] = j
                 break
             if temp_yokaidict[i]["num1"] > yokaidict[index]["num1"]:
-                yokaidict[index]["num1"] = temp_yokaidict[i]["num1"]
+                yokaidict[index]["num1"] = temp_yokaidict[i]["num1"]+1
             j+=1
         yokaidict[index]["num2"] = 1
         for i in range(j):
@@ -1649,21 +1679,21 @@ def edit_yokai(yokaidict, ownerid, index, yokai=None, attitude=None, nickname=No
     yokaidict[index]["xp"] = 0 #0 because level is 99
     yokaidict[index]["ownerid"] = ownerid
     yokaidict[index]["stats"] = {
-        "IV_HP": 16, #IV: HP / 2 + Str + Spr + Def + Spd = 40
+        "IV_HP": 16, #IV rules: HP / 2 + Str + Spr + Def + Spd = 40
         "IV_Str": 8, 
         "IV_Spr": 8, 
         "IV_Def": 8, 
         "IV_Spd": 8, 
-        "CB_HP": 8, #EV: HP / 2 + Str + Spr + Def + Spd <= 20
+        "CB_HP": 8, #EV rules: HP / 2 + Str + Spr + Def + Spd <= 20
         "CB_Str": 4, 
         "CB_Spr": 4, 
         "CB_Def": 4, 
         "CB_Spd": 4, 
-        "SC_HP": 15, #brokennnnn (probably written in a different way) +25, -10 per stat TODO figure out
-        "SC_Str": 15, 
-        "SC_Spr": 15, 
-        "SC_Def": 15, 
-        "SC_Spd": 15  
+        "SC_HP": 0, #brokennnnn (probably written in a different way) +25, -10 per stat TODO figure out 15?
+        "SC_Str": 0, 
+        "SC_Spr": 0, 
+        "SC_Def": 0, 
+        "SC_Spd": 0  
     }
     yokaidict[index]["level"] = 99 #255 works too but it automatically lowers to 99
     yokaidict[index]["loaflevel"] = 5 #2?
@@ -1713,7 +1743,7 @@ def edit_important(importantdict, index, important):
         importantdict[index]
     except:
         importantdict[index] = {}
-    importantdict[index]["num1"] = index #made redundant by fix_dict
+    importantdict[index]["num1"] = index
     importantdict[index]["num2"] = index+1
     try:
         importantdict[index]["important"] = reverse_importants[important]
@@ -1726,7 +1756,7 @@ def edit_soul(souldict, index, soul):
         souldict[index]
     except:
         souldict[index] = {}
-    souldict[index]["num1"] = index #made redundant by fix_dict
+    souldict[index]["num1"] = index
     souldict[index]["num2"] = index+1
     try:
         souldict[index]["soul"] = reverse_souls[soul]
@@ -1737,8 +1767,71 @@ def edit_soul(souldict, index, soul):
     souldict[index]["used"] = 0
     return souldict
 
+def edit_contact(contactdict, index, name=None, ownerid=None, comment=None, favourite=None, game=None, face=None, hq=None, job=None, hobby=None, ambition=None, yokai=None): #can alse be used for profile
+    try: #edited to avoid overlapping text
+        contactdict[index]
+    except:
+        contactdict[index] = {}
+    if name != None:
+        contactdict[index]["name"] = name
+    if ownerid != None:
+        contactdict[index]["ownerid"] = ownerid
+    if comment != None:
+        contactdict[index]["comment"] = comment
+    if favourite != None:
+        contactdict[index]["favourite"] = favourite #TODO compile a list of which value corresponds to which yokai
+    contactdict[index]["bronze"] = 99 #255
+    contactdict[index]["silver"] = 99 #255
+    contactdict[index]["gold"] = 99 #255
+    if game != None:
+        contactdict[index]["game"] = game
+    contactdict[index]["playtime"] = 4659.9997222222222 #999.9997222222222 ingame max
+    contactdict[index]["tunnel"] = 9999999 #2147483647
+    if face != None:
+        contactdict[index]["face"] = face
+    if hq != None:
+        try:
+            contactdict[index]["hq"] = hqs.index(hq)
+        except:
+            contactdict[index]["hq"] = hq
+        contactdict[index]["hq"] = hq
+    if job != None:
+        try:
+            contactdict[index]["job"] = jobs.index(job)
+        except:
+            contactdict[index]["job"] = job
+    if hobby != None:
+        try:
+            contactdict[index]["hobby"] = hobbys.index(hobby)
+        except:
+            contactdict[index]["hobby"] = hobby
+    if ambition != None:
+        try:
+            contactdict[index]["ambition"] = ambitions.index(ambition)
+        except:
+            contactdict[index]["ambition"] = ambition
+    contactdict[index]["requests"] = 255
+    contactdict[index]["arrested"] = 255
+    contactdict[index]["medalium"] = 255 #technically 100 is max as it's a percentage
+    contactdict[index]["bugs"] = 255
+    contactdict[index]["fish"] = 255
+    contactdict[index]["battles"] = 255
+    contactdict[index]["battles"] = 255
+    contactdict[index]["personal"] = 65535
+    contactdict[index]["public"] = 9999 #65535
+    contactdict[index]["rankl"] = 65535
+    contactdict[index]["local"] = 99 #65535
+    contactdict[index]["rankr"] = 65535
+    contactdict[index]["random"] = 65535
+    contactdict[index]["tagged"] = 65535
+    contactdict[index]["photographs"] = 65535
+    if yokai != None:
+        contactdict[index]["yokai"] = yokai
+    contactdict[index]["races"] = [.01,.01,.01,.01] #TODO could try 0.00001 so it shows as a 0 in the game
+    return contactdict
+
 #main
-def main(file): #TODO fix items and yokai
+def main(file): #TODO fix items and yokai. could make all dicts lists
     try:
         file = open(file, "r+b")
     except:
@@ -1756,8 +1849,8 @@ def main(file): #TODO fix items and yokai
                 break
 
             yokaidict[index] = {
-                "num1": get(yokai, 0), #0
-                "num2": get(yokai, 2), #2
+                "num1": get(yokai, 0, 2), #0
+                "num2": get(yokai, 2, 2), #2
                 "id": get(yokai, 4, 4), #4-07
                 "nickname": get(yokai, 8, 24, False), #8-32 maybe broken
                 "attack": get(yokai, 42), #42
@@ -1794,10 +1887,6 @@ def main(file): #TODO fix items and yokai
         f.seek(0)
         offset = f.read(20744).index(b"\xFE\x6D\x08\xFE\xFF\x00\x00\x03\x48\x24\x00\xFE\xFF")+19 #certainly broken or at least bad
 
-        f.seek(20744)
-        f.seek(f.read().index(b"\xfe\xff\xd5\x08\x14\x90\x24\x00")+8+20744) #there's definitely a better way to do this
-        ownerid = get(f.read(4),0,4)
-
         itemdict = {}
         index = 0
         f.seek(offset) # offset is item info location. 1 item takes up 12 bytes. 00
@@ -1808,13 +1897,14 @@ def main(file): #TODO fix items and yokai
                 break
 
             itemdict[index] = {
-                "num1": get(item, 0), #0
-                "num2": get(item, 2), #2
+                "num1": get(item, 0, 2), #0
+                "num2": get(item, 2, 2), #2
                 "item": get(item, 4, 4), #4
                 "amount": get(item, 8, 4) #8
             }
 
             index += 1
+        original_item_amount = index
 
         equipmentdict = {}
         index = 0
@@ -1826,14 +1916,15 @@ def main(file): #TODO fix items and yokai
                 break
 
             equipmentdict[index] = {
-                "num1": get(equipment, 0), #0
-                "num2": get(equipment, 2), #2
+                "num1": get(equipment, 0, 2), #0
+                "num2": get(equipment, 2, 2), #2
                 "equipment": get(equipment, 4, 4), #4
                 "amount": get(equipment, 8, 4), #8 #maybe 1 byte
                 "used": get(equipment, 12, 4) #i think this is how many are currently equipped
             }
 
             index += 1
+        original_equipment_amount = index
 
         importantdict = {}
         index = 0
@@ -1845,12 +1936,13 @@ def main(file): #TODO fix items and yokai
                 break
 
             importantdict[index] = {
-                "num1": get(important, 0), #0
-                "num2": get(important, 2), #2 unsure.
+                "num1": get(important, 0, 2), #0
+                "num2": get(important, 2, 2), #2 unsure.
                 "important": get(important, 4, 4), #4
             }
 
             index += 1
+        original_important_amount = index
 
         souldict = {}
         index = 0
@@ -1862,8 +1954,8 @@ def main(file): #TODO fix items and yokai
                 break
 
             souldict[index] = {
-                "num1": get(soul, 0), #0
-                "num2": get(soul, 2), #2
+                "num1": get(soul, 0, 2), #0
+                "num2": get(soul, 2, 2), #2
                 "soul": get(soul, 4, 4), #4
                 "xp": get(soul, 8, 2), #8
                 "level": get(soul, 10), #8
@@ -1871,24 +1963,154 @@ def main(file): #TODO fix items and yokai
             }
 
             index += 1
+        original_soul_amount = index
+
+        #extra stuff TODO add stuff like story progression
+        f.seek(20744)
+        postyokai = f.read() #for the stuff below that i commented out TODO
+        unknown = postyokai.index(b"\xfe\xff\xd5\x08\x14\x90\x24\x00")+8+20744
+        f.seek(unknown)  # this is your profile info location. your profile takes up 156 bytes
+        contact = f.read(156)
+        profile = { #name is stored in the head file (can decrypt head.yw as a yokai watch 1 save. may impliment in the future)
+            "ownerid": get(contact, 0, 4),
+            "comment": get(contact, 4, 64, False),
+            "favourite": get(contact, 68, 4), #favourite yokai (by choice), TODO compile a list of which value corresponds to which yokai
+            "bronze": get(contact, 72), #what medals they have
+            "silver": get(contact, 73),
+            "gold": get(contact, 74),
+            "game": get(contact, 75),
+            "playtime": get(contact, 76, 3)/3600, #in hours
+            #00 inbetween
+            "tunnel": get(contact, 80, 4),
+            "face": get(contact, 84, 4), #can be a yokai or human, etc. TODO compile a list of which value corresponds to which yokai
+            "hq": get(contact, 88),
+            "job": get(contact, 89),
+            "hobby": get(contact, 90),
+            "ambition": get(contact, 91), 
+            #00 inbetween
+            "requests": get(contact, 93), #i can't remember what this is lol
+            "arrested": get(contact, 94), #yo-criminals
+            "medalium": get(contact, 95), #percentage
+            "bugs": get(contact, 96),
+            "fish": get(contact, 97),
+            "battles": get(contact, 98),
+            #something here?
+            "personal": get(contact, 100, 2), #best tournament run, may have to remove ", 2"
+            "public": get(contact, 102, 2), #best public tournament run
+            "rankl": get(contact, 104, 2), #wether you're a beginner or master in local battles TODO look into this
+            "local": get(contact, 106, 2), #local battle wins
+            "rankr": get(contact, 108, 2),
+            "random": get(contact, 110, 2),
+            "tagged": get(contact, 112, 2),
+            "photographs": get(contact, 114, 2),
+            "yokai": [ #favourite yokai 1-6 (by playtime), TODO compile a list of which value corresponds to which yokai
+                get(contact, 116, 4), #if it is a 0 then there is no yokai in the slot. (early game)
+                get(contact, 120, 4),
+                get(contact, 124, 4),
+                get(contact, 128, 4),
+                get(contact, 132, 4),
+                get(contact, 136, 4)
+            ],
+            "races": [ #if it is a 0 then the race has not been completed. in minutes (floating point) displays in-game to two decimal places without rounding
+                get(contact, 140, 4, None), #uptown springdale
+                get(contact, 144, 4, None), #harrisville
+                get(contact, 148, 4, None), #san fantastico
+                get(contact, 152, 4, None), #(old) springdale
+            ]
+        }
+
+        contactdict = {}
+        index = 0
+        while True: # this is the contact info location. 1 contact takes up 184 bytes
+            contact = f.read(184)
+
+            if get(contact, 0) == 0:
+                break
+
+            contactdict[index] = { #max 50 contacts
+                "name": get(contact, 0, 28, False), #0
+                "ownerid": get(contact, 28, 4), #28
+                "comment": get(contact, 32, 64, False), #32
+                "favourite": get(contact, 96, 4), #favourite yokai (by choice), TODO compile a list of which value corresponds to which yokai
+                "bronze": get(contact, 100), #what medals they have
+                "silver": get(contact, 101),
+                "gold": get(contact, 102),
+                "game": get(contact, 103),
+                "playtime": get(contact, 104, 3)/3600, #in hours
+                #00 inbetween
+                "tunnel": get(contact, 108, 4),
+                "face": get(contact, 112, 4), #can be a yokai or human, etc. TODO compile a list of which value corresponds to which yokai
+                "hq": get(contact, 116),
+                "job": get(contact, 117),
+                "hobby": get(contact, 118),
+                "ambition": get(contact, 119), 
+                #00 inbetween
+                "requests": get(contact, 121), #i can't remember what this is lol
+                "arrested": get(contact, 122), #yo-criminals
+                "medalium": get(contact, 123), #percentage
+                "bugs": get(contact, 124),
+                "fish": get(contact, 125),
+                "battles": get(contact, 126),
+                #something here?
+                "personal": get(contact, 128, 2), #best tournament run, may have to remove ", 2"
+                "public": get(contact, 130, 2), #best public tournament run
+                "rankl": get(contact, 132, 2), #wether you're a beginner or master in local battles TODO look into this
+                "local": get(contact, 134, 2), #local battle wins
+                "rankr": get(contact, 132, 2),
+                "random": get(contact, 138, 2),
+                "tagged": get(contact, 140, 2),
+                "photographs": get(contact, 142, 2),
+                "yokai": [ #favourite yokai 1-6 (by playtime), TODO compile a list of which value corresponds to which yokai
+                    get(contact, 144, 4),
+                    get(contact, 148, 4),
+                    get(contact, 152, 4),
+                    get(contact, 156, 4),
+                    get(contact, 160, 4),
+                    get(contact, 164, 4)
+                ],
+                "races": [ #if it is a 0 then the race has not been completed. in minutes (floating point)
+                    get(contact, 168, 4, None), #uptown springdale
+                    get(contact, 172, 4, None), #harrisville
+                    get(contact, 176, 4, None), #san fantastico
+                    get(contact, 180, 4, None), #(old) springdale
+                ]
+                
+            }
+
+            index += 1
+        original_contact_amount = index
+
+        # f.seek(postyokai.index(b"\xff\xfe\x6b\x08\xfe\xff")+20744) #!P & T ..... currently i have no idea what this is or how to use it. part of it is probably the medallium info & story progress
+        # unknown1 = f.read(150) #138
+        # # f.seek(postyokai.index(b"\xff\xfe\xd5\x08\xfe\xff\xd5\x08\x15")+20744) maybe this T
+        # # unknown15 = f.read(10)
+        # f.seek(postyokai.index(b"\xff\xfe\xd5\x08\xfe\xff\xd5\x08\x12")+20744) #N`
+        # unknown2 = f.read(49)
+        # f.seek(postyokai.index(b"\xff\xfe\xd5\x08\xfe\xff\xd5\x08\x0e\x00")+20744) #wArt
+        # unknown3 = f.read(1036)
+        # f.seek(postyokai.index(b"\xff\xfe\xd5\x08\xfe\xff\x00\x00\x08")+20744) #<==>
+        # unknown4 = f.read(272)
+        # f.seek(postyokai.index(b"\xff\xfe\x47\x08\xfe")+20744) #??@@AABBCCDD
+        # unknown5 = f.read(1636)
 
         #editor goes here
-        itemdict = edit_item(itemdict, len(itemdict), "milk", 60)
+        del contactdict[len(contactdict)-1]
+        contactdict = edit_contact(contactdict, len(contactdict)-1)
         if 0:
             #to append yokai: make index len(yokaidict). must include yokai, attitude & nickname if appending. (can all be "" except for yokai)
             #append a pandle
-            yokaidict = edit_yokai(yokaidict, ownerid, len(yokaidict), "pandle", "", "bob") #if you get the index wrong it will mess everything up
+            yokaidict = edit_yokai(yokaidict, profile["ownerid"], len(yokaidict), "pandle", "", "bob") #if you get the index wrong it will mess everything up
             #change to a rough ake
-            yokaidict = edit_yokai(yokaidict, ownerid, len(yokaidict)-1, "ake", "rough") #broken
+            yokaidict = edit_yokai(yokaidict, profile["ownerid"], len(yokaidict)-1, "ake", "rough") #broken
             #append 60 milk
-            itemdict = edit_item(itemdict, len(itemdict), "milk", 60) #currently broken, max is probably 255
+            itemdict = edit_item(itemdict, len(itemdict), "milk", 65535) #currently broken, max is 255, 65535 or 99
             #append 60 cheap bracelet
-            equipmentdict = edit_equipment(equipmentdict, len(equipmentdict), "cheap bracelet", 255)
+            equipmentdict = edit_equipment(equipmentdict, len(equipmentdict), "cheap bracelet", 65535) #255 works, testing 65535
             #append a swosh soul
             souldict = edit_soul(souldict, len(souldict), "snartle")
             importantdict = edit_important(importantdict, len(importantdict), "hose")
 
-            del itemdict[len(itemdict)-1] #broken
+            del itemdict[len(itemdict)-1]
 
         #print data & validity check
         if 1:
@@ -1903,115 +2125,228 @@ def main(file): #TODO fix items and yokai
         if 1:
             j=0
             for i in itemdict:
-                f.seek(offset+12*int(j))
-                f.write(itemdict[i]["num1"].to_bytes(1, "little")) 
-                f.seek(offset+12*int(j)+2)
-                f.write(itemdict[i]["num2"].to_bytes(1, "little"))
-                f.seek(offset+12*int(j)+4)
+                f.seek(offset+12*j)
+                f.write(itemdict[i]["num1"].to_bytes(2, "little")) 
+                f.seek(offset+12*j+2)
+                f.write(itemdict[i]["num2"].to_bytes(2, "little"))
+                f.seek(offset+12*j+4)
                 f.write(itemdict[i]["item"].to_bytes(4, "little"))
-                f.seek(offset+12*int(j)+8)
+                f.seek(offset+12*j+8)
                 f.write(itemdict[i]["amount"].to_bytes(4, "little"))
                 j+=1
+            
+            #clear item overflow
+            if original_item_amount - len(itemdict) > 0: #TODO test if this works
+                f.seek(offset+12*j)
+                f.write(b"\x00"*12*(original_item_amount - len(itemdict)))
             
             #write equipment back
             j=0
             for i in equipmentdict:
-                f.seek(offset+5172+16*int(j))
-                f.write(equipmentdict[i]["num1"].to_bytes(1, "little"))
-                f.seek(offset+5172+16*int(j)+1)
+                f.seek(offset+5172+16*j)
+                f.write(equipmentdict[i]["num1"].to_bytes(2, "little"))
+                f.seek(offset+5172+16*j+1)
                 f.write(b"\x10") # i don't know what this does, may be unnecessary
-                f.seek(offset+5172+16*int(j)+2)
-                f.write(equipmentdict[i]["num2"].to_bytes(1, "little"))
-                f.seek(offset+5172+16*int(j)+4)
+                f.seek(offset+5172+16*j+2)
+                f.write(equipmentdict[i]["num2"].to_bytes(2, "little"))
+                f.seek(offset+5172+16*j+4)
                 f.write(equipmentdict[i]["equipment"].to_bytes(4, "little"))
-                f.seek(offset+5172+16*int(j)+8)
+                f.seek(offset+5172+16*j+8)
                 f.write(equipmentdict[i]["amount"].to_bytes(4, "little"))
-                f.seek(offset+5172+16*int(j)+12)
+                f.seek(offset+5172+16*j+12)
                 f.write(equipmentdict[i]["used"].to_bytes(4, "little"))
                 j+=1
+
+            #clear equipment overflow
+            if original_equipment_amount - len(equipmentdict) > 0: #TODO test if this works
+                f.seek(offset+5172+16*j)
+                f.write(b"\x00"*16*(original_equipment_amount - len(equipmentdict)))
 
             #write important back
             j=0
             for i in importantdict:
-                f.seek(offset+6624+8*int(j))
-                f.write(importantdict[i]["num1"].to_bytes(1, "little"))
-                f.seek(offset+6624+8*int(j)+1)
+                f.seek(offset+6624+8*j)
+                f.write(importantdict[i]["num1"].to_bytes(2, "little"))
+                f.seek(offset+6624+8*j+1)
                 f.write(b"\x20") # i don't know what this does, may be unnecessary
-                f.seek(offset+6624+8*int(j)+2)
-                f.write(importantdict[i]["num2"].to_bytes(1, "little"))
-                f.seek(offset+6624+8*int(j)+4)
+                f.seek(offset+6624+8*j+2)
+                f.write(importantdict[i]["num2"].to_bytes(2, "little"))
+                f.seek(offset+6624+8*j+4)
                 f.write(importantdict[i]["important"].to_bytes(4, "little"))
                 j+=1
+
+            #clear important overflow
+            if original_important_amount - len(importantdict) > 0: #TODO test if this works
+                f.seek(offset+6624+8*j)
+                f.write(b"\x00"*8*(original_important_amount - len(importantdict)))
 
             #write soul back
             j=0
             for i in souldict:
-                f.seek(offset+8076+12*int(j))
-                f.write(souldict[i]["num1"].to_bytes(1, "little"))
-                f.seek(offset+8076+12*int(j)+1)
+                f.seek(offset+8076+12*j)
+                f.write(souldict[i]["num1"].to_bytes(2, "little"))
+                f.seek(offset+8076+12*j+1)
                 f.write(b"\x30") # i don't know what this does, may be unnecessary
-                f.seek(offset+8076+12*int(j)+2)
-                f.write(souldict[i]["num2"].to_bytes(1, "little"))
-                f.seek(offset+8076+12*int(j)+4)
+                f.seek(offset+8076+12*j+2)
+                f.write(souldict[i]["num2"].to_bytes(2, "little"))
+                f.seek(offset+8076+12*j+4)
                 f.write(souldict[i]["soul"].to_bytes(4, "little"))
-                f.seek(offset+8076+12*int(j)+8)
+                f.seek(offset+8076+12*j+8)
                 f.write(souldict[i]["xp"].to_bytes(2, "little"))
-                f.seek(offset+8076+12*int(j)+10)
+                f.seek(offset+8076+12*j+10)
                 f.write(souldict[i]["level"].to_bytes(1, "little"))
-                f.seek(offset+8076+12*int(j)+11)
+                f.seek(offset+8076+12*j+11)
                 f.write(souldict[i]["used"].to_bytes(1, "little"))
                 j+=1
 
-            #write yokais back
+            #clear soul overflow
+            if original_soul_amount - len(souldict) > 0: #TODO test if this works
+                f.seek(offset+8076+12*j)
+                f.write(b"\x00"*12*(original_soul_amount - len(souldict)))
+
+            #write yokai back
             j=0
             yokaidict = sorted(yokaidict.values(), key=lambda x:x["num1"]) #reorder them based on num1
             for i in range(len(yokaidict)):
-                f.seek(20744+92*int(j))
-                f.write(yokaidict[i]["num1"].to_bytes(1, "little"))
-                f.seek(20744+92*int(j)+2)
-                f.write(yokaidict[i]["num2"].to_bytes(1, "little"))
-                f.seek(20744+92*int(j)+4)
+                f.seek(20744+92*j)
+                f.write(yokaidict[i]["num1"].to_bytes(2, "little")) #no need to seek, may remove
+                f.seek(20744+92*j+2)
+                f.write(yokaidict[i]["num2"].to_bytes(2, "little"))
+                f.seek(20744+92*j+4)
                 f.write(yokaidict[i]["id"].to_bytes(4, "little"))
-                f.seek(20744+92*int(j)+8)
+                f.seek(20744+92*j+8)
                 f.write((bytearray([ord(k)for k in yokaidict[i]["nickname"]])+bytearray(24))[:24]) # to be more accurate to game could just append
-                f.seek(20744+92*int(j)+42)
+                f.seek(20744+92*j+42)
                 f.write(yokaidict[i]["attack"].to_bytes(1, "little"))
-                f.seek(20744+92*int(j)+46)
+                f.seek(20744+92*j+46)
                 f.write(yokaidict[i]["technique"].to_bytes(1, "little"))
-                f.seek(20744+92*int(j)+50)
+                f.seek(20744+92*j+50)
                 f.write(yokaidict[i]["soultimate"].to_bytes(1, "little"))
-                f.seek(20744+92*int(j)+52)
+                f.seek(20744+92*j+52)
                 f.write(yokaidict[i]["xp"].to_bytes(4, "little"))
-                f.seek(20744+92*int(j)+60)
+                f.seek(20744+92*j+60)
                 f.write(yokaidict[i]["ownerid"].to_bytes(4, "little"))
                 statnum = 64
                 for stat in yokaidict[i]["stats"]:
-                    f.seek(20744+92*int(j)+statnum)
+                    f.seek(20744+92*j+statnum)
                     f.write(yokaidict[i]["stats"][stat].to_bytes(1, "little"))
                     statnum +=1
-                f.seek(20744+92*int(j)+79)
+                f.seek(20744+92*j+79)
                 f.write(yokaidict[i]["level"].to_bytes(1, "little"))
-                f.seek(20744+92*int(j)+84)
+                f.seek(20744+92*j+84)
                 f.write(int(f'{yokaidict[i]["loaflevel"]:04b}'+f'{yokaidict[i]["attitude"]:04b}', 2).to_bytes(1, "little"))
                 j+=1
 
             #clear yokai overflow
             if original_yokai_amount - len(yokaidict) > 0: #TODO test if this works
-                f.seek(20744+92*int(j))
+                f.seek(20744+92*j)
                 f.write(b"\x00"*92*(original_yokai_amount - len(yokaidict)))
 
+            #write profile back (the beginning part of your contact list)
+            f.seek(unknown)
+            f.write(profile["ownerid"].to_bytes(4, "little"))
+            f.write((bytearray([ord(k)for k in profile["comment"]])+bytearray(64))[:64])
+            f.write(profile["favourite"].to_bytes(4, "little"))
+            f.write(profile["bronze"].to_bytes(1, "little"))
+            f.write(profile["silver"].to_bytes(1, "little"))
+            f.write(profile["gold"].to_bytes(1, "little"))
+            f.write(profile["game"].to_bytes(1, "little"))
+            f.write(int(profile["playtime"]*3600).to_bytes(3, "little")) #may cause problems
+            f.seek(unknown+80)
+            f.write(profile["tunnel"].to_bytes(4, "little"))
+            f.write(profile["face"].to_bytes(4, "little"))
+            f.write(profile["hq"].to_bytes(1, "little"))
+            f.write(profile["job"].to_bytes(1, "little"))
+            f.write(profile["hobby"].to_bytes(1, "little"))
+            f.write(profile["ambition"].to_bytes(1, "little"))
+            f.seek(unknown+93)
+            #00 inbetween
+            f.write(profile["requests"].to_bytes(1, "little"))
+            f.write(profile["arrested"].to_bytes(1, "little"))
+            f.write(profile["medalium"].to_bytes(1, "little"))
+            f.write(profile["bugs"].to_bytes(1, "little"))
+            f.write(profile["fish"].to_bytes(1, "little"))
+            f.write(profile["battles"].to_bytes(1, "little"))
+            f.seek(unknown+100)
+            #something here?
+            f.write(profile["personal"].to_bytes(2, "little")) #may have to rename this
+            f.write(profile["public"].to_bytes(2, "little"))
+            f.write(profile["rankl"].to_bytes(2, "little")) #ffff = master, 0000 = beginner
+            f.write(profile["local"].to_bytes(2, "little"))
+            f.write(profile["rankr"].to_bytes(2, "little")) #120 >= master (maybe less)
+            f.write(profile["random"].to_bytes(2, "little"))
+            f.write(profile["tagged"].to_bytes(2, "little"))
+            f.write(profile["photographs"].to_bytes(2, "little"))
+            for k in profile["yokai"]:
+                f.write(k.to_bytes(4, "little"))
+            for k in profile["races"]:
+                f.write(give(k))
+
+            #no need to clear profile overflow as it can't be deleted
+
+            #write contact back
+            j=0
+            for i in contactdict:
+                f.write((bytearray([ord(k)for k in contactdict[i]["name"]])+bytearray(28))[:28])
+                f.write(contactdict[i]["ownerid"].to_bytes(4, "little"))
+                f.write((bytearray([ord(k)for k in contactdict[i]["comment"]])+bytearray(64))[:64])
+                f.write(contactdict[i]["favourite"].to_bytes(4, "little"))
+                f.write(contactdict[i]["bronze"].to_bytes(1, "little"))
+                f.write(contactdict[i]["silver"].to_bytes(1, "little"))
+                f.write(contactdict[i]["gold"].to_bytes(1, "little"))
+                f.write(contactdict[i]["game"].to_bytes(1, "little"))
+                f.write(int(contactdict[i]["playtime"]*3600).to_bytes(3, "little")) #may cause problems
+                f.seek(unknown+156+184*j+108)
+                f.write(contactdict[i]["tunnel"].to_bytes(4, "little"))
+                f.write(contactdict[i]["face"].to_bytes(4, "little"))
+                f.write(contactdict[i]["hq"].to_bytes(1, "little"))
+                f.write(contactdict[i]["job"].to_bytes(1, "little"))
+                f.write(contactdict[i]["hobby"].to_bytes(1, "little"))
+                f.write(contactdict[i]["ambition"].to_bytes(1, "little"))
+                f.seek(unknown+156+184*j+121)
+                #00 inbetween
+                f.write(contactdict[i]["requests"].to_bytes(1, "little"))
+                f.write(contactdict[i]["arrested"].to_bytes(1, "little"))
+                f.write(contactdict[i]["medalium"].to_bytes(1, "little"))
+                f.write(contactdict[i]["bugs"].to_bytes(1, "little"))
+                f.write(contactdict[i]["fish"].to_bytes(1, "little"))
+                f.write(contactdict[i]["battles"].to_bytes(1, "little"))
+                f.seek(unknown+156+184*j+128)
+                #something here?
+                f.write(contactdict[i]["personal"].to_bytes(2, "little"))
+                f.write(contactdict[i]["public"].to_bytes(2, "little"))
+                f.write(contactdict[i]["rankl"].to_bytes(2, "little")) #ffff = master, 0000 = beginner
+                f.write(contactdict[i]["local"].to_bytes(2, "little"))
+                f.write(contactdict[i]["rankr"].to_bytes(2, "little")) #120 >= master (maybe less)
+                f.write(contactdict[i]["random"].to_bytes(2, "little"))
+                f.write(contactdict[i]["tagged"].to_bytes(2, "little"))
+                f.write(contactdict[i]["photographs"].to_bytes(2, "little"))
+                for k in contactdict[i]["yokai"]:
+                    f.write(k.to_bytes(4, "little"))
+                for k in contactdict[i]["races"]:
+                    f.write(give(k))
+                j+=1
+
+            #clear contact overflow
+            if original_contact_amount - len(contactdict) > 0: #TODO test if this works
+                f.seek(unknown+156+184*j)
+                f.write(b"\x00"*184*(original_contact_amount - len(contactdict)))
+                
         f.seek(0)
         return f.read() #for the .yw files
 
 
-infile = "/Users/emilia/Documents/dev/ykw/ykw-editors/my-editor/2/game check copy.ywd"
+infile = "/Volumes/3DS/3ds/Checkpoint/saves/0x01B28 YO-KAI WATCH 2  PSYCHIC …/20230410-142023/game1.yw"
 
 if infile[-3:] == "ywd":
     main(infile)
 else:
     from pathlib import Path
     import sys
-    sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"/save-tools") #probably broken on windows TODO fix & make nicer
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"/save-tools") #TODO make nicer
+    except:
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"\\save-tools")
     import yw_save
     with open(infile, "r+b") as f:
         if 0:

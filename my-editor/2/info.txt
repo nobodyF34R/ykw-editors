@@ -1,24 +1,25 @@
-python '/Users/emilia/Documents/dev/ykw/ykw-editors/save-tools/yw_save.py' --decrypt --game yw2 --head 
+python '/Users/emilia/Documents/dev/ykw/ykw-editors/save-tools/yw_save.py' --encrypt --game yw2 --head 
 
-adds to 53
+#new->old
+shogunyan =    4045001763->2534548502
+shad. venoct = 4206316172->2629614265
+sgt. burly =   2747538935->3318738370
+snartle =      0518528302->2028203291
+gilgaros =     2122007412->0410039105
 
-hp: 28 highest example
-
-other: 15
 
 middle: 16, 8
+IV rules: HP / 2 + Str + Spr + Def + Spd = 40
 
-max is probably 32, 16 (maybe 31, 15)
-
-ev: 4,5,5,4,4
-ev: 12?
+ev: 8, 8
+EV rules: HP / 2 + Str + Spr + Def + Spd <= 20
 
 
 offset = 20744
 
-00:
+00 - 01:
 num1
-02:
+02 - 03:
 num2
 04 - 07:
 yokaiid
@@ -155,7 +156,7 @@ soul offset: universal offset + 8076
 10: soul level
 11: used or not used
 
-
+TODO add contact info
 
 
 
