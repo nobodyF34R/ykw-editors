@@ -234,7 +234,7 @@ yokais = {
     3229477001: "Enefly", 
     1641725613: "Betterfly", 
     2025951212: "Peppillon", 
-    2007757884: "Predictabull", 
+    2007757884: "Prelistabull", 
     178502582: "Smashibull", 
     2297637991: "Don Chan", 
     3718397111: "Ray O'Light", 
@@ -1445,7 +1445,7 @@ souls = {
     3685496352: "Shamasol", 
     2896889526: "Sandmeh", 
     899831564: "Don Chan", 
-    1118136218: "Predictabull", 
+    1118136218: "Prelistabull", 
     3703697977: "Defectabull", 
     2881929903: "Gnomey", 
     852464405: "Gnomine", 
@@ -1596,11 +1596,394 @@ games = ["BS","FS","PS"]
 titles = ["Novice","Rank 14","Rank 13","Rank 12","Rank 11","Rank 10","Rank 9","Rank 8","Rank 7","Rank 6","Rank 5","Rank 4","Rank 3","Rank 2","Rank 1","Expert","Mentor","Teacher","Professor","Champion","Master","Superhuman","Wizard","Ruler","Genie","Deity"]
 
 favourites = {
-    4045001763: "Shogunyan",
-    4206316172: "Shad. Venoct",
-    2747538935: "Sgt. Burly",
+    0: "Not set.",
+    536369667: "Pandle",
+    223213037: "Undy",
+    341230764: "Tanbo",
+    2184143546: "Cutta-nah",
+    982713823: "Cutta-nah-nah",
+    596128926: "Slacka-slash",
+    3430546835: "Brushido",
+    460880530: "Washogun",
+    3737932413: "Lie-in",
+    3562072328: "Lie-in Heart",
+    1959107318: "Hissfit",
+    133377135: "Zerberker",
     518528302: "Snartle",
-    2122007412: "Gilgaros"
+    2426064212: "Mochismo",
+    2306997269: "Minochi",
+    1370408234: "Tublappa",
+    3910312527: "Slicenrice",
+    1827442285: "Flamurice",
+    580416435: "Helmsman",
+    808311901: "Reuknight",
+    691465500: "Corptain",
+    4222029217: "Mudmunch",
+    2747538935: "Sgt. Burly",
+    2291252024: "Blazion",
+    2441775737: "Quaken",
+    3131562426: "Siro",
+    1659901321: "Chansin",
+    3662443244: "Sheen",
+    2586055894: "Snee",
+    3277276077: "Gleam",
+    3209644810: "Benkei",
+    2790554187: "B3-NK1",
+    2005771917: "Sushiyama",
+    1855363020: "Kapunki",
+    356942721: "Beetler",
+    2918900964: "Beetall",
+    3034699173: "Cruncha",
+    2119770499: "Demuncher",
+    1732382914: "Devourer",
+    3336914662: "Brokenbrella",
+    2491173596: "Pittapatt",
+    1603288121: "Snotsolong",
+    1183518072: "Duchoo",
+    3052507784: "D'wanna",
+    673622577: "N'more",
+    826121072: "Q'wit",
+    3716443654: "Wazzat",
+    300204519: "Houzzat",
+    3298778951: "Dummkap",
+    860324561: "Faysoff",
+    1698171235: "Lafalotta",
+    2082682914: "Blips",
+    3931807284: "Tattletell",
+    4176425434: "Tattlecast",
+    4081168245: "Skranny",
+    3476144616: "Cupistol",
+    1390868817: "Casanuva",
+    1274923024: "Casanono",
+    3817740602: "So-Sorree",
+    1368172509: "Bowminos",
+    1530035807: "Smogling",
+    2841159298: "Smogmella",
+    405817065: "Signibble",
+    2693538188: "Signiton",
+    3113685197: "Statiking",
+    3912286392: "Master Oden",
+    1233637809: "Failian",
+    2813353416: "Apelican",
+    3773056950: "Mirapo",
+    1127811123: "Miradox",
+    4194268919: "Mircle",
+    1482170579: "Illoo",
+    1094914450: "Elloo",
+    1785610833: "Alloo",
+    3878443868: "Espy",
+    4265044509: "Infour",
+    2423172602: "Verygoodsir",
+    225416986: "Tengu",
+    343189083: "Flengu",
+    1871106273: "Kyubi",
+    1990058400: "Frostail",
+    4219826006: "Chymera",
+    3802029591: "Kingmera",
+    1716672495: "Terrorpotta",
+    3610949508: "Dulluma",
+    3314489450: "Darumacho",
+    3700697387: "Goruma",
+    3740151946: "Wotchagot",
+    2928720488: "Pride Shrimp",
+    746907735: "No-Go Kart",
+    372038925: "Mistank",
+    1388616614: "Noway",
+    3933797571: "Impass",
+    4083404162: "Walldin",
+    3929815341: "Roughraff",
+    2857656087: "Badude",
+    2556575125: "Bruff",
+    1081160776: "Armsman",
+    4047222484: "Mimikin",
+    4174205741: "Blowkade",
+    3788923500: "Ledballoon",
+    2808504209: "Fidgephant",
+    3195891408: "Touphant",
+    2572044890: "Enduriphant",
+    1961359361: "Zappary",
+    569519423: "Frazzel",
+    3428556644: "Swelton",
+    3718647025: "Mad Mountain",
+    3300736432: "Lava Lord",
+    3590885982: "Castelius III",
+    4247110045: "Castelius II",
+    3474170655: "Castelius I",
+    3829330140: "Castelius Max",
+    1696230292: "Rhinoggin",
+    2008007802: "Rhinormous",
+    1857353019: "Hornaplenty",
+    1484407332: "Robonyan",
+    1096905573: "Goldenyan",
+    2540745545: "Dromp",
+    2389410312: "Swosh",
+    2348541364: "Toadal Dude",
+    2464208117: "Uber Geeko",
+    3550016994: "Leggly",
+    626028377: "Dazzabel",
+    2649491516: "Rattelle",
+    2230794621: "Skelebella",
+    801952812: "Cadin",
+    1873064470: "Cadable",
+    1992262487: "Singcada",
+    2181890125: "Pupsicle",
+    984704808: "Chilhuahua",
+    598365801: "Swelterrier",
+    972643155: "Jumbelina",
+    1797558919: "Boyclops",
+    3316480669: "Jibanyan",
+    2098273784: "Thornyan",
+    3771082049: "Baddinyan",
+    230266179: "Buchinyan",
+    4067658415: "Walkappa",
+    2853214969: "Appak",
+    3003886520: "Supyo",
+    313327004: "Komasan",
+    671402182: "Komane",
+    196594909: "Komajiro",
+    439528004: "Komiger",
+    1079203519: "Baku",
+    2168798262: "Bakulia",
+    1497917438: "Whapir",
+    726463677: "Drizzelda",
+    2482017240: "Nekidspeed",
+    582619460: "Shmoopie",
+    806338218: "Pinkipoo",
+    689213419: "Pookivil",
+    1485709962: "Harry Barry",
+    1257082685: "Frostina",
+    4065454168: "Blizzaria",
+    3947551001: "Damona",
+    479331471: "Faux Kappa",
+    92878286: "Tigappa",
+    2754503658: "Master Nyada",
+    2346288963: "Wantston",
+    2462234114: "Grubsnitch",
+    2584114721: "Wiglin",
+    51751911: "Kelpacabana",
+    2199734112: "Steppa",
+    2821723299: "Rhyth",
+    3050565759: "Hungramps",
+    3987791913: "Hungorge",
+    2898837822: "Grainpa",
+    3063663620: "Tongus",
+    2663551838: "Nurse Tongus",
+    1447344951: "Sandmeh",
+    645854267: "Mr. Sandmeh",
+    237480801: "Pallysol",
+    885742549: "Scarasol",
+    370065402: "Lodo",
+    3558092006: "Supoor Hero",
+    253071035: "Chippa",
+    2837209964: "Gnomey",
+    2356624560: "High Gnomey",
+    3211602429: "Enerfly",
+    2792757436: "Enefly",
+    131157656: "Betterfly",
+    516587481: "Peppillon",
+    295699465: "Predictabull",
+    1822968707: "Smashibull",
+    4009286738: "Don Chan",
+    3148467330: "Ray O'Light",
+    2293488079: "Happierre",
+    3503344025: "Reversa",
+    3385587928: "Reversette",
+    1751953148: "Ol' Saint Trick",
+    1903665085: "Ol' Fortune",
+    534395124: "Rollen",
+    113314229: "Dubbles",
+    797446594: "Papa Bolt",
+    915611779: "Uncle Infinite",
+    2536797863: "Mama Aura",
+    2385463270: "Auntie Heart",
+    750792121: "Kyryn",
+    903552248: "Unikirin",
+    2992580987: "Leadoni",
+    2873366586: "Mynimo",
+    1027456556: "Ake",
+    2239879497: "Payn",
+    2627397640: "Agon",
+    2261378354: "Wydeawake",
+    1378941704: "Allnyta",
+    2745350894: "Herbiboy",
+    3156546950: "Carniboy",
+    408347120: "Negatibuzz",
+    2699724437: "Moskevil",
+    3119626196: "Scritchy",
+    931358638: "Dimmy",
+    1876981752: "Blandon",
+    1996179129: "Nul",
+    3154605937: "Suspicioni",
+    2770093616: "Tantroni",
+    2385581555: "Contrarioni",
+    862314534: "Hidabat",
+    2930956447: "Abodabat",
+    3081365982: "Belfree",
+    1047888471: "Yoink",
+    2486734642: "Gimme",
+    455007627: "K'mon-K'mon",
+    162230885: "Yoodooit",
+    2971079936: "Count Zapaway",
+    520895149: "Tyrat",
+    79368212: "Tengloom",
+    497033557: "Nird",
+    1372086835: "Snobetty",
+    3916694870: "Slimamander",
+    3935083629: "Dracunyan",
+    317208690: "Negasus",
+    200476979: "Neighfarious",
+    3831785255: "Timidevil",
+    1557659714: "Beelzebold",
+    1170419971: "Count Cavity",
+    77165283: "Eyesoar",
+    495076258: "Eyellure",
+    481322616: "Greesel",
+    95115065: "Awevil",
+    1082479846: "Wobblewok",
+    2100526863: "Coughkoff",
+    1680363086: "Hurchin",
+    3613135005: "Droplette",
+    567300040: "Drizzle",
+    3460768220: "Slush",
+    952860297: "Alhail",
+    3848958495: "Gush",
+    182668830: "Peckpocket",
+    792245378: "Robbinyu",
+    335052639: "Rockabelly",
+    1245416804: "Squeeky",
+    3622614493: "Rawry",
+    3608728947: "Buhu",
+    3456361522: "Flumpy",
+    3845044209: "Skreek",
+    1426884428: "Manjimutt",
+    358932854: "Multimutt",
+    209702967: "Sir Berus",
+    4164498307: "Furgus",
+    1867567800: "Furdinand",
+    1710099258: "Nosirs",
+    2574002349: "Dismarelda",
+    1384144456: "Chatalie",
+    1268477705: "Nagatha",
+    3713166431: "Papa Windbag",
+    2002494676: "Ben Tover",
+    624347200: "Cheeksqueek",
+    1009645825: "Cuttincheez",
+    3488072625: "Toiletta",
+    2112191830: "Foiletta",
+    2542064615: "Sproink",
+    2643111717: "Compunzer",
+    2224135780: "Lamedian",
+    6133660: "Grumples",
+    3101815033: "Everfore",
+    2717565368: "Eterna",
+    2403270859: "Insomni",
+    2518954378: "Sandi",
+    3310950963: "Arachnus",
+    3695324018: "Arachnia",
+    3761391087: "Cricky",
+    2752250141: "Noko",
+    3065622259: "Bloominoko",
+    3172413532: "Pandanoko",
+    4068993537: "Snaggly",
+    3039269073: "Whinona",
+    2916648467: "Heheheel",
+    3032725330: "Croonger",
+    2683233425: "Urnaconda",
+    728667722: "Fishpicable",
+    970668452: "Rageon",
+    549456101: "Tunatic",
+    307797298: "Flushback",
+    2811379519: "Vacuumory",
+    2420952845: "Irewig",
+    523130970: "Firewig",
+    235260310: "Draggie",
+    2480075055: "Dragon Lord",
+    2328477806: "Azure Dragon",
+    686860392: "Mermaidyn",
+    228325300: "Mermadonna",
+    343983861: "Mermother",
+    977602438: "Lady Longnek",
+    2428022691: "Daiz",
+    2309201634: "Confuze",
+    2171035329: "Chummer",
+    2558291840: "Shrook",
+    3640938135: "Spenp",
+    3223289814: "Almi",
+    1639459314: "Babblong",
+    2023954611: "Bananose",
+    2197381347: "Draaagin",
+    2867133015: "SV Snaggerjag",
+    1527782568: "Copperled",
+    1764130346: "Cynake",
+    1108028905: "Slitheref",
+    3819731917: "Venoct",
+    4206316172: "Shad. Venoct",
+    4045001763: "Shogunyan",
+    1235596102: "Komashura",
+    2122007412: "Gilgaros",
+    3980689543: "Spoilerina",
+    1825500314: "Elder Bloom",
+    2905401021: "Poofessor",
+    3564276735: "Dandoodle",
+    361791960: "Slurpent",
+    1406459019: "Sapphinyan",
+    2029621064: "Emenyan",
+    1642249737: "Rubinyan",
+    782444750: "Topanyan",
+    1255140810: "Dianyan",
+    1006861609: "Melonyan",
+    622349416: "Oranyan",
+    238362539: "Kiwinyan",
+    388902634: "Grapenyan",
+    1483716653: "Strawbnyan",
+    1098156396: "Watermelnyan",
+    829798465: "Robokapp",
+    199068955: "Robokoma",
+    3009538686: "Robogramps",
+    2715043216: "Robomutt",
+    426255093: "Robonoko",
+    2227116620: "Robodraggie",
+    577508125: "Wondernyan",
+    684903071: "Robonyan F",
+    979854705: "Sailornyan",
+    2195390996: "Machonyan",
+    1125870276: "Hovernyan",
+    3037065766: "Darknyan",
+    3669496386: "Jibakoma",
+    1644459303: "Jetnyan",
+    2599556751: "Unfairy",
+    2286401889: "Unkaind",
+    821812740: "Untidy",
+    1754844754: "Unpleasant",
+    3492063543: "Unkeen",
+    1466238913: "Grublappa",
+    4251766602: "Madmunch",
+    2945672297: "Badsmella",
+    442091108: "Mad Kappa",
+    149711242: "Shamasol",
+    2950144391: "Gnomine",
+    392939234: "Defectabull",
+    4277334376: "Feargus",
+    775645827: "Scaremaiden",
+    1015989613: "Wrongnek",
+    3382819102: "Grumpus Khan",
+    3675526896: "Groupus Khan",
+    1671983509: "Slumberhog",
+    4269754668: "Snortlehog",
+    1187196489: "Panja Pupil",
+    1417052583: "Panja Pro",
+    3972720322: "Samureel",
+    3031037588: "Time Keeler",
+    202740209: "Takoyakid",
+    1283323851: "Takoyaking",
+    4106326190: "Danke Sand",
+    3866378048: "No Sandkyu",
+    1590188069: "Sumodon",
+    3273613468: "Yokozudon",
+    2074281977: "Whateverest",
+    1763092503: "Whatuption",
+    3517632370: "Happycane",
+    2311708452: "Starrycane",
 }
 
 #functions
@@ -1638,47 +2021,53 @@ def give(floa): #some shenanigans to convert a float to bytes
     return (0 | (e + 127) << 23 | int((floa - 1) * (2**23))).to_bytes(4, 'little')
 
 
-def fix_dict(dict): #pointless at the moment
-    for i in range(len(dict)):
-        dict[i]["num1"]=i
-        dict[i]["num2"]=i+1
-    return dict
+# def fix_list(list): #pointless at the moment
+#     for i in range(len(list)):
+#         list[i]["num1"]=i
+#         list[i]["num2"]=i+1
+#     return list
 
 
-def edit_yokai(yokaidict, ownerid, index, yokai=None, attitude=None, nickname=None): #massively overcomplicated and broken simultaneously 
+def edit_yokai(yokailist, index, ownerid, yokai=None, attitude=None, nickname=None): #massively overcomplicated and broken simultaneously 
     try:
-        yokaidict[index]
+        if index < 0:
+            index = len(yokailist)-index #appending shortcut
     except:
-        temp_yokaidict = sorted(yokaidict.values(), key=lambda x:x["num1"])
-        yokaidict[index] = {}
-        yokaidict[index]["num1"] = 0
+        pass
+    try:
+        yokailist[index]
+    except:
+        temp_yokailist = yokailist #pointless now???
+        index = len(yokailist)
+        yokailist.append({})
+        yokailist[index]["num1"] = 0
         j=0
-        for i in range(len(temp_yokaidict)):
-            if temp_yokaidict[i]["num1"] != j:
-                yokaidict[index]["num1"] = j
+        for i in range(len(temp_yokailist)):
+            if temp_yokailist[i]["num1"] != j:
+                yokailist[index]["num1"] = j
                 break
-            if temp_yokaidict[i]["num1"] > yokaidict[index]["num1"]:
-                yokaidict[index]["num1"] = temp_yokaidict[i]["num1"]+1
+            if temp_yokailist[i]["num1"] > yokailist[index]["num1"]:
+                yokailist[index]["num1"] = temp_yokailist[i]["num1"]+1
             j+=1
-        yokaidict[index]["num2"] = 1
+        yokailist[index]["num2"] = 1
         for i in range(j):
-            if temp_yokaidict[i]["num2"] > yokaidict[index]["num2"]:
-                yokaidict[index]["num2"] = temp_yokaidict[i]["num2"]
+            if temp_yokailist[i]["num2"] > yokailist[index]["num2"]:
+                yokailist[index]["num2"] = temp_yokailist[i]["num2"]
                 location = i
-        yokaidict[index]["num2"]+=(j-location)
+        yokailist[index]["num2"]+=(j-location)
     if yokai != None:
         try:
-            yokaidict[index]["id"] = reverse_yokais[yokai]
+            yokailist[index]["id"] = reverse_yokais[yokai]
         except:
-            yokaidict[index]["id"] = yokai
+            yokailist[index]["id"] = yokai
     if nickname != None:
-        yokaidict[index]["nickname"] = nickname
-    yokaidict[index]["attack"] = 255 
-    yokaidict[index]["technique"] = 255
-    yokaidict[index]["soultimate"] = 255
-    yokaidict[index]["xp"] = 0 #0 because level is 99
-    yokaidict[index]["ownerid"] = ownerid
-    yokaidict[index]["stats"] = {
+        yokailist[index]["nickname"] = nickname
+    yokailist[index]["attack"] = 255 
+    yokailist[index]["technique"] = 255
+    yokailist[index]["soultimate"] = 255
+    yokailist[index]["xp"] = 0 #0 because level is 99
+    yokailist[index]["ownerid"] = ownerid
+    yokailist[index]["stats"] = {
         "IV_HP": 16, #IV rules: HP / 2 + Str + Spr + Def + Spd = 40
         "IV_Str": 8, 
         "IV_Spr": 8, 
@@ -1695,143 +2084,184 @@ def edit_yokai(yokaidict, ownerid, index, yokai=None, attitude=None, nickname=No
         "SC_Def": 0, 
         "SC_Spd": 0  
     }
-    yokaidict[index]["level"] = 99 #255 works too but it automatically lowers to 99
-    yokaidict[index]["loaflevel"] = 5 #2?
+    yokailist[index]["level"] = 99 #255 works too but it automatically lowers to 99
+    yokailist[index]["loaflevel"] = 5 #2?
     if attitude != None:
         try:
-            yokaidict[index]["attitude"] = attitudes.index(attitude)
+            yokailist[index]["attitude"] = attitudes.index(attitude)
         except:
-            yokaidict[index]["attitude"] = attitudes[attitude]
+            yokailist[index]["attitude"] = attitudes[attitude]
 
-    return yokaidict
+    return sorted(yokailist, key=lambda x:x["num1"])
 
-def edit_item(itemdict, index, item=None, amount=None): #broken for some reason
+def edit_item(itemlist, index, item=None, amount=None): #broken for some reason
     try:
-        itemdict[index]
+        if index < 0:
+            index = len(itemlist)-index #appending shortcut
     except:
-        itemdict[index] = {}
-    itemdict[index]["num1"] = index
-    itemdict[index]["num2"] = index+1
+        pass
+    try:
+        itemlist[index]
+    except:
+        index = len(itemlist)
+        itemlist.append({})
+    itemlist[index]["num1"] = index
+    itemlist[index]["num2"] = index+1
     if item:
         try:
-            itemdict[index]["item"] = reverse_items[item]
+            itemlist[index]["item"] = reverse_items[item]
         except:
-            itemdict[index]["item"] = item
+            itemlist[index]["item"] = item
     if amount:
-        itemdict[index]["amount"] = amount
-    return itemdict
+        itemlist[index]["amount"] = amount
+    return itemlist
 
-def edit_equipment(equipmentdict, index, equipment=None, amount=None):
+def edit_equipment(equipmentlist, index, equipment=None, amount=None):
     try:
-        equipmentdict[index]
+        if index < 0:
+            index = len(equipmentlist)-index #appending shortcut
     except:
-        equipmentdict[index] = {}
-    equipmentdict[index]["num1"] = index
-    equipmentdict[index]["num2"] = index+1
+        pass
+    try:
+        equipmentlist[index]
+    except:
+        index = len(equipmentlist)
+        equipmentlist.append({})
+    equipmentlist[index]["num1"] = index
+    equipmentlist[index]["num2"] = index+1
     if equipment:
         try:
-            equipmentdict[index]["equipment"] = reverse_equipments[equipment]
+            equipmentlist[index]["equipment"] = reverse_equipments[equipment]
         except:
-            equipmentdict[index]["equipment"] = equipment
+            equipmentlist[index]["equipment"] = equipment
     if amount:
-        equipmentdict[index]["amount"] = amount
-    equipmentdict[index]["used"] = 0
-    return equipmentdict
+        equipmentlist[index]["amount"] = amount
+    equipmentlist[index]["used"] = 0
+    return equipmentlist
 
-def edit_important(importantdict, index, important):
+def edit_important(importantlist, index, important):
     try:
-        importantdict[index]
+        if index < 0:
+            index = len(importantlist)-index #appending shortcut
     except:
-        importantdict[index] = {}
-    importantdict[index]["num1"] = index
-    importantdict[index]["num2"] = index+1
+        pass
     try:
-        importantdict[index]["important"] = reverse_importants[important]
+        importantlist[index]
     except:
-        importantdict[index]["important"] = important
-    return importantdict
+        index = len(importantlist)
+        importantlist.append({})
+    importantlist[index]["num1"] = index
+    importantlist[index]["num2"] = index+1
+    try:
+        importantlist[index]["important"] = reverse_importants[important]
+    except:
+        importantlist[index]["important"] = important
+    return importantlist
 
-def edit_soul(souldict, index, soul):
+def edit_soul(soullist, index, soul):
     try:
-        souldict[index]
+        if index < 0:
+            index = len(soullist)-index #appending shortcut (semi-redundant)
     except:
-        souldict[index] = {}
-    souldict[index]["num1"] = index
-    souldict[index]["num2"] = index+1
+        pass
     try:
-        souldict[index]["soul"] = reverse_souls[soul]
+        soullist[index]
     except:
-        souldict[index]["soul"] = soul
-    souldict[index]["xp"] = 0 #65535 is too high but it already auto sets back to 0
-    souldict[index]["level"] = 10 #10 is the highest (255 looks funny but it is weaker than 10 because of the way the game calculates soul stats)
-    souldict[index]["used"] = 0
-    return souldict
+        index = len(soullist)
+        soullist.append({})
+    soullist[index]["num1"] = index
+    soullist[index]["num2"] = index+1
+    try:
+        soullist[index]["soul"] = reverse_souls[soul]
+    except:
+        soullist[index]["soul"] = soul
+    soullist[index]["xp"] = 0 #65535 is too high but it already auto sets back to 0
+    soullist[index]["level"] = 10 #10 is the highest (255 looks funny but it is weaker than 10 because of the way the game calculates soul stats)
+    soullist[index]["used"] = 0
+    return soullist
 
-def edit_contact(contactdict, index, name=None, ownerid=None, comment=None, favourite=None, game=None, face=None, hq=None, job=None, hobby=None, ambition=None, yokai=None): #can alse be used for profile
-    try: #edited to avoid overlapping text
-        contactdict[index]
+def edit_contact(contactlist, index, name=None, starred=None, ownerid=None, comment=None, favourite=None, game=None, face=None, hq=None, job=None, hobby=None, ambition=None, yokai=None): #can alse be used for profile
+    try:
+        if index < 0:
+            index = len(contactlist)-index #appending shortcut (semi-redundant)
     except:
-        contactdict[index] = {}
+        pass
+    dicti = False
+    if isinstance(contactlist, dict): #for your profile
+        dicti = True
+        index = 0
+        contactlist = [contactlist]
+    else:
+        try: #edited maxes to avoid overlapping text in-game
+            contactlist[index]
+        except:
+            index = len(contactlist)
+            contactlist.append({})
     if name != None:
-        contactdict[index]["name"] = name
+        contactlist[index]["name"] = name
+    if starred != None:
+        contactlist[index]["name"] = starred #0 or 1
     if ownerid != None:
-        contactdict[index]["ownerid"] = ownerid
+        contactlist[index]["ownerid"] = ownerid
     if comment != None:
-        contactdict[index]["comment"] = comment
+        contactlist[index]["comment"] = comment
     if favourite != None:
-        contactdict[index]["favourite"] = favourite #TODO compile a list of which value corresponds to which yokai
-    contactdict[index]["bronze"] = 99 #255
-    contactdict[index]["silver"] = 99 #255
-    contactdict[index]["gold"] = 99 #255
+        contactlist[index]["favourite"] = favourite #TODO compile a list of which value corresponds to which yokai
+    contactlist[index]["bronze"] = 99 #255 35
+    contactlist[index]["silver"] = 99 #255 30
+    contactlist[index]["gold"] = 99 #255 15
     if game != None:
-        contactdict[index]["game"] = game
-    contactdict[index]["playtime"] = 4659.9997222222222 #999.9997222222222 ingame max
-    contactdict[index]["tunnel"] = 9999999 #2147483647
+        contactlist[index]["game"] = game
+    contactlist[index]["playtime"] = 4659.9997222222222 #999.9997222222222 ingame max
+    contactlist[index]["tunnel"] = 9999999 #2147483647
     if face != None:
-        contactdict[index]["face"] = face
+        contactlist[index]["face"] = face
     if hq != None:
         try:
-            contactdict[index]["hq"] = hqs.index(hq)
+            contactlist[index]["hq"] = hqs.index(hq)
         except:
-            contactdict[index]["hq"] = hq
-        contactdict[index]["hq"] = hq
+            contactlist[index]["hq"] = hq
+        contactlist[index]["hq"] = hq
     if job != None:
         try:
-            contactdict[index]["job"] = jobs.index(job)
+            contactlist[index]["job"] = jobs.index(job)
         except:
-            contactdict[index]["job"] = job
+            contactlist[index]["job"] = job
     if hobby != None:
         try:
-            contactdict[index]["hobby"] = hobbys.index(hobby)
+            contactlist[index]["hobby"] = hobbys.index(hobby)
         except:
-            contactdict[index]["hobby"] = hobby
+            contactlist[index]["hobby"] = hobby
     if ambition != None:
         try:
-            contactdict[index]["ambition"] = ambitions.index(ambition)
+            contactlist[index]["ambition"] = ambitions.index(ambition)
         except:
-            contactdict[index]["ambition"] = ambition
-    contactdict[index]["requests"] = 255
-    contactdict[index]["arrested"] = 255
-    contactdict[index]["medalium"] = 255 #technically 100 is max as it's a percentage
-    contactdict[index]["bugs"] = 255
-    contactdict[index]["fish"] = 255
-    contactdict[index]["battles"] = 255
-    contactdict[index]["battles"] = 255
-    contactdict[index]["personal"] = 65535
-    contactdict[index]["public"] = 9999 #65535
-    contactdict[index]["rankl"] = 65535
-    contactdict[index]["local"] = 99 #65535
-    contactdict[index]["rankr"] = 65535
-    contactdict[index]["random"] = 65535
-    contactdict[index]["tagged"] = 65535
-    contactdict[index]["photographs"] = 65535
+            contactlist[index]["ambition"] = ambition
+    contactlist[index]["requests"] = 255
+    contactlist[index]["arrested"] = 255
+    contactlist[index]["medalium"] = 255 #technically 100 is max as it's a percentage
+    contactlist[index]["bugs"] = 255
+    contactlist[index]["fish"] = 255
+    contactlist[index]["battles"] = 255
+    contactlist[index]["battles"] = 255
+    contactlist[index]["personal"] = 65535
+    contactlist[index]["public"] = 9999 #65535
+    contactlist[index]["rankl"] = 65535
+    contactlist[index]["local"] = 99 #65535
+    contactlist[index]["rankr"] = 65535
+    contactlist[index]["random"] = 65535
+    contactlist[index]["tagged"] = 65535
+    contactlist[index]["photographs"] = 65535
     if yokai != None:
-        contactdict[index]["yokai"] = yokai
-    contactdict[index]["races"] = [.01,.01,.01,.01] #TODO could try 0.00001 so it shows as a 0 in the game
-    return contactdict
+        contactlist[index]["yokai"] = yokai
+    contactlist[index]["races"] = [.01,.01,.01,.01] #TODO could try 0.00001 so it shows as a 0 in the game
+    if dicti:
+        return contactlist[0]
+    else:
+        return contactlist
 
 #main
-def main(file): #TODO fix items and yokai. could make all dicts lists
+def main(file): #TODO fix yokai.
     try:
         file = open(file, "r+b")
     except:
@@ -1840,7 +2270,7 @@ def main(file): #TODO fix items and yokai. could make all dicts lists
     with file as f:
         #money offset: 67808
 
-        yokaidict = {}
+        yokailist = []
         index = 0
         f.seek(20744) # 20744 is always yokai info location. 1 yokai takes up 92 bytes. offset same for all files. 00
         while True:
@@ -1848,7 +2278,7 @@ def main(file): #TODO fix items and yokai. could make all dicts lists
             if get(yokai, 0) == 0 and index != 0: #could be broken
                 break
 
-            yokaidict[index] = {
+            yokailist.append({
                 "num1": get(yokai, 0, 2), #0
                 "num2": get(yokai, 2, 2), #2
                 "id": get(yokai, 4, 4), #4-07
@@ -1878,7 +2308,7 @@ def main(file): #TODO fix items and yokai. could make all dicts lists
                 "level": get(yokai, 79), #79
                 "loaflevel": get(yokai, 84, half=True)[0], #84
                 "attitude": get(yokai, 84, half=True)[0] #84 (shared byte)
-            }
+            })
 
             index += 1
         original_yokai_amount = index
@@ -1887,7 +2317,7 @@ def main(file): #TODO fix items and yokai. could make all dicts lists
         f.seek(0)
         offset = f.read(20744).index(b"\xFE\x6D\x08\xFE\xFF\x00\x00\x03\x48\x24\x00\xFE\xFF")+19 #certainly broken or at least bad
 
-        itemdict = {}
+        itemlist = []
         index = 0
         f.seek(offset) # offset is item info location. 1 item takes up 12 bytes. 00
         while True:
@@ -1896,17 +2326,17 @@ def main(file): #TODO fix items and yokai. could make all dicts lists
             if get(item, 0) == 0 and index != 0: #could be broken
                 break
 
-            itemdict[index] = {
+            itemlist.append({
                 "num1": get(item, 0, 2), #0
                 "num2": get(item, 2, 2), #2
                 "item": get(item, 4, 4), #4
                 "amount": get(item, 8, 4) #8
-            }
+            })
 
             index += 1
         original_item_amount = index
 
-        equipmentdict = {}
+        equipmentlist = []
         index = 0
         f.seek(offset+5172) # offset + 5172 is equipment info location. 1 equipment takes up 16 bytes. 10
         while True:
@@ -1915,18 +2345,18 @@ def main(file): #TODO fix items and yokai. could make all dicts lists
             if get(equipment, 0) == 0 and index != 0: #could be broken
                 break
 
-            equipmentdict[index] = {
-                "num1": get(equipment, 0, 2), #0
+            equipmentlist.append({
+                "num1": get(equipment, 0, 1), #0
                 "num2": get(equipment, 2, 2), #2
                 "equipment": get(equipment, 4, 4), #4
                 "amount": get(equipment, 8, 4), #8 #maybe 1 byte
-                "used": get(equipment, 12, 4) #i think this is how many are currently equipped
-            }
+                "used": get(equipment, 12, 4) #how many are in use (leave alone or set to zero)
+            })
 
             index += 1
         original_equipment_amount = index
 
-        importantdict = {}
+        importantlist = []
         index = 0
         f.seek(offset+6624) # offset + 6624 is important info location. 1 important takes up 8 bytes. 20
         while True:
@@ -1935,16 +2365,16 @@ def main(file): #TODO fix items and yokai. could make all dicts lists
             if get(important, 0) == 0 and index != 0: #could be broken
                 break
 
-            importantdict[index] = {
+            importantlist.append({
                 "num1": get(important, 0, 2), #0
                 "num2": get(important, 2, 2), #2 unsure.
                 "important": get(important, 4, 4), #4
-            }
+            })
 
             index += 1
         original_important_amount = index
 
-        souldict = {}
+        soullist = []
         index = 0
         f.seek(offset+8076) # offset + 8076 is soul info location. 1 soul takes up 12 bytes. 30
         while True:
@@ -1953,14 +2383,14 @@ def main(file): #TODO fix items and yokai. could make all dicts lists
             if get(soul, 0) == 0 and index != 0: #could be broken
                 break
 
-            souldict[index] = {
-                "num1": get(soul, 0, 2), #0
-                "num2": get(soul, 2, 2), #2
+            soullist.append({
+                "num1": get(soul, 0, 1), #0
+                "num2": get(soul, 2, 1), #2
                 "soul": get(soul, 4, 4), #4
                 "xp": get(soul, 8, 2), #8
                 "level": get(soul, 10), #8
                 "used": get(soul, 11) #11 true or false
-            }
+            })
 
             index += 1
         original_soul_amount = index
@@ -2019,7 +2449,7 @@ def main(file): #TODO fix items and yokai. could make all dicts lists
             ]
         }
 
-        contactdict = {}
+        contactlist = []
         index = 0
         while True: # this is the contact info location. 1 contact takes up 184 bytes
             contact = f.read(184)
@@ -2027,10 +2457,12 @@ def main(file): #TODO fix items and yokai. could make all dicts lists
             if get(contact, 0) == 0:
                 break
 
-            contactdict[index] = { #max 50 contacts
-                "name": get(contact, 0, 28, False), #0
-                "ownerid": get(contact, 28, 4), #28
-                "comment": get(contact, 32, 64, False), #32
+            contactlist.append({ #max 50 contacts
+                "name": get(contact, 0, 25, False), #max length is 24 with a 00 on the end
+                "starred": get(contact, 26), #true or false (1 or 0)
+                #00 inbetween
+                "ownerid": get(contact, 28, 4),
+                "comment": get(contact, 32, 64, False),
                 "favourite": get(contact, 96, 4), #favourite yokai (by choice), TODO compile a list of which value corresponds to which yokai
                 "bronze": get(contact, 100), #what medals they have
                 "silver": get(contact, 101),
@@ -2074,8 +2506,7 @@ def main(file): #TODO fix items and yokai. could make all dicts lists
                     get(contact, 176, 4, None), #san fantastico
                     get(contact, 180, 4, None), #(old) springdale
                 ]
-                
-            }
+            })
 
             index += 1
         original_contact_amount = index
@@ -2094,153 +2525,152 @@ def main(file): #TODO fix items and yokai. could make all dicts lists
         # unknown5 = f.read(1636)
 
         #editor goes here
-        del contactdict[len(contactdict)-1]
-        contactdict = edit_contact(contactdict, len(contactdict)-1)
         if 0:
-            #to append yokai: make index len(yokaidict). must include yokai, attitude & nickname if appending. (can all be "" except for yokai)
+            #to append yokai make index None. must include yokai, attitude & nickname if appending. (can all be "" except for yokai)
             #append a pandle
-            yokaidict = edit_yokai(yokaidict, profile["ownerid"], len(yokaidict), "pandle", "", "bob") #if you get the index wrong it will mess everything up
+            yokailist = edit_yokai(yokailist, None, profile["ownerid"], "pandle", "", "bob") #if you get the index wrong it will mess everything up
             #change to a rough ake
-            yokaidict = edit_yokai(yokaidict, profile["ownerid"], len(yokaidict)-1, "ake", "rough") #broken
+            yokailist = edit_yokai(yokailist, -1, profile["ownerid"], "ake", "rough") #broken
             #append 60 milk
-            itemdict = edit_item(itemdict, len(itemdict), "milk", 65535) #currently broken, max is 255, 65535 or 99
+            itemlist = edit_item(itemlist, None, "milk", 65535) #currently broken, max is 255, 65535 or 99
             #append 60 cheap bracelet
-            equipmentdict = edit_equipment(equipmentdict, len(equipmentdict), "cheap bracelet", 65535) #255 works, testing 65535
+            equipmentlist = edit_equipment(equipmentlist, None, "cheap bracelet", 65535) #255 works, testing 65535
             #append a swosh soul
-            souldict = edit_soul(souldict, len(souldict), "snartle")
-            importantdict = edit_important(importantdict, len(importantdict), "hose")
+            soullist = edit_soul(soullist, None, "snartle")
 
-            del itemdict[len(itemdict)-1]
+            importantlist = edit_important(importantlist, None, "hose")
 
-        #print data & validity check
+            profile = edit_contact(profile, None)
+
+        #print data & validity check broken from lists
+        # if 1:
+        #     print(", ".join([yokais[index["id"]] for index in sorted(yokailist, key=lambda x:x["num1"])]))
+        #     print(", ".join([items[itemlist[index]["item"]] for index in itemlist]))
+        #     print(", ".join([equipments[equipmentlist[index]["equipment"]] for index in equipmentlist]))
+        #     print(", ".join([importants[importantlist[index]["important"]] for index in importantlist]))
+        #     print(", ".join([souls[soullist[index]["soul"]] for index in soullist]))
+
+
+        #write everything back to file
         if 1:
-            print(", ".join([yokais[index["id"]] for index in sorted(yokaidict.values(), key=lambda x:x["num1"])]))
-            print(", ".join([items[itemdict[index]["item"]] for index in itemdict]))
-            print(", ".join([equipments[equipmentdict[index]["equipment"]] for index in equipmentdict]))
-            print(", ".join([importants[importantdict[index]["important"]] for index in importantdict]))
-            print(", ".join([souls[souldict[index]["soul"]] for index in souldict]))
-
-
-        #write items back
-        if 1:
+            #write items back
             j=0
-            for i in itemdict:
+            for i in itemlist:
                 f.seek(offset+12*j)
-                f.write(itemdict[i]["num1"].to_bytes(2, "little")) 
+                f.write(i["num1"].to_bytes(1, "little")) 
                 f.seek(offset+12*j+2)
-                f.write(itemdict[i]["num2"].to_bytes(2, "little"))
+                f.write(i["num2"].to_bytes(2, "little"))
                 f.seek(offset+12*j+4)
-                f.write(itemdict[i]["item"].to_bytes(4, "little"))
+                f.write(i["item"].to_bytes(4, "little"))
                 f.seek(offset+12*j+8)
-                f.write(itemdict[i]["amount"].to_bytes(4, "little"))
+                f.write(i["amount"].to_bytes(4, "little"))
                 j+=1
             
             #clear item overflow
-            if original_item_amount - len(itemdict) > 0: #TODO test if this works
+            if original_item_amount - len(itemlist) > 0: #TODO test if this works
                 f.seek(offset+12*j)
-                f.write(b"\x00"*12*(original_item_amount - len(itemdict)))
+                f.write(b"\x00"*12*(original_item_amount - len(itemlist)))
             
             #write equipment back
             j=0
-            for i in equipmentdict:
+            for i in equipmentlist:
                 f.seek(offset+5172+16*j)
-                f.write(equipmentdict[i]["num1"].to_bytes(2, "little"))
+                f.write(i["num1"].to_bytes(2, "little"))
                 f.seek(offset+5172+16*j+1)
                 f.write(b"\x10") # i don't know what this does, may be unnecessary
                 f.seek(offset+5172+16*j+2)
-                f.write(equipmentdict[i]["num2"].to_bytes(2, "little"))
+                f.write(i["num2"].to_bytes(2, "little"))
                 f.seek(offset+5172+16*j+4)
-                f.write(equipmentdict[i]["equipment"].to_bytes(4, "little"))
+                f.write(i["equipment"].to_bytes(4, "little"))
                 f.seek(offset+5172+16*j+8)
-                f.write(equipmentdict[i]["amount"].to_bytes(4, "little"))
+                f.write(i["amount"].to_bytes(4, "little"))
                 f.seek(offset+5172+16*j+12)
-                f.write(equipmentdict[i]["used"].to_bytes(4, "little"))
+                f.write(i["used"].to_bytes(4, "little"))
                 j+=1
 
             #clear equipment overflow
-            if original_equipment_amount - len(equipmentdict) > 0: #TODO test if this works
+            if original_equipment_amount - len(equipmentlist) > 0: #TODO test if this works
                 f.seek(offset+5172+16*j)
-                f.write(b"\x00"*16*(original_equipment_amount - len(equipmentdict)))
+                f.write(b"\x00"*16*(original_equipment_amount - len(equipmentlist)))
 
             #write important back
             j=0
-            for i in importantdict:
+            for i in importantlist:
                 f.seek(offset+6624+8*j)
-                f.write(importantdict[i]["num1"].to_bytes(2, "little"))
+                f.write(i["num1"].to_bytes(2, "little"))
                 f.seek(offset+6624+8*j+1)
                 f.write(b"\x20") # i don't know what this does, may be unnecessary
                 f.seek(offset+6624+8*j+2)
-                f.write(importantdict[i]["num2"].to_bytes(2, "little"))
+                f.write(i["num2"].to_bytes(2, "little"))
                 f.seek(offset+6624+8*j+4)
-                f.write(importantdict[i]["important"].to_bytes(4, "little"))
+                f.write(i["important"].to_bytes(4, "little"))
                 j+=1
 
             #clear important overflow
-            if original_important_amount - len(importantdict) > 0: #TODO test if this works
+            if original_important_amount - len(importantlist) > 0: #TODO test if this works
                 f.seek(offset+6624+8*j)
-                f.write(b"\x00"*8*(original_important_amount - len(importantdict)))
+                f.write(b"\x00"*8*(original_important_amount - len(importantlist)))
 
             #write soul back
             j=0
-            for i in souldict:
+            for i in soullist:
                 f.seek(offset+8076+12*j)
-                f.write(souldict[i]["num1"].to_bytes(2, "little"))
+                f.write(i["num1"].to_bytes(2, "little"))
                 f.seek(offset+8076+12*j+1)
                 f.write(b"\x30") # i don't know what this does, may be unnecessary
                 f.seek(offset+8076+12*j+2)
-                f.write(souldict[i]["num2"].to_bytes(2, "little"))
+                f.write(i["num2"].to_bytes(2, "little"))
                 f.seek(offset+8076+12*j+4)
-                f.write(souldict[i]["soul"].to_bytes(4, "little"))
+                f.write(i["soul"].to_bytes(4, "little"))
                 f.seek(offset+8076+12*j+8)
-                f.write(souldict[i]["xp"].to_bytes(2, "little"))
+                f.write(i["xp"].to_bytes(2, "little"))
                 f.seek(offset+8076+12*j+10)
-                f.write(souldict[i]["level"].to_bytes(1, "little"))
+                f.write(i["level"].to_bytes(1, "little"))
                 f.seek(offset+8076+12*j+11)
-                f.write(souldict[i]["used"].to_bytes(1, "little"))
+                f.write(i["used"].to_bytes(1, "little"))
                 j+=1
 
             #clear soul overflow
-            if original_soul_amount - len(souldict) > 0: #TODO test if this works
+            if original_soul_amount - len(soullist) > 0: #TODO test if this works
                 f.seek(offset+8076+12*j)
-                f.write(b"\x00"*12*(original_soul_amount - len(souldict)))
+                f.write(b"\x00"*12*(original_soul_amount - len(soullist)))
 
             #write yokai back
             j=0
-            yokaidict = sorted(yokaidict.values(), key=lambda x:x["num1"]) #reorder them based on num1
-            for i in range(len(yokaidict)):
+            for i in yokailist:
                 f.seek(20744+92*j)
-                f.write(yokaidict[i]["num1"].to_bytes(2, "little")) #no need to seek, may remove
+                f.write(i["num1"].to_bytes(2, "little")) #no need to seek, may remove
                 f.seek(20744+92*j+2)
-                f.write(yokaidict[i]["num2"].to_bytes(2, "little"))
+                f.write(i["num2"].to_bytes(2, "little"))
                 f.seek(20744+92*j+4)
-                f.write(yokaidict[i]["id"].to_bytes(4, "little"))
+                f.write(i["id"].to_bytes(4, "little"))
                 f.seek(20744+92*j+8)
-                f.write((bytearray([ord(k)for k in yokaidict[i]["nickname"]])+bytearray(24))[:24]) # to be more accurate to game could just append
+                f.write((bytearray([ord(k)for k in i["nickname"]])+bytearray(24))[:24]) # to be more accurate to game could just append
                 f.seek(20744+92*j+42)
-                f.write(yokaidict[i]["attack"].to_bytes(1, "little"))
+                f.write(i["attack"].to_bytes(1, "little"))
                 f.seek(20744+92*j+46)
-                f.write(yokaidict[i]["technique"].to_bytes(1, "little"))
+                f.write(i["technique"].to_bytes(1, "little"))
                 f.seek(20744+92*j+50)
-                f.write(yokaidict[i]["soultimate"].to_bytes(1, "little"))
+                f.write(i["soultimate"].to_bytes(1, "little"))
                 f.seek(20744+92*j+52)
-                f.write(yokaidict[i]["xp"].to_bytes(4, "little"))
+                f.write(i["xp"].to_bytes(4, "little"))
                 f.seek(20744+92*j+60)
-                f.write(yokaidict[i]["ownerid"].to_bytes(4, "little"))
+                f.write(i["ownerid"].to_bytes(4, "little"))
                 statnum = 64
-                for stat in yokaidict[i]["stats"]:
+                for stat in i["stats"]:
                     f.seek(20744+92*j+statnum)
-                    f.write(yokaidict[i]["stats"][stat].to_bytes(1, "little"))
+                    f.write(i["stats"][stat].to_bytes(1, "little"))
                     statnum +=1
                 f.seek(20744+92*j+79)
-                f.write(yokaidict[i]["level"].to_bytes(1, "little"))
+                f.write(i["level"].to_bytes(1, "little"))
                 f.seek(20744+92*j+84)
-                f.write(int(f'{yokaidict[i]["loaflevel"]:04b}'+f'{yokaidict[i]["attitude"]:04b}', 2).to_bytes(1, "little"))
+                f.write(int(f'{i["loaflevel"]:04b}'+f'{i["attitude"]:04b}', 2).to_bytes(1, "little"))
                 j+=1
 
             #clear yokai overflow
-            if original_yokai_amount - len(yokaidict) > 0: #TODO test if this works
+            if original_yokai_amount - len(yokailist) > 0: #TODO test if this works
                 f.seek(20744+92*j)
-                f.write(b"\x00"*92*(original_yokai_amount - len(yokaidict)))
+                f.write(b"\x00"*92*(original_yokai_amount - len(yokailist)))
 
             #write profile back (the beginning part of your contact list)
             f.seek(unknown)
@@ -2286,57 +2716,59 @@ def main(file): #TODO fix items and yokai. could make all dicts lists
 
             #write contact back
             j=0
-            for i in contactdict:
-                f.write((bytearray([ord(k)for k in contactdict[i]["name"]])+bytearray(28))[:28])
-                f.write(contactdict[i]["ownerid"].to_bytes(4, "little"))
-                f.write((bytearray([ord(k)for k in contactdict[i]["comment"]])+bytearray(64))[:64])
-                f.write(contactdict[i]["favourite"].to_bytes(4, "little"))
-                f.write(contactdict[i]["bronze"].to_bytes(1, "little"))
-                f.write(contactdict[i]["silver"].to_bytes(1, "little"))
-                f.write(contactdict[i]["gold"].to_bytes(1, "little"))
-                f.write(contactdict[i]["game"].to_bytes(1, "little"))
-                f.write(int(contactdict[i]["playtime"]*3600).to_bytes(3, "little")) #may cause problems
+            for i in contactlist:
+                f.write((bytearray([ord(k)for k in i["name"]])+bytearray(25))[:25])
+                f.write(i["starred"].to_bytes(1, "little"))
+                f.seek(unknown+156+184*j+28)
+                f.write(i["ownerid"].to_bytes(4, "little"))
+                f.write((bytearray([ord(k)for k in i["comment"]])+bytearray(64))[:64])
+                f.write(i["favourite"].to_bytes(4, "little"))
+                f.write(i["bronze"].to_bytes(1, "little"))
+                f.write(i["silver"].to_bytes(1, "little"))
+                f.write(i["gold"].to_bytes(1, "little"))
+                f.write(i["game"].to_bytes(1, "little"))
+                f.write(int(i["playtime"]*3600).to_bytes(3, "little")) #may cause problems
                 f.seek(unknown+156+184*j+108)
-                f.write(contactdict[i]["tunnel"].to_bytes(4, "little"))
-                f.write(contactdict[i]["face"].to_bytes(4, "little"))
-                f.write(contactdict[i]["hq"].to_bytes(1, "little"))
-                f.write(contactdict[i]["job"].to_bytes(1, "little"))
-                f.write(contactdict[i]["hobby"].to_bytes(1, "little"))
-                f.write(contactdict[i]["ambition"].to_bytes(1, "little"))
+                f.write(i["tunnel"].to_bytes(4, "little"))
+                f.write(i["face"].to_bytes(4, "little"))
+                f.write(i["hq"].to_bytes(1, "little"))
+                f.write(i["job"].to_bytes(1, "little"))
+                f.write(i["hobby"].to_bytes(1, "little"))
+                f.write(i["ambition"].to_bytes(1, "little"))
                 f.seek(unknown+156+184*j+121)
                 #00 inbetween
-                f.write(contactdict[i]["requests"].to_bytes(1, "little"))
-                f.write(contactdict[i]["arrested"].to_bytes(1, "little"))
-                f.write(contactdict[i]["medalium"].to_bytes(1, "little"))
-                f.write(contactdict[i]["bugs"].to_bytes(1, "little"))
-                f.write(contactdict[i]["fish"].to_bytes(1, "little"))
-                f.write(contactdict[i]["battles"].to_bytes(1, "little"))
+                f.write(i["requests"].to_bytes(1, "little"))
+                f.write(i["arrested"].to_bytes(1, "little"))
+                f.write(i["medalium"].to_bytes(1, "little"))
+                f.write(i["bugs"].to_bytes(1, "little"))
+                f.write(i["fish"].to_bytes(1, "little"))
+                f.write(i["battles"].to_bytes(1, "little"))
                 f.seek(unknown+156+184*j+128)
                 #something here?
-                f.write(contactdict[i]["personal"].to_bytes(2, "little"))
-                f.write(contactdict[i]["public"].to_bytes(2, "little"))
-                f.write(contactdict[i]["rankl"].to_bytes(2, "little")) #ffff = master, 0000 = beginner
-                f.write(contactdict[i]["local"].to_bytes(2, "little"))
-                f.write(contactdict[i]["rankr"].to_bytes(2, "little")) #120 >= master (maybe less)
-                f.write(contactdict[i]["random"].to_bytes(2, "little"))
-                f.write(contactdict[i]["tagged"].to_bytes(2, "little"))
-                f.write(contactdict[i]["photographs"].to_bytes(2, "little"))
-                for k in contactdict[i]["yokai"]:
+                f.write(i["personal"].to_bytes(2, "little"))
+                f.write(i["public"].to_bytes(2, "little"))
+                f.write(i["rankl"].to_bytes(2, "little")) #ffff = master, 0000 = beginner
+                f.write(i["local"].to_bytes(2, "little"))
+                f.write(i["rankr"].to_bytes(2, "little")) #120 >= master (maybe less)
+                f.write(i["random"].to_bytes(2, "little"))
+                f.write(i["tagged"].to_bytes(2, "little"))
+                f.write(i["photographs"].to_bytes(2, "little"))
+                for k in i["yokai"]:
                     f.write(k.to_bytes(4, "little"))
-                for k in contactdict[i]["races"]:
+                for k in i["races"]:
                     f.write(give(k))
                 j+=1
 
             #clear contact overflow
-            if original_contact_amount - len(contactdict) > 0: #TODO test if this works
+            if original_contact_amount - len(contactlist) > 0: #TODO test if this works
                 f.seek(unknown+156+184*j)
-                f.write(b"\x00"*184*(original_contact_amount - len(contactdict)))
+                f.write(b"\x00"*184*(original_contact_amount - len(contactlist)))
                 
         f.seek(0)
         return f.read() #for the .yw files
 
 
-infile = "/Volumes/3DS/3ds/Checkpoint/saves/0x01B28 YO-KAI WATCH 2  PSYCHIC …/20230410-142023/game1.yw"
+infile = "/Users/emilia/Documents/dev/ykw/ykw-editors/my-editor/2/game1 copy.ywd"
 
 if infile[-3:] == "ywd":
     main(infile)
