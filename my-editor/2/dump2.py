@@ -98,7 +98,11 @@ def edit_yokai(yokailist, index, ownerid, yokai=None, attitude=None, nickname=No
             yokailist[index]["id"] = reverse_yokais[yokai]
         except:
             yokailist[index]["id"] = yokai
-    if nickname != None:
+    try:
+        yokailist[index]["nickname"] = yokailist[index]["nickname"]
+    except:
+        yokailist[index]["nickname"] = ""
+    if nickname != None: #may cause problems
         yokailist[index]["nickname"] = nickname
     yokailist[index]["attack"] = 255 
     yokailist[index]["technique"] = 255
@@ -124,6 +128,10 @@ def edit_yokai(yokailist, index, ownerid, yokai=None, attitude=None, nickname=No
     }
     yokailist[index]["level"] = 99 #255 works too but it automatically lowers to 99
     yokailist[index]["loaflevel"] = 5 #2?
+    try:
+        yokailist[index]["attitude"] = yokailist[index]["attitude"]
+    except:
+        yokailist[index]["attitude"] = 0
     if attitude != None:
         try:
             yokailist[index]["attitude"] = attitudes.index(attitude)
@@ -244,7 +252,7 @@ def edit_contact(contactlist, index, name=None, starred=None, ownerid=None, comm
     if comment != None:
         contactlist[index]["comment"] = comment
     if favourite != None:
-        contactlist[index]["favourite"] = favourite #TODO compile a list of which value corresponds to which yokai
+        contactlist[index]["favourite"] = favourite
     contactlist[index]["bronze"] = 99 #255 35
     contactlist[index]["silver"] = 99 #255 30
     contactlist[index]["gold"] = 99 #255 15
@@ -292,7 +300,7 @@ def edit_contact(contactlist, index, name=None, starred=None, ownerid=None, comm
     contactlist[index]["photographs"] = 65535
     if yokai != None:
         contactlist[index]["yokai"] = yokai
-    contactlist[index]["races"] = [.01,.01,.01,.01] #TODO could try 0.00001 so it shows as a 0 in the game
+    contactlist[index]["races"] = [.01,.01,.01,.01] #could use 0.00001 so it shows as a 0 in the game
     if dicti:
         return contactlist[0]
     else:
@@ -443,7 +451,7 @@ def main(file): #TODO fix yokai.
         profile = { #name is stored in the head file (can decrypt head.yw as a yokai watch 1 save. may impliment in the future)
             "ownerid": get(contact, 0, 4),
             "comment": get(contact, 4, 64, False),
-            "favourite": get(contact, 68, 4), #favourite yokai (by choice), TODO compile a list of which value corresponds to which yokai
+            "favourite": get(contact, 68, 4), #favourite yokai (by choice),
             "bronze": get(contact, 72), #what medals they have
             "silver": get(contact, 73),
             "gold": get(contact, 74),
@@ -451,7 +459,7 @@ def main(file): #TODO fix yokai.
             "playtime": get(contact, 76, 3)/3600, #in hours
             #00 inbetween
             "tunnel": get(contact, 80, 4),
-            "face": get(contact, 84, 4), #can be a yokai or human, etc. TODO compile a list of which value corresponds to which yokai
+            "face": get(contact, 84, 4), #can be a yokai or human, etc.
             "hq": get(contact, 88),
             "job": get(contact, 89),
             "hobby": get(contact, 90),
@@ -472,7 +480,7 @@ def main(file): #TODO fix yokai.
             "random": get(contact, 110, 2),
             "tagged": get(contact, 112, 2),
             "photographs": get(contact, 114, 2),
-            "yokai": [ #favourite yokai 1-6 (by playtime), TODO compile a list of which value corresponds to which yokai
+            "yokai": [ #favourite yokai 1-6 (by playtime),
                 get(contact, 116, 4), #if it is a 0 then there is no yokai in the slot. (early game)
                 get(contact, 120, 4),
                 get(contact, 124, 4),
@@ -502,7 +510,7 @@ def main(file): #TODO fix yokai.
                 #00 inbetween
                 "ownerid": get(contact, 28, 4),
                 "comment": get(contact, 32, 64, False),
-                "favourite": get(contact, 96, 4), #favourite yokai (by choice), TODO compile a list of which value corresponds to which yokai
+                "favourite": get(contact, 96, 4), #favourite yokai (by choice),
                 "bronze": get(contact, 100), #what medals they have
                 "silver": get(contact, 101),
                 "gold": get(contact, 102),
@@ -510,7 +518,7 @@ def main(file): #TODO fix yokai.
                 "playtime": get(contact, 104, 3)/3600, #in hours
                 #00 inbetween
                 "tunnel": get(contact, 108, 4),
-                "face": get(contact, 112, 4), #can be a yokai or human, etc. TODO compile a list of which value corresponds to which yokai
+                "face": get(contact, 112, 4), #can be a yokai or human, etc.
                 "hq": get(contact, 116),
                 "job": get(contact, 117),
                 "hobby": get(contact, 118),
@@ -531,7 +539,7 @@ def main(file): #TODO fix yokai.
                 "random": get(contact, 138, 2),
                 "tagged": get(contact, 140, 2),
                 "photographs": get(contact, 142, 2),
-                "yokai": [ #favourite yokai 1-6 (by playtime), TODO compile a list of which value corresponds to which yokai
+                "yokai": [ #favourite yokai 1-6 (by playtime),
                     get(contact, 144, 4),
                     get(contact, 148, 4),
                     get(contact, 152, 4),
@@ -564,6 +572,7 @@ def main(file): #TODO fix yokai.
         # unknown5 = f.read(1636)
 
         #editor goes here
+        yokailist = edit_yokai(yokailist, None, profile["ownerid"], "pandle")
         if 0:
             #to append yokai make index None. must include yokai, attitude & nickname if appending. (can all be "" except for yokai)
             #append a pandle
@@ -581,13 +590,19 @@ def main(file): #TODO fix yokai.
 
             profile = edit_contact(profile, None)
 
-        # #print data 
-        # if 1:
-
-
+        #print data 
+        if 1:
+            print(", ".join([yokais[i["id"]]for i in yokailist]))
+            print(", ".join([items[i["item"]]for i in itemlist]))
+            print(", ".join([equipments[i["equipment"]]for i in equipmentlist]))
+            print(", ".join([importants[i["important"]]for i in importantlist]))
+            print(", ".join([souls[i["soul"]]for i in soullist]))
+            # print(profile)
+            # print(contactlist)
+            
 
         #write everything back to file
-        if 0:
+        if 1:
             #write items back
             j=0
             for i in itemlist:
@@ -602,7 +617,7 @@ def main(file): #TODO fix yokai.
                 j+=1
             
             #clear item overflow
-            if original_item_amount - len(itemlist) > 0: #TODO test if this works
+            if original_item_amount - len(itemlist) > 0:
                 f.seek(offset+12*j)
                 f.write(b"\x00"*12*(original_item_amount - len(itemlist)))
             
@@ -624,7 +639,7 @@ def main(file): #TODO fix yokai.
                 j+=1
 
             #clear equipment overflow
-            if original_equipment_amount - len(equipmentlist) > 0: #TODO test if this works
+            if original_equipment_amount - len(equipmentlist) > 0:
                 f.seek(offset+5172+16*j)
                 f.write(b"\x00"*16*(original_equipment_amount - len(equipmentlist)))
 
@@ -642,7 +657,7 @@ def main(file): #TODO fix yokai.
                 j+=1
 
             #clear important overflow
-            if original_important_amount - len(importantlist) > 0: #TODO test if this works
+            if original_important_amount - len(importantlist) > 0:
                 f.seek(offset+6624+8*j)
                 f.write(b"\x00"*8*(original_important_amount - len(importantlist)))
 
@@ -666,7 +681,7 @@ def main(file): #TODO fix yokai.
                 j+=1
 
             #clear soul overflow
-            if original_soul_amount - len(soullist) > 0: #TODO test if this works
+            if original_soul_amount - len(soullist) > 0:
                 f.seek(offset+8076+12*j)
                 f.write(b"\x00"*12*(original_soul_amount - len(soullist)))
 
@@ -703,7 +718,7 @@ def main(file): #TODO fix yokai.
                 j+=1
 
             #clear yokai overflow
-            if original_yokai_amount - len(yokailist) > 0: #TODO test if this works
+            if original_yokai_amount - len(yokailist) > 0:
                 f.seek(20744+92*j)
                 f.write(b"\x00"*92*(original_yokai_amount - len(yokailist)))
 
@@ -795,7 +810,7 @@ def main(file): #TODO fix yokai.
                 j+=1
 
             #clear contact overflow
-            if original_contact_amount - len(contactlist) > 0: #TODO test if this works
+            if original_contact_amount - len(contactlist) > 0:
                 f.seek(unknown+156+184*j)
                 f.write(b"\x00"*184*(original_contact_amount - len(contactlist)))
                 
