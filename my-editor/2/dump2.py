@@ -66,7 +66,7 @@ def give(floa): #some shenanigans to convert a float to bytes
     return (0 | (e + 127) << 23 | int((floa - 1) * (2**23))).to_bytes(4, 'little')
 
 
-def edit_yokai(yokailist, index, ownerid, yokai=None, attitude=None, nickname=None): #massively overcomplicated and broken simultaneously 
+def edit_yokai(yokailist, index, ownerid, yokai=None, attitude=None, nickname=None, IV=None, EV=None): #massively overcomplicated and broken simultaneously 
     try:
         if index < 0:
             index = len(yokailist)-index #appending shortcut
@@ -78,7 +78,7 @@ def edit_yokai(yokailist, index, ownerid, yokai=None, attitude=None, nickname=No
         temp_yokailist = yokailist #pointless now???
         index = len(yokailist)
         yokailist.append({})
-        yokailist[index]["num1"] = 0
+        yokailist[index]["num1"] = 0 #this part is probably overcomplicted
         j=0
         for i in range(len(temp_yokailist)):
             if temp_yokailist[i]["num1"] != j:
@@ -109,21 +109,31 @@ def edit_yokai(yokailist, index, ownerid, yokai=None, attitude=None, nickname=No
     yokailist[index]["soultimate"] = 255
     yokailist[index]["xp"] = 0 #0 because level is 99
     yokailist[index]["ownerid"] = ownerid
-    yokailist[index]["stats"] = {
-        "IV_HP": 16, #IV rules: HP / 2 + Str + Spr + Def + Spd = 40
-        "IV_Str": 8, 
-        "IV_Spr": 8, 
-        "IV_Def": 8, 
-        "IV_Spd": 8, 
-        "CB_HP": 8, #EV rules: HP / 2 + Str + Spr + Def + Spd <= 20
-        "CB_Str": 4, 
-        "CB_Spr": 4, 
-        "CB_Def": 4, 
-        "CB_Spd": 4, 
-        "SC_HP": 0, #brokennnnn (probably written in a different way) +25, -10 per stat TODO figure out 15?
+    if IV == None:
+        IV = [16,8,8,8,8]
+    else:
+        if sum(IV) - IV[0]/2 != 40: #will complain if HP is odd so no need to check for that
+            IV = [16,8,8,8,8]
+    if EV == None:
+        EV = [8,4,4,4,4]
+    else:
+        if sum(EV) - EV[0]/2 != 20:
+            EV = [8,4,4,4,4]
+    yokailist[index]["stats"] = { #HP must be even
+        "IV_HP": IV[0], #IV rules: HP / 2 + Str + Spr + Def + Spd = 40
+        "IV_Str": IV[1], 
+        "IV_Spr": IV[2], 
+        "IV_Def": IV[3], 
+        "IV_Spd": IV[4], 
+        "EV_HP": EV[0], #EV rules: HP / 2 + Str + Spr + Def + Spd <= 20
+        "EV_Str": EV[1], 
+        "EV_Spr": EV[2], 
+        "EV_Def": EV[3], 
+        "EV_Spd": EV[4], 
+        "SC_HP": 0, #brokennnnn (probably written in a different way) +25, -10 per stat TODO figure out. 15?
         "SC_Str": 0, 
         "SC_Spr": 0, 
-        "SC_Def": 0, 
+        "SC_Def": 0,
         "SC_Spd": 0  
     }
     yokailist[index]["level"] = 99 #255 works too but it automatically lowers to 99
@@ -341,11 +351,11 @@ def main(file): #TODO fix yokai.
                     "IV_Spr": get(yokai, 66), 
                     "IV_Def": get(yokai, 67), 
                     "IV_Spd": get(yokai, 68), 
-                    "CB_HP": get(yokai, 69), 
-                    "CB_Str": get(yokai, 70), 
-                    "CB_Spr": get(yokai, 71), 
-                    "CB_Def": get(yokai, 72), 
-                    "CB_Spd": get(yokai, 73), 
+                    "EV_HP": get(yokai, 69), 
+                    "EV_Str": get(yokai, 70), 
+                    "EV_Spr": get(yokai, 71), 
+                    "EV_Def": get(yokai, 72), 
+                    "EV_Spd": get(yokai, 73), 
                     "SC_HP": get(yokai, 74), 
                     "SC_Str": get(yokai, 75), 
                     "SC_Spr": get(yokai, 76), 
@@ -572,7 +582,6 @@ def main(file): #TODO fix yokai.
         # unknown5 = f.read(1636)
 
         #editor goes here
-        yokailist = edit_yokai(yokailist, None, profile["ownerid"], "pandle")
         if 0:
             #to append yokai make index None. must include yokai, attitude & nickname if appending. (can all be "" except for yokai)
             #append a pandle
@@ -620,7 +629,7 @@ def main(file): #TODO fix yokai.
             if original_item_amount - len(itemlist) > 0:
                 f.seek(offset+12*j)
                 f.write(b"\x00"*12*(original_item_amount - len(itemlist)))
-            
+
             #write equipment back
             j=0
             for i in equipmentlist:
@@ -822,13 +831,10 @@ infile = "/Volumes/3DS/3ds/Checkpoint/saves/0x01B28 YO-KAI WATCH 2  PSYCHIC …/
 
 if infile[-3:] == "ywd":
     main(infile)
-else:
+else: #TODO make compatible on windows
     from pathlib import Path
     import sys
-    try:
-        sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"/save-tools") #TODO make nicer
-    except:
-        sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"\\save-tools")
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"/save-tools") #TODO make compatible on windows
     import yw_save
     with open(infile, "r+b") as f:
         if 0:
