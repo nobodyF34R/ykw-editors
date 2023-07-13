@@ -2,7 +2,7 @@
 # coding: utf-8
 
 """
-dump2.py (SHINNUCHI)
+dump2.py
 
 ======
 
@@ -29,13 +29,15 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from data import * #will eventually remove, added to make program nicer
+from data import * #will/may eventually remove, added to make program nicer
 
 #functions
-def get(read, place, length=1, integer=True, half=False, bigfloat=False):
+def get(read, place, length=1, integer=True, half=False):
     finished = ""
-    if half:
+    if half == True:
         return [int(f'{read[place]:08b}'[:4], 2), int(f'{read[place]:08b}'[4:], 2)] 
+    elif half == None: #list of bits (for the medallium)
+        return [bit == '1' for byte in read[place:place+length][-1::-1] for bit in f'{byte:08b}'][-1::-1] #list of True or False
     else:
         if integer == None: #float
             if read[place:place+length] == b'\x00'*4: #5.877471754111438e-39
@@ -78,7 +80,7 @@ def edit_yokai(yokailist, index, ownerid, yokai=None, attitude=None, nickname=No
         temp_yokailist = yokailist #pointless now???
         index = len(yokailist)
         yokailist.append({})
-        yokailist[index]["num1"] = 0 #this part is probably overcomplicted
+        yokailist[index]["num1"] = 0 #this part is probably overcomplicted 
         j=0
         for i in range(len(temp_yokailist)):
             if temp_yokailist[i]["num1"] != j:
@@ -236,7 +238,8 @@ def edit_soul(soullist, index, soul):
     soullist[index]["used"] = 0
     return soullist
 
-def edit_contact(contactlist, index, name=None, starred=None, ownerid=None, comment=None, favourite=None, game=None, face=None, hq=None, job=None, hobby=None, ambition=None, yokai=None): #can alse be used for profile
+def edit_contact(contactlist, index, readable=True, name=None, starred=None, ownerid=None, comment=None, favourite=None, game=None, face=None, hq=None, job=None, hobby=None, ambition=None, yokai=None): #can alse be used for profile
+    # if readable is true, there will be no overlapping text. if it's false then values will be their limits (255)
     try:
         if index < 0:
             index = len(contactlist)-index #appending shortcut (semi-redundant)
@@ -248,7 +251,7 @@ def edit_contact(contactlist, index, name=None, starred=None, ownerid=None, comm
         index = 0
         contactlist = [contactlist]
     else:
-        try: #edited maxes to avoid overlapping text in-game
+        try:
             contactlist[index]
         except:
             index = len(contactlist)
@@ -263,13 +266,13 @@ def edit_contact(contactlist, index, name=None, starred=None, ownerid=None, comm
         contactlist[index]["comment"] = comment
     if favourite != None:
         contactlist[index]["favourite"] = favourite
-    contactlist[index]["bronze"] = 99 #255 35
-    contactlist[index]["silver"] = 99 #255 30
-    contactlist[index]["gold"] = 99 #255 15
+    contactlist[index]["bronze"] = 99 if readable else 255
+    contactlist[index]["silver"] = 99 if readable else 255
+    contactlist[index]["gold"] = 99 if readable else 255
     if game != None:
         contactlist[index]["game"] = game
-    contactlist[index]["playtime"] = 4659.9997222222222 #999.9997222222222 ingame max
-    contactlist[index]["tunnel"] = 9999999 #2147483647
+    contactlist[index]["playtime"] = 4659.9997222222222 #ingame max is 999.9997222222222
+    contactlist[index]["tunnel"] = 9999999 if readable else 2147483647
     if face != None:
         contactlist[index]["face"] = face
     if hq != None:
@@ -293,17 +296,17 @@ def edit_contact(contactlist, index, name=None, starred=None, ownerid=None, comm
             contactlist[index]["ambition"] = ambitions.index(ambition)
         except:
             contactlist[index]["ambition"] = ambition
-    contactlist[index]["requests"] = 255
+    contactlist[index]["requests"] = 255 #TODO figure out other ingame maxes
     contactlist[index]["arrested"] = 255
-    contactlist[index]["medalium"] = 255 #technically 100 is max as it's a percentage
+    contactlist[index]["medallium"] = 255 #fake percentage (100)
     contactlist[index]["bugs"] = 255
     contactlist[index]["fish"] = 255
     contactlist[index]["battles"] = 255
     contactlist[index]["battles"] = 255
     contactlist[index]["personal"] = 65535
-    contactlist[index]["public"] = 9999 #65535
+    contactlist[index]["public"] = 9999 if readable else 65535
     contactlist[index]["rankl"] = 65535
-    contactlist[index]["local"] = 99 #65535
+    contactlist[index]["local"] = 99 if readable else 65535
     contactlist[index]["rankr"] = 65535
     contactlist[index]["random"] = 65535
     contactlist[index]["tagged"] = 65535
@@ -372,7 +375,7 @@ def main(file): #TODO fix yokai.
 
         #offset at the location "\xFE\x6D\x08\xFE\xFF\x00\x00\x03\x48\x24\x00\xFE\xFF" + 19th byte aka item location
         f.seek(0)
-        offset = f.read(20744).index(b"\xFE\x6D\x08\xFE\xFF\x00\x00\x03\x48\x24\x00\xFE\xFF")+19 #certainly broken or at least bad
+        offset = f.read(20744).index(b"\xFE\x6D\x08\xFE\xFF\x00\x00\x03\x48\x24\x00\xFE\xFF")+19 #there's probably a better way to do this
 
         itemlist = []
         index = 0
@@ -458,7 +461,7 @@ def main(file): #TODO fix yokai.
         unknown = postyokai.index(b"\xfe\xff\xd5\x08\x14\x90\x24\x00")+8+20744
         f.seek(unknown)  # this is your profile info location. your profile takes up 156 bytes
         contact = f.read(156)
-        profile = { #name is stored in the head file (can decrypt head.yw as a yokai watch 1 save. may impliment in the future)
+        profile = { #name & playtime is stored in the head file (can decrypt head.yw as a yokai watch 1 save. may impliment in the future)
             "ownerid": get(contact, 0, 4),
             "comment": get(contact, 4, 64, False),
             "favourite": get(contact, 68, 4), #favourite yokai (by choice),
@@ -477,7 +480,7 @@ def main(file): #TODO fix yokai.
             #00 inbetween
             "requests": get(contact, 93), #i can't remember what this is lol
             "arrested": get(contact, 94), #yo-criminals
-            "medalium": get(contact, 95), #percentage
+            "medallium": get(contact, 95), #percentage
             "bugs": get(contact, 96),
             "fish": get(contact, 97),
             "battles": get(contact, 98),
@@ -536,7 +539,7 @@ def main(file): #TODO fix yokai.
                 #00 inbetween
                 "requests": get(contact, 121), #i can't remember what this is lol
                 "arrested": get(contact, 122), #yo-criminals
-                "medalium": get(contact, 123), #percentage
+                "medallium": get(contact, 123), #percentage
                 "bugs": get(contact, 124),
                 "fish": get(contact, 125),
                 "battles": get(contact, 126),
@@ -568,6 +571,16 @@ def main(file): #TODO fix yokai.
             index += 1
         original_contact_amount = index
 
+        medalliumlist = [] # the way this works is weird. the first bit is always False (because there is no 0th yokai) and it's still in big endian so the bytes are backwards. the last 7 bits are unused (False) because the are no more yokai. maybe the unused space is the for updates? (64 bits total)
+        f.seek(1460) # seen
+        medalliumlist.append(get(f.read(57), 0, 57, half=None))
+        f.seek(1524) # befriended
+        medalliumlist.append(get(f.read(57), 0, 57, half=None)) #seen boss yokai show up as befriended for some reason
+        f.seek(1588) # new 
+        medalliumlist.append(get(f.read(57), 0, 57, half=None)) #the ones that say new in the medallium
+        f.seek(1652) # camera
+        medalliumlist.append(get(f.read(57), 0, 57, half=None))
+
         # f.seek(postyokai.index(b"\xff\xfe\x6b\x08\xfe\xff")+20744) #!P & T ..... currently i have no idea what this is or how to use it. part of it is probably the medallium info & story progress
         # unknown1 = f.read(150) #138
         # # f.seek(postyokai.index(b"\xff\xfe\xd5\x08\xfe\xff\xd5\x08\x15")+20744) maybe this T
@@ -582,7 +595,7 @@ def main(file): #TODO fix yokai.
         # unknown5 = f.read(1636)
 
         #editor goes here
-        if 0:
+        if 0: #appending yokai is currently broken TODO
             #to append yokai make index None. must include yokai, attitude & nickname if appending. (can all be "" except for yokai)
             #append a pandle
             yokailist = edit_yokai(yokailist, None, profile["ownerid"], "pandle", "", "bob") #if you get the index wrong it will mess everything up
@@ -608,7 +621,23 @@ def main(file): #TODO fix yokai.
             print(", ".join([souls[i["soul"]]for i in soullist]))
             # print(profile)
             # print(contactlist)
-            
+
+            print("\nseen yokai:")
+            for i in range(449):
+                if medalliumlist[0][i]: # medalliumlist[0][0] should never be true
+                    print(indexs[i], end=", ")
+            print("\nbefriended yokai:")
+            for i in range(449):
+                if medalliumlist[1][i]: # medalliumlist[1][0] should never be true
+                    print(indexs[i], end=", ")
+            print("\nnew yokai:")
+            for i in range(449):
+                if medalliumlist[2][i]: # medalliumlist[2][0] should never be true
+                    print(indexs[i], end=", ")
+            print("\ncamera yokai:")
+            for i in range(449):
+                if medalliumlist[3][i]: # medalliumlist[2][0] should never be true
+                    print(indexs[i], end=", ")
 
         #write everything back to file
         if 1:
@@ -704,7 +733,7 @@ def main(file): #TODO fix yokai.
                 f.seek(20744+92*j+4)
                 f.write(i["id"].to_bytes(4, "little"))
                 f.seek(20744+92*j+8)
-                f.write((bytearray([ord(k)for k in i["nickname"]])+bytearray(24))[:24]) # to be more accurate to game could just append
+                f.write((bytearray([ord(k)for k in i["nickname"]])+bytearray(24))[:24]) # to be more accurate to game could just append with trailing 00
                 f.seek(20744+92*j+42)
                 f.write(i["attack"].to_bytes(1, "little"))
                 f.seek(20744+92*j+46)
@@ -752,7 +781,7 @@ def main(file): #TODO fix yokai.
             #00 inbetween
             f.write(profile["requests"].to_bytes(1, "little"))
             f.write(profile["arrested"].to_bytes(1, "little"))
-            f.write(profile["medalium"].to_bytes(1, "little"))
+            f.write(profile["medallium"].to_bytes(1, "little"))
             f.write(profile["bugs"].to_bytes(1, "little"))
             f.write(profile["fish"].to_bytes(1, "little"))
             f.write(profile["battles"].to_bytes(1, "little"))
@@ -798,7 +827,7 @@ def main(file): #TODO fix yokai.
                 #00 inbetween
                 f.write(i["requests"].to_bytes(1, "little"))
                 f.write(i["arrested"].to_bytes(1, "little"))
-                f.write(i["medalium"].to_bytes(1, "little"))
+                f.write(i["medallium"].to_bytes(1, "little"))
                 f.write(i["bugs"].to_bytes(1, "little"))
                 f.write(i["fish"].to_bytes(1, "little"))
                 f.write(i["battles"].to_bytes(1, "little"))
@@ -822,14 +851,26 @@ def main(file): #TODO fix yokai.
             if original_contact_amount - len(contactlist) > 0:
                 f.seek(unknown+156+184*j)
                 f.write(b"\x00"*184*(original_contact_amount - len(contactlist)))
+
+            #write medallium back
+            f.seek(1460) # seen
+            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[0][i:i+8][::-1]), 2) for i in range(0, len(medalliumlist[0]), 8)]))
+            f.seek(1524) # befriended
+            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[1][i:i+8][::-1]), 2) for i in range(0, len(medalliumlist[1]), 8)]))
+            f.seek(1588) # new
+            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[2][i:i+8][::-1]), 2) for i in range(0, len(medalliumlist[2]), 8)]))
+            f.seek(1652) # camera
+            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[3][i:i+8][::-1]), 2) for i in range(0, len(medalliumlist[2]), 8)]))
+
+            #no need to clear medallium overflow as it can't be deleted
                 
         f.seek(0)
         return f.read() #for the .yw files
 
+infile = "/Users/emilia/Documents/dev/ykw/ykw-editors/my-editor/2/game check copy.ywd"
+#infile = "/Volumes/3DS/3ds/Checkpoint/saves/0x01B28 YO-KAI WATCH 2  PSYCHIC …/20230410-142023/game1.yw"
 
-infile = "/Volumes/3DS/3ds/Checkpoint/saves/0x01B28 YO-KAI WATCH 2  PSYCHIC …/20230410-142023/game1.yw"
-
-if infile[-3:] == "ywd":
+if infile[-3:] == "ywd": #sloppy
     main(infile)
 else: #TODO make compatible on windows
     from pathlib import Path

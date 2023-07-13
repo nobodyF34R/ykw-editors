@@ -1,21 +1,10 @@
 python '/Users/emilia/Documents/dev/ykw/ykw-editors/save-tools/yw_save.py' --encrypt --game yw2 --head 
 
-#new->old
-shogunyan =    4045001763->2534548502
-shad. venoct = 4206316172->2629614265
-sgt. burly =   2747538935->3318738370
-snartle =      0518528302->2028203291
-gilgaros =     2122007412->0410039105
-
-
-middle: 16, 8
 IV rules: HP / 2 + Str + Spr + Def + Spd = 40
-
-ev: 8, 8
 EV rules: HP / 2 + Str + Spr + Def + Spd <= 20
 
 
-offset = 20744
+yokai offset = 20744
 
 00 - 01:
 num1
@@ -113,9 +102,7 @@ loaflevel and attitude
 91:
 0
 
-
-
-
+missing items held, current hp, jibanyan soultimate??
 
 
 
@@ -142,7 +129,7 @@ important offset: universal offset + 6624
 
 00: num1
 01: 20
-02: UNKNOWN !!!!!!!!!!!!!!!
+02: num2
 04-07: important (what it is aka id)
 
 soul offset: universal offset + 8076
@@ -177,9 +164,6 @@ useful unsorted info:
         ui->youkaiCamGB->setTitle(tr("BEFRIENDED_FS"));
     }
 
-    static const int SECTIONS_CNT = 0x10;
-    static const quint8 defaultOrder[SECTIONS_CNT];
-    static const quint8 sectionF2magic = 0x02;
     static const int YoukaiCountMax = 406;
     static const int ItemCountMax = 430;
     static const int EquipmentCountMax = 90;

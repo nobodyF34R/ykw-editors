@@ -199,7 +199,7 @@ def yw2_proc(data, isEncrypt, key=b"5+NI8WVq09V7LI5w", head=None, validator=game
     tested with Shin'uchi
     also works with Ganso / Honke 1.x
     """
-    ccm = CCMCipher(key)
+    ccm = CCMCipher(key) # could use AES.new(key, AES.MODE_CCM)
     nonce = data[:12]
     mac = data[0x10:0x20]
     if not isEncrypt:
