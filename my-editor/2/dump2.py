@@ -80,7 +80,7 @@ def edit_yokai(yokailist, index, ownerid, yokai=None, attitude=None, nickname=No
         temp_yokailist = yokailist #pointless now???
         index = len(yokailist)
         yokailist.append({})
-        yokailist[index]["num1"] = 0 #this part is probably overcomplicted 
+        yokailist[index]["num1"] = 0 #this part is probably overcomplicated 
         j=0
         for i in range(len(temp_yokailist)):
             if temp_yokailist[i]["num1"] != j:
@@ -141,7 +141,7 @@ def edit_yokai(yokailist, index, ownerid, yokai=None, attitude=None, nickname=No
     yokailist[index]["level"] = 99 #255 works too but it automatically lowers to 99
     yokailist[index]["loaflevel"] = 5 #2?
     try:
-        yokailist[index]["attitude"] = yokailist[index]["attitude"]
+        yokailist[index]["attitude"] = yokailist[index]["attitude"] #for appending
     except:
         yokailist[index]["attitude"] = 0
     if attitude != None:
@@ -575,7 +575,7 @@ def main(file): #TODO fix yokai.
         f.seek(1460) # seen
         medalliumlist.append(get(f.read(57), 0, 57, half=None))
         f.seek(1524) # befriended
-        medalliumlist.append(get(f.read(57), 0, 57, half=None)) #seen boss yokai show up as befriended for some reason
+        medalliumlist.append(get(f.read(57), 0, 57, half=None)) #seen boss yokai show up as befriended because otherwise you wouldn't be able to see their profile
         f.seek(1588) # new 
         medalliumlist.append(get(f.read(57), 0, 57, half=None)) #the ones that say new in the medallium
         f.seek(1652) # camera
@@ -854,13 +854,13 @@ def main(file): #TODO fix yokai.
 
             #write medallium back
             f.seek(1460) # seen
-            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[0][i:i+8][::-1]), 2) for i in range(0, len(medalliumlist[0]), 8)]))
+            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[0][i:i+8][::-1]), 2) for i in range(0, 456, 8)]))
             f.seek(1524) # befriended
-            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[1][i:i+8][::-1]), 2) for i in range(0, len(medalliumlist[1]), 8)]))
+            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[1][i:i+8][::-1]), 2) for i in range(0, 456, 8)]))
             f.seek(1588) # new
-            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[2][i:i+8][::-1]), 2) for i in range(0, len(medalliumlist[2]), 8)]))
+            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[2][i:i+8][::-1]), 2) for i in range(0, 456, 8)]))
             f.seek(1652) # camera
-            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[3][i:i+8][::-1]), 2) for i in range(0, len(medalliumlist[2]), 8)]))
+            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[3][i:i+8][::-1]), 2) for i in range(0, 456, 8)]))
 
             #no need to clear medallium overflow as it can't be deleted
                 

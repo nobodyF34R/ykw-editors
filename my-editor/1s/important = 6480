@@ -1,3 +1,26 @@
 important = 6480
 yokai = 7696
 medallium = 1476
+
+loaf level:
+
+if you make yokai/118 b'\x03' then its loaf level becomes serious
+
+0000 or 0100 or 0200 = stiff?
+        0103 or 
+
+0300 or 0400 or 0500 or 0600 = serious
+0307 or 0407 or 
+
+0003 or = carefree
+
+
+evs and ivs: (super confusing)
+
+tiv: max if 1 stat then 8 else 4 on both (it's based on tribes, may have to look into this.) tiv = tribal iv
+iv1: hp+str+spr+def+spd=10
+iv2: all=3 (evolutions only?)
+ev: max=hp+str+spr+def+spd=20? 
+affection is related to when a yokai gets a stat increase. based on number of battles fought & exporbs used. don't have to worry about this since we can manually edit stats. max = 300
+
+TODO test maxes

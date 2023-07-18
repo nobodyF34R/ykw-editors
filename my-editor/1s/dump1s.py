@@ -68,6 +68,159 @@ def give(floa): #some shenanigans to convert a float to bytes
     return (0 | (e + 127) << 23 | int((floa - 1) * (2**23))).to_bytes(4, 'little')
 
 
+def edit_yokai(yokailist, index, yokai=None, attitude=None, nickname=None, IV=None, EV=None): #massively overcomplicated and broken simultaneously 
+    try:
+        if index < 0:
+            index = len(yokailist)-index #appending shortcut
+    except:
+        pass
+    try:
+        yokailist[index]
+    except:
+        temp_yokailist = yokailist #pointless now???
+        index = len(yokailist)
+        yokailist.append({})
+        yokailist[index]["num1"] = 0 #this part is probably overcomplicated 
+        j=0
+        for i in range(len(temp_yokailist)):
+            if temp_yokailist[i]["num1"] != j:
+                yokailist[index]["num1"] = j
+                break
+            if temp_yokailist[i]["num1"] > yokailist[index]["num1"]:
+                yokailist[index]["num1"] = temp_yokailist[i]["num1"]+1
+            j+=1
+        yokailist[index]["num2"] = 1
+        for i in range(j):
+            if temp_yokailist[i]["num2"] > yokailist[index]["num2"]:
+                yokailist[index]["num2"] = temp_yokailist[i]["num2"]
+                location = i
+        yokailist[index]["num2"]+=(j-location)
+    if yokai != None:
+        try:
+            yokailist[index]["id"] = reverse_yokais[yokai]
+        except:
+            yokailist[index]["id"] = yokai
+    try:
+        yokailist[index]["nickname"] = yokailist[index]["nickname"]
+    except:
+        yokailist[index]["nickname"] = ""
+    if nickname != None: #may cause problems
+        yokailist[index]["nickname"] = nickname
+    yokailist[index]["attack"] = 255 
+    yokailist[index]["technique"] = 255
+    yokailist[index]["soultimate"] = 255
+    
+    if IV == None: # IV1
+        IV = [2,2,2,2,2]
+    else:
+        if sum(IV) != 10:
+            IV = [2,2,2,2,2]
+    if EV == None:
+        EV = [4,4,4,4,4]
+    else:
+        if sum(EV) != 20:
+            EV = [4,4,4,4,4]
+    
+    yokailist[index]["stats"] = { #HP must be even
+        "TIV_HP": TIVs[yokailist[index]["id"]][0], 
+        "TIV_Str": TIVs[yokailist[index]["id"]][1], 
+        "TIV_Spr": TIVs[yokailist[index]["id"]][2], 
+        "TIV_Def": TIVs[yokailist[index]["id"]][3], 
+        "TIV_Spd": TIVs[yokailist[index]["id"]][4], 
+        "IV1_HP": IV[0], #sums to 10
+        "IV1_Str": IV[1], 
+        "IV1_Spr": IV[2], 
+        "IV1_Def": IV[3], 
+        "IV1_Spd": IV[4], 
+        "IV2_HP": 15, # ingame max is 3, still needs testing
+        "IV2_Str": 15, 
+        "IV2_Spr": 15, 
+        "IV2_Def": 15,  
+        "IV2_Spd": 15,  
+        "EV_HP": EV[0], #sums to 20
+        "EV_Str": EV[1], 
+        "EV_Spr": EV[2], 
+        "EV_Def": EV[3], 
+        "EV_Spd": EV[4], 
+    }
+    yokailist[index]["level"] = 255
+    try: # this is for appending, which is currently broken
+        yokailist[index]["attitude"] = yokailist[index]["attitude"]
+    except:
+        yokailist[index]["attitude"] = 0
+    if attitude != None:
+        try:
+            yokailist[index]["attitude"] = attitudes.index(attitude)
+        except:
+            yokailist[index]["attitude"] = attitudes[attitude]
+
+    return sorted(yokailist, key=lambda x:x["num1"])
+
+def edit_item(itemlist, index, item=None, amount=None): #broken for some reason
+    try:
+        if index < 0:
+            index = len(itemlist)-index #appending shortcut
+    except:
+        pass
+    try:
+        itemlist[index]
+    except:
+        index = len(itemlist)
+        itemlist.append({})
+    itemlist[index]["num1"] = index
+    itemlist[index]["num2"] = index+1
+    if item:
+        try:
+            itemlist[index]["item"] = reverse_items[item]
+        except:
+            itemlist[index]["item"] = item
+    if amount:
+        itemlist[index]["amount"] = amount
+    return itemlist
+
+def edit_equipment(equipmentlist, index, equipment=None, amount=None):
+    try:
+        if index < 0:
+            index = len(equipmentlist)-index #appending shortcut
+    except:
+        pass
+    try:
+        equipmentlist[index]
+    except:
+        index = len(equipmentlist)
+        equipmentlist.append({})
+    equipmentlist[index]["num1"] = index
+    equipmentlist[index]["num2"] = index+1
+    if equipment:
+        try:
+            equipmentlist[index]["equipment"] = reverse_equipments[equipment]
+        except:
+            equipmentlist[index]["equipment"] = equipment
+    if amount:
+        equipmentlist[index]["amount"] = amount
+    equipmentlist[index]["used"] = 0
+    return equipmentlist
+
+def edit_important(importantlist, index, important):
+    try:
+        if index < 0:
+            index = len(importantlist)-index #appending shortcut
+    except:
+        pass
+    try:
+        importantlist[index]
+    except:
+        index = len(importantlist)
+        importantlist.append({})
+    importantlist[index]["num1"] = index
+    importantlist[index]["num2"] = index+1
+    try:
+        importantlist[index]["important"] = reverse_importants[important]
+    except:
+        importantlist[index]["important"] = important
+    return importantlist
+
+
 #main
 def main(file): #TODO fix yokai. medalium
     try:
@@ -89,24 +242,35 @@ def main(file): #TODO fix yokai. medalium
                 "num2": get(yokai, 2, 2), #2
                 "id": get(yokai, 4, 4), #4-07
                 "nickname": get(yokai, 8, 68, False), #8-76 maybe broken
-                # "stats": { # 64 - 78
-                #     "IV_HP": get(yokai, 64), 
-                #     "IV_Str": get(yokai, 65), 
-                #     "IV_Spr": get(yokai, 66), 
-                #     "IV_Def": get(yokai, 67), 
-                #     "IV_Spd": get(yokai, 68), 
-                #     "EV_HP": get(yokai, 69), 
-                #     "EV_Str": get(yokai, 70), 
-                #     "EV_Spr": get(yokai, 71), 
-                #     "EV_Def": get(yokai, 72), 
-                #     "EV_Spd": get(yokai, 73), 
-                #     "SC_HP": get(yokai, 74), 
-                #     "SC_Str": get(yokai, 75), 
-                #     "SC_Spr": get(yokai, 76), 
-                #     "SC_Def": get(yokai, 77), 
-                #     "SC_Spd": get(yokai, 78)
-                # }, 
-                "level": get(yokai, 116),
+                "attack": get(yokai, 78),
+                "technique": get(yokai, 82),
+                "soultimate": get(yokai, 86),
+                "stats": {
+                    "TIV_HP": get(yokai, 96), 
+                    "TIV_Str": get(yokai, 97), 
+                    "TIV_Spr": get(yokai, 98), 
+                    "TIV_Def": get(yokai, 99), 
+                    "TIV_Spd": get(yokai, 100), 
+                    "IV1_HP": get(yokai, 101, half=True)[1], #could swap these around but consistency is key...
+                    "IV1_Str": get(yokai, 102, half=True)[1], 
+                    "IV1_Spr": get(yokai, 103, half=True)[1], 
+                    "IV1_Def": get(yokai, 104, half=True)[1], 
+                    "IV1_Spd": get(yokai, 105, half=True)[1], 
+                    "IV2_HP": get(yokai, 101, half=True)[0], 
+                    "IV2_Str": get(yokai, 102, half=True)[0], 
+                    "IV2_Spr": get(yokai, 103, half=True)[0], 
+                    "IV2_Def": get(yokai, 104, half=True)[0], 
+                    "IV2_Spd": get(yokai, 105, half=True)[0], 
+                    "EV_HP": get(yokai, 106), 
+                    "EV_Str": get(yokai, 107), 
+                    "EV_Spr": get(yokai, 108), 
+                    "EV_Def": get(yokai, 109), 
+                    "EV_Spd": get(yokai, 110), 
+                }, 
+                "level": get(yokai, 116), 
+                "attitude": get(yokai, 117), 
+                #TODO loaf level, xp, HP, soul, held item & affection
+                #"affection": get(yokai, 120), #this is wrong i think
             })
 
             index += 1
@@ -124,7 +288,7 @@ def main(file): #TODO fix yokai. medalium
             itemlist.append({
                 "num1": get(item, 0, 2), #0
                 "num2": get(item, 2, 2), #2
-                "item": items[get(item, 4, 4)], #4
+                "item": get(item, 4, 4), #4
                 "amount": get(item, 8, 4) #8
             })
 
@@ -143,7 +307,7 @@ def main(file): #TODO fix yokai. medalium
             equipmentlist.append({
                 "num1": get(equipment, 0, 1), #0
                 "num2": get(equipment, 2, 1), #2
-                "equipment": equipments[get(equipment, 4, 4)], #4
+                "equipment": get(equipment, 4, 4), #4
                 "amount": get(equipment, 8, 4), #8 #maybe 1 byte
                 "used": get(equipment, 12, 4) #how many are in use (leave alone or set to zero)
             })
@@ -163,21 +327,27 @@ def main(file): #TODO fix yokai. medalium
             importantlist.append({
                 "num1": get(important, 0, 1), #0
                 "num2": get(important, 2, 1), #2 unsure.
-                "important": importants[get(important, 4, 4)], #4
+                "important": get(important, 4, 4), #4
             })
 
             index += 1
         original_important_amount = index
 
-        medalliumlist = [] # the way this works is weird. the first bit is always False (because there is no 0th yokai) and it's still in big endian so the bytes are backwards. the last 7 bits are unused (False) because the are no more yokai. maybe the unused space is the for updates?
+        medalliumlist = [] # the way this works is weird. the first bit is always False (because there is no 0th yokai) and it's still in little endian so the bytes are backwards. the last 7 bits are unused (False) because the are no more yokai. maybe the unused space is the for future updates?
         f.seek(1476)
         medalliumlist.append(get(f.read(32), 0, 32, half=None)) # seen
         medalliumlist.append(get(f.read(32), 0, 32, half=None)) # befriended
         medalliumlist.append(get(f.read(32), 0, 32, half=None)) # seen
         medalliumlist.append(get(f.read(32), 0, 32, half=None)) # camera
 
+
+        #editor goes here
+        if 1: #appending yokai is currently broken TODO
+            for i in range(len(yokailist)):
+                edit_yokai(yokailist, i, "shogunyan", "rough", "", [3,4,0,0,3],[7,7,0,0,6])
+        
         #print data 
-        if 1:
+        if 0:
             #print(", ".join([yokais[i["id"]]for i in yokailist]))
 
             print("\nseen yokai:")
@@ -185,10 +355,10 @@ def main(file): #TODO fix yokai. medalium
                 if medalliumlist[0][i]: # medalliumlist[0][0] should never be true
                     print(indexs[i], end=", ")
             print("\nbefriended yokai:")
-            for i in range(224): #got rid of printing boss yokai to avoid confusion. may remove
+            for i in range(224): #got rid of printing boss yokai to avoid confusion, since seen boss yokai show up as befriended because otherwise you wouldn't be able to see their profile
                 if medalliumlist[1][i]: # medalliumlist[1][0] should never be true. the boss yokai are just weird i think
                     print(indexs[i], end=", ")
-            print("\new yokai:")
+            print("\nnew yokai:")
             for i in range(246):
                 if medalliumlist[2][i]: # medalliumlist[2][0] should never be true. the boss yokai are just weird i think
                     print(indexs[i], end=", ")
@@ -197,8 +367,8 @@ def main(file): #TODO fix yokai. medalium
                 if medalliumlist[3][i]: # medalliumlist[3][0] should never be true. the boss yokai are just weird i think
                     print(indexs[i], end=", ")
 
-        #write everything back to file
-        if 0:
+        #write everything back to file TODO
+        if 1:
             #write items back
             j=0
             for i in itemlist:
@@ -260,35 +430,80 @@ def main(file): #TODO fix yokai. medalium
             #write yokai back
             j=0
             for i in yokailist:
-                f.seek(20744+92*j)
+                f.seek(7696+124*j)
                 f.write(i["num1"].to_bytes(2, "little"))
-                f.seek(20744+92*j+2)
+                f.seek(7696+124*j+2)
                 f.write(i["num2"].to_bytes(2, "little"))
-                f.seek(20744+92*j+4)
+                f.seek(7696+124*j+4)
                 f.write(i["id"].to_bytes(4, "little"))
-                f.seek(20744+92*j+8)
-                f.write((bytearray([k in i["nickname"].encode('utf-8')])+bytearray(24))[:24])
+                f.seek(7696+124*j+8)
+                f.write((bytearray(list(i["nickname"].encode('utf-8')))+bytearray(60))[:60])
+                f.seek(7696+124*j+78)
+                f.write(i["attack"].to_bytes(1, "little"))
+                f.seek(7696+124*j+82)
+                f.write(i["technique"].to_bytes(1, "little"))
+                f.seek(7696+124*j+86)
+                f.write(i["soultimate"].to_bytes(1, "little"))
+
+                f.seek(7696+124*j+96)
+                f.write(i["stats"]["TIV_HP"].to_bytes(1, "little"))
+                f.seek(7696+124*j+97)
+                f.write(i["stats"]["TIV_Str"].to_bytes(1, "little"))
+                f.seek(7696+124*j+98)
+                f.write(i["stats"]["TIV_Spr"].to_bytes(1, "little"))
+                f.seek(7696+124*j+99)
+                f.write(i["stats"]["TIV_Def"].to_bytes(1, "little"))
+                f.seek(7696+124*j+100)
+                f.write(i["stats"]["TIV_Spd"].to_bytes(1, "little"))
+                f.seek(7696+124*j+101)
+                f.write(int(f'{i["stats"]["IV1_HP"]:04b}'+f'{i["stats"]["IV2_HP"]:04b}', 2).to_bytes(1, "little"))
+                f.seek(7696+124*j+102)
+                f.write(int(f'{i["stats"]["IV1_Str"]:04b}'+f'{i["stats"]["IV2_Str"]:04b}', 2).to_bytes(1, "little"))
+                f.seek(7696+124*j+103)
+                f.write(int(f'{i["stats"]["IV1_Spr"]:04b}'+f'{i["stats"]["IV2_Spr"]:04b}', 2).to_bytes(1, "little"))
+                f.seek(7696+124*j+104)
+                f.write(int(f'{i["stats"]["IV1_Def"]:04b}'+f'{i["stats"]["IV2_Def"]:04b}', 2).to_bytes(1, "little"))
+                f.seek(7696+124*j+105)
+                f.write(int(f'{i["stats"]["IV1_Spd"]:04b}'+f'{i["stats"]["IV2_Spd"]:04b}', 2).to_bytes(1, "little"))
+                f.seek(7696+124*j+106)
+                f.write(i["stats"]["EV_HP"].to_bytes(1, "little"))
+                f.seek(7696+124*j+107)
+                f.write(i["stats"]["EV_Str"].to_bytes(1, "little"))
+                f.seek(7696+124*j+108)
+                f.write(i["stats"]["EV_Spr"].to_bytes(1, "little"))
+                f.seek(7696+124*j+109)
+                f.write(i["stats"]["EV_Def"].to_bytes(1, "little"))
+                f.seek(7696+124*j+110)
+                f.write(i["stats"]["EV_Spd"].to_bytes(1, "little"))
+
+                f.seek(7696+124*j+116)
+                f.write(i["level"].to_bytes(1, "little"))
+                f.seek(7696+124*j+117)
+                f.write(i["attitude"].to_bytes(1, "little"))
+                # TODO more when i figure it out
                 j+=1
 
             #clear yokai overflow
             if original_yokai_amount - len(yokailist) > 0:
-                f.seek(20744+92*j)
-                f.write(b"\x00"*92*(original_yokai_amount - len(yokailist)))
+                f.seek(7696+124*j)
+                f.write(b"\x00"*124*(original_yokai_amount - len(yokailist)))
 
             #write medallium back
-            f.seek(1460) # seen
-            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[0][i:i+8][::-1]), 2) for i in range(0, len(medalliumlist[0]), 8)]))
-            f.seek(1524) # befriended
-            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[1][i:i+8][::-1]), 2) for i in range(0, len(medalliumlist[1]), 8)]))
-            f.seek(1588) # new
-            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[2][i:i+8][::-1]), 2) for i in range(0, len(medalliumlist[2]), 8)]))
-            f.seek(1652) # camera
-            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[3][i:i+8][::-1]), 2) for i in range(0, len(medalliumlist[3]), 8)]))
+            f.seek(1476) # seen
+            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[0][i:i+8][::-1]), 2) for i in range(0, 256, 8)]))
+            f.seek(1508) # befriended
+            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[1][i:i+8][::-1]), 2) for i in range(0, 256, 8)]))
+            f.seek(1540) # new
+            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[2][i:i+8][::-1]), 2) for i in range(0, 256, 8)]))
+            f.seek(1572) # camera
+            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[3][i:i+8][::-1]), 2) for i in range(0, 256, 8)]))
 
-            
+        f.seek(0)
+        return f.read() #for the .yw files
 
-#infile = "/Volumes/UNTITLED/switch/Checkpoint/saves/0x0100C0000CEEA000 0x0100C0000CEEA000/20230703-114220 XAW7/game1.yw"
-infile = "/Users/emilia/Documents/dev/ykw/20230703-114220 XAW7/game1.ywd"
+
+infile = "/Users/emilia/Documents/dev/ykw/20230716-140104 XAW7/new.ywd"
+#infile = "/Volumes/UNTITLED/switch/Checkpoint/saves/0x0100C0000CEEA000 0x0100C0000CEEA000/temp/game1.yw"
 
 if infile[-3:] == "ywd":
     main(infile)
