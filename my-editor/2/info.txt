@@ -176,26 +176,26 @@ qsrand(QTime::currentTime().msec());
 for (int i = 0; i < this->getItemsCount(); ++i) {
     quint32 youkaiId = this->read<quint32>(0x04 + 0x5C * i);
     if (form->youkaiCB->findData(youkaiId) >= 0) {
-        quint8 IV_Sum = 0;
-        quint8 IV_hp = this->read<quint8>(0x40 + 0x5C * i);
-        quint8 IV_str = this->read<quint8>(0x41 + 0x5C * i);
-        quint8 IV_spr = this->read<quint8>(0x42 + 0x5C * i);
-        quint8 IV_def = this->read<quint8>(0x43 + 0x5C * i);
-        quint8 IV_spd = this->read<quint8>(0x44 + 0x5C * i);
-        IV_Sum = IV_hp / 2 + IV_str + IV_spr + IV_def + IV_spd;
+        quint8 iv_Sum = 0;
+        quint8 iv_hp = this->read<quint8>(0x40 + 0x5C * i);
+        quint8 iv_str = this->read<quint8>(0x41 + 0x5C * i);
+        quint8 iv_spr = this->read<quint8>(0x42 + 0x5C * i);
+        quint8 iv_def = this->read<quint8>(0x43 + 0x5C * i);
+        quint8 iv_spd = this->read<quint8>(0x44 + 0x5C * i);
+        iv_Sum = iv_hp / 2 + iv_str + iv_spr + iv_def + iv_spd;
         int ivs[5] = {};
-        if (IV_hp % 2 != 0 || IV_Sum != 40) {
+        if (iv_hp % 2 != 0 || iv_Sum != 40) {
             for (int j = 0; j < 40; ++j) {
                 ivs[qrand() % 5]++;
             }
         } else {
             continue;
         }
-        this->write<quint8>(ivs[0] * 2, 0x40 + 0x5C * i); // IV_hp
-        this->write<quint8>(ivs[1], 0x41 + 0x5C * i); // IV_str
-        this->write<quint8>(ivs[2], 0x42 + 0x5C * i); // IV_spr
-        this->write<quint8>(ivs[3], 0x43 + 0x5C * i); // IV_def
-        this->write<quint8>(ivs[4], 0x44 + 0x5C * i); // IV_spd
+        this->write<quint8>(ivs[0] * 2, 0x40 + 0x5C * i); // iv_hp
+        this->write<quint8>(ivs[1], 0x41 + 0x5C * i); // iv_str
+        this->write<quint8>(ivs[2], 0x42 + 0x5C * i); // iv_spr
+        this->write<quint8>(ivs[3], 0x43 + 0x5C * i); // iv_def
+        this->write<quint8>(ivs[4], 0x44 + 0x5C * i); // iv_spd
 
 void SaveManager::updateFlags()
 {

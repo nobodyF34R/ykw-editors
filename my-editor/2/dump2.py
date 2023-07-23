@@ -122,21 +122,21 @@ def edit_yokai(yokailist, index, ownerid, yokai=None, attitude=None, nickname=No
         if sum(ev) - ev[0]/2 != 20:
             ev = [8,4,4,4,4]
     yokailist[index]["stats"] = { #hp must be even
-        "IV_hp": iv[0], #iv rules: hp / 2 + Str + Spr + Def + Spd = 40
-        "IV_str": iv[1], 
-        "IV_spr": iv[2], 
-        "IV_def": iv[3], 
-        "IV_spd": iv[4], 
+        "iv_hp": iv[0], #iv rules: hp / 2 + Str + Spr + Def + Spd = 40
+        "iv_str": iv[1], 
+        "iv_spr": iv[2], 
+        "iv_def": iv[3], 
+        "iv_spd": iv[4], 
         "ev_hp": ev[0], #ev rules: hp / 2 + Str + Spr + Def + Spd <= 20
         "ev_str": ev[1], 
         "ev_spr": ev[2], 
         "ev_def": ev[3], 
         "ev_spd": ev[4], 
-        "SC_hp": 0, #brokennnnn (probably written in a different way) +25, -10 per stat TODO figure out. 15?
-        "SC_str": 0, 
-        "SC_spr": 0, 
-        "SC_def": 0,
-        "SC_spd": 0  
+        "sc_hp": 0, #brokennnnn (probably written in a different way) +25, -10 per stat TODO figure out. 15?
+        "sc_str": 0, 
+        "sc_spr": 0, 
+        "sc_def": 0,
+        "sc_spd": 0  
     }
     yokailist[index]["level"] = 99 #255 works too but it automatically lowers to 99
     yokailist[index]["loaflevel"] = 5 #2?
@@ -349,21 +349,21 @@ def main(file): #TODO fix yokai.
                 "xp": get(yokai, 52, 4), #52 - 55
                 "ownerid": get(yokai, 60, 4), #60 - 63
                 "stats": { # 64 - 78
-                    "IV_hp": get(yokai, 64), 
-                    "IV_str": get(yokai, 65), 
-                    "IV_spr": get(yokai, 66), 
-                    "IV_def": get(yokai, 67), 
-                    "IV_spd": get(yokai, 68), 
+                    "iv_hp": get(yokai, 64), 
+                    "iv_str": get(yokai, 65), 
+                    "iv_spr": get(yokai, 66), 
+                    "iv_def": get(yokai, 67), 
+                    "iv_spd": get(yokai, 68), 
                     "ev_hp": get(yokai, 69), 
                     "ev_str": get(yokai, 70), 
                     "ev_spr": get(yokai, 71), 
                     "ev_def": get(yokai, 72), 
                     "ev_spd": get(yokai, 73), 
-                    "SC_hp": get(yokai, 74), 
-                    "SC_str": get(yokai, 75), 
-                    "SC_spr": get(yokai, 76), 
-                    "SC_def": get(yokai, 77), 
-                    "SC_spd": get(yokai, 78)
+                    "sc_hp": get(yokai, 74), 
+                    "sc_str": get(yokai, 75), 
+                    "sc_spr": get(yokai, 76), 
+                    "sc_def": get(yokai, 77), 
+                    "sc_spd": get(yokai, 78)
                 }, 
                 "level": get(yokai, 79), #79
                 "loaflevel": get(yokai, 84, half=True)[0], #84

@@ -2,5 +2,8 @@
 .gitignore
 *.ywd
 *.yw
+*.ywb
 .DS_Store
 settings.json
+temp
+__pycache__/
