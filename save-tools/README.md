@@ -7,11 +7,6 @@ This python script decrypts and encrypts save data of Yo-kai Watch.
 ## Requirements
 
 * Python 3.x
-* pycryptodome (must comment out line 248 and 249 of /Users/.../Library/Python/3.10/lib/python/site-packages/Crypto/Cipher/_mode_ctr.py) (optional)
-
-pycryptodome is necessary for handling save data of Yo-kai Watch 2, Busters, and 3. 
-
-to install do: pip install pycryptodome
 
 ## Supported games
 | game                             | decryption | encryption | head.yw needed | option           |
