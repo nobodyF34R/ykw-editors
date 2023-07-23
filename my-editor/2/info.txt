@@ -1,7 +1,7 @@
 python '/Users/emilia/Documents/dev/ykw/ykw-editors/save-tools/yw_save.py' --encrypt --game yw2 --head 
 
-IV rules: HP / 2 + Str + Spr + Def + Spd = 40
-EV rules: HP / 2 + Str + Spr + Def + Spd <= 20
+iv rules: hp / 2 + Str + Spr + Def + Spd = 40
+ev rules: hp / 2 + Str + Spr + Def + Spd <= 20
 
 
 yokai offset = 20744
@@ -177,25 +177,25 @@ for (int i = 0; i < this->getItemsCount(); ++i) {
     quint32 youkaiId = this->read<quint32>(0x04 + 0x5C * i);
     if (form->youkaiCB->findData(youkaiId) >= 0) {
         quint8 IV_Sum = 0;
-        quint8 IV_HP = this->read<quint8>(0x40 + 0x5C * i);
-        quint8 IV_Str = this->read<quint8>(0x41 + 0x5C * i);
-        quint8 IV_Spr = this->read<quint8>(0x42 + 0x5C * i);
-        quint8 IV_Def = this->read<quint8>(0x43 + 0x5C * i);
-        quint8 IV_Spd = this->read<quint8>(0x44 + 0x5C * i);
-        IV_Sum = IV_HP / 2 + IV_Str + IV_Spr + IV_Def + IV_Spd;
+        quint8 IV_hp = this->read<quint8>(0x40 + 0x5C * i);
+        quint8 IV_str = this->read<quint8>(0x41 + 0x5C * i);
+        quint8 IV_spr = this->read<quint8>(0x42 + 0x5C * i);
+        quint8 IV_def = this->read<quint8>(0x43 + 0x5C * i);
+        quint8 IV_spd = this->read<quint8>(0x44 + 0x5C * i);
+        IV_Sum = IV_hp / 2 + IV_str + IV_spr + IV_def + IV_spd;
         int ivs[5] = {};
-        if (IV_HP % 2 != 0 || IV_Sum != 40) {
+        if (IV_hp % 2 != 0 || IV_Sum != 40) {
             for (int j = 0; j < 40; ++j) {
                 ivs[qrand() % 5]++;
             }
         } else {
             continue;
         }
-        this->write<quint8>(ivs[0] * 2, 0x40 + 0x5C * i); // IV_HP
-        this->write<quint8>(ivs[1], 0x41 + 0x5C * i); // IV_Str
-        this->write<quint8>(ivs[2], 0x42 + 0x5C * i); // IV_Spr
-        this->write<quint8>(ivs[3], 0x43 + 0x5C * i); // IV_Def
-        this->write<quint8>(ivs[4], 0x44 + 0x5C * i); // IV_Spd
+        this->write<quint8>(ivs[0] * 2, 0x40 + 0x5C * i); // IV_hp
+        this->write<quint8>(ivs[1], 0x41 + 0x5C * i); // IV_str
+        this->write<quint8>(ivs[2], 0x42 + 0x5C * i); // IV_spr
+        this->write<quint8>(ivs[3], 0x43 + 0x5C * i); // IV_def
+        this->write<quint8>(ivs[4], 0x44 + 0x5C * i); // IV_spd
 
 void SaveManager::updateFlags()
 {

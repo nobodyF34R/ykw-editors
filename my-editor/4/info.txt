@@ -1,0 +1,6 @@
+is there encryption?!?!?!
+
+yokai: 469 bytes long? index = 169651
+
+52-57: IV (6 bytes) 100808080808 = 16,8,8,8,8,8
+58-63: EV? (6 bytes)

@@ -68,7 +68,7 @@ def give(floa): #some shenanigans to convert a float to bytes
     return (0 | (e + 127) << 23 | int((floa - 1) * (2**23))).to_bytes(4, 'little')
 
 
-def edit_yokai(yokailist, index, yokai=None, attitude=None, nickname=None, IV=None, EV=None): #massively overcomplicated and broken simultaneously 
+def edit_yokai(yokailist, index, yokai=None, attitude=None, nickname=None, iv=None, ev=None): #massively overcomplicated and broken simultaneously 
     try:
         if index < 0:
             index = len(yokailist)-index #appending shortcut
@@ -110,38 +110,38 @@ def edit_yokai(yokailist, index, yokai=None, attitude=None, nickname=None, IV=No
     yokailist[index]["technique"] = 255
     yokailist[index]["soultimate"] = 255
     
-    if IV == None: # IV1
-        IV = [2,2,2,2,2]
+    if iv == None: # iv1
+        iv = [2,2,2,2,2]
     else:
-        if sum(IV) != 10:
-            IV = [2,2,2,2,2]
-    if EV == None:
-        EV = [4,4,4,4,4]
+        if sum(iv) != 10:
+            iv = [2,2,2,2,2]
+    if ev == None:
+        ev = [4,4,4,4,4]
     else:
-        if sum(EV) != 20:
-            EV = [4,4,4,4,4]
+        if sum(ev) != 20:
+            ev = [4,4,4,4,4]
     
-    yokailist[index]["stats"] = { #HP must be even
-        "TIV_HP": TIVs[yokailist[index]["id"]][0], 
-        "TIV_Str": TIVs[yokailist[index]["id"]][1], 
-        "TIV_Spr": TIVs[yokailist[index]["id"]][2], 
-        "TIV_Def": TIVs[yokailist[index]["id"]][3], 
-        "TIV_Spd": TIVs[yokailist[index]["id"]][4], 
-        "IV1_HP": IV[0], #sums to 10
-        "IV1_Str": IV[1], 
-        "IV1_Spr": IV[2], 
-        "IV1_Def": IV[3], 
-        "IV1_Spd": IV[4], 
-        "IV2_HP": 15, # ingame max is 3, still needs testing
-        "IV2_Str": 15, 
-        "IV2_Spr": 15, 
-        "IV2_Def": 15,  
-        "IV2_Spd": 15,  
-        "EV_HP": EV[0], #sums to 20
-        "EV_Str": EV[1], 
-        "EV_Spr": EV[2], 
-        "EV_Def": EV[3], 
-        "EV_Spd": EV[4], 
+    yokailist[index]["stats"] = { #hp must be even
+        "tiv_hp": tivs[yokailist[index]["id"]][0], 
+        "tiv_str": tivs[yokailist[index]["id"]][1], 
+        "tiv_spr": tivs[yokailist[index]["id"]][2], 
+        "tiv_def": tivs[yokailist[index]["id"]][3], 
+        "tiv_spd": tivs[yokailist[index]["id"]][4], 
+        "iv1_hp": iv[0], #sums to 10
+        "iv1_str": iv[1], 
+        "iv1_spr": iv[2], 
+        "iv1_def": iv[3], 
+        "iv1_spd": iv[4], 
+        "iv2_hp": 15, # ingame max is 3, still needs testing
+        "iv2_str": 15, 
+        "iv2_spr": 15, 
+        "iv2_def": 15,  
+        "iv2_spd": 15,  
+        "ev_hp": ev[0], #sums to 20
+        "ev_str": ev[1], 
+        "ev_spr": ev[2], 
+        "ev_def": ev[3], 
+        "ev_spd": ev[4], 
     }
     yokailist[index]["level"] = 255
     try: # this is for appending, which is currently broken
@@ -237,7 +237,7 @@ def main(file): #TODO fix yokai. medalium
             if get(yokai, 0) == 0 and index != 0: #could be broken
                 break
 
-            yokailist.append({
+            yokailist.append({ #some of these might take 2 bytes instead of 1
                 "num1": get(yokai, 0, 2), #0
                 "num2": get(yokai, 2, 2), #2
                 "id": get(yokai, 4, 4), #4-07
@@ -245,31 +245,34 @@ def main(file): #TODO fix yokai. medalium
                 "attack": get(yokai, 78),
                 "technique": get(yokai, 82),
                 "soultimate": get(yokai, 86),
+                "xp": get(yokai, 88,4),
+                "hp": get(yokai, 92), #current hp
+                "soul": get(yokai, 92), #current soul gauge 
                 "stats": {
-                    "TIV_HP": get(yokai, 96), 
-                    "TIV_Str": get(yokai, 97), 
-                    "TIV_Spr": get(yokai, 98), 
-                    "TIV_Def": get(yokai, 99), 
-                    "TIV_Spd": get(yokai, 100), 
-                    "IV1_HP": get(yokai, 101, half=True)[1], #could swap these around but consistency is key...
-                    "IV1_Str": get(yokai, 102, half=True)[1], 
-                    "IV1_Spr": get(yokai, 103, half=True)[1], 
-                    "IV1_Def": get(yokai, 104, half=True)[1], 
-                    "IV1_Spd": get(yokai, 105, half=True)[1], 
-                    "IV2_HP": get(yokai, 101, half=True)[0], 
-                    "IV2_Str": get(yokai, 102, half=True)[0], 
-                    "IV2_Spr": get(yokai, 103, half=True)[0], 
-                    "IV2_Def": get(yokai, 104, half=True)[0], 
-                    "IV2_Spd": get(yokai, 105, half=True)[0], 
-                    "EV_HP": get(yokai, 106), 
-                    "EV_Str": get(yokai, 107), 
-                    "EV_Spr": get(yokai, 108), 
-                    "EV_Def": get(yokai, 109), 
-                    "EV_Spd": get(yokai, 110), 
+                    "tiv_hp": get(yokai, 96), 
+                    "tiv_str": get(yokai, 97), 
+                    "tiv_spr": get(yokai, 98), 
+                    "tiv_def": get(yokai, 99), 
+                    "tiv_spd": get(yokai, 100), 
+                    "iv1_hp": get(yokai, 101, half=True)[1], #could swap these around but consistency is key...
+                    "iv1_str": get(yokai, 102, half=True)[1], 
+                    "iv1_spr": get(yokai, 103, half=True)[1], 
+                    "iv1_def": get(yokai, 104, half=True)[1], 
+                    "iv1_spd": get(yokai, 105, half=True)[1], 
+                    "iv2_hp": get(yokai, 101, half=True)[0], 
+                    "iv2_str": get(yokai, 102, half=True)[0], 
+                    "iv2_spr": get(yokai, 103, half=True)[0], 
+                    "iv2_def": get(yokai, 104, half=True)[0], 
+                    "iv2_spd": get(yokai, 105, half=True)[0], 
+                    "ev_hp": get(yokai, 106), 
+                    "ev_str": get(yokai, 107), 
+                    "ev_spr": get(yokai, 108), #735 on buhu
+                    "ev_def": get(yokai, 109), 
+                    "ev_spd": get(yokai, 110), 
                 }, 
                 "level": get(yokai, 116), 
                 "attitude": get(yokai, 117), 
-                #TODO loaf level, xp, HP, soul, held item & affection
+                #TODO loaf level, xp, held item & affection
                 #"affection": get(yokai, 120), #this is wrong i think
             })
 
@@ -333,7 +336,7 @@ def main(file): #TODO fix yokai. medalium
             index += 1
         original_important_amount = index
 
-        medalliumlist = [] # the way this works is weird. the first bit is always False (because there is no 0th yokai) and it's still in little endian so the bytes are backwards. the last 7 bits are unused (False) because the are no more yokai. maybe the unused space is the for future updates?
+        medalliumlist = [] # the way this works is weird. the first bit is always False (because there is no 0th yokai) and it's still in little endian so the bytes are backwards. the last 7 bits are unused (False) because the are no more yokai. maybe the unused space is there for future updates?
         f.seek(1476)
         medalliumlist.append(get(f.read(32), 0, 32, half=None)) # seen
         medalliumlist.append(get(f.read(32), 0, 32, half=None)) # befriended
@@ -446,35 +449,35 @@ def main(file): #TODO fix yokai. medalium
                 f.write(i["soultimate"].to_bytes(1, "little"))
 
                 f.seek(7696+124*j+96)
-                f.write(i["stats"]["TIV_HP"].to_bytes(1, "little"))
+                f.write(i["stats"]["tiv_hp"].to_bytes(1, "little"))
                 f.seek(7696+124*j+97)
-                f.write(i["stats"]["TIV_Str"].to_bytes(1, "little"))
+                f.write(i["stats"]["tiv_str"].to_bytes(1, "little"))
                 f.seek(7696+124*j+98)
-                f.write(i["stats"]["TIV_Spr"].to_bytes(1, "little"))
+                f.write(i["stats"]["tiv_spr"].to_bytes(1, "little"))
                 f.seek(7696+124*j+99)
-                f.write(i["stats"]["TIV_Def"].to_bytes(1, "little"))
+                f.write(i["stats"]["tiv_def"].to_bytes(1, "little"))
                 f.seek(7696+124*j+100)
-                f.write(i["stats"]["TIV_Spd"].to_bytes(1, "little"))
+                f.write(i["stats"]["tiv_spd"].to_bytes(1, "little"))
                 f.seek(7696+124*j+101)
-                f.write(int(f'{i["stats"]["IV1_HP"]:04b}'+f'{i["stats"]["IV2_HP"]:04b}', 2).to_bytes(1, "little"))
+                f.write(int(f'{i["stats"]["iv1_hp"]:04b}'+f'{i["stats"]["iv2_hp"]:04b}', 2).to_bytes(1, "little"))
                 f.seek(7696+124*j+102)
-                f.write(int(f'{i["stats"]["IV1_Str"]:04b}'+f'{i["stats"]["IV2_Str"]:04b}', 2).to_bytes(1, "little"))
+                f.write(int(f'{i["stats"]["iv1_str"]:04b}'+f'{i["stats"]["iv2_str"]:04b}', 2).to_bytes(1, "little"))
                 f.seek(7696+124*j+103)
-                f.write(int(f'{i["stats"]["IV1_Spr"]:04b}'+f'{i["stats"]["IV2_Spr"]:04b}', 2).to_bytes(1, "little"))
+                f.write(int(f'{i["stats"]["iv1_spr"]:04b}'+f'{i["stats"]["iv2_spr"]:04b}', 2).to_bytes(1, "little"))
                 f.seek(7696+124*j+104)
-                f.write(int(f'{i["stats"]["IV1_Def"]:04b}'+f'{i["stats"]["IV2_Def"]:04b}', 2).to_bytes(1, "little"))
+                f.write(int(f'{i["stats"]["iv1_def"]:04b}'+f'{i["stats"]["iv2_def"]:04b}', 2).to_bytes(1, "little"))
                 f.seek(7696+124*j+105)
-                f.write(int(f'{i["stats"]["IV1_Spd"]:04b}'+f'{i["stats"]["IV2_Spd"]:04b}', 2).to_bytes(1, "little"))
+                f.write(int(f'{i["stats"]["iv1_spd"]:04b}'+f'{i["stats"]["iv2_spd"]:04b}', 2).to_bytes(1, "little"))
                 f.seek(7696+124*j+106)
-                f.write(i["stats"]["EV_HP"].to_bytes(1, "little"))
+                f.write(i["stats"]["ev_hp"].to_bytes(1, "little"))
                 f.seek(7696+124*j+107)
-                f.write(i["stats"]["EV_Str"].to_bytes(1, "little"))
+                f.write(i["stats"]["ev_str"].to_bytes(1, "little"))
                 f.seek(7696+124*j+108)
-                f.write(i["stats"]["EV_Spr"].to_bytes(1, "little"))
+                f.write(i["stats"]["ev_spr"].to_bytes(1, "little"))
                 f.seek(7696+124*j+109)
-                f.write(i["stats"]["EV_Def"].to_bytes(1, "little"))
+                f.write(i["stats"]["ev_def"].to_bytes(1, "little"))
                 f.seek(7696+124*j+110)
-                f.write(i["stats"]["EV_Spd"].to_bytes(1, "little"))
+                f.write(i["stats"]["ev_spd"].to_bytes(1, "little"))
 
                 f.seek(7696+124*j+116)
                 f.write(i["level"].to_bytes(1, "little"))
