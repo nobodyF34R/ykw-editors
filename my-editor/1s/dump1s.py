@@ -238,7 +238,7 @@ def main(file): #TODO fix yokai. medalium
                 break
 
             yokailist.append({ #some of these might take 2 bytes instead of 1
-                "num1": get(yokai, 0, 2), #0
+                "num1": get(yokai, 0, 2), #0 starts from 0
                 "num2": get(yokai, 2, 2), #2
                 "id": get(yokai, 4, 4), #4-07
                 "nickname": get(yokai, 8, 68, False), #8-76 maybe broken
@@ -289,7 +289,7 @@ def main(file): #TODO fix yokai. medalium
                 break
 
             itemlist.append({
-                "num1": get(item, 0, 2), #0
+                "num1": get(item, 0, 2), #0 starts from 0
                 "num2": get(item, 2, 2), #2
                 "item": get(item, 4, 4), #4
                 "amount": get(item, 8, 4) #8
@@ -308,8 +308,8 @@ def main(file): #TODO fix yokai. medalium
                 break
 
             equipmentlist.append({
-                "num1": get(equipment, 0, 1), #0
-                "num2": get(equipment, 2, 1), #2
+                "num1": get(equipment, 0, 2), #0 starts from 4096
+                "num2": get(equipment, 2, 2), #2
                 "equipment": get(equipment, 4, 4), #4
                 "amount": get(equipment, 8, 4), #8 #maybe 1 byte
                 "used": get(equipment, 12, 4) #how many are in use (leave alone or set to zero)
@@ -328,8 +328,8 @@ def main(file): #TODO fix yokai. medalium
                 break
 
             importantlist.append({
-                "num1": get(important, 0, 1), #0
-                "num2": get(important, 2, 1), #2 unsure.
+                "num1": get(important, 0, 2), #0 starts from 8192
+                "num2": get(important, 2, 2), #2 unsure.
                 "important": get(important, 4, 4), #4
             })
 
@@ -376,7 +376,7 @@ def main(file): #TODO fix yokai. medalium
             j=0
             for i in itemlist:
                 f.seek(1784+12*j)
-                f.write(i["num1"].to_bytes(1, "little")) 
+                f.write(i["num1"].to_bytes(2, "little")) 
                 f.seek(1784+12*j+2)
                 f.write(i["num2"].to_bytes(2, "little"))
                 f.seek(1784+12*j+4)
@@ -395,8 +395,6 @@ def main(file): #TODO fix yokai. medalium
             for i in equipmentlist:
                 f.seek(4868+16*j)
                 f.write(i["num1"].to_bytes(2, "little"))
-                f.seek(4868+16*j+1)
-                f.write(b"\x10") # i don't know what this does, may be unnecessary
                 f.seek(4868+16*j+2)
                 f.write(i["num2"].to_bytes(2, "little"))
                 f.seek(4868+16*j+4)
@@ -417,8 +415,6 @@ def main(file): #TODO fix yokai. medalium
             for i in importantlist:
                 f.seek(6480+8*j)
                 f.write(i["num1"].to_bytes(2, "little"))
-                f.seek(6480+8*j+1)
-                f.write(b"\x20") # i don't know what this does, may be unnecessary
                 f.seek(6480+8*j+2)
                 f.write(i["num2"].to_bytes(2, "little"))
                 f.seek(6480+8*j+4)
@@ -459,7 +455,7 @@ def main(file): #TODO fix yokai. medalium
                 f.seek(7696+124*j+100)
                 f.write(i["stats"]["tiv_spd"].to_bytes(1, "little"))
                 f.seek(7696+124*j+101)
-                f.write(int(f'{i["stats"]["iv1_hp"]:04b}'+f'{i["stats"]["iv2_hp"]:04b}', 2).to_bytes(1, "little"))
+                f.write(int(f'{i["stats"]["iv1_hp"]:04b}'+f'{i["stats"]["iv2_hp"]:04b}', 2).to_bytes(1, "little")) #sloppy. TODO add stuff like this to the give function
                 f.seek(7696+124*j+102)
                 f.write(int(f'{i["stats"]["iv1_str"]:04b}'+f'{i["stats"]["iv2_str"]:04b}', 2).to_bytes(1, "little"))
                 f.seek(7696+124*j+103)

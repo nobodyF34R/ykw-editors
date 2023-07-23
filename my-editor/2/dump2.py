@@ -339,7 +339,7 @@ def main(file): #TODO fix yokai.
                 break
 
             yokailist.append({
-                "num1": get(yokai, 0, 2), #0
+                "num1": get(yokai, 0, 2), #0 starts from 0
                 "num2": get(yokai, 2, 2), #2
                 "id": get(yokai, 4, 4), #4-07
                 "nickname": get(yokai, 8, 24, False), #8-32 maybe broken
@@ -387,7 +387,7 @@ def main(file): #TODO fix yokai.
                 break
 
             itemlist.append({
-                "num1": get(item, 0, 2), #0
+                "num1": get(item, 0, 2), #0 starts from 0
                 "num2": get(item, 2, 2), #2
                 "item": get(item, 4, 4), #4
                 "amount": get(item, 8, 4) #8
@@ -406,7 +406,7 @@ def main(file): #TODO fix yokai.
                 break
 
             equipmentlist.append({
-                "num1": get(equipment, 0, 1), #0
+                "num1": get(equipment, 0, 2), #0 starts from 4096
                 "num2": get(equipment, 2, 2), #2
                 "equipment": get(equipment, 4, 4), #4
                 "amount": get(equipment, 8, 4), #8 #maybe 1 byte
@@ -426,8 +426,8 @@ def main(file): #TODO fix yokai.
                 break
 
             importantlist.append({
-                "num1": get(important, 0, 2), #0
-                "num2": get(important, 2, 2), #2 unsure.
+                "num1": get(important, 0, 2), #0 starts from 8192
+                "num2": get(important, 2, 2), #2
                 "important": get(important, 4, 4), #4
             })
 
@@ -444,8 +444,8 @@ def main(file): #TODO fix yokai.
                 break
 
             soullist.append({
-                "num1": get(soul, 0, 1), #0
-                "num2": get(soul, 2, 1), #2
+                "num1": get(soul, 0, 2), #0 starts from 12288
+                "num2": get(soul, 2, 2), #2
                 "soul": get(soul, 4, 4), #4
                 "xp": get(soul, 8, 2), #8
                 "level": get(soul, 10), #8
@@ -581,7 +581,7 @@ def main(file): #TODO fix yokai.
         f.seek(1652) # camera
         medalliumlist.append(get(f.read(57), 0, 57, half=None))
 
-        # f.seek(postyokai.index(b"\xff\xfe\x6b\x08\xfe\xff")+20744) #!P & T ..... currently i have no idea what this is or how to use it. part of it is probably the medallium info & story progress
+        # f.seek(postyokai.index(b"\xff\xfe\x6b\x08\xfe\xff")+20744) #!P & T ..... currently i have no idea what this is or how to use it. part of it is probably story progress, etc
         # unknown1 = f.read(150) #138
         # # f.seek(postyokai.index(b"\xff\xfe\xd5\x08\xfe\xff\xd5\x08\x15")+20744) maybe this T
         # # unknown15 = f.read(10)
@@ -645,7 +645,7 @@ def main(file): #TODO fix yokai.
             j=0
             for i in itemlist:
                 f.seek(offset+12*j)
-                f.write(i["num1"].to_bytes(1, "little")) 
+                f.write(i["num1"].to_bytes(2, "little")) 
                 f.seek(offset+12*j+2)
                 f.write(i["num2"].to_bytes(2, "little"))
                 f.seek(offset+12*j+4)
@@ -664,8 +664,6 @@ def main(file): #TODO fix yokai.
             for i in equipmentlist:
                 f.seek(offset+5172+16*j)
                 f.write(i["num1"].to_bytes(2, "little"))
-                f.seek(offset+5172+16*j+1)
-                f.write(b"\x10") # i don't know what this does, may be unnecessary
                 f.seek(offset+5172+16*j+2)
                 f.write(i["num2"].to_bytes(2, "little"))
                 f.seek(offset+5172+16*j+4)
@@ -686,8 +684,6 @@ def main(file): #TODO fix yokai.
             for i in importantlist:
                 f.seek(offset+6624+8*j)
                 f.write(i["num1"].to_bytes(2, "little"))
-                f.seek(offset+6624+8*j+1)
-                f.write(b"\x20") # i don't know what this does, may be unnecessary
                 f.seek(offset+6624+8*j+2)
                 f.write(i["num2"].to_bytes(2, "little"))
                 f.seek(offset+6624+8*j+4)
@@ -704,8 +700,6 @@ def main(file): #TODO fix yokai.
             for i in soullist:
                 f.seek(offset+8076+12*j)
                 f.write(i["num1"].to_bytes(2, "little"))
-                f.seek(offset+8076+12*j+1)
-                f.write(b"\x30") # i don't know what this does, may be unnecessary
                 f.seek(offset+8076+12*j+2)
                 f.write(i["num2"].to_bytes(2, "little"))
                 f.seek(offset+8076+12*j+4)
@@ -885,3 +879,5 @@ else: #TODO make compatible on windows
         out = main(yw_save.yw2_proc(f.read(), False, head=infile[-1::-1].split("/",1)[1][-1::-1]+"head.yw")) #out is the edited binary data
         f.seek(0)
         f.write(yw_save.yw2_proc(out, True, head=infile[-1::-1].split("/",1)[1][-1::-1]+"head.yw"))
+
+#TODO figure out num1s > 255 for items etc
