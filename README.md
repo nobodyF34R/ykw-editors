@@ -30,6 +30,8 @@ https://github.com/Darkey28/yw_save for providing the save tools
 
 https://www.buymeacoffee.com/bqsantana for the 4 binary
 
+RSM for 4 decompilation
+
 
 ## Licence
 
