@@ -8,7 +8,7 @@ dump1s.py
 
 The MIT License (MIT)
 
-Copyright (c) 2023 Emilia
+Copyright (c) 2023 RSM, bqsantana, Emilia
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -67,3 +67,11 @@ def give(floa): #some shenanigans to convert a float to bytes
     while floa < 1: floa, e = floa * 2, e - 1
     return (0 | (e + 127) << 23 | int((floa - 1) * (2**23))).to_bytes(4, 'little')
 
+def main(file):
+    with open(file, "r+b") as f:
+        pass
+
+infile = ""
+#infile = "/Volumes/UNTITLED/switch/Checkpoint/saves/........"
+
+main(infile)
