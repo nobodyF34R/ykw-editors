@@ -879,7 +879,7 @@ namespace Another_YW_4_Save_Editor
                 case "95-8F-E9-C7":
                     return 493;
                 case "96-6A-F6-B5":
-                    return (int)sbyte.MaxValue;
+                    return 127;
                 case "96-B0-20-AF":
                     return 196;
                 case "96-BE-5A-75":
@@ -1023,7 +1023,7 @@ namespace Another_YW_4_Save_Editor
                 case "B0-B4-53-5F":
                     return 348;
                 case "B1-04-A5-14":
-                    return (int)byte.MaxValue;
+                    return 255;
                 case "B1-0B-20-C8":
                     return 25;
                 case "B1-1D-21-63":

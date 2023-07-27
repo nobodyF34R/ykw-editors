@@ -582,7 +582,7 @@ namespace Another_YW_4_Save_Editor
                 case "0D-C9-3D-6E":
                     return 44;
                 case "0E-32-10-55":
-                    return (int)sbyte.MaxValue;
+                    return 127;
                 case "0E-3B-18-FA":
                     return 103;
                 case "0E-FA-1A-6C":
@@ -982,7 +982,7 @@ namespace Another_YW_4_Save_Editor
                 case "CC-1D-D6-34":
                     return 241;
                 case "CC-4A-47-67":
-                    return (int)byte.MaxValue;
+                    return 255;
                 case "CD-61-3D-7E":
                     return 130;
                 case "CD-68-35-D1":

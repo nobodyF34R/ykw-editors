@@ -1,6 +1,11 @@
-is there encryption?!?!?!
+idk what these are for...
 
-yokai: 469 bytes long? index = 169651
+int initialOffset3 = 944897;
+Int(str, userYoKai.ID1, initialOffset3, 2);
+Int(str, userYoKai.ID2, initialOffset3 + 2, 2);
+initialOffset3 += 4;
 
-52-57: IV (6 bytes) 100808080808 = 16,8,8,8,8,8
-58-63: EV? (6 bytes)
+int initialOffset5 = 946513;
+Int(str, mainCharacter.ID1, initialOffset5, 2);
+Int(str, mainCharacter.ID2, initialOffset5 + 2, 2);
+initialOffset5 += 4;

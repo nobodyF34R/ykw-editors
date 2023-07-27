@@ -135,7 +135,7 @@ namespace Another_YW_4_Save_Editor
                     Character_PAplus = getByteValue.ExtractByteToInt(str, initialOffset5 + 222, 2),
                     Character_SAplus = getByteValue.ExtractByteToInt(str, initialOffset5 + 224, 2),
                     Character_Unknown1 = getByteValue.ExtractByteToInt(str, initialOffset5 + 254, 1),
-                    Character_Unknown2 = getByteValue.ExtractByteToInt(str, initialOffset5 + (int)byte.MaxValue, 1),
+                    Character_Unknown2 = getByteValue.ExtractByteToInt(str, initialOffset5 + 255, 1),
                     Character_Unknown3 = getByteValue.ExtractByteToInt(str, initialOffset5 + 256, 1),
                     Character_Unknown4 = getByteValue.ExtractByteToInt(str, initialOffset5 + 257, 1),
                     Character_Unknown5 = getByteValue.ExtractByteToInt(str, initialOffset5 + 258, 1),
@@ -183,7 +183,7 @@ namespace Another_YW_4_Save_Editor
                     YoKai_PAplus = getByteValue.ExtractByteToInt(str, initialOffset6 + 222, 2),
                     YoKai_SAplus = getByteValue.ExtractByteToInt(str, initialOffset6 + 224, 2),
                     YoKai_Unknown1 = getByteValue.ExtractByteToInt(str, initialOffset6 + 254, 1),
-                    YoKai_Unknown2 = getByteValue.ExtractByteToInt(str, initialOffset6 + (int)byte.MaxValue, 1),
+                    YoKai_Unknown2 = getByteValue.ExtractByteToInt(str, initialOffset6 + 255, 1),
                     YoKai_Unknown3 = getByteValue.ExtractByteToInt(str, initialOffset6 + 256, 1),
                     YoKai_Unknown4 = getByteValue.ExtractByteToInt(str, initialOffset6 + 257, 1),
                     YoKai_Unknown5 = getByteValue.ExtractByteToInt(str, initialOffset6 + 258, 1),
@@ -270,7 +270,7 @@ namespace Another_YW_4_Save_Editor
                 setByteValue.InjectByteFromInt(str, userYoKai.YoKai_PAplus, initialOffset2 + 222, 2);
                 setByteValue.InjectByteFromInt(str, userYoKai.YoKai_SAplus, initialOffset2 + 224, 2);
                 setByteValue.InjectByteFromInt(str, userYoKai.YoKai_Unknown1, initialOffset2 + 254, 1);
-                setByteValue.InjectByteFromInt(str, userYoKai.YoKai_Unknown2, initialOffset2 + (int)byte.MaxValue, 1);
+                setByteValue.InjectByteFromInt(str, userYoKai.YoKai_Unknown2, initialOffset2 + 255, 1);
                 setByteValue.InjectByteFromInt(str, userYoKai.YoKai_Unknown3, initialOffset2 + 256, 1);
                 setByteValue.InjectByteFromInt(str, userYoKai.YoKai_Unknown4, initialOffset2 + 257, 1);
                 setByteValue.InjectByteFromInt(str, userYoKai.YoKai_Unknown5, initialOffset2 + 258, 1);
@@ -323,7 +323,7 @@ namespace Another_YW_4_Save_Editor
                 setByteValue.InjectByteFromInt(str, mainCharacter.Character_PAplus, initialOffset4 + 222, 2);
                 setByteValue.InjectByteFromInt(str, mainCharacter.Character_SAplus, initialOffset4 + 224, 2);
                 setByteValue.InjectByteFromInt(str, mainCharacter.Character_Unknown1, initialOffset4 + 254, 1);
-                setByteValue.InjectByteFromInt(str, mainCharacter.Character_Unknown2, initialOffset4 + (int)byte.MaxValue, 1);
+                setByteValue.InjectByteFromInt(str, mainCharacter.Character_Unknown2, initialOffset4 + 255, 1);
                 setByteValue.InjectByteFromInt(str, mainCharacter.Character_Unknown3, initialOffset4 + 256, 1);
                 setByteValue.InjectByteFromInt(str, mainCharacter.Character_Unknown4, initialOffset4 + 257, 1);
                 setByteValue.InjectByteFromInt(str, mainCharacter.Character_Unknown5, initialOffset4 + 258, 1);

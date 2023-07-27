@@ -264,7 +264,7 @@ namespace Another_YW_4_Save_Editor
                     return "88-95-4A-03";
                 case 126:
                     return "C9-A4-51-1A";
-                case (int)sbyte.MaxValue:
+                case 127:
                     return "0E-32-10-55";
                 case 128:
                     return "4F-03-0B-4C";

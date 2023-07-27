@@ -266,7 +266,7 @@ namespace Another_YW_4_Save_Editor
                     return "EA-0B-A1-42";
                 case 126:
                     return "7C-3B-A6-35";
-                case (int)sbyte.MaxValue:
+                case 127:
                     return "96-6A-F6-B5";
                 case 128:
                     return "2C-3B-FF-2C";
@@ -522,7 +522,7 @@ namespace Another_YW_4_Save_Editor
                     return "ED-F3-82-EB";
                 case 254:
                     return "0B-55-AC-8D";
-                case (int)byte.MaxValue:
+                case 255:
                     return "B1-04-A5-14";
                 case 256:
                     return "51-B7-76-91";
@@ -2677,7 +2677,7 @@ namespace Another_YW_4_Save_Editor
             "3B-07-F6-49",
             "7E-6A-59-A2"
                     };
-                case (int)sbyte.MaxValue:
+                case 127:
                     return new string[6]
                     {
             "B6-F8-9F-09",
@@ -3957,7 +3957,7 @@ namespace Another_YW_4_Save_Editor
             "00-00-00-00",
             "00-00-00-00"
                     };
-                case (int)byte.MaxValue:
+                case 255:
                     return new string[6]
                     {
             "00-00-00-00",

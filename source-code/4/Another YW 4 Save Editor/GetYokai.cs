@@ -2020,7 +2020,7 @@ namespace Another_YW_4_Save_Editor
                 case "34-9C-D0-91":
                     return 376;
                 case "35-33-1F-47":
-                    return (int)byte.MaxValue;
+                    return 255;
                 case "35-67-F6-B6":
                     return 693;
                 case "36-07-86-A7":
@@ -3202,7 +3202,7 @@ namespace Another_YW_4_Save_Editor
                 case "EC-6D-C7-D7":
                     return 284;
                 case "EC-7C-CF-38":
-                    return (int)sbyte.MaxValue;
+                    return 127;
                 case "EC-A0-7B-AA":
                     return 538;
                 case "EC-CE-EF-10":
@@ -3499,7 +3499,7 @@ namespace Another_YW_4_Save_Editor
                 case "79-FC-98-E7":
                     return 122;
                 case "7A-44-35-8A":
-                    return (int)sbyte.MaxValue;
+                    return 127;
                 case "7C-98-71-8C":
                     return 37;
                 case "7C-DA-84-A3":
