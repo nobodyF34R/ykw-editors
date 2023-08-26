@@ -102,7 +102,7 @@ loaflevel and attitude
 91:
 0
 
-missing items held, current hp, jibanyan soultimate??
+TODO missing items held, current hp, jibanyan soultimate??
 
 
 
@@ -142,10 +142,6 @@ soul offset: universal offset + 8076
 08-09: xp
 10: soul level
 11: used or not used
-
-TODO add contact info
-
-
 
 useful unsorted info:
 

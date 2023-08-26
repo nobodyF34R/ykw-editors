@@ -67,6 +67,151 @@ def give(floa): #some shenanigans to convert a float to bytes
     while floa < 1: floa, e = floa * 2, e - 1
     return (0 | (e + 127) << 23 | int((floa - 1) * (2**23))).to_bytes(4, 'little')
 
+
+def edit_yokai(yokailist, index, yokai=None, nickname=None, iv=None, skills=None): #massively overcomplicated and broken simultaneously 
+    try:
+        if index < 0:
+            index = len(yokailist)-index #appending shortcut
+    except:
+        pass
+    try:
+        yokailist[index]
+    except:
+        temp_yokailist = yokailist #pointless now???
+        index = len(yokailist)
+        yokailist.append({})
+        yokailist[index]["num1"] = 0 #this part is probably overcomplicated 
+        j=0
+        for i in range(len(temp_yokailist)):
+            if temp_yokailist[i]["num1"] != j:
+                yokailist[index]["num1"] = j
+                break
+            if temp_yokailist[i]["num1"] > yokailist[index]["num1"]:
+                yokailist[index]["num1"] = temp_yokailist[i]["num1"]+1
+            j+=1
+        yokailist[index]["num2"] = 1
+        for i in range(j):
+            if temp_yokailist[i]["num2"] > yokailist[index]["num2"]:
+                yokailist[index]["num2"] = temp_yokailist[i]["num2"]
+                location = i
+        yokailist[index]["num2"]+=(j-location)
+    if yokai != None:
+        try:
+            yokailist[index]["id"] = reverse_yokais[yokai]
+        except:
+            try:
+                yokailist[index]["id"] = reverse_characters[yokai]
+            except:
+                yokailist[index]["id"] = yokai
+    try:
+        yokailist[index]["nickname"] = yokailist[index]["nickname"]
+    except:
+        yokailist[index]["nickname"] = ""
+    if nickname != None: #may cause problems
+        yokailist[index]["nickname"] = nickname
+    if skills:# e.g. ["blah", None, 1234, None, 0, 0]
+        try:
+            yokailist[index]["skills"] = [yokailist[index]["skills"][skill] if skills[skill] == None else reverse_skills[skills[skill]] for skill in range(6)]
+        except:
+            yokailist[index]["skills"] = [yokailist[index]["skills"][skill] if skills[skill] == None else skills[skill] for skill in range(6)]
+    yokailist[index]["xp"] = 0 
+    yokailist[index]["hp"] = 1 #if these are over the max the game crashes TODO test
+    yokailist[index]["yp"] = 1
+    # yokailist[index]["pg"] = 4294967295 #idk what this does
+    yokailist[index]["flag1"] = 1
+    yokailist[index]["level"] = 99 #automatically lowers to 99
+    if iv == None:
+        iv = [16,8,8,8,8]
+    else:
+        if sum(iv) - iv[0]/2 != 40: #will complain if hp is odd so no need to check for that
+            iv = [16,8,8,8,8]
+    yokailist[index]["stats"] = { #hp must be even
+        "hp_plus": 65535, 
+        "yp_plus": 65535, 
+        "st_plus": 65535, 
+        "sp_plus": 65535, 
+        "pa_plus": 65535, 
+        "sa_plus": 65535, 
+        "iv_hp": iv[0], #iv rules: hp / 2 + Str + Spr + Def + Spd = 40
+        "iv_str": iv[1], 
+        "iv_spr": iv[2], 
+        "iv_def": iv[3], 
+        "iv_spd": iv[4], 
+    }
+    try:
+        yokailist[index]["order"]
+    except:
+        yokailist[index]["order"] = 0 #TODO ummmm idk lol
+    # yokailist[index]["loaflevel"] = 5 #2?
+    # try:
+    #     yokailist[index]["attitude"] = yokailist[index]["attitude"] #for appending
+    # except:
+    #     yokailist[index]["attitude"] = 0
+    # if attitude != None:
+    #     try:
+    #         yokailist[index]["attitude"] = attitudes.index(attitude)
+    #     except:
+    #         yokailist[index]["attitude"] = attitudes[attitude]
+
+    return sorted(yokailist, key=lambda x:x["num1"])
+
+def edit_item(itemlist, index, item=None, amount=None): #broken for some reason
+    try:
+        if index < 0:
+            index = len(itemlist)-index #appending shortcut
+    except:
+        pass
+    try:
+        itemlist[index]
+    except:
+        index = len(itemlist)
+        itemlist.append({})
+    itemlist[index]["num1"] = index
+    itemlist[index]["num2"] = index+1
+    if item:
+        try:
+            itemlist[index]["item"] = reverse_items[item]
+        except:
+            itemlist[index]["item"] = item
+    try:
+        itemlist[index]["order"]
+    except:
+        itemlist[index]["order"] = 0 
+    if amount:
+        itemlist[index]["amount"] = amount
+    return itemlist
+
+#TODO souls
+
+def edit_equipment(equipmentlist, index, equipment=None, amount=None):
+    try:
+        if index < 0:
+            index = len(equipmentlist)-index #appending shortcut
+    except:
+        pass
+    try:
+        equipmentlist[index]
+    except:
+        index = len(equipmentlist)
+        equipmentlist.append({})
+    equipmentlist[index]["num1"] = index
+    equipmentlist[index]["num2"] = index+1
+    if equipment:
+        try:
+            equipmentlist[index]["equipment"] = reverse_equipments[equipment]
+        except:
+            equipmentlist[index]["equipment"] = equipment
+    try:
+        equipmentlist[index]["order"] #overkill until i learn how to use it
+    except:
+        equipmentlist[index]["order"] = 0 
+    if amount:
+        equipmentlist[index]["amount"] = amount
+    equipmentlist[index]["used"] = 0
+    return equipmentlist
+
+#important
+
 def main(file):
     with open(file, "r+b") as f:
         f.seek(131) #misc
@@ -76,16 +221,16 @@ def main(file):
         f.seek(203)
         money = get(f.read(4),0,4)
         f.seek(282)
-        namelist = {
+        namelist = { #not a list...
             "nate": get(f.read(36),0,24,False), 
             "katie": get(f.read(36),0,24,False), 
             "summer": get(f.read(36),0,24,False), 
-            "touma": get(f.read(36),0,24,False), 
-            "akinori": get(f.read(36),0,24,False), 
+            "cole": get(f.read(36),0,24,False), 
+            "bruno": get(f.read(36),0,24,False), 
             "jack": get(f.read(36),0,24,False), 
         }
         f.seek(2082)
-        gatcharemaining = get(f.read(1),0) #crank-a-kai
+        gatcharemaining = get(f.read(1),0) #crank-a-kai, could maybe rename?
         gatchamax = get(f.read(1),0)
 
         characterlist = [] # should maybe merge with yokailist
@@ -93,7 +238,7 @@ def main(file):
         f.seek(166627)
         while True:
             character = f.read(469)
-            
+
             if (get(character, 0) == 0 and index != 0) or index >= 6: #could be broken
                 break
 
@@ -101,7 +246,7 @@ def main(file):
                 "num1": get(character, 0, 2), #starts from 0
                 "num2": get(character, 2, 2), 
                 "nickname": get(character, 28, 24, False), #maybe more?
-                "id": characters[get(character, 72, 4)], 
+                "id": get(character, 72, 4), 
                 "skills": [
                     get(character, 84, 4), 
                     get(character, 88, 4), 
@@ -128,7 +273,7 @@ def main(file):
                     "iv_spr": get(character, 256), 
                     "iv_def": get(character, 257), 
                     "iv_spd": get(character, 258), 
-                    # "ev_hp": get(character, 259), #TODO (indexs are wrong)
+                    # "ev_hp": get(character, 259), #TODO (indexes are wrong)
                     # "ev_str": get(character, 268), 
                     # "ev_spr": get(character, 292), 
                     # "ev_def": get(character, 317), 
@@ -147,6 +292,7 @@ def main(file):
 
             index += 1
             original_character_amount = index
+        original_character_amount = index
 
         yokailist = []
         index = 0
@@ -161,7 +307,7 @@ def main(file):
                 "num1": get(yokai, 0, 2), #starts from 4096
                 "num2": get(yokai, 2, 2), 
                 "nickname": get(yokai, 28, 24, False), #maybe more?
-                "id": characters[get(yokai, 72, 4)], 
+                "id": get(yokai, 72, 4), 
                 "skills": [
                     get(yokai, 84, 4), 
                     get(yokai, 88, 4), 
@@ -188,7 +334,7 @@ def main(file):
                     "iv_spr": get(yokai, 256), 
                     "iv_def": get(yokai, 257), 
                     "iv_spd": get(yokai, 258), 
-                    # "ev_hp": get(yokai, 259), #TODO (indexs are wrong)
+                    # "ev_hp": get(yokai, 259), #TODO (indexes are wrong)
                     # "ev_str": get(yokai, 268), 
                     # "ev_spr": get(yokai, 292), 
                     # "ev_def": get(yokai, 317), 
@@ -207,6 +353,7 @@ def main(file):
 
             index += 1
             original_yokai_amount = index
+        original_yokai_amount = index
 
         itemlist = []
         index = 0
@@ -220,7 +367,7 @@ def main(file):
             itemlist.append({
                 "num1": get(item, 0, 2), #starts from 0
                 "num2": get(item, 2, 2),
-                "item": items[get(item, 12, 4)],
+                "item": get(item, 12, 4),
                 "order": get(item, 24, 4), #what's this?
                 "amount": get(item, 36, 2) # maybe 4 bytes?
             })
@@ -299,9 +446,240 @@ def main(file):
             index += 1
         original_equipment_amount = index
 
-        pass
+        #TODO important
 
-infile = "/Users/emilia/Downloads/0000000000000001/0/USERDATA00/data.bin"
-#infile = "/Volumes/UNTITLED/switch/Checkpoint/saves/........"
+
+
+        #editor goes here
+        if 0:
+            namelist = {'nate': 'Nate', 'katie': 'Katie', 'summer': 'Summer', 'cole': 'Cole', 'bruno': 'Bruno', 'jack': 'Jack'}
+            for i in range(len(yokailist)):
+                yokailist = edit_yokai(yokailist, i, 3997989751, "")
+            for i in range(6):
+                characterlist = edit_yokai(characterlist, i)
+
+        #print data 
+        if 1:
+            print(", ".join([characters[i["id"]]for i in characterlist]))
+            print(", ".join([characters[i["id"]]for i in yokailist]))
+            print(", ".join([items[i["item"]]for i in itemlist]))
+            print(", ".join([equipments[i["equipment"]]for i in equipmentlist]))
+            print(locations[location])
+
+        #write everything back to file
+        if 1: #TODO
+            #misc
+            f.seek(131)
+            f.write(position[0].to_bytes(4, "little"))
+            f.write(position[1].to_bytes(4, "little"))
+            f.write(position[2].to_bytes(4, "little"))
+            f.seek(167)
+            f.write(location.to_bytes(4, "little"))
+            f.seek(203)
+            f.write(money.to_bytes(4, "little"))
+            namenum = 0
+            for name in namelist:
+                f.seek(282+namenum)
+                f.write((bytearray(list(namelist[name].encode('utf-8')))+bytearray(24))[:24])
+                namenum += 36
+            #clear overflow????
+            f.seek(2082)
+            f.write(gatcharemaining.to_bytes(1, "little"))
+            f.write(gatchamax.to_bytes(1, "little"))
+
+            #write character back
+            j=0
+            for i in characterlist:
+                f.seek(166627+469*j+0)
+                f.write(i["num1"].to_bytes(2, "little"))
+                f.seek(166627+469*j+2)
+                f.write(i["num2"].to_bytes(2, "little"))
+                f.seek(166627+469*j+28)
+                f.write((bytearray([ord(k)for k in i["nickname"]])+bytearray(24))[:24])
+                f.seek(166627+469*j+72)
+                f.write(i["id"].to_bytes(4, "little"))
+                f.seek(166627+469*j+84)
+                for skill in range(6): #always 6?
+                    f.write(i["skills"][skill].to_bytes(4, "little"))
+                f.seek(166627+469*j+132)
+                f.write(i["xp"].to_bytes(4, "little"))
+                f.seek(166627+469*j+144)
+                f.write(i["hp"].to_bytes(4, "little"))
+                f.seek(166627+469*j+156)
+                f.write(i["yp"].to_bytes(4, "little"))
+                f.seek(166627+469*j+168)
+                f.write(i["pg"].to_bytes(4, "little"))
+                f.seek(166627+469*j+180)
+                f.write(i["level"].to_bytes(4, "little"))
+                f.seek(166627+469*j+204)
+                f.write(i["flag1"].to_bytes(2, "little"))
+                f.seek(166627+469*j+214)
+                f.write(i["stats"]["hp_plus"].to_bytes(2, "little"))
+                f.write(i["stats"]["yp_plus"].to_bytes(2, "little"))
+                f.write(i["stats"]["st_plus"].to_bytes(2, "little"))
+                f.write(i["stats"]["sp_plus"].to_bytes(2, "little"))
+                f.write(i["stats"]["pa_plus"].to_bytes(2, "little"))
+                f.write(i["stats"]["sa_plus"].to_bytes(2, "little"))
+                f.seek(166627+469*j+254)
+                f.write(i["stats"]["iv_hp"].to_bytes(1, "little"))
+                f.write(i["stats"]["iv_str"].to_bytes(1, "little"))
+                f.write(i["stats"]["iv_spr"].to_bytes(1, "little"))
+                f.write(i["stats"]["iv_def"].to_bytes(1, "little"))
+                f.write(i["stats"]["iv_spd"].to_bytes(1, "little"))
+                f.seek(166627+469*j+330)
+                f.write(i["order"].to_bytes(1, "little"))
+                
+                j+=1
+
+            #clear character overflow
+            if original_character_amount - len(characterlist) > 0:
+                f.seek(166627+469*j)
+                f.write(b"\x00"*469*(original_character_amount - len(characterlist)))
+
+            #write yokai back
+            j=0
+            for i in yokailist:
+                f.seek(169449+469*j+0)
+                f.write(i["num1"].to_bytes(2, "little"))
+                f.seek(169449+469*j+2)
+                f.write(i["num2"].to_bytes(2, "little"))
+                f.seek(169449+469*j+28)
+                f.write((bytearray([ord(k)for k in i["nickname"]])+bytearray(24))[:24])
+                f.seek(169449+469*j+72)
+                f.write(i["id"].to_bytes(4, "little"))
+                f.seek(169449+469*j+84)
+                for skill in range(6):
+                    f.write(i["skills"][skill].to_bytes(4, "little"))
+                f.seek(169449+469*j+132)
+                f.write(i["xp"].to_bytes(4, "little"))
+                f.seek(169449+469*j+144)
+                f.write(i["hp"].to_bytes(4, "little"))
+                f.seek(169449+469*j+156)
+                f.write(i["yp"].to_bytes(4, "little"))
+                f.seek(169449+469*j+168)
+                f.write(i["pg"].to_bytes(4, "little"))
+                f.seek(169449+469*j+180)
+                f.write(i["level"].to_bytes(4, "little"))
+                f.seek(169449+469*j+204)
+                f.write(i["flag1"].to_bytes(2, "little"))
+                f.seek(169449+469*j+214)
+                f.write(i["stats"]["hp_plus"].to_bytes(2, "little"))
+                f.write(i["stats"]["yp_plus"].to_bytes(2, "little"))
+                f.write(i["stats"]["st_plus"].to_bytes(2, "little"))
+                f.write(i["stats"]["sp_plus"].to_bytes(2, "little"))
+                f.write(i["stats"]["pa_plus"].to_bytes(2, "little"))
+                f.write(i["stats"]["sa_plus"].to_bytes(2, "little"))
+                f.seek(169449+469*j+254)
+                f.write(i["stats"]["iv_hp"].to_bytes(1, "little"))
+                f.write(i["stats"]["iv_str"].to_bytes(1, "little"))
+                f.write(i["stats"]["iv_spr"].to_bytes(1, "little"))
+                f.write(i["stats"]["iv_def"].to_bytes(1, "little"))
+                f.write(i["stats"]["iv_spd"].to_bytes(1, "little"))
+                f.seek(169449+469*j+330)
+                f.write(i["order"].to_bytes(1, "little"))
+                
+                j+=1
+
+            #clear yokai overflow
+            if original_yokai_amount - len(yokailist) > 0:
+                f.seek(169449+469*j)
+                f.write(b"\x00"*469*(original_yokai_amount - len(yokailist)))
+
+            quit()
+
+            itemlist = []
+            index = 0
+            f.seek(76579)
+            while True:
+                item = f.read(54)
+
+                if get(item, 0) == 0 and index != 0: #could be broken
+                    break
+
+                itemlist.append({
+                    "num1": get(item, 0, 2), #starts from 0
+                    "num2": get(item, 2, 2),
+                    "item": get(item, 12, 4),
+                    "order": get(item, 24, 4), #what's this?
+                    "amount": get(item, 36, 2) # maybe 4 bytes?
+                })
+                
+                index += 1
+            original_item_amount = index
+
+            specialsoullist = [] #TODO rename
+            index = 0
+            f.seek(958227)
+            while True:
+                specialsoul = f.read(54)
+
+                if get(specialsoul, 0) == 0 and index != 0: #could be broken
+                    break
+
+                specialsoullist.append({
+                    "num1": get(specialsoul, 0, 2), #starts from 16384
+                    "num2": get(specialsoul, 2, 2),
+                    "soul": get(specialsoul, 12, 4),
+                    "order": get(specialsoul, 24, 4),
+                    "amount": get(specialsoul, 36, 2),
+                })
+
+                index += 1
+            original_special_soul_amount = index
+
+            yokaisoullist = [] #TODO rename
+            index = 0
+            f.seek(963635)
+            while True:
+                yokaisoul = f.read(80)
+
+                if get(yokaisoul, 0) == 0 and index != 0: #could be broken
+                    break
+
+                yokaisoullist.append({
+                    "num1": get(yokaisoul, 0, 2), #starts from 12288
+                    "num2": get(yokaisoul, 2, 2), 
+                    "soul": get(yokaisoul, 12, 4),
+                    "order": get(yokaisoul, 24, 4),
+                    "white": get(yokaisoul, 36, 2),
+                    "red": get(yokaisoul, 38, 2),
+                    "gold": get(yokaisoul, 40, 2),
+                    "flags":[
+                        get(yokaisoul, 50), 
+                        get(yokaisoul, 51), 
+                        get(yokaisoul, 52), 
+                        get(yokaisoul, 61), 
+                        get(yokaisoul, 62), 
+                        get(yokaisoul, 63), 
+                    ], 
+                })
+
+                index += 1
+            original_yokai_soul_amount = index
+
+            equipmentlist = []
+            index = 0
+            f.seek(103587)
+            while True:
+                equipment = f.read(63)
+
+                if get(equipment, 0) == 0 and index != 0: #could be broken
+                    break
+
+                equipmentlist.append({
+                    "num1": get(equipment, 0, 2), #starts from 4096
+                    "num2": get(equipment, 2, 2), 
+                    "equipment": get(equipment, 12, 4),
+                    "order": get(equipment, 24, 4),
+                    "amount": get(equipment, 36, 2),
+                    "used": get(equipment, 46, 1) #how many are in use (leave alone or set to zero)
+                })
+
+                index += 1
+            original_equipment_amount = index
+
+
+infile = "/Users/emilia/Documents/dev/ykw/ykw-editors/my-editor/4/0/USERDATA00/data copy.bin"
+# infile = "/Volumes/UNTITLED/switch/Checkpoint/saves/0x010086C00AF7C000 0x010086C00AF7C000/0 copy/USERDATA00/data.bin"
 
 main(infile)

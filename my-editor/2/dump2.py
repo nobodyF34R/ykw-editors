@@ -296,7 +296,7 @@ def edit_contact(contactlist, index, readable=True, name=None, starred=None, own
             contactlist[index]["ambition"] = ambitions.index(ambition)
         except:
             contactlist[index]["ambition"] = ambition
-    contactlist[index]["requests"] = 255 #TODO figure out other ingame maxes
+    contactlist[index]["requests"] = 255
     contactlist[index]["arrested"] = 255
     contactlist[index]["medallium"] = 255 #fake percentage (100)
     contactlist[index]["bugs"] = 255
@@ -721,7 +721,7 @@ def main(file): #TODO fix yokai.
             j=0
             for i in yokailist:
                 f.seek(20744+92*j)
-                f.write(i["num1"].to_bytes(2, "little")) #no need to seek, may remove
+                f.write(i["num1"].to_bytes(2, "little"))
                 f.seek(20744+92*j+2)
                 f.write(i["num2"].to_bytes(2, "little"))
                 f.seek(20744+92*j+4)
@@ -869,7 +869,7 @@ if infile[-3:] == "ywd": #sloppy
 else: #TODO make compatible on windows
     from pathlib import Path
     import sys
-    sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"/save-tools") #TODO make compatible on windows
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"/save-tools")
     import yw_save
     with open(infile, "r+b") as f:
         if 0:

@@ -222,7 +222,7 @@ def edit_important(importantlist, index, important):
 
 
 #main
-def main(file): #TODO fix yokai. medalium
+def main(file):
     try:
         file = open(file, "r+b")
     except:
@@ -272,7 +272,7 @@ def main(file): #TODO fix yokai. medalium
                 }, 
                 "level": get(yokai, 116), 
                 "attitude": get(yokai, 117), 
-                #TODO loaf level, xp, held item & affection
+                #TODO loaf level, held item & affection
                 #"affection": get(yokai, 120), #this is wrong i think
             })
 
@@ -370,7 +370,7 @@ def main(file): #TODO fix yokai. medalium
                 if medalliumlist[3][i]: # medalliumlist[3][0] should never be true. the boss yokai are just weird i think
                     print(indexs[i], end=", ")
 
-        #write everything back to file TODO
+        #write everything back to file
         if 1:
             #write items back
             j=0
@@ -509,7 +509,7 @@ if infile[-3:] == "ywd":
 else: #TODO make compatible on windows
     from pathlib import Path
     import sys
-    sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"/save-tools") #TODO make compatible on windows
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"/save-tools")
     import yw_save
     with open(infile, "r+b") as f:
         out = main(yw_save.yw_proc(f.read(), False)) #out is the edited binary data
