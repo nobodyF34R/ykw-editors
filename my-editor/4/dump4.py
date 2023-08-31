@@ -181,7 +181,63 @@ def edit_item(itemlist, index, item=None, amount=None): #broken for some reason
         itemlist[index]["amount"] = amount
     return itemlist
 
-#TODO souls
+def edit_special_soul(specialsoullist, index, soul=None, amount=None):
+    try:
+        if index < 0:
+            index = len(specialsoullist)-index #appending shortcut
+    except:
+        pass
+    try:
+        specialsoullist[index]
+    except:
+        index = len(specialsoullist)
+        specialsoullist.append({})
+    specialsoullist[index]["num1"] = index
+    specialsoullist[index]["num2"] = index+1
+    if soul:
+        try:
+            specialsoullist[index]["soul"] = reverse_souls[soul] #TODO
+        except:
+            specialsoullist[index]["soul"] = item
+    try:
+        specialsoullist[index]["order"]
+    except:
+        specialsoullist[index]["order"] = 0 
+    if amount:
+        specialsoullist[index]["amount"] = amount
+    return specialsoullist
+
+def edit_yokai_soul(yokaisoullist, index, soul=None, red=None, white=None, gold=None, flags=None):
+    try:
+        if index < 0:
+            index = len(yokaisoullist)-index #appending shortcut
+    except:
+        pass
+    try:
+        yokaisoullist[index]
+    except:
+        index = len(yokaisoullist)
+        yokaisoullist.append({})
+    yokaisoullist[index]["num1"] = index
+    yokaisoullist[index]["num2"] = index+1
+    if soul:
+        try:
+            yokaisoullist[index]["soul"] = reverse_souls[soul] #TODO
+        except:
+            yokaisoullist[index]["soul"] = item
+    try:
+        yokaisoullist[index]["order"]
+    except:
+        yokaisoullist[index]["order"] = 0 
+    if red:
+        yokaisoullist[index]["red"] = red
+    if white:
+        yokaisoullist[index]["white"] = white
+    if gold:
+        yokaisoullist[index]["gold"] = gold
+    if flags:
+        yokaisoullist[index]["flags"] = flags #idk
+    return yokaisoullist
 
 def edit_equipment(equipmentlist, index, equipment=None, amount=None):
     try:
@@ -212,7 +268,25 @@ def edit_equipment(equipmentlist, index, equipment=None, amount=None):
 
 #important???
 
-def main(file):
+def edit(position, location, money, namelist, gatcharemaining, gatchamax, characterlist, yokailist, itemlist, specialsoullist, yokaisoullist, equipmentlist):
+    namelist = {'nate': 'Nate', 'katie': 'Katie', 'summer': 'Summer', 'cole': 'Cole', 'bruno': 'Bruno', 'jack': 'Jack'} #fix names
+    
+    for i in range(len(yokailist)):
+        yokailist = edit_yokai(yokailist, i, "shogunyan", "") #get id from data.py if it isn't working
+
+    for i in range(6):
+        characterlist = edit_yokai(characterlist, i) #max stats
+
+
+    print(", ".join([characters[i["id"]]for i in characterlist]))
+    print(", ".join([characters[i["id"]]for i in yokailist]))
+    print(", ".join([items[i["item"]]for i in itemlist]))
+    print(", ".join([equipments[i["equipment"]]for i in equipmentlist]))
+    print(locations[location])
+
+    return position, location, money, namelist, gatcharemaining, gatchamax, characterlist, yokailist, itemlist, specialsoullist, yokaisoullist, equipmentlist
+
+def main(file, edit=None):
     with open(file, "r+b") as f:
         f.seek(131) #misc
         position = [get(f.read(4),0,4), get(f.read(4),0,4), get(f.read(4),0,4)] #x,y,z
@@ -409,9 +483,9 @@ def main(file):
                 "num2": get(yokaisoul, 2, 2), 
                 "soul": get(yokaisoul, 12, 4),
                 "order": get(yokaisoul, 24, 4),
-                "white": get(yokaisoul, 36, 2),
-                "red": get(yokaisoul, 38, 2),
-                "gold": get(yokaisoul, 40, 2),
+                "white": get(yokaisoul, 36, 2), #amount
+                "red": get(yokaisoul, 38, 2), #amount
+                "gold": get(yokaisoul, 40, 2), #amount
                 "flags":[
                     get(yokaisoul, 50), 
                     get(yokaisoul, 51), 
@@ -451,20 +525,8 @@ def main(file):
 
 
         #editor goes here
-        if 0:
-            namelist = {'nate': 'Nate', 'katie': 'Katie', 'summer': 'Summer', 'cole': 'Cole', 'bruno': 'Bruno', 'jack': 'Jack'}
-            for i in range(len(yokailist)):
-                yokailist = edit_yokai(yokailist, i, 3997989751, "")
-            for i in range(6):
-                characterlist = edit_yokai(characterlist, i)
-
-        #print data 
-        if 1:
-            print(", ".join([characters[i["id"]]for i in characterlist]))
-            print(", ".join([characters[i["id"]]for i in yokailist]))
-            print(", ".join([items[i["item"]]for i in itemlist]))
-            print(", ".join([equipments[i["equipment"]]for i in equipmentlist]))
-            print(locations[location])
+        if edit:
+            position, location, money, namelist, gatcharemaining, gatchamax, characterlist, yokailist, itemlist, specialsoullist, yokaisoullist, equipmentlist = edit(position, location, money, namelist, gatcharemaining, gatchamax, characterlist, yokailist, itemlist, specialsoullist, yokaisoullist, equipmentlist)
 
         #write everything back to file
         if 1: #TODO
@@ -606,7 +668,6 @@ def main(file):
                 f.seek(76579+54*j)
                 f.write(b"\x00"*54*(original_item_amount - len(itemlist)))
 
-
             #write special soul back
             j=0
             for i in specialsoullist:
@@ -628,7 +689,6 @@ def main(file):
                 f.seek(958227+54*j)
                 f.write(b"\x00"*54*(original_special_soul_amount - len(specialsoullist)))
             
-
             #write yokai soul back
             j=0
             for i in yokaisoullist:
@@ -684,4 +744,4 @@ def main(file):
 infile = "/Users/emilia/Documents/dev/ykw/ykw-editors/my-editor/4/0/USERDATA00/data copy.bin"
 # infile = "/Volumes/UNTITLED/switch/Checkpoint/saves/0x010086C00AF7C000 0x010086C00AF7C000/0 copy/USERDATA00/data.bin"
 
-main(infile)
+main(infile, edit)
