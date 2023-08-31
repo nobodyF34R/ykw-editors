@@ -210,7 +210,7 @@ def edit_equipment(equipmentlist, index, equipment=None, amount=None):
     equipmentlist[index]["used"] = 0
     return equipmentlist
 
-#important
+#important???
 
 def main(file):
     with open(file, "r+b") as f:
@@ -479,9 +479,9 @@ def main(file):
             f.write(money.to_bytes(4, "little"))
             namenum = 0
             for name in namelist:
-                f.seek(282+namenum)
+                f.seek(282+36*namenum)
                 f.write((bytearray(list(namelist[name].encode('utf-8')))+bytearray(24))[:24])
-                namenum += 36
+                namenum += 1
             #clear overflow????
             f.seek(2082)
             f.write(gatcharemaining.to_bytes(1, "little"))
@@ -585,98 +585,100 @@ def main(file):
                 f.seek(169449+469*j)
                 f.write(b"\x00"*469*(original_yokai_amount - len(yokailist)))
 
-            quit()
+            #write item back
+            j=0
+            for i in itemlist:
+                f.seek(76579+54*j+0)
+                f.write(i["num1"].to_bytes(2, "little"))
+                f.seek(76579+54*j+2)
+                f.write(i["num2"].to_bytes(2, "little"))
+                f.seek(76579+54*j+12)
+                f.write(i["item"].to_bytes(4, "little"))
+                f.seek(76579+54*j+24)
+                f.write(i["order"].to_bytes(4, "little"))
+                f.seek(76579+54*j+36)
+                f.write(i["amount"].to_bytes(4, "little"))
 
-            itemlist = []
-            index = 0
-            f.seek(76579)
-            while True:
-                item = f.read(54)
+                j+=1
 
-                if get(item, 0) == 0 and index != 0: #could be broken
-                    break
+            #clear item overflow
+            if original_item_amount - len(itemlist) > 0:
+                f.seek(76579+54*j)
+                f.write(b"\x00"*54*(original_item_amount - len(itemlist)))
 
-                itemlist.append({
-                    "num1": get(item, 0, 2), #starts from 0
-                    "num2": get(item, 2, 2),
-                    "item": get(item, 12, 4),
-                    "order": get(item, 24, 4), #what's this?
-                    "amount": get(item, 36, 2) # maybe 4 bytes?
-                })
-                
-                index += 1
-            original_item_amount = index
 
-            specialsoullist = [] #TODO rename
-            index = 0
-            f.seek(958227)
-            while True:
-                specialsoul = f.read(54)
+            #write special soul back
+            j=0
+            for i in specialsoullist:
+                f.seek(958227+54*j+0)
+                f.write(i["num1"].to_bytes(2, "little"))
+                f.seek(958227+54*j+2)
+                f.write(i["num2"].to_bytes(2, "little"))
+                f.seek(958227+54*j+12)
+                f.write(i["soul"].to_bytes(4, "little"))
+                f.seek(958227+54*j+24)
+                f.write(i["order"].to_bytes(4, "little"))
+                f.seek(958227+54*j+36)
+                f.write(i["amount"].to_bytes(2, "little"))
 
-                if get(specialsoul, 0) == 0 and index != 0: #could be broken
-                    break
+                j+=1
 
-                specialsoullist.append({
-                    "num1": get(specialsoul, 0, 2), #starts from 16384
-                    "num2": get(specialsoul, 2, 2),
-                    "soul": get(specialsoul, 12, 4),
-                    "order": get(specialsoul, 24, 4),
-                    "amount": get(specialsoul, 36, 2),
-                })
+            #clear special soul overflow
+            if original_special_soul_amount - len(specialsoullist) > 0:
+                f.seek(958227+54*j)
+                f.write(b"\x00"*54*(original_special_soul_amount - len(specialsoullist)))
+            
 
-                index += 1
-            original_special_soul_amount = index
+            #write yokai soul back
+            j=0
+            for i in yokaisoullist:
+                f.seek(963635+80*j+0)
+                f.write(i["num1"].to_bytes(2, "little"))
+                f.seek(963635+80*j+2)
+                f.write(i["num2"].to_bytes(2, "little"))
+                f.seek(963635+80*j+12)
+                f.write(i["soul"].to_bytes(4, "little"))
+                f.seek(963635+80*j+24)
+                f.write(i["order"].to_bytes(4, "little"))
+                f.seek(963635+80*j+36)
+                f.write(i["white"].to_bytes(2, "little"))
+                f.seek(963635+80*j+38)
+                f.write(i["red"].to_bytes(2, "little"))
+                f.seek(963635+80*j+40)
+                f.write(i["gold"].to_bytes(2, "little"))
+                for flag in range(6): #always 6?
+                    f.write(i["flags"][flag].to_bytes(1, "little"))
 
-            yokaisoullist = [] #TODO rename
-            index = 0
-            f.seek(963635)
-            while True:
-                yokaisoul = f.read(80)
+                j+=1
 
-                if get(yokaisoul, 0) == 0 and index != 0: #could be broken
-                    break
+            #clear yokai soul overflow
+            if original_yokai_soul_amount - len(yokaisoullist) > 0:
+                f.seek(963635+80*j)
+                f.write(b"\x00"*80*(original_yokai_soul_amount - len(yokaisoullist)))
+            
+            #write equipment back
+            j=0
+            for i in equipmentlist:
+                f.seek(103587+63*j+0)
+                f.write(i["num1"].to_bytes(2, "little"))
+                f.seek(103587+63*j+2)
+                f.write(i["num2"].to_bytes(2, "little"))
+                f.seek(103587+63*j+12)
+                f.write(i["equipment"].to_bytes(4, "little"))
+                f.seek(103587+63*j+24)
+                f.write(i["order"].to_bytes(4, "little"))
+                f.seek(103587+63*j+36)
+                f.write(i["amount"].to_bytes(2, "little"))
+                f.seek(103587+63*j+46)
+                f.write(i["used"].to_bytes(1, "little"))
 
-                yokaisoullist.append({
-                    "num1": get(yokaisoul, 0, 2), #starts from 12288
-                    "num2": get(yokaisoul, 2, 2), 
-                    "soul": get(yokaisoul, 12, 4),
-                    "order": get(yokaisoul, 24, 4),
-                    "white": get(yokaisoul, 36, 2),
-                    "red": get(yokaisoul, 38, 2),
-                    "gold": get(yokaisoul, 40, 2),
-                    "flags":[
-                        get(yokaisoul, 50), 
-                        get(yokaisoul, 51), 
-                        get(yokaisoul, 52), 
-                        get(yokaisoul, 61), 
-                        get(yokaisoul, 62), 
-                        get(yokaisoul, 63), 
-                    ], 
-                })
+                j+=1
 
-                index += 1
-            original_yokai_soul_amount = index
+            #clear equipment overflow
+            if original_equipment_amount - len(equipmentlist) > 0:
+                f.seek(103587+63*j)
+                f.write(b"\x00"*63*(original_equipment_amount - len(equipmentlist)))
 
-            equipmentlist = []
-            index = 0
-            f.seek(103587)
-            while True:
-                equipment = f.read(63)
-
-                if get(equipment, 0) == 0 and index != 0: #could be broken
-                    break
-
-                equipmentlist.append({
-                    "num1": get(equipment, 0, 2), #starts from 4096
-                    "num2": get(equipment, 2, 2), 
-                    "equipment": get(equipment, 12, 4),
-                    "order": get(equipment, 24, 4),
-                    "amount": get(equipment, 36, 2),
-                    "used": get(equipment, 46, 1) #how many are in use (leave alone or set to zero)
-                })
-
-                index += 1
-            original_equipment_amount = index
 
 
 infile = "/Users/emilia/Documents/dev/ykw/ykw-editors/my-editor/4/0/USERDATA00/data copy.bin"
