@@ -268,23 +268,6 @@ def edit_equipment(equipmentlist, index, equipment=None, amount=None):
 
 #important???
 
-def edit(position, location, money, namelist, gatcharemaining, gatchamax, characterlist, yokailist, itemlist, specialsoullist, yokaisoullist, equipmentlist):
-    namelist = {'nate': 'Nate', 'katie': 'Katie', 'summer': 'Summer', 'cole': 'Cole', 'bruno': 'Bruno', 'jack': 'Jack'} #fix names
-    
-    for i in range(len(yokailist)):
-        yokailist = edit_yokai(yokailist, i, "shogunyan", "") #get id from data.py if it isn't working
-
-    for i in range(6):
-        characterlist = edit_yokai(characterlist, i) #max stats
-
-
-    print(", ".join([characters[i["id"]]for i in characterlist]))
-    print(", ".join([characters[i["id"]]for i in yokailist]))
-    print(", ".join([items[i["item"]]for i in itemlist]))
-    print(", ".join([equipments[i["equipment"]]for i in equipmentlist]))
-    print(locations[location])
-
-    return position, location, money, namelist, gatcharemaining, gatchamax, characterlist, yokailist, itemlist, specialsoullist, yokaisoullist, equipmentlist
 
 def main(file, edit=None):
     with open(file, "r+b") as f:
@@ -522,14 +505,12 @@ def main(file, edit=None):
 
         #TODO important
 
-
-
         #editor goes here
         if edit:
             position, location, money, namelist, gatcharemaining, gatchamax, characterlist, yokailist, itemlist, specialsoullist, yokaisoullist, equipmentlist = edit(position, location, money, namelist, gatcharemaining, gatchamax, characterlist, yokailist, itemlist, specialsoullist, yokaisoullist, equipmentlist)
 
         #write everything back to file
-        if 1: #TODO
+        if 1:
             #misc
             f.seek(131)
             f.write(position[0].to_bytes(4, "little"))
@@ -739,6 +720,24 @@ def main(file, edit=None):
                 f.seek(103587+63*j)
                 f.write(b"\x00"*63*(original_equipment_amount - len(equipmentlist)))
 
+
+def edit(position, location, money, namelist, gatcharemaining, gatchamax, characterlist, yokailist, itemlist, specialsoullist, yokaisoullist, equipmentlist):
+    namelist = {'nate': 'Nate', 'katie': 'Katie', 'summer': 'Summer', 'cole': 'Cole', 'bruno': 'Bruno', 'jack': 'Jack'} #fix names
+    
+    for i in range(len(yokailist)):
+        yokailist = edit_yokai(yokailist, i, "shogunyan", "") #get id from data.py if it isn't working
+
+    for i in range(6): #TODO make sure there are always 6
+        characterlist = edit_yokai(characterlist, i) #max stats
+
+
+    print(", ".join([characters[i["id"]]for i in characterlist]))
+    print(", ".join([characters[i["id"]]for i in yokailist]))
+    print(", ".join([items[i["item"]]for i in itemlist]))
+    print(", ".join([equipments[i["equipment"]]for i in equipmentlist]))
+    print(locations[location])
+
+    return position, location, money, namelist, gatcharemaining, gatchamax, characterlist, yokailist, itemlist, specialsoullist, yokaisoullist, equipmentlist
 
 
 infile = "/Users/emilia/Documents/dev/ykw/ykw-editors/my-editor/4/0/USERDATA00/data copy.bin"

@@ -1,5 +1,8 @@
 from dump4 import *
 
+infile = "/Users/emilia/Documents/dev/ykw/ykw-editors/my-editor/4/0/USERDATA00/data copy.bin"
+#infile = "/Volumes/UNTITLED/switch/Checkpoint/saves/0x010086C00AF7C000 0x010086C00AF7C000/0 copy/USERDATA00/data.bin"
+
 def edit(position, location, money, namelist, gatcharemaining, gatchamax, characterlist, yokailist, itemlist, specialsoullist, yokaisoullist, equipmentlist):
     #helper functions defined in dump4.py
     namelist = {'nate': 'Nate', 'katie': 'Katie', 'summer': 'Summer', 'cole': 'Cole', 'bruno': 'Bruno', 'jack': 'Jack'} #fix names
@@ -19,7 +22,5 @@ def edit(position, location, money, namelist, gatcharemaining, gatchamax, charac
 
     return position, location, money, namelist, gatcharemaining, gatchamax, characterlist, yokailist, itemlist, specialsoullist, yokaisoullist, equipmentlist #all editable
 
-infile = "/Users/emilia/Documents/dev/ykw/ykw-editors/my-editor/4/0/USERDATA00/data copy.bin"
-# infile = "/Volumes/UNTITLED/switch/Checkpoint/saves/0x010086C00AF7C000 0x010086C00AF7C000/0 copy/USERDATA00/data.bin"
 
 main(infile, edit)

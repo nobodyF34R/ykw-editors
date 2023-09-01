@@ -220,9 +220,8 @@ def edit_important(importantlist, index, important):
         importantlist[index]["important"] = important
     return importantlist
 
-
 #main
-def main(file):
+def main(file, edit):
     try:
         file = open(file, "r+b")
     except:
@@ -345,30 +344,8 @@ def main(file):
 
 
         #editor goes here
-        if 1: #appending yokai is currently broken TODO
-            for i in range(len(yokailist)):
-                edit_yokai(yokailist, i, "shogunyan", "rough", "", [3,4,0,0,3],[7,7,0,0,6])
-        
-        #print data 
-        if 0:
-            #print(", ".join([yokais[i["id"]]for i in yokailist]))
-
-            print("\nseen yokai:")
-            for i in range(246):
-                if medalliumlist[0][i]: # medalliumlist[0][0] should never be true
-                    print(indexs[i], end=", ")
-            print("\nbefriended yokai:")
-            for i in range(224): #got rid of printing boss yokai to avoid confusion, since seen boss yokai show up as befriended because otherwise you wouldn't be able to see their profile
-                if medalliumlist[1][i]: # medalliumlist[1][0] should never be true. the boss yokai are just weird i think
-                    print(indexs[i], end=", ")
-            print("\nnew yokai:")
-            for i in range(246):
-                if medalliumlist[2][i]: # medalliumlist[2][0] should never be true. the boss yokai are just weird i think
-                    print(indexs[i], end=", ")
-            print("\ncamera yokai:")
-            for i in range(246):
-                if medalliumlist[3][i]: # medalliumlist[3][0] should never be true. the boss yokai are just weird i think
-                    print(indexs[i], end=", ")
+        if edit: #appending yokai is currently broken TODO
+            yokailist, itemlist, equipmentlist, importantlist, medalliumlist = edit(yokailist, itemlist, equipmentlist, importantlist, medalliumlist)
 
         #write everything back to file
         if 1:
@@ -501,17 +478,48 @@ def main(file):
         return f.read() #for the .yw files
 
 
+def edit(yokailist, itemlist, equipmentlist, importantlist, medalliumlist):
+    #helper functions defined in dump1s.py
+    for i in range(len(yokailist)):
+        edit_yokai(yokailist, i)  #max stats
+
+
+    print(", ".join([yokais[i["id"]]for i in yokailist]))
+    print(", ".join([items[i["item"]]for i in itemlist]))
+    print(", ".join([equipments[i["equipment"]]for i in equipmentlist]))
+    print(", ".join([importants[i["important"]]for i in importantlist]))
+
+    print("\nseen yokai:")
+    for i in range(246):
+        if medalliumlist[0][i]: # medalliumlist[0][0] should never be true
+            print(indexs[i], end=", ")
+    print("\nbefriended yokai:")
+    for i in range(224): #got rid of printing boss yokai to avoid confusion, since seen boss yokai show up as befriended because otherwise you wouldn't be able to see their profile
+        if medalliumlist[1][i]: # medalliumlist[1][0] should never be true. the boss yokai are just weird i think
+            print(indexs[i], end=", ")
+    print("\nnew yokai:")
+    for i in range(246):
+        if medalliumlist[2][i]: # medalliumlist[2][0] should never be true. the boss yokai are just weird i think
+            print(indexs[i], end=", ")
+    print("\ncamera yokai:")
+    for i in range(246):
+        if medalliumlist[3][i]: # medalliumlist[3][0] should never be true. the boss yokai are just weird i think
+            print(indexs[i], end=", ")
+    
+    return yokailist, itemlist, equipmentlist, importantlist, medalliumlist
+
+separator = "/" # or "\\" on windows
 infile = "/Users/emilia/Documents/dev/ykw/20230716-140104 XAW7/new.ywd"
 #infile = "/Volumes/UNTITLED/switch/Checkpoint/saves/0x0100C0000CEEA000 0x0100C0000CEEA000/temp/game1.yw"
 
 if infile[-3:] == "ywd":
-    main(infile)
-else: #TODO make compatible on windows
+    main(infile, edit)
+else:
     from pathlib import Path
     import sys
-    sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"/save-tools")
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+separator+"save-tools")
     import yw_save
     with open(infile, "r+b") as f:
-        out = main(yw_save.yw_proc(f.read(), False)) #out is the edited binary data
+        out = main(yw_save.yw_proc(f.read(), False), edit) #out is the edited binary data
         f.seek(0)
         f.write(yw_save.yw_proc(out, True))
