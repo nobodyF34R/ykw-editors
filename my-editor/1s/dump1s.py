@@ -29,7 +29,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from data import * #will/may eventually remove, added to make program nicer
+from data import *
 
 #functions
 def get(read, place, length=1, integer=True, half=False):
@@ -507,6 +507,7 @@ def edit(yokailist, itemlist, equipmentlist, importantlist, medalliumlist):
             print(indexs[i], end=", ")
     
     return yokailist, itemlist, equipmentlist, importantlist, medalliumlist
+
 
 separator = "/" # or "\\" on windows
 infile = "/Users/emilia/Documents/dev/ykw/20230716-140104 XAW7/new.ywd"

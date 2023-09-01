@@ -1,10 +1,11 @@
-from dump2 import *
+from dump2 import * #get specific ids from data.py
 
 separator = "/" # or "\\" on windows
 infile = "/Users/emilia/Documents/dev/ykw/ykw-editors/my-editor/2/game check copy.ywd"
 #infile = "/Volumes/3DS/3ds/Checkpoint/saves/0x01B28 YO-KAI WATCH 2  PSYCHIC …/20230410-142023/game1.yw"
 
 def edit(yokailist, itemlist, equipmentlist, importantlist, soullist, medalliumlist, profile, contactlist):
+    #helper functions defined in dump2.py
     #to append yokai make index None. must include yokai, attitude & nickname if appending. (can all be "" except for yokai)
     #append a pandle
     yokailist = edit_yokai(yokailist, None, profile["ownerid"], "pandle", "", "bob") #if you get the index wrong it will mess everything up

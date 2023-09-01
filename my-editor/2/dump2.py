@@ -29,7 +29,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from data import * #will/may eventually remove, added to make program nicer
+from data import *
 
 #functions
 def get(read, place, length=1, integer=True, half=False):
@@ -819,6 +819,7 @@ def main(file, edit): #TODO fix yokai.
                 
         f.seek(0)
         return f.read() #for the .yw files
+
 
 def edit(yokailist, itemlist, equipmentlist, importantlist, soullist, medalliumlist, profile, contactlist):
     #to append yokai make index None. must include yokai, attitude & nickname if appending. (can all be "" except for yokai)

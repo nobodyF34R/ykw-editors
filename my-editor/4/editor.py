@@ -1,4 +1,4 @@
-from dump4 import *
+from dump4 import * #get specific ids from data.py
 
 infile = "/Users/emilia/Documents/dev/ykw/ykw-editors/my-editor/4/0/USERDATA00/data copy.bin"
 #infile = "/Volumes/UNTITLED/switch/Checkpoint/saves/0x010086C00AF7C000 0x010086C00AF7C000/0 copy/USERDATA00/data.bin"

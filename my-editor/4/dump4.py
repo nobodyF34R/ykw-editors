@@ -29,7 +29,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from data import * #will/may eventually remove, added to make program nicer
+from data import *
 
 #functions
 def get(read, place, length=1, integer=True, half=False):
@@ -268,8 +268,8 @@ def edit_equipment(equipmentlist, index, equipment=None, amount=None):
 
 #important???
 
-
-def main(file, edit=None):
+#main
+def main(file, edit):
     with open(file, "r+b") as f:
         f.seek(131) #misc
         position = [get(f.read(4),0,4), get(f.read(4),0,4), get(f.read(4),0,4)] #x,y,z

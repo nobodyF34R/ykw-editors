@@ -1,4 +1,4 @@
-from dump1s import *
+from dump1s import * #get specific ids from data.py
 
 separator = "/" # or "\\" on windows
 infile = "/Users/emilia/Documents/dev/ykw/20230716-140104 XAW7/new.ywd"
