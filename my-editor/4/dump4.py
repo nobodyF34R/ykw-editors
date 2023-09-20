@@ -60,15 +60,25 @@ def get(read, place, length=1, integer=True, half=False):
                 finished += chr(i)
             return finished.encode('latin-1').decode('utf-8')
 
-def give(floa): #some shenanigans to convert a float to bytes
-    if floa == 0: return b"\x00"*4
-    e = 0
-    while floa >= 2: floa, e = floa / 2, e + 1
-    while floa < 1: floa, e = floa * 2, e - 1
-    return (0 | (e + 127) << 23 | int((floa - 1) * (2**23))).to_bytes(4, 'little')
+def give(write, length=1, integer=True, half=False):
+    if half == True:
+        return int(f'{write[0]:04b}'+f'{write[1]:04b}', 2).to_bytes(1, 'little')
+    elif half == None: #medallium
+        return bytearray([int(''.join('1' if bit else '0' for bit in write[i:i+8][::-1]), 2) for i in range(0, length, 8)])
+    else:
+        if integer == True: #int
+            return write.to_bytes(length, "little")
+        elif integer == None: #float
+            if write == 0: return b"\x00"*length  #some shenanigans to convert a float to bytes ONLY TESTED ON LENGTH 4
+            e = 0
+            while write >= 2: write, e = write / 2, e + 1
+            while write < 1: write, e = write * 2, e - 1
+            return (0 | (e + 127) << 23 | int((write - 1) * (2**23))).to_bytes(length, 'little')
+        else: #string
+            return (bytearray(write.encode('latin-1'))+bytearray(length))[:length]
 
 
-def edit_yokai(yokailist, index, yokai=None, nickname=None, iv=None, skills=None): #massively overcomplicated and broken simultaneously 
+def edit_yokai(yokailist, index, yokai=None, nickname=None, iv=None, skills=None): #massively overcomplicated and broken simultaneously works with characterlist too
     try:
         if index < 0:
             index = len(yokailist)-index #appending shortcut
@@ -97,12 +107,12 @@ def edit_yokai(yokailist, index, yokai=None, nickname=None, iv=None, skills=None
         yokailist[index]["num2"]+=(j-location)
     if yokai != None:
         try:
-            yokailist[index]["id"] = reverse_yokais[yokai]
+            yokailist[index]["yokai"] = reverse_yokais[yokai]
         except:
             try:
-                yokailist[index]["id"] = reverse_characters[yokai]
+                yokailist[index]["yokai"] = reverse_characters[yokai]
             except:
-                yokailist[index]["id"] = yokai
+                yokailist[index]["yokai"] = yokai
     try:
         yokailist[index]["nickname"] = yokailist[index]["nickname"]
     except:
@@ -303,7 +313,7 @@ def main(file, edit):
                 "num1": get(character, 0, 2), #starts from 0
                 "num2": get(character, 2, 2), 
                 "nickname": get(character, 28, 24, False), #maybe more?
-                "id": get(character, 72, 4), 
+                "character": get(character, 72, 4), 
                 "skills": [
                     get(character, 84, 4), 
                     get(character, 88, 4), 
@@ -364,7 +374,7 @@ def main(file, edit):
                 "num1": get(yokai, 0, 2), #starts from 4096
                 "num2": get(yokai, 2, 2), 
                 "nickname": get(yokai, 28, 24, False), #maybe more?
-                "id": get(yokai, 72, 4), 
+                "yokai": get(yokai, 72, 4), 
                 "skills": [
                     get(yokai, 84, 4), 
                     get(yokai, 88, 4), 
@@ -513,64 +523,64 @@ def main(file, edit):
         if 1:
             #misc
             f.seek(131)
-            f.write(position[0].to_bytes(4, "little"))
-            f.write(position[1].to_bytes(4, "little"))
-            f.write(position[2].to_bytes(4, "little"))
+            f.write(give(position[0], 4))
+            f.write(give(position[1], 4))
+            f.write(give(position[2], 4))
             f.seek(167)
-            f.write(location.to_bytes(4, "little"))
+            f.write(give(location, 4))
             f.seek(203)
-            f.write(money.to_bytes(4, "little"))
+            f.write(give(money, 4))
             namenum = 0
             for name in namelist:
                 f.seek(282+36*namenum)
-                f.write((bytearray(list(namelist[name].encode('utf-8')))+bytearray(24))[:24])
+                f.write(give(namelist[name], 24, integer=False))
                 namenum += 1
             #clear overflow????
             f.seek(2082)
-            f.write(gatcharemaining.to_bytes(1, "little"))
-            f.write(gatchamax.to_bytes(1, "little"))
+            f.write(give(gatcharemaining))
+            f.write(give(gatchamax))
 
             #write character back
             j=0
             for i in characterlist:
                 f.seek(166627+469*j+0)
-                f.write(i["num1"].to_bytes(2, "little"))
+                f.write(give(i["num1"], 2))
                 f.seek(166627+469*j+2)
-                f.write(i["num2"].to_bytes(2, "little"))
+                f.write(give(i["num2"], 2))
                 f.seek(166627+469*j+28)
-                f.write((bytearray([ord(k)for k in i["nickname"]])+bytearray(24))[:24])
+                f.write(give(i["nickname"], 24, integer=False))
                 f.seek(166627+469*j+72)
-                f.write(i["id"].to_bytes(4, "little"))
+                f.write(give(i["character"], 4))
                 f.seek(166627+469*j+84)
                 for skill in range(6): #always 6?
-                    f.write(i["skills"][skill].to_bytes(4, "little"))
+                    f.write(give(i["skills"][skill], 4))
                 f.seek(166627+469*j+132)
-                f.write(i["xp"].to_bytes(4, "little"))
+                f.write(give(i["xp"], 4))
                 f.seek(166627+469*j+144)
-                f.write(i["hp"].to_bytes(4, "little"))
+                f.write(give(i["hp"], 4))
                 f.seek(166627+469*j+156)
-                f.write(i["yp"].to_bytes(4, "little"))
+                f.write(give(i["yp"], 4))
                 f.seek(166627+469*j+168)
-                f.write(i["pg"].to_bytes(4, "little"))
+                f.write(give(i["pg"], 4))
                 f.seek(166627+469*j+180)
-                f.write(i["level"].to_bytes(4, "little"))
+                f.write(give(i["level"], 4))
                 f.seek(166627+469*j+204)
-                f.write(i["flag1"].to_bytes(2, "little"))
+                f.write(give(i["flag1"], 2))
                 f.seek(166627+469*j+214)
-                f.write(i["stats"]["hp_plus"].to_bytes(2, "little"))
-                f.write(i["stats"]["yp_plus"].to_bytes(2, "little"))
-                f.write(i["stats"]["st_plus"].to_bytes(2, "little"))
-                f.write(i["stats"]["sp_plus"].to_bytes(2, "little"))
-                f.write(i["stats"]["pa_plus"].to_bytes(2, "little"))
-                f.write(i["stats"]["sa_plus"].to_bytes(2, "little"))
+                f.write(give(i["stats"]["hp_plus"], 2))
+                f.write(give(i["stats"]["yp_plus"], 2))
+                f.write(give(i["stats"]["st_plus"], 2))
+                f.write(give(i["stats"]["sp_plus"], 2))
+                f.write(give(i["stats"]["pa_plus"], 2))
+                f.write(give(i["stats"]["sa_plus"], 2))
                 f.seek(166627+469*j+254)
-                f.write(i["stats"]["iv_hp"].to_bytes(1, "little"))
-                f.write(i["stats"]["iv_str"].to_bytes(1, "little"))
-                f.write(i["stats"]["iv_spr"].to_bytes(1, "little"))
-                f.write(i["stats"]["iv_def"].to_bytes(1, "little"))
-                f.write(i["stats"]["iv_spd"].to_bytes(1, "little"))
+                f.write(give(i["stats"]["iv_hp"]))
+                f.write(give(i["stats"]["iv_str"]))
+                f.write(give(i["stats"]["iv_spr"]))
+                f.write(give(i["stats"]["iv_def"]))
+                f.write(give(i["stats"]["iv_spd"]))
                 f.seek(166627+469*j+330)
-                f.write(i["order"].to_bytes(1, "little"))
+                f.write(give(i["order"]))
                 
                 j+=1
 
@@ -583,43 +593,43 @@ def main(file, edit):
             j=0
             for i in yokailist:
                 f.seek(169449+469*j+0)
-                f.write(i["num1"].to_bytes(2, "little"))
+                f.write(give(i["num1"], 2))
                 f.seek(169449+469*j+2)
-                f.write(i["num2"].to_bytes(2, "little"))
+                f.write(give(i["num2"], 2))
                 f.seek(169449+469*j+28)
-                f.write((bytearray([ord(k)for k in i["nickname"]])+bytearray(24))[:24])
+                f.write(give(i["nickname"], 24, integer=False))
                 f.seek(169449+469*j+72)
-                f.write(i["id"].to_bytes(4, "little"))
+                f.write(give(i["yokai"], 4))
                 f.seek(169449+469*j+84)
                 for skill in range(6):
-                    f.write(i["skills"][skill].to_bytes(4, "little"))
+                    f.write(give(i["skills"][skill], 4))
                 f.seek(169449+469*j+132)
-                f.write(i["xp"].to_bytes(4, "little"))
+                f.write(give(i["xp"], 4))
                 f.seek(169449+469*j+144)
-                f.write(i["hp"].to_bytes(4, "little"))
+                f.write(give(i["hp"], 4))
                 f.seek(169449+469*j+156)
-                f.write(i["yp"].to_bytes(4, "little"))
+                f.write(give(i["yp"], 4))
                 f.seek(169449+469*j+168)
-                f.write(i["pg"].to_bytes(4, "little"))
+                f.write(give(i["pg"], 4))
                 f.seek(169449+469*j+180)
-                f.write(i["level"].to_bytes(4, "little"))
+                f.write(give(i["level"], 4))
                 f.seek(169449+469*j+204)
-                f.write(i["flag1"].to_bytes(2, "little"))
+                f.write(give(i["flag1"], 2))
                 f.seek(169449+469*j+214)
-                f.write(i["stats"]["hp_plus"].to_bytes(2, "little"))
-                f.write(i["stats"]["yp_plus"].to_bytes(2, "little"))
-                f.write(i["stats"]["st_plus"].to_bytes(2, "little"))
-                f.write(i["stats"]["sp_plus"].to_bytes(2, "little"))
-                f.write(i["stats"]["pa_plus"].to_bytes(2, "little"))
-                f.write(i["stats"]["sa_plus"].to_bytes(2, "little"))
+                f.write(give(i["stats"]["hp_plus"], 2))
+                f.write(give(i["stats"]["yp_plus"], 2))
+                f.write(give(i["stats"]["st_plus"], 2))
+                f.write(give(i["stats"]["sp_plus"], 2))
+                f.write(give(i["stats"]["pa_plus"], 2))
+                f.write(give(i["stats"]["sa_plus"], 2))
                 f.seek(169449+469*j+254)
-                f.write(i["stats"]["iv_hp"].to_bytes(1, "little"))
-                f.write(i["stats"]["iv_str"].to_bytes(1, "little"))
-                f.write(i["stats"]["iv_spr"].to_bytes(1, "little"))
-                f.write(i["stats"]["iv_def"].to_bytes(1, "little"))
-                f.write(i["stats"]["iv_spd"].to_bytes(1, "little"))
+                f.write(give(i["stats"]["iv_hp"]))
+                f.write(give(i["stats"]["iv_str"]))
+                f.write(give(i["stats"]["iv_spr"]))
+                f.write(give(i["stats"]["iv_def"]))
+                f.write(give(i["stats"]["iv_spd"]))
                 f.seek(169449+469*j+330)
-                f.write(i["order"].to_bytes(1, "little"))
+                f.write(give(i["order"]))
                 
                 j+=1
 
@@ -632,15 +642,15 @@ def main(file, edit):
             j=0
             for i in itemlist:
                 f.seek(76579+54*j+0)
-                f.write(i["num1"].to_bytes(2, "little"))
+                f.write(give(i["num1"], 2))
                 f.seek(76579+54*j+2)
-                f.write(i["num2"].to_bytes(2, "little"))
+                f.write(give(i["num2"], 2))
                 f.seek(76579+54*j+12)
-                f.write(i["item"].to_bytes(4, "little"))
+                f.write(give(i["item"], 4))
                 f.seek(76579+54*j+24)
-                f.write(i["order"].to_bytes(4, "little"))
+                f.write(give(i["order"], 4))
                 f.seek(76579+54*j+36)
-                f.write(i["amount"].to_bytes(4, "little"))
+                f.write(give(i["amount"], 4))
 
                 j+=1
 
@@ -653,15 +663,15 @@ def main(file, edit):
             j=0
             for i in specialsoullist:
                 f.seek(958227+54*j+0)
-                f.write(i["num1"].to_bytes(2, "little"))
+                f.write(give(i["num1"], 2))
                 f.seek(958227+54*j+2)
-                f.write(i["num2"].to_bytes(2, "little"))
+                f.write(give(i["num2"], 2))
                 f.seek(958227+54*j+12)
-                f.write(i["soul"].to_bytes(4, "little"))
+                f.write(give(i["soul"], 4))
                 f.seek(958227+54*j+24)
-                f.write(i["order"].to_bytes(4, "little"))
+                f.write(give(i["order"], 4))
                 f.seek(958227+54*j+36)
-                f.write(i["amount"].to_bytes(2, "little"))
+                f.write(give(i["amount"], 2))
 
                 j+=1
 
@@ -674,21 +684,21 @@ def main(file, edit):
             j=0
             for i in yokaisoullist:
                 f.seek(963635+80*j+0)
-                f.write(i["num1"].to_bytes(2, "little"))
+                f.write(give(i["num1"], 2))
                 f.seek(963635+80*j+2)
-                f.write(i["num2"].to_bytes(2, "little"))
+                f.write(give(i["num2"], 2))
                 f.seek(963635+80*j+12)
-                f.write(i["soul"].to_bytes(4, "little"))
+                f.write(give(i["soul"], 4))
                 f.seek(963635+80*j+24)
-                f.write(i["order"].to_bytes(4, "little"))
+                f.write(give(i["order"], 4))
                 f.seek(963635+80*j+36)
-                f.write(i["white"].to_bytes(2, "little"))
+                f.write(give(i["white"], 2))
                 f.seek(963635+80*j+38)
-                f.write(i["red"].to_bytes(2, "little"))
+                f.write(give(i["red"], 2))
                 f.seek(963635+80*j+40)
-                f.write(i["gold"].to_bytes(2, "little"))
+                f.write(give(i["gold"], 2))
                 for flag in range(6): #always 6?
-                    f.write(i["flags"][flag].to_bytes(1, "little"))
+                    f.write(give(i["flags"][flag]))
 
                 j+=1
 
@@ -701,17 +711,17 @@ def main(file, edit):
             j=0
             for i in equipmentlist:
                 f.seek(103587+63*j+0)
-                f.write(i["num1"].to_bytes(2, "little"))
+                f.write(give(i["num1"], 2))
                 f.seek(103587+63*j+2)
-                f.write(i["num2"].to_bytes(2, "little"))
+                f.write(give(i["num2"], 2))
                 f.seek(103587+63*j+12)
-                f.write(i["equipment"].to_bytes(4, "little"))
+                f.write(give(i["equipment"], 4))
                 f.seek(103587+63*j+24)
-                f.write(i["order"].to_bytes(4, "little"))
+                f.write(give(i["order"], 4))
                 f.seek(103587+63*j+36)
-                f.write(i["amount"].to_bytes(2, "little"))
+                f.write(give(i["amount"], 2))
                 f.seek(103587+63*j+46)
-                f.write(i["used"].to_bytes(1, "little"))
+                f.write(give(i["used"]))
 
                 j+=1
 

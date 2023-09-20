@@ -1,3 +1,5 @@
+https://tcrf.net/Category:Yo-kai_Watch_series
+
 important = 6480
 yokai = 7696
 medallium = 1476
@@ -24,3 +26,357 @@ ev: max=hp+str+spr+def+spd=20?
 affection is related to when a yokai gets a stat increase. based on number of battles fought & exporbs used. don't have to worry about this since we can manually edit stats. max = 300
 
 TODO test maxes
+
+
+
+
+
+
+
+
+
+
+y001000	Whisper
+y001001	Whisper
+y006000	Pandle
+y011000	Pandle
+y011500	Pandull (Criminal)
+y012000	Undy
+y014000	Tanbo
+y016000	D'wanna
+y017000	N'more
+y019000	Q'wit
+y021000	Mochismo
+y021500	Mochisless (Criminal)
+y022000	Minochi
+y031000	Cutta-nah
+y032000	Cutta-nah-nah
+y034000	Slacka-slash
+y041000	Chansin
+y041500	Chaninverse (Criminal)
+y042000	Sheen
+y042500	Shin (Criminal)
+y043000	Snee
+y044000	Gleam
+y051000	Helmsman
+y052000	Reuknight
+y052500	Fi-knight (Criminal)
+y053000	Corptain
+y061000	Blazion
+y061500	Blazioff (Criminal)
+y062000	Quaken
+y063000	Siro
+y071000	Beetler
+y071500	Cheatler (Criminal)
+y072000	Beetall
+y073000	Cruncha
+y081000	Benkei
+y082000	B3-NK1
+y091000	Zerberker
+y091500	Zeroberker (Criminal)
+y092000	Snartle
+y101000	Snotsolong
+y102000	Duchoo
+y106000	Espy
+y106500	Falspy (Criminal)
+y107000	Infour
+y111000	Wazzat
+y111500	Recap (Criminal)
+y112000	Dummkap
+y121000	Lafalotta
+y122000	Blips
+y126000	Sushiyama
+y126500	Sushinoma (Criminal)
+y127000	Kapunki
+y131000	Cupistol
+y131500	Impistol (Criminal)
+y132000	Casanuva
+y134000	Casanono
+y141000	Tattletell
+y141500	Tattletwin (Criminal)
+y142000	Tattlecast
+y143000	Skranny
+y151000	Baku
+y152000	Whapir
+y161000	Signibble
+y162000	Signiton
+y164000	Statiking
+y171000	Mirapo
+y172000	Mircle
+y181000	Illoo
+y181500	Illow (Criminal)
+y182000	Elloo
+y183000	Alloo
+y191000	Frostina
+y191500	Falsina (Criminal)
+y192000	Blizzaria
+y193000	Damona
+y201000	Kyubi
+y202000	Frostail
+y211000	Dulluma
+y212000	Darumacho
+y214000	Goruma
+y221000	Coughkoff
+y222000	Hurchin
+y231000	Dazzabel
+y231500	Dullabel (Criminal)
+y232000	Rattelle
+y234000	Skelebella
+y241000	Noway
+y242000	Impass
+y244000	Walldin
+y251000	Blowkade
+y252000	Ledballoon
+y261000	Armsman
+y271000	Mad Mountain
+y272000	Lava Lord
+y281000	Rhinoggin
+y281500	Rhinopposite (Criminal)
+y282000	Rhinormous
+y283000	Hornaplenty
+y293000	Castelius III
+y294000	Castelius II
+y295000	Castelius I
+y295500	Castelilose (Criminal)
+y296000	Castelius Max
+y301000	Dromp
+y302000	Swosh
+y311000	Cadin
+y311500	Cadout (Criminal)
+y312000	Cadable
+y314000	Singcada
+y321000	Buhu
+y321500	Buher (Criminal)
+y322000	Flumpy
+y323000	Skreek
+y331000	Jibanyan
+y331500	Doppelnyan
+y332000	Thornyan
+y333000	Baddinyan
+y334000	Robonyan
+y335000	Goldenyan
+y336000	Dianyan
+y337000	Sapphinyan
+y338000	Emenyan
+y339000	Rubinyan
+y340000	Topanyan
+y341000	Walkappa
+y341500	Watkappa (Criminal)
+y342000	Appak
+y342500	Pakka (Criminal)
+y343000	Supyo
+y351000	Komasan
+y351500	Komasham (Criminal)
+y352000	Komane
+y352500	Koshame (Criminal)
+y353000	Komajiro
+y354000	Komiger
+y361000	Daiz
+y361500	Daizn't (Criminal)
+y362000	Confuze
+y371000	Pupsicle
+y372000	Chilhuahua
+y372500	Fussky (Criminal)
+y373000	Swelterrier
+y381000	Fidgephant
+y382000	Touphant
+y391000	Rollen
+y392000	Dubbles
+y401000	Tengu
+y401500	Zerogu (Criminal)
+y402000	Flengu
+y411000	Hungramps
+y411500	Fullgramps (Criminal)
+y412000	Hungorge
+y413000	Grainpa
+y421000	Manjimutt
+y421500	Manjimitate (Criminal)
+y422000	Multimutt
+y424000	Sir Berus
+y431000	Heheheel
+y431500	Conger (Criminal)
+y432000	Croonger
+y433000	Urnaconda
+y441000	Enerfly
+y441500	Enofly (Criminal)
+y442000	Enefly
+y443000	Betterfly
+y444000	Peppillon
+y451000	Wiglin
+y451500	Trippa (Criminal)
+y452000	Steppa
+y453000	Rhyth
+y461000	Shmoopie
+y461500	Whoopie (Criminal)
+y462000	Pinkipoo
+y463000	Pookivil
+y471000	Happierre
+y472000	Reversa
+y473000	Reversette
+y481000	Ol' Saint Trick
+y481500	Ol' Slap Stick (Criminal)
+y482000	Ol' Fortune
+y491000	Mama Aura
+y492000	Auntie Heart
+y501000	Papa Bolt
+y501500	Papa Dolt (Criminal)
+y502000	Uncle Infinite
+y511000	Ake
+y512000	Payn
+y514000	Agon
+y521000	Negatibuzz
+y521500	Negatibuzz-kill (Criminal)
+y522000	Moskevil
+y524000	Scritchy
+y531000	Leadoni
+y532000	Mynimo
+y541000	Peckpocket
+y542000	Rockabelly
+y551000	Chatalie
+y552000	Nagatha
+y560000	Bruff
+y561000	Roughraff
+y561500	Roughraffony (Criminal)
+y562000	Badude
+y571000	Negasus
+y571500	Bogusus (Criminal)
+y572000	Neighfarious
+y581000	Grumples
+y581500	Grimples (Criminal)
+y582000	Everfore
+y582500	Neverfore (Criminal)
+y583000	Eterna
+y591000	Cheeksqueek
+y592000	Cuttincheez
+y601000	Compunzer
+y601500	Blamedian (Criminal)
+y602000	Lamedian
+y611000	Insomni
+y611500	Apni (Criminal)
+y612000	Sandi
+y621000	Dimmy
+y622000	Blandon
+y623000	Nul
+y631000	Droplette
+y632000	Drizzle
+y633000	Slush
+y634000	Alhail
+y635000	Gush
+y641000	Dismarelda
+y642000	Dismarelda
+y651000	Wantston
+y652000	Grubsnitch
+y661000	Hidabat
+y662000	Abodabat
+y663000	Belfree
+y670000	Chippa
+y671000	Lodo
+y671500	Lodon't (Criminal)
+y680000	Nird
+y681000	Tengloom
+y681500	Fouwl (Criminal)
+y691000	Suspicioni
+y692000	Tantroni
+y693000	Contrarioni
+y701000	Timidevil
+y701500	Mimicevil (Criminal)
+y702000	Beelzebold
+y703000	Count Cavity
+y711000	Greesel
+y711500	Geezel (Criminal)
+y712000	Awevil
+y721000	Noko
+y721500	Nogo (Criminal)
+y722000	Bloominoko
+y723000	Pandanoko
+y731000	Draggie
+y731500	Shaggie (Criminal)
+y732000	Dragon Lord
+y733000	Azure Dragon
+y741000	Fishpicable
+y742000	Rageon
+y744000	Tunatic
+y751000	Chummer
+y751500	Bummer (Criminal)
+y752000	Shrook
+y760000	Almi
+y761000	Spenp
+y761500	Sdend (Criminal)
+y771000	Babblong
+y772000	Bananose
+y781000	Copperled
+y781500	Copyled (Criminal)
+y782000	Slitheref
+y783000	Slitheref
+y791000	Venoct
+y791001	Venoct (Cutscene)
+y792000	Shad. Venoct
+y801000	Shogunyan
+y806000	Komashura
+y811000	Dandoodle
+y816000	Elder Bloom
+y821000	Gilgaros
+y831000	Reuknight (White Final Chapter)
+y832000	Kapunki (White Final Chapter)
+y833000	Impass (White Final Chapter)
+y834000	Badude (White Final Chapter)
+y835000	Komane (White Final Chapter)
+y836000	Shmoopie (White Final Chapter)
+y837000	Compunzer (White Final Chapter)
+y838000	Multimutt (White Final Chapter)
+y839000	Reversa (White Final Chapter)
+y840000	Rollen (White Final Chapter)
+y841000	Timidevil (White Final Chapter)
+y842000	Abodabat (White Final Chapter)
+y843000	Copperled (White Final Chapter)
+y851000	Slimamander (Bottom)
+y852000	Slimamander (Top 1)
+y853000	Slimamander (Top 2)
+y854000	Slimamander (Top 3)
+y861000	Eyedra
+y862000	Eyedra (Top 1)
+y863000	Eyedra (Top 2)
+y864000	Eyedra (Top 3)
+y871000	Sproink
+y872000	Wiglin (BG Sproink Battle)
+y873000	Old Man (BG Sproink Battle)
+y876000	Hoggles
+y877000	Wiglin (BG Sproink Battle)
+y878000	Old Man (BG Sproink Battle)
+y881000	SV Snaggerjag
+y882000	SV Snaggerjag Fish (Brown)
+y883000	SV Snaggerjag Fish (Red)
+y884000	SV Snaggerjag Fish (Green)
+y885000	SV Snaggerjag Fish (Blue)
+y886000	Styx Mk.VI
+y887000	Styx Mk.VI Fish (Yellow)
+y888000	Styx Mk.VI Fish (Red)
+y889000	Styx Mk.VI Fish (Green)
+y890000	Styx Mk.VI Fish (Blue)
+y891000	Massiface
+y896000	Clipso
+y901000	Phantasmurai
+y902000	Phantasmurai (Mouse)
+y906000	Spooklunk
+y907000	Spooklunk (Mouse)
+y916000	Tarantutor
+y921000	Dr. Maddiman
+y922000	Dr. Maddiman (Heart)
+y926000	Dr. Nogut
+y927000	Dr. Nogut (Heart)
+y941000	McKraken
+y942000	McKraken (Tentacle 1)
+y943000	McKraken (Tentacle 2)
+y944000	McKraken (Tentacle 3)
+y945000	McKraken (Tentacle 4)
+y946000	McKraken (Tentacle 5)
+y951000	McKraken (2nd Form)
+y956000	Squisker
+y961000	Wobblewok
+y971000	Duwheel
+y976000	Chirpster
+y977000	Chirpster (Big Box)
+y978000	Chirpster (Lil’Box)
+y991000	Gargaros
+y992000	Ogralus
+y993000	Orcanos

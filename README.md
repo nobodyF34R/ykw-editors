@@ -3,19 +3,20 @@
 
 ## Legend
 
-my-tools: some python scripts i made
+my-editors: work in progress python editors
+
+my-tools: python scripts for togenyan's editors
 
 compiled: all the editors in exe form
 
-save-tools: decrypt and encrypt yokai watch saves
+save-tools: decrypt and encrypt yokai watch saves manually
 
 source-code: all the editors' code
 
 
 ## Important
 
-MSVCP120.dll error fix: https://www.microsoft.com/en-us/download/details.aspx?id=40784
-(choose vcredist_x86.exe)
+MSVCP120.dll error fix: https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x86.exe
 
 
 ## Credits
@@ -37,7 +38,7 @@ RSM for 4 decompilation
 
 The MIT License (MIT)
 
-Copyright (c) 2016 togenyan
+Copyright (c) 2016 togenyan, Emilia
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -5,7 +5,7 @@ Savedata editor for Yo-kai Watch
 Usage
 1. Dump the savedata with svdt or something does the same thing.
 2. Launch this app and open game*.yw.
-3. Edit. Do not forget press "Apply" button.
+3. Edit. Do not forget to press the "Apply" button.
 4. Save game*.yw.
 5. Inject it.
 

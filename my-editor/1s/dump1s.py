@@ -60,12 +60,22 @@ def get(read, place, length=1, integer=True, half=False):
                 finished += chr(i)
             return finished.encode('latin-1').decode('utf-8')
 
-def give(floa): #some shenanigans to convert a float to bytes
-    if floa == 0: return b"\x00"*4
-    e = 0
-    while floa >= 2: floa, e = floa / 2, e + 1
-    while floa < 1: floa, e = floa * 2, e - 1
-    return (0 | (e + 127) << 23 | int((floa - 1) * (2**23))).to_bytes(4, 'little')
+def give(write, length=1, integer=True, half=False):
+    if half == True:
+        return int(f'{write[0]:04b}'+f'{write[1]:04b}', 2).to_bytes(1, 'little')
+    elif half == None: #medallium
+        return bytearray([int(''.join('1' if bit else '0' for bit in write[i:i+8][::-1]), 2) for i in range(0, length, 8)])
+    else:
+        if integer == True: #int
+            return write.to_bytes(length, "little")
+        elif integer == None: #float
+            if write == 0: return b"\x00"*length  #some shenanigans to convert a float to bytes ONLY TESTED ON LENGTH 4
+            e = 0
+            while write >= 2: write, e = write / 2, e + 1
+            while write < 1: write, e = write * 2, e - 1
+            return (0 | (e + 127) << 23 | int((write - 1) * (2**23))).to_bytes(length, 'little')
+        else: #string
+            return (bytearray(write.encode('utf-8'))+bytearray(length))[:length]
 
 
 def edit_yokai(yokailist, index, yokai=None, attitude=None, nickname=None, iv=None, ev=None): #massively overcomplicated and broken simultaneously 
@@ -97,9 +107,9 @@ def edit_yokai(yokailist, index, yokai=None, attitude=None, nickname=None, iv=No
         yokailist[index]["num2"]+=(j-location)
     if yokai != None:
         try:
-            yokailist[index]["id"] = reverse_yokais[yokai]
+            yokailist[index]["yokai"] = reverse_yokais[yokai]
         except:
-            yokailist[index]["id"] = yokai
+            yokailist[index]["yokai"] = yokai
     try:
         yokailist[index]["nickname"] = yokailist[index]["nickname"]
     except:
@@ -122,11 +132,11 @@ def edit_yokai(yokailist, index, yokai=None, attitude=None, nickname=None, iv=No
             ev = [4,4,4,4,4]
     
     yokailist[index]["stats"] = { #hp must be even
-        "tiv_hp": tivs[yokailist[index]["id"]][0], 
-        "tiv_str": tivs[yokailist[index]["id"]][1], 
-        "tiv_spr": tivs[yokailist[index]["id"]][2], 
-        "tiv_def": tivs[yokailist[index]["id"]][3], 
-        "tiv_spd": tivs[yokailist[index]["id"]][4], 
+        "tiv_hp": tivs[yokailist[index]["yokai"]][0], 
+        "tiv_str": tivs[yokailist[index]["yokai"]][1], 
+        "tiv_spr": tivs[yokailist[index]["yokai"]][2], 
+        "tiv_def": tivs[yokailist[index]["yokai"]][3], 
+        "tiv_spd": tivs[yokailist[index]["yokai"]][4], 
         "iv1_hp": iv[0], #sums to 10
         "iv1_str": iv[1], 
         "iv1_spr": iv[2], 
@@ -156,7 +166,7 @@ def edit_yokai(yokailist, index, yokai=None, attitude=None, nickname=None, iv=No
 
     return sorted(yokailist, key=lambda x:x["num1"])
 
-def edit_item(itemlist, index, item=None, amount=None): #broken for some reason
+def edit_item(itemlist, index, item=None, amount=None):
     try:
         if index < 0:
             index = len(itemlist)-index #appending shortcut
@@ -228,6 +238,16 @@ def main(file, edit):
         import io
         file = io.BytesIO(file)
     with file as f:
+        # for i in range(81):
+        #     f.seek(i+20) #misc
+        #     pos = [get(f.read(4),0,4), get(f.read(4),0,4), get(f.read(4),0,4)] #x,y,z
+        #     if 0 not in pos:
+        #         print(i+20, pos)
+        f.seek(112)
+        location = get(f.read(7),0,7)
+        f.seek(37620)
+        money = get(f.read(4),0,4)
+        
         yokailist = []
         index = 0
         f.seek(7696) #1 yokai takes up 124 bytes.
@@ -239,7 +259,7 @@ def main(file, edit):
             yokailist.append({ #some of these might take 2 bytes instead of 1
                 "num1": get(yokai, 0, 2), #0 starts from 0
                 "num2": get(yokai, 2, 2), #2
-                "id": get(yokai, 4, 4), #4-07
+                "yokai": get(yokai, 4, 4), #4-07
                 "nickname": get(yokai, 8, 68, False), #8-76 maybe broken
                 "attack": get(yokai, 78),
                 "technique": get(yokai, 82),
@@ -349,17 +369,27 @@ def main(file, edit):
 
         #write everything back to file
         if 1:
+            #misc
+            # f.seek(20)
+            # f.write(give(position[0], 4))
+            # f.write(give(position[1], 4))
+            # f.write(give(position[2], 4))
+            f.seek(112)
+            f.write(give(location, 7))
+            f.seek(37620)
+            f.write(give(money, 4))
+
             #write items back
             j=0
             for i in itemlist:
                 f.seek(1784+12*j)
-                f.write(i["num1"].to_bytes(2, "little")) 
+                f.write(give(i["num1"], 2)) 
                 f.seek(1784+12*j+2)
-                f.write(i["num2"].to_bytes(2, "little"))
+                f.write(give(i["num2"], 2))
                 f.seek(1784+12*j+4)
-                f.write(i["item"].to_bytes(4, "little"))
+                f.write(give(i["item"], 4))
                 f.seek(1784+12*j+8)
-                f.write(i["amount"].to_bytes(4, "little"))
+                f.write(give(i["amount"], 4))
                 j+=1
             
             #clear item overflow
@@ -371,15 +401,15 @@ def main(file, edit):
             j=0
             for i in equipmentlist:
                 f.seek(4868+16*j)
-                f.write(i["num1"].to_bytes(2, "little"))
+                f.write(give(i["num1"], 2))
                 f.seek(4868+16*j+2)
-                f.write(i["num2"].to_bytes(2, "little"))
+                f.write(give(i["num2"], 2))
                 f.seek(4868+16*j+4)
-                f.write(i["equipment"].to_bytes(4, "little"))
+                f.write(give(i["equipment"], 4))
                 f.seek(4868+16*j+8)
-                f.write(i["amount"].to_bytes(4, "little"))
+                f.write(give(i["amount"], 4))
                 f.seek(4868+16*j+12)
-                f.write(i["used"].to_bytes(4, "little"))
+                f.write(give(i["used"], 4))
                 j+=1
 
             #clear equipment overflow
@@ -391,11 +421,11 @@ def main(file, edit):
             j=0
             for i in importantlist:
                 f.seek(6480+8*j)
-                f.write(i["num1"].to_bytes(2, "little"))
+                f.write(give(i["num1"], 2))
                 f.seek(6480+8*j+2)
-                f.write(i["num2"].to_bytes(2, "little"))
+                f.write(give(i["num2"], 2))
                 f.seek(6480+8*j+4)
-                f.write(i["important"].to_bytes(4, "little"))
+                f.write(give(i["important"], 4))
                 j+=1
 
             #clear important overflow
@@ -407,55 +437,55 @@ def main(file, edit):
             j=0
             for i in yokailist:
                 f.seek(7696+124*j)
-                f.write(i["num1"].to_bytes(2, "little"))
+                f.write(give(i["num1"], 2))
                 f.seek(7696+124*j+2)
-                f.write(i["num2"].to_bytes(2, "little"))
+                f.write(give(i["num2"], 2))
                 f.seek(7696+124*j+4)
-                f.write(i["id"].to_bytes(4, "little"))
+                f.write(give(i["yokai"], 4))
                 f.seek(7696+124*j+8)
-                f.write((bytearray(list(i["nickname"].encode('utf-8')))+bytearray(60))[:60])
+                f.write(give(i["nickname"], 60, False))
                 f.seek(7696+124*j+78)
-                f.write(i["attack"].to_bytes(1, "little"))
+                f.write(give(i["attack"]))
                 f.seek(7696+124*j+82)
-                f.write(i["technique"].to_bytes(1, "little"))
+                f.write(give(i["technique"]))
                 f.seek(7696+124*j+86)
-                f.write(i["soultimate"].to_bytes(1, "little"))
+                f.write(give(i["soultimate"]))
 
                 f.seek(7696+124*j+96)
-                f.write(i["stats"]["tiv_hp"].to_bytes(1, "little"))
+                f.write(give(i["stats"]["tiv_hp"]))
                 f.seek(7696+124*j+97)
-                f.write(i["stats"]["tiv_str"].to_bytes(1, "little"))
+                f.write(give(i["stats"]["tiv_str"]))
                 f.seek(7696+124*j+98)
-                f.write(i["stats"]["tiv_spr"].to_bytes(1, "little"))
+                f.write(give(i["stats"]["tiv_spr"]))
                 f.seek(7696+124*j+99)
-                f.write(i["stats"]["tiv_def"].to_bytes(1, "little"))
+                f.write(give(i["stats"]["tiv_def"]))
                 f.seek(7696+124*j+100)
-                f.write(i["stats"]["tiv_spd"].to_bytes(1, "little"))
+                f.write(give(i["stats"]["tiv_spd"]))
                 f.seek(7696+124*j+101)
-                f.write(int(f'{i["stats"]["iv1_hp"]:04b}'+f'{i["stats"]["iv2_hp"]:04b}', 2).to_bytes(1, "little")) #sloppy. TODO add stuff like this to the give function
+                f.write(give([i["stats"]["iv1_hp"], i["stats"]["iv2_hp"]], half=True)) #sloppy. TODO add stuff like this to the give function
                 f.seek(7696+124*j+102)
-                f.write(int(f'{i["stats"]["iv1_str"]:04b}'+f'{i["stats"]["iv2_str"]:04b}', 2).to_bytes(1, "little"))
+                f.write(give([i["stats"]["iv1_str"], i["stats"]["iv2_str"]], half=True))
                 f.seek(7696+124*j+103)
-                f.write(int(f'{i["stats"]["iv1_spr"]:04b}'+f'{i["stats"]["iv2_spr"]:04b}', 2).to_bytes(1, "little"))
+                f.write(give([i["stats"]["iv1_spr"], i["stats"]["iv2_spr"]], half=True))
                 f.seek(7696+124*j+104)
-                f.write(int(f'{i["stats"]["iv1_def"]:04b}'+f'{i["stats"]["iv2_def"]:04b}', 2).to_bytes(1, "little"))
+                f.write(give([i["stats"]["iv1_def"], i["stats"]["iv2_def"]], half=True))
                 f.seek(7696+124*j+105)
-                f.write(int(f'{i["stats"]["iv1_spd"]:04b}'+f'{i["stats"]["iv2_spd"]:04b}', 2).to_bytes(1, "little"))
+                f.write(give([i["stats"]["iv1_spd"], i["stats"]["iv2_spd"]], half=True))
                 f.seek(7696+124*j+106)
-                f.write(i["stats"]["ev_hp"].to_bytes(1, "little"))
+                f.write(give(i["stats"]["ev_hp"]))
                 f.seek(7696+124*j+107)
-                f.write(i["stats"]["ev_str"].to_bytes(1, "little"))
+                f.write(give(i["stats"]["ev_str"]))
                 f.seek(7696+124*j+108)
-                f.write(i["stats"]["ev_spr"].to_bytes(1, "little"))
+                f.write(give(i["stats"]["ev_spr"]))
                 f.seek(7696+124*j+109)
-                f.write(i["stats"]["ev_def"].to_bytes(1, "little"))
+                f.write(give(i["stats"]["ev_def"]))
                 f.seek(7696+124*j+110)
-                f.write(i["stats"]["ev_spd"].to_bytes(1, "little"))
+                f.write(give(i["stats"]["ev_spd"]))
 
                 f.seek(7696+124*j+116)
-                f.write(i["level"].to_bytes(1, "little"))
+                f.write(give(i["level"]))
                 f.seek(7696+124*j+117)
-                f.write(i["attitude"].to_bytes(1, "little"))
+                f.write(give(i["attitude"]))
                 # TODO more when i figure it out
                 j+=1
 
@@ -466,13 +496,13 @@ def main(file, edit):
 
             #write medallium back
             f.seek(1476) # seen
-            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[0][i:i+8][::-1]), 2) for i in range(0, 256, 8)]))
+            f.write(give(medalliumlist[0], 256, half=None))
             f.seek(1508) # befriended
-            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[1][i:i+8][::-1]), 2) for i in range(0, 256, 8)]))
+            f.write(give(medalliumlist[1], 256, half=None))
             f.seek(1540) # new
-            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[2][i:i+8][::-1]), 2) for i in range(0, 256, 8)]))
+            f.write(give(medalliumlist[2], 256, half=None))
             f.seek(1572) # camera
-            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[3][i:i+8][::-1]), 2) for i in range(0, 256, 8)]))
+            f.write(give(medalliumlist[3], 256, half=None))
 
         f.seek(0)
         return f.read() #for the .yw files

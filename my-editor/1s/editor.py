@@ -1,16 +1,17 @@
 from dump1s import * #get specific ids from data.py
 
 separator = "/" # or "\\" on windows
+
+infile = "/Volumes/UNTITLED/switch/Checkpoint/saves/0x0100C0000CEEA000 0x0100C0000CEEA000/temp/game1.yw" #on windows change any "/" or "\" into "\\"
 infile = "/Users/emilia/Documents/dev/ykw/20230716-140104 XAW7/new.ywd"
-#infile = "/Volumes/UNTITLED/switch/Checkpoint/saves/0x0100C0000CEEA000 0x0100C0000CEEA000/temp/game1.yw"
 
 def edit(yokailist, itemlist, equipmentlist, importantlist, medalliumlist):
     #helper functions defined in dump1s.py
     for i in range(len(yokailist)):
-        edit_yokai(yokailist, i)  #max stats
+        yokailist = edit_yokai(yokailist, i)  #max stats
 
 
-    print(", ".join([yokais[i["id"]]for i in yokailist]))
+    print(", ".join([yokais[i["yokai"]]for i in yokailist]))
     print(", ".join([items[i["item"]]for i in itemlist]))
     print(", ".join([equipments[i["equipment"]]for i in equipmentlist]))
     print(", ".join([importants[i["important"]]for i in importantlist]))

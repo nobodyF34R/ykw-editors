@@ -60,12 +60,22 @@ def get(read, place, length=1, integer=True, half=False):
                 finished += chr(i)
             return finished
 
-def give(floa): #some shenanigans to convert a float to bytes
-    if floa == 0: return b"\x00"*4
-    e = 0
-    while floa >= 2: floa, e = floa / 2, e + 1
-    while floa < 1: floa, e = floa * 2, e - 1
-    return (0 | (e + 127) << 23 | int((floa - 1) * (2**23))).to_bytes(4, 'little')
+def give(write, length=1, integer=True, half=False):
+    if half == True:
+        return int(f'{write[0]:04b}'+f'{write[1]:04b}', 2).to_bytes(1, 'little')
+    elif half == None: #medallium
+        return bytearray([int(''.join('1' if bit else '0' for bit in write[i:i+8][::-1]), 2) for i in range(0, length, 8)])
+    else:
+        if integer == True: #int
+            return write.to_bytes(length, "little")
+        elif integer == None: #float
+            if write == 0: return b"\x00"*length  #some shenanigans to convert a float to bytes ONLY TESTED ON LENGTH 4
+            e = 0
+            while write >= 2: write, e = write / 2, e + 1
+            while write < 1: write, e = write * 2, e - 1
+            return (0 | (e + 127) << 23 | int((write - 1) * (2**23))).to_bytes(length, 'little')
+        else: #string
+            return (bytearray(write.encode('utf-8'))+bytearray(length))[:length]
 
 
 def edit_yokai(yokailist, index, ownerid, yokai=None, attitude=None, nickname=None, iv=None, ev=None): #massively overcomplicated and broken simultaneously 
@@ -97,9 +107,9 @@ def edit_yokai(yokailist, index, ownerid, yokai=None, attitude=None, nickname=No
         yokailist[index]["num2"]+=(j-location)
     if yokai != None:
         try:
-            yokailist[index]["id"] = reverse_yokais[yokai]
+            yokailist[index]["yokai"] = reverse_yokais[yokai]
         except:
-            yokailist[index]["id"] = yokai
+            yokailist[index]["yokai"] = yokai
     try:
         yokailist[index]["nickname"] = yokailist[index]["nickname"]
     except:
@@ -328,7 +338,12 @@ def main(file, edit): #TODO fix yokai.
         import io
         file = io.BytesIO(file)
     with file as f:
-        #money offset: 67808
+        # f.seek(20) #misc
+        # position = [get(f.read(4),0,4), get(f.read(4),0,4), get(f.read(4),0,4)] #x,y,z
+        # f.seek(72)
+        # location = get(f.read(8),0,8)
+        f.seek(67808)
+        money = get(f.read(4),0,4)
 
         yokailist = []
         index = 0
@@ -341,7 +356,7 @@ def main(file, edit): #TODO fix yokai.
             yokailist.append({
                 "num1": get(yokai, 0, 2), #0 starts from 0
                 "num2": get(yokai, 2, 2), #2
-                "id": get(yokai, 4, 4), #4-07
+                "yokai": get(yokai, 4, 4), #4-07
                 "nickname": get(yokai, 8, 24, False), #8-32 maybe broken
                 "attack": get(yokai, 42), #42
                 "technique": get(yokai, 46), #46
@@ -600,17 +615,19 @@ def main(file, edit): #TODO fix yokai.
 
         #write everything back to file
         if 1:
+            f.seek(67808)
+            f.write(give(money, 4))
             #write items back
             j=0
             for i in itemlist:
                 f.seek(offset+12*j)
-                f.write(i["num1"].to_bytes(2, "little")) 
+                f.write(give(i["num1"], 2)) 
                 f.seek(offset+12*j+2)
-                f.write(i["num2"].to_bytes(2, "little"))
+                f.write(give(i["num2"], 2))
                 f.seek(offset+12*j+4)
-                f.write(i["item"].to_bytes(4, "little"))
+                f.write(give(i["item"], 4))
                 f.seek(offset+12*j+8)
-                f.write(i["amount"].to_bytes(4, "little"))
+                f.write(give(i["amount"], 4))
                 j+=1
             
             #clear item overflow
@@ -622,15 +639,15 @@ def main(file, edit): #TODO fix yokai.
             j=0
             for i in equipmentlist:
                 f.seek(offset+5172+16*j)
-                f.write(i["num1"].to_bytes(2, "little"))
+                f.write(give(i["num1"], 2))
                 f.seek(offset+5172+16*j+2)
-                f.write(i["num2"].to_bytes(2, "little"))
+                f.write(give(i["num2"], 2))
                 f.seek(offset+5172+16*j+4)
-                f.write(i["equipment"].to_bytes(4, "little"))
+                f.write(give(i["equipment"], 4))
                 f.seek(offset+5172+16*j+8)
-                f.write(i["amount"].to_bytes(4, "little"))
+                f.write(give(i["amount"], 4))
                 f.seek(offset+5172+16*j+12)
-                f.write(i["used"].to_bytes(4, "little"))
+                f.write(give(i["used"], 4))
                 j+=1
 
             #clear equipment overflow
@@ -642,11 +659,11 @@ def main(file, edit): #TODO fix yokai.
             j=0
             for i in importantlist:
                 f.seek(offset+6624+8*j)
-                f.write(i["num1"].to_bytes(2, "little"))
+                f.write(give(i["num1"], 2))
                 f.seek(offset+6624+8*j+2)
-                f.write(i["num2"].to_bytes(2, "little"))
+                f.write(give(i["num2"], 2))
                 f.seek(offset+6624+8*j+4)
-                f.write(i["important"].to_bytes(4, "little"))
+                f.write(give(i["important"], 4))
                 j+=1
 
             #clear important overflow
@@ -658,17 +675,17 @@ def main(file, edit): #TODO fix yokai.
             j=0
             for i in soullist:
                 f.seek(offset+8076+12*j)
-                f.write(i["num1"].to_bytes(2, "little"))
+                f.write(give(i["num1"], 2))
                 f.seek(offset+8076+12*j+2)
-                f.write(i["num2"].to_bytes(2, "little"))
+                f.write(give(i["num2"], 2))
                 f.seek(offset+8076+12*j+4)
-                f.write(i["soul"].to_bytes(4, "little"))
+                f.write(give(i["soul"], 4))
                 f.seek(offset+8076+12*j+8)
-                f.write(i["xp"].to_bytes(2, "little"))
+                f.write(give(i["xp"], 2))
                 f.seek(offset+8076+12*j+10)
-                f.write(i["level"].to_bytes(1, "little"))
+                f.write(give(i["level"]))
                 f.seek(offset+8076+12*j+11)
-                f.write(i["used"].to_bytes(1, "little"))
+                f.write(give(i["used"]))
                 j+=1
 
             #clear soul overflow
@@ -680,32 +697,32 @@ def main(file, edit): #TODO fix yokai.
             j=0
             for i in yokailist:
                 f.seek(20744+92*j)
-                f.write(i["num1"].to_bytes(2, "little"))
+                f.write(give(i["num1"], 2))
                 f.seek(20744+92*j+2)
-                f.write(i["num2"].to_bytes(2, "little"))
+                f.write(give(i["num2"], 2))
                 f.seek(20744+92*j+4)
-                f.write(i["id"].to_bytes(4, "little"))
+                f.write(give(i["yokai"], 4))
                 f.seek(20744+92*j+8)
-                f.write((bytearray([ord(k)for k in i["nickname"]])+bytearray(24))[:24]) # to be more accurate to game could just append with trailing 00
+                f.write(give(i["nickname"], 24, False)) # to be more accurate to game could just append with trailing 00
                 f.seek(20744+92*j+42)
-                f.write(i["attack"].to_bytes(1, "little"))
+                f.write(give(i["attack"]))
                 f.seek(20744+92*j+46)
-                f.write(i["technique"].to_bytes(1, "little"))
+                f.write(give(i["technique"]))
                 f.seek(20744+92*j+50)
-                f.write(i["soultimate"].to_bytes(1, "little"))
+                f.write(give(i["soultimate"]))
                 f.seek(20744+92*j+52)
-                f.write(i["xp"].to_bytes(4, "little"))
+                f.write(give(i["xp"], 4))
                 f.seek(20744+92*j+60)
-                f.write(i["ownerid"].to_bytes(4, "little"))
+                f.write(give(i["ownerid"], 4))
                 statnum = 64
                 for stat in i["stats"]:
                     f.seek(20744+92*j+statnum)
-                    f.write(i["stats"][stat].to_bytes(1, "little"))
+                    f.write(give(i["stats"][stat]))
                     statnum +=1
                 f.seek(20744+92*j+79)
-                f.write(i["level"].to_bytes(1, "little"))
+                f.write(give(i["level"]))
                 f.seek(20744+92*j+84)
-                f.write(int(f'{i["loaflevel"]:04b}'+f'{i["attitude"]:04b}', 2).to_bytes(1, "little"))
+                f.write(give([i["loaflevel"], i["attitude"]], half=True))
                 j+=1
 
             #clear yokai overflow
@@ -715,89 +732,89 @@ def main(file, edit): #TODO fix yokai.
 
             #write profile back (the beginning part of your contact list)
             f.seek(unknown)
-            f.write(profile["ownerid"].to_bytes(4, "little"))
-            f.write((bytearray([ord(k)for k in profile["comment"]])+bytearray(64))[:64])
-            f.write(profile["favourite"].to_bytes(4, "little"))
-            f.write(profile["bronze"].to_bytes(1, "little"))
-            f.write(profile["silver"].to_bytes(1, "little"))
-            f.write(profile["gold"].to_bytes(1, "little"))
-            f.write(profile["game"].to_bytes(1, "little"))
-            f.write(int(profile["playtime"]*3600).to_bytes(3, "little")) #may cause problems
+            f.write(give(profile["ownerid"], 4))
+            f.write(give(profile["comment"], 64, False))
+            f.write(give(profile["favourite"], 4))
+            f.write(give(profile["bronze"]))
+            f.write(give(profile["silver"]))
+            f.write(give(profile["gold"]))
+            f.write(give(profile["game"]))
+            f.write(give(int(profile["playtime"]*3600), 3)) #may cause problems
             f.seek(unknown+80)
-            f.write(profile["tunnel"].to_bytes(4, "little"))
-            f.write(profile["face"].to_bytes(4, "little"))
-            f.write(profile["hq"].to_bytes(1, "little"))
-            f.write(profile["job"].to_bytes(1, "little"))
-            f.write(profile["hobby"].to_bytes(1, "little"))
-            f.write(profile["ambition"].to_bytes(1, "little"))
+            f.write(give(profile["tunnel"], 4))
+            f.write(give(profile["face"], 4))
+            f.write(give(profile["hq"]))
+            f.write(give(profile["job"]))
+            f.write(give(profile["hobby"]))
+            f.write(give(profile["ambition"]))
             f.seek(unknown+93)
             #00 inbetween
-            f.write(profile["requests"].to_bytes(1, "little"))
-            f.write(profile["arrested"].to_bytes(1, "little"))
-            f.write(profile["medallium"].to_bytes(1, "little"))
-            f.write(profile["bugs"].to_bytes(1, "little"))
-            f.write(profile["fish"].to_bytes(1, "little"))
-            f.write(profile["battles"].to_bytes(1, "little"))
+            f.write(give(profile["requests"]))
+            f.write(give(profile["arrested"]))
+            f.write(give(profile["medallium"]))
+            f.write(give(profile["bugs"]))
+            f.write(give(profile["fish"]))
+            f.write(give(profile["battles"]))
             f.seek(unknown+100)
             #something here?
-            f.write(profile["personal"].to_bytes(2, "little")) #may have to rename this
-            f.write(profile["public"].to_bytes(2, "little"))
-            f.write(profile["rankl"].to_bytes(2, "little")) #ffff = master, 0000 = beginner
-            f.write(profile["local"].to_bytes(2, "little"))
-            f.write(profile["rankr"].to_bytes(2, "little")) #120 >= master (maybe less)
-            f.write(profile["random"].to_bytes(2, "little"))
-            f.write(profile["tagged"].to_bytes(2, "little"))
-            f.write(profile["photographs"].to_bytes(2, "little"))
+            f.write(give(profile["personal"], 2)) #may have to rename this
+            f.write(give(profile["public"], 2))
+            f.write(give(profile["rankl"], 2)) #ffff = master, 0000 = beginner
+            f.write(give(profile["local"], 2))
+            f.write(give(profile["rankr"], 2)) #120 >= master (maybe less)
+            f.write(give(profile["random"], 2))
+            f.write(give(profile["tagged"], 2))
+            f.write(give(profile["photographs"], 2))
             for k in profile["yokai"]:
-                f.write(k.to_bytes(4, "little"))
+                f.write(give(k, 4))
             for k in profile["races"]:
-                f.write(give(k))
+                f.write(give(k, 4, None))
 
             #no need to clear profile overflow as it can't be deleted
 
             #write contact back
             j=0
             for i in contactlist:
-                f.write((bytearray([ord(k)for k in i["name"]])+bytearray(25))[:25])
-                f.write(i["starred"].to_bytes(1, "little"))
+                f.write(give(i["name"], 25, False))
+                f.write(give(i["starred"]))
                 f.seek(unknown+156+184*j+28)
-                f.write(i["ownerid"].to_bytes(4, "little"))
-                f.write((bytearray([ord(k)for k in i["comment"]])+bytearray(64))[:64])
-                f.write(i["favourite"].to_bytes(4, "little"))
-                f.write(i["bronze"].to_bytes(1, "little"))
-                f.write(i["silver"].to_bytes(1, "little"))
-                f.write(i["gold"].to_bytes(1, "little"))
-                f.write(i["game"].to_bytes(1, "little"))
-                f.write(int(i["playtime"]*3600).to_bytes(3, "little")) #may cause problems
+                f.write(give(i["ownerid"], 4))
+                f.write(give(i["comment"], 64, False))
+                f.write(give(i["favourite"], 4))
+                f.write(give(i["bronze"]))
+                f.write(give(i["silver"]))
+                f.write(give(i["gold"]))
+                f.write(give(i["game"]))
+                f.write(give(int(i["playtime"]*3600), 3)) #may cause problems
                 f.seek(unknown+156+184*j+108)
-                f.write(i["tunnel"].to_bytes(4, "little"))
-                f.write(i["face"].to_bytes(4, "little"))
-                f.write(i["hq"].to_bytes(1, "little"))
-                f.write(i["job"].to_bytes(1, "little"))
-                f.write(i["hobby"].to_bytes(1, "little"))
-                f.write(i["ambition"].to_bytes(1, "little"))
+                f.write(give(i["tunnel"], 4))
+                f.write(give(i["face"], 4))
+                f.write(give(i["hq"]))
+                f.write(give(i["job"]))
+                f.write(give(i["hobby"]))
+                f.write(give(i["ambition"]))
                 f.seek(unknown+156+184*j+121)
                 #00 inbetween
-                f.write(i["requests"].to_bytes(1, "little"))
-                f.write(i["arrested"].to_bytes(1, "little"))
-                f.write(i["medallium"].to_bytes(1, "little"))
-                f.write(i["bugs"].to_bytes(1, "little"))
-                f.write(i["fish"].to_bytes(1, "little"))
-                f.write(i["battles"].to_bytes(1, "little"))
+                f.write(give(i["requests"]))
+                f.write(give(i["arrested"]))
+                f.write(give(i["medallium"]))
+                f.write(give(i["bugs"]))
+                f.write(give(i["fish"]))
+                f.write(give(i["battles"]))
                 f.seek(unknown+156+184*j+128)
                 #something here?
-                f.write(i["personal"].to_bytes(2, "little"))
-                f.write(i["public"].to_bytes(2, "little"))
-                f.write(i["rankl"].to_bytes(2, "little")) #ffff = master, 0000 = beginner
-                f.write(i["local"].to_bytes(2, "little"))
-                f.write(i["rankr"].to_bytes(2, "little")) #120 >= master (maybe less)
-                f.write(i["random"].to_bytes(2, "little"))
-                f.write(i["tagged"].to_bytes(2, "little"))
-                f.write(i["photographs"].to_bytes(2, "little"))
+                f.write(give(i["personal"], 2))
+                f.write(give(i["public"], 2))
+                f.write(give(i["rankl"], 2)) #ffff = master, 0000 = beginner
+                f.write(give(i["local"], 2))
+                f.write(give(i["rankr"], 2)) #120 >= master (maybe less)
+                f.write(give(i["random"], 2))
+                f.write(give(i["tagged"], 2))
+                f.write(give(i["photographs"], 2))
                 for k in i["yokai"]:
-                    f.write(k.to_bytes(4, "little"))
+                    f.write(give(k, 4))
                 for k in i["races"]:
-                    f.write(give(k))
+                    f.write(give(k, 4, None))
                 j+=1
 
             #clear contact overflow
@@ -807,13 +824,13 @@ def main(file, edit): #TODO fix yokai.
 
             #write medallium back
             f.seek(1460) # seen
-            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[0][i:i+8][::-1]), 2) for i in range(0, 456, 8)]))
+            f.write(give(medalliumlist[0], 456, half=None))
             f.seek(1524) # befriended
-            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[1][i:i+8][::-1]), 2) for i in range(0, 456, 8)]))
+            f.write(give(medalliumlist[1], 456, half=None))
             f.seek(1588) # new
-            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[2][i:i+8][::-1]), 2) for i in range(0, 456, 8)]))
+            f.write(give(medalliumlist[2], 456, half=None))
             f.seek(1652) # camera
-            f.write(bytearray([int(''.join('1' if bit else '0' for bit in medalliumlist[3][i:i+8][::-1]), 2) for i in range(0, 456, 8)]))
+            f.write(give(medalliumlist[3], 456, half=None))
 
             #no need to clear medallium overflow as it can't be deleted
                 

@@ -14,8 +14,8 @@ def edit(position, location, money, namelist, gatcharemaining, gatchamax, charac
         characterlist = edit_yokai(characterlist, i) #max stats
 
 
-    print(", ".join([characters[i["id"]]for i in characterlist]))
-    print(", ".join([characters[i["id"]]for i in yokailist]))
+    print(", ".join([characters[i["character"]]for i in characterlist]))
+    print(", ".join([characters[i["yokai"]]for i in yokailist]))
     print(", ".join([items[i["item"]]for i in itemlist]))
     print(", ".join([equipments[i["equipment"]]for i in equipmentlist]))
     print(locations[location])
