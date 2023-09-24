@@ -5,8 +5,10 @@ separator = "/" # or "\\" on windows
 infile = "/Volumes/UNTITLED/switch/Checkpoint/saves/0x0100C0000CEEA000 0x0100C0000CEEA000/temp/game1.yw" #on windows change any "/" or "\" into "\\"
 infile = "/Users/emilia/Documents/dev/ykw/20230716-140104 XAW7/new.ywd"
 
-def edit(yokailist, itemlist, equipmentlist, importantlist, medalliumlist):
+def edit(time, sun, position, location, money, yokailist, itemlist, equipmentlist, importantlist, medalliumlist):
     #helper functions defined in dump1s.py
+    # position = [0, 0, 4294967295]
+    # location = 13564018647118196
     for i in range(len(yokailist)):
         yokailist = edit_yokai(yokailist, i)  #max stats
 
@@ -33,7 +35,7 @@ def edit(yokailist, itemlist, equipmentlist, importantlist, medalliumlist):
         if medalliumlist[3][i]: # medalliumlist[3][0] should never be true. the boss yokai are just weird i think
             print(indexs[i], end=", ")
     
-    return yokailist, itemlist, equipmentlist, importantlist, medalliumlist
+    return time, sun, position, location, money, yokailist, itemlist, equipmentlist, importantlist, medalliumlist
 
 
 if infile[-3:] == "ywd":

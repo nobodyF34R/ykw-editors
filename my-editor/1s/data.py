@@ -1121,7 +1121,7 @@ tivs = {
     54294223: [0, 0, 0, 0, 8], 
 }
 
-locations = { #bytes long
+locations = {
     13564018630340980: "Unknown", 
     13564018647118196: "Uptown Springdale", 
     13564018663895412: "Mt. Wildwood", 

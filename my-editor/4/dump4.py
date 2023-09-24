@@ -58,7 +58,7 @@ def get(read, place, length=1, integer=True, half=False):
                 if i == 0:
                     break
                 finished += chr(i)
-            return finished.encode('latin-1').decode('utf-8')
+            return finished.encode('latin-1').decode('utf-8') #im not too sure what the correct encoding is. TBD
 
 def give(write, length=1, integer=True, half=False):
     if half == True:
@@ -75,7 +75,7 @@ def give(write, length=1, integer=True, half=False):
             while write < 1: write, e = write * 2, e - 1
             return (0 | (e + 127) << 23 | int((write - 1) * (2**23))).to_bytes(length, 'little')
         else: #string
-            return (bytearray(write.encode('latin-1'))+bytearray(length))[:length]
+            return (bytearray(write.encode('utf-8'))+bytearray(length))[:length]
 
 
 def edit_yokai(yokailist, index, yokai=None, nickname=None, iv=None, skills=None): #massively overcomplicated and broken simultaneously works with characterlist too

@@ -58,7 +58,7 @@ def get(read, place, length=1, integer=True, half=False):
                 if i == 0:
                     break
                 finished += chr(i)
-            return finished.encode('latin-1').decode('utf-8')
+            return finished.encode('latin-1').decode('utf-8') #im not too sure what the correct encoding is. TBD
 
 def give(write, length=1, integer=True, half=False):
     if half == True:
@@ -230,6 +230,7 @@ def edit_important(importantlist, index, important):
         importantlist[index]["important"] = important
     return importantlist
 
+
 #main
 def main(file, edit):
     try:
@@ -238,15 +239,17 @@ def main(file, edit):
         import io
         file = io.BytesIO(file)
     with file as f:
-        # for i in range(81):
-        #     f.seek(i+20) #misc
-        #     pos = [get(f.read(4),0,4), get(f.read(4),0,4), get(f.read(4),0,4)] #x,y,z
-        #     if 0 not in pos:
-        #         print(i+20, pos)
+        f.seek(20) #misc
+        position = [get(f.read(4),0,4), get(f.read(4),0,4), get(f.read(4),0,4)] #x,y,z
         f.seek(112)
-        location = get(f.read(7),0,7)
+        location = get(f.read(7),0,7) #always set z to 4294967295 when changing location
+        f.seek(1752)
+        time = get(f.read(2),0,2) # how many 0.32953607 seconds have passed in the 6 hour window. NEED TO TEST
+        f.seek(1754)
+        sun = get(f.read(1),0) #keeps track of how many 6 hours have passed
         f.seek(37620)
         money = get(f.read(4),0,4)
+        
         
         yokailist = []
         index = 0
@@ -365,17 +368,20 @@ def main(file, edit):
 
         #editor goes here
         if edit: #appending yokai is currently broken TODO
-            yokailist, itemlist, equipmentlist, importantlist, medalliumlist = edit(yokailist, itemlist, equipmentlist, importantlist, medalliumlist)
+            time, sun, position, location, money, yokailist, itemlist, equipmentlist, importantlist, medalliumlist = edit(time, sun, position, location, money, yokailist, itemlist, equipmentlist, importantlist, medalliumlist)
 
         #write everything back to file
         if 1:
             #misc
-            # f.seek(20)
-            # f.write(give(position[0], 4))
-            # f.write(give(position[1], 4))
-            # f.write(give(position[2], 4))
+            f.seek(20)
+            f.write(give(position[0], 4))
+            f.write(give(position[1], 4))
+            f.write(give(position[2], 4))
             f.seek(112)
             f.write(give(location, 7))
+            f.seek(1752)
+            f.write(give(time,2))
+            f.write(give(sun))
             f.seek(37620)
             f.write(give(money, 4))
 
