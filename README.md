@@ -1,5 +1,11 @@
 # ykw-editor
 
+## Links
+
+get the latest updates from https://github.com/nobodyF34R/ykw-editors
+
+get support in the ykw hacking zone: https://discord.gg/xkSMZYEWCP
+
 
 ## Legend
 
