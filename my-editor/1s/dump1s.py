@@ -78,7 +78,7 @@ def give(write, length=1, integer=True, half=False):
             return (bytearray(write.encode('utf-8'))+bytearray(length))[:length]
 
 
-def edit_yokai(yokailist, index, yokai=None, attitude=None, nickname=None, iv=None, ev=None): #massively overcomplicated and broken simultaneously 
+def edit_yokai(yokailist, index, yokai=None, attitude=None, nickname=None, iv=None, ev=None, level=None): #massively overcomplicated and broken simultaneously 
     try:
         if index < 0:
             index = len(yokailist)-index #appending shortcut
@@ -153,7 +153,10 @@ def edit_yokai(yokailist, index, yokai=None, attitude=None, nickname=None, iv=No
         "ev_def": ev[3], 
         "ev_spd": ev[4], 
     }
-    yokailist[index]["level"] = 255
+    if level == None:
+        yokailist[index]["level"] = 255
+    else:
+        yokailist[index]["level"] = level #if you want it to be 100 etc
     try: # this is for appending, which is currently broken
         yokailist[index]["attitude"] = yokailist[index]["attitude"]
     except:
@@ -232,283 +235,275 @@ def edit_important(importantlist, index, important):
 
 
 #main
-def main(file, edit):
-    try:
-        file = open(file, "r+b")
-    except:
-        import io
-        file = io.BytesIO(file)
-    with file as f:
-        f.seek(20) #misc
-        position = [get(f.read(4),0,4), get(f.read(4),0,4), get(f.read(4),0,4)] #x,y,z
-        f.seek(112)
-        location = get(f.read(7),0,7) #always set z to 4294967295 when changing location
-        f.seek(1752)
-        time = get(f.read(2),0,2) # how many 0.32953607 seconds have passed in the 6 hour window. NEED TO TEST
-        f.seek(1754)
-        sun = get(f.read(1),0) #keeps track of how many 6 hours have passed
-        f.seek(37620)
-        money = get(f.read(4),0,4)
-        
-        
-        yokailist = []
-        index = 0
-        f.seek(7696) #1 yokai takes up 124 bytes.
-        while True:
-            yokai = f.read(124)
-            if get(yokai, 0) == 0 and index != 0: #could be broken
-                break
+def main(f, edit):
+    f.seek(20) #misc
+    position = [get(f.read(4),0,4), get(f.read(4),0,4), get(f.read(4),0,4)] #x,y,z
+    f.seek(112)
+    location = get(f.read(7),0,7) #always set z to 4294967295 when changing location
+    f.seek(1752)
+    time = get(f.read(2),0,2) # how many 0.32953607 seconds have passed in the 6 hour window. NEED TO TEST
+    f.seek(1754)
+    sun = get(f.read(1),0) #keeps track of how many 6 hours have passed
+    f.seek(37620)
+    money = get(f.read(4),0,4)
+    
+    
+    yokailist = []
+    index = 0
+    f.seek(7696) #1 yokai takes up 124 bytes.
+    while True:
+        yokai = f.read(124)
+        if get(yokai, 0) == 0 and index != 0: #could be broken
+            break
 
-            yokailist.append({ #some of these might take 2 bytes instead of 1
-                "num1": get(yokai, 0, 2), #0 starts from 0
-                "num2": get(yokai, 2, 2), #2
-                "yokai": get(yokai, 4, 4), #4-07
-                "nickname": get(yokai, 8, 68, False), #8-76 maybe broken
-                "attack": get(yokai, 78),
-                "technique": get(yokai, 82),
-                "soultimate": get(yokai, 86),
-                "xp": get(yokai, 88,4),
-                "hp": get(yokai, 92), #current hp
-                "soul": get(yokai, 92), #current soul gauge 
-                "stats": {
-                    "tiv_hp": get(yokai, 96), 
-                    "tiv_str": get(yokai, 97), 
-                    "tiv_spr": get(yokai, 98), 
-                    "tiv_def": get(yokai, 99), 
-                    "tiv_spd": get(yokai, 100), 
-                    "iv1_hp": get(yokai, 101, half=True)[1], #could swap these around but consistency is key...
-                    "iv1_str": get(yokai, 102, half=True)[1], 
-                    "iv1_spr": get(yokai, 103, half=True)[1], 
-                    "iv1_def": get(yokai, 104, half=True)[1], 
-                    "iv1_spd": get(yokai, 105, half=True)[1], 
-                    "iv2_hp": get(yokai, 101, half=True)[0], 
-                    "iv2_str": get(yokai, 102, half=True)[0], 
-                    "iv2_spr": get(yokai, 103, half=True)[0], 
-                    "iv2_def": get(yokai, 104, half=True)[0], 
-                    "iv2_spd": get(yokai, 105, half=True)[0], 
-                    "ev_hp": get(yokai, 106), 
-                    "ev_str": get(yokai, 107), 
-                    "ev_spr": get(yokai, 108), #735 on buhu
-                    "ev_def": get(yokai, 109), 
-                    "ev_spd": get(yokai, 110), 
-                }, 
-                "level": get(yokai, 116), 
-                "attitude": get(yokai, 117), 
-                #TODO loaf level, held item & affection
-                #"affection": get(yokai, 120), #this is wrong i think
-            })
+        yokailist.append({ #some of these might take 2 bytes instead of 1
+            "num1": get(yokai, 0, 2), #0 starts from 0
+            "num2": get(yokai, 2, 2), #2
+            "yokai": get(yokai, 4, 4), #4-07
+            "nickname": get(yokai, 8, 68, False), #8-76 maybe broken
+            "attack": get(yokai, 78),
+            "technique": get(yokai, 82),
+            "soultimate": get(yokai, 86),
+            "xp": get(yokai, 88,4),
+            "hp": get(yokai, 92), #current hp
+            "soul": get(yokai, 92), #current soul gauge 
+            "stats": {
+                "tiv_hp": get(yokai, 96), 
+                "tiv_str": get(yokai, 97), 
+                "tiv_spr": get(yokai, 98), 
+                "tiv_def": get(yokai, 99), 
+                "tiv_spd": get(yokai, 100), 
+                "iv1_hp": get(yokai, 101, half=True)[1], #could swap these around but consistency is key...
+                "iv1_str": get(yokai, 102, half=True)[1], 
+                "iv1_spr": get(yokai, 103, half=True)[1], 
+                "iv1_def": get(yokai, 104, half=True)[1], 
+                "iv1_spd": get(yokai, 105, half=True)[1], 
+                "iv2_hp": get(yokai, 101, half=True)[0], 
+                "iv2_str": get(yokai, 102, half=True)[0], 
+                "iv2_spr": get(yokai, 103, half=True)[0], 
+                "iv2_def": get(yokai, 104, half=True)[0], 
+                "iv2_spd": get(yokai, 105, half=True)[0], 
+                "ev_hp": get(yokai, 106), 
+                "ev_str": get(yokai, 107), 
+                "ev_spr": get(yokai, 108),
+                "ev_def": get(yokai, 109), 
+                "ev_spd": get(yokai, 110), 
+            }, 
+            "level": get(yokai, 116), 
+            "attitude": get(yokai, 117), 
+            #TODO loaf level, held item & affection
+            #"affection": get(yokai, 120), #this is wrong i think
+        })
 
-            index += 1
-        original_yokai_amount = index
+        index += 1
+    original_yokai_amount = index
 
-        itemlist = []
-        index = 0
-        f.seek(1784) #1 item takes up 12 bytes. 00
-        while True:
-            item = f.read(12)
+    itemlist = []
+    index = 0
+    f.seek(1784) #1 item takes up 12 bytes. 00
+    while True:
+        item = f.read(12)
 
-            if get(item, 0) == 0 and index != 0: #could be broken
-                break
+        if get(item, 0) == 0 and index != 0: #could be broken
+            break
 
-            itemlist.append({
-                "num1": get(item, 0, 2), #0 starts from 0
-                "num2": get(item, 2, 2), #2
-                "item": get(item, 4, 4), #4
-                "amount": get(item, 8, 4) #8
-            })
+        itemlist.append({
+            "num1": get(item, 0, 2), #0 starts from 0
+            "num2": get(item, 2, 2), #2
+            "item": get(item, 4, 4), #4
+            "amount": get(item, 8, 4) #8
+        })
 
-            index += 1
-        original_item_amount = index
+        index += 1
+    original_item_amount = index
 
-        equipmentlist = []
-        index = 0
-        f.seek(4868) #1 equipment takes up 16 bytes. 10
-        while True:
-            equipment = f.read(16)
+    equipmentlist = []
+    index = 0
+    f.seek(4868) #1 equipment takes up 16 bytes. 10
+    while True:
+        equipment = f.read(16)
 
-            if get(equipment, 0) == 0 and index != 0: #could be broken
-                break
+        if get(equipment, 0) == 0 and index != 0: #could be broken
+            break
 
-            equipmentlist.append({
-                "num1": get(equipment, 0, 2), #0 starts from 4096
-                "num2": get(equipment, 2, 2), #2
-                "equipment": get(equipment, 4, 4), #4
-                "amount": get(equipment, 8, 4), #8 #maybe 1 byte
-                "used": get(equipment, 12, 4) #how many are in use (leave alone or set to zero)
-            })
+        equipmentlist.append({
+            "num1": get(equipment, 0, 2), #0 starts from 4096
+            "num2": get(equipment, 2, 2), #2
+            "equipment": get(equipment, 4, 4), #4
+            "amount": get(equipment, 8, 4), #8 #maybe 1 byte
+            "used": get(equipment, 12, 4) #how many are in use (leave alone or set to zero)
+        })
 
-            index += 1
-        original_equipment_amount = index
+        index += 1
+    original_equipment_amount = index
 
-        importantlist = []
-        index = 0
-        f.seek(6480) #1 important takes up 8 bytes. 20
-        while True:
-            important = f.read(8)
+    importantlist = []
+    index = 0
+    f.seek(6480) #1 important takes up 8 bytes. 20
+    while True:
+        important = f.read(8)
 
-            if get(important, 0) == 0 and index != 0: #could be broken
-                break
+        if get(important, 0) == 0 and index != 0: #could be broken
+            break
 
-            importantlist.append({
-                "num1": get(important, 0, 2), #0 starts from 8192
-                "num2": get(important, 2, 2), #2 unsure.
-                "important": get(important, 4, 4), #4
-            })
+        importantlist.append({
+            "num1": get(important, 0, 2), #0 starts from 8192
+            "num2": get(important, 2, 2), #2 unsure.
+            "important": get(important, 4, 4), #4
+        })
 
-            index += 1
-        original_important_amount = index
+        index += 1
+    original_important_amount = index
 
-        medalliumlist = [] # the way this works is weird. the first bit is always False (because there is no 0th yokai) and it's still in little endian so the bytes are backwards. the last 7 bits are unused (False) because the are no more yokai. maybe the unused space is there for future updates?
-        f.seek(1476)
-        medalliumlist.append(get(f.read(32), 0, 32, half=None)) # seen
-        medalliumlist.append(get(f.read(32), 0, 32, half=None)) # befriended
-        medalliumlist.append(get(f.read(32), 0, 32, half=None)) # seen
-        medalliumlist.append(get(f.read(32), 0, 32, half=None)) # camera
+    medalliumlist = [] # the way this works is weird. the first bit is always False (because there is no 0th yokai) and it's still in little endian so the bytes are backwards. the last 7 bits are unused (False) because the are no more yokai. maybe the unused space is there for future updates?
+    f.seek(1476)
+    medalliumlist.append(get(f.read(32), 0, 32, half=None)) # seen
+    medalliumlist.append(get(f.read(32), 0, 32, half=None)) # befriended
+    medalliumlist.append(get(f.read(32), 0, 32, half=None)) # seen
+    medalliumlist.append(get(f.read(32), 0, 32, half=None)) # camera
 
+    #edit
+    time, sun, position, location, money, yokailist, itemlist, equipmentlist, importantlist, medalliumlist = edit(time, sun, position, location, money, yokailist, itemlist, equipmentlist, importantlist, medalliumlist)
 
-        #editor goes here
-        if edit: #appending yokai is currently broken TODO
-            time, sun, position, location, money, yokailist, itemlist, equipmentlist, importantlist, medalliumlist = edit(time, sun, position, location, money, yokailist, itemlist, equipmentlist, importantlist, medalliumlist)
+    #write
+    
+    #misc
+    f.seek(20)
+    f.write(give(position[0], 4))
+    f.write(give(position[1], 4))
+    f.write(give(position[2], 4))
+    f.seek(112)
+    f.write(give(location, 7))
+    f.seek(1752)
+    f.write(give(time,2))
+    f.write(give(sun))
+    f.seek(37620)
+    f.write(give(money, 4))
 
-        #write everything back to file
-        if 1:
-            #misc
-            f.seek(20)
-            f.write(give(position[0], 4))
-            f.write(give(position[1], 4))
-            f.write(give(position[2], 4))
-            f.seek(112)
-            f.write(give(location, 7))
-            f.seek(1752)
-            f.write(give(time,2))
-            f.write(give(sun))
-            f.seek(37620)
-            f.write(give(money, 4))
+    #write items back
+    j=0
+    for i in itemlist:
+        f.seek(1784+12*j)
+        f.write(give(i["num1"], 2)) 
+        f.seek(1784+12*j+2)
+        f.write(give(i["num2"], 2))
+        f.seek(1784+12*j+4)
+        f.write(give(i["item"], 4))
+        f.seek(1784+12*j+8)
+        f.write(give(i["amount"], 4))
+        j+=1
+    
+    #clear item overflow
+    if original_item_amount - len(itemlist) > 0:
+        f.seek(1784+12*j)
+        f.write(b"\x00"*12*(original_item_amount - len(itemlist)))
 
-            #write items back
-            j=0
-            for i in itemlist:
-                f.seek(1784+12*j)
-                f.write(give(i["num1"], 2)) 
-                f.seek(1784+12*j+2)
-                f.write(give(i["num2"], 2))
-                f.seek(1784+12*j+4)
-                f.write(give(i["item"], 4))
-                f.seek(1784+12*j+8)
-                f.write(give(i["amount"], 4))
-                j+=1
-            
-            #clear item overflow
-            if original_item_amount - len(itemlist) > 0:
-                f.seek(1784+12*j)
-                f.write(b"\x00"*12*(original_item_amount - len(itemlist)))
+    #write equipment back
+    j=0
+    for i in equipmentlist:
+        f.seek(4868+16*j)
+        f.write(give(i["num1"], 2))
+        f.seek(4868+16*j+2)
+        f.write(give(i["num2"], 2))
+        f.seek(4868+16*j+4)
+        f.write(give(i["equipment"], 4))
+        f.seek(4868+16*j+8)
+        f.write(give(i["amount"], 4))
+        f.seek(4868+16*j+12)
+        f.write(give(i["used"], 4))
+        j+=1
 
-            #write equipment back
-            j=0
-            for i in equipmentlist:
-                f.seek(4868+16*j)
-                f.write(give(i["num1"], 2))
-                f.seek(4868+16*j+2)
-                f.write(give(i["num2"], 2))
-                f.seek(4868+16*j+4)
-                f.write(give(i["equipment"], 4))
-                f.seek(4868+16*j+8)
-                f.write(give(i["amount"], 4))
-                f.seek(4868+16*j+12)
-                f.write(give(i["used"], 4))
-                j+=1
+    #clear equipment overflow
+    if original_equipment_amount - len(equipmentlist) > 0:
+        f.seek(4868+16*j)
+        f.write(b"\x00"*16*(original_equipment_amount - len(equipmentlist)))
 
-            #clear equipment overflow
-            if original_equipment_amount - len(equipmentlist) > 0:
-                f.seek(4868+16*j)
-                f.write(b"\x00"*16*(original_equipment_amount - len(equipmentlist)))
+    #write important back
+    j=0
+    for i in importantlist:
+        f.seek(6480+8*j)
+        f.write(give(i["num1"], 2))
+        f.seek(6480+8*j+2)
+        f.write(give(i["num2"], 2))
+        f.seek(6480+8*j+4)
+        f.write(give(i["important"], 4))
+        j+=1
 
-            #write important back
-            j=0
-            for i in importantlist:
-                f.seek(6480+8*j)
-                f.write(give(i["num1"], 2))
-                f.seek(6480+8*j+2)
-                f.write(give(i["num2"], 2))
-                f.seek(6480+8*j+4)
-                f.write(give(i["important"], 4))
-                j+=1
+    #clear important overflow
+    if original_important_amount - len(importantlist) > 0:
+        f.seek(6480+8*j)
+        f.write(b"\x00"*8*(original_important_amount - len(importantlist)))
 
-            #clear important overflow
-            if original_important_amount - len(importantlist) > 0:
-                f.seek(6480+8*j)
-                f.write(b"\x00"*8*(original_important_amount - len(importantlist)))
-            
-            #write yokai back
-            j=0
-            for i in yokailist:
-                f.seek(7696+124*j)
-                f.write(give(i["num1"], 2))
-                f.seek(7696+124*j+2)
-                f.write(give(i["num2"], 2))
-                f.seek(7696+124*j+4)
-                f.write(give(i["yokai"], 4))
-                f.seek(7696+124*j+8)
-                f.write(give(i["nickname"], 60, False))
-                f.seek(7696+124*j+78)
-                f.write(give(i["attack"]))
-                f.seek(7696+124*j+82)
-                f.write(give(i["technique"]))
-                f.seek(7696+124*j+86)
-                f.write(give(i["soultimate"]))
+    #write yokai back
+    j=0
+    for i in yokailist:
+        f.seek(7696+124*j)
+        f.write(give(i["num1"], 2))
+        f.seek(7696+124*j+2)
+        f.write(give(i["num2"], 2))
+        f.seek(7696+124*j+4)
+        f.write(give(i["yokai"], 4))
+        f.seek(7696+124*j+8)
+        f.write(give(i["nickname"], 60, False))
+        f.seek(7696+124*j+78)
+        f.write(give(i["attack"]))
+        f.seek(7696+124*j+82)
+        f.write(give(i["technique"]))
+        f.seek(7696+124*j+86)
+        f.write(give(i["soultimate"]))
 
-                f.seek(7696+124*j+96)
-                f.write(give(i["stats"]["tiv_hp"]))
-                f.seek(7696+124*j+97)
-                f.write(give(i["stats"]["tiv_str"]))
-                f.seek(7696+124*j+98)
-                f.write(give(i["stats"]["tiv_spr"]))
-                f.seek(7696+124*j+99)
-                f.write(give(i["stats"]["tiv_def"]))
-                f.seek(7696+124*j+100)
-                f.write(give(i["stats"]["tiv_spd"]))
-                f.seek(7696+124*j+101)
-                f.write(give([i["stats"]["iv1_hp"], i["stats"]["iv2_hp"]], half=True)) #sloppy. TODO add stuff like this to the give function
-                f.seek(7696+124*j+102)
-                f.write(give([i["stats"]["iv1_str"], i["stats"]["iv2_str"]], half=True))
-                f.seek(7696+124*j+103)
-                f.write(give([i["stats"]["iv1_spr"], i["stats"]["iv2_spr"]], half=True))
-                f.seek(7696+124*j+104)
-                f.write(give([i["stats"]["iv1_def"], i["stats"]["iv2_def"]], half=True))
-                f.seek(7696+124*j+105)
-                f.write(give([i["stats"]["iv1_spd"], i["stats"]["iv2_spd"]], half=True))
-                f.seek(7696+124*j+106)
-                f.write(give(i["stats"]["ev_hp"]))
-                f.seek(7696+124*j+107)
-                f.write(give(i["stats"]["ev_str"]))
-                f.seek(7696+124*j+108)
-                f.write(give(i["stats"]["ev_spr"]))
-                f.seek(7696+124*j+109)
-                f.write(give(i["stats"]["ev_def"]))
-                f.seek(7696+124*j+110)
-                f.write(give(i["stats"]["ev_spd"]))
+        f.seek(7696+124*j+96)
+        f.write(give(i["stats"]["tiv_hp"]))
+        f.seek(7696+124*j+97)
+        f.write(give(i["stats"]["tiv_str"]))
+        f.seek(7696+124*j+98)
+        f.write(give(i["stats"]["tiv_spr"]))
+        f.seek(7696+124*j+99)
+        f.write(give(i["stats"]["tiv_def"]))
+        f.seek(7696+124*j+100)
+        f.write(give(i["stats"]["tiv_spd"]))
+        f.seek(7696+124*j+101)
+        f.write(give([i["stats"]["iv2_hp"], i["stats"]["iv1_hp"]], half=True)) #sloppy. TODO add stuff like this to the give function
+        f.seek(7696+124*j+102)
+        f.write(give([i["stats"]["iv2_str"], i["stats"]["iv1_str"]], half=True))
+        f.seek(7696+124*j+103)
+        f.write(give([i["stats"]["iv2_spr"], i["stats"]["iv1_spr"]], half=True))
+        f.seek(7696+124*j+104)
+        f.write(give([i["stats"]["iv2_def"], i["stats"]["iv1_def"]], half=True))
+        f.seek(7696+124*j+105)
+        f.write(give([i["stats"]["iv2_spd"], i["stats"]["iv1_spd"]], half=True))
+        f.seek(7696+124*j+106)
+        f.write(give(i["stats"]["ev_hp"]))
+        f.seek(7696+124*j+107)
+        f.write(give(i["stats"]["ev_str"]))
+        f.seek(7696+124*j+108)
+        f.write(give(i["stats"]["ev_spr"]))
+        f.seek(7696+124*j+109)
+        f.write(give(i["stats"]["ev_def"]))
+        f.seek(7696+124*j+110)
+        f.write(give(i["stats"]["ev_spd"]))
 
-                f.seek(7696+124*j+116)
-                f.write(give(i["level"]))
-                f.seek(7696+124*j+117)
-                f.write(give(i["attitude"]))
-                # TODO more when i figure it out
-                j+=1
+        f.seek(7696+124*j+116)
+        f.write(give(i["level"]))
+        f.seek(7696+124*j+117)
+        f.write(give(i["attitude"]))
+        # TODO more when i figure it out
+        j+=1
 
-            #clear yokai overflow
-            if original_yokai_amount - len(yokailist) > 0:
-                f.seek(7696+124*j)
-                f.write(b"\x00"*124*(original_yokai_amount - len(yokailist)))
+    #clear yokai overflow
+    if original_yokai_amount - len(yokailist) > 0:
+        f.seek(7696+124*j)
+        f.write(b"\x00"*124*(original_yokai_amount - len(yokailist)))
 
-            #write medallium back
-            f.seek(1476) # seen
-            f.write(give(medalliumlist[0], 256, half=None))
-            f.seek(1508) # befriended
-            f.write(give(medalliumlist[1], 256, half=None))
-            f.seek(1540) # new
-            f.write(give(medalliumlist[2], 256, half=None))
-            f.seek(1572) # camera
-            f.write(give(medalliumlist[3], 256, half=None))
+    #write medallium back
+    f.seek(1476) # seen
+    f.write(give(medalliumlist[0], 256, half=None))
+    f.seek(1508) # befriended
+    f.write(give(medalliumlist[1], 256, half=None))
+    f.seek(1540) # new
+    f.write(give(medalliumlist[2], 256, half=None))
+    f.seek(1572) # camera
+    f.write(give(medalliumlist[3], 256, half=None))
 
-        f.seek(0)
-        return f.read() #for the .yw files
+    f.seek(0)
+    return f.read() #for the .yw files

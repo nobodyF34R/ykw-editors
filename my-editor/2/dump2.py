@@ -382,7 +382,7 @@ def main(file, edit): #TODO fix yokai.
                 }, 
                 "level": get(yokai, 79), #79
                 "loaflevel": get(yokai, 84, half=True)[0], #84
-                "attitude": get(yokai, 84, half=True)[0] #84 (shared byte)
+                "attitude": get(yokai, 84, half=True)[1] #84 (shared byte)
             })
 
             index += 1

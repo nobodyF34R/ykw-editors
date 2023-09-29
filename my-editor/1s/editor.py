@@ -1,17 +1,14 @@
 from dump1s import * #get specific ids from data.py
 
-separator = "/" # or "\\" on windows
-
-infile = "/Volumes/UNTITLED/switch/Checkpoint/saves/0x0100C0000CEEA000 0x0100C0000CEEA000/temp/game1.yw" #on windows change any "/" or "\" into "\\"
-infile = "/Users/emilia/Documents/dev/ykw/20230716-140104 XAW7/new.ywd"
+infile = "/Users/emilia/Documents/dev/ykw/20230716-140104 XAW7/new.ywd" #on windows change any "/" or "\" into "\\"
 
 def edit(time, sun, position, location, money, yokailist, itemlist, equipmentlist, importantlist, medalliumlist):
     #helper functions defined in dump1s.py
     # position = [0, 0, 4294967295]
     # location = 13564018647118196
-    for i in range(len(yokailist)):
-        yokailist = edit_yokai(yokailist, i)  #max stats
-
+    
+    # for i in range(len(yokailist)):
+    #     yokailist = edit_yokai(yokailist, i)  #max stats
 
     print(", ".join([yokais[i["yokai"]]for i in yokailist]))
     print(", ".join([items[i["item"]]for i in itemlist]))
@@ -34,18 +31,26 @@ def edit(time, sun, position, location, money, yokailist, itemlist, equipmentlis
     for i in range(246):
         if medalliumlist[3][i]: # medalliumlist[3][0] should never be true. the boss yokai are just weird i think
             print(indexs[i], end=", ")
-    
+
     return time, sun, position, location, money, yokailist, itemlist, equipmentlist, importantlist, medalliumlist
 
+f = open(infile, "r+b")
 
-if infile[-3:] == "ywd":
-    main(infile, edit)
-else:
+if infile.endswith(".yw"):
     from pathlib import Path
     import sys
-    sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+separator+"save-tools")
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"/save-tools")
+    except:
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"\\save-tools") #windows jank
     import yw_save
-    with open(infile, "r+b") as f:
-        out = main(yw_save.yw_proc(f.read(), False), edit) #out is the edited binary data
-        f.seek(0)
-        f.write(yw_save.yw_proc(out, True))
+
+    import io
+    decrypted = io.BytesIO(yw_save.yw_proc(f.read(), False))
+    f.seek(0)
+    f.write(yw_save.yw_proc(main(f, edit), True))
+    decrypted.close() #redundant?
+else:
+    main(f, edit)
+
+f.close() #redundant?
