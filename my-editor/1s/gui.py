@@ -568,7 +568,7 @@ def verifyFile(infile):
             import io
             decrypted = io.BytesIO(yw_save.yw_proc(f.read(), False))
             f.seek(0)
-            f.write(yw_save.yw_proc(main(f, edit), True))
+            f.write(yw_save.yw_proc(main(decrypted, edit), True))
             decrypted.close() #redundant?
         else:
             main(f, edit)
