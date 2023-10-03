@@ -281,7 +281,7 @@ items = {
     2160375763: "Deluxe Ramen", 
     513811056: "Everything Ramen", 
     1683291125: "Pot Stickers", 
-    4250774095: "Liver &amp; Chives", 
+    4250774095: "Liver & Chives", 
     2321193689: "Crab Omelet", 
     339611514: "Chili Shrimp", 
     3539717416: "Carrot", 

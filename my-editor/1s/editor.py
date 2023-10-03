@@ -8,7 +8,7 @@ def edit(time, sun, position, location, money, yokailist, itemlist, equipmentlis
     # location = 13564018647118196
     
     # for i in range(len(yokailist)):
-    #     yokailist = edit_yokai(yokailist, i)  #max stats
+    #     yokailist = edit_yokai(yokailist, i) #max stats
 
     print(", ".join([yokais[i["yokai"]]for i in yokailist]))
     print(", ".join([items[i["item"]]for i in itemlist]))
@@ -53,4 +53,4 @@ if infile.endswith(".yw"):
 else:
     main(f, edit)
 
-f.close() #redundant?
+f.close()

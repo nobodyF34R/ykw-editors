@@ -58,7 +58,7 @@ def get(read, place, length=1, integer=True, half=False):
                 if i == 0:
                     break
                 finished += chr(i)
-            return finished.encode('latin-1').decode('utf-8') #im not too sure what the correct encoding is. TBD
+            return finished.encode('latin-1').decode('utf-8')
 
 def give(write, length=1, integer=True, half=False):
     if half == True:
@@ -211,7 +211,7 @@ def edit_equipment(equipmentlist, index, equipment=None, amount=None):
             equipmentlist[index]["equipment"] = equipment
     if amount:
         equipmentlist[index]["amount"] = amount
-    equipmentlist[index]["used"] = 0
+    equipmentlist[index]["used"] = 0 #could cause problems
     return equipmentlist
 
 def edit_important(importantlist, index, important):
@@ -239,9 +239,9 @@ def main(f, edit):
     f.seek(20) #misc
     position = [get(f.read(4),0,4), get(f.read(4),0,4), get(f.read(4),0,4)] #x,y,z
     f.seek(112)
-    location = get(f.read(7),0,7) #always set z to 4294967295 when changing location
+    location = get(f.read(7),0,7)
     f.seek(1752)
-    time = get(f.read(2),0,2) # how many 0.32953607 seconds have passed in the 6 hour window. NEED TO TEST
+    time = get(f.read(2),0,2) # how many 0.? seconds have passed in the 6 hour window. NEED TO TEST
     f.seek(1754)
     sun = get(f.read(1),0) #keeps track of how many 6 hours have passed
     f.seek(37620)
@@ -265,8 +265,8 @@ def main(f, edit):
             "technique": get(yokai, 82),
             "soultimate": get(yokai, 86),
             "xp": get(yokai, 88,4),
-            "hp": get(yokai, 92), #current hp
-            "soul": get(yokai, 92), #current soul gauge 
+            "hp": get(yokai, 92, 2), #current hp (if it's over the max, the game will bug out)
+            "soul": get(yokai, 94, 2), #current soul gauge. could be 1 byte
             "stats": {
                 "tiv_hp": get(yokai, 96), 
                 "tiv_str": get(yokai, 97), 
@@ -311,7 +311,7 @@ def main(f, edit):
             "num1": get(item, 0, 2), #0 starts from 0
             "num2": get(item, 2, 2), #2
             "item": get(item, 4, 4), #4
-            "amount": get(item, 8, 4) #8
+            "amount": get(item, 8) #8 up to 255
         })
 
         index += 1
@@ -330,7 +330,7 @@ def main(f, edit):
             "num1": get(equipment, 0, 2), #0 starts from 4096
             "num2": get(equipment, 2, 2), #2
             "equipment": get(equipment, 4, 4), #4
-            "amount": get(equipment, 8, 4), #8 #maybe 1 byte
+            "amount": get(equipment, 8), #8 up to 255
             "used": get(equipment, 12, 4) #how many are in use (leave alone or set to zero)
         })
 
@@ -359,7 +359,7 @@ def main(f, edit):
     f.seek(1476)
     medalliumlist.append(get(f.read(32), 0, 32, half=None)) # seen
     medalliumlist.append(get(f.read(32), 0, 32, half=None)) # befriended
-    medalliumlist.append(get(f.read(32), 0, 32, half=None)) # seen
+    medalliumlist.append(get(f.read(32), 0, 32, half=None)) # new (pointless)
     medalliumlist.append(get(f.read(32), 0, 32, half=None)) # camera
 
     #edit

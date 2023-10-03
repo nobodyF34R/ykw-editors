@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>547</width>
-    <height>532</height>
+    <width>555</width>
+    <height>535</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -54,7 +54,7 @@
         <item>
          <widget class="QLabel" name="version_label">
           <property name="text">
-           <string notr="true">null</string>
+           <string notr="true">1.0.0</string>
           </property>
          </widget>
         </item>
@@ -93,7 +93,7 @@
            <rect>
             <x>110</x>
             <y>0</y>
-            <width>396</width>
+            <width>401</width>
             <height>171</height>
            </rect>
           </property>
@@ -176,7 +176,7 @@
            <rect>
             <x>110</x>
             <y>170</y>
-            <width>398</width>
+            <width>401</width>
             <height>251</height>
            </rect>
           </property>
@@ -406,7 +406,7 @@
           <widget class="QPushButton" name="setMaxStats">
            <property name="geometry">
             <rect>
-             <x>10</x>
+             <x>20</x>
              <y>220</y>
              <width>101</width>
              <height>32</height>
@@ -419,7 +419,7 @@
           <widget class="QPushButton" name="advanced">
            <property name="geometry">
             <rect>
-             <x>120</x>
+             <x>130</x>
              <y>220</y>
              <width>100</width>
              <height>32</height>
@@ -435,53 +435,698 @@
          <attribute name="title">
           <string>Item</string>
          </attribute>
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>0</y>
+            <width>381</width>
+            <height>111</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>General</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <layout class="QFormLayout" name="formLayout_3">
+             <property name="fieldGrowthPolicy">
+              <enum>QFormLayout::FieldsStayAtSizeHint</enum>
+             </property>
+             <property name="formAlignment">
+              <set>Qt::AlignHCenter|Qt::AlignTop</set>
+             </property>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_13">
+               <property name="text">
+                <string>Item</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QComboBox" name="itemComboBox">
+               <property name="minimumSize">
+                <size>
+                 <width>180</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="focusPolicy">
+                <enum>Qt::TabFocus</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_15">
+               <property name="text">
+                <string>Amount</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QSpinBox" name="itemAmount">
+               <property name="maximum">
+                <number>255</number>
+               </property>
+               <property name="value">
+                <number>255</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QListWidget" name="itemList">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>121</width>
+            <height>421</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="newItemButton">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>390</y>
+            <width>100</width>
+            <height>32</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Set New</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="currentItemButton">
+          <property name="geometry">
+           <rect>
+            <x>240</x>
+            <y>390</y>
+            <width>100</width>
+            <height>32</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Set Current</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_14">
+          <property name="geometry">
+           <rect>
+            <x>220</x>
+            <y>120</y>
+            <width>201</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>set current to blank to remove it</string>
+          </property>
+         </widget>
         </widget>
         <widget class="QWidget" name="equipmentTab">
          <attribute name="title">
           <string>Equipment</string>
          </attribute>
+         <widget class="QPushButton" name="newEquipmentButton">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>390</y>
+            <width>100</width>
+            <height>32</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Set New</string>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>0</y>
+            <width>381</width>
+            <height>111</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>General</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <layout class="QFormLayout" name="formLayout_6">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_17">
+               <property name="text">
+                <string>Equipment</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QComboBox" name="equipmentComboBox">
+               <property name="minimumSize">
+                <size>
+                 <width>180</width>
+                 <height>0</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_21">
+               <property name="text">
+                <string>Amount</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QSpinBox" name="equipmentAmount">
+               <property name="maximum">
+                <number>255</number>
+               </property>
+               <property name="value">
+                <number>255</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QPushButton" name="currentEquipmentButton">
+          <property name="geometry">
+           <rect>
+            <x>240</x>
+            <y>390</y>
+            <width>100</width>
+            <height>32</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Set Current</string>
+          </property>
+         </widget>
+         <widget class="QListWidget" name="equipmentList">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>121</width>
+            <height>421</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_16">
+          <property name="geometry">
+           <rect>
+            <x>220</x>
+            <y>120</y>
+            <width>201</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>set current to blank to remove it</string>
+          </property>
+         </widget>
         </widget>
         <widget class="QWidget" name="importantTab">
          <attribute name="title">
           <string>Important</string>
          </attribute>
+         <widget class="QListWidget" name="importantList">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>121</width>
+            <height>421</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_7">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>0</y>
+            <width>381</width>
+            <height>81</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>General</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <item>
+            <layout class="QFormLayout" name="formLayout_7">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_22">
+               <property name="text">
+                <string>Important</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QComboBox" name="importantComboBox">
+               <property name="minimumSize">
+                <size>
+                 <width>180</width>
+                 <height>0</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QPushButton" name="currentImportantButton">
+          <property name="geometry">
+           <rect>
+            <x>240</x>
+            <y>390</y>
+            <width>100</width>
+            <height>32</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Set Current</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="newImportantButton">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>390</y>
+            <width>100</width>
+            <height>32</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Set New</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_30">
+          <property name="geometry">
+           <rect>
+            <x>220</x>
+            <y>90</y>
+            <width>201</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>set current to blank to remove it</string>
+          </property>
+         </widget>
         </widget>
         <widget class="QWidget" name="medalliumTab">
          <attribute name="title">
           <string>Medallium</string>
          </attribute>
+         <widget class="QGroupBox" name="groupBox_11">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>161</width>
+            <height>421</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Seen</string>
+          </property>
+          <widget class="QListWidget" name="seenList">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>20</y>
+             <width>161</width>
+             <height>311</height>
+            </rect>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::StrongFocus</enum>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="seenCheckAll_2">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>340</y>
+             <width>100</width>
+             <height>32</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Check All</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="seenUncheckAll_2">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>380</y>
+             <width>100</width>
+             <height>32</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Uncheck All</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_12">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>0</y>
+            <width>161</width>
+            <height>421</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Befriended</string>
+          </property>
+          <widget class="QListWidget" name="befriendedList">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>20</y>
+             <width>161</width>
+             <height>311</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="befriendedUncheckAll_2">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>380</y>
+             <width>100</width>
+             <height>32</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Uncheck All</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="befriendedCheckAll_2">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>340</y>
+             <width>100</width>
+             <height>32</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Check All</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_13">
+          <property name="geometry">
+           <rect>
+            <x>360</x>
+            <y>0</y>
+            <width>161</width>
+            <height>421</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Camera</string>
+          </property>
+          <widget class="QListWidget" name="cameraList">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>20</y>
+             <width>161</width>
+             <height>311</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="cameraUncheckAll">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>380</y>
+             <width>100</width>
+             <height>32</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Uncheck All</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="cameraCheckAll">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>340</y>
+             <width>100</width>
+             <height>32</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Check All</string>
+           </property>
+          </widget>
+         </widget>
         </widget>
         <widget class="QWidget" name="miscTab">
          <attribute name="title">
           <string>Misc</string>
          </attribute>
+         <widget class="QGroupBox" name="groupBox_14">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>251</width>
+            <height>71</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Time</string>
+          </property>
+          <widget class="QWidget" name="layoutWidget_2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>231</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <layout class="QFormLayout" name="formLayout_8">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_24">
+              <property name="text">
+               <string>Time</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QTimeEdit" name="timeEdit">
+              <property name="focusPolicy">
+               <enum>Qt::WheelFocus</enum>
+              </property>
+              <property name="displayFormat">
+               <string>hh:mm</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_15">
+          <property name="geometry">
+           <rect>
+            <x>270</x>
+            <y>0</y>
+            <width>251</width>
+            <height>71</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Location</string>
+          </property>
+          <widget class="QWidget" name="layoutWidget_3">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>236</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <layout class="QFormLayout" name="formLayout_9">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_25">
+              <property name="text">
+               <string>Location</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="locationComboBox">
+              <property name="minimumSize">
+               <size>
+                <width>180</width>
+                <height>0</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_16">
+          <property name="geometry">
+           <rect>
+            <x>270</x>
+            <y>70</y>
+            <width>251</width>
+            <height>121</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Position</string>
+          </property>
+          <widget class="QWidget" name="layoutWidget_4">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>236</width>
+             <height>85</height>
+            </rect>
+           </property>
+           <layout class="QFormLayout" name="formLayout_10">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_26">
+              <property name="text">
+               <string>X</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_27">
+              <property name="text">
+               <string>Y</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>Z</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="xEdit"/>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="yEdit"/>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="zEdit"/>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_17">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>70</y>
+            <width>251</width>
+            <height>121</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>General</string>
+          </property>
+          <widget class="QWidget" name="layoutWidget_5">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>231</width>
+             <height>71</height>
+            </rect>
+           </property>
+           <layout class="QFormLayout" name="formLayout_11">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_29">
+              <property name="text">
+               <string>Money</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="moneyEdit"/>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QLabel" name="label_23">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>60</y>
+             <width>223</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string> TODO: add Gatcha and auto position.</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QLabel" name="label_28">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>400</y>
+            <width>441</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>WARNING: randomly editing you position will seriously mess up your save.</string>
+          </property>
+         </widget>
         </widget>
        </widget>
       </item>
      </layout>
     </item>
    </layout>
-  </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>547</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menuFile">
-    <property name="title">
-     <string>File</string>
-    </property>
-    <addaction name="actionOpen"/>
-    <addaction name="actionSave"/>
-    <addaction name="separator"/>
-    <addaction name="actionOpenDecrypted"/>
-    <addaction name="actionSaveDecrypted"/>
-   </widget>
-   <addaction name="menuFile"/>
   </widget>
   <action name="actionOpen">
    <property name="text">
