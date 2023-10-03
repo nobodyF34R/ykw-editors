@@ -195,7 +195,7 @@ def edit_equipment(equipmentlist, index, equipment=None, amount=None):
     except:
         index = len(equipmentlist)
         equipmentlist.append({})
-    equipmentlist[index]["num1"] = index
+    equipmentlist[index]["num1"] = index+4096
     equipmentlist[index]["num2"] = index+1
     if equipment:
         try:
@@ -218,7 +218,7 @@ def edit_important(importantlist, index, important):
     except:
         index = len(importantlist)
         importantlist.append({})
-    importantlist[index]["num1"] = index
+    importantlist[index]["num1"] = index+8192
     importantlist[index]["num2"] = index+1
     try:
         importantlist[index]["important"] = reverse_importants[important]
@@ -237,7 +237,7 @@ def edit_soul(soullist, index, soul):
     except:
         index = len(soullist)
         soullist.append({})
-    soullist[index]["num1"] = index
+    soullist[index]["num1"] = index+12288
     soullist[index]["num2"] = index+1
     try:
         soullist[index]["soul"] = reverse_souls[soul]

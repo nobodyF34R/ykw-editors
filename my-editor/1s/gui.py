@@ -751,7 +751,7 @@ class Ui_MainWindow(object):
             (ui.EV_SPD, "ev_spd"),
         ]
         MainWindow.resize(550, 500)
-        ui.version_label.setText('1.0.0')
+        ui.version_label.setText('1.0.1')
         ui.nicknameEdit.setValidator(ByteValidator(60))
         ui.yokaiComboBox.addItems([f"{i:03d}: {name}" for i, name in enumerate(indexs[1:], start=1)])
         ui.itemComboBox.addItems([""] + [value for value in items.values()])
