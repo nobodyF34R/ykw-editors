@@ -202,7 +202,7 @@
                </sizepolicy>
               </property>
               <property name="title">
-               <string> IV</string>
+               <string>IV</string>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_6">
                <item>
@@ -1104,7 +1104,7 @@
             </rect>
            </property>
            <property name="text">
-            <string> TODO: add Gatcha and auto position.</string>
+            <string>TODO: add Gatcha and auto position.</string>
            </property>
           </widget>
          </widget>
@@ -1118,7 +1118,7 @@
            </rect>
           </property>
           <property name="text">
-           <string>WARNING: randomly editing you position will seriously mess up your save.</string>
+           <string>WARNING: randomly editing your position will seriously mess up your save.</string>
           </property>
          </widget>
         </widget>

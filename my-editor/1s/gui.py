@@ -661,7 +661,7 @@ class Ui_MainWindow(object):
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Nickname", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Level", None))
         self.groupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Stats", None))
-        self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u" IV", None))
+        self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"IV", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"HP", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Str", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Spr", None))
@@ -717,8 +717,8 @@ class Ui_MainWindow(object):
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Z", None))
         self.groupBox_17.setTitle(QCoreApplication.translate("MainWindow", u"General", None))
         self.label_29.setText(QCoreApplication.translate("MainWindow", u"Money", None))
-        self.label_23.setText(QCoreApplication.translate("MainWindow", u" TODO: add Gatcha and auto position.", None))
-        self.label_28.setText(QCoreApplication.translate("MainWindow", u"WARNING: randomly editing you position will seriously mess up your save.", None))
+        self.label_23.setText(QCoreApplication.translate("MainWindow", u"TODO: add Gatcha and auto position.", None))
+        self.label_28.setText(QCoreApplication.translate("MainWindow", u"WARNING: randomly editing your position will seriously mess up your save.", None))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.miscTab), QCoreApplication.translate("MainWindow", u"Misc", None))
         pass
     # retranslateUi
@@ -1108,8 +1108,14 @@ def edit(time, sun, position, location, money, yokailist, itemlist, equipmentlis
     MainWindow.show()
     app.exec()
 
-    globals()["money"] = int(ui.moneyEdit.text())
-    globals()["position"] = [int(ui.xEdit.text()), int(ui.yEdit.text()), int(ui.zEdit.text())]
+    try:
+        globals()["money"] = int(ui.moneyEdit.text())
+    except:
+        pass
+    try:
+        globals()["position"] = [int(ui.xEdit.text()), int(ui.yEdit.text()), int(ui.zEdit.text())]
+    except:
+        pass
 
     globals()["sun"] = ui.timeEdit.time().hour()//6
     globals()["time"] = round((((ui.timeEdit.time().hour()%6)*60 + ui.timeEdit.time().minute())/360)*65535)
