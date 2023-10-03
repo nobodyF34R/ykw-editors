@@ -55,14 +55,9 @@ if infile[-3:] == "ywd":
 else:
     from pathlib import Path
     import sys
-    sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+separator+"save-tools")
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"/save-tools")
     import yw_save
     with open(infile, "r+b") as f:
-        if 0:
-            with open(infile+"b", "r+b") as g: #TODO fix backup system
-                g.write(f.read())
-                f.seek(0)
-        
         out = main(yw_save.yw2_proc(f.read(), False, head=infile[-1::-1].split(separator,1)[1][-1::-1]+"head.yw"), edit) #out is the edited binary data
         f.seek(0)
         f.write(yw_save.yw2_proc(out, True, head=infile[-1::-1].split(separator,1)[1][-1::-1]+"head.yw"))

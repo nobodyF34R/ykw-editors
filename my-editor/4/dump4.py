@@ -306,7 +306,7 @@ def main(file, edit):
         while True:
             character = f.read(469)
 
-            if (get(character, 0) == 0 and index != 0) or index >= 6: #could be broken
+            if get(character, 2, 2) == 0 or index >= 6: #could be broken
                 break
 
             characterlist.append({
@@ -367,7 +367,7 @@ def main(file, edit):
         while True:
             yokai = f.read(469)
 
-            if get(yokai, 0) == 0 and index != 0: #could be broken
+            if get(yokai, 2, 2) == 0:
                 break
 
             yokailist.append({
@@ -428,7 +428,7 @@ def main(file, edit):
         while True:
             item = f.read(54)
 
-            if get(item, 0) == 0 and index != 0: #could be broken
+            if get(item, 2, 2) == 0:
                 break
 
             itemlist.append({
@@ -448,7 +448,7 @@ def main(file, edit):
         while True:
             specialsoul = f.read(54)
 
-            if get(specialsoul, 0) == 0 and index != 0: #could be broken
+            if get(specialsoul, 2, 2) == 0:
                 break
 
             specialsoullist.append({
@@ -468,7 +468,7 @@ def main(file, edit):
         while True:
             yokaisoul = f.read(80)
 
-            if get(yokaisoul, 0) == 0 and index != 0: #could be broken
+            if get(yokaisoul, 2, 2) == 0:
                 break
 
             yokaisoullist.append({
@@ -498,7 +498,7 @@ def main(file, edit):
         while True:
             equipment = f.read(63)
 
-            if get(equipment, 0) == 0 and index != 0: #could be broken
+            if get(equipment, 2, 2) == 0:
                 break
 
             equipmentlist.append({

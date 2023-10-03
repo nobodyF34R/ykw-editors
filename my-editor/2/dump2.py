@@ -350,7 +350,7 @@ def main(file, edit): #TODO fix yokai.
         f.seek(20744) # 20744 is always yokai info location. 1 yokai takes up 92 bytes. offset same for all files. 00
         while True:
             yokai = f.read(92)
-            if get(yokai, 0) == 0 and index != 0: #could be broken
+            if get(yokai, 2, 2) == 0:
                 break
 
             yokailist.append({
@@ -398,7 +398,7 @@ def main(file, edit): #TODO fix yokai.
         while True:
             item = f.read(12)
 
-            if get(item, 0) == 0 and index != 0: #could be broken
+            if get(item, 2, 2) == 0:
                 break
 
             itemlist.append({
@@ -417,7 +417,7 @@ def main(file, edit): #TODO fix yokai.
         while True:
             equipment = f.read(16)
 
-            if get(equipment, 0) == 0 and index != 0: #could be broken
+            if get(equipment, 2, 2) == 0:
                 break
 
             equipmentlist.append({
@@ -437,7 +437,7 @@ def main(file, edit): #TODO fix yokai.
         while True:
             important = f.read(8)
 
-            if get(important, 0) == 0 and index != 0: #could be broken
+            if get(important, 2, 2) == 0:
                 break
 
             importantlist.append({
@@ -455,7 +455,7 @@ def main(file, edit): #TODO fix yokai.
         while True:
             soul = f.read(12)
 
-            if get(soul, 0) == 0 and index != 0: #could be broken
+            if get(soul, 2, 2) == 0:
                 break
 
             soullist.append({

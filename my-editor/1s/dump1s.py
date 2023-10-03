@@ -253,7 +253,7 @@ def main(f, edit):
     f.seek(7696) #1 yokai takes up 124 bytes.
     while True:
         yokai = f.read(124)
-        if get(yokai, 0) == 0 and index != 0: #could be broken
+        if get(yokai, 2) == 0:
             break
 
         yokailist.append({ #some of these might take 2 bytes instead of 1
@@ -304,7 +304,7 @@ def main(f, edit):
     while True:
         item = f.read(12)
 
-        if get(item, 0) == 0 and index != 0: #could be broken
+        if get(item, 2, 2) == 0:
             break
 
         itemlist.append({
@@ -323,7 +323,7 @@ def main(f, edit):
     while True:
         equipment = f.read(16)
 
-        if get(equipment, 0) == 0 and index != 0: #could be broken
+        if get(equipment, 2, 2) == 0:
             break
 
         equipmentlist.append({
@@ -343,7 +343,7 @@ def main(f, edit):
     while True:
         important = f.read(8)
 
-        if get(important, 0) == 0 and index != 0: #could be broken
+        if get(important, 2, 2) == 0:
             break
 
         importantlist.append({

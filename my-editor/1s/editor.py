@@ -39,10 +39,7 @@ f = open(infile, "r+b")
 if infile.endswith(".yw"):
     from pathlib import Path
     import sys
-    try:
-        sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"/save-tools")
-    except:
-        sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"\\save-tools") #windows jank
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"/save-tools")
     import yw_save
 
     import io

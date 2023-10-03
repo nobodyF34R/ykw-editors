@@ -751,29 +751,30 @@ class Ui_MainWindow(object):
             (ui.EV_SPD, "ev_spd"),
         ]
         MainWindow.resize(550, 500)
-        ui.version_label.setText('1.0.1')
-        ui.nicknameEdit.setValidator(ByteValidator(60))
+        ui.version_label.setText('1.0.3')
         ui.yokaiComboBox.addItems([f"{i:03d}: {name}" for i, name in enumerate(indexs[1:], start=1)])
         ui.itemComboBox.addItems([""] + [value for value in items.values()])
         ui.equipmentComboBox.addItems([""] + [value for value in equipments.values()])
         ui.importantComboBox.addItems([""] + [value for value in importants.values()])
         locationList = [value for value in locations.values()]
         ui.locationComboBox.addItems(locationList)
-        ui.attitudeComboBox.addItems(attitudes)
-        ui.setMaxStats.clicked.connect(setMaxStatsClicked)
         ui.listWidget.addItems([yokais[y["yokai"]] for y in yokailist])
         ui.itemList.addItems([items[i["item"]] for i in itemlist])
         ui.equipmentList.addItems([equipments[e["equipment"]] for e in equipmentlist])
         ui.importantList.addItems([importants[i["important"]] for i in importantlist])
-        for s in statWigits:
-            s.valueChanged.connect(updateStats)
-        ui.listWidget.itemClicked.connect(setCurrentYokai)
-        ui.listWidget.setCurrentRow(0)
-        setCurrentYokai()
-        ui.advanced.clicked.connect(advancedClicked)
-        ui.yokaiComboBox.activated.connect(updateYokai)
-        ui.attitudeComboBox.activated.connect(updateAttitude)
-        ui.nicknameEdit.textChanged.connect(updateNickname)
+        ui.attitudeComboBox.addItems(attitudes)
+        ui.nicknameEdit.setValidator(ByteValidator(60))
+        if yokailist != []:
+            for s in statWigits:
+                s.valueChanged.connect(updateStats)
+            ui.listWidget.itemClicked.connect(setCurrentYokai)
+            ui.listWidget.setCurrentRow(0)
+            setCurrentYokai()
+            ui.setMaxStats.clicked.connect(setMaxStatsClicked)
+            ui.advanced.clicked.connect(advancedClicked)
+            ui.yokaiComboBox.activated.connect(updateYokai)
+            ui.attitudeComboBox.activated.connect(updateAttitude)
+            ui.nicknameEdit.textChanged.connect(updateNickname)
         ui.newItemButton.clicked.connect(newItemClicked)
         ui.currentItemButton.clicked.connect(currentItemClicked)
         ui.newEquipmentButton.clicked.connect(newEquipmentClicked)
@@ -1065,10 +1066,7 @@ def verifyFile(infile):
         if infile.endswith(".yw"):
             from pathlib import Path
             import sys
-            try:
-                sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"/save-tools")
-            except:
-                sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"\\save-tools") #windows jank
+            sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"/save-tools")
             import yw_save
 
             import io
