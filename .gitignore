@@ -70,3 +70,4 @@ target/
 *.ywd
 my-editor/4/0/
 *.yw copy
+resources_rc.py
