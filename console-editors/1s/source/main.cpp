@@ -6,12 +6,8 @@
 #include <cstdint>
 #include <algorithm>
 #include <stdexcept>
-
-#include <iostream>
-#include <vector>
 #include <fstream>
-#include <cstdint>
-#include <algorithm>
+#include <map>
 
 class CRC32 {
 public:
@@ -215,7 +211,8 @@ std::vector<uint8_t> yw_proc(const std::vector<uint8_t> &data, bool isEncrypt) {
     if (!isEncrypt) {
         uint32_t calculated_crc32 = CRC32::calcCRC32(std::vector<uint8_t>(data.begin(), data.end() - 8));
         if (calculated_crc32 != new_crc32) {
-            std::cout << "ERROR: Checksum does not match" << std::endl;
+            std::cout << "\nERROR: Checksum does not match" << std::endl;
+            //should maybe break here
         }
     }
 
@@ -341,30 +338,60 @@ int main(int argc, char** argv) {
                             encryptedData.insert(encryptedData.end(), buffer, buffer + bytesRead);
                         }
                         
-                        std::vector<uint8_t> decryptedData = yw_proc(encryptedData, true);
+                        std::vector<uint8_t> decryptedData = yw_proc(encryptedData, false);
 
-                        printf("Decrypted data: ");
-                        int bytes = 0;
-                        for (const auto& byte : decryptedData) {
-                            if (bytes == 120) {
-                                break;
-                            }
-                            printf("%02x", byte);
-                            bytes++;
-                        }
+                        // printf("Decrypted data: ");
+                        // int bytes = 0;
+                        // for (const auto& byte : decryptedData) {
+                        //     if (bytes == 120) {
+                        //         break;
+                        //     }
+                        //     printf("%02x", byte);
+                        //     bytes++;
+                        // }
 
-                        printf("\n7 bytes at 112: ");
-                        for (int i = 112; i < 119; i++) {
-                            printf("%c", decryptedData[i]);
-                        }
+                        //EDIT HERE
+
+                        // uint64_t* location = reinterpret_cast<uint64_t*>(& decryptedData[112]);
+                        // printf("\nLocation: %lu", *location);
+
+                        // // printf("\nLocation: ");
+                        // // for (int i = 112; i < 119; i++) {
+                        // //     printf("%c", decryptedData[i]);
+                        // // }
+
+                        // uint32_t* x = reinterpret_cast<uint32_t*>(& decryptedData[20]);
+                        // printf("\nx: %u", *x);
+                        // uint32_t* y = reinterpret_cast<uint32_t*>(& decryptedData[24]);
+                        // printf("\nx: %u", *y);
+                        // uint32_t* z = reinterpret_cast<uint32_t*>(& decryptedData[28]);
+                        // printf("\nx: %u", *z);
+
+                        // // Open the file for appending
+                        // std::ofstream json("mapcoord.json", std::ios::app | std::ios::out);
+
+                        // // Append the data to the file
+                        // json << *location << ": [" << *x << ", " << *y << ", " << *z << "]\n";
+
+                        // // Close the file
+                        // json.close();
+                        
+                        // //increase money by 1
+                        // uint32_t* money = reinterpret_cast<uint32_t*>(& decryptedData[37620]); 
+                        // (*money) = (*money) + 1;
+                        // printf("\nmoney: %u\n", *money);
+
+                        fseek(file, 0, SEEK_SET);
+                        fwrite(yw_proc(decryptedData, true).data(), 1, decryptedData.size(), file); //could hardcode 47564 or use fileSize
+                        fclose(file);
 
                         std::string bakfilePath = filePath;
                         bakfilePath.replace(bakfilePath.rfind(".yw"), 3, ".bak");
                         FILE* bakfile = fopen(bakfilePath.c_str(), "wb");
+                        fwrite(encryptedData.data(), 1, encryptedData.size(), bakfile);
+                        fclose(bakfile);
 
-                        fseek(file, 0, SEEK_SET);
-                        fwrite(yw_proc(decryptedData, false).data(), 1, decryptedData.size(), file); //could hardcode 47564 or use fileSize
-                        fclose(file);
+                        fsdevCommitDevice("save"); //TODO test this
                     }
                 }
             }
