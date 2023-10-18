@@ -27,7 +27,10 @@ affection is related to when a yokai gets a stat increase. based on number of ba
 
 TODO test maxes
 
-
+YoukaiCountMax = 240
+ItemCountMax = 256
+EquipmentCountMax = 100
+ImportantCountMax = 150
 
 
 

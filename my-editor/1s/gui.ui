@@ -486,10 +486,10 @@
              <item row="1" column="1">
               <widget class="QSpinBox" name="itemAmount">
                <property name="maximum">
-                <number>255</number>
+                <number>99</number>
                </property>
                <property name="value">
-                <number>255</number>
+                <number>99</number>
                </property>
               </widget>
              </item>

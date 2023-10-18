@@ -352,8 +352,8 @@ class Ui_MainWindow(object):
 
         self.itemAmount = QSpinBox(self.groupBox_5)
         self.itemAmount.setObjectName(u"itemAmount")
-        self.itemAmount.setMaximum(255)
-        self.itemAmount.setValue(255)
+        self.itemAmount.setMaximum(99)
+        self.itemAmount.setValue(99)
 
         self.formLayout_3.setWidget(1, QFormLayout.FieldRole, self.itemAmount)
 
