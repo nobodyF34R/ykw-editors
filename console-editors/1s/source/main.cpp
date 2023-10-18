@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <stdexcept>
 #include <fstream>
+#include <map>
 #include "cipher.h"
 #include "structs.h"
 
@@ -145,6 +146,131 @@ int main(int argc, char** argv) {
                         uint32_t* money = reinterpret_cast<uint32_t*>(& decryptedData[37620]); 
 
 
+                        int16_t offset;
+
+
+                        std::vector<std::map<std::string, int>> yokailist;
+                        offset = 7696;
+                        for (int i = 0; i < 240; i++) {
+
+                            if (decryptedData[offset+2] == 0) {
+                                break;
+                            }
+
+                            std::map<std::string, int> dictionary;
+                            dictionary["num1"] = *reinterpret_cast<uint16_t*>(&decryptedData[offset]);
+                            dictionary["num2"] = *reinterpret_cast<uint16_t*>(&decryptedData[offset+2]);
+                            dictionary["yokai"] = *reinterpret_cast<uint32_t*>(&decryptedData[offset+4]);
+                            //nickname TODO
+                            dictionary["attack"] = *reinterpret_cast<uint8_t*>(&decryptedData[offset+78]);
+                            dictionary["technique"] = *reinterpret_cast<uint8_t*>(&decryptedData[offset+82]);
+                            dictionary["soultimate"] = *reinterpret_cast<uint8_t*>(&decryptedData[offset+86]);
+                            dictionary["xp"] = *reinterpret_cast<uint32_t*>(&decryptedData[offset+88]);
+                            dictionary["hp"] = *reinterpret_cast<uint16_t*>(&decryptedData[offset+92]);
+                            dictionary["soul"] = *reinterpret_cast<uint16_t*>(&decryptedData[offset+94]);
+                            dictionary["tiv_hp"] = *reinterpret_cast<uint8_t*>(&decryptedData[offset+96]);
+                            dictionary["tiv_str"] = *reinterpret_cast<uint8_t*>(&decryptedData[offset+97]);
+                            dictionary["tiv_spr"] = *reinterpret_cast<uint8_t*>(&decryptedData[offset+98]);
+                            dictionary["tiv_def"] = *reinterpret_cast<uint8_t*>(&decryptedData[offset+99]);
+                            dictionary["tiv_spd"] = *reinterpret_cast<uint8_t*>(&decryptedData[offset+100]);
+                            //half bytes TODO
+                            dictionary["ev_hp"] = *reinterpret_cast<uint8_t*>(&decryptedData[offset+106]);
+                            dictionary["ev_str"] = *reinterpret_cast<uint8_t*>(&decryptedData[offset+107]);
+                            dictionary["ev_spr"] = *reinterpret_cast<uint8_t*>(&decryptedData[offset+108]);
+                            dictionary["ev_def"] = *reinterpret_cast<uint8_t*>(&decryptedData[offset+109]);
+                            dictionary["ev_spd"] = *reinterpret_cast<uint8_t*>(&decryptedData[offset+110]);
+                            dictionary["level"] = *reinterpret_cast<uint8_t*>(&decryptedData[offset+116]);
+                            dictionary["attitude"] = *reinterpret_cast<uint8_t*>(&decryptedData[offset+117]);
+
+                            yokailist.push_back(dictionary);
+                            offset += 124;
+                        }
+                        const int8_t original_yokai_amount = yokailist.size();
+
+                        std::vector<std::map<std::string, int>> itemlist;
+                        offset = 1784;
+                        for (int i = 0; i < 256; i++) {
+
+                            if (decryptedData[offset+2] == 0) {
+                                break;
+                            }
+
+                            std::map<std::string, int> dictionary;
+                            dictionary["num1"] = *reinterpret_cast<uint16_t*>(&decryptedData[offset]);
+                            dictionary["num2"] = *reinterpret_cast<uint16_t*>(&decryptedData[offset+2]);
+                            dictionary["item"] = *reinterpret_cast<uint32_t*>(&decryptedData[offset+4]);
+                            dictionary["amount"] = *reinterpret_cast<uint8_t*>(&decryptedData[offset+8]);
+                            
+                            itemlist.push_back(dictionary);
+                            offset += 12;
+                        }
+                        const int8_t original_item_amount = itemlist.size();
+
+                        std::vector<std::map<std::string, int>> equipmentlist;
+                        offset = 4868;
+                        for (int i = 0; i < 100; i++) {
+
+                            if (decryptedData[offset+2] == 0) {
+                                break;
+                            }
+
+                            std::map<std::string, int> dictionary;
+                            dictionary["num1"] = *reinterpret_cast<uint16_t*>(&decryptedData[offset]);
+                            dictionary["num2"] = *reinterpret_cast<uint16_t*>(&decryptedData[offset+2]);
+                            dictionary["equipment"] = *reinterpret_cast<uint32_t*>(&decryptedData[offset+4]);
+                            dictionary["amount"] = *reinterpret_cast<uint8_t*>(&decryptedData[offset+8]);
+
+                            equipmentlist.push_back(dictionary);
+                            offset += 12;
+                        }
+                        const int8_t original_equipment_amount = equipmentlist.size();
+
+                        std::vector<std::map<std::string, int>> importantlist;
+                        offset = 6480;
+                        for (int i = 0; i < 150; i++) {
+
+                            if (decryptedData[offset+2] == 0) {
+                                break;
+                            }
+
+                            std::map<std::string, int> dictionary;
+                            dictionary["num1"] = *reinterpret_cast<uint16_t*>(&decryptedData[offset]);
+                            dictionary["num2"] = *reinterpret_cast<uint16_t*>(&decryptedData[offset+2]);
+                            dictionary["important"] = *reinterpret_cast<uint32_t*>(&decryptedData[offset+4]);
+
+                            importantlist.push_back(dictionary);
+                            offset += 8;
+                        }
+                        const int8_t original_important_amount = importantlist.size();
+
+                        // std::vector<int> medalliumlist; //TODO
+                        // offset = 1476;
+                        // importantlist.push_back();
+
+                        // printf("\nYokai:");
+
+                        // for (int i = 0; i < yokailist.size(); i++) {
+                        //     printf("\n%d: %u", i, yokailist[i]["yokai"]);
+                        // }
+
+                        // printf("\n\nItems:");
+
+                        // for (int i = 0; i < itemlist.size(); i++) {
+                        //     printf("\n%d: %u", i, itemlist[i]["item"]);
+                        // }
+
+                        // printf("\n\nEquipment:");
+
+                        // for (int i = 0; i < equipmentlist.size(); i++) {
+                        //     printf("\n%d: %u", i, equipmentlist[i]["equipment"]);
+                        // }
+
+                        // printf("\n\nImportant:");
+
+                        // for (int i = 0; i < importantlist.size(); i++) {
+                        //     printf("\n%d: %u", i, importantlist[i]["important"]);
+                        // }
+                        
                         bool save = true;
 
                         printf("\n+ to save and exit, - to exit without saving, A to increment money.");
@@ -179,7 +305,7 @@ int main(int argc, char** argv) {
                             FILE* bakfile = fopen(bakfilePath.c_str(), "wb");
                             fwrite(encryptedData.data(), 1, encryptedData.size(), bakfile);
                             fclose(bakfile);
-                            fsdevCommitDevice("save"); //TODO test this
+                            fsdevCommitDevice("save");
                         }
                         else {
                             fclose(file);
