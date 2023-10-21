@@ -200,30 +200,30 @@ int main(int argc, char** argv) {
                         printf("\nYokai:");
 
                         for (int i = 0; i < yokailist.size(); i++) {
-                            printf("\n%d: %u", i, *yokailist[i].yokai);
+                            wprintf(L"\n%d: %u %s", i, yokailist[i].yokai, yokailist[i].nickname); //the unicode is not compatible with the terminal (could do a regular printf but it would be unreadable)
                         }
 
                         printf("\n\nItems:");
 
                         for (int i = 0; i < itemlist.size(); i++) {
-                            printf("\n%d: %u", i, *itemlist[i].item);
+                            printf("\n%d: %u", i, itemlist[i].item);
                         }
 
                         printf("\n\nEquipment:");
 
                         for (int i = 0; i < equipmentlist.size(); i++) {
-                            printf("\n%d: %u", i, *equipmentlist[i].equipment);
+                            printf("\n%d: %u", i, equipmentlist[i].equipment);
                         }
 
                         printf("\n\nImportant:");
 
                         for (int i = 0; i < importantlist.size(); i++) {
-                            printf("\n%d: %u", i, *importantlist[i].important);
+                            printf("\n%d: %u", i, importantlist[i].important);
                         }
                         
                         bool save = true;
 
-                        printf("\n+ to save and exit, - to exit without saving \nA to increment money, B to set all yokai to togenyan");
+                        printf("\n\n+ to save and exit, - to exit without saving \nA to increment money, B to set all yokai to togenyan");
                         printf("\nmoney: %u", *money);
                         while (appletMainLoop()) {
                             padUpdate(&pad);

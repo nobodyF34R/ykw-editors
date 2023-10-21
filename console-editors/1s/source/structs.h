@@ -7,7 +7,7 @@ struct Yokai {
     uint16_t* num1;
     uint16_t* num2;
     uint32_t* yokai;
-    // char* nickname; //TODO
+    char* nickname; //wide char
     uint8_t* attack;
     uint8_t* technique;
     uint8_t* soultimate;
@@ -40,7 +40,7 @@ struct Yokai {
         num1 = (uint16_t*)(&decryptedData[offset]);
         num2 = (uint16_t*)(&decryptedData[offset+2]);
         yokai = (uint32_t*)(&decryptedData[offset+4]);
-        // ignore nickname for now
+        nickname = (char*)(&decryptedData[offset + 8]);
         attack = &decryptedData[offset+78];
         technique = &decryptedData[offset+82];
         soultimate = &decryptedData[offset+86];
