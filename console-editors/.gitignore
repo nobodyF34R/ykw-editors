@@ -1,6 +1,7 @@
 *.elf
 *.nacp
 *.nro
+*.ovl
 *.3dsx
 *.rsf
 *.smdh
