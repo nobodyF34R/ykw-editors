@@ -7,9 +7,9 @@
 #include <algorithm>
 #include <stdexcept>
 #include <fstream>
-#include <map>
 #include "cipher.h"
 #include "structs.h"
+#include "data.h"
 
 Result get_save(u64* application_id, AccountUid* uid) {
     Result rc = 0;
@@ -200,25 +200,25 @@ int main(int argc, char** argv) {
                         printf("\nYokai:");
 
                         for (int i = 0; i < yokailist.size(); i++) {
-                            wprintf(L"\n%d: %u %s", i, yokailist[i].yokai, yokailist[i].nickname); //the unicode is not compatible with the terminal (could do a regular printf but it would be unreadable)
+                            printf("\n%s %s", yokais.at(*yokailist[i].yokai), yokailist[i].nickname); //unicode is not compatible with the terminal
                         }
 
                         printf("\n\nItems:");
 
                         for (int i = 0; i < itemlist.size(); i++) {
-                            printf("\n%d: %u", i, itemlist[i].item);
+                            printf("\n%s", items.at(*itemlist[i].item));
                         }
 
                         printf("\n\nEquipment:");
 
                         for (int i = 0; i < equipmentlist.size(); i++) {
-                            printf("\n%d: %u", i, equipmentlist[i].equipment);
+                            printf("\n%s", equipments.at(*equipmentlist[i].equipment));
                         }
 
                         printf("\n\nImportant:");
 
                         for (int i = 0; i < importantlist.size(); i++) {
-                            printf("\n%d: %u", i, importantlist[i].important);
+                            printf("\n%s", importants.at(*importantlist[i].important));
                         }
                         
                         bool save = true;
@@ -271,7 +271,6 @@ int main(int argc, char** argv) {
             }
 
             closedir(dir);
-            std::cout << "\nDone." << std::endl;
         }
 
         fsdevUnmountDevice("save");
