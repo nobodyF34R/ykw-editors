@@ -53,7 +53,7 @@ int main(int argc, char** argv) {
     struct dirent* ent;
 
     AccountUid uid = {0};
-    u64 application_id = 0x0100c0000ceea000; // ApplicationId of the save to mount. TODO add game selection
+    u64 application_id; // ApplicationId of the save to mount.
 
     consoleInit(NULL);
 
@@ -61,6 +61,44 @@ int main(int argc, char** argv) {
 
     PadState pad;
     padInitializeDefault(&pad);
+
+    int selectedGame = 0;
+    std::vector<u64> games = {0x0100c0000ceea000, 0x010086c00af7c000};
+                
+    while (appletMainLoop()) {
+        consoleUpdate(NULL);
+        padUpdate(&pad);
+        u64 kDown = padGetButtonsDown(&pad);
+
+        if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus) {
+            fsdevUnmountDevice("save");
+            consoleExit(NULL);
+            return 0;
+        }
+        if (kDown & HidNpadButton_Up) {
+            selectedGame--;
+            if (selectedGame < 0) {
+                selectedGame = games.size() - 1;
+            }
+        }
+        if (kDown & HidNpadButton_Down) {
+            selectedGame++;
+            if (selectedGame >= games.size()) {
+                selectedGame = 0;
+            }
+        }
+        if (kDown & HidNpadButton_A) {
+            if (selectedGame != 1) { //TODO 4 support
+                application_id = games[selectedGame];
+                break;
+            } else {
+                printf("4 is not supported");
+            }
+        }
+        printf("\x1b[1;1H\x1b[2JSelect a game:\n");
+        std::cout << (0 == selectedGame ? "> " : "  ") << "1s" << std::endl; //hardcoded for now?
+        std::cout << (1 == selectedGame ? "> " : "  ") << "4" << std::endl;
+    }
 
     if (R_FAILED(get_save(&application_id, &uid))) {
         rc = accountInitialize(AccountServiceType_Application);
@@ -79,9 +117,9 @@ int main(int argc, char** argv) {
         }
     }
 
-    if (R_SUCCEEDED(rc)) {
-        std::cout << "application_id=0x" << std::hex << application_id << " uid: 0x" << uid.uid[1] << " 0x" << uid.uid[0] << std::dec << std::endl;
-    }
+    // if (R_SUCCEEDED(rc)) {
+    //     std::cout << "application_id=0x" << std::hex << application_id << " uid: 0x" << uid.uid[1] << " 0x" << uid.uid[0] << std::dec << std::endl;
+    // }
 
     if (R_SUCCEEDED(rc)) {
         rc = fsdevMountSaveData("save", application_id, uid);
@@ -100,7 +138,7 @@ int main(int argc, char** argv) {
         } else {
             std::vector<std::string> saveFiles;
             while ((ent = readdir(dir))) {
-                if (ent->d_name[6] != 'b') { //make sure it's not a .bak TODO make less janky
+                if (ent->d_name[6] != 'b' & ent->d_name[5] != 'b') { //make sure it's not a .bak TODO make less janky
                     saveFiles.push_back(ent->d_name);
                 }
             }
@@ -114,7 +152,7 @@ int main(int argc, char** argv) {
                     padUpdate(&pad);
                     u64 kDown = padGetButtonsDown(&pad);
 
-                    if (kDown & HidNpadButton_Plus) {
+                    if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus) {
                         break;
                     }
                     if (kDown & HidNpadButton_Up) {
@@ -177,11 +215,11 @@ int main(int argc, char** argv) {
                                     fwrite(yw_proc(decryptedData, true).data(), 1, 10176, file);
                                     fclose(file);
 
-                                    std::string bakfilePath = filePath;
-                                    bakfilePath.replace(bakfilePath.rfind(".yw"), 3, ".bak");
-                                    FILE* bakfile = fopen(bakfilePath.c_str(), "wb");
-                                    fwrite(encryptedData.data(), 1, 10176, bakfile);
-                                    fclose(bakfile);
+                                    // std::string bakfilePath = filePath;
+                                    // bakfilePath.replace(bakfilePath.rfind(".yw"), 3, ".bak");
+                                    // FILE* bakfile = fopen(bakfilePath.c_str(), "wb");
+                                    // fwrite(encryptedData.data(), 1, 10176, bakfile);
+                                    // fclose(bakfile);
                                     fsdevCommitDevice("save");
                                 }
                                 else {
@@ -346,11 +384,11 @@ int main(int argc, char** argv) {
                                     fwrite(yw_proc(decryptedData, true).data(), 1, 47564, file);
                                     fclose(file);
 
-                                    std::string bakfilePath = filePath;
-                                    bakfilePath.replace(bakfilePath.rfind(".yw"), 3, ".bak");
-                                    FILE* bakfile = fopen(bakfilePath.c_str(), "wb");
-                                    fwrite(encryptedData.data(), 1, 47564, bakfile);
-                                    fclose(bakfile);
+                                    // std::string bakfilePath = filePath;
+                                    // bakfilePath.replace(bakfilePath.rfind(".yw"), 3, ".bak");
+                                    // FILE* bakfile = fopen(bakfilePath.c_str(), "wb");
+                                    // fwrite(encryptedData.data(), 1, 47564, bakfile);
+                                    // fclose(bakfile);
                                     fsdevCommitDevice("save");
                                 }
                                 else {
