@@ -3,6 +3,12 @@
 
 #include <iostream>
 
+struct Head { //TODO
+
+    Head(std::vector<uint8_t>& decryptedData, int16_t offset) {
+    }
+};
+
 struct Yokai {
     uint16_t* num1;
     uint16_t* num2;

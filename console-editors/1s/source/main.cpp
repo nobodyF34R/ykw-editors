@@ -98,181 +98,271 @@ int main(int argc, char** argv) {
         if (dir == NULL) {
             std::cout << "Failed to open dir." << std::endl;
         } else {
+            std::vector<std::string> saveFiles;
             while ((ent = readdir(dir))) {
-                if (strcmp(ent->d_name, "game1.yw") == 0) { //TODO add save selection
-                    char filePath[256];
-                    snprintf(filePath, sizeof(filePath), "save:/%s", ent->d_name);
-                    FILE* file = fopen(filePath, "r+b");
+                if (ent->d_name[6] != 'b') { //make sure it's not a .bak TODO make less janky
+                    saveFiles.push_back(ent->d_name);
+                }
+            }
+            if (saveFiles.empty()) {
+                std::cout << "No save files found." << std::endl;
+            } else {
+                int selectedSave = 0;
+                
+                while (appletMainLoop()) {
+                    consoleUpdate(NULL);
+                    padUpdate(&pad);
+                    u64 kDown = padGetButtonsDown(&pad);
 
-                    if (file == NULL) {
-                        std::cout << "Failed to open file " << filePath << "." << std::endl;
-                    } else {
-                        char buffer[256];
-                        size_t bytesRead;
-
-                        std::vector<uint8_t> encryptedData;
-
-                        while ((bytesRead = fread(buffer, 1, sizeof(buffer), file)) > 0) {
-                            encryptedData.insert(encryptedData.end(), buffer, buffer + bytesRead);
+                    if (kDown & HidNpadButton_Plus) {
+                        break;
+                    }
+                    if (kDown & HidNpadButton_Up) {
+                        selectedSave--;
+                        if (selectedSave < 0) {
+                            selectedSave = saveFiles.size() - 1;
                         }
-                        
-                        std::vector<uint8_t> decryptedData = yw_proc(encryptedData, false);
-
-                        // printf("Decrypted data: ");
-                        // int bytes = 0;
-                        // for (const auto& byte : decryptedData) {
-                        //     if (bytes == 120) {
-                        //         break;
-                        //     }
-                        //     printf("%02x", byte);
-                        //     bytes++;
-                        // }
-
-                        //EDIT HERE
-                        
-                        uint32_t* x = (uint32_t*)(&decryptedData[20]);
-                        uint32_t* y = (uint32_t*)(& decryptedData[24]);
-                        uint32_t* z = (uint32_t*)(& decryptedData[28]);
-
-                        uint64_t* location = (uint64_t*)(& decryptedData[112]);
-
-                        uint16_t* time = (uint16_t*)(& decryptedData[1752]);
-                        uint8_t* sun = (uint8_t*)(& decryptedData[1754]);
-
-                        uint32_t* money = (uint32_t*)(& decryptedData[37620]); 
-
-
-                        int16_t offset;
-
-
-                        std::vector<Yokai> yokailist;
-                        offset = 7696;
-                        for (int i = 0; i < 240; i++) {
-
-                            if (decryptedData[offset+2] == 0) {
-                                break;
-                            }
-
-                            yokailist.push_back(Yokai(decryptedData, offset));
-                            offset += 124;
+                    }
+                    if (kDown & HidNpadButton_Down) {
+                        selectedSave++;
+                        if (selectedSave >= saveFiles.size()) {
+                            selectedSave = 0;
                         }
+                    }
+                    printf("\x1b[1;1H\x1b[2JSelect a save file:\n");
+                    for (int i = 0; i < saveFiles.size(); i++) {
+                        std::cout << (i == selectedSave ? "> " : "  ") << saveFiles[i] << std::endl;
+                    }
+                    if (kDown & HidNpadButton_A) {
+                        if (saveFiles[selectedSave] == "head.yw") {
+                            char filePath[15] = "save:/";
+                            strcat(filePath, saveFiles[selectedSave].c_str());
+                            FILE* file = fopen(filePath, "r+b");
 
-                        std::vector<Item> itemlist;
-                        offset = 1784;
-                        for (int i = 0; i < 256; i++) {
+                            if (file == NULL) {
+                                std::cout << "Failed to open file " << filePath << "." << std::endl;
+                            } else {
+                                char buffer[256];
+                                size_t bytesRead;
 
-                            if (decryptedData[offset+2] == 0) {
-                                break;
-                            }
-                            
-                            itemlist.push_back(Item(decryptedData, offset));
-                            offset += 12;
-                        }
+                                std::vector<uint8_t> encryptedData;
 
-                        std::vector<Equipment> equipmentlist;
-                        offset = 4868;
-                        for (int i = 0; i < 100; i++) {
-
-                            if (decryptedData[offset+2] == 0) {
-                                break;
-                            }
-
-                            equipmentlist.push_back(Equipment(decryptedData, offset));
-                            offset += 12;
-                        }
-
-                        std::vector<Important> importantlist;
-                        offset = 6480;
-                        for (int i = 0; i < 150; i++) {
-
-                            if (decryptedData[offset+2] == 0) {
-                                break;
-                            }
-
-                            importantlist.push_back(Important(decryptedData, offset));
-                            offset += 8;
-                        }
-
-                        // std::vector<int> medalliumlist; //TODO
-                        // offset = 1476;
-                        // importantlist.push_back();
-
-                        printf("\nYokai:");
-
-                        for (int i = 0; i < yokailist.size(); i++) {
-                            printf("\n%s %s", yokais.at(*yokailist[i].yokai), yokailist[i].nickname); //unicode is not compatible with the terminal
-                        }
-
-                        printf("\n\nItems:");
-
-                        for (int i = 0; i < itemlist.size(); i++) {
-                            printf("\n%s", items.at(*itemlist[i].item));
-                        }
-
-                        printf("\n\nEquipment:");
-
-                        for (int i = 0; i < equipmentlist.size(); i++) {
-                            printf("\n%s", equipments.at(*equipmentlist[i].equipment));
-                        }
-
-                        printf("\n\nImportant:");
-
-                        for (int i = 0; i < importantlist.size(); i++) {
-                            printf("\n%s", importants.at(*importantlist[i].important));
-                        }
-                        
-                        bool save = true;
-
-                        printf("\n\n+ to save and exit, - to exit without saving \nA to increment money, B to set all yokai to togenyan");
-                        printf("\nmoney: %u", *money);
-                        while (appletMainLoop()) {
-                            padUpdate(&pad);
-                            u64 kDown = padGetButtonsDown(&pad);
-
-                            if (kDown & HidNpadButton_Plus){
-                                break;
-                            }
-                            if (kDown & HidNpadButton_Minus){
-                                save = false;
-                                break;
-                            }
-                            if (kDown & HidNpadButton_A){
-                                (*money)++;
-                                printf("\nmoney: %u", *money);
-                            }
-                            if (kDown & HidNpadButton_B){
-                                for (int i = 0; i < yokailist.size(); i++) {
-                                    *yokailist[i].yokai = 72463062;
+                                while ((bytesRead = fread(buffer, 1, sizeof(buffer), file)) > 0) {
+                                    encryptedData.insert(encryptedData.end(), buffer, buffer + bytesRead);
                                 }
-                                printf("\nall yokai set to togenyan");
+                                
+                                std::vector<uint8_t> decryptedData = yw_proc(encryptedData, false);
+
+                                bool save = true;
+
+                                printf("\n\n+ to save and exit, - to exit without saving\nhead editing not implemented yet");
+                                while (appletMainLoop()) {
+                                    padUpdate(&pad);
+                                    u64 kDown = padGetButtonsDown(&pad);
+
+                                    if (kDown & HidNpadButton_Plus){
+                                        break;
+                                    }
+                                    if (kDown & HidNpadButton_Minus){
+                                        save = false;
+                                        break;
+                                    }
+
+                                    consoleUpdate(NULL);
+                                }
+
+                                
+                                if (save) {
+                                    fseek(file, 0, SEEK_SET);
+                                    fwrite(yw_proc(decryptedData, true).data(), 1, 10176, file);
+                                    fclose(file);
+
+                                    std::string bakfilePath = filePath;
+                                    bakfilePath.replace(bakfilePath.rfind(".yw"), 3, ".bak");
+                                    FILE* bakfile = fopen(bakfilePath.c_str(), "wb");
+                                    fwrite(encryptedData.data(), 1, 10176, bakfile);
+                                    fclose(bakfile);
+                                    fsdevCommitDevice("save");
+                                }
+                                else {
+                                    fclose(file);
+                                }
+
                             }
+                        } else {
+                            char filePath[15] = "save:/";
+                            strcat(filePath, saveFiles[selectedSave].c_str());
+                            FILE* file = fopen(filePath, "r+b");
 
-                            consoleUpdate(NULL);
-                        }
+                            if (file == NULL) {
+                                std::cout << "Failed to open file " << filePath << "." << std::endl;
+                            } else {
+                                char buffer[256];
+                                size_t bytesRead;
 
-                        
-                        if (save) {
-                            fseek(file, 0, SEEK_SET);
-                            fwrite(yw_proc(decryptedData, true).data(), 1, 47564, file);
-                            fclose(file);
+                                std::vector<uint8_t> encryptedData;
 
-                            std::string bakfilePath = filePath;
-                            bakfilePath.replace(bakfilePath.rfind(".yw"), 3, ".bak");
-                            FILE* bakfile = fopen(bakfilePath.c_str(), "wb");
-                            fwrite(encryptedData.data(), 1, 47564, bakfile);
-                            fclose(bakfile);
-                            fsdevCommitDevice("save");
-                        }
-                        else {
-                            fclose(file);
+                                while ((bytesRead = fread(buffer, 1, sizeof(buffer), file)) > 0) {
+                                    encryptedData.insert(encryptedData.end(), buffer, buffer + bytesRead);
+                                }
+                                
+                                std::vector<uint8_t> decryptedData = yw_proc(encryptedData, false);
+
+                                // printf("Decrypted data: ");
+                                // int bytes = 0;
+                                // for (const auto& byte : decryptedData) {
+                                //     if (bytes == 120) {
+                                //         break;
+                                //     }
+                                //     printf("%02x", byte);
+                                //     bytes++;
+                                // }
+
+                                //EDIT HERE
+                                
+                                uint32_t* x = (uint32_t*)(&decryptedData[20]);
+                                uint32_t* y = (uint32_t*)(& decryptedData[24]);
+                                uint32_t* z = (uint32_t*)(& decryptedData[28]);
+
+                                uint64_t* location = (uint64_t*)(& decryptedData[112]);
+
+                                uint16_t* time = (uint16_t*)(& decryptedData[1752]);
+                                uint8_t* sun = (uint8_t*)(& decryptedData[1754]);
+
+                                uint32_t* money = (uint32_t*)(& decryptedData[37620]); 
+
+
+                                int16_t offset;
+
+
+                                std::vector<Yokai> yokailist;
+                                offset = 7696;
+                                for (int i = 0; i < 240; i++) {
+
+                                    if (decryptedData[offset+2] == 0) {
+                                        break;
+                                    }
+
+                                    yokailist.push_back(Yokai(decryptedData, offset));
+                                    offset += 124;
+                                }
+
+                                std::vector<Item> itemlist;
+                                offset = 1784;
+                                for (int i = 0; i < 256; i++) {
+
+                                    if (decryptedData[offset+2] == 0) {
+                                        break;
+                                    }
+                                    
+                                    itemlist.push_back(Item(decryptedData, offset));
+                                    offset += 12;
+                                }
+
+                                std::vector<Equipment> equipmentlist;
+                                offset = 4868;
+                                for (int i = 0; i < 100; i++) {
+
+                                    if (decryptedData[offset+2] == 0) {
+                                        break;
+                                    }
+
+                                    equipmentlist.push_back(Equipment(decryptedData, offset));
+                                    offset += 12;
+                                }
+
+                                std::vector<Important> importantlist;
+                                offset = 6480;
+                                for (int i = 0; i < 150; i++) {
+
+                                    if (decryptedData[offset+2] == 0) {
+                                        break;
+                                    }
+
+                                    importantlist.push_back(Important(decryptedData, offset));
+                                    offset += 8;
+                                }
+
+                                // std::vector<int> medalliumlist; //TODO
+                                // offset = 1476;
+                                // importantlist.push_back();
+
+                                printf("\nYokai:");
+
+                                for (int i = 0; i < yokailist.size(); i++) {
+                                    printf("\n%s %s", yokais.at(*yokailist[i].yokai), yokailist[i].nickname); //unicode is not compatible with the terminal
+                                }
+
+                                printf("\n\nItems:");
+
+                                for (int i = 0; i < itemlist.size(); i++) {
+                                    printf("\n%s", items.at(*itemlist[i].item));
+                                }
+
+                                printf("\n\nEquipment:");
+
+                                for (int i = 0; i < equipmentlist.size(); i++) {
+                                    printf("\n%s", equipments.at(*equipmentlist[i].equipment));
+                                }
+
+                                printf("\n\nImportant:");
+
+                                for (int i = 0; i < importantlist.size(); i++) {
+                                    printf("\n%s", importants.at(*importantlist[i].important));
+                                }
+                                
+                                bool save = true;
+
+                                printf("\n\n+ to save and exit, - to exit without saving \nA to increment money, B to set all yokai to togenyan");
+                                printf("\nmoney: %u", *money);
+                                while (appletMainLoop()) {
+                                    padUpdate(&pad);
+                                    u64 kDown = padGetButtonsDown(&pad);
+
+                                    if (kDown & HidNpadButton_Plus){
+                                        break;
+                                    }
+                                    if (kDown & HidNpadButton_Minus){
+                                        save = false;
+                                        break;
+                                    }
+                                    if (kDown & HidNpadButton_A){
+                                        (*money)++;
+                                        printf("\nmoney: %u", *money);
+                                    }
+                                    if (kDown & HidNpadButton_B){
+                                        for (int i = 0; i < yokailist.size(); i++) {
+                                            *yokailist[i].yokai = 72463062;
+                                        }
+                                        printf("\nall yokai set to togenyan");
+                                    }
+
+                                    consoleUpdate(NULL);
+                                }
+
+                                
+                                if (save) {
+                                    fseek(file, 0, SEEK_SET);
+                                    fwrite(yw_proc(decryptedData, true).data(), 1, 47564, file);
+                                    fclose(file);
+
+                                    std::string bakfilePath = filePath;
+                                    bakfilePath.replace(bakfilePath.rfind(".yw"), 3, ".bak");
+                                    FILE* bakfile = fopen(bakfilePath.c_str(), "wb");
+                                    fwrite(encryptedData.data(), 1, 47564, bakfile);
+                                    fclose(bakfile);
+                                    fsdevCommitDevice("save");
+                                }
+                                else {
+                                    fclose(file);
+                                }
+                            }
                         }
                     }
                 }
+                closedir(dir);
             }
-
-            closedir(dir);
         }
-
         fsdevUnmountDevice("save");
     }
 
