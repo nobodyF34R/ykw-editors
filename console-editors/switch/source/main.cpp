@@ -295,24 +295,44 @@ int main(int argc, char** argv) {
 
                                         printf("\nCharacters:");
                                         for (int i = 0; i < characterlist.size(); i++) {
-                                            printf("\n%s", data4::characters.at(*characterlist[i].yokai));
+                                            auto it = data4::characters.find(*characterlist[i].yokai);
+                                            if (it != data4::characters.end()) {
+                                                printf("\n%s", it->second);
+                                            } else {
+                                                printf("\n%u", *characterlist[i].yokai);
+                                            }
                                         }
 
                                         printf("\n\nYokai:");
                                         for (int i = 0; i < yokailist.size(); i++) {
-                                            printf("\n%s", data4::yokais.at(*yokailist[i].yokai));
+                                            auto it = data4::yokais.find(*yokailist[i].yokai);
+                                            if (it != data4::yokais.end()) {
+                                                printf("\n%s", it->second);
+                                            } else {
+                                                printf("\n%u", *yokailist[i].yokai);
+                                            }
                                         }
 
                                         printf("\n\nItems:");
                                         for (int i = 0; i < itemlist.size(); i++) {
-                                            printf("\n%s", data4::items.at(*itemlist[i].item));
+                                            auto it = data4::items.find(*itemlist[i].item);
+                                            if (it != data4::items.end()) {
+                                                printf("\n%s", it->second);
+                                            } else {
+                                                printf("\n%u", *itemlist[i].item);
+                                            }
                                         }
 
-                                        //TODO souls
+                                        // TODO souls
 
                                         printf("\n\nEquipment:");
                                         for (int i = 0; i < equipmentlist.size(); i++) {
-                                            printf("\n%s", data4::equipments.at(*equipmentlist[i].equipment));
+                                            auto it = data4::equipments.find(*equipmentlist[i].equipment);
+                                            if (it != data4::equipments.end()) {
+                                                printf("\n%s", it->second);
+                                            } else {
+                                                printf("\n%u", *equipmentlist[i].equipment);
+                                            }
                                         }
 
                                         printf("\n\n+ to save and exit, - to exit without saving\nA to increment money, X to set all yokai to smogmella");
@@ -352,7 +372,7 @@ int main(int argc, char** argv) {
 
                                         if (save) {
                                             fseek(file, 0, SEEK_SET);
-                                            fwrite(data.data(), 1, 1046707, file); //TODO
+                                            fwrite(data.data(), 1, 1046707, file);
                                             fclose(file);
 
                                             // std::string bakfilePath = filePath;
