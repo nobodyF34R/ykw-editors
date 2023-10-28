@@ -8,8 +8,9 @@
 #include <stdexcept>
 #include <fstream>
 #include "cipher.h"
-#include "structs.h"
+#include "struct.h"
 #include "data.h"
+
 
 Result get_save(u64* application_id, AccountUid* uid) {
     Result rc = 0;
@@ -177,7 +178,194 @@ int main(int argc, char** argv) {
 
                             if (kDown & HidNpadButton_A) {
                                 if (application_id == 0x010086c00af7c000) {
-                                    break; //TODO implement 4 save editing
+                                    char filePath[27] = "save:/USERDATA00/";
+                                    strcat(filePath, saveFiles[selectedSave].c_str());
+                                    FILE* file = fopen(filePath, "r+b");
+
+                                    if (file == NULL) {
+                                        std::cout << "Failed to open file " << filePath << "." << std::endl;
+                                    } else {
+                                        char buffer[256];
+                                        size_t bytesRead;
+
+                                        std::vector<uint8_t> data;
+
+                                        while ((bytesRead = fread(buffer, 1, sizeof(buffer), file)) > 0) {
+                                            data.insert(data.end(), buffer, buffer + bytesRead);
+                                        }
+
+                                        bool save = true;
+                                        
+                                        uint32_t* x = (uint32_t*)(& data[131]);
+                                        uint32_t* y = (uint32_t*)(& data[135]);
+                                        uint32_t* z = (uint32_t*)(& data[139]);
+
+                                        uint32_t* location = (uint32_t*)(& data[167]);
+
+                                        uint32_t* money = (uint32_t*)(& data[203]);
+
+                                        char* nate = (char*)(& data[282]);
+                                        char* katie = (char*)(& data[318]);
+                                        char* summer = (char*)(& data[354]);
+                                        char* cole = (char*)(& data[390]);
+                                        char* bruno = (char*)(& data[426]);
+                                        char* jack = (char*)(& data[462]);
+        
+                                        uint8_t* gatcharemaining = (uint8_t*)(& data[2082]);
+                                        uint8_t* gatchamax = (uint8_t*)(& data[2083]);
+
+
+                                        std::vector<struct4::Yokai> characterlist;
+                                        uint32_t offset = 166627;
+
+                                        for (int i = 0; i < 6; i++) {
+                                            if (data[offset+2] == 0) {
+                                                break;
+                                            }
+
+                                            characterlist.push_back(struct4::Yokai(data, offset));
+
+                                            offset += 469;
+                                        }
+
+                                        std::vector<struct4::Yokai> yokailist;
+                                        offset = 169449;
+
+                                        for (int i = 0; i < 999; i++) {
+                                            if (data[offset+2] == 0) {
+                                                break;
+                                            }
+
+                                            yokailist.push_back(struct4::Yokai(data, offset));
+
+                                            offset += 469;
+                                        }
+                                        
+                                        std::vector<struct4::Item> itemlist;
+                                        offset = 76579;
+
+                                        for (int i = 0; i < 256; i++) {
+                                            if (data[offset+2] == 0) {
+                                                break;
+                                            }
+
+                                            itemlist.push_back(struct4::Item(data, offset));
+
+                                            offset += 54;
+                                        }
+
+                                        std::vector<struct4::SpecialSoul> specialsoullist;
+                                        offset = 958227;
+
+                                        for (int i = 0; i < 256; i++) {
+                                            if (data[offset+2] == 0) {
+                                                break;
+                                            }
+
+                                            specialsoullist.push_back(struct4::SpecialSoul(data, offset));
+
+                                            offset += 54;
+                                        }
+
+                                        std::vector<struct4::YokaiSoul> yokaisoullist;
+                                        offset = 963635;
+
+                                        for (int i = 0; i < 256; i++) {
+                                            if (data[offset+2] == 0) {
+                                                break;
+                                            }
+
+                                            yokaisoullist.push_back(struct4::YokaiSoul(data, offset));
+
+                                            offset += 80;
+                                        }
+
+                                        std::vector<struct4::Equipment> equipmentlist;
+                                        offset = 103587;
+
+                                        for (int i = 0; i < 100; i++) {
+                                            if (data[offset+2] == 0) {
+                                                break;
+                                            }
+
+                                            equipmentlist.push_back(struct4::Equipment(data, offset));
+
+                                            offset += 63;
+                                        }
+
+                                        printf("\nCharacters:");
+                                        for (int i = 0; i < characterlist.size(); i++) {
+                                            printf("\n%s", data4::characters.at(*characterlist[i].yokai));
+                                        }
+
+                                        printf("\n\nYokai:");
+                                        for (int i = 0; i < yokailist.size(); i++) {
+                                            printf("\n%s", data4::yokais.at(*yokailist[i].yokai));
+                                        }
+
+                                        printf("\n\nItems:");
+                                        for (int i = 0; i < itemlist.size(); i++) {
+                                            printf("\n%s", data4::items.at(*itemlist[i].item));
+                                        }
+
+                                        //TODO souls
+
+                                        printf("\n\nEquipment:");
+                                        for (int i = 0; i < equipmentlist.size(); i++) {
+                                            printf("\n%s", data4::equipments.at(*equipmentlist[i].equipment));
+                                        }
+
+                                        printf("\n\n+ to save and exit, - to exit without saving\nA to increment money, X to set all yokai to smogmella");
+                                        printf("\nmoney: %u\n", *money);
+                                        while (appletMainLoop()) {
+                                            padUpdate(&pad);
+                                            u64 kDown = padGetButtonsDown(&pad);
+
+                                            if (kDown & HidNpadButton_Plus){
+                                                break;
+                                            }
+                                            if (kDown & HidNpadButton_Minus){
+                                                save = false;
+                                                break;
+                                            }
+                                            if (kDown & HidNpadButton_A){
+                                                (*money)++;
+                                                printf("money: %u\n", *money);
+                                            }
+                                            if (kDown & HidNpadButton_Y){
+                                                (*money)--;
+                                                printf("money: %u\n", *money);
+                                            }
+                                            if (kDown & HidNpadButton_X){
+                                                for (int i = 0; i < characterlist.size(); i++) {
+                                                    *characterlist[i].yokai = 253585921;
+                                                }
+                                                for (int i = 0; i < yokailist.size(); i++) {
+                                                    *yokailist[i].yokai = 253585921;
+                                                }
+                                                printf("all yokai set to smogmella");
+                                            }
+
+                                            consoleUpdate(NULL);
+                                        }
+
+
+                                        if (save) {
+                                            fseek(file, 0, SEEK_SET);
+                                            fwrite(data.data(), 1, 1046707, file); //TODO
+                                            fclose(file);
+
+                                            // std::string bakfilePath = filePath;
+                                            // bakfilePath.replace(bakfilePath.rfind(".bin"), 3, ".bak");
+                                            // FILE* bakfile = fopen(bakfilePath.c_str(), "wb");
+                                            // fwrite(encryptedData.data(), 1, 1046707, bakfile);
+                                            // fclose(bakfile);
+                                            fsdevCommitDevice("save");
+                                        }
+                                        else {
+                                            fclose(file);
+                                        }
+                                    }
                                 } else {
                                     char filePath[15] = "save:/";
                                     strcat(filePath, saveFiles[selectedSave].c_str());
@@ -251,8 +439,7 @@ int main(int argc, char** argv) {
 
                                             int16_t offset;
 
-
-                                            std::vector<Yokai> yokailist;
+                                            std::vector<struct1s::Yokai> yokailist;
                                             offset = 7696;
                                             for (int i = 0; i < 240; i++) {
 
@@ -260,11 +447,11 @@ int main(int argc, char** argv) {
                                                     break;
                                                 }
 
-                                                yokailist.push_back(Yokai(decryptedData, offset));
+                                                yokailist.push_back(struct1s::Yokai(decryptedData, offset));
                                                 offset += 124;
                                             }
 
-                                            std::vector<Item> itemlist;
+                                            std::vector<struct1s::Item> itemlist;
                                             offset = 1784;
                                             for (int i = 0; i < 256; i++) {
 
@@ -272,11 +459,11 @@ int main(int argc, char** argv) {
                                                     break;
                                                 }
                                                 
-                                                itemlist.push_back(Item(decryptedData, offset));
+                                                itemlist.push_back(struct1s::Item(decryptedData, offset));
                                                 offset += 12;
                                             }
 
-                                            std::vector<Equipment> equipmentlist;
+                                            std::vector<struct1s::Equipment> equipmentlist;
                                             offset = 4868;
                                             for (int i = 0; i < 100; i++) {
 
@@ -284,11 +471,11 @@ int main(int argc, char** argv) {
                                                     break;
                                                 }
 
-                                                equipmentlist.push_back(Equipment(decryptedData, offset));
+                                                equipmentlist.push_back(struct1s::Equipment(decryptedData, offset));
                                                 offset += 12;
                                             }
 
-                                            std::vector<Important> importantlist;
+                                            std::vector<struct1s::Important> importantlist;
                                             offset = 6480;
                                             for (int i = 0; i < 150; i++) {
 
@@ -296,7 +483,7 @@ int main(int argc, char** argv) {
                                                     break;
                                                 }
 
-                                                importantlist.push_back(Important(decryptedData, offset));
+                                                importantlist.push_back(struct1s::Important(decryptedData, offset));
                                                 offset += 8;
                                             }
 
@@ -307,25 +494,25 @@ int main(int argc, char** argv) {
                                             printf("\nYokai:");
 
                                             for (int i = 0; i < yokailist.size(); i++) {
-                                                printf("\n%s %s", yokais.at(*yokailist[i].yokai), yokailist[i].nickname); //unicode is not compatible with the terminal
+                                                printf("\n%s %s", data1s::yokais.at(*yokailist[i].yokai), yokailist[i].nickname); //unicode is not compatible with the terminal
                                             }
 
                                             printf("\n\nItems:");
 
                                             for (int i = 0; i < itemlist.size(); i++) {
-                                                printf("\n%s", items.at(*itemlist[i].item));
+                                                printf("\n%s", data1s::items.at(*itemlist[i].item));
                                             }
 
                                             printf("\n\nEquipment:");
 
                                             for (int i = 0; i < equipmentlist.size(); i++) {
-                                                printf("\n%s", equipments.at(*equipmentlist[i].equipment));
+                                                printf("\n%s", data1s::equipments.at(*equipmentlist[i].equipment));
                                             }
 
                                             printf("\n\nImportant:");
 
                                             for (int i = 0; i < importantlist.size(); i++) {
-                                                printf("\n%s", importants.at(*importantlist[i].important));
+                                                printf("\n%s", data1s::importants.at(*importantlist[i].important));
                                             }
 
                                             printf("\n\n+ to save and exit, - to exit without saving \nA to increment money, X to set all yokai to togenyan");
@@ -368,7 +555,7 @@ int main(int argc, char** argv) {
                                             // std::string bakfilePath = filePath;
                                             // bakfilePath.replace(bakfilePath.rfind(".yw"), 3, ".bak");
                                             // FILE* bakfile = fopen(bakfilePath.c_str(), "wb");
-                                            // fwrite(encryptedData.data(), 1, 47564, bakfile);
+                                            // fwrite(encryptedData.data(), 1, size, bakfile);
                                             // fclose(bakfile);
                                             fsdevCommitDevice("save");
                                         }
