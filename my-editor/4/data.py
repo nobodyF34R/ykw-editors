@@ -1,4 +1,4 @@
-characters = { #some yokai are missing. could rename to yokais
+characters = { #some yokai are missing.
     3266253568: "Genbu (Celestial)", 
     1664438528: "McKraken", 
     3968491520: "Touma (Horse) (Alt)", 
@@ -2481,7 +2481,7 @@ items = {
 
 reverse_items = {v.lower(): k for k, v in items.items()}
 
-souls = { #TODO solve this
+souls = { #TODO
     864380236: "E-Rank", 
     413677199: "D-Rank", 
     28510158: "C-Rank", 
@@ -2496,7 +2496,6 @@ souls = { #TODO solve this
     2430969592: "Hot Pot", 
     900239755: "Semicolon", 
     3474741427: "Tattletell", 
-    #tuna?
 }
 
 reverse_souls = {v.lower(): k for k, v in souls.items()}

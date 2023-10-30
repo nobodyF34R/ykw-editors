@@ -10,6 +10,7 @@
 #include "cipher.h"
 #include "struct.h"
 #include "data.h"
+#include "edit.h"
 
 
 Result get_save(u64* application_id, AccountUid* uid) {
@@ -141,7 +142,7 @@ int main(int argc, char** argv) {
                 } else {
                     std::vector<std::string> saveFiles;
                     while ((ent = readdir(dir))) {
-                        if (strcmp(ent->d_name + strlen(ent->d_name) - 4, ".bak") != 0) {
+                        if (strcmp(ent->d_name + strlen(ent->d_name) - 4, ".bak") != 0 & strcmp(ent->d_name + strlen(ent->d_name) - 4, ".ywd") != 0) {
                             saveFiles.push_back(ent->d_name);
                         }
                     }
@@ -341,7 +342,7 @@ int main(int argc, char** argv) {
                                             padUpdate(&pad);
                                             u64 kDown = padGetButtonsDown(&pad);
 
-                                            if (kDown & HidNpadButton_Plus){
+                                            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_B){
                                                 break;
                                             }
                                             if (kDown & HidNpadButton_Minus){
@@ -431,7 +432,7 @@ int main(int argc, char** argv) {
                                                 padUpdate(&pad);
                                                 u64 kDown = padGetButtonsDown(&pad);
 
-                                                if (kDown & HidNpadButton_Plus){
+                                                if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_B){
                                                     break;
                                                 }
                                                 if (kDown & HidNpadButton_Minus){
@@ -541,7 +542,7 @@ int main(int argc, char** argv) {
                                                 padUpdate(&pad);
                                                 u64 kDown = padGetButtonsDown(&pad);
 
-                                                if (kDown & HidNpadButton_Plus){
+                                                if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_B){
                                                     break;
                                                 }
                                                 if (kDown & HidNpadButton_Minus){

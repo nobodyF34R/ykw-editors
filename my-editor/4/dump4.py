@@ -313,7 +313,7 @@ def main(file, edit):
                 "num1": get(character, 0, 2), #starts from 0
                 "num2": get(character, 2, 2), 
                 "nickname": get(character, 28, 24, False), #maybe more?
-                "character": get(character, 72, 4), 
+                "yokai": get(character, 72, 4), 
                 "skills": [
                     get(character, 84, 4), 
                     get(character, 88, 4), 
@@ -550,7 +550,7 @@ def main(file, edit):
                 f.seek(166627+469*j+28)
                 f.write(give(i["nickname"], 24, integer=False))
                 f.seek(166627+469*j+72)
-                f.write(give(i["character"], 4))
+                f.write(give(i["yokai"], 4))
                 f.seek(166627+469*j+84)
                 for skill in range(6): #always 6?
                     f.write(give(i["skills"][skill], 4))

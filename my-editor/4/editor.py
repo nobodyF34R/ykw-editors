@@ -1,6 +1,6 @@
 from dump4 import * #get specific ids from data.py
 
-infile = "/Users/emilia/Documents/dev/ykw/ykw-editors/my-editor/4/0/USERDATA00/data copy.bin"
+infile = "/Volumes/SWITCH SD/switch/Checkpoint/saves/0x010086C00AF7C000 0x010086C00AF7C000/20470220-172708 XAW/USERDATA00/data.bin"
 #infile = "/Volumes/UNTITLED/switch/Checkpoint/saves/0x010086C00AF7C000 0x010086C00AF7C000/0 copy/USERDATA00/data.bin"
 
 def edit(position, location, money, namelist, gatcharemaining, gatchamax, characterlist, yokailist, itemlist, specialsoullist, yokaisoullist, equipmentlist):
@@ -14,7 +14,7 @@ def edit(position, location, money, namelist, gatcharemaining, gatchamax, charac
         characterlist = edit_yokai(characterlist, i) #max stats
 
 
-    print(", ".join([characters[i["character"]]for i in characterlist]))
+    print(", ".join([characters[i["yokai"]]for i in characterlist]))
     print(", ".join([characters[i["yokai"]]for i in yokailist]))
     print(", ".join([items[i["item"]]for i in itemlist]))
     print(", ".join([equipments[i["equipment"]]for i in equipmentlist]))
