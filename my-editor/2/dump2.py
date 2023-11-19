@@ -107,9 +107,9 @@ def edit_yokai(yokailist, index, ownerid, yokai=None, attitude=None, nickname=No
         yokailist[index]["num2"]+=(j-location)
     if yokai != None:
         try:
-            yokailist[index]["yokai"] = reverse_yokais[yokai]
+            yokailist[index]["id"] = reverse_yokais[yokai]
         except:
-            yokailist[index]["yokai"] = yokai
+            yokailist[index]["id"] = yokai
     try:
         yokailist[index]["nickname"] = yokailist[index]["nickname"]
     except:
@@ -177,9 +177,9 @@ def edit_item(itemlist, index, item=None, amount=None): #broken for some reason
     itemlist[index]["num2"] = index+1
     if item:
         try:
-            itemlist[index]["item"] = reverse_items[item]
+            itemlist[index]["id"] = reverse_items[item]
         except:
-            itemlist[index]["item"] = item
+            itemlist[index]["id"] = item
     if amount:
         itemlist[index]["amount"] = amount
     return itemlist
@@ -199,9 +199,9 @@ def edit_equipment(equipmentlist, index, equipment=None, amount=None):
     equipmentlist[index]["num2"] = index+1
     if equipment:
         try:
-            equipmentlist[index]["equipment"] = reverse_equipments[equipment]
+            equipmentlist[index]["id"] = reverse_equipments[equipment]
         except:
-            equipmentlist[index]["equipment"] = equipment
+            equipmentlist[index]["id"] = equipment
     if amount:
         equipmentlist[index]["amount"] = amount
     equipmentlist[index]["used"] = 0
@@ -221,9 +221,9 @@ def edit_important(importantlist, index, important):
     importantlist[index]["num1"] = index+8192
     importantlist[index]["num2"] = index+1
     try:
-        importantlist[index]["important"] = reverse_importants[important]
+        importantlist[index]["id"] = reverse_importants[important]
     except:
-        importantlist[index]["important"] = important
+        importantlist[index]["id"] = important
     return importantlist
 
 def edit_soul(soullist, index, soul):
@@ -240,9 +240,9 @@ def edit_soul(soullist, index, soul):
     soullist[index]["num1"] = index+12288
     soullist[index]["num2"] = index+1
     try:
-        soullist[index]["soul"] = reverse_souls[soul]
+        soullist[index]["id"] = reverse_souls[soul]
     except:
-        soullist[index]["soul"] = soul
+        soullist[index]["id"] = soul
     soullist[index]["xp"] = 0 #65535 is too high but it already auto sets back to 0
     soullist[index]["level"] = 10 #10 is the highest (255 looks funny but it is weaker than 10 because of the way the game calculates soul stats)
     soullist[index]["used"] = 0
@@ -356,7 +356,7 @@ def main(file, edit): #TODO fix yokai.
             yokailist.append({
                 "num1": get(yokai, 0, 2), #0 starts from 0
                 "num2": get(yokai, 2, 2), #2
-                "yokai": get(yokai, 4, 4), #4-07
+                "id": get(yokai, 4, 4), #4-07
                 "nickname": get(yokai, 8, 24, False), #8-32 maybe broken
                 "attack": get(yokai, 42), #42
                 "technique": get(yokai, 46), #46
@@ -404,7 +404,7 @@ def main(file, edit): #TODO fix yokai.
             itemlist.append({
                 "num1": get(item, 0, 2), #0 starts from 0
                 "num2": get(item, 2, 2), #2
-                "item": get(item, 4, 4), #4
+                "id": get(item, 4, 4), #4
                 "amount": get(item, 8, 4) #8
             })
 
@@ -423,7 +423,7 @@ def main(file, edit): #TODO fix yokai.
             equipmentlist.append({
                 "num1": get(equipment, 0, 2), #0 starts from 4096
                 "num2": get(equipment, 2, 2), #2
-                "equipment": get(equipment, 4, 4), #4
+                "id": get(equipment, 4, 4), #4
                 "amount": get(equipment, 8, 4), #8 #maybe 1 byte
                 "used": get(equipment, 12, 4) #how many are in use (leave alone or set to zero)
             })
@@ -443,7 +443,7 @@ def main(file, edit): #TODO fix yokai.
             importantlist.append({
                 "num1": get(important, 0, 2), #0 starts from 8192
                 "num2": get(important, 2, 2), #2
-                "important": get(important, 4, 4), #4
+                "id": get(important, 4, 4), #4
             })
 
             index += 1
@@ -461,7 +461,7 @@ def main(file, edit): #TODO fix yokai.
             soullist.append({
                 "num1": get(soul, 0, 2), #0 starts from 12288
                 "num2": get(soul, 2, 2), #2
-                "soul": get(soul, 4, 4), #4
+                "id": get(soul, 4, 4), #4
                 "xp": get(soul, 8, 2), #8
                 "level": get(soul, 10), #8
                 "used": get(soul, 11) #11 true or false
@@ -625,7 +625,7 @@ def main(file, edit): #TODO fix yokai.
                 f.seek(offset+12*j+2)
                 f.write(give(i["num2"], 2))
                 f.seek(offset+12*j+4)
-                f.write(give(i["item"], 4))
+                f.write(give(i["id"], 4))
                 f.seek(offset+12*j+8)
                 f.write(give(i["amount"], 4))
                 j+=1
@@ -643,7 +643,7 @@ def main(file, edit): #TODO fix yokai.
                 f.seek(offset+5172+16*j+2)
                 f.write(give(i["num2"], 2))
                 f.seek(offset+5172+16*j+4)
-                f.write(give(i["equipment"], 4))
+                f.write(give(i["id"], 4))
                 f.seek(offset+5172+16*j+8)
                 f.write(give(i["amount"], 4))
                 f.seek(offset+5172+16*j+12)
@@ -663,7 +663,7 @@ def main(file, edit): #TODO fix yokai.
                 f.seek(offset+6624+8*j+2)
                 f.write(give(i["num2"], 2))
                 f.seek(offset+6624+8*j+4)
-                f.write(give(i["important"], 4))
+                f.write(give(i["id"], 4))
                 j+=1
 
             #clear important overflow
@@ -679,7 +679,7 @@ def main(file, edit): #TODO fix yokai.
                 f.seek(offset+8076+12*j+2)
                 f.write(give(i["num2"], 2))
                 f.seek(offset+8076+12*j+4)
-                f.write(give(i["soul"], 4))
+                f.write(give(i["id"], 4))
                 f.seek(offset+8076+12*j+8)
                 f.write(give(i["xp"], 2))
                 f.seek(offset+8076+12*j+10)
@@ -701,7 +701,7 @@ def main(file, edit): #TODO fix yokai.
                 f.seek(20744+92*j+2)
                 f.write(give(i["num2"], 2))
                 f.seek(20744+92*j+4)
-                f.write(give(i["yokai"], 4))
+                f.write(give(i["id"], 4))
                 f.seek(20744+92*j+8)
                 f.write(give(i["nickname"], 24, False)) # to be more accurate to game could just append with trailing 00
                 f.seek(20744+92*j+42)

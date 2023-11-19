@@ -22,11 +22,11 @@ def edit(yokailist, itemlist, equipmentlist, importantlist, soullist, medalliuml
         equipmentlist = edit_equipment(equipmentlist, i, amount=255)
 
 
-    print(", ".join([yokais[i["yokai"]]for i in yokailist]))
-    print(", ".join([items[i["item"]]for i in itemlist]))
-    print(", ".join([equipments[i["equipment"]]for i in equipmentlist]))
-    print(", ".join([importants[i["important"]]for i in importantlist]))
-    print(", ".join([souls[i["soul"]]for i in soullist]))
+    print(", ".join([yokais[i["id"]]for i in yokailist]))
+    print(", ".join([items[i["id"]]for i in itemlist]))
+    print(", ".join([equipments[i["id"]]for i in equipmentlist]))
+    print(", ".join([importants[i["id"]]for i in importantlist]))
+    print(", ".join([souls[i["id"]]for i in soullist]))
     print(profile) #look at what the numbers mean in data.py
     # print(contactlist)
 

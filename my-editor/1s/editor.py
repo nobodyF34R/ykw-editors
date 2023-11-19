@@ -10,10 +10,10 @@ def edit(time, sun, position, location, money, yokailist, itemlist, equipmentlis
     # for i in range(len(yokailist)):
     #     yokailist = edit_yokai(yokailist, i) #max stats
 
-    print(", ".join([yokais[i["yokai"]]for i in yokailist]))
-    print(", ".join([items[i["item"]]for i in itemlist]))
-    print(", ".join([equipments[i["equipment"]]for i in equipmentlist]))
-    print(", ".join([importants[i["important"]]for i in importantlist]))
+    print(", ".join([yokais[i["id"]]for i in yokailist]))
+    print(", ".join([items[i["id"]]for i in itemlist]))
+    print(", ".join([equipments[i["id"]]for i in equipmentlist]))
+    print(", ".join([importants[i["id"]]for i in importantlist]))
 
     print("\nseen yokai:")
     for i in range(246):

@@ -758,10 +758,10 @@ class Ui_MainWindow(object):
         ui.importantComboBox.addItems([""] + [value for value in importants.values()])
         locationList = [value for value in locations.values()]
         ui.locationComboBox.addItems(locationList)
-        ui.listWidget.addItems([yokais[y["yokai"]] for y in yokailist])
-        ui.itemList.addItems([items[i["item"]] for i in itemlist])
-        ui.equipmentList.addItems([equipments[e["equipment"]] for e in equipmentlist])
-        ui.importantList.addItems([importants[i["important"]] for i in importantlist])
+        ui.listWidget.addItems([yokais[y["id"]] for y in yokailist])
+        ui.itemList.addItems([items[i["id"]] for i in itemlist])
+        ui.equipmentList.addItems([equipments[e["id"]] for e in equipmentlist])
+        ui.importantList.addItems([importants[i["id"]] for i in importantlist])
         ui.attitudeComboBox.addItems(attitudes)
         ui.nicknameEdit.setValidator(ByteValidator(60))
         if yokailist != []:
@@ -898,8 +898,8 @@ def updateYokai():
 
     index = ui.listWidget.currentRow()
 
-    yokailist[index]["yokai"] = reverse_yokais[indexs[ui.yokaiComboBox.currentIndex()+1].lower()]
-    ui.listWidget.item(index).setText(yokais[yokailist[index]["yokai"]])
+    yokailist[index]["id"] = reverse_yokais[indexs[ui.yokaiComboBox.currentIndex()+1].lower()]
+    ui.listWidget.item(index).setText(yokais[yokailist[index]["id"]])
 
 def updateStats():
     global ui, yokailist, ev, iv
@@ -923,8 +923,8 @@ def setCurrentYokai():
     index = item.currentRow()
     
     if index != previousItem: #then set all the data
-        item.item(index).setText(yokais[yokailist[index]["yokai"]])
-        ui.yokaiComboBox.setCurrentIndex(indexs.index(yokais[yokailist[index]["yokai"]])-1)
+        item.item(index).setText(yokais[yokailist[index]["id"]])
+        ui.yokaiComboBox.setCurrentIndex(indexs.index(yokais[yokailist[index]["id"]])-1)
         ui.nicknameEdit.setText(yokailist[index]["nickname"])
         ui.attitudeComboBox.setCurrentIndex(yokailist[index]["attitude"])
         ui.level.setValue(yokailist[index]["level"])
@@ -947,7 +947,7 @@ def newItemClicked():
 
     if itemName != "":
         itemlist = edit_item(itemlist, -1, reverse_items[itemName], ui.itemAmount.value())
-        item.addItems([items[itemlist[-1]["item"]]])
+        item.addItems([items[itemlist[-1]["id"]]])
 
 def currentItemClicked():
     global ui, itemlist
@@ -963,7 +963,7 @@ def currentItemClicked():
             item.takeItem(index)
         else:
             itemlist = edit_item(itemlist, index, reverse_items[itemName], ui.itemAmount.value())
-            item.item(index).setText(items[itemlist[index]["item"]])
+            item.item(index).setText(items[itemlist[index]["id"]])
 
 def newEquipmentClicked():
     global ui, equipmentlist
@@ -974,7 +974,7 @@ def newEquipmentClicked():
 
     if equipmentName != "":
         equipmentlist = edit_equipment(equipmentlist, -1, reverse_equipments[equipmentName], ui.equipmentAmount.value())
-        item.addItems([equipments[equipmentlist[-1]["equipment"]]])
+        item.addItems([equipments[equipmentlist[-1]["id"]]])
 
 def currentEquipmentClicked():
     global ui, equipmentlist
@@ -990,7 +990,7 @@ def currentEquipmentClicked():
             item.takeItem(index)
         else:
             equipmentlist = edit_equipment(equipmentlist, index, reverse_equipments[equipmentName], ui.equipmentAmount.value())
-            item.item(index).setText(equipments[equipmentlist[index]["equipment"]])
+            item.item(index).setText(equipments[equipmentlist[index]["id"]])
 
 def newImportantClicked():
     global ui, importantlist
@@ -1001,7 +1001,7 @@ def newImportantClicked():
 
     if importantName != "":
         importantlist = edit_important(importantlist, -1, reverse_importants[importantName])
-        item.addItems([importants[importantlist[-1]["important"]]])
+        item.addItems([importants[importantlist[-1]["id"]]])
 
 def currentImportantClicked():
     global ui, importantlist
@@ -1017,7 +1017,7 @@ def currentImportantClicked():
             item.takeItem(index)
         else:
             importantlist = edit_important(importantlist, index, reverse_importants[importantName])
-            item.item(index).setText(importants[importantlist[index]["important"]])
+            item.item(index).setText(importants[importantlist[index]["id"]])
 
 def setMaxStatsClicked():
     global ui, yokailist
