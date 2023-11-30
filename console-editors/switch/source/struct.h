@@ -14,7 +14,7 @@ struct struct1s {
     struct Yokai {
         uint16_t* num1;
         uint16_t* num2;
-        uint32_t* yokai;
+        uint32_t* id;
         char* nickname; //wide char
         uint8_t* attack;
         uint8_t* technique;
@@ -47,7 +47,7 @@ struct struct1s {
         Yokai(std::vector<uint8_t>& decryptedData, int16_t offset) {
             num1 = (uint16_t*)(&decryptedData[offset]);
             num2 = (uint16_t*)(&decryptedData[offset+2]);
-            yokai = (uint32_t*)(&decryptedData[offset+4]);
+            id = (uint32_t*)(&decryptedData[offset+4]);
             nickname = (char*)(&decryptedData[offset + 8]);
             attack = &decryptedData[offset+78];
             technique = &decryptedData[offset+82];
@@ -78,13 +78,13 @@ struct struct1s {
     struct Item {
         uint16_t* num1;
         uint16_t* num2;
-        uint32_t* item;
+        uint32_t* id;
         uint8_t* amount;
 
         Item(std::vector<uint8_t>& decryptedData, int16_t offset) {
             num1 = (uint16_t*)(&decryptedData[offset]);
             num2 = (uint16_t*)(&decryptedData[offset+2]);
-            item = (uint32_t*)(&decryptedData[offset+4]);
+            id = (uint32_t*)(&decryptedData[offset+4]);
             amount = &decryptedData[offset+8];
         }
     };
@@ -92,13 +92,13 @@ struct struct1s {
     struct Equipment {
         uint16_t* num1;
         uint16_t* num2;
-        uint32_t* equipment;
+        uint32_t* id;
         uint32_t* amount;
 
         Equipment(std::vector<uint8_t>& decryptedData, int16_t offset) {
             num1 = (uint16_t*)(&decryptedData[offset]);
             num2 = (uint16_t*)(&decryptedData[offset+2]);
-            equipment = (uint32_t*)(&decryptedData[offset+4]);
+            id = (uint32_t*)(&decryptedData[offset+4]);
             amount = (uint32_t*)(&decryptedData[offset+8]);
         }
     };
@@ -107,12 +107,12 @@ struct struct1s {
     struct Important{
         uint16_t* num1;
         uint16_t* num2;
-        uint32_t* important;
+        uint32_t* id;
 
         Important(std::vector<uint8_t>& decryptedData, int16_t offset) {
             num1 = (uint16_t*)(&decryptedData[offset]);
             num2 = (uint16_t*)(&decryptedData[offset+2]);
-            important = (uint32_t*)(&decryptedData[offset+4]);
+            id = (uint32_t*)(&decryptedData[offset+4]);
         }
     };
 };
@@ -123,7 +123,7 @@ struct struct4 {
         uint16_t* num1;
         uint16_t* num2;
         // char* nickname; //wide char
-        uint32_t* yokai;
+        uint32_t* id;
         uint32_t* skill1;
         uint32_t* skill2;
         uint32_t* skill3;
@@ -161,7 +161,7 @@ struct struct4 {
             num1 = (uint16_t*)(&decryptedData[offset]);
             num2 = (uint16_t*)(&decryptedData[offset+2]);
             // nickname = (char*)(&decryptedData[offset+8]);
-            yokai = (uint32_t*)(&decryptedData[offset+72]);
+            id = (uint32_t*)(&decryptedData[offset+72]);
             skill1 = (uint32_t*)(&decryptedData[offset+84]);
             skill2 = (uint32_t*)(&decryptedData[offset+88]);
             skill3 = (uint32_t*)(&decryptedData[offset+92]);
@@ -192,14 +192,14 @@ struct struct4 {
     struct Item {
         uint16_t* num1;
         uint16_t* num2;
-        uint32_t* item;
+        uint32_t* id;
         uint32_t* order;
         uint32_t* amount;
 
         Item(std::vector<uint8_t>& decryptedData, int32_t offset) {
             num1 = (uint16_t*)(&decryptedData[offset]);
             num2 = (uint16_t*)(&decryptedData[offset+2]);
-            item = (uint32_t*)(&decryptedData[offset+12]);
+            id = (uint32_t*)(&decryptedData[offset+12]);
             order = (uint32_t*)(&decryptedData[offset+24]);
             amount = (uint32_t*)(&decryptedData[offset+36]);
         }
@@ -208,14 +208,14 @@ struct struct4 {
     struct SpecialSoul {
         uint16_t* num1;
         uint16_t* num2;
-        uint32_t* soul;
+        uint32_t* id;
         uint32_t* order;
         uint32_t* amount;
 
         SpecialSoul(std::vector<uint8_t>& decryptedData, int32_t offset) {
             num1 = (uint16_t*)(&decryptedData[offset]);
             num2 = (uint16_t*)(&decryptedData[offset+2]);
-            soul = (uint32_t*)(&decryptedData[offset+12]);
+            id = (uint32_t*)(&decryptedData[offset+12]);
             order = (uint32_t*)(&decryptedData[offset+24]);
             amount = (uint32_t*)(&decryptedData[offset+36]);
         }
@@ -224,7 +224,7 @@ struct struct4 {
     struct YokaiSoul {
         uint16_t* num1;
         uint16_t* num2;
-        uint32_t* soul;
+        uint32_t* id;
         uint32_t* order;
         uint32_t* white;
         uint32_t* red;
@@ -234,7 +234,7 @@ struct struct4 {
         YokaiSoul(std::vector<uint8_t>& decryptedData, int32_t offset) {
             num1 = (uint16_t*)(&decryptedData[offset]);
             num2 = (uint16_t*)(&decryptedData[offset+2]);
-            soul = (uint32_t*)(&decryptedData[offset+12]);
+            id = (uint32_t*)(&decryptedData[offset+12]);
             order = (uint32_t*)(&decryptedData[offset+24]);
             white = (uint32_t*)(&decryptedData[offset+36]);
             red = (uint32_t*)(&decryptedData[offset+38]);
@@ -246,7 +246,7 @@ struct struct4 {
     struct Equipment {
         uint16_t* num1;
         uint16_t* num2;
-        uint32_t* equipment;
+        uint32_t* id;
         uint32_t* order;
         uint32_t* amount;
         uint32_t* used;
@@ -254,7 +254,7 @@ struct struct4 {
         Equipment(std::vector<uint8_t>& decryptedData, int32_t offset) {
             num1 = (uint16_t*)(&decryptedData[offset]);
             num2 = (uint16_t*)(&decryptedData[offset+2]);
-            equipment = (uint32_t*)(&decryptedData[offset+12]);
+            id = (uint32_t*)(&decryptedData[offset+12]);
             order = (uint32_t*)(&decryptedData[offset+24]);
             amount = (uint32_t*)(&decryptedData[offset+36]);
             used = (uint32_t*)(&decryptedData[offset+46]);

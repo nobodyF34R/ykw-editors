@@ -305,51 +305,9 @@ int main(int argc, char** argv) {
 
                                             offset += 63;
                                         }
+                                            
+                                        int selectedAction = 0;
 
-                                        printf("\nCharacters:");
-                                        for (int i = 0; i < characterlist.size(); i++) {
-                                            auto it = data4::characters.find(*characterlist[i].yokai);
-                                            if (it != data4::characters.end()) {
-                                                printf("\n%s", it->second);
-                                            } else {
-                                                printf("\n%u", *characterlist[i].yokai);
-                                            }
-                                        }
-
-                                        printf("\n\nYokai:");
-                                        for (int i = 0; i < yokailist.size(); i++) {
-                                            auto it = data4::yokais.find(*yokailist[i].yokai);
-                                            if (it != data4::yokais.end()) {
-                                                printf("\n%s", it->second);
-                                            } else {
-                                                printf("\n%u", *yokailist[i].yokai);
-                                            }
-                                        }
-
-                                        printf("\n\nItems:");
-                                        for (int i = 0; i < itemlist.size(); i++) {
-                                            auto it = data4::items.find(*itemlist[i].item);
-                                            if (it != data4::items.end()) {
-                                                printf("\n%s", it->second);
-                                            } else {
-                                                printf("\n%u", *itemlist[i].item);
-                                            }
-                                        }
-
-                                        // TODO souls
-
-                                        printf("\n\nEquipment:");
-                                        for (int i = 0; i < equipmentlist.size(); i++) {
-                                            auto it = data4::equipments.find(*equipmentlist[i].equipment);
-                                            if (it != data4::equipments.end()) {
-                                                printf("\n%s", it->second);
-                                            } else {
-                                                printf("\n%u", *equipmentlist[i].equipment);
-                                            }
-                                        }
-
-                                        printf("\n\n+ to save and exit, - to exit without saving\nA to increment money, X to set all yokai to smogmella");
-                                        printf("\nmoney: %u\n", *money);
                                         while (appletMainLoop()) {
                                             padUpdate(&pad);
                                             u64 kDown = padGetButtonsDown(&pad);
@@ -361,27 +319,58 @@ int main(int argc, char** argv) {
                                                 save = false;
                                                 break;
                                             }
-                                            if (kDown & HidNpadButton_A){
-                                                (*money)++;
-                                                printf("money: %u\n", *money);
-                                            }
-                                            if (kDown & HidNpadButton_Y){
-                                                (*money)--;
-                                                printf("money: %u\n", *money);
-                                            }
-                                            if (kDown & HidNpadButton_X){
-                                                for (int i = 0; i < characterlist.size(); i++) {
-                                                    *characterlist[i].yokai = 253585921;
+                                            
+                                            if (kDown & HidNpadButton_AnyUp) {
+                                                selectedAction--;
+                                                if (selectedAction < 0) {
+                                                    selectedAction = 6;
                                                 }
-                                                for (int i = 0; i < yokailist.size(); i++) {
-                                                    *yokailist[i].yokai = 253585921;
+                                            }
+                                            if (kDown & HidNpadButton_AnyDown) {
+                                                selectedAction++;
+                                                if (selectedAction >= 7) {
+                                                    selectedAction = 0;
                                                 }
-                                                printf("all yokai set to smogmella");
+                                            }
+                                            if (kDown & HidNpadButton_AnyLeft) {
+                                                selectedAction = 0;
+                                            }
+                                            if (kDown & HidNpadButton_AnyRight) {
+                                                selectedAction = 6;
+                                            }
+
+                                            printf("\x1b[1;1H\x1b[2J- to exit without saving \n");
+                                            std::cout << (0 == selectedAction ? "> " : "  ") << "characters" << std::endl;
+                                            std::cout << (1 == selectedAction ? "> " : "  ") << "yokai" << std::endl;
+                                            std::cout << (2 == selectedAction ? "> " : "  ") << "items" << std::endl;
+                                            std::cout << (3 == selectedAction ? "> " : "  ") << "equipment" << std::endl;
+                                            std::cout << (4 == selectedAction ? "> " : "  ") << "special souls" << std::endl;
+                                            std::cout << (5 == selectedAction ? "> " : "  ") << "yokai souls" << std::endl;
+                                            std::cout << (6 == selectedAction ? "> " : "  ") << "misc" << std::endl;
+
+                                            if (kDown & HidNpadButton_A) {
+                                                switch (selectedAction) {
+                                                    case 0: //characters
+                                                        edit4::edit_character(characterlist, pad);
+                                                    case 1: //yokai
+                                                        edit4::edit_yokai(yokailist, pad);
+                                                    case 2: //items
+                                                        edit4::edit_item(itemlist, pad);
+                                                    case 3: //equipment
+                                                        edit4::edit_equipment(equipmentlist, pad);
+                                                    case 4: //special souls
+                                                        edit4::edit_special_soul(specialsoullist, pad);
+                                                    case 5: //yokai souls
+                                                        edit4::edit_yokai_soul(yokaisoullist, pad);
+                                                    case 6: //misc
+                                                        edit4::edit_misc(x, y, z, location, money, nate, katie, summer, cole, bruno, jack, gatcharemaining, gatchamax, pad);
+                                                };
+
+                                                padUpdate(&pad);
                                             }
 
                                             consoleUpdate(NULL);
                                         }
-
 
                                         if (save) {
                                             fseek(file, 0, SEEK_SET);
@@ -418,16 +407,6 @@ int main(int argc, char** argv) {
                                         
                                         std::vector<uint8_t> decryptedData = yw_proc(encryptedData, false);
 
-                                        // printf("Decrypted data: ");
-                                        // int bytes = 0;
-                                        // for (const auto& byte : decryptedData) {
-                                        //     if (bytes == 120) {
-                                        //         break;
-                                        //     }
-                                        //     printf("%02x", byte);
-                                        //     bytes++;
-                                        // }
-
                                         //EDIT HERE
 
                                         bool save = true;
@@ -439,21 +418,6 @@ int main(int argc, char** argv) {
 
                                             //define variables here
 
-                                            printf("\n\n+ to save and exit, - to exit without saving\nhead editing not implemented yet");
-                                            while (appletMainLoop()) {
-                                                padUpdate(&pad);
-                                                u64 kDown = padGetButtonsDown(&pad);
-
-                                                if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_B){
-                                                    break;
-                                                }
-                                                if (kDown & HidNpadButton_Minus){
-                                                    save = false;
-                                                    break;
-                                                }
-
-                                                consoleUpdate(NULL);
-                                            }
                                         } else {
 
                                             size = 47564;
@@ -519,35 +483,7 @@ int main(int argc, char** argv) {
                                                 importantlist.push_back(struct1s::Important(decryptedData, offset));
                                                 offset += 8;
                                             }
-
-                                            // std::vector<int> medalliumlist; //TODO
-                                            // offset = 1476;
-                                            // importantlist.push_back();
-
-                                            // printf("\nYokai:");
-
-                                            // for (int i = 0; i < yokailist.size(); i++) {
-                                            //     printf("\n%s %s", data1s::yokais.at(*yokailist[i].yokai), yokailist[i].nickname); //unicode is not compatible with the terminal
-                                            // }
-
-                                            // printf("\n\nItems:");
-
-                                            // for (int i = 0; i < itemlist.size(); i++) {
-                                            //     printf("\n%s", data1s::items.at(*itemlist[i].item));
-                                            // }
-
-                                            // printf("\n\nEquipment:");
-
-                                            // for (int i = 0; i < equipmentlist.size(); i++) {
-                                            //     printf("\n%s", data1s::equipments.at(*equipmentlist[i].equipment));
-                                            // }
-
-                                            // printf("\n\nImportant:");
-
-                                            // for (int i = 0; i < importantlist.size(); i++) {
-                                            //     printf("\n%s", data1s::importants.at(*importantlist[i].important));
-                                            // }
-
+                                            
                                             int selectedAction = 0;
 
                                             while (appletMainLoop()) {
@@ -581,7 +517,7 @@ int main(int argc, char** argv) {
                                                     selectedAction = 4;
                                                 }
 
-                                                printf("\x1b[1;1H\x1b[2J+ to save and exit, - to exit without saving \n");
+                                                printf("\x1b[1;1H\x1b[2J- to exit without saving \n");
                                                 std::cout << (0 == selectedAction ? "> " : "  ") << "yokai" << std::endl;
                                                 std::cout << (1 == selectedAction ? "> " : "  ") << "items" << std::endl;
                                                 std::cout << (2 == selectedAction ? "> " : "  ") << "equipment" << std::endl;
@@ -589,218 +525,20 @@ int main(int argc, char** argv) {
                                                 std::cout << (4 == selectedAction ? "> " : "  ") << "misc" << std::endl;
 
                                                 if (kDown & HidNpadButton_A) {
-                                                    if (selectedAction == 4) {
-                                                        //TODO misc
-                                                    } else {
-                                                        int listSize;
-                                                        switch (selectedAction) {
-                                                            case 0:
-                                                                listSize = yokailist.size();
-                                                                break;
-                                                            case 1:
-                                                                listSize = itemlist.size();
-                                                                break;
-                                                            case 2:
-                                                                listSize = equipmentlist.size();
-                                                                break;
-                                                            case 3:
-                                                                listSize = importantlist.size();
-                                                                break;
-                                                        };
-                                                        bool selectedItems[listSize];
-                                                        for (int i = 0; i < listSize; i++) {
-                                                            selectedItems[i] = false;
-                                                        }
-                                                        int currentItem = 0;
-                                                        int currentEdit = 0;
-                                                        bool selectPage = true;
-                                                        int end;
-                                                        int selectedYokai = 0;
-                                                        int selectedItem = 0;
-                                                        int selectedEquipment = 0;
-                                                        int selectedImportant = 0;
+                                                    switch (selectedAction) {
+                                                        case 0: //yokai
+                                                            edit1s::edit_yokai(yokailist, pad);
+                                                        case 1: //items
+                                                            edit1s::edit_item(itemlist, pad);
+                                                        case 2: //equipment
+                                                            edit1s::edit_equipment(equipmentlist, pad);
+                                                        case 3: //important
+                                                            edit1s::edit_important(importantlist, pad);
+                                                        case 4: //misc
+                                                            edit1s::edit_misc(x, y, z, location, time, sun, money, pad);
+                                                    };
 
-                                                        while (appletMainLoop()) {
-                                                            padUpdate(&pad);
-                                                            u64 kDown = padGetButtonsDown(&pad);
-
-                                                            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B){
-                                                                break;
-                                                            }
-
-                                                            if (kDown & HidNpadButton_L || kDown & HidNpadButton_R) {
-                                                                selectPage = !selectPage;
-                                                            }
-
-                                                            if (selectPage) {
-                                                                if (kDown & HidNpadButton_AnyUp) {
-                                                                    currentItem--;
-                                                                    if (currentItem < 0) {
-                                                                        currentItem = listSize - 1;
-                                                                    }
-                                                                }
-                                                                if (kDown & HidNpadButton_AnyDown) {
-                                                                    currentItem++;
-                                                                    if (currentItem >= listSize) {
-                                                                        currentItem = 0;
-                                                                    }
-                                                                }
-                                                                if (kDown & HidNpadButton_AnyLeft) {
-                                                                    currentItem -= 44;
-                                                                    if (currentItem < 0) {
-                                                                        currentItem = 0;
-                                                                    }
-                                                                }
-                                                                if (kDown & HidNpadButton_AnyRight) {
-                                                                    currentItem += 44;
-                                                                    if (currentItem >= listSize) {
-                                                                        currentItem = listSize - 1;
-                                                                    }
-                                                                }
-                                                                if (kDown & HidNpadButton_A) {
-                                                                    selectedItems[currentItem] = !selectedItems[currentItem];
-                                                                }
-                                                                if (kDown & HidNpadButton_X) {
-                                                                    //if all true make all false
-                                                                    if (std::all_of(selectedItems, selectedItems + listSize, [](bool v) { return v; })) {
-                                                                        for (int i = 0; i < listSize; i++) {
-                                                                            selectedItems[i] = false;
-                                                                        }
-                                                                    } else{
-                                                                        for (int i = 0; i < listSize; i++) {
-                                                                            selectedItems[i] = true;
-                                                                        }
-                                                                    }
-                                                                }
-                                                                printf("\x1b[1;1H\x1b[2JL or R to swap pages, X to select/deselect all");
-                                                                end = currentItem/44+44;
-                                                                if (selectedAction == 0) {
-                                                                    if (end > yokailist.size()) {
-                                                                        end = yokailist.size();
-                                                                    }
-                                                                    for (int i = currentItem/44; i < end; i++) {
-                                                                        std::cout << "\n" << (selectedItems[i] ? "> " : "  ") << data1s::yokais.at(*yokailist[i].yokai) << (currentItem == i ? " <<<" : "");
-                                                                    }
-                                                                }
-                                                                if (selectedAction == 1) {
-                                                                    if (end > itemlist.size()) {
-                                                                        end = itemlist.size();
-                                                                    }
-                                                                    for (int i = currentItem/44; i < end; i++) {
-                                                                        std::cout << "\n" << (selectedItems[i] ? "> " : "  ") << data1s::items.at(*itemlist[i].item) << (currentItem == i ? " <<<" : "");
-                                                                    }
-                                                                }
-                                                                if (selectedAction == 2) {
-                                                                    if (end > equipmentlist.size()) {
-                                                                        end = equipmentlist.size();
-                                                                    }
-                                                                    for (int i = currentItem/44; i < end; i++) {
-                                                                        std::cout << "\n" << (selectedItems[i] ? "> " : "  ") << data1s::equipments.at(*equipmentlist[i].equipment) << (currentItem == i ? " <<<" : "");
-                                                                    }
-                                                                }
-                                                                if (selectedAction == 3) {
-                                                                    if (end > importantlist.size()) {
-                                                                        end = importantlist.size();
-                                                                    }
-                                                                    for (int i = currentItem/44; i < end; i++) {
-                                                                        std::cout << "\n" << (selectedItems[i] ? "> " : "  ") << data1s::importants.at(*importantlist[i].important) << (currentItem == i ? " <<<" : "");
-                                                                    }
-                                                                }
-                                                            } else { //edit page
-                                                                if (selectedAction == 0) { //yokai
-                                                                    if (kDown & HidNpadButton_AnyUp) {
-                                                                        currentEdit--;
-                                                                        if (currentEdit < 0) {
-                                                                            currentEdit = 4;
-                                                                        }
-                                                                    }
-                                                                    if (kDown & HidNpadButton_AnyDown) {
-                                                                        currentEdit++;
-                                                                        if (currentEdit >= 5) {
-                                                                            currentEdit = 0;
-                                                                        }
-                                                                    }
-                                                                    if (kDown & HidNpadButton_AnyLeft) {
-                                                                        currentEdit = 0;
-                                                                    }
-                                                                    if (kDown & HidNpadButton_AnyRight) {
-                                                                        currentEdit = 4;
-                                                                    }
-                                                                    if (kDown & HidNpadButton_A) {
-                                                                        if (currentEdit == 0) {
-                                                                            //print all yokai from data1s then select one
-                                                                            while (appletMainLoop()) {
-                                                                                padUpdate(&pad);
-                                                                                u64 kDown = padGetButtonsDown(&pad);
-
-                                                                                if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B || kDown & HidNpadButton_A) {
-                                                                                    break;
-                                                                                }
-                                                                                if (kDown & HidNpadButton_AnyUp) {
-                                                                                    selectedYokai--;
-                                                                                    if (selectedYokai < 0) {
-                                                                                        selectedYokai = data1s::yokais.size() - 1;
-                                                                                    }
-                                                                                }
-                                                                                if (kDown & HidNpadButton_AnyDown) {
-                                                                                    selectedYokai++;
-                                                                                    if (selectedYokai >= data1s::yokais.size()) {
-                                                                                        selectedYokai = 0;
-                                                                                    }
-                                                                                }
-                                                                                if (kDown & HidNpadButton_AnyLeft) {
-                                                                                    selectedYokai -= 44;
-                                                                                    if (selectedYokai < 0) {
-                                                                                        selectedYokai = 0;
-                                                                                    }
-                                                                                }
-                                                                                if (kDown & HidNpadButton_AnyRight) {
-                                                                                    selectedYokai += 44;
-                                                                                    if (selectedYokai >= data1s::yokais.size()) {
-                                                                                        selectedYokai = data1s::yokais.size() - 1;
-                                                                                    }
-                                                                                }
-                                                                                int i = 0;
-
-                                                                                printf("\x1b[1;1H\x1b[2JSelect a yokai:");
-                                                                                // for (const auto& pair : data1s::yokais) {
-                                                                                //     if (i/44 == selectedYokai/44) {
-                                                                                //         std::cout << "\n" << (i == selectedYokai ? "> " : "  ") << pair.second;
-                                                                                //     }
-                                                                                //     if (i == selectedYokai + 44) {
-                                                                                //         break;
-                                                                                //     }
-                                                                                //     i++;
-                                                                                // }
-
-                                                                                consoleUpdate(NULL);
-                                                                            }
-                                                                        }
-                                                                        if (currentEdit == 1) {
-                                                                        }
-                                                                        if (currentEdit == 2) {
-                                                                        }
-                                                                        if (currentEdit == 3) {
-                                                                        }
-                                                                        if (currentEdit == 4) {
-                                                                        }
-                                                                    }
-
-                                                                    printf("\x1b[1;1H\x1b[2JL or R to swap pages\n");
-
-                                                                    std::cout << (currentEdit == 0 ? "> " : "  ") << "yokai: " << std::endl;
-                                                                    std::cout << (currentEdit == 1 ? "> " : "  ") << "attitude: " << std::endl;
-                                                                    std::cout << (currentEdit == 2 ? "> " : "  ") << "level: " << std::endl;
-                                                                    printf("\n");
-                                                                    std::cout << (currentEdit == 3 ? "> " : "  ") << "apply and set max" << std::endl;
-                                                                    std::cout << (currentEdit == 4 ? "> " : "  ") << "apply" << std::endl;
-                                                                }
-                                                            }
-
-                                                            consoleUpdate(NULL);
-                                                        }
-                                                    }
-                                                    
+                                                    padUpdate(&pad);
                                                 }
 
                                                 consoleUpdate(NULL);
