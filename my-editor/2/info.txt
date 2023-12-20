@@ -1,5 +1,3 @@
-python '/Users/emilia/Documents/dev/ykw/ykw-editors/save-tools/yw_save.py' --encrypt --game yw2 --head 
-
 iv rules: hp / 2 + Str + Spr + Def + Spd = 40
 ev rules: hp / 2 + Str + Spr + Def + Spd <= 20
 

@@ -1,6 +1,6 @@
 from dump1s import * #get specific ids from data.py
 
-infile = "/Volumes/UNTITLED/switch/Checkpoint/saves/0x0100C0000CEEA000 0x0100C0000CEEA000/temp/game1.yw" #on windows change any "/" or "\" into "\\"
+infile = "path" #on windows change any "/" or "\" into "\\"
 
 def edit(time, sun, position, location, money, yokailist, itemlist, equipmentlist, importantlist, medalliumlist):
     #helper functions defined in dump1s.py

@@ -2,7 +2,7 @@ from dump2 import * #get specific ids from data.py
 
 separator = "/" # or "\\" on windows
 
-infile = "/Users/emilia/Documents/dev/ykw/ykw-editors/my-editor/2/game check copy.ywd" #on windows change any "/" or "\" into "\\"
+infile = "path" #on windows change any "/" or "\" into "\\"
 
 def edit(yokailist, itemlist, equipmentlist, importantlist, soullist, medalliumlist, profile, contactlist):
     #helper functions defined in dump2.py
@@ -13,13 +13,13 @@ def edit(yokailist, itemlist, equipmentlist, importantlist, soullist, medalliuml
     # #append a swosh soul
     # soullist = edit_soul(soullist, None, "snartle")
 
-    profile = edit_contact(profile, None, False) #maxes out your online battling stats. your name is not editable here remove if you don't want to be found cheating (could also set to private). changing your owner id may have unknown consequences 
-    for i in range(len(yokailist)):
-        yokailist = edit_yokai(yokailist, i, profile["ownerid"])
-    for i in range(len(itemlist)):
-        itemlist = edit_item(itemlist, i, amount=255)
-    for i in range(len(equipmentlist)):
-        equipmentlist = edit_equipment(equipmentlist, i, amount=255)
+    # profile = edit_contact(profile, None, False) #maxes out your online battling stats. your name is not editable here. remove if you don't want to be found cheating (could also set to private). changing your owner id may have unknown consequences 
+    # for i in range(len(yokailist)):
+    #     yokailist = edit_yokai(yokailist, i, profile["ownerid"])
+    # for i in range(len(itemlist)):
+    #     itemlist = edit_item(itemlist, i, amount=255)
+    # for i in range(len(equipmentlist)):
+    #     equipmentlist = edit_equipment(equipmentlist, i, amount=255)
 
 
     print(", ".join([yokais[i["id"]]for i in yokailist]))

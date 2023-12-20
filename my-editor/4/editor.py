@@ -1,7 +1,6 @@
 from dump4 import * #get specific ids from data.py
 
-infile = "/Volumes/SWITCH SD/switch/Checkpoint/saves/0x010086C00AF7C000 0x010086C00AF7C000/20470220-172708 XAW/USERDATA00/data.bin"
-#infile = "/Volumes/UNTITLED/switch/Checkpoint/saves/0x010086C00AF7C000 0x010086C00AF7C000/0 copy/USERDATA00/data.bin"
+infile = "path" #on windows change any "/" or "\" into "\\"
 
 def edit(position, location, money, namelist, gatcharemaining, gatchamax, characterlist, yokailist, itemlist, specialsoullist, yokaisoullist, equipmentlist):
     #helper functions defined in dump4.py
