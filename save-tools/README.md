@@ -7,6 +7,7 @@ This python script decrypts and encrypts save data of Yo-kai Watch.
 ## Requirements
 
 * Python 3.x
+* python -m pip install pycryptodome
 
 ## Supported games
 | game                             | decryption | encryption | head.yw needed | option           |
