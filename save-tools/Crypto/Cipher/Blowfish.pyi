@@ -1,4 +1,4 @@
-from typing import Union, Dict, Iterable, ByteString, Optional
+from typing import Union, Dict, Iterable
 
 from Crypto.Cipher._mode_ecb import EcbMode
 from Crypto.Cipher._mode_cbc import CbcMode
@@ -18,14 +18,16 @@ MODE_CTR: BlowfishMode
 MODE_OPENPGP: BlowfishMode
 MODE_EAX: BlowfishMode
 
-def new(key: ByteString,
+Buffer = Union[bytes, bytearray, memoryview]
+
+def new(key: Buffer,
         mode: BlowfishMode,
-        iv : Optional[ByteString] = ...,
-        IV : Optional[ByteString] = ...,
-        nonce : Optional[ByteString] = ...,
+        iv : Buffer = ...,
+        IV : Buffer = ...,
+        nonce : Buffer = ...,
         segment_size : int = ...,
         mac_len : int = ...,
-        initial_value : Union[int, ByteString] = ...,
+        initial_value : Union[int, Buffer] = ...,
         counter : Dict = ...) -> \
         Union[EcbMode, CbcMode, CfbMode, OfbMode, CtrMode, OpenPgpMode]: ...
 

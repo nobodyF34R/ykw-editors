@@ -65,8 +65,8 @@ class ChaCha20Poly1305Cipher(object):
 
         self.nonce = _copy_bytes(None, None, nonce)
 
-        self._next = ("update", "encrypt", "decrypt", "digest",
-                      "verify")
+        self._next = (self.update, self.encrypt, self.decrypt, self.digest,
+                      self.verify)
 
         self._authenticator = Poly1305.new(key=key, nonce=nonce, cipher=ChaCha20)
 
@@ -94,7 +94,7 @@ class ChaCha20Poly1305Cipher(object):
             A piece of associated data. There are no restrictions on its size.
         """
 
-        if "update" not in self._next:
+        if self.update not in self._next:
             raise TypeError("update() method cannot be called")
 
         self._len_aad += len(data)
@@ -120,13 +120,13 @@ class ChaCha20Poly1305Cipher(object):
           Otherwise, ``None``.
         """
 
-        if "encrypt" not in self._next:
+        if self.encrypt not in self._next:
             raise TypeError("encrypt() method cannot be called")
 
         if self._status == _CipherStatus.PROCESSING_AUTH_DATA:
             self._pad_aad()
 
-        self._next = ("encrypt", "digest")
+        self._next = (self.encrypt, self.digest)
 
         result = self._cipher.encrypt(plaintext, output=output)
         self._len_ct += len(plaintext)
@@ -149,13 +149,13 @@ class ChaCha20Poly1305Cipher(object):
           Otherwise, ``None``.
         """
 
-        if "decrypt" not in self._next:
+        if self.decrypt not in self._next:
             raise TypeError("decrypt() method cannot be called")
 
         if self._status == _CipherStatus.PROCESSING_AUTH_DATA:
             self._pad_aad()
 
-        self._next = ("decrypt", "verify")
+        self._next = (self.decrypt, self.verify)
 
         self._len_ct += len(ciphertext)
         self._authenticator.update(ciphertext)
@@ -189,9 +189,9 @@ class ChaCha20Poly1305Cipher(object):
         :Return: the MAC tag, as 16 ``bytes``.
         """
 
-        if "digest" not in self._next:
+        if self.digest not in self._next:
             raise TypeError("digest() method cannot be called")
-        self._next = ("digest",)
+        self._next = (self.digest,)
 
         return self._compute_mac()
 
@@ -218,10 +218,10 @@ class ChaCha20Poly1305Cipher(object):
             or the key is incorrect.
         """
 
-        if "verify" not in self._next:
+        if self.verify not in self._next:
             raise TypeError("verify() cannot be called"
                             " when encrypting a message")
-        self._next = ("verify",)
+        self._next = (self.verify,)
 
         secret = get_random_bytes(16)
 

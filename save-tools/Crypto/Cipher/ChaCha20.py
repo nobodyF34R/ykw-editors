@@ -106,7 +106,7 @@ class ChaCha20Cipher(object):
             self._name = "ChaCha20"
             nonce = self.nonce
 
-        self._next = ("encrypt", "decrypt")
+        self._next = ( self.encrypt, self.decrypt )
 
         self._state = VoidPointer()
         result = _raw_chacha20_lib.chacha20_init(
@@ -134,9 +134,9 @@ class ChaCha20Cipher(object):
           Otherwise, ``None``.
         """
 
-        if "encrypt" not in self._next:
+        if self.encrypt not in self._next:
             raise TypeError("Cipher object can only be used for decryption")
-        self._next = ("encrypt",)
+        self._next = ( self.encrypt, )
         return self._encrypt(plaintext, output)
 
     def _encrypt(self, plaintext, output):
@@ -180,9 +180,9 @@ class ChaCha20Cipher(object):
           Otherwise, ``None``.
         """
 
-        if "decrypt" not in self._next:
+        if self.decrypt not in self._next:
             raise TypeError("Cipher object can only be used for encryption")
-        self._next = ("decrypt",)
+        self._next = ( self.decrypt, )
 
         try:
             return self._encrypt(ciphertext, output)

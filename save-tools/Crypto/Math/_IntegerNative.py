@@ -30,7 +30,7 @@
 
 from ._IntegerBase import IntegerBase
 
-from Crypto.Util.number import long_to_bytes, bytes_to_long, inverse, GCD
+from Crypto.Util.number import long_to_bytes, bytes_to_long
 
 
 class IntegerNative(IntegerBase):
@@ -280,7 +280,13 @@ class IntegerNative(IntegerBase):
         if self._value == 0:
             return 1
 
-        return self._value.bit_length()
+        bit_size = 0
+        tmp = self._value
+        while tmp:
+            tmp >>= 1
+            bit_size += 1
+
+        return bit_size
 
     def size_in_bytes(self):
         return (self.size_in_bits() - 1) // 8 + 1
@@ -312,7 +318,22 @@ class IntegerNative(IntegerBase):
         self._value = int(source)
 
     def inplace_inverse(self, modulus):
-        self._value = inverse(self._value, int(modulus))
+        modulus = int(modulus)
+        if modulus == 0:
+            raise ZeroDivisionError("Modulus cannot be zero")
+        if modulus < 0:
+            raise ValueError("Modulus cannot be negative")
+        r_p, r_n = self._value, modulus
+        s_p, s_n = 1, 0
+        while r_n > 0:
+            q = r_p // r_n
+            r_p, r_n = r_n, r_p - q * r_n
+            s_p, s_n = s_n, s_p - q * s_n
+        if r_p != 1:
+            raise ValueError("No inverse value can be computed" + str(r_p))
+        while s_p < 0:
+            s_p += modulus
+        self._value = s_p
         return self
 
     def inverse(self, modulus):
@@ -321,7 +342,11 @@ class IntegerNative(IntegerBase):
         return result
 
     def gcd(self, term):
-        return self.__class__(GCD(abs(self._value), abs(int(term))))
+        r_p, r_n = abs(self._value), abs(int(term))
+        while r_n > 0:
+            q = r_p // r_n
+            r_p, r_n = r_n, r_p - q * r_n
+        return self.__class__(r_p)
 
     def lcm(self, term):
         term = int(term)

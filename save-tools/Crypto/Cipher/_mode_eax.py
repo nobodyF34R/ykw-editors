@@ -90,12 +90,12 @@ class EaxMode(object):
         self._mac_tag = None  # Cache for MAC tag
 
         # Allowed transitions after initialization
-        self._next = ["update", "encrypt", "decrypt",
-                      "digest", "verify"]
+        self._next = [self.update, self.encrypt, self.decrypt,
+                      self.digest, self.verify]
 
         # MAC tag length
-        if not (2 <= self._mac_len <= self.block_size):
-            raise ValueError("'mac_len' must be at least 2 and not larger than %d"
+        if not (4 <= self._mac_len <= self.block_size):
+            raise ValueError("Parameter 'mac_len' must not be larger than %d"
                              % self.block_size)
 
         # Nonce cannot be empty and must be a byte string
@@ -145,12 +145,12 @@ class EaxMode(object):
             A piece of associated data. There are no restrictions on its size.
         """
 
-        if "update" not in self._next:
+        if self.update not in self._next:
             raise TypeError("update() can only be called"
                                 " immediately after initialization")
 
-        self._next = ["update", "encrypt", "decrypt",
-                      "digest", "verify"]
+        self._next = [self.update, self.encrypt, self.decrypt,
+                      self.digest, self.verify]
 
         self._signer.update(assoc_data)
         return self
@@ -188,10 +188,10 @@ class EaxMode(object):
           Otherwise, ``None``.
         """
 
-        if "encrypt" not in self._next:
+        if self.encrypt not in self._next:
             raise TypeError("encrypt() can only be called after"
                             " initialization or an update()")
-        self._next = ["encrypt", "digest"]
+        self._next = [self.encrypt, self.digest]
         ct = self._cipher.encrypt(plaintext, output=output)
         if output is None:
             self._omac[2].update(ct)
@@ -232,10 +232,10 @@ class EaxMode(object):
           Otherwise, ``None``.
         """
 
-        if "decrypt" not in self._next:
+        if self.decrypt not in self._next:
             raise TypeError("decrypt() can only be called"
                             " after initialization or an update()")
-        self._next = ["decrypt", "verify"]
+        self._next = [self.decrypt, self.verify]
         self._omac[2].update(ciphertext)
         return self._cipher.decrypt(ciphertext, output=output)
 
@@ -250,10 +250,10 @@ class EaxMode(object):
         :Return: the MAC, as a byte string.
         """
 
-        if "digest" not in self._next:
+        if self.digest not in self._next:
             raise TypeError("digest() cannot be called when decrypting"
                                 " or validating a message")
-        self._next = ["digest"]
+        self._next = [self.digest]
 
         if not self._mac_tag:
             tag = b'\x00' * self.block_size
@@ -289,10 +289,10 @@ class EaxMode(object):
             or the key is incorrect.
         """
 
-        if "verify" not in self._next:
+        if self.verify not in self._next:
             raise TypeError("verify() cannot be called"
                                 " when encrypting a message")
-        self._next = ["verify"]
+        self._next = [self.verify]
 
         if not self._mac_tag:
             tag = b'\x00' * self.block_size

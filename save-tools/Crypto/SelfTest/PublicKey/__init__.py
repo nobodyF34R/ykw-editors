@@ -24,30 +24,21 @@
 
 """Self-test for public-key crypto"""
 
-import unittest
-from Crypto.SelfTest.PublicKey import (test_DSA, test_RSA,
-                                       test_ECC_NIST, test_ECC_25519, test_ECC_448,
-                                       test_import_DSA, test_import_RSA,
-                                       test_import_ECC, test_ElGamal)
+__revision__ = "$Id$"
 
+import os
 
 def get_tests(config={}):
     tests = []
-    tests += test_DSA.get_tests(config=config)
-    tests += test_RSA.get_tests(config=config)
-    tests += test_ECC_NIST.get_tests(config=config)
-    tests += test_ECC_25519.get_tests(config=config)
-    tests += test_ECC_448.get_tests(config=config)
-
-    tests += test_import_DSA.get_tests(config=config)
-    tests += test_import_RSA.get_tests(config=config)
-    tests += test_import_ECC.get_tests(config=config)
-
-    tests += test_ElGamal.get_tests(config=config)
+    from Crypto.SelfTest.PublicKey import test_DSA;       tests += test_DSA.get_tests(config=config)
+    from Crypto.SelfTest.PublicKey import test_RSA;       tests += test_RSA.get_tests(config=config)
+    from Crypto.SelfTest.PublicKey import test_importKey; tests += test_importKey.get_tests(config=config)
+    from Crypto.SelfTest.PublicKey import test_ElGamal;   tests += test_ElGamal.get_tests(config=config)
     return tests
 
-
 if __name__ == '__main__':
-    def suite():
-        return unittest.TestSuite(get_tests())
+    import unittest
+    suite = lambda: unittest.TestSuite(get_tests())
     unittest.main(defaultTest='suite')
+
+# vim:set ts=4 sw=4 sts=4 expandtab:

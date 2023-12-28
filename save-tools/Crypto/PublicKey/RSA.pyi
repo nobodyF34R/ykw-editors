@@ -1,7 +1,5 @@
 from typing import Callable, Union, Tuple, Optional
 
-from Crypto.Math.Numbers import Integer
-
 __all__ = ['generate', 'construct', 'import_key',
            'RsaKey', 'oid']
 
@@ -9,7 +7,6 @@ RNG = Callable[[int], bytes]
 
 class RsaKey(object):
     def __init__(self, **kwargs: int) -> None: ...
-
     @property
     def n(self) -> int: ...
     @property
@@ -22,11 +19,6 @@ class RsaKey(object):
     def q(self) -> int: ...
     @property
     def u(self) -> int: ...
-    @property
-    def invp(self) -> int: ...
-    @property
-    def invq(self) -> int: ...
-
     def size_in_bits(self) -> int: ...
     def size_in_bytes(self) -> int: ...
     def has_private(self) -> bool: ...
@@ -45,13 +37,11 @@ class RsaKey(object):
     exportKey = export_key
     publickey = public_key
 
-Int = Union[int, Integer]
-
 def generate(bits: int, randfunc: Optional[RNG]=None, e: Optional[int]=65537) -> RsaKey: ...
-def construct(rsa_components: Union[Tuple[Int, Int], #  n, e
-                                    Tuple[Int, Int, Int], #  n, e, d
-                                    Tuple[Int, Int, Int, Int, Int], #  n, e, d, p, q
-                                    Tuple[Int, Int, Int, Int, Int, Int]], #  n, e, d, p, q, crt_q
+def construct(rsa_components: Union[Tuple[int, int], #  n, e
+                                    Tuple[int, int, int], #  n, e, d
+                                    Tuple[int, int, int, int, int], #  n, e, d, p, q
+                                    Tuple[int, int, int, int, int, int]], #  n, e, d, p, q, crt_q
               consistency_check: Optional[bool]=True) -> RsaKey: ...
 def import_key(extern_key: Union[str, bytes], passphrase: Optional[str]=None) -> RsaKey: ...
 

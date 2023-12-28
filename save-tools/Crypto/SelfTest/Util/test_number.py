@@ -24,29 +24,85 @@
 
 """Self-tests for (some of) Crypto.Util.number"""
 
-import math
+__revision__ = "$Id$"
+
+import sys
+if sys.version_info[0] == 2 and sys.version_info[1] == 1:
+    from Crypto.Util.py21compat import *
+
 import unittest
-
-from Crypto.Util.py3compat import *
-from Crypto.SelfTest.st_common import list_test_cases
-
-from Crypto.Util import number
-from Crypto.Util.number import long_to_bytes
-
-
-class MyError(Exception):
-    """Dummy exception used for tests"""
 
 # NB: In some places, we compare tuples instead of just output values so that
 # if any inputs cause a test failure, we'll be able to tell which ones.
 
 class MiscTests(unittest.TestCase):
+    def setUp(self):
+        global number, math
+        from Crypto.Util import number
+        import math
+
+    def test_ceil_shift(self):
+        """Util.number.ceil_shift"""
+        self.assertRaises(AssertionError, number.ceil_shift, -1, 1)
+        self.assertRaises(AssertionError, number.ceil_shift, 1, -1)
+
+        # b = 0
+        self.assertEqual(0, number.ceil_shift(0, 0))
+        self.assertEqual(1, number.ceil_shift(1, 0))
+        self.assertEqual(2, number.ceil_shift(2, 0))
+        self.assertEqual(3, number.ceil_shift(3, 0))
+
+        # b = 1
+        self.assertEqual(0, number.ceil_shift(0, 1))
+        self.assertEqual(1, number.ceil_shift(1, 1))
+        self.assertEqual(1, number.ceil_shift(2, 1))
+        self.assertEqual(2, number.ceil_shift(3, 1))
+
+        # b = 2
+        self.assertEqual(0, number.ceil_shift(0, 2))
+        self.assertEqual(1, number.ceil_shift(1, 2))
+        self.assertEqual(1, number.ceil_shift(2, 2))
+        self.assertEqual(1, number.ceil_shift(3, 2))
+        self.assertEqual(1, number.ceil_shift(4, 2))
+        self.assertEqual(2, number.ceil_shift(5, 2))
+        self.assertEqual(2, number.ceil_shift(6, 2))
+        self.assertEqual(2, number.ceil_shift(7, 2))
+        self.assertEqual(2, number.ceil_shift(8, 2))
+        self.assertEqual(3, number.ceil_shift(9, 2))
+
+        for b in range(3, 1+129, 3):    # 3, 6, ... , 129
+            self.assertEqual(0, number.ceil_shift(0, b))
+
+            n = 1
+            while n <= 2**(b+2):
+                (q, r) = divmod(n-1, 2**b)
+                expected = q + int(not not r)
+                self.assertEqual((n-1, b, expected),
+                                 (n-1, b, number.ceil_shift(n-1, b)))
+
+                (q, r) = divmod(n, 2**b)
+                expected = q + int(not not r)
+                self.assertEqual((n, b, expected),
+                                 (n, b, number.ceil_shift(n, b)))
+
+                (q, r) = divmod(n+1, 2**b)
+                expected = q + int(not not r)
+                self.assertEqual((n+1, b, expected),
+                                 (n+1, b, number.ceil_shift(n+1, b)))
+
+                n *= 2
 
     def test_ceil_div(self):
         """Util.number.ceil_div"""
         self.assertRaises(TypeError, number.ceil_div, "1", 1)
         self.assertRaises(ZeroDivisionError, number.ceil_div, 1, 0)
         self.assertRaises(ZeroDivisionError, number.ceil_div, -1, 0)
+
+        # b = -1
+        self.assertEqual(0, number.ceil_div(0, -1))
+        self.assertEqual(-1, number.ceil_div(1, -1))
+        self.assertEqual(-2, number.ceil_div(2, -1))
+        self.assertEqual(-3, number.ceil_div(3, -1))
 
         # b = 1
         self.assertEqual(0, number.ceil_div(0, 1))
@@ -84,23 +140,93 @@ class MiscTests(unittest.TestCase):
         self.assertEqual(2, number.ceil_div(8, 4))
         self.assertEqual(3, number.ceil_div(9, 4))
 
-    def test_getPrime(self):
-        """Util.number.getPrime"""
-        self.assertRaises(ValueError, number.getPrime, -100)
-        self.assertRaises(ValueError, number.getPrime, 0)
-        self.assertRaises(ValueError, number.getPrime, 1)
+        # b = -4
+        self.assertEqual(3, number.ceil_div(-9, -4))
+        self.assertEqual(2, number.ceil_div(-8, -4))
+        self.assertEqual(2, number.ceil_div(-7, -4))
+        self.assertEqual(2, number.ceil_div(-6, -4))
+        self.assertEqual(2, number.ceil_div(-5, -4))
+        self.assertEqual(1, number.ceil_div(-4, -4))
+        self.assertEqual(1, number.ceil_div(-3, -4))
+        self.assertEqual(1, number.ceil_div(-2, -4))
+        self.assertEqual(1, number.ceil_div(-1, -4))
+        self.assertEqual(0, number.ceil_div(0, -4))
+        self.assertEqual(0, number.ceil_div(1, -4))
+        self.assertEqual(0, number.ceil_div(2, -4))
+        self.assertEqual(0, number.ceil_div(3, -4))
+        self.assertEqual(-1, number.ceil_div(4, -4))
+        self.assertEqual(-1, number.ceil_div(5, -4))
+        self.assertEqual(-1, number.ceil_div(6, -4))
+        self.assertEqual(-1, number.ceil_div(7, -4))
+        self.assertEqual(-2, number.ceil_div(8, -4))
+        self.assertEqual(-2, number.ceil_div(9, -4))
 
-        bits = 4
-        for i in range(100):
-            x = number.getPrime(bits)
-            self.assertEqual(x >= (1 << bits - 1), 1)
-            self.assertEqual(x < (1 << bits), 1)
+    def test_exact_log2(self):
+        """Util.number.exact_log2"""
+        self.assertRaises(TypeError, number.exact_log2, "0")
+        self.assertRaises(ValueError, number.exact_log2, -1)
+        self.assertRaises(ValueError, number.exact_log2, 0)
+        self.assertEqual(0, number.exact_log2(1))
+        self.assertEqual(1, number.exact_log2(2))
+        self.assertRaises(ValueError, number.exact_log2, 3)
+        self.assertEqual(2, number.exact_log2(4))
+        self.assertRaises(ValueError, number.exact_log2, 5)
+        self.assertRaises(ValueError, number.exact_log2, 6)
+        self.assertRaises(ValueError, number.exact_log2, 7)
+        e = 3
+        n = 8
+        while e < 16:
+            if n == 2**e:
+                self.assertEqual(e, number.exact_log2(n), "expected=2**%d, n=%d" % (e, n))
+                e += 1
+            else:
+                self.assertRaises(ValueError, number.exact_log2, n)
+            n += 1
 
-        bits = 512
-        x = number.getPrime(bits)
-        self.assertNotEqual(x % 2, 0)
-        self.assertEqual(x >= (1 << bits - 1), 1)
-        self.assertEqual(x < (1 << bits), 1)
+        for e in range(16, 1+64, 2):
+            self.assertRaises(ValueError, number.exact_log2, 2**e-1)
+            self.assertEqual(e, number.exact_log2(2**e))
+            self.assertRaises(ValueError, number.exact_log2, 2**e+1)
+
+    def test_exact_div(self):
+        """Util.number.exact_div"""
+
+        # Positive numbers
+        self.assertEqual(1, number.exact_div(1, 1))
+        self.assertRaises(ValueError, number.exact_div, 1, 2)
+        self.assertEqual(1, number.exact_div(2, 2))
+        self.assertRaises(ValueError, number.exact_div, 3, 2)
+        self.assertEqual(2, number.exact_div(4, 2))
+
+        # Negative numbers
+        self.assertEqual(-1, number.exact_div(-1, 1))
+        self.assertEqual(-1, number.exact_div(1, -1))
+        self.assertRaises(ValueError, number.exact_div, -1, 2)
+        self.assertEqual(1, number.exact_div(-2, -2))
+        self.assertEqual(-2, number.exact_div(-4, 2))
+
+        # Zero dividend
+        self.assertEqual(0, number.exact_div(0, 1))
+        self.assertEqual(0, number.exact_div(0, 2))
+
+        # Zero divisor (allow_divzero == False)
+        self.assertRaises(ZeroDivisionError, number.exact_div, 0, 0)
+        self.assertRaises(ZeroDivisionError, number.exact_div, 1, 0)
+
+        # Zero divisor (allow_divzero == True)
+        self.assertEqual(0, number.exact_div(0, 0, allow_divzero=True))
+        self.assertRaises(ValueError, number.exact_div, 1, 0, allow_divzero=True)
+
+    def test_floor_div(self):
+        """Util.number.floor_div"""
+        self.assertRaises(TypeError, number.floor_div, "1", 1)
+        for a in range(-10, 10):
+            for b in range(-10, 10):
+                if b == 0:
+                    self.assertRaises(ZeroDivisionError, number.floor_div, a, b)
+                else:
+                    self.assertEqual((a, b, int(math.floor(float(a) / b))),
+                                     (a, b, number.floor_div(a, b)))
 
     def test_getStrongPrime(self):
         """Util.number.getStrongPrime"""
@@ -149,40 +275,36 @@ class MiscTests(unittest.TestCase):
         self.assertEqual(number.size(0xa2),8)
         self.assertEqual(number.size(0xa2ba40),8*3)
         self.assertEqual(number.size(0xa2ba40ee07e3b2bd2f02ce227f36a195024486e49c19cb41bbbdfbba98b22b0e577c2eeaffa20d883a76e65e394c69d4b3c05a1e8fadda27edb2a42bc000fe888b9b32c22d15add0cd76b3e7936e19955b220dd17d4ea904b1ec102b2e4de7751222aa99151024c7cb41cc5ea21d00eeb41f7c800834d2c6e06bce3bce7ea9a5), 1024)
-        self.assertRaises(ValueError, number.size, -1)
 
+class FastmathTests(unittest.TestCase):
+    def setUp(self):
+        global number
+        from Crypto.Util import number
 
-class LongTests(unittest.TestCase):
-
-    def test1(self):
-        self.assertEqual(long_to_bytes(0), b'\x00')
-        self.assertEqual(long_to_bytes(1), b'\x01')
-        self.assertEqual(long_to_bytes(0x100), b'\x01\x00')
-        self.assertEqual(long_to_bytes(0xFF00000000), b'\xFF\x00\x00\x00\x00')
-        self.assertEqual(long_to_bytes(0xFF00000000), b'\xFF\x00\x00\x00\x00')
-        self.assertEqual(long_to_bytes(0x1122334455667788), b'\x11\x22\x33\x44\x55\x66\x77\x88')
-        self.assertEqual(long_to_bytes(0x112233445566778899), b'\x11\x22\x33\x44\x55\x66\x77\x88\x99')
-
-    def test2(self):
-        self.assertEqual(long_to_bytes(0, 1), b'\x00')
-        self.assertEqual(long_to_bytes(0, 2), b'\x00\x00')
-        self.assertEqual(long_to_bytes(1, 3), b'\x00\x00\x01')
-        self.assertEqual(long_to_bytes(65535, 2), b'\xFF\xFF')
-        self.assertEqual(long_to_bytes(65536, 2), b'\x00\x01\x00\x00')
-        self.assertEqual(long_to_bytes(0x100, 1), b'\x01\x00')
-        self.assertEqual(long_to_bytes(0xFF00000001, 6), b'\x00\xFF\x00\x00\x00\x01')
-        self.assertEqual(long_to_bytes(0xFF00000001, 8), b'\x00\x00\x00\xFF\x00\x00\x00\x01')
-        self.assertEqual(long_to_bytes(0xFF00000001, 10), b'\x00\x00\x00\x00\x00\xFF\x00\x00\x00\x01')
-        self.assertEqual(long_to_bytes(0xFF00000001, 11), b'\x00\x00\x00\x00\x00\x00\xFF\x00\x00\x00\x01')
-
-    def test_err1(self):
-        self.assertRaises(ValueError, long_to_bytes, -1)
-
+    def test_negative_number_roundtrip_mpzToLongObj_longObjToMPZ(self):
+        """Test that mpzToLongObj and longObjToMPZ (internal functions) roundtrip negative numbers correctly."""
+        n = -100000000000000000000000000000000000
+        e = 2
+        k = number._fastmath.rsa_construct(n, e)
+        self.assertEqual(n, k.n)
+        self.assertEqual(e, k.e)
 
 def get_tests(config={}):
-    tests = []
-    tests += list_test_cases(MiscTests)
-    tests += list_test_cases(LongTests)
+    from Crypto.SelfTest.st_common import list_test_cases
+    tests = list_test_cases(MiscTests)
+    try:
+        from Crypto.PublicKey import _fastmath
+        tests += list_test_cases(FastmathTests)
+    except ImportError:
+        from distutils.sysconfig import get_config_var
+        import inspect, os.path
+        _fm_path = os.path.normpath(os.path.dirname(os.path.abspath(
+            inspect.getfile(inspect.currentframe())))
+            +"/../../PublicKey/_fastmath"+get_config_var("SO"))
+        if os.path.exists(_fm_path):
+            raise ImportError("While the _fastmath module exists, importing "+
+                "it failed. This may point to the gmp or mpir shared library "+
+                "not being in the path. _fastmath was found at "+_fm_path)
     return tests
 
 if __name__ == '__main__':

@@ -534,9 +534,6 @@ class EccPoint(object):
         return self
 
     def __eq__(self, point):
-        if not isinstance(point, EccPoint):
-            return False
-
         cmp_func = lib_func(self, "cmp")
         return 0 == cmp_func(self._point.get(), point._point.get())
 
@@ -756,7 +753,7 @@ class EccKey(object):
         if curve_name not in _curves:
             raise ValueError("Unsupported curve (%s)" % curve_name)
         self._curve = _curves[curve_name]
-        self.curve = self._curve.desc
+        self.curve = curve_name
 
         count = int(self._d is not None) + int(self._seed is not None)
 
@@ -804,9 +801,6 @@ class EccKey(object):
         return self._curve.desc in ("Ed25519", "Ed448")
 
     def __eq__(self, other):
-        if not isinstance(other, EccKey):
-            return False
-
         if other.has_private() != self.has_private():
             return False
 
@@ -815,7 +809,7 @@ class EccKey(object):
     def __repr__(self):
         if self.has_private():
             if self._is_eddsa():
-                extra = ", seed=%s" % tostr(binascii.hexlify(self._seed))
+                extra = ", seed=%s" % self._seed.hex()
             else:
                 extra = ", d=%d" % int(self._d)
         else:

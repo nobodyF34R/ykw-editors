@@ -71,7 +71,7 @@ Example:
 import struct
 from binascii import unhexlify
 
-from Crypto.Util.py3compat import bord, _copy_bytes, bchr
+from Crypto.Util.py3compat import bord, _copy_bytes
 from Crypto.Util.number import long_to_bytes, bytes_to_long
 from Crypto.Util.strxor import strxor
 
@@ -142,22 +142,15 @@ class OcbMode(object):
         self._cache_P = b""
 
         # Allowed transitions after initialization
-        self._next = ["update", "encrypt", "decrypt",
-                      "digest", "verify"]
+        self._next = [self.update, self.encrypt, self.decrypt,
+                      self.digest, self.verify]
 
         # Compute Offset_0
         params_without_key = dict(cipher_params)
         key = params_without_key.pop("key")
-
-        taglen_mod128 = (self._mac_len * 8) % 128
-        if len(self.nonce) < 15:
-            nonce = bchr(taglen_mod128 << 1) +\
-                    b'\x00' * (14 - len(nonce)) +\
-                    b'\x01' +\
-                    self.nonce
-        else:
-            nonce = bchr((taglen_mod128 << 1) | 0x01) +\
-                    self.nonce
+        nonce = (struct.pack('B', self._mac_len << 4 & 0xFF) +
+                 b'\x00' * (14 - len(nonce)) +
+                 b'\x01' + self.nonce)
 
         bottom_bits = bord(nonce[15]) & 0x3F    # 6 bits, 0..63
         top_bits = bord(nonce[15]) & 0xC0       # 2 bits
@@ -224,12 +217,12 @@ class OcbMode(object):
             A piece of associated data.
         """
 
-        if "update" not in self._next:
+        if self.update not in self._next:
             raise TypeError("update() can only be called"
                             " immediately after initialization")
 
-        self._next = ["encrypt", "decrypt", "digest",
-                      "verify", "update"]
+        self._next = [self.encrypt, self.decrypt, self.digest,
+                      self.verify, self.update]
 
         if len(self._cache_A) > 0:
             filler = min(16 - len(self._cache_A), len(assoc_data))
@@ -323,14 +316,14 @@ class OcbMode(object):
             Its length may not match the length of the *plaintext*.
         """
 
-        if "encrypt" not in self._next:
+        if self.encrypt not in self._next:
             raise TypeError("encrypt() can only be called after"
                             " initialization or an update()")
 
         if plaintext is None:
-            self._next = ["digest"]
+            self._next = [self.digest]
         else:
-            self._next = ["encrypt"]
+            self._next = [self.encrypt]
         return self._transcrypt(plaintext, _raw_ocb_lib.OCB_encrypt, "encrypt")
 
     def decrypt(self, ciphertext=None):
@@ -352,14 +345,14 @@ class OcbMode(object):
             Its length may not match the length of the *ciphertext*.
         """
 
-        if "decrypt" not in self._next:
+        if self.decrypt not in self._next:
             raise TypeError("decrypt() can only be called after"
                             " initialization or an update()")
 
         if ciphertext is None:
-            self._next = ["verify"]
+            self._next = [self.verify]
         else:
-            self._next = ["decrypt"]
+            self._next = [self.decrypt]
         return self._transcrypt(ciphertext,
                                 _raw_ocb_lib.OCB_decrypt,
                                 "decrypt")
@@ -395,12 +388,12 @@ class OcbMode(object):
         :Return: the MAC, as a byte string.
         """
 
-        if "digest" not in self._next:
+        if self.digest not in self._next:
             raise TypeError("digest() cannot be called now for this cipher")
 
         assert(len(self._cache_P) == 0)
 
-        self._next = ["digest"]
+        self._next = [self.digest]
 
         if self._mac_tag is None:
             self._compute_mac_tag()
@@ -430,12 +423,12 @@ class OcbMode(object):
             or the key is incorrect.
         """
 
-        if "verify" not in self._next:
+        if self.verify not in self._next:
             raise TypeError("verify() cannot be called now for this cipher")
 
         assert(len(self._cache_P) == 0)
 
-        self._next = ["verify"]
+        self._next = [self.verify]
 
         if self._mac_tag is None:
             self._compute_mac_tag()
