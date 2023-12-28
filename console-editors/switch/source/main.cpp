@@ -155,6 +155,8 @@ int main(int argc, char** argv) {
                     if (saveFiles.empty()) {
                         std::cout << "No save files found." << std::endl;
                     } else {
+                        std::sort(saveFiles.begin(), saveFiles.end());
+
                         int selectedSave = 0;
                         
                         while (appletMainLoop()) {
@@ -189,7 +191,7 @@ int main(int argc, char** argv) {
                                 std::cout << (i == selectedSave ? "> " : "  ") << saveFiles[i] << std::endl;
                             }
 
-                            if (kDown & HidNpadButton_A) {
+                            if (kDown & HidNpadButton_A || application_id == 0x010086c00af7c000) {
                                 if (application_id == 0x010086c00af7c000) {
                                     char filePath[27] = "save:/USERDATA00/";
                                     strcat(filePath, saveFiles[selectedSave].c_str());
@@ -229,7 +231,7 @@ int main(int argc, char** argv) {
 
 
                                         std::vector<struct4::Yokai> characterlist;
-                                        uint32_t offset = 166627;
+                                        int offset = 166627;
 
                                         for (int i = 0; i < 6; i++) {
                                             if (data[offset+2] == 0) {
@@ -352,18 +354,25 @@ int main(int argc, char** argv) {
                                                 switch (selectedAction) {
                                                     case 0: //characters
                                                         edit4::edit_character(characterlist, pad);
+                                                        break;
                                                     case 1: //yokai
                                                         edit4::edit_yokai(yokailist, pad);
+                                                        break;
                                                     case 2: //items
                                                         edit4::edit_item(itemlist, pad);
+                                                        break;
                                                     case 3: //equipment
                                                         edit4::edit_equipment(equipmentlist, pad);
+                                                        break;
                                                     case 4: //special souls
                                                         edit4::edit_special_soul(specialsoullist, pad);
+                                                        break;
                                                     case 5: //yokai souls
                                                         edit4::edit_yokai_soul(yokaisoullist, pad);
+                                                        break;
                                                     case 6: //misc
                                                         edit4::edit_misc(x, y, z, location, money, nate, katie, summer, cole, bruno, jack, gatcharemaining, gatchamax, pad);
+                                                        break;
                                                 };
 
                                                 padUpdate(&pad);
@@ -387,6 +396,7 @@ int main(int argc, char** argv) {
                                         else {
                                             fclose(file);
                                         }
+                                        break;
                                     }
                                 } else {
                                     char filePath[15] = "save:/";
@@ -434,7 +444,7 @@ int main(int argc, char** argv) {
                                             uint32_t* money = (uint32_t*)(& decryptedData[37620]); 
 
 
-                                            int16_t offset;
+                                            int offset;
 
                                             std::vector<struct1s::Yokai> yokailist;
                                             offset = 7696;
@@ -528,14 +538,19 @@ int main(int argc, char** argv) {
                                                     switch (selectedAction) {
                                                         case 0: //yokai
                                                             edit1s::edit_yokai(yokailist, pad);
+                                                            break;
                                                         case 1: //items
                                                             edit1s::edit_item(itemlist, pad);
+                                                            break;
                                                         case 2: //equipment
                                                             edit1s::edit_equipment(equipmentlist, pad);
+                                                            break;
                                                         case 3: //important
                                                             edit1s::edit_important(importantlist, pad);
+                                                            break;
                                                         case 4: //misc
                                                             edit1s::edit_misc(x, y, z, location, time, sun, money, pad);
+                                                            break;
                                                     };
 
                                                     padUpdate(&pad);

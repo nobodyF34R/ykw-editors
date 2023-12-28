@@ -5,8 +5,18 @@
 #include "struct.h"
 #include <vector>
 #include <cstdint>
+#include <cctype>
+#include <algorithm>
+#include <sstream>
+#include <iomanip>
 
-int selectInput(bool* selected, int& currentSelection, u64 kDown, int listSize) {
+std::string zfill(int num, int width) { //TODO add this where applicable
+    std::ostringstream ss;
+    ss << std::setw(width) << std::setfill( '0' ) << num;
+    return ss.str();
+}
+
+void inputHandling(int& currentSelection, u64 kDown, int listSize) {
     if (kDown & HidNpadButton_AnyUp) {
         currentSelection--;
         if (currentSelection < 0) {
@@ -31,6 +41,10 @@ int selectInput(bool* selected, int& currentSelection, u64 kDown, int listSize) 
             currentSelection = listSize - 1;
         }
     }
+}
+
+int selectInput(bool* selected, int& currentSelection, u64 kDown, int listSize) {
+    inputHandling(currentSelection, kDown, listSize);
     if (kDown & HidNpadButton_A) {
         selected[currentSelection] = !selected[currentSelection];
     }
@@ -55,8 +69,111 @@ int selectInput(bool* selected, int& currentSelection, u64 kDown, int listSize) 
     return end;
 }
 
+void mapInput(PadState pad, int& currentSelection, std::vector<std::pair<int, std::string>> &sortedMap, std::string type) {
+    for (int i = 0; i < sortedMap.size(); i++) {
+        if (sortedMap[i].first == currentSelection) {
+            currentSelection = i;
+            break;
+        }
+    }
+    while (appletMainLoop()) {
+        padUpdate(&pad);
+        u64 kDown = padGetButtonsDown(&pad);
+
+        inputHandling(currentSelection, kDown, sortedMap.size());
+        if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B || kDown & HidNpadButton_A){
+            currentSelection = sortedMap[currentSelection].first;
+            break;
+        }
+        if (kDown & HidNpadButton_X) {
+            currentSelection = 0;
+            break;
+        }
+
+        int i = 0;
+        std::cout << "\x1b[1;1H\x1b[2JSelect a " << type << " (X for none)"; //Y to toggle keyboard
+        for (auto const& pair : sortedMap) {
+            if (i/44 == currentSelection/44) {
+                std::cout << "\n" << (i == currentSelection ? "> " : "  ") << pair.second;
+            }
+            if (i == currentSelection + 44) {
+                break;
+            }
+            i++;
+        }
+
+        //TODO add a search function
+        
+        consoleUpdate(NULL);
+    }
+}
+
+void listInput(PadState pad, int& currentSelection, const char* list[], int listSize, std::string type) {
+    //put all elements except the first from list into a new list
+    listSize--;
+    if (currentSelection != 0) {
+        currentSelection--;
+    }
+    const char* list2[listSize];
+    for (int i = 0; i < listSize; i++) {
+        list2[i] = list[i + 1];
+    }
+    while (appletMainLoop()) {
+        padUpdate(&pad);
+        u64 kDown = padGetButtonsDown(&pad);
+
+        inputHandling(currentSelection, kDown, listSize);
+        if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B || kDown & HidNpadButton_A){
+            currentSelection++;
+            break;
+        }
+        if (kDown & HidNpadButton_X) {
+            currentSelection = 0;
+            break;
+        }
+
+        std::cout << "\x1b[1;1H\x1b[2JSelect a " << type << " (X for none)";
+        for (int i = 0; i < listSize; i++) {
+            if (i/44 == currentSelection/44) {
+                std::cout << "\n" << (i == currentSelection ? "> " : "  ") << list2[i];
+            }
+            if (i == currentSelection + 44) {
+                break;
+            }
+        }
+
+        //TODO add a search function
+
+        consoleUpdate(NULL);
+    }
+}
+
+void keyboardInput(char* outstr, SwkbdType keyboardType, const char* GuideText, const char* InitialText) {
+    Result rc=0;
+    SwkbdConfig kbd;
+    memset(outstr, 0, 32);
+    swkbdCreate(&kbd, 0);
+    swkbdConfigMakePresetDefault(&kbd);
+    swkbdConfigSetType(&kbd, keyboardType);
+    swkbdConfigSetGuideText(&kbd, GuideText);
+    swkbdConfigSetInitialText(&kbd, InitialText);
+    rc = swkbdShow(&kbd, outstr, sizeof(outstr));
+    swkbdClose(&kbd);
+
+    if (R_FAILED(rc)) {
+        outstr[0] = '\0';
+    }
+}
+
 namespace edit1s {
     void edit_yokai(std::vector<struct1s::Yokai> &yokailist, PadState pad) {
+        std::vector<std::pair<int, std::string>> sortedMap;
+        for (auto const& pair : data1s::yokais) {
+            sortedMap.push_back(pair);
+        }
+        std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
+            return left.second < right.second;
+        });
         bool selected[yokailist.size()];
         for (int i = 0; i < yokailist.size(); i++) {
             selected[i] = false;
@@ -64,7 +181,12 @@ namespace edit1s {
         int currentSelection = 0;
         int currentEdit = 0;
         bool selectPage = true;
+        char outstr[32];
         int end;
+
+        int currentYokai = 0;
+        int currentAttitude = 0;
+        int currentLevel = 0;
 
         while (appletMainLoop()) {
             padUpdate(&pad);
@@ -84,14 +206,68 @@ namespace edit1s {
                     std::cout << "\n" << (selected[i] ? "> " : "  ") << data1s::yokais.at(*yokailist[i].id) << (currentSelection == i ? " <<<" : "");
                 }
             } else { //edit page
-                //TODO
+                printf("\x1b[1;1H\x1b[2JL or R to swap pages\n");
+                inputHandling(currentEdit, kDown, 5);
+                if (kDown & HidNpadButton_A) {
+                    if (currentEdit == 0) { //yokai
+                        mapInput(pad, currentYokai, sortedMap, "yokai");
+                        padUpdate(&pad);
+                    } else if (currentEdit == 1) { //attitude
+                        listInput(pad, currentAttitude, data1s::attitudes, sizeof(data1s::attitudes)/sizeof(data1s::attitudes[0]), "attitude");
+                        padUpdate(&pad);
+                    } else if (currentEdit == 2) { //level
+                        keyboardInput(outstr, SwkbdType_NumPad, "0-255", (currentLevel == 0 ? "99" : std::to_string(currentLevel).c_str()));
+                        if (outstr[0] == '\0') {
+                            currentLevel = 0;
+                        } else { //criteria
+                            if (std::stoi(outstr) <= 255) {
+                                currentLevel = std::stoi(outstr);
+                            }
+                        }
+                    } else { //apply (and set max)
+                        for (int i = 0; i < yokailist.size(); i++) {
+                            if (selected[i]) {
+                                *yokailist[i].hp = 1; //incase you lower the level
+                                if (currentYokai != 0) {
+                                    *yokailist[i].id = currentYokai;
+                                }
+                                if (currentAttitude != 0) {
+                                    *yokailist[i].attitude = currentAttitude;
+                                }
+                                if (currentLevel != 0) {
+                                    *yokailist[i].level = currentLevel;
+                                }
+                                if (currentEdit == 3) {
+                                    *yokailist[i].attack = 255;
+                                    *yokailist[i].technique = 255;
+                                    *yokailist[i].soultimate = 255;
+                                    //TODO stats
+                                }
+                            }
+                        }
+                    }
+                }
+                //TODO stats etc
+                std::cout << (currentEdit == 0 ? "> " : "  ") << "yokai: " << (currentYokai == 0 ? "" : data1s::yokais.at(currentYokai)) << std::endl;
+                std::cout << (currentEdit == 1 ? "> " : "  ") << "attitude: " << data1s::attitudes[currentAttitude] << std::endl;
+                std::cout << (currentEdit == 2 ? "> " : "  ") << "level: " << (currentLevel == 0 ? "" : std::to_string(currentLevel)) << std::endl;
+                printf("\n");
+                std::cout << (currentEdit == 3 ? "> " : "  ") << "apply and set max" << std::endl;
+                std::cout << (currentEdit == 4 ? "> " : "  ") << "apply" << std::endl;
             }
-
+            
             consoleUpdate(NULL);
         }
     }
 
     void edit_item(std::vector<struct1s::Item> &itemlist, PadState pad) {
+        std::vector<std::pair<int, std::string>> sortedMap;
+        for (auto const& pair : data1s::items) {
+            sortedMap.push_back(pair);
+        }
+        std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
+            return left.second < right.second;
+        });
         bool selected[itemlist.size()];
         for (int i = 0; i < itemlist.size(); i++) {
             selected[i] = false;
@@ -99,7 +275,11 @@ namespace edit1s {
         int currentSelection = 0;
         int currentEdit = 0;
         bool selectPage = true;
+        char outstr[32];
         int end;
+
+        int currentItem = 0;
+        int currentAmount = 0;
 
         while (appletMainLoop()) {
             padUpdate(&pad);
@@ -119,7 +299,38 @@ namespace edit1s {
                     std::cout << "\n" << (selected[i] ? "> " : "  ") << data1s::items.at(*itemlist[i].id) << (currentSelection == i ? " <<<" : "");
                 }
             } else { //edit page
-                //TODO
+                printf("\x1b[1;1H\x1b[2JL or R to swap pages\n");
+                inputHandling(currentEdit, kDown, 3);
+                if (kDown & HidNpadButton_A) {
+                    if (currentEdit == 0) { //item
+                        mapInput(pad, currentItem, sortedMap, "item");
+                        padUpdate(&pad);
+                    } else if (currentEdit == 1) { //amount
+                        keyboardInput(outstr, SwkbdType_NumPad, "0-99", (currentAmount == 0 ? "99" : std::to_string(currentAmount).c_str()));
+                        if (outstr[0] == '\0') {
+                            currentAmount = 0;
+                        } else { //criteria
+                            if (std::stoi(outstr) <= 99) {
+                                currentAmount = std::stoi(outstr);
+                            }
+                        }
+                    } else if (currentEdit == 2){ //apply
+                        for (int i = 0; i < itemlist.size(); i++) {
+                            if (selected[i]) {
+                                if (currentItem != 0) {
+                                    *itemlist[i].id = currentItem;
+                                }
+                                if (currentAmount != 0) {
+                                    *itemlist[i].amount = currentAmount;
+                                }
+                            }
+                        }
+                    }
+                }
+                std::cout << (currentEdit == 0 ? "> " : "  ") << "item: " << (currentItem == 0 ? "" : data1s::items.at(currentItem)) << std::endl;
+                std::cout << (currentEdit == 1 ? "> " : "  ") << "amount: " << (currentAmount == 0 ? "" : std::to_string(currentAmount)) << std::endl;
+                printf("\n");
+                std::cout << (currentEdit == 2 ? "> " : "  ") << "apply" << std::endl;
             }
 
             consoleUpdate(NULL);
@@ -127,6 +338,13 @@ namespace edit1s {
     }
 
     void edit_equipment(std::vector<struct1s::Equipment> &equipmentlist, PadState pad) {
+        std::vector<std::pair<int, std::string>> sortedMap;
+        for (auto const& pair : data1s::equipments) {
+            sortedMap.push_back(pair);
+        }
+        std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
+            return left.second < right.second;
+        });
         bool selected[equipmentlist.size()];
         for (int i = 0; i < equipmentlist.size(); i++) {
             selected[i] = false;
@@ -134,7 +352,11 @@ namespace edit1s {
         int currentSelection = 0;
         int currentEdit = 0;
         bool selectPage = true;
+        char outstr[32];
         int end;
+
+        int currentEquipment = 0;
+        int currentAmount = 0;
 
         while (appletMainLoop()) {
             padUpdate(&pad);
@@ -154,7 +376,38 @@ namespace edit1s {
                     std::cout << "\n" << (selected[i] ? "> " : "  ") << data1s::equipments.at(*equipmentlist[i].id) << (currentSelection == i ? " <<<" : "");
                 }
             } else { //edit page
-                //TODO
+                printf("\x1b[1;1H\x1b[2JL or R to swap pages\n");
+                inputHandling(currentEdit, kDown, 3);
+                if (kDown & HidNpadButton_A) {
+                    if (currentEdit == 0) { //equipment
+                        mapInput(pad, currentEquipment, sortedMap, "equipment");
+                        padUpdate(&pad);
+                    } else if (currentEdit == 1) { //amount
+                        keyboardInput(outstr, SwkbdType_NumPad, "0-255", (currentAmount == 0 ? "99" : std::to_string(currentAmount).c_str()));
+                        if (outstr[0] == '\0') {
+                            currentAmount = 0;
+                        } else { //criteria
+                            if (std::stoi(outstr) <= 255) {
+                                currentAmount = std::stoi(outstr);
+                            }
+                        }
+                    } else if (currentEdit == 2){ //apply
+                        for (int i = 0; i < equipmentlist.size(); i++) {
+                            if (selected[i]) {
+                                if (currentEquipment != 0) {
+                                    *equipmentlist[i].id = currentEquipment;
+                                }
+                                if (currentAmount != 0) {
+                                    *equipmentlist[i].amount = currentAmount;
+                                }
+                            }
+                        }
+                    }
+                }
+                std::cout << (currentEdit == 0 ? "> " : "  ") << "equipment: " << (currentEquipment == 0 ? "" : data1s::equipments.at(currentEquipment)) << std::endl;
+                std::cout << (currentEdit == 1 ? "> " : "  ") << "amount: " << (currentAmount == 0 ? "" : std::to_string(currentAmount)) << std::endl;
+                printf("\n");
+                std::cout << (currentEdit == 2 ? "> " : "  ") << "apply" << std::endl;
             }
 
             consoleUpdate(NULL);
@@ -162,6 +415,13 @@ namespace edit1s {
     }
 
     void edit_important(std::vector<struct1s::Important> &importantlist, PadState pad) {
+        std::vector<std::pair<int, std::string>> sortedMap;
+        for (auto const& pair : data1s::importants) {
+            sortedMap.push_back(pair);
+        }
+        std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
+            return left.second < right.second;
+        });
         bool selected[importantlist.size()];
         for (int i = 0; i < importantlist.size(); i++) {
             selected[i] = false;
@@ -169,7 +429,10 @@ namespace edit1s {
         int currentSelection = 0;
         int currentEdit = 0;
         bool selectPage = true;
+        char outstr[32];
         int end;
+
+        int currentImportant = 0;
 
         while (appletMainLoop()) {
             padUpdate(&pad);
@@ -189,7 +452,25 @@ namespace edit1s {
                     std::cout << "\n" << (selected[i] ? "> " : "  ") << data1s::importants.at(*importantlist[i].id) << (currentSelection == i ? " <<<" : "");
                 }
             } else { //edit page
-                //TODO
+                printf("\x1b[1;1H\x1b[2JL or R to swap pages\n");
+                inputHandling(currentEdit, kDown, 2);
+                if (kDown & HidNpadButton_A) {
+                    if (currentEdit == 0) { //important
+                        mapInput(pad, currentImportant, sortedMap, "important");
+                        padUpdate(&pad);
+                    } else if (currentEdit == 1){ //apply
+                        for (int i = 0; i < importantlist.size(); i++) {
+                            if (selected[i]) {
+                                if (currentImportant != 0) {
+                                    *importantlist[i].id = currentImportant;
+                                }
+                            }
+                        }
+                    }
+                }
+                std::cout << (currentEdit == 0 ? "> " : "  ") << "important: " << (currentImportant == 0 ? "" : data1s::importants.at(currentImportant)) << std::endl;
+                printf("\n");
+                std::cout << (currentEdit == 1 ? "> " : "  ") << "apply" << std::endl;
             }
 
             consoleUpdate(NULL);
@@ -203,6 +484,13 @@ namespace edit1s {
 
 namespace edit4 {
     void edit_character(std::vector<struct4::Yokai> &characterlist, PadState pad) {
+        std::vector<std::pair<int, std::string>> sortedMap;
+        for (auto const& pair : data4::characters) {
+            sortedMap.push_back(pair);
+        }
+        std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
+            return left.second < right.second;
+        });
         bool selected[characterlist.size()];
         for (int i = 0; i < characterlist.size(); i++) {
             selected[i] = false;
@@ -210,7 +498,11 @@ namespace edit4 {
         int currentSelection = 0;
         int currentEdit = 0;
         bool selectPage = true;
+        char outstr[32];
         int end;
+
+        int currentCharacter = 0;
+        int currentLevel = 0;
         
         while (appletMainLoop()) {
             padUpdate(&pad);
@@ -235,7 +527,44 @@ namespace edit4 {
                     }
                 }
             } else { //edit page
-                //TODO
+                printf("\x1b[1;1H\x1b[2JL or R to swap pages\n");
+                inputHandling(currentEdit, kDown, 4);
+                if (kDown & HidNpadButton_A) {
+                    if (currentEdit == 0) { //character
+                        mapInput(pad, currentCharacter, sortedMap, "character");
+                        padUpdate(&pad);
+                    } else if (currentEdit == 1) { //level
+                        keyboardInput(outstr, SwkbdType_NumPad, "0-99", (currentLevel == 0 ? "99" : std::to_string(currentLevel).c_str()));
+                        if (outstr[0] == '\0') {
+                            currentLevel = 0;
+                        } else { //criteria
+                            if (std::stoi(outstr) <= 99) {
+                                currentLevel = std::stoi(outstr);
+                            }
+                        }
+                    } else { //apply (and set max)
+                        for (int i = 0; i < characterlist.size(); i++) {
+                            if (selected[i]) {
+                                // *characterlist[i].hp = 1; //incase you lower the level
+                                if (currentCharacter != 0) {
+                                    *characterlist[i].id = currentCharacter;
+                                }
+                                if (currentLevel != 0) {
+                                    *characterlist[i].level = currentLevel;
+                                }
+                                if (currentEdit == 3) {
+                                    //TODO stats
+                                }
+                            }
+                        }
+                    }
+                }
+                //TODO stats etc
+                std::cout << (currentEdit == 0 ? "> " : "  ") << "character: " << (currentCharacter == 0 ? "" : data4::characters.at(currentCharacter)) << std::endl;
+                std::cout << (currentEdit == 1 ? "> " : "  ") << "level: " << (currentLevel == 0 ? "" : std::to_string(currentLevel)) << std::endl;
+                printf("\n");
+                std::cout << (currentEdit == 2 ? "> " : "  ") << "apply and set max" << std::endl;
+                std::cout << (currentEdit == 3 ? "> " : "  ") << "apply" << std::endl;
             }
             
             consoleUpdate(NULL);
@@ -243,6 +572,13 @@ namespace edit4 {
     }
     
     void edit_yokai(std::vector<struct4::Yokai> &yokailist, PadState pad) {
+        std::vector<std::pair<int, std::string>> sortedMap;
+        for (auto const& pair : data4::yokais) {
+            sortedMap.push_back(pair);
+        }
+        std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
+            return left.second < right.second;
+        });
         bool selected[yokailist.size()];
         for (int i = 0; i < yokailist.size(); i++) {
             selected[i] = false;
@@ -250,7 +586,11 @@ namespace edit4 {
         int currentSelection = 0;
         int currentEdit = 0;
         bool selectPage = true;
+        char outstr[32];
         int end;
+
+        int currentYokai = 0;
+        int currentLevel = 0;
 
         while (appletMainLoop()) {
             padUpdate(&pad);
@@ -275,7 +615,44 @@ namespace edit4 {
                     }
                 }
             } else { //edit page
-                //TODO
+                printf("\x1b[1;1H\x1b[2JL or R to swap pages\n");
+                inputHandling(currentEdit, kDown, 4);
+                if (kDown & HidNpadButton_A) {
+                    if (currentEdit == 0) { //yokai
+                        mapInput(pad, currentYokai, sortedMap, "yokai");
+                        padUpdate(&pad);
+                    } else if (currentEdit == 1) { //level
+                        keyboardInput(outstr, SwkbdType_NumPad, "0-99", (currentLevel == 0 ? "99" : std::to_string(currentLevel).c_str()));
+                        if (outstr[0] == '\0') {
+                            currentLevel = 0;
+                        } else { //criteria
+                            if (std::stoi(outstr) <= 99) {
+                                currentLevel = std::stoi(outstr);
+                            }
+                        }
+                    } else { //apply (and set max)
+                        for (int i = 0; i < yokailist.size(); i++) {
+                            if (selected[i]) {
+                                // *yokailist[i].hp = 1; //incase you lower the level
+                                if (currentYokai != 0) {
+                                    *yokailist[i].id = currentYokai;
+                                }
+                                if (currentLevel != 0) {
+                                    *yokailist[i].level = currentLevel;
+                                }
+                                if (currentEdit == 3) {
+                                    //TODO stats
+                                }
+                            }
+                        }
+                    }
+                }
+                //TODO stats etc
+                std::cout << (currentEdit == 0 ? "> " : "  ") << "yokai: " << (currentYokai == 0 ? "" : data4::yokais.at(currentYokai)) << std::endl;
+                std::cout << (currentEdit == 1 ? "> " : "  ") << "level: " << (currentLevel == 0 ? "" : std::to_string(currentLevel)) << std::endl;
+                printf("\n");
+                std::cout << (currentEdit == 2 ? "> " : "  ") << "apply and set max" << std::endl;
+                std::cout << (currentEdit == 3 ? "> " : "  ") << "apply" << std::endl;
             }
 
             consoleUpdate(NULL);
@@ -283,6 +660,13 @@ namespace edit4 {
     }
 
     void edit_item(std::vector<struct4::Item> &itemlist, PadState pad) {
+        std::vector<std::pair<int, std::string>> sortedMap;
+        for (auto const& pair : data4::items) {
+            sortedMap.push_back(pair);
+        }
+        std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
+            return left.second < right.second;
+        });
         bool selected[itemlist.size()];
         for (int i = 0; i < itemlist.size(); i++) {
             selected[i] = false;
@@ -290,7 +674,11 @@ namespace edit4 {
         int currentSelection = 0;
         int currentEdit = 0;
         bool selectPage = true;
+        char outstr[32];
         int end;
+
+        int currentItem = 0;
+        int currentAmount = 0;
 
         while (appletMainLoop()) {
             padUpdate(&pad);
@@ -315,7 +703,38 @@ namespace edit4 {
                     }
                 }
             } else { //edit page
-                //TODO
+                printf("\x1b[1;1H\x1b[2JL or R to swap pages\n");
+                inputHandling(currentEdit, kDown, 3);
+                if (kDown & HidNpadButton_A) {
+                    if (currentEdit == 0) { //item
+                        mapInput(pad, currentItem, sortedMap, "item");
+                        padUpdate(&pad);
+                    } else if (currentEdit == 1) { //amount
+                        keyboardInput(outstr, SwkbdType_NumPad, "0-999", (currentAmount == 0 ? "999" : std::to_string(currentAmount).c_str()));
+                        if (outstr[0] == '\0') {
+                            currentAmount = 0;
+                        } else { //criteria
+                            if (std::stoi(outstr) <= 999) {
+                                currentAmount = std::stoi(outstr);
+                            }
+                        }
+                    } else if (currentEdit == 2){ //apply
+                        for (int i = 0; i < itemlist.size(); i++) {
+                            if (selected[i]) {
+                                if (currentItem != 0) {
+                                    *itemlist[i].id = currentItem;
+                                }
+                                if (currentAmount != 0) {
+                                    *itemlist[i].amount = currentAmount;
+                                }
+                            }
+                        }
+                    }
+                }
+                std::cout << (currentEdit == 0 ? "> " : "  ") << "item: " << (currentItem == 0 ? "" : data4::items.at(currentItem)) << std::endl;
+                std::cout << (currentEdit == 1 ? "> " : "  ") << "amount: " << (currentAmount == 0 ? "" : std::to_string(currentAmount)) << std::endl;
+                printf("\n");
+                std::cout << (currentEdit == 2 ? "> " : "  ") << "apply" << std::endl;
             }
 
             consoleUpdate(NULL);
@@ -323,6 +742,13 @@ namespace edit4 {
     }
 
     void edit_equipment(std::vector<struct4::Equipment> &equipmentlist, PadState pad) {
+        std::vector<std::pair<int, std::string>> sortedMap;
+        for (auto const& pair : data4::equipments) {
+            sortedMap.push_back(pair);
+        }
+        std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
+            return left.second < right.second;
+        });
         bool selected[equipmentlist.size()];
         for (int i = 0; i < equipmentlist.size(); i++) {
             selected[i] = false;
@@ -330,7 +756,11 @@ namespace edit4 {
         int currentSelection = 0;
         int currentEdit = 0;
         bool selectPage = true;
+        char outstr[32];
         int end;
+
+        int currentEquipment = 0;
+        int currentAmount = 0;
         
         while (appletMainLoop()) {
             padUpdate(&pad);
@@ -355,7 +785,38 @@ namespace edit4 {
                     }
                 }
             } else { //edit page
-                //TODO
+                printf("\x1b[1;1H\x1b[2JL or R to swap pages\n");
+                inputHandling(currentEdit, kDown, 3);
+                if (kDown & HidNpadButton_A) {
+                    if (currentEdit == 0) { //equipment
+                        mapInput(pad, currentEquipment, sortedMap, "equipment");
+                        padUpdate(&pad);
+                    } else if (currentEdit == 1) { //amount
+                        keyboardInput(outstr, SwkbdType_NumPad, "0-999", (currentAmount == 0 ? "999" : std::to_string(currentAmount).c_str()));
+                        if (outstr[0] == '\0') {
+                            currentAmount = 0;
+                        } else { //criteria
+                            if (std::stoi(outstr) <= 999) {
+                                currentAmount = std::stoi(outstr);
+                            }
+                        }
+                    } else if (currentEdit == 2){ //apply
+                        for (int i = 0; i < equipmentlist.size(); i++) {
+                            if (selected[i]) {
+                                if (currentEquipment != 0) {
+                                    *equipmentlist[i].id = currentEquipment;
+                                }
+                                if (currentAmount != 0) {
+                                    *equipmentlist[i].amount = currentAmount;
+                                }
+                            }
+                        }
+                    }
+                }
+                std::cout << (currentEdit == 0 ? "> " : "  ") << "equipment: " << (currentEquipment == 0 ? "" : data4::equipments.at(currentEquipment)) << std::endl;
+                std::cout << (currentEdit == 1 ? "> " : "  ") << "amount: " << (currentAmount == 0 ? "" : std::to_string(currentAmount)) << std::endl;
+                printf("\n");
+                std::cout << (currentEdit == 2 ? "> " : "  ") << "apply" << std::endl;
             }
             
             consoleUpdate(NULL);
@@ -363,6 +824,13 @@ namespace edit4 {
     }
 
     void edit_special_soul(std::vector<struct4::SpecialSoul> &specialsoullist, PadState pad) {
+        //std::vector<std::pair<int, std::string>> sortedMap; //TODO
+        // for (auto const& pair : data4::specialsouls) { 
+        //     sortedMap.push_back(pair);
+        // }
+        // std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
+        //     return left.second < right.second;
+        // });
         bool selected[specialsoullist.size()];
         for (int i = 0; i < specialsoullist.size(); i++) {
             selected[i] = false;
@@ -370,7 +838,11 @@ namespace edit4 {
         int currentSelection = 0;
         int currentEdit = 0;
         bool selectPage = true;
+        char outstr[32];
         int end;
+
+        int currentSpecialSoul = 0; //TODO
+        int currentAmount = 0;
 
         while (appletMainLoop()) {
             padUpdate(&pad);
@@ -390,7 +862,38 @@ namespace edit4 {
                     std::cout << "\n" << (selected[i] ? "> " : "  ") << *specialsoullist[i].id << " TODO" << (currentSelection == i ? " <<<" : "");
                 }
             } else { //edit page
-                //TODO
+                printf("\x1b[1;1H\x1b[2JL or R to swap pages\n");
+                inputHandling(currentEdit, kDown, 3);
+                if (kDown & HidNpadButton_A) {
+                    if (currentEdit == 0) { //special soul
+                        // mapInput(pad, currentSpecialSoul, sortedMap, "special soul");
+                        // padUpdate(&pad);
+                    } else if (currentEdit == 1) { //amount
+                        keyboardInput(outstr, SwkbdType_NumPad, "0-999", (currentAmount == 0 ? "999" : std::to_string(currentAmount).c_str()));
+                        if (outstr[0] == '\0') {
+                            currentAmount = 0;
+                        } else { //criteria
+                            if (std::stoi(outstr) <= 999) {
+                                currentAmount = std::stoi(outstr);
+                            }
+                        }
+                    } else if (currentEdit == 2){ //apply
+                        for (int i = 0; i < specialsoullist.size(); i++) {
+                            if (selected[i]) {
+                                if (currentSpecialSoul != 0) {
+                                    *specialsoullist[i].id = currentSpecialSoul;
+                                }
+                                if (currentAmount != 0) {
+                                    *specialsoullist[i].amount = currentAmount;
+                                }
+                            }
+                        }
+                    }
+                }
+                std::cout << (currentEdit == 0 ? "> " : "  ") << "soul: " << (currentSpecialSoul == 0 ? "" : "TODO") << std::endl;
+                std::cout << (currentEdit == 1 ? "> " : "  ") << "amount: " << (currentAmount == 0 ? "" : std::to_string(currentAmount)) << std::endl;
+                printf("\n");
+                std::cout << (currentEdit == 2 ? "> " : "  ") << "apply" << std::endl;
             }
 
             consoleUpdate(NULL);
@@ -398,6 +901,13 @@ namespace edit4 {
     }
 
     void edit_yokai_soul(std::vector<struct4::YokaiSoul> &yokaisoullist, PadState pad) {
+        // std::vector<std::pair<int, std::string>> sortedMap; //TODO
+        // for (auto const& pair : data4::yokaisouls) {
+        //     sortedMap.push_back(pair);
+        // }
+        // std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
+        //     return left.second < right.second;
+        // });
         bool selected[yokaisoullist.size()];
         for (int i = 0; i < yokaisoullist.size(); i++) {
             selected[i] = false;
@@ -405,7 +915,13 @@ namespace edit4 {
         int currentSelection = 0;
         int currentEdit = 0;
         bool selectPage = true;
+        char outstr[32];
         int end;
+
+        int currentYokaiSoul = 0; //TODO
+        int currentWhiteAmount = 0;
+        int currentRedAmount = 0;
+        int currentGoldAmount = 0;
 
         while (appletMainLoop()) {
             padUpdate(&pad);
@@ -425,7 +941,64 @@ namespace edit4 {
                     std::cout << "\n" << (selected[i] ? "> " : "  ") << *yokaisoullist[i].id << " TODO" << (currentSelection == i ? " <<<" : "");
                 }
             } else { //edit page
-                //TODO
+                printf("\x1b[1;1H\x1b[2JL or R to swap pages\n"); //TODO
+                inputHandling(currentEdit, kDown, 5);
+                if (kDown & HidNpadButton_A) {
+                    if (currentEdit == 0) { //special soul
+                        // mapInput(pad, currentSpecialSoul, sortedMap, "special soul");
+                        // padUpdate(&pad);
+                    } else if (currentEdit == 1) { //white amount
+                        keyboardInput(outstr, SwkbdType_NumPad, "0-999", (currentWhiteAmount == 0 ? "999" : std::to_string(currentWhiteAmount).c_str()));
+                        if (outstr[0] == '\0') {
+                            currentWhiteAmount = 0;
+                        } else { //criteria
+                            if (std::stoi(outstr) <= 999) {
+                                currentWhiteAmount = std::stoi(outstr);
+                            }
+                        }
+                    } else if (currentEdit == 2) { //red amount
+                        keyboardInput(outstr, SwkbdType_NumPad, "0-999", (currentRedAmount == 0 ? "999" : std::to_string(currentRedAmount).c_str()));
+                        if (outstr[0] == '\0') {
+                            currentRedAmount = 0;
+                        } else { //criteria
+                            if (std::stoi(outstr) <= 999) {
+                                currentRedAmount = std::stoi(outstr);
+                            }
+                        }
+                    } else if (currentEdit == 3) { //gold amount
+                        keyboardInput(outstr, SwkbdType_NumPad, "0-999", (currentGoldAmount == 0 ? "999" : std::to_string(currentGoldAmount).c_str()));
+                        if (outstr[0] == '\0') {
+                            currentGoldAmount = 0;
+                        } else { //criteria
+                            if (std::stoi(outstr) <= 999) {
+                                currentGoldAmount = std::stoi(outstr);
+                            }
+                        }
+                    } else if (currentEdit == 4) { //apply
+                        for (int i = 0; i < yokaisoullist.size(); i++) {
+                            if (selected[i]) {
+                                if (currentYokaiSoul != 0) {
+                                    *yokaisoullist[i].id = currentYokaiSoul;
+                                }
+                                if (currentWhiteAmount != 0) {
+                                    *yokaisoullist[i].white = currentWhiteAmount;
+                                }
+                                if (currentRedAmount != 0) {
+                                    *yokaisoullist[i].red = currentRedAmount;
+                                }
+                                if (currentGoldAmount != 0) {
+                                    *yokaisoullist[i].gold = currentGoldAmount;
+                                }
+                            }
+                        }
+                    }
+                }
+                std::cout << (currentEdit == 0 ? "> " : "  ") << "soul: " << (currentYokaiSoul == 0 ? "" : "TODO") << std::endl;
+                std::cout << (currentEdit == 1 ? "> " : "  ") << "white amount: " << (currentWhiteAmount == 0 ? "" : std::to_string(currentWhiteAmount)) << std::endl;
+                std::cout << (currentEdit == 2 ? "> " : "  ") << "red amount: " << (currentRedAmount == 0 ? "" : std::to_string(currentRedAmount)) << std::endl;
+                std::cout << (currentEdit == 3 ? "> " : "  ") << "gold amount: " << (currentGoldAmount == 0 ? "" : std::to_string(currentGoldAmount)) << std::endl;
+                printf("\n");
+                std::cout << (currentEdit == 4 ? "> " : "  ") << "apply" << std::endl;
             }
 
             consoleUpdate(NULL);
