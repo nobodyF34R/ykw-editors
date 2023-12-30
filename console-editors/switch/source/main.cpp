@@ -71,29 +71,12 @@ int main(int argc, char** argv) {
         consoleUpdate(NULL);
         padUpdate(&pad);
         u64 kDown = padGetButtonsDown(&pad);
+        inputHandling(selectedGame, kDown, games.size());
 
         if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B) {
             fsdevUnmountDevice("save");
             consoleExit(NULL);
             return 0;
-        }
-        if (kDown & HidNpadButton_AnyUp) {
-            selectedGame--;
-            if (selectedGame < 0) {
-                selectedGame = games.size() - 1;
-            }
-        }
-        if (kDown & HidNpadButton_AnyDown) {
-            selectedGame++;
-            if (selectedGame >= games.size()) {
-                selectedGame = 0;
-            }
-        }
-        if (kDown & HidNpadButton_AnyLeft) {
-            selectedGame = 0;
-        }
-        if (kDown & HidNpadButton_AnyRight) {
-            selectedGame = games.size() - 1;
         }
 
         printf("\x1b[1;1H\x1b[2JSelect a game:\n");
@@ -163,27 +146,10 @@ int main(int argc, char** argv) {
                             consoleUpdate(NULL);
                             padUpdate(&pad);
                             u64 kDown = padGetButtonsDown(&pad);
+                            inputHandling(selectedSave, kDown, saveFiles.size());
 
                             if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B) {
                                 break;
-                            }
-                            if (kDown & HidNpadButton_AnyUp) {
-                                selectedSave--;
-                                if (selectedSave < 0) {
-                                    selectedSave = saveFiles.size() - 1;
-                                }
-                            }
-                            if (kDown & HidNpadButton_AnyDown) {
-                                selectedSave++;
-                                if (selectedSave >= saveFiles.size()) {
-                                    selectedSave = 0;
-                                }
-                            }
-                            if (kDown & HidNpadButton_AnyLeft) {
-                                selectedSave = 0;
-                            }
-                            if (kDown & HidNpadButton_AnyRight) {
-                                selectedSave = saveFiles.size() - 1;
                             }
 
                             printf("\x1b[1;1H\x1b[2JSelect a save file:\n");
@@ -313,6 +279,7 @@ int main(int argc, char** argv) {
                                         while (appletMainLoop()) {
                                             padUpdate(&pad);
                                             u64 kDown = padGetButtonsDown(&pad);
+                                            inputHandling(selectedAction, kDown, 7);
 
                                             if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_B){
                                                 break;
@@ -320,25 +287,6 @@ int main(int argc, char** argv) {
                                             if (kDown & HidNpadButton_Minus){
                                                 save = false;
                                                 break;
-                                            }
-                                            
-                                            if (kDown & HidNpadButton_AnyUp) {
-                                                selectedAction--;
-                                                if (selectedAction < 0) {
-                                                    selectedAction = 6;
-                                                }
-                                            }
-                                            if (kDown & HidNpadButton_AnyDown) {
-                                                selectedAction++;
-                                                if (selectedAction >= 7) {
-                                                    selectedAction = 0;
-                                                }
-                                            }
-                                            if (kDown & HidNpadButton_AnyLeft) {
-                                                selectedAction = 0;
-                                            }
-                                            if (kDown & HidNpadButton_AnyRight) {
-                                                selectedAction = 6;
                                             }
 
                                             printf("\x1b[1;1H\x1b[2J- to exit without saving \n");
@@ -499,6 +447,7 @@ int main(int argc, char** argv) {
                                             while (appletMainLoop()) {
                                                 padUpdate(&pad);
                                                 u64 kDown = padGetButtonsDown(&pad);
+                                                inputHandling(selectedAction, kDown, 5);
 
                                                 if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_B){
                                                     break;
@@ -506,25 +455,6 @@ int main(int argc, char** argv) {
                                                 if (kDown & HidNpadButton_Minus){
                                                     save = false;
                                                     break;
-                                                }
-                                                
-                                                if (kDown & HidNpadButton_AnyUp) {
-                                                    selectedAction--;
-                                                    if (selectedAction < 0) {
-                                                        selectedAction = 4;
-                                                    }
-                                                }
-                                                if (kDown & HidNpadButton_AnyDown) {
-                                                    selectedAction++;
-                                                    if (selectedAction >= 5) {
-                                                        selectedAction = 0;
-                                                    }
-                                                }
-                                                if (kDown & HidNpadButton_AnyLeft) {
-                                                    selectedAction = 0;
-                                                }
-                                                if (kDown & HidNpadButton_AnyRight) {
-                                                    selectedAction = 4;
                                                 }
 
                                                 printf("\x1b[1;1H\x1b[2J- to exit without saving \n");

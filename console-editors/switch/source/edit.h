@@ -10,10 +10,31 @@
 #include <sstream>
 #include <iomanip>
 
+std::vector<std::pair<int, std::string>> sortedMap; //TODO remove these globals
+std::vector<std::pair<int, std::string>> filteredMap;
+int mapSelection;
+bool activeKeyboard;
+
 std::string zfill(int num, int width) { //TODO add this where applicable
     std::ostringstream ss;
     ss << std::setw(width) << std::setfill( '0' ) << num;
     return ss.str();
+}
+
+void callback(const char* str, SwkbdChangedStringArg* arg) {
+    filteredMap.clear();
+    for (auto const& pair : sortedMap) {
+        if (pair.second.find(str) != std::string::npos) {
+            filteredMap.push_back(pair);
+        }
+    }
+    mapSelection = 0;
+}
+void enter(const char* str, SwkbdDecidedEnterArg* arg) {
+    activeKeyboard = !activeKeyboard;
+}
+void cancel(void) {
+    activeKeyboard = !activeKeyboard;
 }
 
 void inputHandling(int& currentSelection, u64 kDown, int listSize) {
@@ -69,43 +90,82 @@ int selectInput(bool* selected, int& currentSelection, u64 kDown, int listSize) 
     return end;
 }
 
-void mapInput(PadState pad, int& currentSelection, std::vector<std::pair<int, std::string>> &sortedMap, std::string type) {
-    for (int i = 0; i < sortedMap.size(); i++) {
-        if (sortedMap[i].first == currentSelection) {
-            currentSelection = i;
+void mapInput(PadState pad, int& currentSelection, std::string type) {
+    mapSelection = currentSelection;
+    if (filteredMap.size() == 0) {
+        filteredMap = sortedMap;
+    }
+    for (int i = 0; i < filteredMap.size(); i++) {
+        if (filteredMap[i].first == mapSelection) {
+            mapSelection = i;
             break;
         }
     }
+    SwkbdInline kbdinline;
+    swkbdInlineCreate(&kbdinline);
+    swkbdInlineSetFinishedInitializeCallback(&kbdinline, NULL);
+    swkbdInlineLaunchForLibraryApplet(&kbdinline, SwkbdInlineMode_AppletDisplay, 0);
+
+    swkbdInlineSetChangedStringCallback(&kbdinline, callback);
+    swkbdInlineSetDecidedEnterCallback(&kbdinline, enter);
+    swkbdInlineSetDecidedCancelCallback(&kbdinline, cancel);
+
+    // Make the applet appear, can be used whenever.
+    SwkbdAppearArg appearArg;
+    swkbdInlineMakeAppearArg(&appearArg, SwkbdType_Normal);
+    // You can optionally set appearArg text / fields here.
+    // appearArg.dicFlag = 1;
+    // appearArg.returnButtonFlag = 1;
+    
+    // swkbdInlineAppear(&kbdinline, &appearArg);
+    activeKeyboard = false;
+
     while (appletMainLoop()) {
         padUpdate(&pad);
+        swkbdInlineUpdate(&kbdinline, NULL);
         u64 kDown = padGetButtonsDown(&pad);
-
-        inputHandling(currentSelection, kDown, sortedMap.size());
-        if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B || kDown & HidNpadButton_A){
-            currentSelection = sortedMap[currentSelection].first;
-            break;
+        if (!activeKeyboard) {
+            if (filteredMap.size() != 0) {
+                inputHandling(mapSelection, kDown, filteredMap.size());
+            }
+            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B || kDown & HidNpadButton_A){
+                if (filteredMap.size() == 0) {
+                    currentSelection = 0;
+                    break;
+                }
+                currentSelection = filteredMap[mapSelection].first;
+                break;
+            }
+            if (kDown & HidNpadButton_X) {
+                mapSelection = 0;
+                break;
+            }
         }
-        if (kDown & HidNpadButton_X) {
-            currentSelection = 0;
-            break;
+        if (kDown & HidNpadButton_Y) {
+            if (activeKeyboard) {
+                swkbdInlineDisappear(&kbdinline);
+            } else {
+                swkbdInlineAppear(&kbdinline, &appearArg);
+            }
+            activeKeyboard = !activeKeyboard;
         }
 
         int i = 0;
-        std::cout << "\x1b[1;1H\x1b[2JSelect a " << type << " (X for none)"; //Y to toggle keyboard
-        for (auto const& pair : sortedMap) {
-            if (i/44 == currentSelection/44) {
-                std::cout << "\n" << (i == currentSelection ? "> " : "  ") << pair.second;
+        std::cout << "\x1b[1;1H\x1b[2JSelect a " << type << " (X for none, Y to toggle keyboard)";
+        for (auto const& pair : filteredMap) {
+            if (i/44 == mapSelection/44) {
+                std::cout << "\n" << (i == mapSelection ? "> " : "  ") << pair.second;
             }
-            if (i == currentSelection + 44) {
+            if (i == mapSelection + 44) {
                 break;
             }
             i++;
         }
-
-        //TODO add a search function
         
         consoleUpdate(NULL);
     }
+
+    swkbdInlineClose(&kbdinline);
 }
 
 void listInput(PadState pad, int& currentSelection, const char* list[], int listSize, std::string type) {
@@ -142,8 +202,6 @@ void listInput(PadState pad, int& currentSelection, const char* list[], int list
             }
         }
 
-        //TODO add a search function
-
         consoleUpdate(NULL);
     }
 }
@@ -156,7 +214,7 @@ void keyboardInput(char* outstr, SwkbdType keyboardType, const char* GuideText, 
     swkbdConfigMakePresetDefault(&kbd);
     swkbdConfigSetType(&kbd, keyboardType);
     swkbdConfigSetGuideText(&kbd, GuideText);
-    swkbdConfigSetInitialText(&kbd, InitialText);
+    swkbdConfigSetInitialText(&kbd, InitialText); //TODO max size param
     rc = swkbdShow(&kbd, outstr, sizeof(outstr));
     swkbdClose(&kbd);
 
@@ -167,13 +225,14 @@ void keyboardInput(char* outstr, SwkbdType keyboardType, const char* GuideText, 
 
 namespace edit1s {
     void edit_yokai(std::vector<struct1s::Yokai> &yokailist, PadState pad) {
-        std::vector<std::pair<int, std::string>> sortedMap;
+        sortedMap.clear();
         for (auto const& pair : data1s::yokais) {
             sortedMap.push_back(pair);
         }
         std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
             return left.second < right.second;
         });
+        filteredMap = sortedMap;
         bool selected[yokailist.size()];
         for (int i = 0; i < yokailist.size(); i++) {
             selected[i] = false;
@@ -210,7 +269,7 @@ namespace edit1s {
                 inputHandling(currentEdit, kDown, 5);
                 if (kDown & HidNpadButton_A) {
                     if (currentEdit == 0) { //yokai
-                        mapInput(pad, currentYokai, sortedMap, "yokai");
+                        mapInput(pad, currentYokai, "yokai");
                         padUpdate(&pad);
                     } else if (currentEdit == 1) { //attitude
                         listInput(pad, currentAttitude, data1s::attitudes, sizeof(data1s::attitudes)/sizeof(data1s::attitudes[0]), "attitude");
@@ -261,13 +320,14 @@ namespace edit1s {
     }
 
     void edit_item(std::vector<struct1s::Item> &itemlist, PadState pad) {
-        std::vector<std::pair<int, std::string>> sortedMap;
+        sortedMap.clear();
         for (auto const& pair : data1s::items) {
             sortedMap.push_back(pair);
         }
         std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
             return left.second < right.second;
         });
+        filteredMap = sortedMap;
         bool selected[itemlist.size()];
         for (int i = 0; i < itemlist.size(); i++) {
             selected[i] = false;
@@ -303,7 +363,7 @@ namespace edit1s {
                 inputHandling(currentEdit, kDown, 3);
                 if (kDown & HidNpadButton_A) {
                     if (currentEdit == 0) { //item
-                        mapInput(pad, currentItem, sortedMap, "item");
+                        mapInput(pad, currentItem, "item");
                         padUpdate(&pad);
                     } else if (currentEdit == 1) { //amount
                         keyboardInput(outstr, SwkbdType_NumPad, "0-99", (currentAmount == 0 ? "99" : std::to_string(currentAmount).c_str()));
@@ -338,13 +398,14 @@ namespace edit1s {
     }
 
     void edit_equipment(std::vector<struct1s::Equipment> &equipmentlist, PadState pad) {
-        std::vector<std::pair<int, std::string>> sortedMap;
+        sortedMap.clear();
         for (auto const& pair : data1s::equipments) {
             sortedMap.push_back(pair);
         }
         std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
             return left.second < right.second;
         });
+        filteredMap = sortedMap;
         bool selected[equipmentlist.size()];
         for (int i = 0; i < equipmentlist.size(); i++) {
             selected[i] = false;
@@ -380,7 +441,7 @@ namespace edit1s {
                 inputHandling(currentEdit, kDown, 3);
                 if (kDown & HidNpadButton_A) {
                     if (currentEdit == 0) { //equipment
-                        mapInput(pad, currentEquipment, sortedMap, "equipment");
+                        mapInput(pad, currentEquipment, "equipment");
                         padUpdate(&pad);
                     } else if (currentEdit == 1) { //amount
                         keyboardInput(outstr, SwkbdType_NumPad, "0-255", (currentAmount == 0 ? "99" : std::to_string(currentAmount).c_str()));
@@ -415,13 +476,14 @@ namespace edit1s {
     }
 
     void edit_important(std::vector<struct1s::Important> &importantlist, PadState pad) {
-        std::vector<std::pair<int, std::string>> sortedMap;
+        sortedMap.clear();
         for (auto const& pair : data1s::importants) {
             sortedMap.push_back(pair);
         }
         std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
             return left.second < right.second;
         });
+        filteredMap = sortedMap;
         bool selected[importantlist.size()];
         for (int i = 0; i < importantlist.size(); i++) {
             selected[i] = false;
@@ -456,7 +518,7 @@ namespace edit1s {
                 inputHandling(currentEdit, kDown, 2);
                 if (kDown & HidNpadButton_A) {
                     if (currentEdit == 0) { //important
-                        mapInput(pad, currentImportant, sortedMap, "important");
+                        mapInput(pad, currentImportant, "important");
                         padUpdate(&pad);
                     } else if (currentEdit == 1){ //apply
                         for (int i = 0; i < importantlist.size(); i++) {
@@ -484,13 +546,14 @@ namespace edit1s {
 
 namespace edit4 {
     void edit_character(std::vector<struct4::Yokai> &characterlist, PadState pad) {
-        std::vector<std::pair<int, std::string>> sortedMap;
+        sortedMap.clear();
         for (auto const& pair : data4::characters) {
             sortedMap.push_back(pair);
         }
         std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
             return left.second < right.second;
         });
+        filteredMap = sortedMap;
         bool selected[characterlist.size()];
         for (int i = 0; i < characterlist.size(); i++) {
             selected[i] = false;
@@ -531,7 +594,7 @@ namespace edit4 {
                 inputHandling(currentEdit, kDown, 4);
                 if (kDown & HidNpadButton_A) {
                     if (currentEdit == 0) { //character
-                        mapInput(pad, currentCharacter, sortedMap, "character");
+                        mapInput(pad, currentCharacter, "character");
                         padUpdate(&pad);
                     } else if (currentEdit == 1) { //level
                         keyboardInput(outstr, SwkbdType_NumPad, "0-99", (currentLevel == 0 ? "99" : std::to_string(currentLevel).c_str()));
@@ -572,13 +635,14 @@ namespace edit4 {
     }
     
     void edit_yokai(std::vector<struct4::Yokai> &yokailist, PadState pad) {
-        std::vector<std::pair<int, std::string>> sortedMap;
+        sortedMap.clear();
         for (auto const& pair : data4::yokais) {
             sortedMap.push_back(pair);
         }
         std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
             return left.second < right.second;
         });
+        filteredMap = sortedMap;
         bool selected[yokailist.size()];
         for (int i = 0; i < yokailist.size(); i++) {
             selected[i] = false;
@@ -619,7 +683,7 @@ namespace edit4 {
                 inputHandling(currentEdit, kDown, 4);
                 if (kDown & HidNpadButton_A) {
                     if (currentEdit == 0) { //yokai
-                        mapInput(pad, currentYokai, sortedMap, "yokai");
+                        mapInput(pad, currentYokai, "yokai");
                         padUpdate(&pad);
                     } else if (currentEdit == 1) { //level
                         keyboardInput(outstr, SwkbdType_NumPad, "0-99", (currentLevel == 0 ? "99" : std::to_string(currentLevel).c_str()));
@@ -660,13 +724,14 @@ namespace edit4 {
     }
 
     void edit_item(std::vector<struct4::Item> &itemlist, PadState pad) {
-        std::vector<std::pair<int, std::string>> sortedMap;
+        sortedMap.clear();
         for (auto const& pair : data4::items) {
             sortedMap.push_back(pair);
         }
         std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
             return left.second < right.second;
         });
+        filteredMap = sortedMap;
         bool selected[itemlist.size()];
         for (int i = 0; i < itemlist.size(); i++) {
             selected[i] = false;
@@ -707,7 +772,7 @@ namespace edit4 {
                 inputHandling(currentEdit, kDown, 3);
                 if (kDown & HidNpadButton_A) {
                     if (currentEdit == 0) { //item
-                        mapInput(pad, currentItem, sortedMap, "item");
+                        mapInput(pad, currentItem, "item");
                         padUpdate(&pad);
                     } else if (currentEdit == 1) { //amount
                         keyboardInput(outstr, SwkbdType_NumPad, "0-999", (currentAmount == 0 ? "999" : std::to_string(currentAmount).c_str()));
@@ -742,13 +807,14 @@ namespace edit4 {
     }
 
     void edit_equipment(std::vector<struct4::Equipment> &equipmentlist, PadState pad) {
-        std::vector<std::pair<int, std::string>> sortedMap;
+        sortedMap.clear();
         for (auto const& pair : data4::equipments) {
             sortedMap.push_back(pair);
         }
         std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
             return left.second < right.second;
         });
+        filteredMap = sortedMap;
         bool selected[equipmentlist.size()];
         for (int i = 0; i < equipmentlist.size(); i++) {
             selected[i] = false;
@@ -789,7 +855,7 @@ namespace edit4 {
                 inputHandling(currentEdit, kDown, 3);
                 if (kDown & HidNpadButton_A) {
                     if (currentEdit == 0) { //equipment
-                        mapInput(pad, currentEquipment, sortedMap, "equipment");
+                        mapInput(pad, currentEquipment, "equipment");
                         padUpdate(&pad);
                     } else if (currentEdit == 1) { //amount
                         keyboardInput(outstr, SwkbdType_NumPad, "0-999", (currentAmount == 0 ? "999" : std::to_string(currentAmount).c_str()));
@@ -824,13 +890,14 @@ namespace edit4 {
     }
 
     void edit_special_soul(std::vector<struct4::SpecialSoul> &specialsoullist, PadState pad) {
-        //std::vector<std::pair<int, std::string>> sortedMap; //TODO
+        // sortedMap.clear(); //TODO
         // for (auto const& pair : data4::specialsouls) { 
         //     sortedMap.push_back(pair);
         // }
         // std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
         //     return left.second < right.second;
         // });
+        // filteredMap = sortedMap;
         bool selected[specialsoullist.size()];
         for (int i = 0; i < specialsoullist.size(); i++) {
             selected[i] = false;
@@ -866,7 +933,7 @@ namespace edit4 {
                 inputHandling(currentEdit, kDown, 3);
                 if (kDown & HidNpadButton_A) {
                     if (currentEdit == 0) { //special soul
-                        // mapInput(pad, currentSpecialSoul, sortedMap, "special soul");
+                        // mapInput(pad, "special soul");
                         // padUpdate(&pad);
                     } else if (currentEdit == 1) { //amount
                         keyboardInput(outstr, SwkbdType_NumPad, "0-999", (currentAmount == 0 ? "999" : std::to_string(currentAmount).c_str()));
@@ -901,13 +968,14 @@ namespace edit4 {
     }
 
     void edit_yokai_soul(std::vector<struct4::YokaiSoul> &yokaisoullist, PadState pad) {
-        // std::vector<std::pair<int, std::string>> sortedMap; //TODO
+        // sortedMap.clear(); //TODO
         // for (auto const& pair : data4::yokaisouls) {
         //     sortedMap.push_back(pair);
         // }
         // std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
         //     return left.second < right.second;
         // });
+        // filteredMap = sortedMap;
         bool selected[yokaisoullist.size()];
         for (int i = 0; i < yokaisoullist.size(); i++) {
             selected[i] = false;
@@ -945,7 +1013,7 @@ namespace edit4 {
                 inputHandling(currentEdit, kDown, 5);
                 if (kDown & HidNpadButton_A) {
                     if (currentEdit == 0) { //special soul
-                        // mapInput(pad, currentSpecialSoul, sortedMap, "special soul");
+                        // mapInput(pad, "special soul");
                         // padUpdate(&pad);
                     } else if (currentEdit == 1) { //white amount
                         keyboardInput(outstr, SwkbdType_NumPad, "0-999", (currentWhiteAmount == 0 ? "999" : std::to_string(currentWhiteAmount).c_str()));
