@@ -1741,7 +1741,7 @@ skills = { #TODO fix the [NO_NAME]s
 reverse_skills = {v.lower(): k for k, v in skills.items()}
 
 locations = {
-    61899776: "Hells Kitchen", 
+    61899776: "Hell's Kitchen", 
     4146135043: "North Stream", 
     2530114566: "Soukenzan", 
     2872289297: "Cherry Hills", 
