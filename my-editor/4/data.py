@@ -1023,7 +1023,7 @@ yokais = { #helps you get the right id for the multi-id same-name yokai
 
 reverse_yokais = {v.lower(): k for k, v in yokais.items()}
 
-skills = { #TODO fix the [NO_NAME]s
+moves = { #TODO fix the [NO_NAME]s
     0: "", # None
     2045925121: "Snake King Rebellion Wave", 
     396463361: "Darkness Exorcism Snake Wave", 
@@ -1115,7 +1115,6 @@ skills = { #TODO fix the [NO_NAME]s
     1860863773: "Hanki Straight Punch", 
     2404554013: "The Art of the Water Splash", 
     99507486: "Famous Wakame Ondo", 
-    4277402142: "Senbon Onizakura", 
     4031720479: "Tsuchigumo (Earth Spider)", 
     3984030751: "Bakuratsu Start Dash", 
     3998520863: "High King Slash", 
@@ -1238,7 +1237,6 @@ skills = { #TODO fix the [NO_NAME]s
     3447716938: "Gale Step", 
     2043913547: "The Art of the Big Wave", 
     2928388683: "Unlucky Smile", 
-    3014916683: "High King Enma Ball", 
     4158851148: "Shocking Blackmail wave", 
     1304969292: "Ascending dragon slash", 
     2414109260: "Drunken Fist", 
@@ -1621,7 +1619,6 @@ skills = { #TODO fix the [NO_NAME]s
     807728084: "Charisma Butler Breath", 
     3792882645: "Boiling Muscle", 
     2595546581: "Puching", 
-    2132409045: "Snake King Rebellion Wave", 
     2299924950: "NEMUKEMURI", 
     2486059478: "Golden Rod od Rage", 
     404309206: "Bird's eye gust", 
@@ -1739,7 +1736,32 @@ skills = { #TODO fix the [NO_NAME]s
     2295316735: "Nerve Scraping", 
 }
 
+reverse_moves = {v.lower(): k for k, v in moves.items()}
+
+skills = {
+    1915960541: "Great King",
+    3946474855: "Serpent King's Judgement",
+    2621267441: "Extreme Critical",
+    3965167998: "Starver",
+    1152258750: "Grip on You",
+    1989701692: "Blazing Spirit",
+    812624592: "Water God",
+    2133736471: "Dark Palm",
+    587489090: "Web Master",
+    683078054: "Washed Out",
+    1605484848: "Messy",
+    3164774614: "Amaterasu's Blessing",
+}
+
 reverse_skills = {v.lower(): k for k, v in skills.items()}
+
+soults = {
+    4277402142: "Thousand Oni Branches",
+    3014916683: "Supreme Enma Blast",
+    2132409045: "Serpent King Wave",
+}
+
+reverse_soults = {v.lower(): k for k, v in soults.items()}
 
 locations = {
     61899776: "Hell's Kitchen", 
