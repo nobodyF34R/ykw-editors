@@ -1,4 +1,4 @@
-characters = { #some yokai are missing.
+characters = {
     69305524: "Cole Tsukinami", 
     676311090: "Cole Tsukinami 2", 
     1132592740: "Summer Adams", 
