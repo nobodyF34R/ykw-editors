@@ -1789,7 +1789,7 @@ skills = {
     3285715598: "Auto-Party Spirit Up III",
     2736751467: "Auto-Party Speed Up I",
     3558388733: "Auto-Party Speed Up II",
-    1293017671: "Auto=Party Speed Up III",
+    1293017671: "Auto-Party Speed Up III",
     974574289: "Auto-HP Recovery I",
     2758952818: "Auto-HP Recovery II",
     3547690980: "Auto-HP Recovery III",
