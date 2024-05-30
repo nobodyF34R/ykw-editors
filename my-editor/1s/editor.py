@@ -1,6 +1,6 @@
 from dump1s import * #get specific ids from data.py
 
-infile = "path" #on windows change any "/" or "\" into "\\"
+infile = "/Users/user/Documents/dev/ykw/saves/1s/game2.yw" #on windows change any "/" or "\" into "\\"
 
 def edit(time, sun, position, location, money, yokailist, itemlist, equipmentlist, importantlist, medalliumlist):
     #helper functions defined in dump1s.py
@@ -10,10 +10,10 @@ def edit(time, sun, position, location, money, yokailist, itemlist, equipmentlis
     # for i in range(len(yokailist)):
     #     yokailist = edit_yokai(yokailist, i) #max stats
 
-    print(", ".join([yokais[i["id"]]for i in yokailist]))
-    print(", ".join([items[i["id"]]for i in itemlist]))
-    print(", ".join([equipments[i["id"]]for i in equipmentlist]))
-    print(", ".join([importants[i["id"]]for i in importantlist]))
+    print(", ".join([yokais[i["type"]]for i in yokailist]))
+    print(", ".join([items[i["type"]]for i in itemlist]))
+    print(", ".join([equipments[i["type"]]for i in equipmentlist]))
+    print(", ".join([importants[i["type"]]for i in importantlist]))
 
     print("\nseen yokai:")
     for i in range(246):

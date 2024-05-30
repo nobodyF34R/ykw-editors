@@ -2,7 +2,7 @@ from dump2 import * #get specific ids from data.py
 
 separator = "/" # or "\\" on windows
 
-infile = "path" #on windows change any "/" or "\" into "\\"
+infile = "/Users/user/Documents/dev/ykw/ykw-editors/my-editor/2/game1.ywd" #on windows change any "/" or "\" into "\\"
 
 def edit(yokailist, itemlist, equipmentlist, importantlist, soullist, medalliumlist, profile, contactlist):
     #helper functions defined in dump2.py
@@ -22,11 +22,11 @@ def edit(yokailist, itemlist, equipmentlist, importantlist, soullist, medalliuml
     #     equipmentlist = edit_equipment(equipmentlist, i, amount=255)
 
 
-    print(", ".join([yokais[i["id"]]for i in yokailist]))
-    print(", ".join([items[i["id"]]for i in itemlist]))
-    print(", ".join([equipments[i["id"]]for i in equipmentlist]))
-    print(", ".join([importants[i["id"]]for i in importantlist]))
-    print(", ".join([souls[i["id"]]for i in soullist]))
+    print(", ".join([yokais[i["type"]]for i in yokailist]))
+    print(", ".join([items[i["type"]]for i in itemlist]))
+    print(", ".join([equipments[i["type"]]for i in equipmentlist]))
+    print(", ".join([importants[i["type"]]for i in importantlist]))
+    print(", ".join([souls[i["type"]]for i in soullist]))
     print(profile) #look at what the numbers mean in data.py
     # print(contactlist)
 

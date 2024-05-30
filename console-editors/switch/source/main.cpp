@@ -235,7 +235,7 @@ int main(int argc, char** argv) {
                                             offset += 54;
                                         }
 
-                                        std::vector<struct4::SpecialSoul> specialsoullist;
+                                        std::vector<struct4::Special> speciallist;
                                         offset = 958227;
 
                                         for (int i = 0; i < 256; i++) {
@@ -243,12 +243,12 @@ int main(int argc, char** argv) {
                                                 break;
                                             }
 
-                                            specialsoullist.push_back(struct4::SpecialSoul(data, offset));
+                                            speciallist.push_back(struct4::Special(data, offset));
 
                                             offset += 54;
                                         }
 
-                                        std::vector<struct4::YokaiSoul> yokaisoullist;
+                                        std::vector<struct4::Soul> soullist;
                                         offset = 963635;
 
                                         for (int i = 0; i < 256; i++) {
@@ -256,7 +256,7 @@ int main(int argc, char** argv) {
                                                 break;
                                             }
 
-                                            yokaisoullist.push_back(struct4::YokaiSoul(data, offset));
+                                            soullist.push_back(struct4::Soul(data, offset));
 
                                             offset += 80;
                                         }
@@ -294,8 +294,8 @@ int main(int argc, char** argv) {
                                             std::cout << (1 == selectedAction ? "> " : "  ") << "yokai" << std::endl;
                                             std::cout << (2 == selectedAction ? "> " : "  ") << "items" << std::endl;
                                             std::cout << (3 == selectedAction ? "> " : "  ") << "equipment" << std::endl;
-                                            std::cout << (4 == selectedAction ? "> " : "  ") << "special souls" << std::endl;
-                                            std::cout << (5 == selectedAction ? "> " : "  ") << "yokai souls" << std::endl;
+                                            std::cout << (4 == selectedAction ? "> " : "  ") << "yokai souls" << std::endl;
+                                            std::cout << (5 == selectedAction ? "> " : "  ") << "special souls" << std::endl;
                                             std::cout << (6 == selectedAction ? "> " : "  ") << "misc" << std::endl;
 
                                             if (kDown & HidNpadButton_A) {
@@ -312,11 +312,11 @@ int main(int argc, char** argv) {
                                                     case 3: //equipment
                                                         edit4::edit_equipment(equipmentlist, pad);
                                                         break;
-                                                    case 4: //special souls
-                                                        edit4::edit_special_soul(specialsoullist, pad);
+                                                    case 4: //yokai souls
+                                                        edit4::edit_soul(soullist, pad);
                                                         break;
-                                                    case 5: //yokai souls
-                                                        edit4::edit_yokai_soul(yokaisoullist, pad);
+                                                    case 5: //special souls
+                                                        edit4::edit_special(speciallist, pad);
                                                         break;
                                                     case 6: //misc
                                                         edit4::edit_misc(x, y, z, location, money, nate, katie, summer, cole, bruno, jack, gatcharemaining, gatchamax, pad);

@@ -107,9 +107,9 @@ def edit_yokai(yokailist, index, yokai=None, attitude=None, nickname=None, iv=No
         yokailist[index]["num2"]+=(j-location)
     if yokai != None:
         try:
-            yokailist[index]["id"] = reverse_yokais[yokai]
+            yokailist[index]["type"] = reverse_yokais[yokai]
         except:
-            yokailist[index]["id"] = yokai
+            yokailist[index]["type"] = yokai
     try:
         yokailist[index]["nickname"] = yokailist[index]["nickname"]
     except:
@@ -132,11 +132,11 @@ def edit_yokai(yokailist, index, yokai=None, attitude=None, nickname=None, iv=No
             ev = [4,4,4,4,4]
     
     yokailist[index]["stats"] = { #hp must be even
-        "tiv_hp": tivs[yokailist[index]["id"]][0], 
-        "tiv_str": tivs[yokailist[index]["id"]][1], 
-        "tiv_spr": tivs[yokailist[index]["id"]][2], 
-        "tiv_def": tivs[yokailist[index]["id"]][3], 
-        "tiv_spd": tivs[yokailist[index]["id"]][4], 
+        "tiv_hp": tivs[yokailist[index]["type"]][0], 
+        "tiv_str": tivs[yokailist[index]["type"]][1], 
+        "tiv_spr": tivs[yokailist[index]["type"]][2], 
+        "tiv_def": tivs[yokailist[index]["type"]][3], 
+        "tiv_spd": tivs[yokailist[index]["type"]][4], 
         "iv1_hp": iv[0], #sums to 10
         "iv1_str": iv[1], 
         "iv1_spr": iv[2], 
@@ -184,9 +184,9 @@ def edit_item(itemlist, index, item=None, amount=None):
     itemlist[index]["num2"] = index+1
     if item:
         try:
-            itemlist[index]["id"] = reverse_items[item]
+            itemlist[index]["type"] = reverse_items[item]
         except:
-            itemlist[index]["id"] = item
+            itemlist[index]["type"] = item
     if amount:
         itemlist[index]["amount"] = amount
     return itemlist
@@ -206,9 +206,9 @@ def edit_equipment(equipmentlist, index, equipment=None, amount=None):
     equipmentlist[index]["num2"] = index+1
     if equipment:
         try:
-            equipmentlist[index]["id"] = reverse_equipments[equipment]
+            equipmentlist[index]["type"] = reverse_equipments[equipment]
         except:
-            equipmentlist[index]["id"] = equipment
+            equipmentlist[index]["type"] = equipment
     if amount:
         equipmentlist[index]["amount"] = amount
     equipmentlist[index]["used"] = 0 #could cause problems
@@ -228,9 +228,9 @@ def edit_important(importantlist, index, important):
     importantlist[index]["num1"] = index+8192
     importantlist[index]["num2"] = index+1
     try:
-        importantlist[index]["id"] = reverse_importants[important]
+        importantlist[index]["type"] = reverse_importants[important]
     except:
-        importantlist[index]["id"] = important
+        importantlist[index]["type"] = important
     return importantlist
 
 
@@ -259,7 +259,7 @@ def main(f, edit):
         yokailist.append({ #some of these might take 2 bytes instead of 1
             "num1": get(yokai, 0, 2), #0 starts from 0
             "num2": get(yokai, 2, 2), #2
-            "id": get(yokai, 4, 4), #4-07
+            "type": get(yokai, 4, 4), #4-07
             "nickname": get(yokai, 8, 68, False), #8-76 maybe broken
             "attack": get(yokai, 78),
             "technique": get(yokai, 82),
@@ -310,7 +310,7 @@ def main(f, edit):
         itemlist.append({
             "num1": get(item, 0, 2), #0 starts from 0
             "num2": get(item, 2, 2), #2
-            "id": get(item, 4, 4), #4
+            "type": get(item, 4, 4), #4
             "amount": get(item, 8) #8 up to 255
         })
 
@@ -329,7 +329,7 @@ def main(f, edit):
         equipmentlist.append({
             "num1": get(equipment, 0, 2), #0 starts from 4096
             "num2": get(equipment, 2, 2), #2
-            "id": get(equipment, 4, 4), #4
+            "type": get(equipment, 4, 4), #4
             "amount": get(equipment, 8), #8 up to 255
             "used": get(equipment, 12, 4) #how many are in use (leave alone or set to zero)
         })
@@ -349,7 +349,7 @@ def main(f, edit):
         importantlist.append({
             "num1": get(important, 0, 2), #0 starts from 8192
             "num2": get(important, 2, 2), #2
-            "id": get(important, 4, 4), #4
+            "type": get(important, 4, 4), #4
         })
 
         index += 1
@@ -388,7 +388,7 @@ def main(f, edit):
         f.seek(1784+12*j+2)
         f.write(give(i["num2"], 2))
         f.seek(1784+12*j+4)
-        f.write(give(i["id"], 4))
+        f.write(give(i["type"], 4))
         f.seek(1784+12*j+8)
         f.write(give(i["amount"], 4))
         j+=1
@@ -406,7 +406,7 @@ def main(f, edit):
         f.seek(4868+16*j+2)
         f.write(give(i["num2"], 2))
         f.seek(4868+16*j+4)
-        f.write(give(i["id"], 4))
+        f.write(give(i["type"], 4))
         f.seek(4868+16*j+8)
         f.write(give(i["amount"], 4))
         f.seek(4868+16*j+12)
@@ -426,7 +426,7 @@ def main(f, edit):
         f.seek(6480+8*j+2)
         f.write(give(i["num2"], 2))
         f.seek(6480+8*j+4)
-        f.write(give(i["id"], 4))
+        f.write(give(i["type"], 4))
         j+=1
 
     #clear important overflow
@@ -442,7 +442,7 @@ def main(f, edit):
         f.seek(7696+124*j+2)
         f.write(give(i["num2"], 2))
         f.seek(7696+124*j+4)
-        f.write(give(i["id"], 4))
+        f.write(give(i["type"], 4))
         f.seek(7696+124*j+8)
         f.write(give(i["nickname"], 60, False))
         f.seek(7696+124*j+78)

@@ -2,7 +2,7 @@
 # coding: utf-8
 
 """
-dump1s.py
+dump4.py
 
 ======
 
@@ -78,7 +78,7 @@ def give(write, length=1, integer=True, half=False):
             return (bytearray(write.encode('utf-8'))+bytearray(length))[:length]
 
 
-def edit_yokai(yokailist, index, yokai=None, nickname=None, iv=None, skills=None): #massively overcomplicated and broken simultaneously works with characterlist too
+def edit_yokai(yokailist, index, yokai=None, nickname=None, iv=None, moves=None): #massively overcomplicated and broken simultaneously works with characterlist too
     try:
         if index < 0:
             index = len(yokailist)-index #appending shortcut
@@ -107,23 +107,20 @@ def edit_yokai(yokailist, index, yokai=None, nickname=None, iv=None, skills=None
         yokailist[index]["num2"]+=(j-location)
     if yokai != None:
         try:
-            yokailist[index]["yokai"] = reverse_yokais[yokai]
+            yokailist[index]["type"] = reverse_characters[yokai]
         except:
-            try:
-                yokailist[index]["yokai"] = reverse_characters[yokai]
-            except:
-                yokailist[index]["yokai"] = yokai
+            yokailist[index]["type"] = yokai
     try:
         yokailist[index]["nickname"] = yokailist[index]["nickname"]
     except:
         yokailist[index]["nickname"] = ""
     if nickname != None: #may cause problems
         yokailist[index]["nickname"] = nickname
-    if skills:# e.g. ["blah", None, 1234, None, 0, 0]
+    if moves:# e.g. ["blah", None, 1234, None, 0, 0]
         try:
-            yokailist[index]["skills"] = [yokailist[index]["skills"][skill] if skills[skill] == None else reverse_skills[skills[skill]] for skill in range(6)]
+            yokailist[index]["moves"] = [yokailist[index]["moves"][move] if moves[move] == None else reverse_moves[moves[move]] for move in range(6)]
         except:
-            yokailist[index]["skills"] = [yokailist[index]["skills"][skill] if skills[skill] == None else skills[skill] for skill in range(6)]
+            yokailist[index]["moves"] = [yokailist[index]["moves"][move] if moves[move] == None else moves[move] for move in range(6)]
     yokailist[index]["xp"] = 0 
     yokailist[index]["hp"] = 1 #if these are over the max the game crashes TODO test
     yokailist[index]["yp"] = 1
@@ -180,9 +177,9 @@ def edit_item(itemlist, index, item=None, amount=None): #broken for some reason
     itemlist[index]["num2"] = index+1
     if item:
         try:
-            itemlist[index]["item"] = reverse_items[item]
+            itemlist[index]["type"] = reverse_items[item]
         except:
-            itemlist[index]["item"] = item
+            itemlist[index]["type"] = item
     try:
         itemlist[index]["order"]
     except:
@@ -191,63 +188,63 @@ def edit_item(itemlist, index, item=None, amount=None): #broken for some reason
         itemlist[index]["amount"] = amount
     return itemlist
 
-def edit_special_soul(specialsoullist, index, soul=None, amount=None):
+def edit_special(speciallist, index, soul=None, amount=None):
     try:
         if index < 0:
-            index = len(specialsoullist)-index #appending shortcut
+            index = len(speciallist)-index #appending shortcut
     except:
         pass
     try:
-        specialsoullist[index]
+        speciallist[index]
     except:
-        index = len(specialsoullist)
-        specialsoullist.append({})
-    specialsoullist[index]["num1"] = index
-    specialsoullist[index]["num2"] = index+1
+        index = len(speciallist)
+        speciallist.append({})
+    speciallist[index]["num1"] = index
+    speciallist[index]["num2"] = index+1
     if soul:
         try:
-            specialsoullist[index]["soul"] = reverse_souls[soul] #TODO
+            speciallist[index]["type"] = reverse_souls[soul] #TODO
         except:
-            specialsoullist[index]["soul"] = item
+            speciallist[index]["type"] = item
     try:
-        specialsoullist[index]["order"]
+        speciallist[index]["order"]
     except:
-        specialsoullist[index]["order"] = 0 
+        speciallist[index]["order"] = 0 
     if amount:
-        specialsoullist[index]["amount"] = amount
-    return specialsoullist
+        speciallist[index]["amount"] = amount
+    return speciallist
 
-def edit_yokai_soul(yokaisoullist, index, soul=None, red=None, white=None, gold=None, flags=None):
+def edit_soul(soullist, index, soul=None, red=None, white=None, gold=None, flags=None):
     try:
         if index < 0:
-            index = len(yokaisoullist)-index #appending shortcut
+            index = len(soullist)-index #appending shortcut
     except:
         pass
     try:
-        yokaisoullist[index]
+        soullist[index]
     except:
-        index = len(yokaisoullist)
-        yokaisoullist.append({})
-    yokaisoullist[index]["num1"] = index
-    yokaisoullist[index]["num2"] = index+1
+        index = len(soullist)
+        soullist.append({})
+    soullist[index]["num1"] = index
+    soullist[index]["num2"] = index+1
     if soul:
         try:
-            yokaisoullist[index]["soul"] = reverse_souls[soul] #TODO
+            soullist[index]["type"] = reverse_souls[soul] #TODO
         except:
-            yokaisoullist[index]["soul"] = item
+            soullist[index]["type"] = item
     try:
-        yokaisoullist[index]["order"]
+        soullist[index]["order"]
     except:
-        yokaisoullist[index]["order"] = 0 
+        soullist[index]["order"] = 0 
     if red:
-        yokaisoullist[index]["red"] = red
+        soullist[index]["red"] = red
     if white:
-        yokaisoullist[index]["white"] = white
+        soullist[index]["white"] = white
     if gold:
-        yokaisoullist[index]["gold"] = gold
+        soullist[index]["gold"] = gold
     if flags:
-        yokaisoullist[index]["flags"] = flags #idk
-    return yokaisoullist
+        soullist[index]["flags"] = flags #idk
+    return soullist
 
 def edit_equipment(equipmentlist, index, equipment=None, amount=None):
     try:
@@ -264,9 +261,9 @@ def edit_equipment(equipmentlist, index, equipment=None, amount=None):
     equipmentlist[index]["num2"] = index+1
     if equipment:
         try:
-            equipmentlist[index]["equipment"] = reverse_equipments[equipment]
+            equipmentlist[index]["type"] = reverse_equipments[equipment]
         except:
-            equipmentlist[index]["equipment"] = equipment
+            equipmentlist[index]["type"] = equipment
     try:
         equipmentlist[index]["order"] #overkill until i learn how to use it
     except:
@@ -313,8 +310,8 @@ def main(file, edit):
                 "num1": get(character, 0, 2), #starts from 0
                 "num2": get(character, 2, 2), 
                 "nickname": get(character, 28, 24, False), #maybe more?
-                "yokai": get(character, 72, 4), 
-                "skills": [
+                "type": get(character, 72, 4), 
+                "moves": [
                     get(character, 84, 4), 
                     get(character, 88, 4), 
                     get(character, 92, 4), 
@@ -358,8 +355,6 @@ def main(file, edit):
             })
 
             index += 1
-            original_character_amount = index
-        original_character_amount = index
 
         yokailist = []
         index = 0
@@ -374,8 +369,8 @@ def main(file, edit):
                 "num1": get(yokai, 0, 2), #starts from 4096
                 "num2": get(yokai, 2, 2), 
                 "nickname": get(yokai, 28, 24, False), #maybe more?
-                "yokai": get(yokai, 72, 4), 
-                "skills": [
+                "type": get(yokai, 72, 4), 
+                "moves": [
                     get(yokai, 84, 4), 
                     get(yokai, 88, 4), 
                     get(yokai, 92, 4), 
@@ -419,8 +414,6 @@ def main(file, edit):
             })
 
             index += 1
-            original_yokai_amount = index
-        original_yokai_amount = index
 
         itemlist = []
         index = 0
@@ -434,63 +427,60 @@ def main(file, edit):
             itemlist.append({
                 "num1": get(item, 0, 2), #starts from 0
                 "num2": get(item, 2, 2),
-                "item": get(item, 12, 4),
+                "type": get(item, 12, 4),
                 "order": get(item, 24, 4), #what's this?
                 "amount": get(item, 36, 2) # maybe 4 bytes?
             })
             
             index += 1
-        original_item_amount = index
 
-        specialsoullist = [] #TODO rename
+        speciallist = [] #TODO rename
         index = 0
         f.seek(958227)
         while True:
-            specialsoul = f.read(54)
+            special = f.read(54)
 
-            if get(specialsoul, 2, 2) == 0:
+            if get(special, 2, 2) == 0:
                 break
 
-            specialsoullist.append({
-                "num1": get(specialsoul, 0, 2), #starts from 16384
-                "num2": get(specialsoul, 2, 2),
-                "soul": get(specialsoul, 12, 4),
-                "order": get(specialsoul, 24, 4),
-                "amount": get(specialsoul, 36, 2),
+            speciallist.append({
+                "num1": get(special, 0, 2), #starts from 16384
+                "num2": get(special, 2, 2),
+                "type": get(special, 12, 4),
+                "order": get(special, 24, 4),
+                "amount": get(special, 36, 2),
             })
 
             index += 1
-        original_special_soul_amount = index
 
-        yokaisoullist = [] #TODO rename
+        soullist = [] #TODO rename
         index = 0
         f.seek(963635)
         while True:
-            yokaisoul = f.read(80)
+            soul = f.read(80)
 
-            if get(yokaisoul, 2, 2) == 0:
+            if get(soul, 2, 2) == 0:
                 break
 
-            yokaisoullist.append({
-                "num1": get(yokaisoul, 0, 2), #starts from 12288
-                "num2": get(yokaisoul, 2, 2), 
-                "soul": get(yokaisoul, 12, 4),
-                "order": get(yokaisoul, 24, 4),
-                "white": get(yokaisoul, 36, 2), #amount
-                "red": get(yokaisoul, 38, 2), #amount
-                "gold": get(yokaisoul, 40, 2), #amount
+            soullist.append({
+                "num1": get(soul, 0, 2), #starts from 12288
+                "num2": get(soul, 2, 2), 
+                "type": get(soul, 12, 4),
+                "order": get(soul, 24, 4),
+                "white": get(soul, 36, 2), #amount
+                "red": get(soul, 38, 2), #amount
+                "gold": get(soul, 40, 2), #amount
                 "flags":[
-                    get(yokaisoul, 50), 
-                    get(yokaisoul, 51), 
-                    get(yokaisoul, 52), 
-                    get(yokaisoul, 61), 
-                    get(yokaisoul, 62), 
-                    get(yokaisoul, 63), 
+                    get(soul, 50), 
+                    get(soul, 51), 
+                    get(soul, 52), 
+                    get(soul, 61), 
+                    get(soul, 62), 
+                    get(soul, 63), 
                 ], 
             })
 
             index += 1
-        original_yokai_soul_amount = index
 
         equipmentlist = []
         index = 0
@@ -504,20 +494,19 @@ def main(file, edit):
             equipmentlist.append({
                 "num1": get(equipment, 0, 2), #starts from 4096
                 "num2": get(equipment, 2, 2), 
-                "equipment": get(equipment, 12, 4),
+                "type": get(equipment, 12, 4),
                 "order": get(equipment, 24, 4),
                 "amount": get(equipment, 36, 2),
                 "used": get(equipment, 46, 1) #how many are in use (leave alone or set to zero)
             })
 
             index += 1
-        original_equipment_amount = index
 
         #TODO important
 
         #editor goes here
         if edit:
-            position, location, money, namelist, gatcharemaining, gatchamax, characterlist, yokailist, itemlist, specialsoullist, yokaisoullist, equipmentlist = edit(position, location, money, namelist, gatcharemaining, gatchamax, characterlist, yokailist, itemlist, specialsoullist, yokaisoullist, equipmentlist)
+            position, location, money, namelist, gatcharemaining, gatchamax, characterlist, yokailist, itemlist, speciallist, soullist, equipmentlist = edit(position, location, money, namelist, gatcharemaining, gatchamax, characterlist, yokailist, itemlist, speciallist, soullist, equipmentlist)
 
         #write everything back to file
         if 1:
@@ -535,7 +524,6 @@ def main(file, edit):
                 f.seek(282+36*namenum)
                 f.write(give(namelist[name], 24, integer=False))
                 namenum += 1
-            #clear overflow????
             f.seek(2082)
             f.write(give(gatcharemaining))
             f.write(give(gatchamax))
@@ -550,10 +538,10 @@ def main(file, edit):
                 f.seek(166627+469*j+28)
                 f.write(give(i["nickname"], 24, integer=False))
                 f.seek(166627+469*j+72)
-                f.write(give(i["yokai"], 4))
+                f.write(give(i["type"], 4))
                 f.seek(166627+469*j+84)
-                for skill in range(6): #always 6?
-                    f.write(give(i["skills"][skill], 4))
+                for move in range(6): #always 6?
+                    f.write(give(i["moves"][move], 4))
                 f.seek(166627+469*j+132)
                 f.write(give(i["xp"], 4))
                 f.seek(166627+469*j+144)
@@ -584,11 +572,6 @@ def main(file, edit):
                 
                 j+=1
 
-            #clear character overflow
-            if original_character_amount - len(characterlist) > 0:
-                f.seek(166627+469*j)
-                f.write(b"\x00"*469*(original_character_amount - len(characterlist)))
-
             #write yokai back
             j=0
             for i in yokailist:
@@ -599,10 +582,10 @@ def main(file, edit):
                 f.seek(169449+469*j+28)
                 f.write(give(i["nickname"], 24, integer=False))
                 f.seek(169449+469*j+72)
-                f.write(give(i["yokai"], 4))
+                f.write(give(i["type"], 4))
                 f.seek(169449+469*j+84)
-                for skill in range(6):
-                    f.write(give(i["skills"][skill], 4))
+                for move in range(6):
+                    f.write(give(i["moves"][move], 4))
                 f.seek(169449+469*j+132)
                 f.write(give(i["xp"], 4))
                 f.seek(169449+469*j+144)
@@ -633,11 +616,6 @@ def main(file, edit):
                 
                 j+=1
 
-            #clear yokai overflow
-            if original_yokai_amount - len(yokailist) > 0:
-                f.seek(169449+469*j)
-                f.write(b"\x00"*469*(original_yokai_amount - len(yokailist)))
-
             #write item back
             j=0
             for i in itemlist:
@@ -646,7 +624,7 @@ def main(file, edit):
                 f.seek(76579+54*j+2)
                 f.write(give(i["num2"], 2))
                 f.seek(76579+54*j+12)
-                f.write(give(i["item"], 4))
+                f.write(give(i["type"], 4))
                 f.seek(76579+54*j+24)
                 f.write(give(i["order"], 4))
                 f.seek(76579+54*j+36)
@@ -654,20 +632,15 @@ def main(file, edit):
 
                 j+=1
 
-            #clear item overflow
-            if original_item_amount - len(itemlist) > 0:
-                f.seek(76579+54*j)
-                f.write(b"\x00"*54*(original_item_amount - len(itemlist)))
-
             #write special soul back
             j=0
-            for i in specialsoullist:
+            for i in speciallist:
                 f.seek(958227+54*j+0)
                 f.write(give(i["num1"], 2))
                 f.seek(958227+54*j+2)
                 f.write(give(i["num2"], 2))
                 f.seek(958227+54*j+12)
-                f.write(give(i["soul"], 4))
+                f.write(give(i["type"], 4))
                 f.seek(958227+54*j+24)
                 f.write(give(i["order"], 4))
                 f.seek(958227+54*j+36)
@@ -675,20 +648,15 @@ def main(file, edit):
 
                 j+=1
 
-            #clear special soul overflow
-            if original_special_soul_amount - len(specialsoullist) > 0:
-                f.seek(958227+54*j)
-                f.write(b"\x00"*54*(original_special_soul_amount - len(specialsoullist)))
-            
             #write yokai soul back
             j=0
-            for i in yokaisoullist:
+            for i in soullist:
                 f.seek(963635+80*j+0)
                 f.write(give(i["num1"], 2))
                 f.seek(963635+80*j+2)
                 f.write(give(i["num2"], 2))
                 f.seek(963635+80*j+12)
-                f.write(give(i["soul"], 4))
+                f.write(give(i["type"], 4))
                 f.seek(963635+80*j+24)
                 f.write(give(i["order"], 4))
                 f.seek(963635+80*j+36)
@@ -702,11 +670,6 @@ def main(file, edit):
 
                 j+=1
 
-            #clear yokai soul overflow
-            if original_yokai_soul_amount - len(yokaisoullist) > 0:
-                f.seek(963635+80*j)
-                f.write(b"\x00"*80*(original_yokai_soul_amount - len(yokaisoullist)))
-            
             #write equipment back
             j=0
             for i in equipmentlist:
@@ -715,7 +678,7 @@ def main(file, edit):
                 f.seek(103587+63*j+2)
                 f.write(give(i["num2"], 2))
                 f.seek(103587+63*j+12)
-                f.write(give(i["equipment"], 4))
+                f.write(give(i["type"], 4))
                 f.seek(103587+63*j+24)
                 f.write(give(i["order"], 4))
                 f.seek(103587+63*j+36)
@@ -724,8 +687,3 @@ def main(file, edit):
                 f.write(give(i["used"]))
 
                 j+=1
-
-            #clear equipment overflow
-            if original_equipment_amount - len(equipmentlist) > 0:
-                f.seek(103587+63*j)
-                f.write(b"\x00"*63*(original_equipment_amount - len(equipmentlist)))

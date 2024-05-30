@@ -11,8 +11,6 @@ get support in the ykw hacking zone: https://discord.gg/xkSMZYEWCP
 
 my-editors: work in progress python editors
 
-my-tools: python scripts for togenyan's editors
-
 compiled: all the editors in exe form
 
 save-tools: decrypt and encrypt yokai watch saves manually
@@ -38,6 +36,8 @@ https://github.com/Darkey28/yw_save for providing the save tools
 https://www.buymeacoffee.com/bqsantana for the 4 binary
 
 RSM for 4 decompilation
+
+light8227 for 4 data
 
 
 ## Licence
