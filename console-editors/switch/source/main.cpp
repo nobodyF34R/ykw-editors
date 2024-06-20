@@ -1,16 +1,22 @@
-#include <iostream>
+#include <algorithm>
+#include <cctype>
+#include <cstdint>
 #include <cstring>
 #include <dirent.h>
-#include <switch.h>
-#include <vector>
-#include <cstdint>
-#include <algorithm>
-#include <stdexcept>
 #include <fstream>
+#include <iomanip>
+#include <iostream>
+#include <map>
+#include <sstream>
+#include <stdexcept>
+#include <string>
+#include <switch.h>
+#include <time.h>
+#include <vector>
 #include "cipher.h"
-#include "struct.h"
 #include "data.h"
 #include "edit.h"
+#include "struct.h"
 
 
 Result get_save(u64* application_id, AccountUid* uid) {
@@ -45,8 +51,79 @@ Result get_save(u64* application_id, AccountUid* uid) {
     if (R_SUCCEEDED(rc) && !found)
         return MAKERESULT(Module_Libnx, LibnxError_NotFound);
 
-    return rc;
+    
+    if (R_FAILED(rc)) {
+        rc = accountInitialize(AccountServiceType_Application);
+
+        if (R_FAILED(rc)) {
+            std::cout << "accountInitialize() failed: 0x" << std::hex << rc << std::dec << std::endl;
+            return rc;
+        }
+
+        if (R_SUCCEEDED(rc)) {
+            rc = accountGetPreselectedUser(uid);
+            accountExit();
+
+            if (R_FAILED(rc)) {
+                std::cout << "accountGetPreselectedUser() failed: 0x" << std::hex << rc << std::dec << std::endl;
+                return rc;
+            }
+        }
+    }
+    if (R_SUCCEEDED(rc)) {
+        rc = fsdevMountSaveData("save", *application_id, *uid);
+
+        if (R_FAILED(rc)) {
+            return rc;
+        }
+    }
+
 }
+
+void pause(PadState &pad) {
+    while (appletMainLoop()) {
+        consoleUpdate(NULL);
+        padUpdate(&pad);
+        u64 kDown = padGetButtonsDown(&pad);
+
+        if (kDown) break;
+    }
+}
+
+// Helper function to extract the timestamp from the filename
+long extractTimestamp(const std::string& filename) {
+    size_t firstDot = filename.find('.', 0);
+    size_t secondDot = filename.find('.', firstDot + 1);
+    size_t thirdDot = filename.find('.', secondDot + 1);
+    return std::stol(filename.substr(secondDot + 1, thirdDot - secondDot - 1));
+}
+
+void backup(std::string path, std::string &save, std::vector<std::string> backupFiles, std::vector<uint8_t> &data) {
+    //make backuplist only contain backups for the selected save
+    for (int i = 0; i < backupFiles.size(); i++) {
+        if (backupFiles[i].substr(0, save.size()) != save) {
+            backupFiles.erase(backupFiles.begin() + i);
+            i--;
+        }
+    }
+
+    std::sort(backupFiles.begin(), backupFiles.end(), [](const std::string& a, const std::string& b) {
+        return extractTimestamp(a) < extractTimestamp(b);
+    });
+
+    while (backupFiles.size() > 3) { //delete until 3 left
+        remove((path + backupFiles[1]).c_str());
+        backupFiles.erase(backupFiles.begin() + 1);
+    }
+
+    // Create a new backup
+    std::string backupFilePath = path + save + "." + std::to_string(time(NULL)) + ".bak";
+    FILE* backupFile = fopen(backupFilePath.c_str(), "w+b");
+    fwrite(data.data(), sizeof(uint8_t), data.size(), backupFile);
+    fclose(backupFile); //TODO add a check to see if any data was actually changed before deleting the backup
+    fsdevCommitDevice("save"); //this doesn't seem to work on emu TODO
+}
+
 
 int main(int argc, char** argv) {
     Result rc = 0;
@@ -55,7 +132,7 @@ int main(int argc, char** argv) {
     struct dirent* ent;
 
     AccountUid uid = {0};
-    u64 application_id; // ApplicationId of the save to mount.
+    u64 application_id; // TID of the save to mount.
 
     consoleInit(NULL);
 
@@ -65,7 +142,7 @@ int main(int argc, char** argv) {
     padInitializeDefault(&pad);
 
     int selectedGame = 0;
-    std::vector<u64> games = {0x0100c0000ceea000, 0x010086c00af7c000};
+    std::vector<u64> games = {0x0100c0000ceea000, 0x010086c00af7c000}; //TODO add a way to read what games you have saves for out of this list
                 
     while (appletMainLoop()) {
         consoleUpdate(NULL);
@@ -80,46 +157,17 @@ int main(int argc, char** argv) {
         }
 
         printf("\x1b[1;1H\x1b[2JSelect a game:\n");
-        std::cout << (0 == selectedGame ? "> " : "  ") << "1s" << std::endl; //hardcoded for now?
+        std::cout << (0 == selectedGame ? "> " : "  ") << "1s" << std::endl;
         std::cout << (1 == selectedGame ? "> " : "  ") << "4" << std::endl;
 
         if (kDown & HidNpadButton_A) {
             application_id = games[selectedGame];
+            rc = get_save(&application_id, &uid);
 
-            if (R_FAILED(get_save(&application_id, &uid))) {
-                rc = accountInitialize(AccountServiceType_Application);
-
-                if (R_FAILED(rc)) {
-                    std::cout << "accountInitialize() failed: 0x" << std::hex << rc << std::dec << std::endl;
-                    break;
-                }
-
-                if (R_SUCCEEDED(rc)) {
-                    rc = accountGetPreselectedUser(&uid);
-                    accountExit();
-
-                    if (R_FAILED(rc)) {
-                        std::cout << "accountGetPreselectedUser() failed: 0x" << std::hex << rc << std::dec << std::endl;
-                        break; //TODO make more elegant
-                    }
-                }
-            }
-
-            // if (R_SUCCEEDED(rc)) {
-            //     std::cout << "application_id=0x" << std::hex << application_id << " uid: 0x" << uid.uid[1] << " 0x" << uid.uid[0] << std::dec << std::endl;
-            // }
-
-            if (R_SUCCEEDED(rc)) {
-                rc = fsdevMountSaveData("save", application_id, uid);
-
-                if (R_FAILED(rc)) {
-                    std::cout << "fsdevMountSaveData() failed: 0x" << std::hex << rc << std::dec << std::endl;
-                    std::cout << "Close your game and try again." << std::endl;
-                    break;
-                }
-            }
-
-            if (R_SUCCEEDED(rc)) {
+            if (R_FAILED(rc)) {
+                std::cout << "Save data could not be read." << std::endl;
+                pause(pad);
+            } else {
                 if (application_id == 0x010086c00af7c000) {
                     dir = opendir("save:/USERDATA00/");
                 } else {
@@ -130,9 +178,13 @@ int main(int argc, char** argv) {
                     std::cout << "Failed to open dir." << std::endl;
                 } else {
                     std::vector<std::string> saveFiles;
+                    std::vector<std::string> backupFiles;
                     while ((ent = readdir(dir))) {
-                        if (strcmp(ent->d_name + strlen(ent->d_name) - 4, ".bak") != 0 & strcmp(ent->d_name + strlen(ent->d_name) - 4, ".ywd") != 0) {
+                        std::string fileName(ent->d_name);
+                        if (fileName[0] != '.' && fileName.substr(fileName.size() - 4) != ".bak" && fileName.substr(fileName.size() - 4) != ".ywd") {
                             saveFiles.push_back(ent->d_name);
+                        } else if (fileName[0] != '.' && fileName.substr(fileName.size() - 4) == ".bak") {
+                            backupFiles.push_back(ent->d_name);
                         }
                     }
                     if (saveFiles.empty()) {
@@ -174,6 +226,9 @@ int main(int argc, char** argv) {
                                         while ((bytesRead = fread(buffer, 1, sizeof(buffer), file)) > 0) {
                                             data.insert(data.end(), buffer, buffer + bytesRead);
                                         }
+
+                                        //make backup.
+                                        backup("save:/USERDATA00/", saveFiles[selectedSave], backupFiles, data);
 
                                         bool save = true;
                                         
@@ -277,6 +332,7 @@ int main(int argc, char** argv) {
                                         int selectedAction = 0;
 
                                         while (appletMainLoop()) {
+                                            consoleUpdate(NULL);
                                             padUpdate(&pad);
                                             u64 kDown = padGetButtonsDown(&pad);
                                             inputHandling(selectedAction, kDown, 7);
@@ -325,20 +381,12 @@ int main(int argc, char** argv) {
 
                                                 padUpdate(&pad);
                                             }
-
-                                            consoleUpdate(NULL);
                                         }
 
                                         if (save) {
                                             fseek(file, 0, SEEK_SET);
-                                            fwrite(data.data(), 1, 1046707, file);
+                                            fwrite(data.data(), 1, data.size(), file); //1046707
                                             fclose(file);
-
-                                            // std::string bakfilePath = filePath;
-                                            // bakfilePath.replace(bakfilePath.rfind(".bin"), 3, ".bak");
-                                            // FILE* bakfile = fopen(bakfilePath.c_str(), "wb");
-                                            // fwrite(encryptedData.data(), 1, 1046707, bakfile);
-                                            // fclose(bakfile);
                                             fsdevCommitDevice("save");
                                         }
                                         else {
@@ -365,7 +413,8 @@ int main(int argc, char** argv) {
                                         
                                         std::vector<uint8_t> decryptedData = yw_proc(encryptedData, false);
 
-                                        //EDIT HERE
+                                        //make backup
+                                        backup("save:/", saveFiles[selectedSave], backupFiles, encryptedData);
 
                                         bool save = true;
                                         uint32_t size;
@@ -445,6 +494,7 @@ int main(int argc, char** argv) {
                                             int selectedAction = 0;
 
                                             while (appletMainLoop()) {
+                                                consoleUpdate(NULL);
                                                 padUpdate(&pad);
                                                 u64 kDown = padGetButtonsDown(&pad);
                                                 inputHandling(selectedAction, kDown, 5);
@@ -485,8 +535,6 @@ int main(int argc, char** argv) {
 
                                                     padUpdate(&pad);
                                                 }
-
-                                                consoleUpdate(NULL);
                                             }
                                         }
                                         
@@ -494,12 +542,6 @@ int main(int argc, char** argv) {
                                             fseek(file, 0, SEEK_SET);
                                             fwrite(yw_proc(decryptedData, true).data(), 1, size, file);
                                             fclose(file);
-
-                                            // std::string bakfilePath = filePath;
-                                            // bakfilePath.replace(bakfilePath.rfind(".yw"), 3, ".bak");
-                                            // FILE* bakfile = fopen(bakfilePath.c_str(), "wb");
-                                            // fwrite(encryptedData.data(), 1, size, bakfile);
-                                            // fclose(bakfile);
                                             fsdevCommitDevice("save");
                                         }
                                         else {

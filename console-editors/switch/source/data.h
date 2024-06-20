@@ -1,10 +1,6 @@
 #ifndef DATA_H
 #define DATA_H
 
-#include <map>
-#include <string>
-#include <vector>
-
 namespace data1s {
     std::map<uint32_t, std::string> yokais = {
         {2905096119, "Pandle"}, 
@@ -1065,7 +1061,6 @@ namespace data1s {
 
 namespace data4 {
     std::map<uint32_t, std::string> characters = {
-        {0, ""},  //none
         {2514491877, "Aburaham"}, 
         {847158696, "Aburaham 2"}, 
         {2134836711, "Aburaham 3"}, 
@@ -1886,7 +1881,6 @@ namespace data4 {
     };
 
     std::map<uint32_t, std::string> yokais = { //TODO: Add the rest of the yokai
-        {0, ""}, //none
         {3453175713, "Acala Exalted"}, 
         {1367131414, "Arachnus"}, 
         {2696372038, "Arachnus 2"}, 
@@ -2032,13 +2026,13 @@ namespace data4 {
         {2054108811, "Present Whisper"}, 
         {4081667023, "Punkupine"}, 
         {272389936, "Rai-chan"}, 
-        {188836447, "Raidenryu"}, 
         {2070148783, "Ray O'Light"}, 
         {3934821896, "Reuknight"}, 
         {1121307402, "Rhinormous"}, 
         {1020362005, "Robonyan"}, 
         {2153619361, "Rocky Badboya"}, 
         {648868871, "Roughraff"}, 
+        {2307463343, "Rhyth"}, 
         {1986094516, "Sandmeh"}, 
         {4236059703, "Saros 2"}, 
         {3858804005, "Saya"}, 
@@ -2310,6 +2304,7 @@ namespace data4 {
         {1210208878, "Forgetful Bang ♪"}, 
         {1857038892, "Fox Claw"}, 
         {1914033894, "Freezing Waterfall"}, 
+        {1994851750, "Friend Yamamba"}, 
         {2465558521, "Frost"}, 
         {4009768756, "Frying Flames"}, 
         {498643579, "Full Energy Drop"}, 

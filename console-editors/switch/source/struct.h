@@ -1,9 +1,6 @@
 #ifndef STRUCT_H
 #define STRUCT_H
 
-#include <iostream>
-
-
 struct struct1s {
     struct Head { //TODO
 

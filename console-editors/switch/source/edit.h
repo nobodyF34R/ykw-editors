@@ -1,14 +1,7 @@
 #ifndef EDIT_H
 #define EDIT_H
 
-#include <switch.h>
 #include "struct.h"
-#include <vector>
-#include <cstdint>
-#include <cctype>
-#include <algorithm>
-#include <sstream>
-#include <iomanip>
 
 std::vector<std::pair<int, std::string>> sortedMap; //TODO remove these globals
 std::vector<std::pair<int, std::string>> filteredMap;
@@ -23,8 +16,12 @@ std::string zfill(int num, int width) { //TODO add this where applicable
 
 void callback(const char* str, SwkbdChangedStringArg* arg) {
     filteredMap.clear();
+    std::string lowercaseStr = str;
+    std::transform(lowercaseStr.begin(), lowercaseStr.end(), lowercaseStr.begin(), [](unsigned char c){ return std::tolower(c); });
     for (auto const& pair : sortedMap) {
-        if (pair.second.find(str) != std::string::npos) {
+        std::string lowercasePair = pair.second;
+        std::transform(lowercasePair.begin(), lowercasePair.end(), lowercasePair.begin(), [](unsigned char c){ return std::tolower(c); });
+        if (lowercasePair.find(lowercaseStr) != std::string::npos) {
             filteredMap.push_back(pair);
         }
     }
@@ -136,12 +133,12 @@ void mapInput(PadState pad, int& currentSelection, std::string type) {
                 currentSelection = filteredMap[mapSelection].first;
                 break;
             }
-            if (kDown & HidNpadButton_X) {
+            if (kDown & HidNpadButton_Y) {
                 mapSelection = 0;
                 break;
             }
         }
-        if (kDown & HidNpadButton_Y) {
+        if (kDown & HidNpadButton_X) {
             if (activeKeyboard) {
                 swkbdInlineDisappear(&kbdinline);
             } else {
@@ -151,7 +148,7 @@ void mapInput(PadState pad, int& currentSelection, std::string type) {
         }
 
         int i = 0;
-        std::cout << "\x1b[1;1H\x1b[2JSelect a " << type << " (X for none, Y to toggle keyboard)";
+        std::cout << "\x1b[1;1H\x1b[2JSelect a " << type << " (Y for none, X to toggle keyboard)";
         for (auto const& pair : filteredMap) {
             if (i/44 == mapSelection/44) {
                 std::cout << "\n" << (i == mapSelection ? "> " : "  ") << pair.second;
@@ -187,12 +184,12 @@ void listInput(PadState pad, int& currentSelection, std::string list[], int list
             currentSelection++;
             break;
         }
-        if (kDown & HidNpadButton_X) {
+        if (kDown & HidNpadButton_Y) {
             currentSelection = 0;
             break;
         }
 
-        std::cout << "\x1b[1;1H\x1b[2JSelect a " << type << " (X for none)";
+        std::cout << "\x1b[1;1H\x1b[2JSelect a " << type << " (Y for none)";
         for (int i = 0; i < listSize; i++) {
             if (i/44 == currentSelection/44) {
                 std::cout << "\n" << (i == currentSelection ? "> " : "  ") << list2[i];
@@ -248,6 +245,7 @@ namespace edit1s {
         int currentLevel = 0;
 
         while (appletMainLoop()) {
+            consoleUpdate(NULL);
             padUpdate(&pad);
             u64 kDown = padGetButtonsDown(&pad);
 
@@ -279,7 +277,9 @@ namespace edit1s {
                         if (outstr[0] == '\0') {
                             currentLevel = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) <= 255) {
+                            if (std::stoi(outstr) > 255) {
+                                currentLevel = 255;
+                            } else {
                                 currentLevel = std::stoi(outstr);
                             }
                         }
@@ -314,8 +314,6 @@ namespace edit1s {
                 std::cout << (currentEdit == 3 ? "> " : "  ") << "apply and set max" << std::endl;
                 std::cout << (currentEdit == 4 ? "> " : "  ") << "apply" << std::endl;
             }
-            
-            consoleUpdate(NULL);
         }
     }
 
@@ -342,6 +340,7 @@ namespace edit1s {
         int currentAmount = 0;
 
         while (appletMainLoop()) {
+            consoleUpdate(NULL);
             padUpdate(&pad);
             u64 kDown = padGetButtonsDown(&pad);
 
@@ -370,7 +369,9 @@ namespace edit1s {
                         if (outstr[0] == '\0') {
                             currentAmount = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) <= 99) {
+                            if (std::stoi(outstr) > 99) {
+                                currentAmount = 99;
+                            } else {
                                 currentAmount = std::stoi(outstr);
                             }
                         }
@@ -392,8 +393,6 @@ namespace edit1s {
                 printf("\n");
                 std::cout << (currentEdit == 2 ? "> " : "  ") << "apply" << std::endl;
             }
-
-            consoleUpdate(NULL);
         }
     }
 
@@ -420,6 +419,7 @@ namespace edit1s {
         int currentAmount = 0;
 
         while (appletMainLoop()) {
+            consoleUpdate(NULL);
             padUpdate(&pad);
             u64 kDown = padGetButtonsDown(&pad);
 
@@ -448,7 +448,9 @@ namespace edit1s {
                         if (outstr[0] == '\0') {
                             currentAmount = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) <= 255) {
+                            if (std::stoi(outstr) > 255) {
+                                currentAmount = 255;
+                            } else {
                                 currentAmount = std::stoi(outstr);
                             }
                         }
@@ -470,8 +472,6 @@ namespace edit1s {
                 printf("\n");
                 std::cout << (currentEdit == 2 ? "> " : "  ") << "apply" << std::endl;
             }
-
-            consoleUpdate(NULL);
         }
     }
 
@@ -497,6 +497,7 @@ namespace edit1s {
         int currentImportant = 0;
 
         while (appletMainLoop()) {
+            consoleUpdate(NULL);
             padUpdate(&pad);
             u64 kDown = padGetButtonsDown(&pad);
 
@@ -534,8 +535,6 @@ namespace edit1s {
                 printf("\n");
                 std::cout << (currentEdit == 1 ? "> " : "  ") << "apply" << std::endl;
             }
-
-            consoleUpdate(NULL);
         }
     }
 
@@ -568,6 +567,7 @@ namespace edit4 {
         int currentLevel = 0;
         
         while (appletMainLoop()) {
+            consoleUpdate(NULL);
             padUpdate(&pad);
             u64 kDown = padGetButtonsDown(&pad);
             
@@ -601,7 +601,9 @@ namespace edit4 {
                         if (outstr[0] == '\0') {
                             currentLevel = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) <= 99) {
+                            if (std::stoi(outstr) > 99) {
+                                currentLevel = 99;
+                            } else {
                                 currentLevel = std::stoi(outstr);
                             }
                         }
@@ -629,8 +631,6 @@ namespace edit4 {
                 std::cout << (currentEdit == 2 ? "> " : "  ") << "apply and set max" << std::endl;
                 std::cout << (currentEdit == 3 ? "> " : "  ") << "apply" << std::endl;
             }
-            
-            consoleUpdate(NULL);
         }
     }
     
@@ -657,6 +657,7 @@ namespace edit4 {
         int currentLevel = 0;
 
         while (appletMainLoop()) {
+            consoleUpdate(NULL);
             padUpdate(&pad);
             u64 kDown = padGetButtonsDown(&pad);
 
@@ -690,7 +691,9 @@ namespace edit4 {
                         if (outstr[0] == '\0') {
                             currentLevel = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) <= 99) {
+                            if (std::stoi(outstr) > 99) {
+                                currentLevel = 99;
+                            } else {
                                 currentLevel = std::stoi(outstr);
                             }
                         }
@@ -718,8 +721,6 @@ namespace edit4 {
                 std::cout << (currentEdit == 2 ? "> " : "  ") << "apply and set max" << std::endl;
                 std::cout << (currentEdit == 3 ? "> " : "  ") << "apply" << std::endl;
             }
-
-            consoleUpdate(NULL);
         }
     }
 
@@ -746,6 +747,7 @@ namespace edit4 {
         int currentAmount = 0;
 
         while (appletMainLoop()) {
+            consoleUpdate(NULL);
             padUpdate(&pad);
             u64 kDown = padGetButtonsDown(&pad);
 
@@ -779,7 +781,9 @@ namespace edit4 {
                         if (outstr[0] == '\0') {
                             currentAmount = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) <= 999) {
+                            if (std::stoi(outstr) > 999) {
+                                currentAmount = 999;
+                            } else {
                                 currentAmount = std::stoi(outstr);
                             }
                         }
@@ -801,8 +805,6 @@ namespace edit4 {
                 printf("\n");
                 std::cout << (currentEdit == 2 ? "> " : "  ") << "apply" << std::endl;
             }
-
-            consoleUpdate(NULL);
         }
     }
 
@@ -829,6 +831,7 @@ namespace edit4 {
         int currentAmount = 0;
         
         while (appletMainLoop()) {
+            consoleUpdate(NULL);
             padUpdate(&pad);
             u64 kDown = padGetButtonsDown(&pad);
             
@@ -862,7 +865,9 @@ namespace edit4 {
                         if (outstr[0] == '\0') {
                             currentAmount = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) <= 999) {
+                            if (std::stoi(outstr) > 999) {
+                                currentAmount = 999;
+                            } else {
                                 currentAmount = std::stoi(outstr);
                             }
                         }
@@ -884,8 +889,6 @@ namespace edit4 {
                 printf("\n");
                 std::cout << (currentEdit == 2 ? "> " : "  ") << "apply" << std::endl;
             }
-            
-            consoleUpdate(NULL);
         }
     }
 
@@ -913,6 +916,7 @@ namespace edit4 {
         int currentAmount = 0;
 
         while (appletMainLoop()) {
+            consoleUpdate(NULL);
             padUpdate(&pad);
             u64 kDown = padGetButtonsDown(&pad);
 
@@ -946,7 +950,9 @@ namespace edit4 {
                         if (outstr[0] == '\0') {
                             currentAmount = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) <= 999) {
+                            if (std::stoi(outstr) > 999) {
+                                currentAmount = 999;
+                            } else {
                                 currentAmount = std::stoi(outstr);
                             }
                         }
@@ -968,8 +974,6 @@ namespace edit4 {
                 printf("\n");
                 std::cout << (currentEdit == 2 ? "> " : "  ") << "apply" << std::endl;
             }
-
-            consoleUpdate(NULL);
         }
     }
 
@@ -998,6 +1002,7 @@ namespace edit4 {
         int currentGoldAmount = 0;
 
         while (appletMainLoop()) {
+            consoleUpdate(NULL);
             padUpdate(&pad);
             u64 kDown = padGetButtonsDown(&pad);
 
@@ -1031,7 +1036,9 @@ namespace edit4 {
                         if (outstr[0] == '\0') {
                             currentWhiteAmount = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) <= 999) {
+                            if (std::stoi(outstr) > 999) {
+                                currentWhiteAmount = 999;
+                            } else {
                                 currentWhiteAmount = std::stoi(outstr);
                             }
                         }
@@ -1040,7 +1047,9 @@ namespace edit4 {
                         if (outstr[0] == '\0') {
                             currentRedAmount = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) <= 999) {
+                            if (std::stoi(outstr) > 999) {
+                                currentRedAmount = 999;
+                            } else {
                                 currentRedAmount = std::stoi(outstr);
                             }
                         }
@@ -1049,7 +1058,9 @@ namespace edit4 {
                         if (outstr[0] == '\0') {
                             currentGoldAmount = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) <= 999) {
+                            if (std::stoi(outstr) > 999) {
+                                currentGoldAmount = 999;
+                            } else {
                                 currentGoldAmount = std::stoi(outstr);
                             }
                         }
@@ -1079,13 +1090,133 @@ namespace edit4 {
                 printf("\n");
                 std::cout << (currentEdit == 4 ? "> " : "  ") << "apply" << std::endl;
             }
-
-            consoleUpdate(NULL);
         }
     }
     
     void edit_misc(uint32_t* x, uint32_t* y, uint32_t* z, uint32_t* location, uint32_t* money, char* nate, char* katie, char* summer, char* cole, char* bruno, char* jack, uint8_t* gatcharemaining, uint8_t* gatchamax, PadState pad) {
-        return; //TODO
+        //TODO automatic location editing. (click on a location and automatically set the x, y, z based on it)
+        //rename characters
+        //crank-a-kai
+        //money
+
+        sortedMap.clear();
+        for (auto const& pair : data4::locations) {
+            sortedMap.push_back(pair);
+        }
+        std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
+            return left.second < right.second;
+        });
+        filteredMap = sortedMap;
+        int currentSelection = 0;
+        bool selectPage = true;
+        char outstr[32];
+        int end;
+
+        int currentLocation = 0;
+        int currentEdit = 0;
+
+        while (appletMainLoop()) {
+            consoleUpdate(NULL);
+            padUpdate(&pad);
+            u64 kDown = padGetButtonsDown(&pad);
+
+            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B){
+                break;
+            }
+            inputHandling(currentSelection, kDown, 4);
+            if (kDown & HidNpadButton_A) {
+                if (currentSelection == 0) { //location
+                    mapInput(pad, currentLocation, "location (TODO)");
+                    padUpdate(&pad);
+                    //TODO set location and x, y, z
+                } else if (currentSelection == 1) { //rename characters
+                    while (appletMainLoop()) {
+                        consoleUpdate(NULL);
+                        padUpdate(&pad);
+                        u64 kDown = padGetButtonsDown(&pad);
+
+                        if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B){
+                            break;
+                        }
+                        inputHandling(currentEdit, kDown, 7); //one for "set default"
+                        if (kDown & HidNpadButton_A) {
+                            if (currentEdit == 0) {
+                                strcpy(nate, "Nate");
+                                strcpy(katie, "Katie");
+                                strcpy(summer, "Summer");
+                                strcpy(cole, "Cole");
+                                strcpy(bruno, "Bruno");
+                                strcpy(jack, "Jack");
+                            } else if (currentEdit == 1) {
+                                keyboardInput(outstr, SwkbdType_Normal, nate, nate);
+                                if (outstr[0] != '\0') {
+                                    strcpy(nate, outstr);
+                                }
+                            } else if (currentEdit == 2) {
+                                keyboardInput(outstr, SwkbdType_Normal, katie, katie);
+                                if (outstr[0] != '\0') {
+                                    strcpy(katie, outstr);
+                                }
+                            } else if (currentEdit == 3) {
+                                keyboardInput(outstr, SwkbdType_Normal, summer, summer);
+                                if (outstr[0] != '\0') {
+                                    strcpy(summer, outstr);
+                                }
+                            } else if (currentEdit == 4) {
+                                keyboardInput(outstr, SwkbdType_Normal, cole, cole);
+                                if (outstr[0] != '\0') {
+                                    strcpy(cole, outstr);
+                                }
+                            } else if (currentEdit == 5) {
+                                keyboardInput(outstr, SwkbdType_Normal, bruno, bruno);
+                                if (outstr[0] != '\0') {
+                                    strcpy(bruno, outstr);
+                                }
+                            } else if (currentEdit == 6) {
+                                keyboardInput(outstr, SwkbdType_Normal, jack, jack);
+                                if (outstr[0] != '\0') {
+                                    strcpy(jack, outstr);
+                                }
+                            }
+                        }
+                        printf("\x1b[1;1H\x1b[2JSelect a character:\n");
+                        std::cout << (currentEdit == 0 ? "> " : "  ") << "set default" << std::endl;
+                        printf("\n");
+                        std::cout << (currentEdit == 1 ? "> " : "  ") << "Nate: " << nate << std::endl;
+                        std::cout << (currentEdit == 2 ? "> " : "  ") << "Katie: " << katie << std::endl;
+                        std::cout << (currentEdit == 3 ? "> " : "  ") << "Summer: " << summer << std::endl;
+                        std::cout << (currentEdit == 4 ? "> " : "  ") << "Cole: " << cole << std::endl;
+                        std::cout << (currentEdit == 5 ? "> " : "  ") << "Bruno: " << bruno << std::endl;
+                        std::cout << (currentEdit == 6 ? "> " : "  ") << "Jack: " << jack << std::endl;
+                    }
+                } else if (currentSelection == 2) { //crank-a-kai
+                    keyboardInput(outstr, SwkbdType_NumPad, "0-99", "99");
+                    if (outstr[0] != '\0') {
+                        if (std::stoi(outstr) < 99) {
+                            *gatchamax = 99;
+                            *gatcharemaining = 99;
+                        } else {
+                            *gatchamax = std::stoi(outstr);
+                            *gatcharemaining = std::stoi(outstr);
+                        }
+                    }
+                } else if (currentSelection == 3) { //money
+                    keyboardInput(outstr, SwkbdType_NumPad, "0-9999999", (*money == 0 ? "9999999" : std::to_string(*money).c_str()));
+                    if (outstr[0] != '\0') {
+                        if (std::stoi(outstr) < 9999999) {
+                            *money = 9999999;
+                        } else {
+                            *money = std::stoi(outstr);
+                        }
+                    }
+                }
+            }
+            printf("\x1b[1;1H\x1b[2JSelect an option:\n");
+            std::cout << (currentSelection == 0 ? "> " : "  ") << "location TODO" << std::endl;
+            std::cout << (currentSelection == 1 ? "> " : "  ") << "rename characters" << std::endl;
+            std::cout << (currentSelection == 2 ? "> " : "  ") << "crank-a-kai" << std::endl;
+            std::cout << (currentSelection == 3 ? "> " : "  ") << "money" << std::endl;
+        }
     }
 };
 

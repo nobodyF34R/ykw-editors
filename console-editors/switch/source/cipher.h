@@ -1,11 +1,6 @@
 #ifndef CIPHER_H
 #define CIPHER_H
 
-#include <iostream>
-#include <vector>
-#include <cstdint>
-#include <cstring>
-
 class CRC32 {
 public:
     static uint32_t calcCRC32(const std::vector<uint8_t>& data);
