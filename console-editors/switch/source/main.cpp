@@ -1,11 +1,13 @@
 #include <algorithm>
 #include <cctype>
+#include <codecvt>
 #include <cstdint>
 #include <cstring>
 #include <dirent.h>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
+#include <locale>
 #include <map>
 #include <sstream>
 #include <stdexcept>
@@ -17,7 +19,6 @@
 #include "data.h"
 #include "edit.h"
 #include "struct.h"
-
 
 Result get_save(u64* application_id, AccountUid* uid) {
     Result rc = 0;
@@ -210,7 +211,161 @@ int main(int argc, char** argv) {
                             }
 
                             if (kDown & HidNpadButton_A || application_id == 0x010086c00af7c000) {
-                                if (application_id == 0x010086c00af7c000) {
+                                if (application_id == 0x0100c0000ceea000){
+                                    char filePath[15] = "save:/";
+                                    strcat(filePath, saveFiles[selectedSave].c_str());
+                                    FILE* file = fopen(filePath, "r+b");
+
+                                    if (file == NULL) {
+                                        std::cout << "Failed to open file " << filePath << "." << std::endl;
+                                    } else {
+                                        char buffer[256];
+                                        size_t bytesRead;
+
+                                        std::vector<uint8_t> encryptedData;
+
+                                        while ((bytesRead = fread(buffer, 1, sizeof(buffer), file)) > 0) {
+                                            encryptedData.insert(encryptedData.end(), buffer, buffer + bytesRead);
+                                        }
+                                        
+                                        std::vector<uint8_t> decryptedData = yw_proc(encryptedData, false);
+
+                                        //make backup
+                                        backup("save:/", saveFiles[selectedSave], backupFiles, encryptedData);
+
+                                        bool save = true;
+                                        uint32_t size;
+
+                                        if (saveFiles[selectedSave] == "head.yw") {
+
+                                            size = 10176;
+
+                                            //define variables here
+
+                                        } else {
+
+                                            size = 47564;
+
+                                            uint32_t* x = (uint32_t*)(&decryptedData[20]);
+                                            uint32_t* y = (uint32_t*)(& decryptedData[24]);
+                                            uint32_t* z = (uint32_t*)(& decryptedData[28]);
+
+                                            uint64_t* location = (uint64_t*)(& decryptedData[112]);
+
+                                            uint16_t* time = (uint16_t*)(& decryptedData[1752]);
+                                            uint8_t* sun = (uint8_t*)(& decryptedData[1754]);
+
+                                            uint32_t* money = (uint32_t*)(& decryptedData[37620]); 
+
+
+                                            int offset;
+
+                                            std::vector<struct1s::Yokai> yokailist;
+                                            offset = 7696;
+                                            for (int i = 0; i < 240; i++) {
+
+                                                if (decryptedData[offset+2] == 0) {
+                                                    break;
+                                                }
+
+                                                yokailist.push_back(struct1s::Yokai(decryptedData, offset));
+                                                offset += 124;
+                                            }
+
+                                            std::vector<struct1s::Item> itemlist;
+                                            offset = 1784;
+                                            for (int i = 0; i < 256; i++) {
+
+                                                if (decryptedData[offset+2] == 0) {
+                                                    break;
+                                                }
+                                                
+                                                itemlist.push_back(struct1s::Item(decryptedData, offset));
+                                                offset += 12;
+                                            }
+
+                                            std::vector<struct1s::Equipment> equipmentlist;
+                                            offset = 4868;
+                                            for (int i = 0; i < 100; i++) {
+
+                                                if (decryptedData[offset+2] == 0) {
+                                                    break;
+                                                }
+
+                                                equipmentlist.push_back(struct1s::Equipment(decryptedData, offset));
+                                                offset += 12;
+                                            }
+
+                                            std::vector<struct1s::Important> importantlist;
+                                            offset = 6480;
+                                            for (int i = 0; i < 150; i++) {
+
+                                                if (decryptedData[offset+2] == 0) {
+                                                    break;
+                                                }
+
+                                                importantlist.push_back(struct1s::Important(decryptedData, offset));
+                                                offset += 8;
+                                            }
+                                            
+                                            int selectedAction = 0;
+
+                                            while (appletMainLoop()) {
+                                                consoleUpdate(NULL);
+                                                padUpdate(&pad);
+                                                u64 kDown = padGetButtonsDown(&pad);
+                                                inputHandling(selectedAction, kDown, 5);
+
+                                                if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_B){
+                                                    break;
+                                                }
+                                                if (kDown & HidNpadButton_Minus){
+                                                    save = false;
+                                                    break;
+                                                }
+
+                                                printf("\x1b[1;1H\x1b[2J- to exit without saving \n");
+                                                std::cout << (0 == selectedAction ? "> " : "  ") << "yokai" << std::endl;
+                                                std::cout << (1 == selectedAction ? "> " : "  ") << "items" << std::endl;
+                                                std::cout << (2 == selectedAction ? "> " : "  ") << "equipment" << std::endl;
+                                                std::cout << (3 == selectedAction ? "> " : "  ") << "important" << std::endl;
+                                                std::cout << (4 == selectedAction ? "> " : "  ") << "misc" << std::endl;
+
+                                                if (kDown & HidNpadButton_A) {
+                                                    switch (selectedAction) {
+                                                        case 0: //yokai
+                                                            edit1s::edit_yokai(yokailist, pad);
+                                                            break;
+                                                        case 1: //items
+                                                            edit1s::edit_item(itemlist, pad);
+                                                            break;
+                                                        case 2: //equipment
+                                                            edit1s::edit_equipment(equipmentlist, pad);
+                                                            break;
+                                                        case 3: //important
+                                                            edit1s::edit_important(importantlist, pad);
+                                                            break;
+                                                        case 4: //misc
+                                                            edit1s::edit_misc(x, y, z, location, time, sun, money, yokailist, pad);
+                                                            break;
+                                                    };
+
+                                                    padUpdate(&pad);
+                                                }
+                                            }
+                                        }
+                                        
+                                        if (save) {
+                                            fseek(file, 0, SEEK_SET);
+                                            fwrite(yw_proc(decryptedData, true).data(), 1, size, file);
+                                            fclose(file);
+                                            fsdevCommitDevice("save");
+                                        }
+                                        else {
+                                            fclose(file);
+                                        }
+                                    }
+                                } else if (application_id == 0x010086c00af7c000) {
                                     char filePath[27] = "save:/USERDATA00/";
                                     strcat(filePath, saveFiles[selectedSave].c_str());
                                     FILE* file = fopen(filePath, "r+b");
@@ -375,7 +530,7 @@ int main(int argc, char** argv) {
                                                         edit4::edit_special(speciallist, pad);
                                                         break;
                                                     case 6: //misc
-                                                        edit4::edit_misc(x, y, z, location, money, nate, katie, summer, cole, bruno, jack, gatcharemaining, gatchamax, pad);
+                                                        edit4::edit_misc(x, y, z, location, money, nate, katie, summer, cole, bruno, jack, yokailist, gatcharemaining, gatchamax, pad);
                                                         break;
                                                 };
 
@@ -394,169 +549,14 @@ int main(int argc, char** argv) {
                                         }
                                         break;
                                     }
-                                } else {
-                                    char filePath[15] = "save:/";
-                                    strcat(filePath, saveFiles[selectedSave].c_str());
-                                    FILE* file = fopen(filePath, "r+b");
-
-                                    if (file == NULL) {
-                                        std::cout << "Failed to open file " << filePath << "." << std::endl;
-                                    } else {
-                                        char buffer[256];
-                                        size_t bytesRead;
-
-                                        std::vector<uint8_t> encryptedData;
-
-                                        while ((bytesRead = fread(buffer, 1, sizeof(buffer), file)) > 0) {
-                                            encryptedData.insert(encryptedData.end(), buffer, buffer + bytesRead);
-                                        }
-                                        
-                                        std::vector<uint8_t> decryptedData = yw_proc(encryptedData, false);
-
-                                        //make backup
-                                        backup("save:/", saveFiles[selectedSave], backupFiles, encryptedData);
-
-                                        bool save = true;
-                                        uint32_t size;
-
-                                        if (saveFiles[selectedSave] == "head.yw") {
-
-                                            size = 10176;
-
-                                            //define variables here
-
-                                        } else {
-
-                                            size = 47564;
-
-                                            uint32_t* x = (uint32_t*)(&decryptedData[20]);
-                                            uint32_t* y = (uint32_t*)(& decryptedData[24]);
-                                            uint32_t* z = (uint32_t*)(& decryptedData[28]);
-
-                                            uint64_t* location = (uint64_t*)(& decryptedData[112]);
-
-                                            uint16_t* time = (uint16_t*)(& decryptedData[1752]);
-                                            uint8_t* sun = (uint8_t*)(& decryptedData[1754]);
-
-                                            uint32_t* money = (uint32_t*)(& decryptedData[37620]); 
-
-
-                                            int offset;
-
-                                            std::vector<struct1s::Yokai> yokailist;
-                                            offset = 7696;
-                                            for (int i = 0; i < 240; i++) {
-
-                                                if (decryptedData[offset+2] == 0) {
-                                                    break;
-                                                }
-
-                                                yokailist.push_back(struct1s::Yokai(decryptedData, offset));
-                                                offset += 124;
-                                            }
-
-                                            std::vector<struct1s::Item> itemlist;
-                                            offset = 1784;
-                                            for (int i = 0; i < 256; i++) {
-
-                                                if (decryptedData[offset+2] == 0) {
-                                                    break;
-                                                }
-                                                
-                                                itemlist.push_back(struct1s::Item(decryptedData, offset));
-                                                offset += 12;
-                                            }
-
-                                            std::vector<struct1s::Equipment> equipmentlist;
-                                            offset = 4868;
-                                            for (int i = 0; i < 100; i++) {
-
-                                                if (decryptedData[offset+2] == 0) {
-                                                    break;
-                                                }
-
-                                                equipmentlist.push_back(struct1s::Equipment(decryptedData, offset));
-                                                offset += 12;
-                                            }
-
-                                            std::vector<struct1s::Important> importantlist;
-                                            offset = 6480;
-                                            for (int i = 0; i < 150; i++) {
-
-                                                if (decryptedData[offset+2] == 0) {
-                                                    break;
-                                                }
-
-                                                importantlist.push_back(struct1s::Important(decryptedData, offset));
-                                                offset += 8;
-                                            }
-                                            
-                                            int selectedAction = 0;
-
-                                            while (appletMainLoop()) {
-                                                consoleUpdate(NULL);
-                                                padUpdate(&pad);
-                                                u64 kDown = padGetButtonsDown(&pad);
-                                                inputHandling(selectedAction, kDown, 5);
-
-                                                if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_B){
-                                                    break;
-                                                }
-                                                if (kDown & HidNpadButton_Minus){
-                                                    save = false;
-                                                    break;
-                                                }
-
-                                                printf("\x1b[1;1H\x1b[2J- to exit without saving \n");
-                                                std::cout << (0 == selectedAction ? "> " : "  ") << "yokai" << std::endl;
-                                                std::cout << (1 == selectedAction ? "> " : "  ") << "items" << std::endl;
-                                                std::cout << (2 == selectedAction ? "> " : "  ") << "equipment" << std::endl;
-                                                std::cout << (3 == selectedAction ? "> " : "  ") << "important" << std::endl;
-                                                std::cout << (4 == selectedAction ? "> " : "  ") << "misc" << std::endl;
-
-                                                if (kDown & HidNpadButton_A) {
-                                                    switch (selectedAction) {
-                                                        case 0: //yokai
-                                                            edit1s::edit_yokai(yokailist, pad);
-                                                            break;
-                                                        case 1: //items
-                                                            edit1s::edit_item(itemlist, pad);
-                                                            break;
-                                                        case 2: //equipment
-                                                            edit1s::edit_equipment(equipmentlist, pad);
-                                                            break;
-                                                        case 3: //important
-                                                            edit1s::edit_important(importantlist, pad);
-                                                            break;
-                                                        case 4: //misc
-                                                            edit1s::edit_misc(x, y, z, location, time, sun, money, pad);
-                                                            break;
-                                                    };
-
-                                                    padUpdate(&pad);
-                                                }
-                                            }
-                                        }
-                                        
-                                        if (save) {
-                                            fseek(file, 0, SEEK_SET);
-                                            fwrite(yw_proc(decryptedData, true).data(), 1, size, file);
-                                            fclose(file);
-                                            fsdevCommitDevice("save");
-                                        }
-                                        else {
-                                            fclose(file);
-                                        }
-                                    }
                                 }
                             }
+                            closedir(dir);
                         }
-                        closedir(dir);
                     }
                 }
                 fsdevUnmountDevice("save");
             }
-
         }
     }
 

@@ -1881,7 +1881,6 @@ namespace data4 {
     };
 
     std::map<uint32_t, std::string> yokais = { //TODO: Add the rest of the yokai
-        {3453175713, "Acala Exalted"}, 
         {1367131414, "Arachnus"}, 
         {2696372038, "Arachnus 2"}, 
         {9253129, "Asura"}, 

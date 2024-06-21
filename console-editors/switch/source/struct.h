@@ -119,7 +119,7 @@ struct struct4 {
     struct Yokai {
         uint16_t* num1;
         uint16_t* num2;
-        // char* nickname; //wide char
+        char* nickname; //wide char
         uint32_t* type;
         uint32_t* move1;
         uint32_t* move2;
@@ -157,7 +157,7 @@ struct struct4 {
         Yokai(std::vector<uint8_t>& decryptedData, int32_t offset) {
             num1 = (uint16_t*)(&decryptedData[offset]);
             num2 = (uint16_t*)(&decryptedData[offset+2]);
-            // nickname = (char*)(&decryptedData[offset+8]);
+            nickname = (char*)(&decryptedData[offset+28]);
             type = (uint32_t*)(&decryptedData[offset+72]);
             move1 = (uint32_t*)(&decryptedData[offset+84]);
             move2 = (uint32_t*)(&decryptedData[offset+88]);
