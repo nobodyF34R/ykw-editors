@@ -9,7 +9,7 @@ int mapSelection;
 bool activeKeyboard;
 
 // Function to convert full-width characters to half-width characters
-void convert_fullwidth_to_halfwidth(char *str) {
+void convert_width(char *str) {
     unsigned char *p = (unsigned char *)str;
     unsigned char *end = p + strlen((char *)p);
 
@@ -148,12 +148,11 @@ void mapInput(PadState pad, int& currentSelection, std::string type) {
 
     // Make the applet appear, can be used whenever.
     SwkbdAppearArg appearArg;
-    swkbdInlineMakeAppearArg(&appearArg, SwkbdType_Normal);
+    swkbdInlineMakeAppearArg(&appearArg, SwkbdType_All);
     // You can optionally set appearArg text / fields here.
     // appearArg.dicFlag = 1;
     // appearArg.returnButtonFlag = 1;
     
-    // swkbdInlineAppear(&kbdinline, &appearArg);
     activeKeyboard = false;
 
     while (appletMainLoop()) {
@@ -243,6 +242,9 @@ void listInput(PadState pad, int& currentSelection, std::string list[], int list
 }
 
 void keyboardInput(char* outstr, SwkbdType keyboardType, u32 maxSize, const char* GuideText, const char* InitialText) {
+    if (keyboardType == SwkbdType_NumPad) {
+        maxSize++;
+    }
     Result rc=0;
     SwkbdConfig kbd;
     memset(outstr, 0, maxSize);
@@ -251,7 +253,7 @@ void keyboardInput(char* outstr, SwkbdType keyboardType, u32 maxSize, const char
     swkbdConfigSetType(&kbd, keyboardType);
     swkbdConfigSetGuideText(&kbd, GuideText);
     swkbdConfigSetInitialText(&kbd, InitialText);
-    swkbdConfigSetStringLenMax(&kbd, maxSize);
+    swkbdConfigSetStringLenMax(&kbd, maxSize-1);
     swkbdConfigSetInitialCursorPos(&kbd, strlen(InitialText));
     rc = swkbdShow(&kbd, outstr, maxSize);
     swkbdClose(&kbd);
@@ -290,8 +292,24 @@ namespace edit1s {
             padUpdate(&pad);
             u64 kDown = padGetButtonsDown(&pad);
 
-            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B){
+            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus){
                 break;
+            }
+
+            if (kDown & HidNpadButton_B) {
+                if (selectPage) {
+                    //if all false, break
+                    if (!std::any_of(selected, selected + yokailist.size(), [](bool v) { return v; })) {
+                        break;
+                    } else {
+                        //else, set all false
+                        for (int i = 0; i < yokailist.size(); i++) {
+                            selected[i] = false;
+                        }
+                    }
+                } else {
+                    selectPage = !selectPage;
+                }
             }
 
             if (kDown & HidNpadButton_L || kDown & HidNpadButton_R) {
@@ -338,7 +356,7 @@ namespace edit1s {
                                     *yokailist[i].level = currentLevel;
                                 }
                                 if (currentEdit == 3) {
-                                    *yokailist[i].attack = 255;
+                                    *yokailist[i].attack = 255; //ingame max is 10
                                     *yokailist[i].technique = 255;
                                     *yokailist[i].soultimate = 255;
                                     //TODO stats
@@ -385,8 +403,24 @@ namespace edit1s {
             padUpdate(&pad);
             u64 kDown = padGetButtonsDown(&pad);
 
-            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B){
+            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus){
                 break;
+            }
+
+            if (kDown & HidNpadButton_B) {
+                if (selectPage) {
+                    //if all false, break
+                    if (!std::any_of(selected, selected + itemlist.size(), [](bool v) { return v; })) {
+                        break;
+                    } else {
+                        //else, set all false
+                        for (int i = 0; i < itemlist.size(); i++) {
+                            selected[i] = false;
+                        }
+                    }
+                } else {
+                    selectPage = !selectPage;
+                }
             }
 
             if (kDown & HidNpadButton_L || kDown & HidNpadButton_R) {
@@ -464,12 +498,28 @@ namespace edit1s {
             padUpdate(&pad);
             u64 kDown = padGetButtonsDown(&pad);
 
-            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B){
+            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus){
                 break;
             }
 
             if (kDown & HidNpadButton_L || kDown & HidNpadButton_R) {
                 selectPage = !selectPage;
+            }
+
+            if (kDown & HidNpadButton_B) {
+                if (selectPage) {
+                    //if all false, break
+                    if (!std::any_of(selected, selected + equipmentlist.size(), [](bool v) { return v; })) {
+                        break;
+                    } else {
+                        //else, set all false
+                        for (int i = 0; i < equipmentlist.size(); i++) {
+                            selected[i] = false;
+                        }
+                    }
+                } else {
+                    selectPage = !selectPage;
+                }
             }
 
             if (selectPage) {
@@ -542,8 +592,24 @@ namespace edit1s {
             padUpdate(&pad);
             u64 kDown = padGetButtonsDown(&pad);
 
-            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B){
+            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus){
                 break;
+            }
+
+            if (kDown & HidNpadButton_B) {
+                if (selectPage) {
+                    //if all false, break
+                    if (!std::any_of(selected, selected + importantlist.size(), [](bool v) { return v; })) {
+                        break;
+                    } else {
+                        //else, set all false
+                        for (int i = 0; i < importantlist.size(); i++) {
+                            selected[i] = false;
+                        }
+                    }
+                } else {
+                    selectPage = !selectPage;
+                }
             }
 
             if (kDown & HidNpadButton_L || kDown & HidNpadButton_R) {
@@ -580,7 +646,100 @@ namespace edit1s {
     }
 
     void edit_misc(uint32_t* x, uint32_t* y, uint32_t* z, uint64_t* location, uint16_t* time, uint8_t* sun, uint32_t* money, std::vector<struct1s::Yokai> yokailist, PadState pad) {
-        return; //TODO
+        sortedMap.clear();
+        for (auto const& pair : data1s::locations) {
+            sortedMap.push_back(pair);
+        }
+        std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
+            return left.second < right.second;
+        });
+        filteredMap = sortedMap;
+
+        int currentSelection = 0;
+        int currentEdit = 0;
+        char buffer[44];
+        int end;
+
+        int currentLocation = 0;
+
+        while (appletMainLoop()) {
+            consoleUpdate(NULL);
+            padUpdate(&pad);
+            u64 kDown = padGetButtonsDown(&pad);
+
+            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B){
+                break;
+            }
+
+            inputHandling(currentEdit, kDown, 4);
+            if (kDown & HidNpadButton_A) {
+                if (currentEdit == 0) { //nicknames
+                    while (appletMainLoop()) {
+                        consoleUpdate(NULL);
+                        padUpdate(&pad);
+                        u64 kDown = padGetButtonsDown(&pad);
+
+                        if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B){
+                            break;
+                        }
+                        inputHandling(currentSelection, kDown, 2+yokailist.size());
+                        if (kDown & HidNpadButton_A) {
+                            if (currentSelection == 0) {
+                                for (int i = 0; i < yokailist.size(); i++) {
+                                    convert_width(yokailist[i].nickname);
+                                }
+                            } else if (currentSelection == 1) {
+                                for (int i = 0; i < yokailist.size(); i++) {
+                                    strcpy(yokailist[i].nickname, "");
+                                }
+                            } else {
+                                keyboardInput(buffer, SwkbdType_All, 46, "enter a nickname", yokailist[currentSelection-8].nickname);
+                                if (buffer[0] != '\0') {
+                                    strcpy(yokailist[currentSelection-8].nickname, buffer);
+                                }
+                            }
+                        }
+                        printf("\x1b[1;1H\x1b[2JSelect an option: (Japanese is scrambled.)\n");
+                        std::cout << (currentSelection == 0 ? "> " : "  ") << "fix nicknames (Japanese-English to English)" << std::endl;
+                        std::cout << (currentSelection == 1 ? "> " : "  ") << "clear nicknames" << std::endl;
+                        printf("\n");
+                        int end = currentSelection/44*44+44;
+                        if (end > yokailist.size()) {
+                            end = yokailist.size();
+                        }
+                        for (int i = currentSelection/44*44; i < end; i++) {
+                            auto it = data1s::yokais.find(*yokailist[i].type);
+                            if (it != data1s::yokais.end()) {
+                                std::cout << "\n" << (currentSelection == i+8 ? "> " : "  ") << it->second << ":      " << yokailist[i].nickname;
+                            } else {
+                                std::cout << "\n" << (currentSelection == i+8 ? "> " : "  ") << *yokailist[i].type << " TODO:      " << yokailist[i].nickname;
+                            }
+                        }
+                    }
+                } else if (currentEdit == 1) { //location
+                    mapInput(pad, currentLocation, "location (TODO)");
+                    padUpdate(&pad);
+                    //TODO set location and x, y, z
+                } else if (currentEdit == 2) { //crank-a-kai
+                    //TODO
+                } else if (currentEdit == 3) { //money
+                    keyboardInput(buffer, SwkbdType_NumPad, 8, "0-999999", (*money == 0 ? "999999" : std::to_string(*money).c_str()));
+                    if (buffer[0] != '\0') {
+                        if (std::stoi(buffer) < 999999) {
+                            *money = 999999;
+                        } else {
+                            *money = std::stoi(buffer);
+                        }
+                    }
+                }
+            }
+            printf("\x1b[1;1H\x1b[2JSelect an option:\n");
+            std::cout << (currentEdit == 0 ? "> " : "  ") << "nicknames" << std::endl;
+            std::cout << (currentEdit == 1 ? "> " : "  ") << "location TODO" << std::endl;
+            std::cout << (currentEdit == 2 ? "> " : "  ") << "crank-a-kai TODO" << std::endl;
+            std::cout << (currentEdit == 3 ? "> " : "  ") << "money" << std::endl;
+            //TODO time
+        }
     }
 };
 
@@ -612,14 +771,30 @@ namespace edit4 {
             padUpdate(&pad);
             u64 kDown = padGetButtonsDown(&pad);
             
-            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B){
+            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus){
                 break;
+            }
+
+            if (kDown & HidNpadButton_B) {
+                if (selectPage) {
+                    //if all false, break
+                    if (!std::any_of(selected, selected + characterlist.size(), [](bool v) { return v; })) {
+                        break;
+                    } else {
+                        //else, set all false
+                        for (int i = 0; i < characterlist.size(); i++) {
+                            selected[i] = false;
+                        }
+                    }
+                } else {
+                    selectPage = !selectPage;
+                }
             }
             
             if (kDown & HidNpadButton_L || kDown & HidNpadButton_R) {
                 selectPage = !selectPage;
             }
-            
+
             if (selectPage) {
                 end = selectInput(selected, currentSelection, kDown, characterlist.size());
                 for (int i = currentSelection/44*44; i < end; i++) {
@@ -702,8 +877,24 @@ namespace edit4 {
             padUpdate(&pad);
             u64 kDown = padGetButtonsDown(&pad);
 
-            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B){
+            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus){
                 break;
+            }
+
+            if (kDown & HidNpadButton_B) {
+                if (selectPage) {
+                    //if all false, break
+                    if (!std::any_of(selected, selected + yokailist.size(), [](bool v) { return v; })) {
+                        break;
+                    } else {
+                        //else, set all false
+                        for (int i = 0; i < yokailist.size(); i++) {
+                            selected[i] = false;
+                        }
+                    }
+                } else {
+                    selectPage = !selectPage;
+                }
             }
 
             if (kDown & HidNpadButton_L || kDown & HidNpadButton_R) {
@@ -792,8 +983,24 @@ namespace edit4 {
             padUpdate(&pad);
             u64 kDown = padGetButtonsDown(&pad);
 
-            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B){
+            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus){
                 break;
+            }
+
+            if (kDown & HidNpadButton_B) {
+                if (selectPage) {
+                    //if all false, break
+                    if (!std::any_of(selected, selected + itemlist.size(), [](bool v) { return v; })) {
+                        break;
+                    } else {
+                        //else, set all false
+                        for (int i = 0; i < itemlist.size(); i++) {
+                            selected[i] = false;
+                        }
+                    }
+                } else {
+                    selectPage = !selectPage;
+                }
             }
 
             if (kDown & HidNpadButton_L || kDown & HidNpadButton_R) {
@@ -876,8 +1083,24 @@ namespace edit4 {
             padUpdate(&pad);
             u64 kDown = padGetButtonsDown(&pad);
             
-            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B){
+            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus){
                 break;
+            }
+
+            if (kDown & HidNpadButton_B) {
+                if (selectPage) {
+                    //if all false, break
+                    if (!std::any_of(selected, selected + equipmentlist.size(), [](bool v) { return v; })) {
+                        break;
+                    } else {
+                        //else, set all false
+                        for (int i = 0; i < equipmentlist.size(); i++) {
+                            selected[i] = false;
+                        }
+                    }
+                } else {
+                    selectPage = !selectPage;
+                }
             }
             
             if (kDown & HidNpadButton_L || kDown & HidNpadButton_R) {
@@ -960,12 +1183,28 @@ namespace edit4 {
             padUpdate(&pad);
             u64 kDown = padGetButtonsDown(&pad);
 
-            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B){
+            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus){
                 break;
             }
 
             if (kDown & HidNpadButton_L || kDown & HidNpadButton_R) {
                 selectPage = !selectPage;
+            }
+
+            if (kDown & HidNpadButton_B) {
+                if (selectPage) {
+                    //if all false, break
+                    if (!std::any_of(selected, selected + speciallist.size(), [](bool v) { return v; })) {
+                        break;
+                    } else {
+                        //else, set all false
+                        for (int i = 0; i < speciallist.size(); i++) {
+                            selected[i] = false;
+                        }
+                    }
+                } else {
+                    selectPage = !selectPage;
+                }
             }
 
             if (selectPage) {
@@ -1046,8 +1285,24 @@ namespace edit4 {
             padUpdate(&pad);
             u64 kDown = padGetButtonsDown(&pad);
 
-            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B){
+            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus){
                 break;
+            }
+
+            if (kDown & HidNpadButton_B) {
+                if (selectPage) {
+                    //if all false, break
+                    if (!std::any_of(selected, selected + soullist.size(), [](bool v) { return v; })) {
+                        break;
+                    } else {
+                        //else, set all false
+                        for (int i = 0; i < soullist.size(); i++) {
+                            selected[i] = false;
+                        }
+                    }
+                } else {
+                    selectPage = !selectPage;
+                }
             }
 
             if (kDown & HidNpadButton_L || kDown & HidNpadButton_R) {
@@ -1143,6 +1398,7 @@ namespace edit4 {
         });
         filteredMap = sortedMap;
 
+        char* names[] = {nate, katie, summer, cole, bruno, jack};
         int currentSelection = 0;
         int currentEdit = 0;
         char buffer[44];
@@ -1158,6 +1414,7 @@ namespace edit4 {
             if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B){
                 break;
             }
+
             inputHandling(currentEdit, kDown, 4);
             if (kDown & HidNpadButton_A) {
                 if (currentEdit == 0) { //nicknames
@@ -1172,66 +1429,33 @@ namespace edit4 {
                         inputHandling(currentSelection, kDown, 8+yokailist.size());
                         if (kDown & HidNpadButton_A) {
                             if (currentSelection == 0) {
-                                convert_fullwidth_to_halfwidth(nate);
-                                convert_fullwidth_to_halfwidth(katie);
-                                convert_fullwidth_to_halfwidth(summer);
-                                convert_fullwidth_to_halfwidth(cole);
-                                convert_fullwidth_to_halfwidth(bruno);
-                                convert_fullwidth_to_halfwidth(jack);
-
+                                for (int i = 0; i < 6; i++) {
+                                    convert_width(names[i]);
+                                }
                                 for (int i = 0; i < yokailist.size(); i++) {
-                                    convert_fullwidth_to_halfwidth(yokailist[i].nickname);
+                                    convert_width(yokailist[i].nickname);
                                 }
                             } else if (currentSelection == 1) {
-                                strcpy(nate, "Nate");
-                                strcpy(katie, "Katie");
-                                strcpy(summer, "Summer");
-                                strcpy(cole, "Cole");
-                                strcpy(bruno, "Bruno");
-                                strcpy(jack, "Jack");
-
+                                for (int i = 0; i < 6; i++) {
+                                    strcpy(names[i], "");
+                                }
                                 for (int i = 0; i < yokailist.size(); i++) {
                                     strcpy(yokailist[i].nickname, "");
                                 }
-                            } else if (currentSelection == 2) {
-                                keyboardInput(buffer, SwkbdType_Normal, 36, "enter a nickname", nate);
+                            } else if (currentSelection > 1 && currentSelection < 8) {
+                                keyboardInput(buffer, SwkbdType_All, 36, "enter a nickname", names[currentSelection-2]);
                                 if (buffer[0] != '\0') {
-                                    strcpy(nate, buffer);
-                                }
-                            } else if (currentSelection == 3) {
-                                keyboardInput(buffer, SwkbdType_Normal, 36, "enter a nickname", katie);
-                                if (buffer[0] != '\0') {
-                                    strcpy(katie, buffer);
-                                }
-                            } else if (currentSelection == 4) {
-                                keyboardInput(buffer, SwkbdType_Normal, 36, "enter a nickname", summer);
-                                if (buffer[0] != '\0') {
-                                    strcpy(summer, buffer);
-                                }
-                            } else if (currentSelection == 5) {
-                                keyboardInput(buffer, SwkbdType_Normal, 36, "enter a nickname", cole);
-                                if (buffer[0] != '\0') {
-                                    strcpy(cole, buffer);
-                                }
-                            } else if (currentSelection == 6) {
-                                keyboardInput(buffer, SwkbdType_Normal, 36, "enter a nickname", bruno);
-                                if (buffer[0] != '\0') {
-                                    strcpy(bruno, buffer);
-                                }
-                            } else if (currentSelection == 7) {
-                                keyboardInput(buffer, SwkbdType_Normal, 36, "enter a nickname", jack);
-                                if (buffer[0] != '\0') {
-                                    strcpy(jack, buffer);
+                                    strcpy(names[currentSelection-2], buffer);
                                 }
                             } else {
-                                keyboardInput(buffer, SwkbdType_Normal, 46, "enter a nickname", yokailist[currentSelection-8].nickname);
+                                keyboardInput(buffer, SwkbdType_All, 46, "enter a nickname", yokailist[currentSelection-8].nickname);
                                 if (buffer[0] != '\0') {
                                     strcpy(yokailist[currentSelection-8].nickname, buffer);
                                 }
                             }
                         }
                         printf("\x1b[1;1H\x1b[2JSelect an option: (Japanese is scrambled.)\n");
-                        std::cout << (currentSelection == 0 ? "> " : "  ") << "fix nicknames (Japanese characters to English)" << std::endl;
+                        std::cout << (currentSelection == 0 ? "> " : "  ") << "fix nicknames (Japanese-English to English)" << std::endl;
                         std::cout << (currentSelection == 1 ? "> " : "  ") << "clear nicknames" << std::endl;
                         printf("\n");
                         std::cout << (currentSelection == 2 ? "> " : "  ") << "Nate: " << nate << std::endl;
@@ -1258,7 +1482,6 @@ namespace edit4 {
                     mapInput(pad, currentLocation, "location (TODO)");
                     padUpdate(&pad);
                     //TODO set location and x, y, z
-                
                 } else if (currentEdit == 2) { //crank-a-kai
                     keyboardInput(buffer, SwkbdType_NumPad, 2, "0-99", "99");
                     if (buffer[0] != '\0') {
@@ -1271,10 +1494,10 @@ namespace edit4 {
                         }
                     }
                 } else if (currentEdit == 3) { //money
-                    keyboardInput(buffer, SwkbdType_NumPad, 8, "0-99999999", (*money == 0 ? "99999999" : std::to_string(*money).c_str()));
+                    keyboardInput(buffer, SwkbdType_NumPad, 8, "0-9999999", (*money == 0 ? "9999999" : std::to_string(*money).c_str()));
                     if (buffer[0] != '\0') {
-                        if (std::stoi(buffer) < 99999999) {
-                            *money = 99999999;
+                        if (std::stoi(buffer) < 9999999) {
+                            *money = 9999999;
                         } else {
                             *money = std::stoi(buffer);
                         }

@@ -551,9 +551,9 @@ int main(int argc, char** argv) {
                                     }
                                 }
                             }
-                            closedir(dir);
                         }
                     }
+                    closedir(dir);
                 }
                 fsdevUnmountDevice("save");
             }
