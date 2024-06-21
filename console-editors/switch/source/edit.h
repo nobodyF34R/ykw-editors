@@ -8,6 +8,45 @@ std::vector<std::pair<int, std::string>> filteredMap;
 int mapSelection;
 bool activeKeyboard;
 
+// Function to convert full-width characters to half-width characters
+void convert_fullwidth_to_halfwidth(char *str) {
+    unsigned char *p = (unsigned char *)str;
+    unsigned char *end = p + strlen((char *)p);
+
+    while (p < end) {
+        if (p[0] == 0xEF && p[1] == 0xBC && p[2] >= 0x81 && p[2] <= 0xBF) {
+            // Convert full-width character to half-width equivalent
+            p[0] = 0x20 + (p[2] - 0x80); // Calculate the half-width equivalent
+            memmove(p + 1, p + 3, end - (p + 3) + 1); // Shift remaining string left
+            end -= 2; // Adjust the end pointer
+            p++; // Move to the next character
+        } else if (p[0] == 0xEF && p[1] == 0xBD && p[2] >= 0x80 && p[2] <= 0x9E) {
+            // Convert full-width character to half-width equivalent
+            p[0] = 0x7F + (p[2] - 0x79); // Calculate the half-width equivalent
+            memmove(p + 1, p + 3, end - (p + 3) + 1); // Shift remaining string left
+            end -= 2; // Adjust the end pointer
+            p++; // Move to the next character
+        } else {
+            // Check the length of the current character and move accordingly
+            if ((p[0] & 0x80) == 0) {
+                // ASCII character (1 byte)
+                p += 1;
+            } else if ((p[0] & 0xE0) == 0xC0) {
+                // 2-byte character
+                p += 2;
+            } else if ((p[0] & 0xF0) == 0xE0) {
+                // 3-byte character
+                p += 3;
+            } else if ((p[0] & 0xF8) == 0xF0) {
+                // 4-byte character
+                p += 4;
+            } else {
+                // Invalid UTF-8 sequence, break the loop
+                break;
+            }
+        }
+    }
+}
 std::string zfill(int num, int width) { //TODO add this where applicable
     std::ostringstream ss;
     ss << std::setw(width) << std::setfill( '0' ) << num;
@@ -206,7 +245,7 @@ void listInput(PadState pad, int& currentSelection, std::string list[], int list
 void keyboardInput(char* outstr, SwkbdType keyboardType, u32 maxSize, const char* GuideText, const char* InitialText) {
     Result rc=0;
     SwkbdConfig kbd;
-    // memset(outstr, 0, 100);
+    memset(outstr, 0, maxSize);
     swkbdCreate(&kbd, 0);
     swkbdConfigMakePresetDefault(&kbd);
     swkbdConfigSetType(&kbd, keyboardType);
@@ -214,7 +253,7 @@ void keyboardInput(char* outstr, SwkbdType keyboardType, u32 maxSize, const char
     swkbdConfigSetInitialText(&kbd, InitialText);
     swkbdConfigSetStringLenMax(&kbd, maxSize);
     swkbdConfigSetInitialCursorPos(&kbd, strlen(InitialText));
-    rc = swkbdShow(&kbd, outstr, sizeof(outstr));
+    rc = swkbdShow(&kbd, outstr, maxSize);
     swkbdClose(&kbd);
 
     if (R_FAILED(rc)) {
@@ -239,7 +278,7 @@ namespace edit1s {
         int currentSelection = 0;
         int currentEdit = 0;
         bool selectPage = true;
-        char outstr[32];
+        char buffer[32];
         int end;
 
         int currentYokai = 0;
@@ -275,14 +314,14 @@ namespace edit1s {
                         listInput(pad, currentAttitude, data1s::attitudes, sizeof(data1s::attitudes)/sizeof(data1s::attitudes[0]), "attitude");
                         padUpdate(&pad);
                     } else if (currentEdit == 2) { //level
-                        keyboardInput(outstr, SwkbdType_NumPad, 3, "0-255", (currentLevel == 0 ? "99" : std::to_string(currentLevel).c_str()));
-                        if (outstr[0] == '\0') {
+                        keyboardInput(buffer, SwkbdType_NumPad, 3, "0-255", (currentLevel == 0 ? "99" : std::to_string(currentLevel).c_str()));
+                        if (buffer[0] == '\0') {
                             currentLevel = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) > 255) {
+                            if (std::stoi(buffer) > 255) {
                                 currentLevel = 255;
                             } else {
-                                currentLevel = std::stoi(outstr);
+                                currentLevel = std::stoi(buffer);
                             }
                         }
                     } else { //apply (and set max)
@@ -335,7 +374,7 @@ namespace edit1s {
         int currentSelection = 0;
         int currentEdit = 0;
         bool selectPage = true;
-        char outstr[32];
+        char buffer[32];
         int end;
 
         int currentItem = 0;
@@ -367,14 +406,14 @@ namespace edit1s {
                         mapInput(pad, currentItem, "item");
                         padUpdate(&pad);
                     } else if (currentEdit == 1) { //amount
-                        keyboardInput(outstr, SwkbdType_NumPad, 2, "0-99", (currentAmount == 0 ? "99" : std::to_string(currentAmount).c_str()));
-                        if (outstr[0] == '\0') {
+                        keyboardInput(buffer, SwkbdType_NumPad, 2, "0-99", (currentAmount == 0 ? "99" : std::to_string(currentAmount).c_str()));
+                        if (buffer[0] == '\0') {
                             currentAmount = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) > 99) {
+                            if (std::stoi(buffer) > 99) {
                                 currentAmount = 99;
                             } else {
-                                currentAmount = std::stoi(outstr);
+                                currentAmount = std::stoi(buffer);
                             }
                         }
                     } else if (currentEdit == 2){ //apply
@@ -414,7 +453,7 @@ namespace edit1s {
         int currentSelection = 0;
         int currentEdit = 0;
         bool selectPage = true;
-        char outstr[32];
+        char buffer[32];
         int end;
 
         int currentEquipment = 0;
@@ -446,14 +485,14 @@ namespace edit1s {
                         mapInput(pad, currentEquipment, "equipment");
                         padUpdate(&pad);
                     } else if (currentEdit == 1) { //amount
-                        keyboardInput(outstr, SwkbdType_NumPad, 3, "0-255", (currentAmount == 0 ? "99" : std::to_string(currentAmount).c_str()));
-                        if (outstr[0] == '\0') {
+                        keyboardInput(buffer, SwkbdType_NumPad, 3, "0-255", (currentAmount == 0 ? "99" : std::to_string(currentAmount).c_str()));
+                        if (buffer[0] == '\0') {
                             currentAmount = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) > 255) {
+                            if (std::stoi(buffer) > 255) {
                                 currentAmount = 255;
                             } else {
-                                currentAmount = std::stoi(outstr);
+                                currentAmount = std::stoi(buffer);
                             }
                         }
                     } else if (currentEdit == 2){ //apply
@@ -493,7 +532,7 @@ namespace edit1s {
         int currentSelection = 0;
         int currentEdit = 0;
         bool selectPage = true;
-        char outstr[32];
+        char buffer[32];
         int end;
 
         int currentImportant = 0;
@@ -562,7 +601,7 @@ namespace edit4 {
         int currentSelection = 0;
         int currentEdit = 0;
         bool selectPage = true;
-        char outstr[32];
+        char buffer[32];
         int end;
 
         int currentCharacter = 0;
@@ -599,14 +638,14 @@ namespace edit4 {
                         mapInput(pad, currentCharacter, "character");
                         padUpdate(&pad);
                     } else if (currentEdit == 1) { //level
-                        keyboardInput(outstr, SwkbdType_NumPad, 2, "0-99", (currentLevel == 0 ? "99" : std::to_string(currentLevel).c_str()));
-                        if (outstr[0] == '\0') {
+                        keyboardInput(buffer, SwkbdType_NumPad, 2, "0-99", (currentLevel == 0 ? "99" : std::to_string(currentLevel).c_str()));
+                        if (buffer[0] == '\0') {
                             currentLevel = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) > 99) {
+                            if (std::stoi(buffer) > 99) {
                                 currentLevel = 99;
                             } else {
-                                currentLevel = std::stoi(outstr);
+                                currentLevel = std::stoi(buffer);
                             }
                         }
                     } else { //apply (and set max)
@@ -652,7 +691,7 @@ namespace edit4 {
         int currentSelection = 0;
         int currentEdit = 0;
         bool selectPage = true;
-        char outstr[32];
+        char buffer[32];
         int end;
 
         int currentYokai = 0;
@@ -689,14 +728,14 @@ namespace edit4 {
                         mapInput(pad, currentYokai, "yokai");
                         padUpdate(&pad);
                     } else if (currentEdit == 1) { //level
-                        keyboardInput(outstr, SwkbdType_NumPad, 2, "0-99", (currentLevel == 0 ? "99" : std::to_string(currentLevel).c_str()));
-                        if (outstr[0] == '\0') {
+                        keyboardInput(buffer, SwkbdType_NumPad, 2, "0-99", (currentLevel == 0 ? "99" : std::to_string(currentLevel).c_str()));
+                        if (buffer[0] == '\0') {
                             currentLevel = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) > 99) {
+                            if (std::stoi(buffer) > 99) {
                                 currentLevel = 99;
                             } else {
-                                currentLevel = std::stoi(outstr);
+                                currentLevel = std::stoi(buffer);
                             }
                         }
                     } else { //apply (and set max)
@@ -742,7 +781,7 @@ namespace edit4 {
         int currentSelection = 0;
         int currentEdit = 0;
         bool selectPage = true;
-        char outstr[32];
+        char buffer[32];
         int end;
 
         int currentItem = 0;
@@ -779,14 +818,14 @@ namespace edit4 {
                         mapInput(pad, currentItem, "item");
                         padUpdate(&pad);
                     } else if (currentEdit == 1) { //amount
-                        keyboardInput(outstr, SwkbdType_NumPad, 3, "0-999", (currentAmount == 0 ? "999" : std::to_string(currentAmount).c_str()));
-                        if (outstr[0] == '\0') {
+                        keyboardInput(buffer, SwkbdType_NumPad, 3, "0-999", (currentAmount == 0 ? "999" : std::to_string(currentAmount).c_str()));
+                        if (buffer[0] == '\0') {
                             currentAmount = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) > 999) {
+                            if (std::stoi(buffer) > 999) {
                                 currentAmount = 999;
                             } else {
-                                currentAmount = std::stoi(outstr);
+                                currentAmount = std::stoi(buffer);
                             }
                         }
                     } else if (currentEdit == 2){ //apply
@@ -826,7 +865,7 @@ namespace edit4 {
         int currentSelection = 0;
         int currentEdit = 0;
         bool selectPage = true;
-        char outstr[32];
+        char buffer[32];
         int end;
 
         int currentEquipment = 0;
@@ -863,14 +902,14 @@ namespace edit4 {
                         mapInput(pad, currentEquipment, "equipment");
                         padUpdate(&pad);
                     } else if (currentEdit == 1) { //amount
-                        keyboardInput(outstr, SwkbdType_NumPad, 3, "0-999", (currentAmount == 0 ? "999" : std::to_string(currentAmount).c_str()));
-                        if (outstr[0] == '\0') {
+                        keyboardInput(buffer, SwkbdType_NumPad, 3, "0-999", (currentAmount == 0 ? "999" : std::to_string(currentAmount).c_str()));
+                        if (buffer[0] == '\0') {
                             currentAmount = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) > 999) {
+                            if (std::stoi(buffer) > 999) {
                                 currentAmount = 999;
                             } else {
-                                currentAmount = std::stoi(outstr);
+                                currentAmount = std::stoi(buffer);
                             }
                         }
                     } else if (currentEdit == 2){ //apply
@@ -910,7 +949,7 @@ namespace edit4 {
         int currentSelection = 0;
         int currentEdit = 0;
         bool selectPage = true;
-        char outstr[32];
+        char buffer[32];
         int end;
 
         int currentSpecial = 0;
@@ -947,14 +986,14 @@ namespace edit4 {
                         mapInput(pad, currentSpecial, "special soul");
                         padUpdate(&pad);
                     } else if (currentEdit == 1) { //amount
-                        keyboardInput(outstr, SwkbdType_NumPad, 3, "0-999", (currentAmount == 0 ? "999" : std::to_string(currentAmount).c_str()));
-                        if (outstr[0] == '\0') {
+                        keyboardInput(buffer, SwkbdType_NumPad, 3, "0-999", (currentAmount == 0 ? "999" : std::to_string(currentAmount).c_str()));
+                        if (buffer[0] == '\0') {
                             currentAmount = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) > 999) {
+                            if (std::stoi(buffer) > 999) {
                                 currentAmount = 999;
                             } else {
-                                currentAmount = std::stoi(outstr);
+                                currentAmount = std::stoi(buffer);
                             }
                         }
                     } else if (currentEdit == 2){ //apply
@@ -994,7 +1033,7 @@ namespace edit4 {
         int currentSelection = 0;
         int currentEdit = 0;
         bool selectPage = true;
-        char outstr[32];
+        char buffer[32];
         int end;
 
         int currentSoul = 0;
@@ -1033,36 +1072,36 @@ namespace edit4 {
                         mapInput(pad, currentSoul, "yokai soul");
                         padUpdate(&pad);
                     } else if (currentEdit == 1) { //white amount
-                        keyboardInput(outstr, SwkbdType_NumPad, 3, "0-999", (currentWhiteAmount == 0 ? "999" : std::to_string(currentWhiteAmount).c_str()));
-                        if (outstr[0] == '\0') {
+                        keyboardInput(buffer, SwkbdType_NumPad, 3, "0-999", (currentWhiteAmount == 0 ? "999" : std::to_string(currentWhiteAmount).c_str()));
+                        if (buffer[0] == '\0') {
                             currentWhiteAmount = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) > 999) {
+                            if (std::stoi(buffer) > 999) {
                                 currentWhiteAmount = 999;
                             } else {
-                                currentWhiteAmount = std::stoi(outstr);
+                                currentWhiteAmount = std::stoi(buffer);
                             }
                         }
                     } else if (currentEdit == 2) { //red amount
-                        keyboardInput(outstr, SwkbdType_NumPad, 3, "0-999", (currentRedAmount == 0 ? "999" : std::to_string(currentRedAmount).c_str()));
-                        if (outstr[0] == '\0') {
+                        keyboardInput(buffer, SwkbdType_NumPad, 3, "0-999", (currentRedAmount == 0 ? "999" : std::to_string(currentRedAmount).c_str()));
+                        if (buffer[0] == '\0') {
                             currentRedAmount = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) > 999) {
+                            if (std::stoi(buffer) > 999) {
                                 currentRedAmount = 999;
                             } else {
-                                currentRedAmount = std::stoi(outstr);
+                                currentRedAmount = std::stoi(buffer);
                             }
                         }
                     } else if (currentEdit == 3) { //gold amount
-                        keyboardInput(outstr, SwkbdType_NumPad, 3, "0-999", (currentGoldAmount == 0 ? "999" : std::to_string(currentGoldAmount).c_str()));
-                        if (outstr[0] == '\0') {
+                        keyboardInput(buffer, SwkbdType_NumPad, 3, "0-999", (currentGoldAmount == 0 ? "999" : std::to_string(currentGoldAmount).c_str()));
+                        if (buffer[0] == '\0') {
                             currentGoldAmount = 0;
                         } else { //criteria
-                            if (std::stoi(outstr) > 999) {
+                            if (std::stoi(buffer) > 999) {
                                 currentGoldAmount = 999;
                             } else {
-                                currentGoldAmount = std::stoi(outstr);
+                                currentGoldAmount = std::stoi(buffer);
                             }
                         }
                     } else if (currentEdit == 4) { //apply
@@ -1106,7 +1145,7 @@ namespace edit4 {
 
         int currentSelection = 0;
         int currentEdit = 0;
-        char outstr[43];
+        char buffer[44];
         int end;
 
         int currentLocation = 0;
@@ -1119,7 +1158,7 @@ namespace edit4 {
             if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B){
                 break;
             }
-            inputHandling(currentEdit, kDown, 3);
+            inputHandling(currentEdit, kDown, 4);
             if (kDown & HidNpadButton_A) {
                 if (currentEdit == 0) { //nicknames
                     while (appletMainLoop()) {
@@ -1130,61 +1169,77 @@ namespace edit4 {
                         if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B){
                             break;
                         }
-                        inputHandling(currentSelection, kDown, 7+yokailist.size()); //extra one for "set default"
+                        inputHandling(currentSelection, kDown, 8+yokailist.size());
                         if (kDown & HidNpadButton_A) {
                             if (currentSelection == 0) {
+                                convert_fullwidth_to_halfwidth(nate);
+                                convert_fullwidth_to_halfwidth(katie);
+                                convert_fullwidth_to_halfwidth(summer);
+                                convert_fullwidth_to_halfwidth(cole);
+                                convert_fullwidth_to_halfwidth(bruno);
+                                convert_fullwidth_to_halfwidth(jack);
+
+                                for (int i = 0; i < yokailist.size(); i++) {
+                                    convert_fullwidth_to_halfwidth(yokailist[i].nickname);
+                                }
+                            } else if (currentSelection == 1) {
                                 strcpy(nate, "Nate");
                                 strcpy(katie, "Katie");
                                 strcpy(summer, "Summer");
                                 strcpy(cole, "Cole");
                                 strcpy(bruno, "Bruno");
                                 strcpy(jack, "Jack");
-                            } else if (currentSelection == 1) {
-                                keyboardInput(outstr, SwkbdType_Normal, 35, nate, nate);
-                                if (outstr[0] != '\0') {
-                                    strcpy(nate, outstr);
+
+                                for (int i = 0; i < yokailist.size(); i++) {
+                                    strcpy(yokailist[i].nickname, "");
                                 }
                             } else if (currentSelection == 2) {
-                                keyboardInput(outstr, SwkbdType_Normal, 35, katie, katie);
-                                if (outstr[0] != '\0') {
-                                    strcpy(katie, outstr);
+                                keyboardInput(buffer, SwkbdType_Normal, 36, "enter a nickname", nate);
+                                if (buffer[0] != '\0') {
+                                    strcpy(nate, buffer);
                                 }
                             } else if (currentSelection == 3) {
-                                keyboardInput(outstr, SwkbdType_Normal, 35, summer, summer);
-                                if (outstr[0] != '\0') {
-                                    strcpy(summer, outstr);
+                                keyboardInput(buffer, SwkbdType_Normal, 36, "enter a nickname", katie);
+                                if (buffer[0] != '\0') {
+                                    strcpy(katie, buffer);
                                 }
                             } else if (currentSelection == 4) {
-                                keyboardInput(outstr, SwkbdType_Normal, 35, cole, cole);
-                                if (outstr[0] != '\0') {
-                                    strcpy(cole, outstr);
+                                keyboardInput(buffer, SwkbdType_Normal, 36, "enter a nickname", summer);
+                                if (buffer[0] != '\0') {
+                                    strcpy(summer, buffer);
                                 }
                             } else if (currentSelection == 5) {
-                                keyboardInput(outstr, SwkbdType_Normal, 35, bruno, bruno);
-                                if (outstr[0] != '\0') {
-                                    strcpy(bruno, outstr);
+                                keyboardInput(buffer, SwkbdType_Normal, 36, "enter a nickname", cole);
+                                if (buffer[0] != '\0') {
+                                    strcpy(cole, buffer);
                                 }
                             } else if (currentSelection == 6) {
-                                keyboardInput(outstr, SwkbdType_Normal, 35, jack, jack);
-                                if (outstr[0] != '\0') {
-                                    strcpy(jack, outstr);
+                                keyboardInput(buffer, SwkbdType_Normal, 36, "enter a nickname", bruno);
+                                if (buffer[0] != '\0') {
+                                    strcpy(bruno, buffer);
+                                }
+                            } else if (currentSelection == 7) {
+                                keyboardInput(buffer, SwkbdType_Normal, 36, "enter a nickname", jack);
+                                if (buffer[0] != '\0') {
+                                    strcpy(jack, buffer);
                                 }
                             } else {
-                                keyboardInput(outstr, SwkbdType_Normal, 43, "enter a nickname", yokailist[currentSelection-7].nickname);
-                                if (outstr[0] != '\0') {
-                                    strcpy(yokailist[currentSelection-7].nickname, outstr);
+                                keyboardInput(buffer, SwkbdType_Normal, 46, "enter a nickname", yokailist[currentSelection-8].nickname);
+                                if (buffer[0] != '\0') {
+                                    strcpy(yokailist[currentSelection-8].nickname, buffer);
                                 }
                             }
                         }
-                        printf("\x1b[1;1H\x1b[2JSelect an option: (Japanese is scrambled until you click on it.)\n");
-                        std::cout << (currentSelection == 0 ? "> " : "  ") << "fix nicknames" << std::endl;
+                        printf("\x1b[1;1H\x1b[2JSelect an option: (Japanese is scrambled.)\n");
+                        std::cout << (currentSelection == 0 ? "> " : "  ") << "fix nicknames (Japanese characters to English)" << std::endl;
+                        std::cout << (currentSelection == 1 ? "> " : "  ") << "clear nicknames" << std::endl;
                         printf("\n");
-                        std::cout << (currentSelection == 1 ? "> " : "  ") << "Nate: " << nate << std::endl;
-                        std::cout << (currentSelection == 2 ? "> " : "  ") << "Katie: " << katie << std::endl;
-                        std::cout << (currentSelection == 3 ? "> " : "  ") << "Summer: " << summer << std::endl;
-                        std::cout << (currentSelection == 4 ? "> " : "  ") << "Cole: " << cole << std::endl;
-                        std::cout << (currentSelection == 5 ? "> " : "  ") << "Bruno: " << bruno << std::endl;
-                        std::cout << (currentSelection == 6 ? "> " : "  ") << "Jack: " << jack << std::endl;
+                        std::cout << (currentSelection == 2 ? "> " : "  ") << "Nate: " << nate << std::endl;
+                        std::cout << (currentSelection == 3 ? "> " : "  ") << "Katie: " << katie << std::endl;
+                        std::cout << (currentSelection == 4 ? "> " : "  ") << "Summer: " << summer << std::endl;
+                        std::cout << (currentSelection == 5 ? "> " : "  ") << "Cole: " << cole << std::endl;
+                        std::cout << (currentSelection == 6 ? "> " : "  ") << "Bruno: " << bruno << std::endl;
+                        std::cout << (currentSelection == 7 ? "> " : "  ") << "Jack: " << jack << std::endl;
                         printf("\n");
                         int end = currentSelection/44*44+44;
                         if (end > yokailist.size()) {
@@ -1193,9 +1248,9 @@ namespace edit4 {
                         for (int i = currentSelection/44*44; i < end; i++) {
                             auto it = data4::yokais.find(*yokailist[i].type);
                             if (it != data4::yokais.end()) {
-                                std::cout << "\n" << (currentSelection == i+7 ? "> " : "  ") << it->second << "\t\t\t\t\t\t" << yokailist[i].nickname;
+                                std::cout << "\n" << (currentSelection == i+8 ? "> " : "  ") << it->second << ":      " << yokailist[i].nickname;
                             } else {
-                                std::cout << "\n" << (currentSelection == i+7 ? "> " : "  ") << *yokailist[i].type << " TODO" << ":\t\t\t\t\t\t" << yokailist[i].nickname;
+                                std::cout << "\n" << (currentSelection == i+8 ? "> " : "  ") << *yokailist[i].type << " TODO:      " << yokailist[i].nickname;
                             }
                         }
                     }
@@ -1205,23 +1260,23 @@ namespace edit4 {
                     //TODO set location and x, y, z
                 
                 } else if (currentEdit == 2) { //crank-a-kai
-                    keyboardInput(outstr, SwkbdType_NumPad, 2, "0-99", "99");
-                    if (outstr[0] != '\0') {
-                        if (std::stoi(outstr) < 99) {
+                    keyboardInput(buffer, SwkbdType_NumPad, 2, "0-99", "99");
+                    if (buffer[0] != '\0') {
+                        if (std::stoi(buffer) < 99) {
                             *gatchamax = 99;
                             *gatcharemaining = 99;
                         } else {
-                            *gatchamax = std::stoi(outstr);
-                            *gatcharemaining = std::stoi(outstr);
+                            *gatchamax = std::stoi(buffer);
+                            *gatcharemaining = std::stoi(buffer);
                         }
                     }
                 } else if (currentEdit == 3) { //money
-                    keyboardInput(outstr, SwkbdType_NumPad, 8, "0-99999999", (*money == 0 ? "99999999" : std::to_string(*money).c_str()));
-                    if (outstr[0] != '\0') {
-                        if (std::stoi(outstr) < 99999999) {
+                    keyboardInput(buffer, SwkbdType_NumPad, 8, "0-99999999", (*money == 0 ? "99999999" : std::to_string(*money).c_str()));
+                    if (buffer[0] != '\0') {
+                        if (std::stoi(buffer) < 99999999) {
                             *money = 99999999;
                         } else {
-                            *money = std::stoi(outstr);
+                            *money = std::stoi(buffer);
                         }
                     }
                 }
