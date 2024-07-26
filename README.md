@@ -21,6 +21,7 @@ source-code: all the editors' code
 ## Important
 
 MSVCP120.dll error fix: https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x86.exe
+MSVCP140.dll error fix: https://aka.ms/vs/17/release/vc_redist.x86.exe
 
 
 ## Credits
