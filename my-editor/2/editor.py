@@ -52,7 +52,7 @@ def edit(yokailist, itemlist, equipmentlist, importantlist, soullist, medalliuml
 
 if infile[-3:] == "ywd":
     main(infile, edit)
-else:
+else: #if this thows TypeError: decrypt() cannot be called after encrypt() comment out the line in Crypto/Cipher/_mode_ctr.py
     from pathlib import Path
     import sys
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"/save-tools")

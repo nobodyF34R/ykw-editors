@@ -81,16 +81,6 @@ Result get_save(u64* application_id, AccountUid* uid) {
 
 }
 
-void pause(PadState &pad) {
-    while (appletMainLoop()) {
-        consoleUpdate(NULL);
-        padUpdate(&pad);
-        u64 kDown = padGetButtonsDown(&pad);
-
-        if (kDown) break;
-    }
-}
-
 // Helper function to extract the timestamp from the filename
 long extractTimestamp(const std::string& filename) {
     size_t firstDot = filename.find('.', 0);
@@ -122,7 +112,7 @@ void backup(std::string path, std::string &save, std::vector<std::string> backup
     FILE* backupFile = fopen(backupFilePath.c_str(), "w+b");
     fwrite(data.data(), sizeof(uint8_t), data.size(), backupFile);
     fclose(backupFile); //TODO add a check to see if any data was actually changed before deleting the backup
-    fsdevCommitDevice("save"); //this doesn't seem to work on emu TODO
+    fsdevCommitDevice("save");
 }
 
 
@@ -204,12 +194,12 @@ int main(int argc, char** argv) {
                             if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B) {
                                 break;
                             }
-
-                            printf("\x1b[1;1H\x1b[2JSelect a save file:\n");
-                            for (int i = 0; i < saveFiles.size(); i++) {
-                                std::cout << (i == selectedSave ? "> " : "  ") << saveFiles[i] << std::endl;
+                            if (application_id != 0x010086c00af7c000) {
+                                printf("\x1b[1;1H\x1b[2JSelect a save file:\n");
+                                for (int i = 0; i < saveFiles.size(); i++) {
+                                    std::cout << (i == selectedSave ? "> " : "  ") << saveFiles[i] << std::endl;
+                                }
                             }
-
                             if (kDown & HidNpadButton_A || application_id == 0x010086c00af7c000) {
                                 if (application_id == 0x0100c0000ceea000){
                                     char filePath[15] = "save:/";
@@ -240,7 +230,7 @@ int main(int argc, char** argv) {
 
                                             size = 10176;
 
-                                            //define variables here
+                                            //define variables here TODO
 
                                         } else {
 
@@ -347,6 +337,10 @@ int main(int argc, char** argv) {
                                                             break;
                                                         case 4: //misc
                                                             edit1s::edit_misc(x, y, z, location, time, sun, money, yokailist, pad);
+                                                            break;
+                                                        default:
+                                                            printf("something went wrong with your switch-case :(");
+                                                            pause(pad);
                                                             break;
                                                     };
 
@@ -531,6 +525,10 @@ int main(int argc, char** argv) {
                                                         break;
                                                     case 6: //misc
                                                         edit4::edit_misc(x, y, z, location, money, nate, katie, summer, cole, bruno, jack, yokailist, gatcharemaining, gatchamax, pad);
+                                                        break;
+                                                    default:
+                                                        printf("something went wrong with your switch-case :(");
+                                                        pause(pad);
                                                         break;
                                                 };
 

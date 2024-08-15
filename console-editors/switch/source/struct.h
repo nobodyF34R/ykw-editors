@@ -12,7 +12,7 @@ struct struct1s {
         uint16_t* num1;
         uint16_t* num2;
         uint32_t* type;
-        char* nickname; //wide char
+        char* nickname; //utf-8 string
         uint8_t* attack;
         uint8_t* technique;
         uint8_t* soultimate;
@@ -119,7 +119,7 @@ struct struct4 {
     struct Yokai {
         uint16_t* num1;
         uint16_t* num2;
-        char* nickname; //wide char
+        char* nickname; //utf-8 string
         uint32_t* type;
         uint32_t* move1;
         uint32_t* move2;

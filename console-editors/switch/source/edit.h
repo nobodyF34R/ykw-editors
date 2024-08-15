@@ -3,50 +3,40 @@
 
 #include "struct.h"
 
+std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> converter;
 std::vector<std::pair<int, std::string>> sortedMap; //TODO remove these globals
 std::vector<std::pair<int, std::string>> filteredMap;
 int mapSelection;
 bool activeKeyboard;
 
-// Function to convert full-width characters to half-width characters
-void convert_width(char *str) {
-    unsigned char *p = (unsigned char *)str;
-    unsigned char *end = p + strlen((char *)p);
+void pause(PadState &pad) {
+    while (appletMainLoop()) {
+        consoleUpdate(NULL);
+        padUpdate(&pad);
+        u64 kDown = padGetButtonsDown(&pad);
+        if (kDown) break;
+    }
+}
 
-    while (p < end) {
-        if (p[0] == 0xEF && p[1] == 0xBC && p[2] >= 0x81 && p[2] <= 0xBF) {
-            // Convert full-width character to half-width equivalent
-            p[0] = 0x20 + (p[2] - 0x80); // Calculate the half-width equivalent
-            memmove(p + 1, p + 3, end - (p + 3) + 1); // Shift remaining string left
-            end -= 2; // Adjust the end pointer
-            p++; // Move to the next character
-        } else if (p[0] == 0xEF && p[1] == 0xBD && p[2] >= 0x80 && p[2] <= 0x9E) {
-            // Convert full-width character to half-width equivalent
-            p[0] = 0x7F + (p[2] - 0x79); // Calculate the half-width equivalent
-            memmove(p + 1, p + 3, end - (p + 3) + 1); // Shift remaining string left
-            end -= 2; // Adjust the end pointer
-            p++; // Move to the next character
-        } else {
-            // Check the length of the current character and move accordingly
-            if ((p[0] & 0x80) == 0) {
-                // ASCII character (1 byte)
-                p += 1;
-            } else if ((p[0] & 0xE0) == 0xC0) {
-                // 2-byte character
-                p += 2;
-            } else if ((p[0] & 0xF0) == 0xE0) {
-                // 3-byte character
-                p += 3;
-            } else if ((p[0] & 0xF8) == 0xF0) {
-                // 4-byte character
-                p += 4;
-            } else {
-                // Invalid UTF-8 sequence, break the loop
-                break;
+// swap full-width and half-width characters
+std::wstring convert_width(std::wstring str) {
+    bool half = true;
+    for (int i = 0; i < str.size(); i++) { //make half
+        if (str[i] >= 0xFF01 && str[i] <= 0xFF5E) {
+            half = false;
+            str[i] -= 0xFEE0;
+        }
+    }
+    if (half) { //make wide
+        for (int i = 0; i < str.size(); i++) {
+            if (str[i] >= 0x21 && str[i] <= 0x7E) {
+                str[i] += 0xFEE0;
             }
         }
     }
+    return str;
 }
+
 std::string zfill(int num, int width) { //TODO add this where applicable
     std::ostringstream ss;
     ss << std::setw(width) << std::setfill( '0' ) << num;
@@ -657,8 +647,9 @@ namespace edit1s {
 
         int currentSelection = 0;
         int currentEdit = 0;
-        char buffer[44];
+        char buffer[46];
         int end;
+        int offset = 0;
 
         int currentLocation = 0;
 
@@ -682,37 +673,46 @@ namespace edit1s {
                         if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B){
                             break;
                         }
-                        inputHandling(currentSelection, kDown, 2+yokailist.size());
+                        inputHandling(currentSelection, kDown, 1+yokailist.size());
                         if (kDown & HidNpadButton_A) {
                             if (currentSelection == 0) {
-                                for (int i = 0; i < yokailist.size(); i++) {
-                                    convert_width(yokailist[i].nickname);
-                                }
-                            } else if (currentSelection == 1) {
                                 for (int i = 0; i < yokailist.size(); i++) {
                                     strcpy(yokailist[i].nickname, "");
                                 }
                             } else {
-                                keyboardInput(buffer, SwkbdType_All, 46, "enter a nickname", yokailist[currentSelection-8].nickname);
+                                keyboardInput(buffer, SwkbdType_All, 46, "enter a nickname", yokailist[currentSelection-1].nickname); //nicknames are technically 68 characters long, but that won't fit on the screen so I'm arbitrarily limiting it to 46
                                 if (buffer[0] != '\0') {
-                                    strcpy(yokailist[currentSelection-8].nickname, buffer);
+                                    strcpy(yokailist[currentSelection-1].nickname, buffer);
                                 }
                             }
+                        } else if (kDown & HidNpadButton_X) { //clear
+                            if (currentSelection != 0) {
+                                strcpy(yokailist[currentSelection-1].nickname, "");
+                            }
+                        } else if (kDown & HidNpadButton_Y) { //swap width
+                            if (currentSelection != 0) {
+                                strcpy(yokailist[currentSelection-1].nickname, converter.to_bytes(convert_width(converter.from_bytes(yokailist[currentSelection-1].nickname))).substr(0, 45).c_str()); //same here, but it's divisible by 3
+                            }
                         }
-                        printf("\x1b[1;1H\x1b[2JSelect an option: (Japanese is scrambled.)\n");
-                        std::cout << (currentSelection == 0 ? "> " : "  ") << "fix nicknames (Japanese-English to English)" << std::endl;
-                        std::cout << (currentSelection == 1 ? "> " : "  ") << "clear nicknames" << std::endl;
-                        printf("\n");
-                        int end = currentSelection/44*44+44;
+                        printf("\x1b[1;1H\x1b[2JSelect an option: (Y to swap width, X to clear. Japanese is scrambled)");
+                        if (currentSelection < 43) { //45 - 2 dead lines
+                            offset = 0;
+                            printf("\n");
+                            std::cout << (currentSelection == 0 ? "> " : "  ") << "clear all" << std::endl;
+                        } else {
+                            offset = 1;
+                        }
+                        end = (currentSelection-offset)/44*44+44;
                         if (end > yokailist.size()) {
                             end = yokailist.size();
                         }
-                        for (int i = currentSelection/44*44; i < end; i++) {
+                        for (int i = (currentSelection-offset)/44*44; i < end; i++) {
+                            if (i > 41 && currentSelection < 43) { //first page has extra options
+                                break;
+                            }
                             auto it = data1s::yokais.find(*yokailist[i].type);
                             if (it != data1s::yokais.end()) {
-                                std::cout << "\n" << (currentSelection == i+8 ? "> " : "  ") << it->second << ":      " << yokailist[i].nickname;
-                            } else {
-                                std::cout << "\n" << (currentSelection == i+8 ? "> " : "  ") << *yokailist[i].type << " TODO:      " << yokailist[i].nickname;
+                                std::cout << "\n" << (currentSelection == i+1 ? "> " : "  ") << it->second << ":      " << yokailist[i].nickname;
                             }
                         }
                     }
@@ -723,9 +723,9 @@ namespace edit1s {
                 } else if (currentEdit == 2) { //crank-a-kai
                     //TODO
                 } else if (currentEdit == 3) { //money
-                    keyboardInput(buffer, SwkbdType_NumPad, 8, "0-999999", (*money == 0 ? "999999" : std::to_string(*money).c_str()));
+                    keyboardInput(buffer, SwkbdType_NumPad, 8, "0-999999", (*money == 0 ? "999999" : std::to_string(*money).c_str())); //TODO test max again
                     if (buffer[0] != '\0') {
-                        if (std::stoi(buffer) < 999999) {
+                        if (std::stoi(buffer) > 999999) {
                             *money = 999999;
                         } else {
                             *money = std::stoi(buffer);
@@ -919,12 +919,12 @@ namespace edit4 {
                         mapInput(pad, currentYokai, "yokai");
                         padUpdate(&pad);
                     } else if (currentEdit == 1) { //level
-                        keyboardInput(buffer, SwkbdType_NumPad, 2, "0-99", (currentLevel == 0 ? "99" : std::to_string(currentLevel).c_str()));
+                        keyboardInput(buffer, SwkbdType_NumPad, 2, "0-120", (currentLevel == 0 ? "120" : std::to_string(currentLevel).c_str()));
                         if (buffer[0] == '\0') {
                             currentLevel = 0;
                         } else { //criteria
-                            if (std::stoi(buffer) > 99) {
-                                currentLevel = 99;
+                            if (std::stoi(buffer) > 120) {
+                                currentLevel = 120;
                             } else {
                                 currentLevel = std::stoi(buffer);
                             }
@@ -1155,106 +1155,6 @@ namespace edit4 {
             }
         }
     }
-    //could just be added to misc
-    void edit_special(std::vector<struct4::Special> &speciallist, PadState pad) {
-        sortedMap.clear();
-        for (auto const& pair : data4::specials) { 
-            sortedMap.push_back(pair);
-        }
-        std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
-            return left.second < right.second;
-        });
-        filteredMap = sortedMap;
-        bool selected[speciallist.size()];
-        for (int i = 0; i < speciallist.size(); i++) {
-            selected[i] = false;
-        }
-        int currentSelection = 0;
-        int currentEdit = 0;
-        bool selectPage = true;
-        char buffer[32];
-        int end;
-
-        int currentSpecial = 0;
-        int currentAmount = 0;
-
-        while (appletMainLoop()) {
-            consoleUpdate(NULL);
-            padUpdate(&pad);
-            u64 kDown = padGetButtonsDown(&pad);
-
-            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus){
-                break;
-            }
-
-            if (kDown & HidNpadButton_L || kDown & HidNpadButton_R) {
-                selectPage = !selectPage;
-            }
-
-            if (kDown & HidNpadButton_B) {
-                if (selectPage) {
-                    //if all false, break
-                    if (!std::any_of(selected, selected + speciallist.size(), [](bool v) { return v; })) {
-                        break;
-                    } else {
-                        //else, set all false
-                        for (int i = 0; i < speciallist.size(); i++) {
-                            selected[i] = false;
-                        }
-                    }
-                } else {
-                    selectPage = !selectPage;
-                }
-            }
-
-            if (selectPage) {
-                end = selectInput(selected, currentSelection, kDown, speciallist.size());
-                for (int i = currentSelection/44*44; i < end; i++) {
-                    auto it = data4::specials.find(*speciallist[i].type);
-                    if (it != data4::specials.end()) {
-                        std::cout << "\n" << (selected[i] ? "> " : "  ") << it->second << (currentSelection == i ? " <<<" : "");
-                    } else {
-                        std::cout << "\n" << (selected[i] ? "> " : "  ") << *speciallist[i].type << " TODO" << (currentSelection == i ? " <<<" : "");
-                    }
-                }
-            } else { //edit page
-                printf("\x1b[1;1H\x1b[2JL or R to swap pages\n");
-                inputHandling(currentEdit, kDown, 3);
-                if (kDown & HidNpadButton_A) {
-                    if (currentEdit == 0) { //special
-                        mapInput(pad, currentSpecial, "special soul");
-                        padUpdate(&pad);
-                    } else if (currentEdit == 1) { //amount
-                        keyboardInput(buffer, SwkbdType_NumPad, 3, "0-999", (currentAmount == 0 ? "999" : std::to_string(currentAmount).c_str()));
-                        if (buffer[0] == '\0') {
-                            currentAmount = 0;
-                        } else { //criteria
-                            if (std::stoi(buffer) > 999) {
-                                currentAmount = 999;
-                            } else {
-                                currentAmount = std::stoi(buffer);
-                            }
-                        }
-                    } else if (currentEdit == 2){ //apply
-                        for (int i = 0; i < speciallist.size(); i++) {
-                            if (selected[i]) {
-                                if (currentSpecial != 0) {
-                                    *speciallist[i].type = currentSpecial;
-                                }
-                                if (currentAmount != 0) {
-                                    *speciallist[i].amount = currentAmount;
-                                }
-                            }
-                        }
-                    }
-                }
-                std::cout << (currentEdit == 0 ? "> " : "  ") << "soul: " << (currentSpecial == 0 ? "" : data4::specials.at(currentSpecial)) << std::endl;
-                std::cout << (currentEdit == 1 ? "> " : "  ") << "amount: " << (currentAmount == 0 ? "" : std::to_string(currentAmount)) << std::endl;
-                printf("\n");
-                std::cout << (currentEdit == 2 ? "> " : "  ") << "apply" << std::endl;
-            }
-        }
-    }
 
     void edit_soul(std::vector<struct4::Soul> &soullist, PadState pad) {
         sortedMap.clear();
@@ -1388,6 +1288,106 @@ namespace edit4 {
         }
     }
     
+    void edit_special(std::vector<struct4::Special> &speciallist, PadState pad) {
+        sortedMap.clear();
+        for (auto const& pair : data4::specials) { 
+            sortedMap.push_back(pair);
+        }
+        std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
+            return left.second < right.second;
+        });
+        filteredMap = sortedMap;
+        bool selected[speciallist.size()];
+        for (int i = 0; i < speciallist.size(); i++) {
+            selected[i] = false;
+        }
+        int currentSelection = 0;
+        int currentEdit = 0;
+        bool selectPage = true;
+        char buffer[32];
+        int end;
+
+        int currentSpecial = 0;
+        int currentAmount = 0;
+
+        while (appletMainLoop()) {
+            consoleUpdate(NULL);
+            padUpdate(&pad);
+            u64 kDown = padGetButtonsDown(&pad);
+
+            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus){
+                break;
+            }
+
+            if (kDown & HidNpadButton_L || kDown & HidNpadButton_R) {
+                selectPage = !selectPage;
+            }
+
+            if (kDown & HidNpadButton_B) {
+                if (selectPage) {
+                    //if all false, break
+                    if (!std::any_of(selected, selected + speciallist.size(), [](bool v) { return v; })) {
+                        break;
+                    } else {
+                        //else, set all false
+                        for (int i = 0; i < speciallist.size(); i++) {
+                            selected[i] = false;
+                        }
+                    }
+                } else {
+                    selectPage = !selectPage;
+                }
+            }
+
+            if (selectPage) {
+                end = selectInput(selected, currentSelection, kDown, speciallist.size());
+                for (int i = currentSelection/44*44; i < end; i++) {
+                    auto it = data4::specials.find(*speciallist[i].type);
+                    if (it != data4::specials.end()) {
+                        std::cout << "\n" << (selected[i] ? "> " : "  ") << it->second << (currentSelection == i ? " <<<" : "");
+                    } else {
+                        std::cout << "\n" << (selected[i] ? "> " : "  ") << *speciallist[i].type << " TODO" << (currentSelection == i ? " <<<" : "");
+                    }
+                }
+            } else { //edit page
+                printf("\x1b[1;1H\x1b[2JL or R to swap pages\n");
+                inputHandling(currentEdit, kDown, 3);
+                if (kDown & HidNpadButton_A) {
+                    if (currentEdit == 0) { //special
+                        mapInput(pad, currentSpecial, "special soul");
+                        padUpdate(&pad);
+                    } else if (currentEdit == 1) { //amount
+                        keyboardInput(buffer, SwkbdType_NumPad, 3, "0-999", (currentAmount == 0 ? "999" : std::to_string(currentAmount).c_str()));
+                        if (buffer[0] == '\0') {
+                            currentAmount = 0;
+                        } else { //criteria
+                            if (std::stoi(buffer) > 999) {
+                                currentAmount = 999;
+                            } else {
+                                currentAmount = std::stoi(buffer);
+                            }
+                        }
+                    } else if (currentEdit == 2){ //apply
+                        for (int i = 0; i < speciallist.size(); i++) {
+                            if (selected[i]) {
+                                if (currentSpecial != 0) {
+                                    *speciallist[i].type = currentSpecial;
+                                }
+                                if (currentAmount != 0) {
+                                    *speciallist[i].amount = currentAmount;
+                                }
+                            }
+                        }
+                    }
+                }
+                std::cout << (currentEdit == 0 ? "> " : "  ") << "soul: " << (currentSpecial == 0 ? "" : data4::specials.at(currentSpecial)) << std::endl;
+                std::cout << (currentEdit == 1 ? "> " : "  ") << "amount: " << (currentAmount == 0 ? "" : std::to_string(currentAmount)) << std::endl;
+                printf("\n");
+                std::cout << (currentEdit == 2 ? "> " : "  ") << "apply" << std::endl;
+            }
+        }
+    }
+
     void edit_misc(uint32_t* x, uint32_t* y, uint32_t* z, uint32_t* location, uint32_t* money, char* nate, char* katie, char* summer, char* cole, char* bruno, char* jack, std::vector<struct4::Yokai> &yokailist, uint8_t* gatcharemaining, uint8_t* gatchamax, PadState pad) {
         sortedMap.clear();
         for (auto const& pair : data4::locations) {
@@ -1401,8 +1401,9 @@ namespace edit4 {
         char* names[] = {nate, katie, summer, cole, bruno, jack};
         int currentSelection = 0;
         int currentEdit = 0;
-        char buffer[44];
+        char buffer[36];
         int end;
+        int offset = 0;
 
         int currentLocation = 0;
 
@@ -1426,55 +1427,97 @@ namespace edit4 {
                         if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B){
                             break;
                         }
-                        inputHandling(currentSelection, kDown, 8+yokailist.size());
+                        inputHandling(currentSelection, kDown, 7+yokailist.size());
                         if (kDown & HidNpadButton_A) {
                             if (currentSelection == 0) {
-                                for (int i = 0; i < 6; i++) {
-                                    convert_width(names[i]);
-                                }
-                                for (int i = 0; i < yokailist.size(); i++) {
-                                    convert_width(yokailist[i].nickname);
-                                }
-                            } else if (currentSelection == 1) {
-                                for (int i = 0; i < 6; i++) {
-                                    strcpy(names[i], "");
-                                }
+                                strcpy(nate, "Nate");
+                                strcpy(katie, "Katie");
+                                strcpy(summer, "Summer");
+                                strcpy(cole, "Cole");
+                                strcpy(bruno, "Bruno");
+                                strcpy(jack, "Jack");
                                 for (int i = 0; i < yokailist.size(); i++) {
                                     strcpy(yokailist[i].nickname, "");
                                 }
-                            } else if (currentSelection > 1 && currentSelection < 8) {
-                                keyboardInput(buffer, SwkbdType_All, 36, "enter a nickname", names[currentSelection-2]);
+                            } else if (currentSelection > 0 && currentSelection < 7) {
+                                keyboardInput(buffer, SwkbdType_All, 36, "enter a nickname", names[currentSelection-1]);
                                 if (buffer[0] != '\0') {
-                                    strcpy(names[currentSelection-2], buffer);
+                                    strcpy(names[currentSelection-1], buffer);
                                 }
                             } else {
-                                keyboardInput(buffer, SwkbdType_All, 46, "enter a nickname", yokailist[currentSelection-8].nickname);
+                                keyboardInput(buffer, SwkbdType_All, 36, "enter a nickname", yokailist[currentSelection-7].nickname);
                                 if (buffer[0] != '\0') {
-                                    strcpy(yokailist[currentSelection-8].nickname, buffer);
+                                    strcpy(yokailist[currentSelection-7].nickname, buffer);
+                                }
+                            }
+                        } else if (kDown & HidNpadButton_X) { //clear
+                            if (currentSelection != 0) {
+                                if (currentSelection < 7) {
+                                    switch (currentSelection) {
+                                        case 1:
+                                            strcpy(nate, "Nate");
+                                            break;
+                                        case 2:
+                                            strcpy(katie, "Katie");
+                                            break;
+                                        case 3:
+                                            strcpy(summer, "Summer");
+                                            break;
+                                        case 4:
+                                            strcpy(cole, "Cole");
+                                            break;
+                                        case 5:
+                                            strcpy(bruno, "Bruno");
+                                            break;
+                                        case 6:
+                                            strcpy(jack, "Jack");
+                                            break;
+                                        default:
+                                            printf("something went wrong with your switch-case :(");
+                                            pause(pad);
+                                            break;
+                                    }
+                                } else {
+                                    strcpy(yokailist[currentSelection-7].nickname, "");
+                                }
+                            }
+                        } else if (kDown & HidNpadButton_Y) { //swap width
+                            if (currentSelection != 0) {
+                                if (currentSelection < 7) {
+                                    strcpy(names[currentSelection-1], converter.to_bytes(convert_width(converter.from_bytes(names[currentSelection-1]))).substr(0, 35).c_str()); //hard coded values TODO
+                                } else {
+                                    strcpy(yokailist[currentSelection-7].nickname, converter.to_bytes(convert_width(converter.from_bytes(yokailist[currentSelection-7].nickname))).substr(0, 35).c_str());
                                 }
                             }
                         }
-                        printf("\x1b[1;1H\x1b[2JSelect an option: (Japanese is scrambled.)\n");
-                        std::cout << (currentSelection == 0 ? "> " : "  ") << "fix nicknames (Japanese-English to English)" << std::endl;
-                        std::cout << (currentSelection == 1 ? "> " : "  ") << "clear nicknames" << std::endl;
-                        printf("\n");
-                        std::cout << (currentSelection == 2 ? "> " : "  ") << "Nate: " << nate << std::endl;
-                        std::cout << (currentSelection == 3 ? "> " : "  ") << "Katie: " << katie << std::endl;
-                        std::cout << (currentSelection == 4 ? "> " : "  ") << "Summer: " << summer << std::endl;
-                        std::cout << (currentSelection == 5 ? "> " : "  ") << "Cole: " << cole << std::endl;
-                        std::cout << (currentSelection == 6 ? "> " : "  ") << "Bruno: " << bruno << std::endl;
-                        std::cout << (currentSelection == 7 ? "> " : "  ") << "Jack: " << jack << std::endl;
-                        printf("\n");
-                        int end = currentSelection/44*44+44;
+                        printf("\x1b[1;1H\x1b[2JSelect an option: (Y to swap width, X to clear. Japanese is scrambled)");
+                        if (currentSelection < 42) { //45 - 3 dead lines
+                            offset = 0;
+                            printf("\n");
+                            std::cout << (currentSelection == 0 ? "> " : "  ") << "clear all" << std::endl;
+                            printf("\n");
+                            std::cout << (currentSelection == 1 ? "> " : "  ") << "Nate: " << nate << std::endl;
+                            std::cout << (currentSelection == 2 ? "> " : "  ") << "Katie: " << katie << std::endl;
+                            std::cout << (currentSelection == 3 ? "> " : "  ") << "Summer: " << summer << std::endl;
+                            std::cout << (currentSelection == 4 ? "> " : "  ") << "Cole: " << cole << std::endl;
+                            std::cout << (currentSelection == 5 ? "> " : "  ") << "Bruno: " << bruno << std::endl;
+                            std::cout << (currentSelection == 6 ? "> " : "  ") << "Jack: " << jack << std::endl;
+                        } else {
+                            offset = 7;
+                        }
+                        end = (currentSelection-offset)/44*44+44;
                         if (end > yokailist.size()) {
                             end = yokailist.size();
                         }
-                        for (int i = currentSelection/44*44; i < end; i++) {
+                        for (int i = (currentSelection-offset)/44*44; i < end; i++) {
+                            if (i > 34 && currentSelection < 42) { //first page has extra options
+                                break;
+                            }
                             auto it = data4::yokais.find(*yokailist[i].type);
                             if (it != data4::yokais.end()) {
-                                std::cout << "\n" << (currentSelection == i+8 ? "> " : "  ") << it->second << ":      " << yokailist[i].nickname;
+                                std::cout << "\n" << (currentSelection == i+7 ? "> " : "  ") << it->second << ":      " << yokailist[i].nickname;
                             } else {
-                                std::cout << "\n" << (currentSelection == i+8 ? "> " : "  ") << *yokailist[i].type << " TODO:      " << yokailist[i].nickname;
+                                std::cout << "\n" << (currentSelection == i+7 ? "> " : "  ") << *yokailist[i].type << " TODO:      " << yokailist[i].nickname;
                             }
                         }
                     }
@@ -1483,9 +1526,9 @@ namespace edit4 {
                     padUpdate(&pad);
                     //TODO set location and x, y, z
                 } else if (currentEdit == 2) { //crank-a-kai
-                    keyboardInput(buffer, SwkbdType_NumPad, 2, "0-99", "99");
+                    keyboardInput(buffer, SwkbdType_NumPad, 2, "0-99", (*gatcharemaining == 0 ? "99" : std::to_string(*gatcharemaining).c_str())); //could use gatchamax
                     if (buffer[0] != '\0') {
-                        if (std::stoi(buffer) < 99) {
+                        if (std::stoi(buffer) > 99) {
                             *gatchamax = 99;
                             *gatcharemaining = 99;
                         } else {
@@ -1494,9 +1537,9 @@ namespace edit4 {
                         }
                     }
                 } else if (currentEdit == 3) { //money
-                    keyboardInput(buffer, SwkbdType_NumPad, 8, "0-9999999", (*money == 0 ? "9999999" : std::to_string(*money).c_str()));
+                    keyboardInput(buffer, SwkbdType_NumPad, 7, "0-9999999", (*money == 0 ? "9999999" : std::to_string(*money).c_str())); //TODO test max again
                     if (buffer[0] != '\0') {
-                        if (std::stoi(buffer) < 9999999) {
+                        if (std::stoi(buffer) > 9999999) {
                             *money = 9999999;
                         } else {
                             *money = std::stoi(buffer);
