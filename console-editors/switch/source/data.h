@@ -3689,12 +3689,6 @@ namespace data4 {
     };
 
     std::map<uint32_t, std::string> specials = {
-        {1474928712, "Rank A Soul"}, 
-        {1324519689, "Rank B Soul"}, 
-        {28510158, "Rank C Soul"}, 
-        {413677199, "Rank D Soul"}, 
-        {864380236, "Rank E Soul"}, 
-        {2093282187, "Rank S Soul"}, 
         {3634976232, "Bearer Asura Soul"}, 
         {3249693865, "Bearer Byakko Soul"}, 
         {2398351982, "Bearer Genbu Soul"}, 
@@ -3721,6 +3715,12 @@ namespace data4 {
         {4097024270, "Mononoke Soul"}, 
         {2302956875, "Omamori Soul"}, 
         {3978858575, "Onnen Soul"}, 
+        {1474928712, "Rank A Soul"}, 
+        {1324519689, "Rank B Soul"}, 
+        {28510158, "Rank C Soul"}, 
+        {413677199, "Rank D Soul"}, 
+        {864380236, "Rank E Soul"}, 
+        {2093282187, "Rank S Soul"}, 
         {3144824777, "Tsukumono Soul"}, 
         {2724791944, "Uwanosora Soul"}, 
     };

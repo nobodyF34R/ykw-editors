@@ -7,7 +7,9 @@ glyph handling
 
 1.2.0
 nickname editing up to 67 bytes 1s
-Y = individual stat editing
+fix wide conversion cutting off letters
 ZL = delete entry (opens confirmation box)
 ZR = add new (opens initialization box)
-!!!!!!! turn edit functions into structs
+
+2.0.0
+turn edit functions into structs

@@ -107,7 +107,7 @@ int selectInput(bool* selected, int& currentSelection, u64 kDown, int listSize) 
             }
         }
     }
-    printf("\x1b[1;1H\x1b[2JL or R to swap pages, X to select/deselect all");
+    printf("\x1b[1;1H\x1b[2JL or R to swap pages, X to select/deselect all, Y to hex edit");
     int end = currentSelection/44*44+44;
     if (end > listSize) {
         end = listSize;
@@ -253,6 +253,66 @@ void keyboardInput(char* outstr, SwkbdType keyboardType, u32 maxSize, const char
     }
 }
 
+void hexEdit(int& hexSelection, u64 kDown, char* buffer, int* mode, std::vector<uint8_t*> &data) {
+    if (kDown & HidNpadButton_AnyLeft) {
+        hexSelection--;
+        if (hexSelection < 0) {
+            hexSelection = data.size() - 1;
+        }
+    }
+    if (kDown & HidNpadButton_AnyRight) {
+        hexSelection++;
+        if (hexSelection >= data.size()) {
+            hexSelection = 0;
+        }
+    }
+    if (kDown & HidNpadButton_AnyUp) {
+        hexSelection -= 20;
+        if (hexSelection < 0) {
+            hexSelection = 0;
+        }
+    }
+    if (kDown & HidNpadButton_AnyDown) {
+        hexSelection += 20;
+        if (hexSelection >= data.size()) {
+            hexSelection = data.size() - 1;
+        }
+    }
+
+    if (kDown & HidNpadButton_X) {
+        if (*mode == 1) {
+            *mode = 4;
+        } else {
+            *mode = 1;
+        }
+    }
+
+    if (kDown & HidNpadButton_A) {
+        if (*mode == 1) {
+            keyboardInput(buffer, SwkbdType_NumPad, 3, "0-255", std::to_string(*data[hexSelection]).c_str());
+            if (buffer[0] != '\0') {
+                int newValue = std::stoi(buffer);
+                if (newValue >= 0 && newValue <= 255) {
+                    *data[hexSelection] = static_cast<uint8_t>(newValue);
+                }
+            }
+        } else {
+            keyboardInput(buffer, SwkbdType_NumPad, 10, "0-4294967295", std::to_string(*reinterpret_cast<uint32_t*>(data[hexSelection])).c_str());
+            if (buffer[0] != '\0') {
+                uint32_t newValue = std::stoul(buffer);
+                if (newValue <= 4294967295) {
+                    *reinterpret_cast<uint32_t*>(data[hexSelection]) = newValue;
+                }
+            }
+        }
+        }
+
+    printf("\x1b[1;1H\x1b[2JHex Editing Menu (L/R to cycle selection, X to swap mode)\n\n");
+    for (int i = 0; i < data.size(); i++) {
+        printf("%s%02x ", (hexSelection == i ? ">" : " "), *data[i]); //20 bytes per line
+    }
+}
+
 namespace edit1s {
     void edit_yokai(std::vector<struct1s::Yokai> &yokailist, PadState pad) {
         sortedMap.clear();
@@ -307,6 +367,35 @@ namespace edit1s {
             }
 
             if (selectPage) {
+                if (kDown & HidNpadButton_Y) {
+                    int hexSelection = 0;
+                    int mode = 1;
+                    while (appletMainLoop()) {
+                        consoleUpdate(NULL);
+                        padUpdate(&pad);
+                        u64 kDown = padGetButtonsDown(&pad);
+
+                        hexEdit(hexSelection, kDown, buffer, &mode, yokailist[currentSelection].data);
+                        if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B || kDown & HidNpadButton_Y) {
+                            break;
+                        }
+                        if (kDown & HidNpadButton_L) {
+                            currentSelection -= 1;
+                            if (currentSelection < 0) {
+                                currentSelection = yokailist.size() - 1;
+                            }
+                        }
+                        if (kDown & HidNpadButton_R) {
+                            currentSelection += 1;
+                            if (currentSelection >= yokailist.size()) {
+                                currentSelection = 0;
+                            }
+                        }
+
+                        std::cout << "\n\nIndex " << hexSelection << "/" << yokailist[currentSelection].data.size() << " of " << currentSelection+1 << "/" << yokailist.size() << " - " << mode << " byte mode.";
+                    }
+                }
+
                 end = selectInput(selected, currentSelection, kDown, yokailist.size());
                 for (int i = currentSelection/44*44; i < end; i++) {
                     std::cout << "\n" << (selected[i] ? "> " : "  ") << data1s::yokais.at(*yokailist[i].type) << (currentSelection == i ? " <<<" : "");
@@ -418,6 +507,35 @@ namespace edit1s {
             }
 
             if (selectPage) {
+                if (kDown & HidNpadButton_Y) {
+                    int hexSelection = 0;
+                    int mode = 1;
+                    while (appletMainLoop()) {
+                        consoleUpdate(NULL);
+                        padUpdate(&pad);
+                        u64 kDown = padGetButtonsDown(&pad);
+
+                        hexEdit(hexSelection, kDown, buffer, &mode, itemlist[currentSelection].data);
+                        if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B || kDown & HidNpadButton_Y) {
+                            break;
+                        }
+                        if (kDown & HidNpadButton_L) {
+                            currentSelection -= 1;
+                            if (currentSelection < 0) {
+                                currentSelection = itemlist.size() - 1;
+                            }
+                        }
+                        if (kDown & HidNpadButton_R) {
+                            currentSelection += 1;
+                            if (currentSelection >= itemlist.size()) {
+                                currentSelection = 0;
+                            }
+                        }
+
+                        std::cout << "\n\nIndex " << hexSelection << "/" << itemlist[currentSelection].data.size() << " of " << currentSelection+1 << "/" << itemlist.size() << " - " << mode << " byte mode.";
+                    }
+                }
+
                 end = selectInput(selected, currentSelection, kDown, itemlist.size());
                 for (int i = currentSelection/44*44; i < end; i++) {
                     std::cout << "\n" << (selected[i] ? "> " : "  ") << data1s::items.at(*itemlist[i].type) << (currentSelection == i ? " <<<" : "");
@@ -513,6 +631,35 @@ namespace edit1s {
             }
 
             if (selectPage) {
+                if (kDown & HidNpadButton_Y) {
+                    int hexSelection = 0;
+                    int mode = 1;
+                    while (appletMainLoop()) {
+                        consoleUpdate(NULL);
+                        padUpdate(&pad);
+                        u64 kDown = padGetButtonsDown(&pad);
+
+                        hexEdit(hexSelection, kDown, buffer, &mode, equipmentlist[currentSelection].data);
+                        if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B || kDown & HidNpadButton_Y) {
+                            break;
+                        }
+                        if (kDown & HidNpadButton_L) {
+                            currentSelection -= 1;
+                            if (currentSelection < 0) {
+                                currentSelection = equipmentlist.size() - 1;
+                            }
+                        }
+                        if (kDown & HidNpadButton_R) {
+                            currentSelection += 1;
+                            if (currentSelection >= equipmentlist.size()) {
+                                currentSelection = 0;
+                            }
+                        }
+
+                        std::cout << "\n\nIndex " << hexSelection << "/" << equipmentlist[currentSelection].data.size() << " of " << currentSelection+1 << "/" << equipmentlist.size() << " - " << mode << " byte mode.";
+                    }
+                }
+
                 end = selectInput(selected, currentSelection, kDown, equipmentlist.size());
                 for (int i = currentSelection/44*44; i < end; i++) {
                     std::cout << "\n" << (selected[i] ? "> " : "  ") << data1s::equipments.at(*equipmentlist[i].type) << (currentSelection == i ? " <<<" : "");
@@ -607,6 +754,35 @@ namespace edit1s {
             }
 
             if (selectPage) {
+                if (kDown & HidNpadButton_Y) {
+                    int hexSelection = 0;
+                    int mode = 1;
+                    while (appletMainLoop()) {
+                        consoleUpdate(NULL);
+                        padUpdate(&pad);
+                        u64 kDown = padGetButtonsDown(&pad);
+
+                        hexEdit(hexSelection, kDown, buffer, &mode, importantlist[currentSelection].data);
+                        if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B || kDown & HidNpadButton_Y) {
+                            break;
+                        }
+                        if (kDown & HidNpadButton_L) {
+                            currentSelection -= 1;
+                            if (currentSelection < 0) {
+                                currentSelection = importantlist.size() - 1;
+                            }
+                        }
+                        if (kDown & HidNpadButton_R) {
+                            currentSelection += 1;
+                            if (currentSelection >= importantlist.size()) {
+                                currentSelection = 0;
+                            }
+                        }
+
+                        std::cout << "\n\nIndex " << hexSelection << "/" << importantlist[currentSelection].data.size() << " of " << currentSelection+1 << "/" << importantlist.size() << " - " << mode << " byte mode.";
+                    }
+                }
+
                 end = selectInput(selected, currentSelection, kDown, importantlist.size());
                 for (int i = currentSelection/44*44; i < end; i++) {
                     std::cout << "\n" << (selected[i] ? "> " : "  ") << data1s::importants.at(*importantlist[i].type) << (currentSelection == i ? " <<<" : "");
@@ -712,7 +888,9 @@ namespace edit1s {
                             }
                             auto it = data1s::yokais.find(*yokailist[i].type);
                             if (it != data1s::yokais.end()) {
-                                std::cout << "\n" << (currentSelection == i+1 ? "> " : "  ") << it->second << ":      " << yokailist[i].nickname;
+                                std::string nickname = yokailist[i].nickname;
+                                std::replace(nickname.begin(), nickname.end(), '\n', 'n');
+                                std::cout << "\n" << (currentSelection == i+1 ? "> " : "  ") << it->second << ":" << std::string(31 - it->second.size(), ' ') << nickname; //TODO fix alignment
                             }
                         }
                     }
@@ -720,9 +898,11 @@ namespace edit1s {
                     mapInput(pad, currentLocation, "location (TODO)");
                     padUpdate(&pad);
                     //TODO set location and x, y, z
-                } else if (currentEdit == 2) { //crank-a-kai
+                } else if (currentEdit == 2) { //time
                     //TODO
-                } else if (currentEdit == 3) { //money
+                } else if (currentEdit == 3) { //crank-a-kai
+                    //TODO
+                } else if (currentEdit == 4) { //money
                     keyboardInput(buffer, SwkbdType_NumPad, 8, "0-999999", (*money == 0 ? "999999" : std::to_string(*money).c_str())); //TODO test max again
                     if (buffer[0] != '\0') {
                         if (std::stoi(buffer) > 999999) {
@@ -736,8 +916,9 @@ namespace edit1s {
             printf("\x1b[1;1H\x1b[2JSelect an option:\n");
             std::cout << (currentEdit == 0 ? "> " : "  ") << "nicknames" << std::endl;
             std::cout << (currentEdit == 1 ? "> " : "  ") << "location TODO" << std::endl;
-            std::cout << (currentEdit == 2 ? "> " : "  ") << "crank-a-kai TODO" << std::endl;
-            std::cout << (currentEdit == 3 ? "> " : "  ") << "money" << std::endl;
+            std::cout << (currentEdit == 2 ? "> " : "  ") << "time TODO" << std::endl;
+            std::cout << (currentEdit == 3 ? "> " : "  ") << "crank-a-kai TODO" << std::endl;
+            std::cout << (currentEdit == 4 ? "> " : "  ") << "money" << std::endl;
             //TODO time
         }
     }
@@ -796,6 +977,35 @@ namespace edit4 {
             }
 
             if (selectPage) {
+                if (kDown & HidNpadButton_Y) {
+                    int hexSelection = 0;
+                    int mode = 1;
+                    while (appletMainLoop()) {
+                        consoleUpdate(NULL);
+                        padUpdate(&pad);
+                        u64 kDown = padGetButtonsDown(&pad);
+
+                        hexEdit(hexSelection, kDown, buffer, &mode, characterlist[currentSelection].data);
+                        if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B || kDown & HidNpadButton_Y) {
+                            break;
+                        }
+                        if (kDown & HidNpadButton_L) {
+                            currentSelection -= 1;
+                            if (currentSelection < 0) {
+                                currentSelection = characterlist.size() - 1;
+                            }
+                        }
+                        if (kDown & HidNpadButton_R) {
+                            currentSelection += 1;
+                            if (currentSelection >= characterlist.size()) {
+                                currentSelection = 0;
+                            }
+                        }
+
+                        std::cout << "\n\nIndex " << hexSelection << "/" << characterlist[currentSelection].data.size() << " of " << currentSelection+1 << "/" << characterlist.size() << " - " << mode << " byte mode.";
+                    }
+                }
+
                 end = selectInput(selected, currentSelection, kDown, characterlist.size());
                 for (int i = currentSelection/44*44; i < end; i++) {
                     auto it = data4::characters.find(*characterlist[i].type);
@@ -852,7 +1062,7 @@ namespace edit4 {
     
     void edit_yokai(std::vector<struct4::Yokai> &yokailist, PadState pad) {
         sortedMap.clear();
-        for (auto const& pair : data4::yokais) {
+        for (auto const& pair : data4::characters) { //some characters break the game
             sortedMap.push_back(pair);
         }
         std::sort(sortedMap.begin(), sortedMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
@@ -902,10 +1112,39 @@ namespace edit4 {
             }
 
             if (selectPage) {
+                if (kDown & HidNpadButton_Y) {
+                    int hexSelection = 0;
+                    int mode = 1;
+                    while (appletMainLoop()) {
+                        consoleUpdate(NULL);
+                        padUpdate(&pad);
+                        u64 kDown = padGetButtonsDown(&pad);
+
+                        hexEdit(hexSelection, kDown, buffer, &mode, yokailist[currentSelection].data);
+                        if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B || kDown & HidNpadButton_Y) {
+                            break;
+                        }
+                        if (kDown & HidNpadButton_L) {
+                            currentSelection -= 1;
+                            if (currentSelection < 0) {
+                                currentSelection = yokailist.size() - 1;
+                            }
+                        }
+                        if (kDown & HidNpadButton_R) {
+                            currentSelection += 1;
+                            if (currentSelection >= yokailist.size()) {
+                                currentSelection = 0;
+                            }
+                        }
+
+                        std::cout << "\n\nIndex " << hexSelection << "/" << yokailist[currentSelection].data.size() << " of " << currentSelection+1 << "/" << yokailist.size() << " - " << mode << " byte mode.";
+                    }
+                }
+
                 end = selectInput(selected, currentSelection, kDown, yokailist.size());
                 for (int i = currentSelection/44*44; i < end; i++) {
-                    auto it = data4::yokais.find(*yokailist[i].type);
-                    if (it != data4::yokais.end()) {
+                    auto it = data4::characters.find(*yokailist[i].type); //makes debugging harder
+                    if (it != data4::characters.end()) {
                         std::cout << "\n" << (selected[i] ? "> " : "  ") << it->second << (currentSelection == i ? " <<<" : "");
                     } else {
                         std::cout << "\n" << (selected[i] ? "> " : "  ") << *yokailist[i].type << " TODO" << (currentSelection == i ? " <<<" : "");
@@ -947,7 +1186,7 @@ namespace edit4 {
                     }
                 }
                 //TODO stats etc
-                std::cout << (currentEdit == 0 ? "> " : "  ") << "yokai: " << (currentYokai == 0 ? "" : data4::yokais.at(currentYokai)) << std::endl;
+                std::cout << (currentEdit == 0 ? "> " : "  ") << "yokai: " << (currentYokai == 0 ? "" : data4::characters.at(currentYokai)) << std::endl;
                 std::cout << (currentEdit == 1 ? "> " : "  ") << "level: " << (currentLevel == 0 ? "" : std::to_string(currentLevel)) << std::endl;
                 printf("\n");
                 std::cout << (currentEdit == 2 ? "> " : "  ") << "apply and set max" << std::endl;
@@ -1008,6 +1247,35 @@ namespace edit4 {
             }
 
             if (selectPage) {
+                if (kDown & HidNpadButton_Y) {
+                    int hexSelection = 0;
+                    int mode = 1;
+                    while (appletMainLoop()) {
+                        consoleUpdate(NULL);
+                        padUpdate(&pad);
+                        u64 kDown = padGetButtonsDown(&pad);
+
+                        hexEdit(hexSelection, kDown, buffer, &mode, itemlist[currentSelection].data);
+                        if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B || kDown & HidNpadButton_Y) {
+                            break;
+                        }
+                        if (kDown & HidNpadButton_L) {
+                            currentSelection -= 1;
+                            if (currentSelection < 0) {
+                                currentSelection = itemlist.size() - 1;
+                            }
+                        }
+                        if (kDown & HidNpadButton_R) {
+                            currentSelection += 1;
+                            if (currentSelection >= itemlist.size()) {
+                                currentSelection = 0;
+                            }
+                        }
+
+                        std::cout << "\n\nIndex " << hexSelection << "/" << itemlist[currentSelection].data.size() << " of " << currentSelection+1 << "/" << itemlist.size() << " - " << mode << " byte mode.";
+                    }
+                }
+
                 end = selectInput(selected, currentSelection, kDown, itemlist.size());
                 for (int i = currentSelection/44*44; i < end; i++) {
                     auto it = data4::items.find(*itemlist[i].type);
@@ -1108,6 +1376,35 @@ namespace edit4 {
             }
             
             if (selectPage) {
+                if (kDown & HidNpadButton_Y) {
+                    int hexSelection = 0;
+                    int mode = 1;
+                    while (appletMainLoop()) {
+                        consoleUpdate(NULL);
+                        padUpdate(&pad);
+                        u64 kDown = padGetButtonsDown(&pad);
+
+                        hexEdit(hexSelection, kDown, buffer, &mode, equipmentlist[currentSelection].data);
+                        if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B || kDown & HidNpadButton_Y) {
+                            break;
+                        }
+                        if (kDown & HidNpadButton_L) {
+                            currentSelection -= 1;
+                            if (currentSelection < 0) {
+                                currentSelection = equipmentlist.size() - 1;
+                            }
+                        }
+                        if (kDown & HidNpadButton_R) {
+                            currentSelection += 1;
+                            if (currentSelection >= equipmentlist.size()) {
+                                currentSelection = 0;
+                            }
+                        }
+
+                        std::cout << "\n\nIndex " << hexSelection << "/" << equipmentlist[currentSelection].data.size() << " of " << currentSelection+1 << "/" << equipmentlist.size() << " - " << mode << " byte mode.";
+                    }
+                }
+
                 end = selectInput(selected, currentSelection, kDown, equipmentlist.size());
                 for (int i = currentSelection/44*44; i < end; i++) {
                     auto it = data4::equipments.find(*equipmentlist[i].type);
@@ -1210,6 +1507,35 @@ namespace edit4 {
             }
 
             if (selectPage) {
+                if (kDown & HidNpadButton_Y) {
+                    int hexSelection = 0;
+                    int mode = 1;
+                    while (appletMainLoop()) {
+                        consoleUpdate(NULL);
+                        padUpdate(&pad);
+                        u64 kDown = padGetButtonsDown(&pad);
+
+                        hexEdit(hexSelection, kDown, buffer, &mode, soullist[currentSelection].data);
+                        if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B || kDown & HidNpadButton_Y) {
+                            break;
+                        }
+                        if (kDown & HidNpadButton_L) {
+                            currentSelection -= 1;
+                            if (currentSelection < 0) {
+                                currentSelection = soullist.size() - 1;
+                            }
+                        }
+                        if (kDown & HidNpadButton_R) {
+                            currentSelection += 1;
+                            if (currentSelection >= soullist.size()) {
+                                currentSelection = 0;
+                            }
+                        }
+
+                        std::cout << "\n\nIndex " << hexSelection << "/" << soullist[currentSelection].data.size() << " of " << currentSelection+1 << "/" << soullist.size() << " - " << mode << " byte mode.";
+                    }
+                }
+
                 end = selectInput(selected, currentSelection, kDown, soullist.size());
                 for (int i = currentSelection/44*44; i < end; i++) {
                     auto it = data4::souls.find(*soullist[i].type);
@@ -1340,6 +1666,35 @@ namespace edit4 {
             }
 
             if (selectPage) {
+                if (kDown & HidNpadButton_Y) {
+                    int hexSelection = 0;
+                    int mode = 1;
+                    while (appletMainLoop()) {
+                        consoleUpdate(NULL);
+                        padUpdate(&pad);
+                        u64 kDown = padGetButtonsDown(&pad);
+
+                        hexEdit(hexSelection, kDown, buffer, &mode, speciallist[currentSelection].data);
+                        if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B || kDown & HidNpadButton_Y) {
+                            break;
+                        }
+                        if (kDown & HidNpadButton_L) {
+                            currentSelection -= 1;
+                            if (currentSelection < 0) {
+                                currentSelection = speciallist.size() - 1;
+                            }
+                        }
+                        if (kDown & HidNpadButton_R) {
+                            currentSelection += 1;
+                            if (currentSelection >= speciallist.size()) {
+                                currentSelection = 0;
+                            }
+                        }
+
+                        std::cout << "\n\nIndex " << hexSelection << "/" << speciallist[currentSelection].data.size() << " of " << currentSelection+1 << "/" << speciallist.size() << " - " << mode << " byte mode.";
+                    }
+                }
+
                 end = selectInput(selected, currentSelection, kDown, speciallist.size());
                 for (int i = currentSelection/44*44; i < end; i++) {
                     auto it = data4::specials.find(*speciallist[i].type);
@@ -1496,7 +1851,7 @@ namespace edit4 {
                             printf("\n");
                             std::cout << (currentSelection == 0 ? "> " : "  ") << "clear all" << std::endl;
                             printf("\n");
-                            std::cout << (currentSelection == 1 ? "> " : "  ") << "Nate: " << nate << std::endl;
+                            std::cout << (currentSelection == 1 ? "> " : "  ") << "Nate: " << nate << std::endl; //could change these to the character types
                             std::cout << (currentSelection == 2 ? "> " : "  ") << "Katie: " << katie << std::endl;
                             std::cout << (currentSelection == 3 ? "> " : "  ") << "Summer: " << summer << std::endl;
                             std::cout << (currentSelection == 4 ? "> " : "  ") << "Cole: " << cole << std::endl;
@@ -1513,11 +1868,15 @@ namespace edit4 {
                             if (i > 34 && currentSelection < 42) { //first page has extra options
                                 break;
                             }
-                            auto it = data4::yokais.find(*yokailist[i].type);
-                            if (it != data4::yokais.end()) {
-                                std::cout << "\n" << (currentSelection == i+7 ? "> " : "  ") << it->second << ":      " << yokailist[i].nickname;
+                            auto it = data4::characters.find(*yokailist[i].type);
+                            if (it != data4::characters.end()) {
+                                std::string nickname = yokailist[i].nickname;
+                                std::replace(nickname.begin(), nickname.end(), '\n', 'n');
+                                std::cout << "\n" << (currentSelection == i+7 ? "> " : "  ") << it->second << ":" << std::string(31 - it->second.size(), ' ') << nickname;
                             } else {
-                                std::cout << "\n" << (currentSelection == i+7 ? "> " : "  ") << *yokailist[i].type << " TODO:      " << yokailist[i].nickname;
+                                std::string nickname = yokailist[i].nickname;
+                                std::replace(nickname.begin(), nickname.end(), '\n', 'n');
+                                std::cout << "\n" << (currentSelection == i+7 ? "> " : "  ") << *yokailist[i].type << " TODO:" << std::string(26 - std::to_string(*yokailist[i].type).size(), ' ') << nickname;
                             }
                         }
                     }
