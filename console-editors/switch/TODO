@@ -2,14 +2,13 @@ yokais:
 4042588213
 
 
-1.1.1
+1.1.2
 glyph handling
 
 1.2.0
-nickname editing up to 67 bytes 1s
-fix wide conversion cutting off letters
 ZL = delete entry (opens confirmation box)
 ZR = add new (opens initialization box)
 
 2.0.0
 turn edit functions into structs
+nickname editing up to 67 bytes 1s

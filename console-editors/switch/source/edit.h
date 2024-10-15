@@ -1839,9 +1839,9 @@ namespace edit4 {
                         } else if (kDown & HidNpadButton_Y) { //swap width
                             if (currentSelection != 0) {
                                 if (currentSelection < 7) {
-                                    strcpy(names[currentSelection-1], converter.to_bytes(convert_width(converter.from_bytes(names[currentSelection-1]))).substr(0, 35).c_str()); //hard coded values TODO
+                                    strcpy(names[currentSelection-1], converter.to_bytes(convert_width(converter.from_bytes(names[currentSelection-1]))).substr(0, 33).c_str()); //TODO fix substring logic
                                 } else {
-                                    strcpy(yokailist[currentSelection-7].nickname, converter.to_bytes(convert_width(converter.from_bytes(yokailist[currentSelection-7].nickname))).substr(0, 35).c_str());
+                                    strcpy(yokailist[currentSelection-7].nickname, converter.to_bytes(convert_width(converter.from_bytes(yokailist[currentSelection-7].nickname))).substr(0, 33).c_str());
                                 }
                             }
                         }
