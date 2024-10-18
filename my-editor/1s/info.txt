@@ -17,11 +17,11 @@ if you make yokai/118 b'\x03' then its loaf level becomes serious
 0003 or = carefree
 
 
-evs and ivs: (super confusing)
+evs and ivs:
 
 tiv: max if 1 stat then 8 else 4 on both (it's based on tribes, may have to look into this.) tiv = tribal iv
 iv1: hp+str+spr+def+spd=10
-iv2: all=3 (evolutions only?)
+iv2: all=3 (evolutions only?) TODO test base yokai with iv2
 ev: max=hp+str+spr+def+spd=20? 
 affection is related to when a yokai gets a stat increase. based on number of battles fought & exporbs used. don't have to worry about this since we can manually edit stats. max = 300
 

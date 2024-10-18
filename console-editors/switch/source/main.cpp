@@ -10,6 +10,7 @@
 #include <iostream>
 #include <locale>
 #include <map>
+#include <numeric>
 #include <sstream>
 #include <stdexcept>
 #include <string>
@@ -307,15 +308,15 @@ int main(int argc, char** argv) {
                                                 u64 kDown = padGetButtonsDown(&pad);
                                                 inputHandling(selectedAction, kDown, 5);
 
-                                                if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_B){
+                                                if (kDown & HidNpadButton_Minus || kDown & HidNpadButton_Plus || kDown & HidNpadButton_B){
                                                     break;
                                                 }
-                                                if (kDown & HidNpadButton_Minus){
+                                                if (kDown & HidNpadButton_X){
                                                     save = false;
                                                     break;
                                                 }
 
-                                                printf("\x1b[1;1H\x1b[2J- to exit without saving \n");
+                                                printf("\x1b[1;1H\x1b[2JX to exit without saving \n");
                                                 std::cout << (0 == selectedAction ? "> " : "  ") << "yokai" << std::endl;
                                                 std::cout << (1 == selectedAction ? "> " : "  ") << "items" << std::endl;
                                                 std::cout << (2 == selectedAction ? "> " : "  ") << "equipment" << std::endl;
@@ -487,15 +488,15 @@ int main(int argc, char** argv) {
                                             u64 kDown = padGetButtonsDown(&pad);
                                             inputHandling(selectedAction, kDown, 7);
 
-                                            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_B){
+                                            if (kDown & HidNpadButton_Minus || kDown & HidNpadButton_Plus || kDown & HidNpadButton_B){
                                                 break;
                                             }
-                                            if (kDown & HidNpadButton_Minus){
+                                            if (kDown & HidNpadButton_X){
                                                 save = false;
                                                 break;
                                             }
 
-                                            printf("\x1b[1;1H\x1b[2J- to exit without saving \n");
+                                            printf("\x1b[1;1H\x1b[2JX to exit without saving \n");
                                             std::cout << (0 == selectedAction ? "> " : "  ") << "characters" << std::endl;
                                             std::cout << (1 == selectedAction ? "> " : "  ") << "yokai" << std::endl;
                                             std::cout << (2 == selectedAction ? "> " : "  ") << "items" << std::endl;

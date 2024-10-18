@@ -162,7 +162,7 @@ void mapInput(PadState pad, int& currentSelection, std::string type) {
                 break;
             }
             if (kDown & HidNpadButton_Y) {
-                mapSelection = 0;
+                currentSelection = 0;
                 break;
             }
         }
@@ -336,6 +336,14 @@ namespace edit1s {
         int currentYokai = 0;
         int currentAttitude = 0;
         int currentLevel = 0;
+        std::vector<uint8_t> tiv;
+        std::map<std::vector<uint8_t>, std::string> presets = { //EVs (/2 for ivs)
+            {{4, 10, 0, 2, 4}, "FIGHTER"},
+            {{4, 0, 10, 2, 4}, "TECHNICAL"},
+            {{8, 0, 0, 4, 8}, "HEALER"},
+            {{10, 0, 0, 10, 0}, "TANK"},
+            {{4, 4, 4, 4, 4}, "BALANCED"}
+        };
 
         while (appletMainLoop()) {
             consoleUpdate(NULL);
@@ -402,7 +410,7 @@ namespace edit1s {
                 }
             } else { //edit page
                 printf("\x1b[1;1H\x1b[2JL or R to swap pages\n");
-                inputHandling(currentEdit, kDown, 5);
+                inputHandling(currentEdit, kDown, 6);
                 if (kDown & HidNpadButton_A) {
                     if (currentEdit == 0) { //yokai
                         mapInput(pad, currentYokai, "yokai");
@@ -421,6 +429,245 @@ namespace edit1s {
                                 currentLevel = std::stoi(buffer);
                             }
                         }
+                    } else if (currentEdit == 3) { //edit stats
+                        std::vector<int> selectedIndexes;
+                        for (int i = 0; i < yokailist.size(); i++) {
+                            if (selected[i]) {
+                                selectedIndexes.push_back(i);
+                            }
+                        }
+                        int totalSelected = selectedIndexes.size();
+                        if (totalSelected == 0) continue;
+                        int currentStat = 0;
+                        int currentPreset = 0;
+                        int index = 0;
+                        std::vector<uint8_t> evs;
+                        std::vector<uint8_t> ivs;
+                        while (appletMainLoop()) {
+                            consoleUpdate(NULL);
+                            padUpdate(&pad);
+                            u64 kDown = padGetButtonsDown(&pad);
+                            inputHandling(currentStat, kDown, 4);
+
+                            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B) {
+                                break;
+                            }
+                            
+                            if (kDown & HidNpadButton_A) {
+                                if (currentStat == 0) { //presets
+                                    auto it = presets.find(evs);
+                                    if (it != presets.end()) {
+                                        bool match = true;
+                                        for (int i = 0; i < 5; i++) {
+                                            if (ivs[i]*2 != evs[i]) {
+                                                match = false;
+                                                break;
+                                            }
+                                        }
+                                        if (match) {
+                                            currentPreset = std::distance(presets.begin(), it);
+                                        } else {
+                                            currentPreset = presets.size();
+                                        }
+                                    } else {
+                                        currentPreset = presets.size();
+                                    }
+                                    while (appletMainLoop()) {
+                                        consoleUpdate(NULL);
+                                        padUpdate(&pad);
+                                        u64 kDown = padGetButtonsDown(&pad);
+                                        inputHandling(currentPreset, kDown, presets.size()+1);
+
+                                        if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B) {
+                                            break; //could add to the A logic
+                                        }
+
+                                        if (kDown & HidNpadButton_A) {
+                                            if (currentPreset != presets.size()) {
+                                                auto it = presets.begin();
+                                                std::advance(it, currentPreset);
+                                                *yokailist[selectedIndexes[index]].stats.ev_hp = it->first[0]; //TODO find a way to use ev/iv list
+                                                *yokailist[selectedIndexes[index]].stats.ev_str = it->first[1];
+                                                *yokailist[selectedIndexes[index]].stats.ev_spr = it->first[2];
+                                                *yokailist[selectedIndexes[index]].stats.ev_def = it->first[3];
+                                                *yokailist[selectedIndexes[index]].stats.ev_spd = it->first[4];
+                                                *yokailist[selectedIndexes[index]].stats.iv21_hp = (*yokailist[selectedIndexes[index]].stats.iv21_hp & 0xF0) | (it->first[0]/2 & 0x0F);
+                                                *yokailist[selectedIndexes[index]].stats.iv21_str = (*yokailist[selectedIndexes[index]].stats.iv21_str & 0xF0) | (it->first[1]/2 & 0x0F);
+                                                *yokailist[selectedIndexes[index]].stats.iv21_spr = (*yokailist[selectedIndexes[index]].stats.iv21_spr & 0xF0) | (it->first[2]/2 & 0x0F);
+                                                *yokailist[selectedIndexes[index]].stats.iv21_def = (*yokailist[selectedIndexes[index]].stats.iv21_def & 0xF0) | (it->first[3]/2 & 0x0F);
+                                                *yokailist[selectedIndexes[index]].stats.iv21_spd = (*yokailist[selectedIndexes[index]].stats.iv21_spd & 0xF0) | (it->first[4]/2 & 0x0F);
+                                            }
+
+                                            break;
+                                        }
+
+                                        printf("\x1b[1;1H\x1b[2JSelect a preset:\n");
+                                        for (int i = 0; i < presets.size(); i++) {
+                                            auto it = presets.begin();
+                                            std::advance(it, i);
+                                            std::cout << (i == currentPreset ? "> " : "  ") << it->second << std::endl;
+                                        }
+                                        printf("\n");
+                                        std::cout << (presets.size() == currentPreset ? "> " : "  ") << "custom" << std::endl;
+                                    };
+                                } else if (currentStat == 1) { //EVs
+                                    int currentEV = 0;
+                                    while (appletMainLoop()) {
+                                        consoleUpdate(NULL);
+                                        padUpdate(&pad);
+                                        u64 kDown = padGetButtonsDown(&pad);
+
+                                        inputHandling(currentEV, kDown, 5);
+
+                                        if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B) {
+                                            break;
+                                        }
+
+                                        if (kDown & HidNpadButton_A) {
+                                            keyboardInput(buffer, SwkbdType_NumPad, 2, "0-20", std::to_string(evs[currentEV]).c_str());
+                                            if (buffer[0] != '\0') {
+                                                if (std::stoi(buffer) > 20) {
+                                                    evs[currentEV] = 20;
+                                                } else {
+                                                    evs[currentEV] = std::stoi(buffer);
+                                                }
+                                            }
+                                        }
+
+                                        printf("\x1b[1;1H\x1b[2JEdit EVs\n\n");
+                                        std::cout << (currentEV == 0 ? "> " : "  ") << "HP:  " << std::to_string(evs[0]) << std::endl;
+                                        std::cout << (currentEV == 1 ? "> " : "  ") << "STR: " << std::to_string(evs[1]) << std::endl;
+                                        std::cout << (currentEV == 2 ? "> " : "  ") << "SPR: " << std::to_string(evs[2]) << std::endl;
+                                        std::cout << (currentEV == 3 ? "> " : "  ") << "DEF: " << std::to_string(evs[3]) << std::endl;
+                                        std::cout << (currentEV == 4 ? "> " : "  ") << "SPD: " << std::to_string(evs[4]) << std::endl;
+                                        printf("\n");
+                                        std::cout << "EVs must sum to 20 at most" << std::endl;
+                                    }
+                                    *yokailist[selectedIndexes[index]].stats.ev_hp = evs[0]; //temporary fix
+                                    *yokailist[selectedIndexes[index]].stats.ev_str = evs[1];
+                                    *yokailist[selectedIndexes[index]].stats.ev_spr = evs[2];
+                                    *yokailist[selectedIndexes[index]].stats.ev_def = evs[3];
+                                    *yokailist[selectedIndexes[index]].stats.ev_spd = evs[4];
+                                } else if (currentStat == 2) { //IVs
+                                    int currentIV = 0;
+                                    while (appletMainLoop()) {
+                                        consoleUpdate(NULL);
+                                        padUpdate(&pad);
+                                        u64 kDown = padGetButtonsDown(&pad);
+
+                                        inputHandling(currentIV, kDown, 5);
+
+                                        if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B) {
+                                            break;
+                                        }
+
+                                        if (kDown & HidNpadButton_A) {
+                                            keyboardInput(buffer, SwkbdType_NumPad, 2, "0-10", std::to_string(ivs[currentIV]).c_str());
+                                            if (buffer[0] != '\0') {
+                                                if (std::stoi(buffer) > 10) {
+                                                    ivs[currentIV] = 10;
+                                                } else {
+                                                    ivs[currentIV] = std::stoi(buffer);
+                                                }
+                                            }
+                                        }
+
+                                        printf("\x1b[1;1H\x1b[2JEdit IVs\n\n");
+                                        std::cout << (currentIV == 0 ? "> " : "  ") << "HP:  " << std::to_string(ivs[0]) << std::endl;
+                                        std::cout << (currentIV == 1 ? "> " : "  ") << "STR: " << std::to_string(ivs[1]) << std::endl;
+                                        std::cout << (currentIV == 2 ? "> " : "  ") << "SPR: " << std::to_string(ivs[2]) << std::endl;
+                                        std::cout << (currentIV == 3 ? "> " : "  ") << "DEF: " << std::to_string(ivs[3]) << std::endl;
+                                        std::cout << (currentIV == 4 ? "> " : "  ") << "SPD: " << std::to_string(ivs[4]) << std::endl;
+                                        printf("\n");
+                                        std::cout << "IVs must sum to 10" << std::endl;
+                                    }
+                                    *yokailist[selectedIndexes[index]].stats.iv21_hp = (*yokailist[selectedIndexes[index]].stats.iv21_hp & 0xF0) | (ivs[0] & 0x0F);
+                                    *yokailist[selectedIndexes[index]].stats.iv21_str = (*yokailist[selectedIndexes[index]].stats.iv21_str & 0xF0) | (ivs[1] & 0x0F);
+                                    *yokailist[selectedIndexes[index]].stats.iv21_spr = (*yokailist[selectedIndexes[index]].stats.iv21_spr & 0xF0) | (ivs[2] & 0x0F);
+                                    *yokailist[selectedIndexes[index]].stats.iv21_def = (*yokailist[selectedIndexes[index]].stats.iv21_def & 0xF0) | (ivs[3] & 0x0F);
+                                    *yokailist[selectedIndexes[index]].stats.iv21_spd = (*yokailist[selectedIndexes[index]].stats.iv21_spd & 0xF0) | (ivs[4] & 0x0F);
+                                } else if (currentStat == 3) { //set all
+                                    for (int selectedIndex : selectedIndexes) {
+                                        // Apply the same stats to all selected yokai
+                                        *yokailist[selectedIndex].stats.ev_hp = *yokailist[selectedIndexes[index]].stats.ev_hp;
+                                        *yokailist[selectedIndex].stats.ev_str = *yokailist[selectedIndexes[index]].stats.ev_str;
+                                        *yokailist[selectedIndex].stats.ev_spr = *yokailist[selectedIndexes[index]].stats.ev_spr;
+                                        *yokailist[selectedIndex].stats.ev_def = *yokailist[selectedIndexes[index]].stats.ev_def;
+                                        *yokailist[selectedIndex].stats.ev_spd = *yokailist[selectedIndexes[index]].stats.ev_spd;
+
+                                        *yokailist[selectedIndex].stats.iv21_hp = (*yokailist[selectedIndex].stats.iv21_hp & 0xF0) | (*yokailist[selectedIndexes[index]].stats.iv21_hp & 0x0F);
+                                        *yokailist[selectedIndex].stats.iv21_str = (*yokailist[selectedIndex].stats.iv21_str & 0xF0) | (*yokailist[selectedIndexes[index]].stats.iv21_str & 0x0F);
+                                        *yokailist[selectedIndex].stats.iv21_spr = (*yokailist[selectedIndex].stats.iv21_spr & 0xF0) | (*yokailist[selectedIndexes[index]].stats.iv21_spr & 0x0F);
+                                        *yokailist[selectedIndex].stats.iv21_def = (*yokailist[selectedIndex].stats.iv21_def & 0xF0) | (*yokailist[selectedIndexes[index]].stats.iv21_def & 0x0F);
+                                        *yokailist[selectedIndex].stats.iv21_spd = (*yokailist[selectedIndex].stats.iv21_spd & 0xF0) | (*yokailist[selectedIndexes[index]].stats.iv21_spd & 0x0F);
+                                    }
+                                }
+                            }
+
+                            if (kDown & HidNpadButton_L) {
+                                index -= 1;
+                                if (index < 0) {
+                                    index = totalSelected - 1;
+                                }
+                            }
+                            if (kDown & HidNpadButton_R) {
+                                index += 1;
+                                if (index >= totalSelected) {
+                                    index = 0;
+                                }
+                            }
+
+                            printf("\x1b[1;1H\x1b[2JEdit stats\n\n");
+                            std::cout << (currentStat == 0 ? "> " : "  ") << "preset: ";
+                            evs = {
+                                *yokailist[selectedIndexes[index]].stats.ev_hp,
+                                *yokailist[selectedIndexes[index]].stats.ev_str,
+                                *yokailist[selectedIndexes[index]].stats.ev_spr,
+                                *yokailist[selectedIndexes[index]].stats.ev_def,
+                                *yokailist[selectedIndexes[index]].stats.ev_spd
+                            };
+                            ivs = {
+                                static_cast<uint8_t>(*yokailist[selectedIndexes[index]].stats.iv21_hp & 0x0F),
+                                static_cast<uint8_t>(*yokailist[selectedIndexes[index]].stats.iv21_str & 0x0F),
+                                static_cast<uint8_t>(*yokailist[selectedIndexes[index]].stats.iv21_spr & 0x0F),
+                                static_cast<uint8_t>(*yokailist[selectedIndexes[index]].stats.iv21_def & 0x0F),
+                                static_cast<uint8_t>(*yokailist[selectedIndexes[index]].stats.iv21_spd & 0x0F)
+                            };
+                            auto it = presets.find(evs); //expensive to run every frame??
+                            if (it != presets.end()) {
+                                bool match = true;
+                                for (int i = 0; i < 5; i++) {
+                                    if (ivs[i]*2 != evs[i]) {
+                                        match = false;
+                                        break;
+                                    }
+                                }
+                                if (match) {
+                                    std::cout << it->second;
+                                } else {
+                                    std::cout << "custom";
+                                }
+                            } else {
+                                std::cout << "custom";
+                            }
+                            printf("\n\n");
+                            std::cout << (currentStat == 1 ? "> " : "  ") << "edit EVs" << std::endl;
+                            std::cout << (currentStat == 2 ? "> " : "  ") << "edit IVs" << std::endl;
+                            printf("\n");
+                            std::cout << (currentStat == 3 ? "> " : "  ") << "set all" << std::endl; //set all selected yokai to the same stats
+                            //print errors
+                            if (std::accumulate(evs.begin(), evs.end(), 0) > 20) {
+                                std::cout << "\nWARNING: EVs must sum to 20 at most" << std::endl;
+                            }
+                            if (std::accumulate(ivs.begin(), ivs.end(), 0) != 10) {//, [](int sum, uint8_t val) { return sum + (val & 0x0F); }) != 10) {
+                                std::cout << "\nWARNING: IVs must sum to 10" << std::endl;
+                            }
+                            if (currentStat == 3) {
+                                std::cout << "\nediting ALL" << std::endl;
+                            } else {
+                                std::cout << "\nediting " << index + 1 << "/" << totalSelected << std::endl; //index always starts at 0 now
+                            }
+                        }
                     } else { //apply (and set max)
                         for (int i = 0; i < yokailist.size(); i++) {
                             if (selected[i]) {
@@ -434,23 +681,38 @@ namespace edit1s {
                                 if (currentLevel != 0) {
                                     *yokailist[i].level = currentLevel;
                                 }
-                                if (currentEdit == 3) {
+                                if (currentEdit == 4) {
                                     *yokailist[i].attack = 255; //ingame max is 10
                                     *yokailist[i].technique = 255;
                                     *yokailist[i].soultimate = 255;
-                                    //TODO stats
+
+                                    tiv = data1s::tivs.at(*yokailist[i].type); //every tribe has a different tiv
+                                    *yokailist[i].stats.tiv_hp = tiv[0];
+                                    *yokailist[i].stats.tiv_str = tiv[1];
+                                    *yokailist[i].stats.tiv_spr = tiv[2];
+                                    *yokailist[i].stats.tiv_def = tiv[3];
+                                    *yokailist[i].stats.tiv_spd = tiv[4];
+
+                                    *yokailist[i].stats.iv21_hp = (*yokailist[i].stats.iv21_hp & 0x0F) | (15 << 4); //set first nibble to 15 ingame max is 3
+                                    *yokailist[i].stats.iv21_str = (*yokailist[i].stats.iv21_str & 0x0F) | (15 << 4);
+                                    *yokailist[i].stats.iv21_spr = (*yokailist[i].stats.iv21_spr & 0x0F) | (15 << 4);
+                                    *yokailist[i].stats.iv21_def = (*yokailist[i].stats.iv21_def & 0x0F) | (15 << 4);
+                                    *yokailist[i].stats.iv21_spd = (*yokailist[i].stats.iv21_spd & 0x0F) | (15 << 4);
+
+                                    //TODO loaf level
                                 }
                             }
                         }
                     }
                 }
-                //TODO stats etc
                 std::cout << (currentEdit == 0 ? "> " : "  ") << "yokai: " << (currentYokai == 0 ? "" : data1s::yokais.at(currentYokai)) << std::endl;
                 std::cout << (currentEdit == 1 ? "> " : "  ") << "attitude: " << data1s::attitudes[currentAttitude] << std::endl;
                 std::cout << (currentEdit == 2 ? "> " : "  ") << "level: " << (currentLevel == 0 ? "" : std::to_string(currentLevel)) << std::endl;
                 printf("\n");
-                std::cout << (currentEdit == 3 ? "> " : "  ") << "apply and set max" << std::endl;
-                std::cout << (currentEdit == 4 ? "> " : "  ") << "apply" << std::endl;
+                std::cout << (currentEdit == 3 ? "> " : "  ") << "edit stats" << std::endl;
+                printf("\n");
+                std::cout << (currentEdit == 4 ? "> " : "  ") << "apply and set max" << std::endl;
+                std::cout << (currentEdit == 5 ? "> " : "  ") << "apply" << std::endl;
             }
         }
     }
@@ -838,7 +1100,7 @@ namespace edit1s {
                 break;
             }
 
-            inputHandling(currentEdit, kDown, 4);
+            inputHandling(currentEdit, kDown, 5);
             if (kDown & HidNpadButton_A) {
                 if (currentEdit == 0) { //nicknames
                     while (appletMainLoop()) {
