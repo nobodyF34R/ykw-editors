@@ -46,7 +46,7 @@ INCLUDES	:=	include
 APP_TITLE   := editor #TODO rename to YKW editor or something
 APP_AUTHOR  := nobody_fear
 APP_DESCRIPTION := yo-kai watch save editor
-APP_VERSION := 1.1.1
+APP_VERSION := 1.2.0
 
 #---------------------------------------------------------------------------------
 # options for code generation

@@ -1,0 +1,3 @@
+iv rules: hp / 2 + Str + Spr + Def + Spd + ??? = 48
+
+I don't know much about this game...

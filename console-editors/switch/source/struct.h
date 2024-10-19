@@ -129,12 +129,7 @@ struct struct4 {
         uint16_t* num2;
         char* nickname; //utf-8 string
         uint32_t* type;
-        uint32_t* move1;
-        uint32_t* move2;
-        uint32_t* move3;
-        uint32_t* move4;
-        uint32_t* move5;
-        uint32_t* move6;
+        uint32_t* moves[6];
         uint32_t* xp;
         uint32_t* hp;
         uint32_t* yp;
@@ -168,12 +163,7 @@ struct struct4 {
             num2 = (uint16_t*)(&decryptedData[offset+2]);
             nickname = (char*)(&decryptedData[offset+28]);
             type = (uint32_t*)(&decryptedData[offset+72]);
-            move1 = (uint32_t*)(&decryptedData[offset+84]);
-            move2 = (uint32_t*)(&decryptedData[offset+88]);
-            move3 = (uint32_t*)(&decryptedData[offset+92]);
-            move4 = (uint32_t*)(&decryptedData[offset+96]);
-            move5 = (uint32_t*)(&decryptedData[offset+100]);
-            move6 = (uint32_t*)(&decryptedData[offset+104]);
+            for(int i=0;i<6;i++) moves[i] = (uint32_t*)(&decryptedData[offset+84+(i*4)]); // 6 moves
             xp = (uint32_t*)(&decryptedData[offset+132]);
             hp = (uint32_t*)(&decryptedData[offset+144]);
             yp = (uint32_t*)(&decryptedData[offset+156]);

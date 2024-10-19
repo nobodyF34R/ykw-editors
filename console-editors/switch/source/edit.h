@@ -437,7 +437,7 @@ namespace edit1s {
                             }
                         }
                         int totalSelected = selectedIndexes.size();
-                        if (totalSelected == 0) continue;
+                        if (totalSelected == 0) continue; //no yokai selected
                         int currentStat = 0;
                         int currentPreset = 0;
                         int index = 0;
@@ -1279,7 +1279,7 @@ namespace edit4 {
                 }
             } else { //edit page
                 printf("\x1b[1;1H\x1b[2JL or R to swap pages\n");
-                inputHandling(currentEdit, kDown, 4);
+                inputHandling(currentEdit, kDown, 6);
                 if (kDown & HidNpadButton_A) {
                     if (currentEdit == 0) { //character
                         mapInput(pad, currentCharacter, "character");
@@ -1295,17 +1295,160 @@ namespace edit4 {
                                 currentLevel = std::stoi(buffer);
                             }
                         }
+                    } else if (currentEdit == 2) { //edit moves
+                        std::vector<int> selectedIndexes;
+                        for (int i = 0; i < characterlist.size(); i++) {
+                            if (selected[i]) {
+                                selectedIndexes.push_back(i);
+                            }
+                        }
+                        int totalSelected = selectedIndexes.size();
+                        if (totalSelected == 0) continue; //no yokai selected
+                        int currentMove = 0;
+                        int index = 0;
+                        std::vector<uint8_t> evs;
+                        std::vector<uint8_t> ivs;
+                        while (appletMainLoop()) {
+                            consoleUpdate(NULL);
+                            padUpdate(&pad);
+                            u64 kDown = padGetButtonsDown(&pad);
+                            inputHandling(currentMove, kDown, 7);
+
+                            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B) {
+                                break;
+                            }
+                            
+                            if (kDown & HidNpadButton_A) {
+                                if (currentMove < 6) { //edit move
+                                    std::vector<std::pair<int, std::string>> moveMap;
+                                    for (auto const& pair : data4::moves) {
+                                        moveMap.push_back(pair);
+                                    }
+                                    std::sort(moveMap.begin(), moveMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
+                                        return left.second < right.second;
+                                    });
+
+                                    moveMap.erase(moveMap.begin()); // Exclude the first part of sorted moveMap (None)
+
+                                    uint32_t move = 0;
+                                    if (*characterlist[selectedIndexes[index]].moves[currentMove] == 0) {
+                                        mapSelection = 0;
+                                    } else {
+                                        for (int i = 0; i < moveMap.size(); i++) {
+                                            if (moveMap[i].first == *characterlist[selectedIndexes[index]].moves[currentMove]) {
+                                                mapSelection = i;
+                                                break;
+                                            }
+                                        }
+                                    }
+                                    SwkbdInline kbdinline;
+                                    swkbdInlineCreate(&kbdinline);
+                                    swkbdInlineSetFinishedInitializeCallback(&kbdinline, NULL);
+                                    swkbdInlineLaunchForLibraryApplet(&kbdinline, SwkbdInlineMode_AppletDisplay, 0);
+                                    swkbdInlineSetChangedStringCallback(&kbdinline, callback);
+                                    swkbdInlineSetDecidedEnterCallback(&kbdinline, enter);
+                                    swkbdInlineSetDecidedCancelCallback(&kbdinline, cancel);
+                                    SwkbdAppearArg appearArg;
+                                    swkbdInlineMakeAppearArg(&appearArg, SwkbdType_All);
+                                    
+                                    activeKeyboard = false;
+
+                                    while (appletMainLoop()) {
+                                        padUpdate(&pad);
+                                        swkbdInlineUpdate(&kbdinline, NULL);
+                                        u64 kDown = padGetButtonsDown(&pad);
+                                        if (!activeKeyboard) {
+                                            if (moveMap.size() != 0) {
+                                                inputHandling(mapSelection, kDown, moveMap.size());
+                                            }
+                                            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B || kDown & HidNpadButton_A){
+                                                if (moveMap.size() == 0) {
+                                                    move = 0;
+                                                    break;
+                                                }
+                                                move = moveMap[mapSelection].first;
+                                                break;
+                                            }
+                                            if (kDown & HidNpadButton_Y) {
+                                                move = 0;
+                                                break;
+                                            }
+                                        }
+                                        if (kDown & HidNpadButton_X) {
+                                            if (activeKeyboard) {
+                                                swkbdInlineDisappear(&kbdinline);
+                                            } else {
+                                                swkbdInlineAppear(&kbdinline, &appearArg);
+                                            }
+                                            activeKeyboard = !activeKeyboard;
+                                        }
+
+                                        int i = 0;
+                                        std::cout << "\x1b[1;1H\x1b[2JSelect a move (Y for none, X to toggle keyboard)";
+                                        for (auto const& pair : moveMap) {
+                                            if (i/44 == mapSelection/44) {
+                                                std::cout << "\n" << (i == mapSelection ? "> " : "  ") << pair.second;
+                                            }
+                                            if (i == mapSelection + 44) {
+                                                break;
+                                            }
+                                            i++;
+                                        }
+                                        
+                                        consoleUpdate(NULL);
+                                    }
+
+                                    swkbdInlineClose(&kbdinline);
+                                    *characterlist[selectedIndexes[index]].moves[currentMove] = move;
+                                } else if (currentMove == 6) { //set all
+                                    for (int selectedIndex : selectedIndexes) {
+                                        // Apply the same moves to all selected yokai
+                                        for (int i = 0; i < 6; i++) {
+                                            *characterlist[selectedIndex].moves[i] = *characterlist[selectedIndexes[index]].moves[i];
+                                        }
+                                    }
+                                }
+                            }
+
+                            if (kDown & HidNpadButton_L) {
+                                index -= 1;
+                                if (index < 0) {
+                                    index = totalSelected - 1;
+                                }
+                            }
+                            if (kDown & HidNpadButton_R) {
+                                index += 1;
+                                if (index >= totalSelected) {
+                                    index = 0;
+                                }
+                            }
+
+                            printf("\x1b[1;1H\x1b[2JEdit moves\n\n");
+                            for (int i = 0; i < 6; i++) {
+                                std::cout << (currentMove == i ? "> " : "  ") << i+1 << ": " << data4::moves.find(*characterlist[selectedIndexes[index]].moves[i])->second << std::endl;
+                            }
+                            printf("\n");
+                            std::cout << (currentMove == 6 ? "> " : "  ") << "set all" << std::endl; //set all selected yokai to the same stats
+                            
+                            if (currentMove == 6) {
+                                std::cout << "\nediting ALL" << std::endl;
+                            } else {
+                                std::cout << "\nediting " << index + 1 << "/" << totalSelected << std::endl; //index always starts at 0 now
+                            }
+                        }
+                    } else if (currentEdit == 3) { //edit stats
+                        //TODO
                     } else { //apply (and set max)
                         for (int i = 0; i < characterlist.size(); i++) {
                             if (selected[i]) {
-                                // *characterlist[i].hp = 1; //incase you lower the level
+                                *characterlist[i].hp = 1; //incase you lower the level
                                 if (currentCharacter != 0) {
                                     *characterlist[i].type = currentCharacter;
                                 }
                                 if (currentLevel != 0) {
                                     *characterlist[i].level = currentLevel;
                                 }
-                                if (currentEdit == 3) {
+                                if (currentEdit == 4) {
                                     //TODO stats
                                 }
                             }
@@ -1316,8 +1459,11 @@ namespace edit4 {
                 std::cout << (currentEdit == 0 ? "> " : "  ") << "character: " << (currentCharacter == 0 ? "" : data4::characters.at(currentCharacter)) << std::endl;
                 std::cout << (currentEdit == 1 ? "> " : "  ") << "level: " << (currentLevel == 0 ? "" : std::to_string(currentLevel)) << std::endl;
                 printf("\n");
-                std::cout << (currentEdit == 2 ? "> " : "  ") << "apply and set max" << std::endl;
-                std::cout << (currentEdit == 3 ? "> " : "  ") << "apply" << std::endl;
+                std::cout << (currentEdit == 2 ? "> " : "  ") << "edit moves" << std::endl;
+                std::cout << (currentEdit == 3 ? "> " : "  ") << "edit stats TODO" << std::endl;
+                printf("\n");
+                std::cout << (currentEdit == 4 ? "> " : "  ") << "apply and set max" << std::endl;
+                std::cout << (currentEdit == 5 ? "> " : "  ") << "apply" << std::endl;
             }
         }
     }
@@ -1414,7 +1560,7 @@ namespace edit4 {
                 }
             } else { //edit page
                 printf("\x1b[1;1H\x1b[2JL or R to swap pages\n");
-                inputHandling(currentEdit, kDown, 4);
+                inputHandling(currentEdit, kDown, 6);
                 if (kDown & HidNpadButton_A) {
                     if (currentEdit == 0) { //yokai
                         mapInput(pad, currentYokai, "yokai");
@@ -1430,17 +1576,160 @@ namespace edit4 {
                                 currentLevel = std::stoi(buffer);
                             }
                         }
+                    } else if (currentEdit == 2) { //edit moves
+                        std::vector<int> selectedIndexes;
+                        for (int i = 0; i < yokailist.size(); i++) {
+                            if (selected[i]) {
+                                selectedIndexes.push_back(i);
+                            }
+                        }
+                        int totalSelected = selectedIndexes.size();
+                        if (totalSelected == 0) continue; //no yokai selected
+                        int currentMove = 0;
+                        int index = 0;
+                        std::vector<uint8_t> evs;
+                        std::vector<uint8_t> ivs;
+                        while (appletMainLoop()) {
+                            consoleUpdate(NULL);
+                            padUpdate(&pad);
+                            u64 kDown = padGetButtonsDown(&pad);
+                            inputHandling(currentMove, kDown, 7);
+
+                            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B) {
+                                break;
+                            }
+                            
+                            if (kDown & HidNpadButton_A) {
+                                if (currentMove < 6) { //edit move
+                                    std::vector<std::pair<int, std::string>> moveMap;
+                                    for (auto const& pair : data4::moves) {
+                                        moveMap.push_back(pair);
+                                    }
+                                    std::sort(moveMap.begin(), moveMap.end(), [](const std::pair<int, std::string> &left, const std::pair<int, std::string> &right) {
+                                        return left.second < right.second;
+                                    });
+
+                                    moveMap.erase(moveMap.begin()); // Exclude the first part of sorted moveMap (None)
+
+                                    uint32_t move = 0;
+                                    if (*yokailist[selectedIndexes[index]].moves[currentMove] == 0) {
+                                        mapSelection = 0;
+                                    } else {
+                                        for (int i = 0; i < moveMap.size(); i++) {
+                                            if (moveMap[i].first == *yokailist[selectedIndexes[index]].moves[currentMove]) {
+                                                mapSelection = i;
+                                                break;
+                                            }
+                                        }
+                                    }
+                                    SwkbdInline kbdinline;
+                                    swkbdInlineCreate(&kbdinline);
+                                    swkbdInlineSetFinishedInitializeCallback(&kbdinline, NULL);
+                                    swkbdInlineLaunchForLibraryApplet(&kbdinline, SwkbdInlineMode_AppletDisplay, 0);
+                                    swkbdInlineSetChangedStringCallback(&kbdinline, callback);
+                                    swkbdInlineSetDecidedEnterCallback(&kbdinline, enter);
+                                    swkbdInlineSetDecidedCancelCallback(&kbdinline, cancel);
+                                    SwkbdAppearArg appearArg;
+                                    swkbdInlineMakeAppearArg(&appearArg, SwkbdType_All);
+                                    
+                                    activeKeyboard = false;
+
+                                    while (appletMainLoop()) {
+                                        padUpdate(&pad);
+                                        swkbdInlineUpdate(&kbdinline, NULL);
+                                        u64 kDown = padGetButtonsDown(&pad);
+                                        if (!activeKeyboard) {
+                                            if (moveMap.size() != 0) {
+                                                inputHandling(mapSelection, kDown, moveMap.size());
+                                            }
+                                            if (kDown & HidNpadButton_Plus || kDown & HidNpadButton_Minus || kDown & HidNpadButton_B || kDown & HidNpadButton_A){
+                                                if (moveMap.size() == 0) {
+                                                    move = 0;
+                                                    break;
+                                                }
+                                                move = moveMap[mapSelection].first;
+                                                break;
+                                            }
+                                            if (kDown & HidNpadButton_Y) {
+                                                move = 0;
+                                                break;
+                                            }
+                                        }
+                                        if (kDown & HidNpadButton_X) {
+                                            if (activeKeyboard) {
+                                                swkbdInlineDisappear(&kbdinline);
+                                            } else {
+                                                swkbdInlineAppear(&kbdinline, &appearArg);
+                                            }
+                                            activeKeyboard = !activeKeyboard;
+                                        }
+
+                                        int i = 0;
+                                        std::cout << "\x1b[1;1H\x1b[2JSelect a move (Y for none, X to toggle keyboard)";
+                                        for (auto const& pair : moveMap) {
+                                            if (i/44 == mapSelection/44) {
+                                                std::cout << "\n" << (i == mapSelection ? "> " : "  ") << pair.second;
+                                            }
+                                            if (i == mapSelection + 44) {
+                                                break;
+                                            }
+                                            i++;
+                                        }
+                                        
+                                        consoleUpdate(NULL);
+                                    }
+
+                                    swkbdInlineClose(&kbdinline);
+                                    *yokailist[selectedIndexes[index]].moves[currentMove] = move;
+                                } else if (currentMove == 6) { //set all
+                                    for (int selectedIndex : selectedIndexes) {
+                                        // Apply the same moves to all selected yokai
+                                        for (int i = 0; i < 6; i++) {
+                                            *yokailist[selectedIndex].moves[i] = *yokailist[selectedIndexes[index]].moves[i];
+                                        }
+                                    }
+                                }
+                            }
+
+                            if (kDown & HidNpadButton_L) {
+                                index -= 1;
+                                if (index < 0) {
+                                    index = totalSelected - 1;
+                                }
+                            }
+                            if (kDown & HidNpadButton_R) {
+                                index += 1;
+                                if (index >= totalSelected) {
+                                    index = 0;
+                                }
+                            }
+
+                            printf("\x1b[1;1H\x1b[2JEdit moves\n\n");
+                            for (int i = 0; i < 6; i++) {
+                                std::cout << (currentMove == i ? "> " : "  ") << i+1 << ": " << data4::moves.find(*yokailist[selectedIndexes[index]].moves[i])->second << std::endl;
+                            }
+                            printf("\n");
+                            std::cout << (currentMove == 6 ? "> " : "  ") << "set all" << std::endl; //set all selected yokai to the same stats
+                            
+                            if (currentMove == 6) {
+                                std::cout << "\nediting ALL" << std::endl;
+                            } else {
+                                std::cout << "\nediting " << index + 1 << "/" << totalSelected << std::endl; //index always starts at 0 now
+                            }
+                        }
+                    } else if (currentEdit == 3) { //edit stats
+                        //TODO
                     } else { //apply (and set max)
                         for (int i = 0; i < yokailist.size(); i++) {
                             if (selected[i]) {
-                                // *yokailist[i].hp = 1; //incase you lower the level
+                                *yokailist[i].hp = 1; //incase you lower the level
                                 if (currentYokai != 0) {
                                     *yokailist[i].type = currentYokai;
                                 }
                                 if (currentLevel != 0) {
                                     *yokailist[i].level = currentLevel;
                                 }
-                                if (currentEdit == 3) {
+                                if (currentEdit == 4) {
                                     //TODO stats
                                 }
                             }
@@ -1451,8 +1740,11 @@ namespace edit4 {
                 std::cout << (currentEdit == 0 ? "> " : "  ") << "yokai: " << (currentYokai == 0 ? "" : data4::characters.at(currentYokai)) << std::endl;
                 std::cout << (currentEdit == 1 ? "> " : "  ") << "level: " << (currentLevel == 0 ? "" : std::to_string(currentLevel)) << std::endl;
                 printf("\n");
-                std::cout << (currentEdit == 2 ? "> " : "  ") << "apply and set max" << std::endl;
-                std::cout << (currentEdit == 3 ? "> " : "  ") << "apply" << std::endl;
+                std::cout << (currentEdit == 2 ? "> " : "  ") << "edit moves" << std::endl;
+                std::cout << (currentEdit == 3 ? "> " : "  ") << "edit stats TODO" << std::endl;
+                printf("\n");
+                std::cout << (currentEdit == 4 ? "> " : "  ") << "apply and set max" << std::endl;
+                std::cout << (currentEdit == 5 ? "> " : "  ") << "apply" << std::endl;
             }
         }
     }
