@@ -91,7 +91,7 @@ long extractTimestamp(const std::string& filename) {
     return std::stol(filename.substr(secondDot + 1, thirdDot - secondDot - 1));
 }
 
-void backup(std::string path, std::string &save, std::vector<std::string> backupFiles, std::vector<uint8_t> &data) {
+void backup(std::string path, std::string &save, std::vector<std::string> backupFiles, std::vector<uint8_t> &data, PadState pad) {
     //make backuplist only contain backups for the selected save
     for (int i = 0; i < backupFiles.size(); i++) {
         if (backupFiles[i].substr(0, save.size()) != save) {
@@ -112,10 +112,15 @@ void backup(std::string path, std::string &save, std::vector<std::string> backup
     // Create a new backup
     std::string backupFilePath = path + save + "." + std::to_string(time(NULL)) + ".bak";
     FILE* backupFile = fopen(backupFilePath.c_str(), "w+b");
-    fwrite(data.data(), sizeof(uint8_t), data.size(), backupFile);
-    fclose(backupFile); //TODO add a check to see if any data was actually changed before deleting the backup
+    size_t written = fwrite(data.data(), sizeof(uint8_t), data.size(), backupFile);
+    fclose(backupFile);
+    if (written != data.size()) {
+        std::cout << "WARNING: failed to automatically backup data, please create one manually." << std::endl;
+        pause(pad);
+        // do stuff
+    }
     fsdevCommitDevice("save");
-}
+} //TODO add a check to see if any data was actually changed before deleting the backup
 
 
 int main(int argc, char** argv) {
@@ -223,7 +228,7 @@ int main(int argc, char** argv) {
                                         std::vector<uint8_t> decryptedData = yw_proc(encryptedData, false);
 
                                         //make backup
-                                        backup("save:/", saveFiles[selectedSave], backupFiles, encryptedData);
+                                        backup("save:/", saveFiles[selectedSave], backupFiles, encryptedData, pad);
 
                                         bool save = true;
                                         uint32_t size;
@@ -379,7 +384,7 @@ int main(int argc, char** argv) {
                                         }
 
                                         //make backup.
-                                        backup("save:/USERDATA00/", saveFiles[selectedSave], backupFiles, data);
+                                        backup("save:/USERDATA00/", saveFiles[selectedSave], backupFiles, data, pad);
 
                                         bool save = true;
                                         
