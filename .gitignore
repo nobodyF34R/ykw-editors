@@ -70,4 +70,15 @@ target/
 *.ywd
 my-editor/4/0/
 *.yw copy
+
+#qt resources
 resources_rc.py
+*.o
+*moc_*
+*.pro.user
+*ui_*
+source-code/*/Makefile
+qrc_resources.cpp
+*_ui.py
+*.zip
+*.app

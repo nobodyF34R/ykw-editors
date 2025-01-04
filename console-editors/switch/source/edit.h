@@ -1566,7 +1566,7 @@ namespace edit4 {
                         mapInput(pad, currentYokai, "yokai");
                         padUpdate(&pad);
                     } else if (currentEdit == 1) { //level
-                        keyboardInput(buffer, SwkbdType_NumPad, 2, "0-120", (currentLevel == 0 ? "120" : std::to_string(currentLevel).c_str()));
+                        keyboardInput(buffer, SwkbdType_NumPad, 3, "0-120", (currentLevel == 0 ? "120" : std::to_string(currentLevel).c_str()));
                         if (buffer[0] == '\0') {
                             currentLevel = 0;
                         } else { //criteria
