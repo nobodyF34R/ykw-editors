@@ -44,6 +44,15 @@
         <file>data/youkai_fr_FR.xml</file>
         <file>data/youkai_it_IT.xml</file>
         <file>data/youkai_ja_JP.xml</file>
+        <file>data/ai.xml</file>
+        <file>data/ai_de_DE.xml</file>
+        <file>data/ai_en_GB.xml</file>
+        <file>data/ai_en_US.xml</file>
+        <file>data/ai_es_ES.xml</file>
+        <file>data/ai_fr_FR.xml</file>
+        <file>data/ai_it_IT.xml</file>
+        <file>data/ai_ja_JP.xml</file>
+        <file>data/ai_ko_KR.xml</file>
     </qresource>
     <qresource prefix="/translations">
         <file>translations/qt_de_DE.qm</file>

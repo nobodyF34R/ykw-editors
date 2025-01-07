@@ -23,6 +23,12 @@ YoukaiTab::YoukaiTab(SaveManager *mgr, QWidget *parent, int sectionId) :
         ui->youkaiCB->addItem((*it).second, (*it).first);
     }
     ui->youkaiCB->setCurrentIndex(-1);
+    for (QList<QPair<quint32, QString> >::const_iterator it = GameData::getInstance().getData("ai").constBegin();
+         it != GameData::getInstance().getData("ai").constEnd();
+         ++it) {
+        ui->attitudeCB->addItem((*it).second, (*it).first);
+    }
+    ui->attitudeCB->setCurrentIndex(-1);
     connect(ui->listWidget, SIGNAL(currentRowChanged(int)), SLOT(loadItemAt(int)));
     connect(ui->resetButton, SIGNAL(clicked(bool)), SLOT(loadCurrentItem()));
     connect(ui->applyButton, SIGNAL(clicked(bool)), SLOT(writeCurrentItem()));
@@ -47,6 +53,9 @@ void YoukaiTab::update()
         } else {
             ui->listWidget->item(i)->setText(tr("(unknown)"));
         }
+
+        quint8 attitudeId = this->read<quint8>(0x55 + 0x5C * i);
+        itemIndex = ui->attitudeCB->findData(attitudeId);
     }
     ui->applyButton->setEnabled(true);
     ui->resetButton->setEnabled(true);
@@ -66,6 +75,9 @@ void YoukaiTab::loadItemAt(int row)
         quint16 num2 = this->read<quint16>(0x02 + 0x5C * row);
         quint32 youkaiId = this->read<quint32>(0x04 + 0x5C * row);
         QString nickname = this->readString(0x08 + 0x5C * row, 0x18 - 1);
+        quint8 attack = this->read<quint8>(0x2E + 0x5C * row);
+        quint8 technique = this->read<quint8>(0x32 + 0x5C * row);
+        quint8 soultimate = this->read<quint8>(0x36 + 0x5C * row);
         quint8 IVA_HP = this->read<quint8>(0x40 + 0x5C * row);
         quint8 IVA_Str = this->read<quint8>(0x41 + 0x5C * row);
         quint8 IVA_Spr = this->read<quint8>(0x42 + 0x5C * row);
@@ -82,10 +94,14 @@ void YoukaiTab::loadItemAt(int row)
         quint8 EV_Def = this->read<quint8>(0x4D + 0x5C * row);
         quint8 EV_Spd = this->read<quint8>(0x4E + 0x5C * row);
         quint8 level = this->read<quint8>(0x54 + 0x5C * row);
-        quint16 rawEV = this->read<quint16>(0x5A + 0x5C * row);
+        quint8 attitudeID = this->read<quint8>(0x55 + 0x5C * row);
+        // quint16 rawEV = this->read<quint16>(0x5A + 0x5C * row);
         ui->num1SB->setValue(num1);
         ui->num2SB->setValue(num2);
         ui->nicknameEdit->setText(nickname);
+        ui->attackSB->setValue(attack);
+        ui->techniqueSB->setValue(technique);
+        ui->soultimateSB->setValue(soultimate);
         ui->IVA_HPSB->setValue(IVA_HP);
         ui->IVA_StrSB->setValue(IVA_Str);
         ui->IVA_SprSB->setValue(IVA_Spr);
@@ -106,11 +122,12 @@ void YoukaiTab::loadItemAt(int row)
         ui->EV_SprSB->setValue(EV_Spr);
         ui->EV_DefSB->setValue(EV_Def);
         ui->EV_SpdSB->setValue(EV_Spd);
-        ui->evSB->setValue(rawEV);
         ui->levelSB->setValue(level);
+        // ui->evSB->setValue(rawEV); // affection points
 
-        /* load Yo-kai */
+        /* load Combo Boxes */
         ui->youkaiCB->setCurrentIndex(ui->youkaiCB->findData(youkaiId));
+        ui->attitudeCB->setCurrentIndex(ui->attitudeCB->findData(attitudeID));
     }
 }
 
@@ -134,7 +151,16 @@ void YoukaiTab::writeItemAt(int row)
                         0x04 + 0x5C * row
                         ); // youkaiId
         }
+        if (ui->attitudeCB->currentIndex() >= 0) {
+            this->write<quint8>(
+                        ui->attitudeCB->currentData().value<quint8>(),
+                        0x55 + 0x5C * row
+                        ); // attitudeId
+        }
         this->writeString(ui->nicknameEdit->text(), 0x08 + 0x5C * row, 0x18 - 1); // nickname
+        this->write<quint8>(ui->attackSB->value(), 0x2E + 0x5C * row); // attack
+        this->write<quint8>(ui->techniqueSB->value(), 0x32 + 0x5C * row); // technique
+        this->write<quint8>(ui->soultimateSB->value(), 0x36 + 0x5C * row); // soultimate
         this->write<quint8>(ui->IVA_HPSB->value(), 0x40 + 0x5C * row); // IVA_HP
         this->write<quint8>(ui->IVA_StrSB->value(), 0x41 + 0x5C * row); // IVA_Str
         this->write<quint8>(ui->IVA_SprSB->value(), 0x42 + 0x5C * row); // IVA_Spr
@@ -151,7 +177,7 @@ void YoukaiTab::writeItemAt(int row)
         this->write<quint8>(ui->EV_DefSB->value(), 0x4D + 0x5C * row); // EV_Def
         this->write<quint8>(ui->EV_SpdSB->value(), 0x4E + 0x5C * row); // EV_Spd
         this->write<quint8>(ui->levelSB->value(), 0x54 + 0x5C * row); // level
-        this->write<quint16>(ui->evSB->value(), 0x5A + 0x5C * row); // rawEV
+        // this->write<quint16>(ui->evSB->value(), 0x5A + 0x5C * row); // affection points
     }
 
     /* update */
@@ -186,8 +212,8 @@ void YoukaiTab::writeCurrentItem()
 void YoukaiTab::updateYoukaiCount()
 {
     int ans = QMessageBox::question(this, tr("Confirm"),
-                          tr("This operation updates your Yo-kai list in the section 10.\n"
-                          "If you added Yo-kai with this app and it won't appear in the game, use this.\n\n"
+                          tr("This operation adds all edited yokai to the medallium.\n"
+                          "If edited yokai don't appear in-game, use this.\n\n"
                           "This is experimental feature and can destroy your savedata."),
                           QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Cancel);
     if (ans == QMessageBox::Ok) {
@@ -214,7 +240,6 @@ void YoukaiTab::automaticNumbering()
             if (ui->youkaiCB->findData(youkaiId) >= 0) {
                 this->write<quint16>(k, 0x00 + 0x5C * i);     // num1
                 this->write<quint16>(k + 1, 0x02 + 0x5C * i); // num2
-                this->write<quint16>(k + 1, 0x40 + 0x5C * i); // unk1
                 k++;
             }
         }

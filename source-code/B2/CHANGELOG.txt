@@ -1,4 +1,8 @@
-Yo-kai Editor B2 - togenyan
+Yo-kai Editor B2 - togenyan - nobody_fear
+
+v0.2.4 2025-01-07
+Fix write permissions on certain operating systems
+Include QHexEdit locally
 
 v0.2.3 2017-12-28
 修正:

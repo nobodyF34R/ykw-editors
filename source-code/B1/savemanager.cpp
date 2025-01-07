@@ -673,7 +673,7 @@ void SaveManager::writeSection(V val, int offset, quint8 sectionId)
     if (!s) {
         return;
     }
-    QDataStream ds(&this->bodyData, QIODevice::WriteOnly);
+    QDataStream ds(&this->bodyData, QIODevice::ReadWrite);
     ds.setByteOrder(QDataStream::LittleEndian);
     ds.device()->seek(s->getOffset() + offset);
     ds << val;

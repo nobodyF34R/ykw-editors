@@ -2,6 +2,7 @@
 
 #include "equipmenttab.h"
 #include "ui_equipmenttab.h"
+#include <QMessageBox>
 
 EquipmentTab::EquipmentTab(SaveManager *mgr, QWidget *parent, int sectionId) :
     ListTab(mgr, parent, sectionId),
@@ -23,6 +24,7 @@ EquipmentTab::EquipmentTab(SaveManager *mgr, QWidget *parent, int sectionId) :
     connect(ui->listWidget, SIGNAL(currentRowChanged(int)), SLOT(loadItemAt(int)));
     connect(ui->resetButton, SIGNAL(clicked(bool)), SLOT(loadCurrentItem()));
     connect(ui->applyButton, SIGNAL(clicked(bool)), SLOT(writeCurrentItem()));
+    connect(ui->autoNumberingB, SIGNAL(clicked(bool)), SLOT(automaticNumbering()));
 }
 
 EquipmentTab::~EquipmentTab()
@@ -46,6 +48,7 @@ void EquipmentTab::update()
     ui->applyButton->setEnabled(true);
     ui->resetButton->setEnabled(true);
     ui->listWidget->setCurrentRow(0);
+    ui->autoNumberingB->setEnabled(true);
     this->loadCurrentItem();
 }
 
@@ -109,5 +112,26 @@ void EquipmentTab::writeCurrentItem()
     int i;
     if ((i = ui->listWidget->currentRow()) >= 0) {
         this->writeItemAt(i);
+    }
+}
+
+void EquipmentTab::automaticNumbering()
+{
+    int ans = QMessageBox::question(this, tr("Confirm"),
+                                    tr("This action will automatically assign the #1 and #2 values of each entry.\n\n"
+                                       "Because this is an experimental feature, your save data may get corrupted. Continue?"),
+                                    QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Cancel);
+    if (ans == QMessageBox::Ok) {
+        this->writeCurrentItem();
+        int k = 0;
+        for (int i = 0; i < GameConfig::EquipmentCountMax; ++i) {
+            quint32 ItemId = this->read<quint32>(0x04 + 0x10 * i);
+            if (ui->itemCB->findData(ItemId) >= 0) {
+                this->write<quint16>(k + 0x1000, 0x00 + 0x10 * i); // num1
+                this->write<quint16>(k + 1, 0x02 + 0x10 * i);      // num2
+                k++;
+            }
+        }
+        this->update();
     }
 }

@@ -26,7 +26,7 @@
         </font>
        </property>
        <property name="text">
-        <string notr="true">Yo-kai Editor Getto</string>
+        <string notr="true">Yo-kai Editor B1</string>
        </property>
       </widget>
      </item>
@@ -58,14 +58,14 @@
          <item>
           <widget class="QLabel" name="label_4">
            <property name="text">
-            <string notr="true">Copyright (c) 2016-2018 togenyan</string>
+            <string notr="true">Copyright (c) 2016-2018 togenyan, nobody_fear</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QLabel" name="label_5">
            <property name="text">
-            <string notr="true">&lt;a href=&quot;mailto:nyantoge@gmail.com&quot;&gt;nyantoge@gmail.com&lt;/a&gt;</string>
+            <string notr="true">&lt;a href=&quot;mailto:nyantoge@gmail.com&quot;&gt;nyantoge@gmail.com&lt;/a&gt;, &lt;a href=&quot;mailto:nobodyf34r@gmail.com&quot;&gt;nobodyf34r@gmail.com&lt;/a&gt;</string>
            </property>
            <property name="textFormat">
             <enum>Qt::RichText</enum>

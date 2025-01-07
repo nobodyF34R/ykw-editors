@@ -3,4 +3,4 @@
 
 #endif // VERSION
 
-#define VERSION_STRING "0.4"
+#define VERSION_STRING "0.4.1"

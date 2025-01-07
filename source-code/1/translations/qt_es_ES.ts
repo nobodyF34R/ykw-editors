@@ -406,8 +406,8 @@
         <translation>Versión</translation>
     </message>
     <message>
-        <source>Copyright (c) 2016 togenyan</source>
-        <translation type="vanished">Copyright (c) 2016 togenyan</translation>
+        <source>Copyright (c) 2016 togenyan, nobody_fear</source>
+        <translation type="vanished">Copyright (c) 2016 togenyan, nobody_fear</translation>
     </message>
     <message>
         <source>&lt;a href=&quot;mailto:nyantoge@gmail.com&quot;&gt;nyantoge@gmail.com&lt;/a&gt;</source>

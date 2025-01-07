@@ -133,6 +133,16 @@
           </spacer>
          </item>
          <item>
+          <widget class="QPushButton" name="autoNumberingB">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Auto-number</string>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QPushButton" name="resetButton">
            <property name="enabled">
             <bool>false</bool>

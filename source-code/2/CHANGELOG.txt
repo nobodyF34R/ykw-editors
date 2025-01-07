@@ -1,4 +1,7 @@
-Yo-kai Editor 2 - togenyan
+Yo-kai Editor 2 - togenyan - nobody_fear
+
+v0.4.6 2025-01-07
+Fix write permissions on certain operating systems
 
 v0.4.5 2017-10-28
 追加:

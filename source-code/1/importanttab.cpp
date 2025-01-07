@@ -2,6 +2,7 @@
 
 #include "importanttab.h"
 #include "ui_importanttab.h"
+#include <QMessageBox>
 
 ImportantTab::ImportantTab(SaveManager *mgr, QWidget *parent, int sectionId) :
     ListTab(mgr, parent, sectionId),
@@ -23,6 +24,7 @@ ImportantTab::ImportantTab(SaveManager *mgr, QWidget *parent, int sectionId) :
     connect(ui->listWidget, SIGNAL(currentRowChanged(int)), SLOT(loadItemAt(int)));
     connect(ui->resetButton, SIGNAL(clicked(bool)), SLOT(loadCurrentItem()));
     connect(ui->applyButton, SIGNAL(clicked(bool)), SLOT(writeCurrentItem()));
+    connect(ui->autoNumberingB, SIGNAL(clicked(bool)), SLOT(automaticNumbering()));
 
 }
 
@@ -47,6 +49,7 @@ void ImportantTab::update()
     ui->applyButton->setEnabled(true);
     ui->resetButton->setEnabled(true);
     ui->listWidget->setCurrentRow(0);
+    ui->autoNumberingB->setEnabled(true);
     this->loadCurrentItem();
 }
 
@@ -104,5 +107,26 @@ void ImportantTab::writeCurrentItem()
     int i;
     if ((i = ui->listWidget->currentRow()) >= 0) {
         this->writeItemAt(i);
+    }
+}
+
+void ImportantTab::automaticNumbering()
+{
+    int ans = QMessageBox::question(this, tr("Confirm"),
+                                    tr("This action will automatically assign the #1 and #2 values of each entry.\n\n"
+                                       "Because this is an experimental feature, your save data may get corrupted. Continue?"),
+                                    QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Cancel);
+    if (ans == QMessageBox::Ok) {
+        this->writeCurrentItem();
+        int k = 0;
+        for (int i = 0; i < GameConfig::ImportantCountMax; ++i) {
+            quint32 ItemID = this->read<quint32>(0x04 + 0x08 * i);
+            if (ui->itemCB->findData(ItemID) >= 0) {
+                this->write<quint16>(k + 0x2000, 0x00 + 0x08 * i); // num1
+                this->write<quint16>(k + 1, 0x02 + 0x08 * i);      // num2
+                k++;
+            }
+        }
+        this->update();
     }
 }

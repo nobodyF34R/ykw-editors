@@ -28,6 +28,7 @@ public slots:
     void writeItemAt(int row);
     void loadCurrentItem();
     void writeCurrentItem();
+    void automaticNumbering();
 
 private:
     Ui::ItemTab *ui;

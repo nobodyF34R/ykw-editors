@@ -5,4 +5,4 @@
 
 #endif // VERSION
 
-#define VERSION_STRING "0.2.2"
+#define VERSION_STRING "0.3.0"

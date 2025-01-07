@@ -766,7 +766,7 @@ void SaveManager::writeRaw(V val, int offset)
 {
     if (offset < 0)
         return;
-    QDataStream ds(&this->bodyData, QIODevice::WriteOnly);
+    QDataStream ds(&this->bodyData, QIODevice::ReadWrite);
     ds.setFloatingPointPrecision(QDataStream::SinglePrecision);
     ds.setByteOrder(QDataStream::LittleEndian);
     ds.device()->seek(offset);

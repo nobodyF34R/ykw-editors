@@ -161,7 +161,8 @@ $$PWD/translations/app_en.ts
 macx {
 APPBUNDLE = "Yo-kai Editor 3.app"
 ICON = icon.icns
-LIBS += -L$$PWD/../../local/lib -lcryptopp
+INCLUDEPATH += $$PWD/cryptopp
+LIBS += $$PWD/cryptopp/libcryptopp.a
 INCLUDEPATH += $$PWD/../../local/include
 QMAKE_CXXFLAGS_WARN_ON += -Wno-unknown-pragmas
 QMAKE_TARGET_BUNDLE_PREFIX = jp.togenyan

@@ -615,7 +615,7 @@ template <class V> void SaveManager::writeSection(V val, int offset, quint8 sect
     if (!s) {
         return;
     }
-    QDataStream ds(&this->bodyData, QIODevice::WriteOnly);
+    QDataStream ds(&this->bodyData, QIODevice::ReadWrite);
     ds.setByteOrder(QDataStream::LittleEndian);
     ds.skipRawData(s->getOffset() + offset);
     ds << val;

@@ -26,4 +26,4 @@ QHexEdit is released under the MIT License.
 
 License
 MIT license
-Copyright (c) 2016 togenyan
+Copyright (c) 2016 togenyan, nobody_fear

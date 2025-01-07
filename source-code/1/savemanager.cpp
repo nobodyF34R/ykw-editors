@@ -58,7 +58,7 @@ Error::ErrorCode SaveManager::loadDecryptedFile(QString path)
 {
     QFile file(path);
 
-    if (!file.open(QIODevice::ReadOnly)) {
+    if (!file.open(QIODevice::ReadWrite)) {
         return Error::FILE_CANNOT_OPEN;
     }
 
@@ -459,8 +459,10 @@ template <class V> void SaveManager::writeSection(V val, int offset, quint8 sect
     if (!s) {
         return;
     }
-    QDataStream ds(&this->bodyData, QIODevice::WriteOnly);
+    QDataStream ds(&this->bodyData, QIODevice::ReadWrite);
     ds.setByteOrder(QDataStream::LittleEndian);
-    ds.skipRawData(s->getOffset() + offset);
+
+    auto offst = s->getOffset();
+    ds.skipRawData(offst + offset);
     ds << val;
 }

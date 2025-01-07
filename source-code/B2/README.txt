@@ -47,4 +47,4 @@ QHexEditは、MITライセンスのもとで公開されています。
 
 ## ライセンス
 MIT license
-Copyright (c) 2017 togenyan
+Copyright (c) 2017 togenyan, nobody_fear

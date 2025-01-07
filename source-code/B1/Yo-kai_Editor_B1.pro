@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = "Yo-kai Editor Getto"
+TARGET = "Yo-kai Editor B1"
 TEMPLATE = app
 
 CONFIG += c++11
@@ -101,9 +101,10 @@ TRANSLATIONS = $$PWD/translations/app_en.ts \
                $$PWD/translations/app_ja.ts
 
 macx {
-APPBUNDLE = "Yo-kai Editor Getto.app"
+APPBUNDLE = "Yo-kai Editor B1.app"
 ICON = busters.icns
-LIBS += -L$$PWD/../../local/lib -lcryptopp
+INCLUDEPATH += $$PWD/cryptopp
+LIBS += $$PWD/cryptopp/libcryptopp.a
 INCLUDEPATH += $$PWD/../../local/include
 QMAKE_CXXFLAGS_WARN_ON += -Wno-unknown-pragmas
 QMAKE_TARGET_BUNDLE_PREFIX = jp.togenyan

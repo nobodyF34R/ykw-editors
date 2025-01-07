@@ -1,4 +1,4 @@
-Yo-kai Editor Getto
+Yo-kai Editor B1
 
 妖怪ウォッチバスターズ 赤猫団・白犬隊・月兎組のセーブデータ編集ツール．
 無保証です / 何が起こっても，作者は一切の責任を負いません
@@ -67,4 +67,4 @@ QHexEditは、MITライセンスのもとで公開されています。
 
 ライセンス
 MIT license
-Copyright (c) 2016-2018 togenyan
+Copyright (c) 2016-2018 togenyan, nobody_fear

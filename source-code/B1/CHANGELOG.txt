@@ -1,4 +1,7 @@
-Yo-kai Editor Getto - togenyan
+Yo-kai Editor B1 - togenyan - nobody_fear
+
+v0.4.1 2025-01-07
+Fix write permissions on certain operating systems
 
 v0.4.0 2018-12-08
 [新機能]

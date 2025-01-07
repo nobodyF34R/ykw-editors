@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items>
+    <item id="1" name="Grouchy" />
+    <item id="2" name="Logical" />
+    <item id="3" name="Careful" />
+    <item id="4" name="Gentle" />
+    <item id="5" name="Twisted" />
+    <item id="6" name="Helpful" />
+    <item id="7" name="Rough" />
+    <item id="8" name="Brainy" />
+    <item id="9" name="Calm" />
+    <item id="10" name="Tender" />
+    <item id="11" name="Cruel" />
+    <item id="12" name="Devoted" />
+</items>
