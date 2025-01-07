@@ -432,12 +432,14 @@ namespace edit1s {
                     } else if (currentEdit == 3) { //edit stats
                         std::vector<int> selectedIndexes;
                         for (int i = 0; i < yokailist.size(); i++) {
-                            if (selected[i]) {
+                            if (selected[i] || (std::none_of(selected, selected + sizeof(selected), [](bool v) { return v; }) && i == currentSelection)) {
                                 selectedIndexes.push_back(i);
                             }
                         }
                         int totalSelected = selectedIndexes.size();
-                        if (totalSelected == 0) continue; //no yokai selected
+                        if (totalSelected == 0) {
+                            selectedIndexes.push_back(currentSelection);
+                        }
                         int currentStat = 0;
                         int currentPreset = 0;
                         int index = 0;
@@ -579,7 +581,7 @@ namespace edit1s {
                                         std::cout << (currentIV == 3 ? "> " : "  ") << "DEF: " << std::to_string(ivs[3]) << std::endl;
                                         std::cout << (currentIV == 4 ? "> " : "  ") << "SPD: " << std::to_string(ivs[4]) << std::endl;
                                         printf("\n");
-                                        std::cout << "IVs must sum to 10" << std::endl;
+                                        std::cout << "IVs must sum to 10 at most" << std::endl;
                                     }
                                     *yokailist[selectedIndexes[index]].stats.iv21_hp = (*yokailist[selectedIndexes[index]].stats.iv21_hp & 0xF0) | (ivs[0] & 0x0F);
                                     *yokailist[selectedIndexes[index]].stats.iv21_str = (*yokailist[selectedIndexes[index]].stats.iv21_str & 0xF0) | (ivs[1] & 0x0F);
@@ -659,8 +661,8 @@ namespace edit1s {
                             if (std::accumulate(evs.begin(), evs.end(), 0) > 20) {
                                 std::cout << "\nWARNING: EVs must sum to 20 at most" << std::endl;
                             }
-                            if (std::accumulate(ivs.begin(), ivs.end(), 0) != 10) {//, [](int sum, uint8_t val) { return sum + (val & 0x0F); }) != 10) {
-                                std::cout << "\nWARNING: IVs must sum to 10" << std::endl;
+                            if (std::accumulate(ivs.begin(), ivs.end(), 0) > 10) {//, [](int sum, uint8_t val) { return sum + (val & 0x0F); }) != 10) {
+                                std::cout << "\nWARNING: IVs must sum to 10 at most" << std::endl;
                             }
                             if (currentStat == 3) {
                                 std::cout << "\nediting ALL" << std::endl;
@@ -670,7 +672,7 @@ namespace edit1s {
                         }
                     } else { //apply (and set max)
                         for (int i = 0; i < yokailist.size(); i++) {
-                            if (selected[i]) {
+                            if (selected[i] || (std::none_of(selected, selected + sizeof(selected), [](bool v) { return v; }) && i == currentSelection)) {
                                 *yokailist[i].hp = 1; //incase you lower the level
                                 if (currentYokai != 0) {
                                     *yokailist[i].type = currentYokai;
@@ -686,12 +688,11 @@ namespace edit1s {
                                     *yokailist[i].technique = 255;
                                     *yokailist[i].soultimate = 255;
 
-                                    tiv = data1s::tivs.at(*yokailist[i].type); //every tribe has a different tiv
-                                    *yokailist[i].stats.tiv_hp = tiv[0];
-                                    *yokailist[i].stats.tiv_str = tiv[1];
-                                    *yokailist[i].stats.tiv_spr = tiv[2];
-                                    *yokailist[i].stats.tiv_def = tiv[3];
-                                    *yokailist[i].stats.tiv_spd = tiv[4];
+                                    *yokailist[i].stats.tiv_hp = 255; //ingame max based on tribe
+                                    *yokailist[i].stats.tiv_str = 255;
+                                    *yokailist[i].stats.tiv_spr = 255;
+                                    *yokailist[i].stats.tiv_def = 255;
+                                    *yokailist[i].stats.tiv_spd = 255;
 
                                     *yokailist[i].stats.iv21_hp = (*yokailist[i].stats.iv21_hp & 0x0F) | (15 << 4); //set first nibble to 15 ingame max is 3
                                     *yokailist[i].stats.iv21_str = (*yokailist[i].stats.iv21_str & 0x0F) | (15 << 4);
@@ -822,7 +823,7 @@ namespace edit1s {
                         }
                     } else if (currentEdit == 2){ //apply
                         for (int i = 0; i < itemlist.size(); i++) {
-                            if (selected[i]) {
+                            if (selected[i] || (std::none_of(selected, selected + sizeof(selected), [](bool v) { return v; }) && i == currentSelection)) {
                                 if (currentItem != 0) {
                                     *itemlist[i].type = currentItem;
                                 }
@@ -946,7 +947,7 @@ namespace edit1s {
                         }
                     } else if (currentEdit == 2){ //apply
                         for (int i = 0; i < equipmentlist.size(); i++) {
-                            if (selected[i]) {
+                            if (selected[i] || (std::none_of(selected, selected + sizeof(selected), [](bool v) { return v; }) && i == currentSelection)) {
                                 if (currentEquipment != 0) {
                                     *equipmentlist[i].type = currentEquipment;
                                 }
@@ -1058,7 +1059,7 @@ namespace edit1s {
                         padUpdate(&pad);
                     } else if (currentEdit == 1){ //apply
                         for (int i = 0; i < importantlist.size(); i++) {
-                            if (selected[i]) {
+                            if (selected[i] || (std::none_of(selected, selected + sizeof(selected), [](bool v) { return v; }) && i == currentSelection)) {
                                 if (currentImportant != 0) {
                                     *importantlist[i].type = currentImportant;
                                 }
@@ -1298,12 +1299,14 @@ namespace edit4 {
                     } else if (currentEdit == 2) { //edit moves
                         std::vector<int> selectedIndexes;
                         for (int i = 0; i < characterlist.size(); i++) {
-                            if (selected[i]) {
+                            if (selected[i] || (std::none_of(selected, selected + sizeof(selected), [](bool v) { return v; }) && i == currentSelection)) {
                                 selectedIndexes.push_back(i);
                             }
                         }
                         int totalSelected = selectedIndexes.size();
-                        if (totalSelected == 0) continue; //no yokai selected
+                        if (totalSelected == 0) {
+                            selectedIndexes.push_back(currentSelection);
+                        }
                         int currentMove = 0;
                         int index = 0;
                         std::vector<uint8_t> evs;
@@ -1440,7 +1443,7 @@ namespace edit4 {
                         //TODO
                     } else { //apply (and set max)
                         for (int i = 0; i < characterlist.size(); i++) {
-                            if (selected[i]) {
+                            if (selected[i] || (std::none_of(selected, selected + sizeof(selected), [](bool v) { return v; }) && i == currentSelection)) {
                                 *characterlist[i].hp = 1; //incase you lower the level
                                 if (currentCharacter != 0) {
                                     *characterlist[i].type = currentCharacter;
@@ -1579,12 +1582,14 @@ namespace edit4 {
                     } else if (currentEdit == 2) { //edit moves
                         std::vector<int> selectedIndexes;
                         for (int i = 0; i < yokailist.size(); i++) {
-                            if (selected[i]) {
+                            if (selected[i] || (std::none_of(selected, selected + sizeof(selected), [](bool v) { return v; }) && i == currentSelection)) {
                                 selectedIndexes.push_back(i);
                             }
                         }
                         int totalSelected = selectedIndexes.size();
-                        if (totalSelected == 0) continue; //no yokai selected
+                        if (totalSelected == 0) {
+                            selectedIndexes.push_back(currentSelection);
+                        }
                         int currentMove = 0;
                         int index = 0;
                         std::vector<uint8_t> evs;
@@ -1721,7 +1726,7 @@ namespace edit4 {
                         //TODO
                     } else { //apply (and set max)
                         for (int i = 0; i < yokailist.size(); i++) {
-                            if (selected[i]) {
+                            if (selected[i] || (std::none_of(selected, selected + sizeof(selected), [](bool v) { return v; }) && i == currentSelection)) {
                                 *yokailist[i].hp = 1; //incase you lower the level
                                 if (currentYokai != 0) {
                                     *yokailist[i].type = currentYokai;
@@ -1859,7 +1864,7 @@ namespace edit4 {
                         }
                     } else if (currentEdit == 2){ //apply
                         for (int i = 0; i < itemlist.size(); i++) {
-                            if (selected[i]) {
+                            if (selected[i] || (std::none_of(selected, selected + sizeof(selected), [](bool v) { return v; }) && i == currentSelection)) {
                                 if (currentItem != 0) {
                                     *itemlist[i].type = currentItem;
                                 }
@@ -1988,7 +1993,7 @@ namespace edit4 {
                         }
                     } else if (currentEdit == 2){ //apply
                         for (int i = 0; i < equipmentlist.size(); i++) {
-                            if (selected[i]) {
+                            if (selected[i] || (std::none_of(selected, selected + sizeof(selected), [](bool v) { return v; }) && i == currentSelection)) {
                                 if (currentEquipment != 0) {
                                     *equipmentlist[i].type = currentEquipment;
                                 }
@@ -2141,7 +2146,7 @@ namespace edit4 {
                         }
                     } else if (currentEdit == 4) { //apply
                         for (int i = 0; i < soullist.size(); i++) {
-                            if (selected[i]) {
+                            if (selected[i] || (std::none_of(selected, selected + sizeof(selected), [](bool v) { return v; }) && i == currentSelection)) {
                                 if (currentSoul != 0) {
                                     *soullist[i].type = currentSoul;
                                 }
@@ -2278,7 +2283,7 @@ namespace edit4 {
                         }
                     } else if (currentEdit == 2){ //apply
                         for (int i = 0; i < speciallist.size(); i++) {
-                            if (selected[i]) {
+                            if (selected[i] || (std::none_of(selected, selected + sizeof(selected), [](bool v) { return v; }) && i == currentSelection)) {
                                 if (currentSpecial != 0) {
                                     *speciallist[i].type = currentSpecial;
                                 }
