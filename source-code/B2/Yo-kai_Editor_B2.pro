@@ -156,6 +156,12 @@ win32 {
     QMAKE_CXXFLAGS += /utf-8
 }
 
+#Follow directions in cryptopp/install.txt to add to path.
+unix:!macx {
+    INCLUDEPATH += $$PWD/cryptopp
+    LIBS += -L$$PWD/cryptopp -lcryptopp
+}
+
 RESOURCES += \
     resources.qrc
 RC_FILE = app.rc

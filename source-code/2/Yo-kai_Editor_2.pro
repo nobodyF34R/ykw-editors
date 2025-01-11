@@ -111,6 +111,12 @@ win32:LIBS += -L$$PWD/../lib/ -lcryptlib
 win32:INCLUDEPATH += $$PWD/../include
 win32:DEPENDPATH += $$PWD/../include
 
+#Follow directions in cryptopp/install.txt to add to path.
+unix:!macx {
+    INCLUDEPATH += $$PWD/cryptopp
+    LIBS += -L$$PWD/cryptopp -lcryptopp
+}
+
 RESOURCES += \
     resources.qrc
 RC_FILE = app.rc

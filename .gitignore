@@ -82,3 +82,5 @@ qrc_resources.cpp
 *_ui.py
 *.zip
 *.app
+#this might be too agressive:
+source-code/*/Yo-kai\ Editor\ *
