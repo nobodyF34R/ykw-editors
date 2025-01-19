@@ -32,7 +32,6 @@ public slots:
 
 private:
     Ui::YoukaiTab *ui;
-    QList<QCheckBox *> flagCBs;
 };
 
 #endif // YOUKAITAB_H

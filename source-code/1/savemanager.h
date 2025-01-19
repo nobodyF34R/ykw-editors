@@ -17,6 +17,7 @@ public:
     SaveManager();
     ~SaveManager();
     bool loaded() const;
+    bool modern() const;
     bool modified();
     QByteArray getSectionData(quint8 sectionId, bool withHeaderFooter=false);
     void setSectionData(const QByteArray& in,quint8 sectionId);
@@ -37,6 +38,7 @@ public:
 private:
     bool isLoaded;
     bool isModified;
+    bool isModern;
     QString filepath;
     QByteArray bodyData;
     QByteArray ywcipherKey;

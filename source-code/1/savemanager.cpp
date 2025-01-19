@@ -5,6 +5,7 @@
 SaveManager::SaveManager() :
     isLoaded(false),
     isModified(false),
+    isModern(false),
     tw(new QTreeWidget)
 {
     tw->setObjectName("savedataTree");
@@ -22,6 +23,11 @@ SaveManager::~SaveManager()
 bool SaveManager::loaded() const
 {
     return this->isLoaded;
+}
+
+bool SaveManager::modern() const
+{
+    return this->isModern;
 }
 
 QByteArray SaveManager::getSectionData(quint8 sectionId, bool withHeaderFooter)
@@ -82,6 +88,9 @@ Error::ErrorCode SaveManager::loadDecryptedFile(QString path)
     this->filepath = path;
     this->ywcipherKey = ywkeyBytes;
     this->isLoaded = true;
+    if (bodydata.size() == 47556) { // check if swich ver. save
+        this->isModern = true;
+    }
 
     return Error::SUCCESS;
 }
@@ -121,6 +130,9 @@ Error::ErrorCode SaveManager::loadFile(QString path)
     this->filepath = path;
     this->ywcipherKey = ywkeyBytes;
     this->isLoaded = true;
+    if (bodydata.size() == 47556) { // check if swich ver. save
+        this->isModern = true;
+    }
 
     return Error::SUCCESS;
 }
@@ -187,7 +199,13 @@ QString SaveManager::readString(int offset, int lenInBytes, quint8 sectionId)
     if (!s) {
         return QString("");
     }
-
+    if (this->isModern && sectionId == 0x07) { // for switch yokai.
+        int index = offset % 0x5C;
+        offset = (offset / 0x5C) * 0x7C + index;
+        if (index > 0x08) { // redundant, never true
+            offset += 32;
+        }
+    }
     QByteArray str = this->bodyData.mid(s->getOffset() + offset, lenInBytes);
     { // null terminating
         int i = 0;
@@ -212,7 +230,13 @@ void SaveManager::writeString(QString in, int offset, int lenInBytes, quint8 sec
     if (!s) {
         return;
     }
-
+    if (this->isModern && sectionId == 0x07) { // for switch yokai.
+        int index = offset % 0x5C;
+        offset = (offset / 0x5C) * 0x7C + index;
+        if (index > 0x08) { // redundant, never true
+            offset += 32;
+        }
+    }
     QByteArray str;
     QTextCodec *codec = QTextCodec::codecForName("utf-8");
     if (!codec) {
@@ -445,6 +469,13 @@ template <class V> V SaveManager::readSection(int offset, quint8 sectionId)
     if (!s) {
         return V(0);
     }
+    if (this->isModern && sectionId == 0x07) { // for switch yokai.
+        int index = offset % 0x5C;
+        offset = (offset / 0x5C) * 0x7C + index;
+        if (index > 0x08) {
+            offset += 32;
+        }
+    }
     QDataStream ds(&this->bodyData, QIODevice::ReadOnly);
     ds.setByteOrder(QDataStream::LittleEndian);
     ds.skipRawData(s->getOffset() + offset);
@@ -459,10 +490,15 @@ template <class V> void SaveManager::writeSection(V val, int offset, quint8 sect
     if (!s) {
         return;
     }
+    if (this->isModern && sectionId == 0x07) { // for switch yokai.
+        int index = offset % 0x5C;
+        offset = (offset / 0x5C) * 0x7C + index;
+        if (index > 0x08) {
+            offset += 32;
+        }
+    }
     QDataStream ds(&this->bodyData, QIODevice::ReadWrite);
     ds.setByteOrder(QDataStream::LittleEndian);
-
-    auto offst = s->getOffset();
-    ds.skipRawData(offst + offset);
+    ds.skipRawData(s->getOffset() + offset);
     ds << val;
 }

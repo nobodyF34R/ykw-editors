@@ -34,6 +34,10 @@ YoukaiTab::YoukaiTab(SaveManager *mgr, QWidget *parent, int sectionId) :
     connect(ui->applyButton, SIGNAL(clicked(bool)), SLOT(writeCurrentItem()));
     connect(ui->youkaiNumApplyB, SIGNAL(clicked(bool)), SLOT(updateYoukaiCount()));
     connect(ui->autoNumberingButton, SIGNAL(clicked(bool)), SLOT(automaticNumbering()));
+    connect(ui->statInfoButton, &QPushButton::clicked, this, [this]() {
+        QMessageBox::information(this, tr("Stat Info"), tr("IV_B_1 must sum to 10 at most.\n"
+                                                           "EV must sum to 20 at most."));
+    });
 }
 
 YoukaiTab::~YoukaiTab()
@@ -74,7 +78,7 @@ void YoukaiTab::loadItemAt(int row)
         quint16 num1 = this->read<quint16>(0x00 + 0x5C * row);
         quint16 num2 = this->read<quint16>(0x02 + 0x5C * row);
         quint32 youkaiId = this->read<quint32>(0x04 + 0x5C * row);
-        QString nickname = this->readString(0x08 + 0x5C * row, 0x18 - 1);
+        QString nickname = this->readString(0x08 + 0x5C * row, 0x2E - 1);
         quint8 attack = this->read<quint8>(0x2E + 0x5C * row);
         quint8 technique = this->read<quint8>(0x32 + 0x5C * row);
         quint8 soultimate = this->read<quint8>(0x36 + 0x5C * row);
@@ -133,15 +137,6 @@ void YoukaiTab::loadItemAt(int row)
 
 void YoukaiTab::writeItemAt(int row)
 {
-    quint8 flag = 0;
-    for (QList<QCheckBox *>::const_iterator it = this->flagCBs.constBegin();
-         it != this->flagCBs.constEnd();
-         ++it) {
-        if ((*it)->isChecked()) {
-            flag |= (1 << (it - this->flagCBs.constBegin()));
-        }
-    }
-
     if (row >= 0 && row < this->itemsCount) {
         this->write<quint16>(ui->num1SB->value(), 0x00 + 0x5C * row); // num1
         this->write<quint16>(ui->num2SB->value(), 0x02 + 0x5C * row); // num2
@@ -211,7 +206,7 @@ void YoukaiTab::writeCurrentItem()
 
 void YoukaiTab::updateYoukaiCount()
 {
-    int ans = QMessageBox::question(this, tr("Confirm"),
+    int ans = QMessageBox::question(this, tr("Confirm"), // I think this is broken
                           tr("This operation adds all edited yokai to the medallium.\n"
                           "If edited yokai don't appear in-game, use this.\n\n"
                           "This is experimental feature and can destroy your savedata."),

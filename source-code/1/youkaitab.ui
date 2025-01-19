@@ -138,65 +138,76 @@
         </widget>
        </item>
        <item>
-        <widget class="QGroupBox" name="groupBox_5">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="title">
-          <string>Skills</string>
-         </property>
-         <layout class="QVBoxLayout" name="verticalLayout_9">
-          <item>
-           <layout class="QFormLayout" name="formLayout_4">
-            <item row="0" column="0">
-             <widget class="QLabel" name="label_27">
-              <property name="text">
-               <string>Attack</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QSpinBox" name="attackSB">
-              <property name="maximum">
-               <number>255</number>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="label_28">
-              <property name="text">
-               <string>Technique</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <widget class="QSpinBox" name="techniqueSB">
-              <property name="maximum">
-               <number>255</number>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="0">
-             <widget class="QLabel" name="label_29">
-              <property name="text">
-               <string>Soultimate</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QSpinBox" name="soultimateSB">
-              <property name="maximum">
-               <number>255</number>
-              </property>
-             </widget>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QGroupBox" name="groupBox_5">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="title">
+            <string>Skills</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <item>
+             <layout class="QFormLayout" name="formLayout_4">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_27">
+                <property name="text">
+                 <string>Attack</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QSpinBox" name="attackSB">
+                <property name="maximum">
+                 <number>255</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_28">
+                <property name="text">
+                 <string>Technique</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QSpinBox" name="techniqueSB">
+                <property name="maximum">
+                 <number>255</number>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_29">
+                <property name="text">
+                 <string>Soultimate</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QSpinBox" name="soultimateSB">
+                <property name="maximum">
+                 <number>255</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </item>
            </layout>
-          </item>
-         </layout>
-        </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="statInfoButton">
+           <property name="text">
+            <string>Stat info</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
       </layout>
      </item>
@@ -493,7 +504,7 @@
             <item row="0" column="1">
              <widget class="QSpinBox" name="EV_HPSB">
               <property name="maximum">
-               <number>255</number>
+               <number>20</number>
               </property>
              </widget>
             </item>
@@ -507,7 +518,7 @@
             <item row="1" column="1">
              <widget class="QSpinBox" name="EV_StrSB">
               <property name="maximum">
-               <number>255</number>
+               <number>20</number>
               </property>
              </widget>
             </item>
@@ -521,7 +532,7 @@
             <item row="2" column="1">
              <widget class="QSpinBox" name="EV_SprSB">
               <property name="maximum">
-               <number>255</number>
+               <number>20</number>
               </property>
              </widget>
             </item>
@@ -535,7 +546,7 @@
             <item row="3" column="1">
              <widget class="QSpinBox" name="EV_DefSB">
               <property name="maximum">
-               <number>255</number>
+               <number>20</number>
               </property>
              </widget>
             </item>
@@ -549,7 +560,7 @@
             <item row="4" column="1">
              <widget class="QSpinBox" name="EV_SpdSB">
               <property name="maximum">
-               <number>255</number>
+               <number>20</number>
               </property>
              </widget>
             </item>
@@ -591,7 +602,7 @@
           <bool>false</bool>
          </property>
          <property name="text">
-          <string>Update Yo-kai # list</string>
+          <string>Update medallium</string>
          </property>
         </widget>
        </item>

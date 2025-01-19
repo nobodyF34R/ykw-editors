@@ -120,8 +120,8 @@ void ItemTab::writeCurrentItem()
 void ItemTab::automaticNumbering()
 {
     int ans = QMessageBox::question(this, tr("Confirm"),
-                                    tr("This action will automatically assign the #1 and #2 values of each entry.\n\n"
-                                       "Because this is an experimental feature, your save data may get corrupted. Continue?"),
+                                    tr("This operation renumbers your items' #1 and #2.\n\n"
+                                    "This is experimental feature and can destroy your savedata."),
                                     QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Cancel);
     if (ans == QMessageBox::Ok) {
         this->writeCurrentItem();

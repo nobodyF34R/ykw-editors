@@ -19,6 +19,7 @@ dist/
 downloads/
 eggs/
 .eggs/
+include/
 lib/
 lib64/
 parts/
@@ -78,6 +79,12 @@ resources_rc.py
 *.pro.user
 *ui_*
 source-code/*/Makefile
+source-code/*/Makefile.Debug
+source-code/*/Makefile.Release
+source-code/*/object_script.Yo-kai Editor *
+source-code/*/release/
+source-code/*/debug/
+source-code/*/.qtc_clangd/
 qrc_resources.cpp
 *_ui.py
 *.zip

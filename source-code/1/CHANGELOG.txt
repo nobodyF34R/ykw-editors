@@ -1,5 +1,12 @@
 Yo-kai Editor 1 - togenyan - nobody_fear
 
+v0.3.1 2025-01-19
+Add compatibility for switch save files
+Add stat info pop-up
+Fix warning text
+Fix EV maximum
+Removed unused yokai flag logic
+
 v0.3.0 2025-01-07
 Add auto-numbering buttons
 Add skill and attitude editing
