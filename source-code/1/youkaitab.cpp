@@ -78,7 +78,7 @@ void YoukaiTab::loadItemAt(int row)
         quint16 num1 = this->read<quint16>(0x00 + 0x5C * row);
         quint16 num2 = this->read<quint16>(0x02 + 0x5C * row);
         quint32 youkaiId = this->read<quint32>(0x04 + 0x5C * row);
-        QString nickname = this->readString(0x08 + 0x5C * row, 0x2E - 1);
+        QString nickname = this->readString(0x08 + 0x5C * row, 0x24 - 1);
         quint8 attack = this->read<quint8>(0x2E + 0x5C * row);
         quint8 technique = this->read<quint8>(0x32 + 0x5C * row);
         quint8 soultimate = this->read<quint8>(0x36 + 0x5C * row);
@@ -152,7 +152,7 @@ void YoukaiTab::writeItemAt(int row)
                         0x55 + 0x5C * row
                         ); // attitudeId
         }
-        this->writeString(ui->nicknameEdit->text(), 0x08 + 0x5C * row, 0x18 - 1); // nickname
+        this->writeString(ui->nicknameEdit->text(), 0x08 + 0x5C * row, 0x24 - 1); // nickname
         this->write<quint8>(ui->attackSB->value(), 0x2E + 0x5C * row); // attack
         this->write<quint8>(ui->techniqueSB->value(), 0x32 + 0x5C * row); // technique
         this->write<quint8>(ui->soultimateSB->value(), 0x36 + 0x5C * row); // soultimate

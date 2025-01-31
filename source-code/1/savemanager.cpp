@@ -90,6 +90,8 @@ Error::ErrorCode SaveManager::loadDecryptedFile(QString path)
     this->isLoaded = true;
     if (bodydata.size() == 47556) { // check if swich ver. save
         this->isModern = true;
+    } else {
+        this->isModern = false;
     }
 
     return Error::SUCCESS;
@@ -132,6 +134,8 @@ Error::ErrorCode SaveManager::loadFile(QString path)
     this->isLoaded = true;
     if (bodydata.size() == 47556) { // check if swich ver. save
         this->isModern = true;
+    } else {
+        this->isModern = false;
     }
 
     return Error::SUCCESS;
@@ -199,9 +203,10 @@ QString SaveManager::readString(int offset, int lenInBytes, quint8 sectionId)
     if (!s) {
         return QString("");
     }
-    if (this->isModern && sectionId == 0x07) { // for switch yokai.
+    if (this->isModern && sectionId == 0x07) { // for switch yokai. the sectionId check is redundant, always true
         int index = offset % 0x5C;
         offset = (offset / 0x5C) * 0x7C + index;
+        lenInBytes += 32; // because 1s nicknames are longer
         if (index > 0x08) { // redundant, never true
             offset += 32;
         }
@@ -230,9 +235,10 @@ void SaveManager::writeString(QString in, int offset, int lenInBytes, quint8 sec
     if (!s) {
         return;
     }
-    if (this->isModern && sectionId == 0x07) { // for switch yokai.
+    if (this->isModern && sectionId == 0x07) { // for switch yokai. the sectionId check is redundant, always true
         int index = offset % 0x5C;
         offset = (offset / 0x5C) * 0x7C + index;
+        lenInBytes += 32; // because 1s nicknames are longer
         if (index > 0x08) { // redundant, never true
             offset += 32;
         }

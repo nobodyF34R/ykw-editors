@@ -92,7 +92,7 @@ class YWCipher(Xorshift):
         return out
 
     def decrypt(self, data):
-        return encrypt(self, data)
+        return self.encrypt(self, data)
 
 class CCMCipher:
     """
