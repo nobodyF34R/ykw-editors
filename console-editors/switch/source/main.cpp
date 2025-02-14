@@ -81,6 +81,7 @@ Result get_save(u64* application_id, AccountUid* uid) {
         }
     }
 
+    return rc;
 }
 
 // Helper function to extract the timestamp from the filename

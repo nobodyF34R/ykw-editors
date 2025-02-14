@@ -1,5 +1,10 @@
 Yo-kai Editor 1 - togenyan - nobody_fear
 
+v0.3.2 2025-02-14
+Fix switch save editing
+Increase nickname length
+Modify button text
+
 v0.3.1 2025-01-19
 Add compatibility for switch save files
 Add stat info pop-up
