@@ -9,11 +9,9 @@ get support in the ykw hacking zone: https://discord.gg/xkSMZYEWCP
 
 ## Legend
 
-my-editors: work in progress python editors
+editors: all the editors builds for Windows, MacOS, and Linux
 
-compiled: all the editors in exe form
-
-save-tools: decrypt and encrypt yokai watch saves manually
+python-tools: decrypt and encrypt yokai watch saves manually
 
 source-code: all the editors' code
 
