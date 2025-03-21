@@ -1,0 +1,14 @@
+Note: The 4 editor is only available for windows.
+
+I recommend using my work-in-progress switch editor.
+It can run on emulator and real hardware.
+You can find it in editors/switch/
+
+To use on emulator, place editor.nro in your switch roms folder
+To use on switch, place editor.nro in your /switch folder
+
+
+A 3ds editor is planned, but is still a long way from being released.
+
+Hope you enjoy
+- nobody_fear

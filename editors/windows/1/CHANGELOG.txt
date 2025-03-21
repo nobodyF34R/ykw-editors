@@ -1,0 +1,38 @@
+Yo-kai Editor 1 - togenyan - nobody_fear
+
+v0.3.2 2025-02-14
+Fix switch save editing
+Increase nickname length
+Modify button text
+
+v0.3.1 2025-01-19
+Add compatibility for switch save files
+Add stat info pop-up
+Fix warning text
+Fix EV maximum
+Removed unused yokai flag logic
+
+v0.3.0 2025-01-07
+Add auto-numbering buttons
+Add skill and attitude editing
+Fix TIV corruption from auto-numbering
+Fix write permissions on certain operating systems
+Fix stat and quantity limits
+
+v0.2.2 2016-08-19
+Add Italian and German translation (thanks the community of Yo-kai Watch World)
+Add app icon
+
+v0.2.1 2016-04-29
+Add Spanish translation (thanks the community of Yo-kai Watch World)
+Add name lists for British English, German and Italian
+
+v0.2 2016-04-13
+Fix a CRITICAL bug in Yo-kai editing - v0.1 has out-of-bounds write bug, which corrupts the next entry to the currently editing one.
+Correct id of Grainpa
+Support localization
+Add French localization (thanks the community of Yo-kai Watch World)
+Add Yo-kai Medallium editing
+
+v0.1 2016-03-30
+initial release

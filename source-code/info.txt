@@ -1,0 +1,2 @@
+windeployqt
+to fix all missing dll errors

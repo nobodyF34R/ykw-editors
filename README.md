@@ -24,6 +24,9 @@ MSVCP120.dll error fix: https://download.microsoft.com/download/2/E/6/2E61CFA4-9
 
 MSVCP140.dll error fix: https://aka.ms/vs/17/release/vc_redist.x86.exe
 
+## FAQ
+
+TODO
 
 ## Credits
 
