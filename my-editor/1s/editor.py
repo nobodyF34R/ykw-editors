@@ -39,7 +39,7 @@ f = open(infile, "r+b")
 if infile.endswith(".yw"):
     from pathlib import Path
     import sys
-    sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"/save-tools")
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"/python-tools")
     import yw_save
 
     import io

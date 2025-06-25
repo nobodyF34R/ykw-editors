@@ -2,7 +2,7 @@ from dump2 import * #get specific ids from data.py
 
 separator = "/" # or "\\" on windows
 
-infile = "/Users/user/Documents/dev/ykw/ykw-editors/my-editor/2/game1.ywd" #on windows change any "/" or "\" into "\\"
+infile = "" #on windows change any "/" or "\" into "\\"
 
 def edit(yokailist, itemlist, equipmentlist, importantlist, soullist, medalliumlist, profile, contactlist):
     #helper functions defined in dump2.py
@@ -55,7 +55,7 @@ if infile[-3:] == "ywd":
 else: #if this thows TypeError: decrypt() cannot be called after encrypt() comment out the line in Crypto/Cipher/_mode_ctr.py
     from pathlib import Path
     import sys
-    sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"/save-tools")
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent)+"/python-tools")
     import yw_save
     with open(infile, "r+b") as f:
         out = main(yw_save.yw2_proc(f.read(), False, head=infile[-1::-1].split(separator,1)[1][-1::-1]+"head.yw"), edit) #out is the edited binary data

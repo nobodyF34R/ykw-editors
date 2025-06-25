@@ -74,7 +74,7 @@ stats
 level
 
 80:
-4
+win poses unlocked 
 81:
 3
 82:
