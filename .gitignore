@@ -82,11 +82,10 @@ source-code/*/Makefile
 source-code/*/Makefile.Debug
 source-code/*/Makefile.Release
 source-code/*/object_script.Yo-kai Editor *
+source-code/*/Yo-kai\ Editor\ *
 source-code/*/release/
 source-code/*/debug/
 source-code/*/.qtc_clangd/
 qrc_resources.cpp
 *_ui.py
 *.zip
-#this might be too agressive:
-source-code/*/Yo-kai\ Editor\ *

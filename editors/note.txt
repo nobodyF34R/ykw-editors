@@ -8,7 +8,7 @@ To use on emulator, place editor.nro in your switch roms folder
 To use on switch, place editor.nro in your /switch folder
 
 
-A 3ds editor is planned, but is still a long way from being released.
+A 3ds editor is in development, but still a long way from being released.
 
 Hope you enjoy
 - nobody_fear

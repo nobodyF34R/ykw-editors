@@ -1,11 +1,9 @@
-The editors will only run on arm Macs, if you are using an older intel based Mac, please use wine.
+If the editors fail to open, you must do the following:
 
-If the editors fail to open, you must run the following commands:
-
-xattr -d com.apple.quarantine <path>/*
-codesign --force --deep --sign - <path>/*
-
-Where <path> is the editors/mac folder
+Open settings
+Open Security & Privacy
+Click on Open Anyway (you might have to scroll down)
+Click Open
 
 Get assistance in the discord server:
 https://discord.gg/X5mDDUtSw3
