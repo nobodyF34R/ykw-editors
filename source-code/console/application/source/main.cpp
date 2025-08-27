@@ -1,16 +1,13 @@
+#include <algorithm>
 #include <iostream>
-#include "cipher.h"
+#include <map>
+#include <string>
+#include <vector>
 #include <3ds.h>
-
-void pausing() {
-	while (aptMainLoop()) {
-		gspWaitForVBlank();
-		gfxSwapBuffers();
-		hidScanInput();
-		u32 kDown = hidKeysDown();
-		if (kDown) break;
-	}
-}
+#include "cipher.h"
+#include "data.h"
+#include "edit.h"
+#include "struct.h"
 
 /// Media types.
 // typedef enum
@@ -49,12 +46,19 @@ int main(int argc, char* argv[])
 
 	//do stuff
 
-	uint32_t* money = (uint32_t*)(&decryptedData[29644]);
-	std::cout << "money: " << *money << std::endl;
+	std::vector<struct1::Yokai> yokailist;
+	int offset = 7432;
+	for (int i = 0; i < 240; i++) {
 
-	printf("Incrementing by 1...\n");
-	(*money)++; //add 1 to money
-	std::cout << "money: " << *money << std::endl;
+		if (decryptedData[offset+2] == 0) {
+			break;
+		}
+
+		yokailist.push_back(struct1::Yokai(decryptedData, offset));
+		offset += 92;
+	}
+
+	edit1::edit_yokai(yokailist);
 
 	//okay that's enough stuff
 
@@ -67,20 +71,6 @@ int main(int argc, char* argv[])
 	ret = FSFILE_Close(file);
 	ret = FSUSER_ControlArchive(save_archive, ARCHIVE_ACTION_COMMIT_SAVE_DATA, NULL, 0, NULL, 0);
 	ret = FSUSER_CloseArchive(save_archive);
-
-	// Main loop
-	printf("\nStart (M) to exit");
-	while (aptMainLoop())
-	{
-		gspWaitForVBlank();
-		gfxSwapBuffers();
-		hidScanInput();
-
-		// Your code goes here
-		u32 kDown = hidKeysDown();
-		if (kDown & KEY_START)
-			break; // break in order to return to hbmenu
-	}
 
 	gfxExit();
 	return 0;
