@@ -9,6 +9,11 @@
 #include "edit.h"
 #include "struct.h"
 
+extern "C" {
+    int draw(const char *path, u32 width, u32 height, float x, float y); // Declaration of the C function
+}
+
+
 /// Media types.
 // typedef enum
 // {
@@ -57,6 +62,9 @@ int main(int argc, char* argv[])
 		yokailist.push_back(struct1::Yokai(decryptedData, offset));
 		offset += 92;
 	}
+	draw("romfs:/pandle.rgba", 128, 128, 20., 20.);
+	gfxInitDefault();
+	consoleInit(GFX_TOP, NULL);
 
 	edit1::edit_yokai(yokailist);
 
