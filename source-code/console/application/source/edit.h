@@ -2,11 +2,10 @@
 #define EDIT_H
 
 #include "struct.h"
+#include "draw.h"
 
 void pausing() {
 	while (aptMainLoop()) {
-		gspWaitForVBlank();
-		gfxSwapBuffers();
 		hidScanInput();
 		u32 kDown = hidKeysDown();
 		if (kDown) break;
@@ -54,10 +53,42 @@ namespace edit1 {
         int currentSelection = 0;
         int listSize = yokailist.size();
 
+        consoleInit(GFX_TOP, NULL);
+
+        C3D_RenderTarget *target = C2D_CreateScreenTarget(GFX_BOTTOM, GFX_LEFT);
+        C2D_Image image = get_image("romfs:/pandle.rgba", 128, 128);
+        float x = 0;
+        float y = 0;
+        int bounceX = 1;
+        int bounceY = 1;
+
         printf("\nStart (M) to exit");
 	    while (aptMainLoop()){
+            C3D_FrameBegin(C3D_FRAME_SYNCDRAW);
+            C2D_SceneBegin(target);
+            C2D_TargetClear(target, C2D_Color32(0x0, 0x0, 0x0, 0x0));
+
+            C2D_DrawImageAt(image, x, y, 0., NULL, 1., 1.);
+            x += bounceX;
+            y += bounceY;
+
+            if (x + 192 >= 400) {
+                bounceX = -1;
+            }
+            if (x <= 0) {
+                bounceX = 1;
+            }
+
+            if (y + 128 >= 240) {
+                bounceY = -1;
+            }
+            if (y <= 0) {
+                bounceY = 1;
+            }
+
+            C3D_FrameEnd(0);
             gspWaitForVBlank();
-            gfxSwapBuffers();
+            // gfxSwapBuffers();
             hidScanInput();
 
             u32 kDown = hidKeysDown();

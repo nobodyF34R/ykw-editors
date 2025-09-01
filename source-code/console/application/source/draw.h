@@ -1,10 +1,11 @@
+#ifndef DRAW_H
+#define DRAW_H
+
 /** Example to load a RGBA image and display it with C2D */
 
 #include <3ds.h>
 #include <3ds/romfs.h>
 #include <3ds/svc.h>
-#include <c2d/base.h>
-#include <c3d/texture.h>
 #include <citro2d.h>
 
 #include <stdio.h>
@@ -51,21 +52,21 @@ C2D_Image get_image(const char *path, u32 image_width, u32 image_height) {
     svcBreak(USERBREAK_PANIC);
   }
   u32 px_count = image_width * image_height;
-  u32 *rgba_raw = malloc(px_count * sizeof(u32));
+  u32 *rgba_raw = (u32 *)malloc(px_count * sizeof(u32));
   fread((char *)rgba_raw, sizeof(u32), px_count, file);
 
   // Image data
   C2D_Image image;
 
   // Base texture
-  C3D_Tex *tex = malloc(sizeof(C3D_Tex));
+  C3D_Tex *tex = (C3D_Tex *)malloc(sizeof(C3D_Tex));
   image.tex = tex;
   // Texture dimensions must be square powers of two between 64x64 and 1024x1024
   tex->width = clamp(next_pow2(image_width), 64, 1024);
   tex->height = clamp(next_pow2(image_height), 64, 1024);
 
   // Subtexture
-  Tex3DS_SubTexture *subtex = malloc(sizeof(Tex3DS_SubTexture));
+  Tex3DS_SubTexture *subtex = (Tex3DS_SubTexture *)malloc(sizeof(Tex3DS_SubTexture));
   image.subtex = subtex;
   subtex->width = image_width;
   subtex->height = image_height;
@@ -96,50 +97,9 @@ C2D_Image get_image(const char *path, u32 image_width, u32 image_height) {
     }
   }
 
-  free(rgba_raw);
+  // free(rgba_raw);
 
   return image;
 }
 
-int draw(const char *path, u32 width, u32 height, float x, float y) {
-  romfsInit();
-
-  gfxInitDefault();
-  C3D_Init(C3D_DEFAULT_CMDBUF_SIZE);
-  C2D_Init(C2D_DEFAULT_MAX_OBJECTS);
-  C3D_RenderTarget *top = C2D_CreateScreenTarget(GFX_TOP, GFX_LEFT);
-  C2D_Prepare();
-  consoleInit(GFX_BOTTOM, NULL);
-
-  C2D_Image image = get_image(path, width, height);
-
-  // Main loop
-  while (aptMainLoop()) {
-    hidScanInput();
-
-    u32 kDown = hidKeysDown();
-    if (kDown & KEY_START)
-      break;
-
-    C3D_FrameBegin(C3D_FRAME_SYNCDRAW);
-    C2D_SceneBegin(top);
-    C2D_TargetClear(top, CLEAR_COLOR);
-
-    C2D_DrawImageAt(image, x, y, 0., NULL, 1., 1.);
-
-    x+=.2;
-    y+=.2;
-
-    C3D_FrameEnd(0);
-  }
-
-  C3D_TexDelete(image.tex);
-  free((void *)image.subtex);
-
-  C2D_Fini();
-  C3D_Fini();
-  gfxExit();
-  romfsExit();
-
-  return 0;
-}
+#endif // DRAW_H
